@@ -9,11 +9,11 @@
       <footer class="civic-footer" v-if="store.t && store.t.footer">
         <div>
           <div class="smallcaps">{{ store.t.footer.smallcaps }}</div>
-          <h5>{{ store.t.footer.primary.heading }}</h5>
+          <h2>{{ store.t.footer.primary.heading }}</h2>
           <p>{{ store.t.footer.primary.body }}</p>
         </div>
         <div v-for="col in store.t.footer.columns" :key="col.heading">
-          <h5>{{ col.heading }}</h5>
+          <h2>{{ col.heading }}</h2>
           <ul>
             <li v-for="it in col.items" :key="it.label">
               <a :href="it.href">{{ it.label }}</a>

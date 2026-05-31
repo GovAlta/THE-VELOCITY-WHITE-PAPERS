@@ -494,7 +494,7 @@
   border-top: 1px solid var(--rule);
   display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px;
 }
-.civic-footer h5 {
+.civic-footer h2 {
   font-weight: 600; font-size: 16px;
   margin: 0 0 10px; letter-spacing: -0.015em;
 }
