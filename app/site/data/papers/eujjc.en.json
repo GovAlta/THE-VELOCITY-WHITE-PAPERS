@@ -1,0 +1,125 @@
+{
+  "id": "eujjc",
+  "num": "07",
+  "sequence": "",
+  "tier": "Conceptual",
+  "title": "The Compression Problem",
+  "subtitle": "Organizational design at agentic scale. Command and control vs delegation of authority.",
+  "track": "TBD",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "All systems face an inability to compress the granular into the strategic. The flawed human framing is to treat command-and-control vs delegation as an either/or. In the agentic space, agents operate tens to hundreds of times faster than humans. The correct answer is to create sufficiently autonomous, isolated societies and compete the different models against each other through Nexus, then empirically decide.",
+  "hero_image": {
+    "src": "public/images/eujjc/en/hero.jpg",
+    "alt": "Editorial image for: The Compression Problem",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"The Compression Problem\". Organizational design at agentic scale. Command and control vs delegation of authority. Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/en/eujjc.mp3",
+    "duration_sec": null
+  },
+  "tldr_presentation": {
+    "id": "eujjc-tldr",
+    "title": "The paper, in brief",
+    "locale": "en",
+    "slides": [
+      {
+        "id": "01",
+        "title": "The Compression Problem",
+        "audio_file": "public/audio/en/eujjc-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Paper 7 · Organization",
+        "subcaption": "Organizational design at agentic scale. Command and control vs delegation of authority.",
+        "text": "The Compression Problem. Organizational design at agentic scale. Command and control vs delegation of authority."
+      },
+      {
+        "id": "02",
+        "title": "The abstract",
+        "audio_file": "public/audio/en/eujjc-tldr/02.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "All systems face an inability to compress the granular into the strategic. The flawed human framing is to treat command-and-control vs delegation as an either/or. In the agentic space, agents operate tens to hundreds of times faster than humans. The correct answer is to…",
+          "cite": "Paper 07 — The Compression Problem"
+        },
+        "text": "All systems face an inability to compress the granular into the strategic. The flawed human framing is to treat command-and-control vs delegation as an either/or. In the agentic space, agents operate tens to hundreds of times faster than humans. The correct answer is to create sufficiently autonomous, isolated societies and compete the different models against each other through Nexus, then empirically decide."
+      },
+      {
+        "id": "03",
+        "title": "How the paper is laid out",
+        "audio_file": "public/audio/en/eujjc-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Sections",
+        "visual_config": {
+          "items": [
+            {
+              "label": "§01",
+              "desc": "Compression, defined"
+            },
+            {
+              "label": "§02",
+              "desc": "Command and control vs delegation"
+            },
+            {
+              "label": "§03",
+              "desc": "Why human bias forces a false choice"
+            },
+            {
+              "label": "§04",
+              "desc": "Parallel sandboxes, empirical comparison"
+            }
+          ]
+        },
+        "text": "A plan in 4 sections. Compression, defined. Command and control vs delegation. Why human bias forces a false choice. Parallel sandboxes, empirical comparison."
+      }
+    ],
+    "owner_id": "eujjc"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Compression, defined"
+    },
+    {
+      "n": "02",
+      "title": "Command and control vs delegation"
+    },
+    {
+      "n": "03",
+      "title": "Why human bias forces a false choice"
+    },
+    {
+      "n": "04",
+      "title": "Parallel sandboxes, empirical comparison"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Compression, defined"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Content forthcoming.</strong> The full body of this paper is forthcoming. The structure is in place. Sections, abstract, and metadata are aligned with the inventory and the TL;DR presentation. The body will be written from the source transcripts and reference documents, not auto-generated."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
+  },
+  "category": "paper",
+  "related": [
+    "veoht",
+    "rnlt3",
+    "ln4lv"
+  ]
+}

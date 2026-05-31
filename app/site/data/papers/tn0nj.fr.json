@@ -1,0 +1,159 @@
+{
+  "id": "tn0nj",
+  "num": "A-01",
+  "sequence": "Architecture · A-01",
+  "tier": "Technical",
+  "category": "architecture",
+  "title": "Le harnais anti-dérive",
+  "subtitle": "Une mise en œuvre de référence du harnais bien conçu. Compétences, hooks et patrons structurels qui empêchent le code piloté par agent de pourrir.",
+  "track": "Mise en œuvre de référence",
+  "authors": [
+    "Janak Alford"
+  ],
+  "published": null,
+  "reading_min": 45,
+  "status": "Forthcoming",
+  "tags": [
+    "architecture",
+    "harnais",
+    "référence",
+    "claude-code"
+  ],
+  "repo": "https://github.com/janakalford/adhd",
+  "abstract": "Une spécification technique complète du harnais anti-dérive (ADHD), comme mise en œuvre de référence travaillée du livre 8. Décrit les fichiers de compétences, la couche de hooks, le patron de développement piloté par standards et l'architecture en maillage d'agents utilisée pour maintenir la cohérence d'une base de code de 50 000 à 100 000 lignes sous édition continue par IA.",
+  "hero_image": {
+    "src": "public/images/tn0nj/fr/hero.jpg",
+    "alt": "Le harnais anti-dérive — schéma du maillage d'agents, des compétences et des hooks.",
+    "style_prompt": "Editorial-quality flowchart diagram, hand-drawn line work on warm off-white paper background, two-tone palette of deep indigo (#1A3A6E) for primary nodes and rust orange (#C2491A) for accents and arrows. All text labels in French. Boxes have subtle shadows, labels in clean sans-serif, arrows are slightly curved with arrowheads. Architectural, calm, technical but human. No photo realism, no people, no logos. Aspect ratio wide editorial cover.",
+    "image_prompt": "A schematic of the Anti-Drift Harness with French labels: a central 'Agent constructeur' node connected by curved arrows to a ring of supporting nodes labelled 'Compétences', 'Hooks', 'Standards', 'Évaluations', 'Veilleur', 'Tickets', 'Agent anti-dérive'. Each supporting node has two or three small sub-icons (a folder, a gear, a checkmark). A dotted boundary labelled 'Le harnais' encloses the ring. A horizontal chain of 14 small linked rectangles labelled L01..L14 sits below, representing the codebase chain. Match the composition of the English version of this image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/tn0nj.mp3",
+    "duration_sec": null
+  },
+  "tldr_presentation": {
+    "id": "tn0nj-tldr",
+    "title": "Le harnais en cinq minutes",
+    "locale": "fr",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Le harnais anti-dérive",
+        "audio_file": "public/audio/fr/tn0nj-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Architecture · A-01",
+        "subcaption": "Une mise en œuvre de référence des patrons décrits au livre 8.",
+        "text": "Article d'architecture A-01. Le harnais anti-dérive. Une mise en œuvre de référence des patrons décrits au livre 8. C'est une spécification technique, pas un récit. À lire pour le détail d'implémentation."
+      },
+      {
+        "id": "02",
+        "title": "De 50 000 à 100 000 lignes",
+        "audio_file": "public/audio/fr/tn0nj-tldr/02.mp3",
+        "visual": "stat",
+        "visual_config": {
+          "stat_value": "50k–100k",
+          "stat_label": "lignes de code · le mur des petites et moyennes applications"
+        },
+        "caption": "Où la cohérence cède",
+        "subcaption": "Au-delà, l'agent ne peut plus tenir tout le projet en contexte. Les éditions arrivent dans un coin ; le reste s'érode. Le harnais répond à cela.",
+        "text": "Le mur. Quelque part entre cinquante mille et cent mille lignes de code, les agents cessent de tenir tout le projet en contexte. Les éditions dans un coin entraînent une érosion ailleurs. Le harnais répond à cela."
+      },
+      {
+        "id": "03",
+        "title": "Ce que le harnais apporte",
+        "audio_file": "public/audio/fr/tn0nj-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Les sept rôles",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Compétences",
+              "desc": "Instructions et scripts regroupés pour des tâches précises."
+            },
+            {
+              "label": "Hooks",
+              "desc": "Interceptent les événements émis par l'agent. Pré-édition, après-commit."
+            },
+            {
+              "label": "Standards",
+              "desc": "Structure de dossiers, motifs de routes, OpenAPI, migrations."
+            },
+            {
+              "label": "Évaluations",
+              "desc": "Vérifications déterministes à chaque changement."
+            },
+            {
+              "label": "Veilleur",
+              "desc": "Balaye en continu la chaîne à la recherche de dérive."
+            },
+            {
+              "label": "Tickets",
+              "desc": "Le veilleur dépose un ticket quand il trouve une dérive."
+            },
+            {
+              "label": "Anti-dérive",
+              "desc": "Un second agent résout les tickets sans déranger le constructeur."
+            }
+          ]
+        },
+        "text": "Les sept rôles. Les compétences regroupent instructions et scripts pour des tâches précises. Les hooks interceptent les événements émis par l'agent. Les standards sont la structure de dossiers, les motifs de routes, OpenAPI et les migrations. Les évaluations sont des vérifications déterministes à chaque changement. Le veilleur balaye la chaîne. Les tickets sont déposés par le veilleur. L'agent anti-dérive résout les tickets sans déranger le constructeur."
+      }
+    ],
+    "owner_id": "tn0nj"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Pourquoi un harnais, et à quoi il sert"
+    },
+    {
+      "n": "02",
+      "title": "Compétences, hooks, intégrations"
+    },
+    {
+      "n": "03",
+      "title": "Développement piloté par standards"
+    },
+    {
+      "n": "04",
+      "title": "La chaîne et le veilleur"
+    },
+    {
+      "n": "05",
+      "title": "Tickets et l'agent anti-dérive"
+    },
+    {
+      "n": "06",
+      "title": "La boucle de résorption"
+    },
+    {
+      "n": "07",
+      "title": "Ce que contient le dépôt libre"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Pourquoi un harnais, et à quoi il sert"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenu à venir.</strong> Cet article recevra la spécification technique complète du harnais anti-dérive. La structure est en place. Le corps sera rédigé section par section."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "notes": "Ébauche structurelle. Le corps sera rédigé à partir des sources primaires du projet.",
+    "num_override": "A-01",
+    "sequence_override": "Architecture · A-01"
+  },
+  "translation_status": "untranslated",
+  "related": [
+    "p7p2k",
+    "akle0"
+  ]
+}

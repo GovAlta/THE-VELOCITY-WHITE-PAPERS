@@ -1,0 +1,126 @@
+{
+  "id": "aqtdz",
+  "num": "16",
+  "sequence": "",
+  "tier": "Policy & People",
+  "title": "L'avenir de Technologie et innovation",
+  "subtitle": "Un énoncé de politique sur la manière dont le gouvernement lui-même fonctionnera différemment à mesure que les agents gagnent en capacité.",
+  "track": "À placer",
+  "authors": [
+    "Ministère de la Technologie et de l'Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "Les décisions TI sont aujourd'hui centralisées chez Technologie et innovation, ce qui répond à un problème hérité. Nous ne voulons pas que la centralisation devienne le prochain problème hérité. À mesure que les agents gagnent en autonomie et en capacité, il n'y a aucune raison qu'une fonction d'affaires dans n'importe quel ministère ne puisse pas travailler directement avec un agent respectant les règles pour obtenir les mêmes résultats qu'un praticien TI.",
+  "hero_image": {
+    "src": "public/images/aqtdz/fr/hero.jpg",
+    "alt": "Image éditoriale pour : L'avenir de Technologie et innovation",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"The Future of Technology and Innovation\". A policy statement on how government itself will operate differently as agents become more capable. Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/aqtdz.mp3",
+    "duration_sec": null
+  },
+  "tldr_presentation": {
+    "id": "aqtdz-tldr",
+    "title": "Le livre blanc en bref",
+    "locale": "fr",
+    "slides": [
+      {
+        "id": "01",
+        "title": "L'avenir de Technologie et innovation",
+        "audio_file": "public/audio/fr/aqtdz-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Livre 16 · Politique",
+        "subcaption": "Un énoncé de politique sur la manière dont le gouvernement lui-même fonctionnera différemment à mesure que les agents gagnent en capacité.",
+        "text": "L'avenir de Technologie et innovation. Un énoncé de politique sur la manière dont le gouvernement lui-même fonctionnera différemment à mesure que les agents gagnent en capacité."
+      },
+      {
+        "id": "02",
+        "title": "Le résumé",
+        "audio_file": "public/audio/fr/aqtdz-tldr/02.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Les décisions TI sont aujourd'hui centralisées chez Technologie et innovation, ce qui répond à un problème hérité. Nous ne voulons pas que la centralisation devienne le prochain problème hérité. À mesure que les agents gagnent en autonomie et en capacité, il n'y a aucun…",
+          "cite": "Livre 16 — L'avenir de Technologie et innovation"
+        },
+        "text": "Les décisions TI sont aujourd'hui centralisées chez Technologie et innovation, ce qui répond à un problème hérité. Nous ne voulons pas que la centralisation devienne le prochain problème hérité. À mesure que les agents gagnent en autonomie et en capacité, il n'y a aucune raison qu'une fonction d'affaires dans n'importe quel ministère ne puisse pas travailler directement avec un agent respectant les règles pour obtenir les mêmes résultats qu'un praticien TI."
+      },
+      {
+        "id": "03",
+        "title": "Plan du livre blanc",
+        "audio_file": "public/audio/fr/aqtdz-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Sections",
+        "visual_config": {
+          "items": [
+            {
+              "label": "§01",
+              "desc": "Pourquoi la centralisation était la bonne première réponse"
+            },
+            {
+              "label": "§02",
+              "desc": "Pourquoi elle ne peut rester la réponse"
+            },
+            {
+              "label": "§03",
+              "desc": "Travail piloté par les ministères, rendu possible par les agents"
+            },
+            {
+              "label": "§04",
+              "desc": "Ce que cela signifie pour Technologie et innovation"
+            }
+          ]
+        },
+        "text": "Plan en 4 sections. Pourquoi la centralisation était la bonne première réponse. Pourquoi elle ne peut rester la réponse. Travail piloté par les ministères, rendu possible par les agents. Ce que cela signifie pour Technologie et innovation."
+      }
+    ],
+    "owner_id": "aqtdz"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Pourquoi la centralisation était la bonne première réponse"
+    },
+    {
+      "n": "02",
+      "title": "Pourquoi elle ne peut rester la réponse"
+    },
+    {
+      "n": "03",
+      "title": "Travail piloté par les ministères, rendu possible par les agents"
+    },
+    {
+      "n": "04",
+      "title": "Ce que cela signifie pour Technologie et innovation"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Pourquoi la centralisation était la bonne première réponse"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenu à venir.</strong> Le contenu intégral de ce livre blanc est à venir. La structure est en place. Les sections, le résumé et les métadonnées sont alignés avec la fiche d'inventaire et la présentation TL;DR. Le corps sera rédigé à partir des transcriptions et des documents de référence, et non généré automatiquement."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
+  },
+  "translation_status": "untranslated",
+  "category": "paper",
+  "related": [
+    "dehkj",
+    "k20ck",
+    "h70og"
+  ]
+}

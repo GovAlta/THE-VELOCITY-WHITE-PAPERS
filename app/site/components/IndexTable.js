@@ -56,8 +56,7 @@
         <div v-if="editing" class="vw-index-edit">
           <button v-if="!adding" class="vw-gen-btn" @click="adding = true">+ Add paper</button>
           <div v-else class="vw-addpaper">
-            <input v-model="draft.id" placeholder="id (e.g. wp-17)" aria-label="Paper id" />
-            <input v-model="draft.title" placeholder="Title" aria-label="Paper title" class="vw-grow" />
+            <input v-model="draft.title" placeholder="Title (a short id is assigned automatically)" aria-label="Paper title" class="vw-grow" />
             <select v-model="draft.tier" aria-label="Tier">
               <option>Conceptual</option><option>Technical</option><option>Policy &amp; People</option>
             </select>

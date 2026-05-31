@@ -1,7 +1,7 @@
 {
   "papers": [
     {
-      "id": "wp-01",
+      "id": "cux4h",
       "num": "01",
       "sequence": "1 of 2",
       "tier": "Conceptual",
@@ -22,14 +22,14 @@
       "repo": null,
       "abstract": "Lays out why this is at least a two-billion-dollar problem and credibly much higher when you consider that a single ERP system alone runs roughly a billion, and individual transportation, health, or mainframe modernizations each clear $100M. Introduces the four critical drivers that anchor the rest of the collection: cost, service delivery, cybersecurity, and red tape reduction.",
       "related": [
-        "wp-02",
-        "wp-03",
-        "wp-04"
+        "mwo98",
+        "dehkj",
+        "xb5uk"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-02",
+      "id": "mwo98",
       "num": "02",
       "sequence": "",
       "tier": "Conceptual",
@@ -46,14 +46,14 @@
       "repo": null,
       "abstract": "As legacy systems age into vendor rust-out and lose support, the fortress walls are breaking down while in parallel the sophistication of the enemy is growing. One missing board can sink the ship because all the water rushes in. This reframes the modernization conversation from eventually to now.",
       "related": [
-        "wp-01",
-        "wp-08",
-        "wp-09"
+        "cux4h",
+        "p7p2k",
+        "akle0"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-03",
+      "id": "dehkj",
       "num": "03",
       "sequence": "",
       "tier": "Conceptual",
@@ -70,14 +70,14 @@
       "repo": "https://github.com/alberta-velocity/wisdom-of-crowds",
       "abstract": "A methodology and open-source toolset for pan-Canadian benchmarking of legislation, regulation, and policy using AI. A form of self-reflection on the proper function of government that was not previously possible.",
       "related": [
-        "wp-01",
-        "wp-11",
-        "wp-16"
+        "cux4h",
+        "bxvjn",
+        "aqtdz"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-04",
+      "id": "xb5uk",
       "num": "04",
       "sequence": "",
       "tier": "Conceptual",
@@ -94,13 +94,13 @@
       "repo": null,
       "abstract": "Argues against vibe coding, where AI takes on the large share of work and humans are along for the ride, because unconstrained it just exacerbates the snowflake problem at greater speed. Argues equally against rigid hierarchical master plans, which fail through the curse of knowledge when applied to a chaotic and complex system. Sets up what the next two papers answer: there is a third way.",
       "related": [
-        "wp-05",
-        "wp-06"
+        "veoht",
+        "rnlt3"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-05",
+      "id": "veoht",
       "num": "05",
       "sequence": "",
       "tier": "Conceptual",
@@ -117,14 +117,14 @@
       "repo": null,
       "abstract": "Instead of building a single monolithic organism, curate the conditions for success. Establish not static code but dynamic systems that can function and interoperate within a set of constraints, borrowed from nature. The architectural concept being reached for is vernacular, architecture suited to its place. The human element remains in the drivers seat as the architect of comprehensive vision.",
       "related": [
-        "wp-04",
-        "wp-06",
-        "wp-07"
+        "xb5uk",
+        "rnlt3",
+        "eujjc"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-06",
+      "id": "rnlt3",
       "num": "06",
       "sequence": "",
       "tier": "Conceptual",
@@ -141,14 +141,14 @@
       "repo": null,
       "abstract": "If you over-constrain, the system is limited by your own intelligence. We need an environment where the cost of mistakes is mitigated, but not so mitigated that it eliminates the potential for novel solutions. Sets the philosophical groundwork that Nexus and the Velocity Game Engine operationalize.",
       "related": [
-        "wp-05",
-        "wp-12",
-        "wp-15"
+        "veoht",
+        "ln4lv",
+        "h70og"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-07",
+      "id": "eujjc",
       "num": "07",
       "sequence": "",
       "tier": "Conceptual",
@@ -165,14 +165,14 @@
       "repo": null,
       "abstract": "All systems face an inability to compress the granular into the strategic. The flawed human framing is to treat command-and-control vs delegation as an either/or. In the agentic space, agents operate tens to hundreds of times faster than humans. The correct answer is to create sufficiently autonomous, isolated societies and compete the different models against each other through Nexus, then empirically decide.",
       "related": [
-        "wp-05",
-        "wp-06",
-        "wp-12"
+        "veoht",
+        "rnlt3",
+        "ln4lv"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-08",
+      "id": "p7p2k",
       "num": "08",
       "sequence": "2 of 2",
       "tier": "Technical",
@@ -200,14 +200,14 @@
       "repo": "https://github.com/alberta-velocity/velocity-harness",
       "abstract": "Early in Alberta's AI Maximalist program, coding tools like Cursor, Lovable, and Claude Code collapsed the time to build a working prototype from roughly six weeks to thirty minutes. The speed was genuine, but the prototypes could not be reproduced, they skipped the controls a public service requires, and the agents reported themselves finished when they were not. This paper describes the working environment Technology and Innovation built to close that gap, the harness, a combination of skills, standards, and pre-built templates that lets a coding agent take on the technical work while people keep the vision, the architecture, and the decisions that matter. The harness, the templates, and the skill files are released as open source.",
       "related": [
-        "wp-09",
-        "wp-10",
-        "wp-14"
+        "akle0",
+        "offjm",
+        "jy3dg"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-09",
+      "id": "akle0",
       "num": "09",
       "sequence": "",
       "tier": "Technical",
@@ -224,14 +224,14 @@
       "repo": "https://github.com/alberta-velocity/git-insights",
       "abstract": "A taking-stock exercise that maps the technical estate, cybersecurity posture, and human estate. Architecture, languages, database types, CI/CD, automation, documentation; vulnerabilities and exposure; top contributors by language and ministry. Published alongside the paper: scan findings that reinforce the critical sense of urgency stated in Paper 1.",
       "related": [
-        "wp-08",
-        "wp-10",
-        "wp-11"
+        "p7p2k",
+        "offjm",
+        "bxvjn"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-10",
+      "id": "offjm",
       "num": "10",
       "sequence": "",
       "tier": "Technical",
@@ -248,14 +248,14 @@
       "repo": "https://github.com/alberta-velocity/git-insights-ministry",
       "abstract": "Where Paper 9 was analysis, this is synthesis. Operates at the ministry scale, not one or two or ten systems but hundreds at once. Looks for patterns of business functions, endpoints, dependencies, interactions, and interoperability, then proposes a modular, reusable, government-owned compute architecture for that ministry.",
       "related": [
-        "wp-09",
-        "wp-11",
-        "wp-14"
+        "akle0",
+        "bxvjn",
+        "jy3dg"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-11",
+      "id": "bxvjn",
       "num": "11",
       "sequence": "",
       "tier": "Technical",
@@ -272,13 +272,13 @@
       "repo": "https://github.com/alberta-velocity/business-functions",
       "abstract": "Extracts the actual business logic buried inside the existing code base and presents it in a system-agnostic and ministry-agnostic way. Presented visually at high level with downloadable JSON metadata for use in other tools. The artifact that reveals the commonalities hidden in all those siloed snowflake systems.",
       "related": [
-        "wp-10",
-        "wp-14"
+        "offjm",
+        "jy3dg"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-12",
+      "id": "ln4lv",
       "num": "12",
       "sequence": "",
       "tier": "Technical",
@@ -295,14 +295,14 @@
       "repo": "https://github.com/alberta-velocity/nexus",
       "abstract": "The operating environment built by the Government of Alberta that allows a virtualized safe environment for agentic operators to work without degrading our security posture. A secure sandbox where agents can be iterative, make mistakes, try different things, install architectures, and where the parallel-model competition described in Paper 7 actually runs.",
       "related": [
-        "wp-06",
-        "wp-07",
-        "wp-13"
+        "rnlt3",
+        "eujjc",
+        "k20ck"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-13",
+      "id": "k20ck",
       "num": "13",
       "sequence": "",
       "tier": "Technical",
@@ -319,13 +319,13 @@
       "repo": "https://github.com/alberta-velocity/velocity-game-engine",
       "abstract": "A reward system for progress and a penalty system for mistakes. Designed to observe hundreds of human workers and thousands of agentic workers across a backlog of over 600 themes to enhance or build at any time. Centralizes knowledge for independent audit of agents and project delivery. Includes a deliberate caution on Goodharts Law.",
       "related": [
-        "wp-12",
-        "wp-15"
+        "ln4lv",
+        "h70og"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-14",
+      "id": "jy3dg",
       "num": "14",
       "sequence": "",
       "tier": "Technical",
@@ -342,14 +342,14 @@
       "repo": null,
       "abstract": "The tactical playbook. Four approaches for applying the harnesses and tooling described in earlier papers, plus the orchestration layer that coordinates them across hundreds of agents and multiple projects at speed without chaos.",
       "related": [
-        "wp-08",
-        "wp-10",
-        "wp-12"
+        "p7p2k",
+        "offjm",
+        "ln4lv"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-15",
+      "id": "h70og",
       "num": "15",
       "sequence": "",
       "tier": "Policy & People",
@@ -366,14 +366,14 @@
       "repo": null,
       "abstract": "A practical companion to the conceptual Paper 6. How does a non-technical ministry gain confidence that what they are getting is, in fact, what they were told they would get? Frameworks for observability and reporting that translate agentic activity into terms ministers, deputy ministers, auditors, and the public can act on.",
       "related": [
-        "wp-06",
-        "wp-13",
-        "wp-16"
+        "rnlt3",
+        "k20ck",
+        "aqtdz"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-16",
+      "id": "aqtdz",
       "num": "16",
       "sequence": "",
       "tier": "Policy & People",
@@ -390,14 +390,14 @@
       "repo": null,
       "abstract": "IT decision-making today is housed centrally within Technology and Innovation, which is solving a legacy problem. We do not want centralization to become the next legacy problem. As agents become more autonomous and capable, there is no reason a business function in any ministry could not work directly with a rule-following agent to achieve the same outcomes as any IT practitioner.",
       "related": [
-        "wp-03",
-        "wp-13",
-        "wp-15"
+        "dehkj",
+        "k20ck",
+        "h70og"
       ],
       "category": "paper"
     },
     {
-      "id": "wp-companion-workforce",
+      "id": "ko0cv",
       "num": "P",
       "sequence": "TBD",
       "tier": "Policy & People",
@@ -414,12 +414,12 @@
       "repo": null,
       "abstract": "Carried forward as a possible additional paper or as material to be woven through others. Government is reasonably constrained on compensation, so to get talent, we need to meet them where their expectations are. Decision pending on standalone vs absorbed into the AI Academy or Future of T&I paper.",
       "related": [
-        "wp-16"
+        "aqtdz"
       ],
       "category": "paper"
     },
     {
-      "id": "arch-adhd-harness",
+      "id": "tn0nj",
       "num": "A-01",
       "sequence": "Architecture · A-01",
       "tier": "Technical",
@@ -441,8 +441,8 @@
       "repo": "https://github.com/janakalford/adhd",
       "abstract": "A full technical specification of the Anti-Drift Harness as a worked reference implementation of Paper 8. Walks through the skill files, the hook layer, the standards-driven development pattern, and the agent-mesh architecture used to keep a 50K to 100K line codebase coherent under continuous AI editing.",
       "related": [
-        "wp-08",
-        "wp-09"
+        "p7p2k",
+        "akle0"
       ],
       "category": "architecture"
     }

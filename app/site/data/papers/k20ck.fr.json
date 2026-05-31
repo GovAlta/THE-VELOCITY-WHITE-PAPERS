@@ -1,0 +1,125 @@
+{
+  "id": "k20ck",
+  "num": "13",
+  "sequence": "",
+  "tier": "Technical",
+  "title": "Le moteur Velocity",
+  "subtitle": "Ludification et pointage. Un système de gestion de projet qui remplace les outils de type Jira et utilise un système de points pour suivre la progression.",
+  "track": "À placer",
+  "authors": [
+    "Ministère de la Technologie et de l'Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Forthcoming",
+  "tags": [],
+  "repo": "https://github.com/alberta-velocity/velocity-game-engine",
+  "abstract": "Un système de récompense pour la progression et de pénalité pour les erreurs. Conçu pour suivre des centaines de travailleurs humains et des milliers d'agents sur un arriéré de plus de 600 thèmes à toute heure. Centralise la connaissance pour permettre un audit indépendant des agents et de la livraison. Inclut une mise en garde explicite contre la loi de Goodhart.",
+  "hero_image": {
+    "src": "public/images/k20ck/fr/hero.jpg",
+    "alt": "Image éditoriale pour : Le moteur Velocity",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"The Velocity Game Engine\". Gamification and score keeping. A project management system that replaces Jira-style tooling and uses a point-based system to observe progress. Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/k20ck.mp3",
+    "duration_sec": null
+  },
+  "tldr_presentation": {
+    "id": "k20ck-tldr",
+    "title": "Le livre blanc en bref",
+    "locale": "fr",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Le moteur Velocity",
+        "audio_file": "public/audio/fr/k20ck-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Livre 13 · Mesure",
+        "subcaption": "Ludification et pointage. Un système de gestion de projet qui remplace les outils de type Jira et utilise un système de points pour suivre la progression.",
+        "text": "Le moteur Velocity. Ludification et pointage. Un système de gestion de projet qui remplace les outils de type Jira et utilise un système de points pour suivre la progression."
+      },
+      {
+        "id": "02",
+        "title": "Le résumé",
+        "audio_file": "public/audio/fr/k20ck-tldr/02.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Un système de récompense pour la progression et de pénalité pour les erreurs. Conçu pour suivre des centaines de travailleurs humains et des milliers d'agents sur un arriéré de plus de 600 thèmes à toute heure. Centralise la connaissance pour permettre un audit indépend…",
+          "cite": "Livre 13 — Le moteur Velocity"
+        },
+        "text": "Un système de récompense pour la progression et de pénalité pour les erreurs. Conçu pour suivre des centaines de travailleurs humains et des milliers d'agents sur un arriéré de plus de 600 thèmes à toute heure. Centralise la connaissance pour permettre un audit indépendant des agents et de la livraison. Inclut une mise en garde explicite contre la loi de Goodhart."
+      },
+      {
+        "id": "03",
+        "title": "Plan du livre blanc",
+        "audio_file": "public/audio/fr/k20ck-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Sections",
+        "visual_config": {
+          "items": [
+            {
+              "label": "§01",
+              "desc": "Récompense et pénalité"
+            },
+            {
+              "label": "§02",
+              "desc": "Portes critiques qui font reculer"
+            },
+            {
+              "label": "§03",
+              "desc": "Audit des agents et des humains"
+            },
+            {
+              "label": "§04",
+              "desc": "La loi de Goodhart, surveillée honnêtement"
+            }
+          ]
+        },
+        "text": "Plan en 4 sections. Récompense et pénalité. Portes critiques qui font reculer. Audit des agents et des humains. La loi de Goodhart, surveillée honnêtement."
+      }
+    ],
+    "owner_id": "k20ck"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Récompense et pénalité"
+    },
+    {
+      "n": "02",
+      "title": "Portes critiques qui font reculer"
+    },
+    {
+      "n": "03",
+      "title": "Audit des agents et des humains"
+    },
+    {
+      "n": "04",
+      "title": "La loi de Goodhart, surveillée honnêtement"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Récompense et pénalité"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenu à venir.</strong> Le contenu intégral de ce livre blanc est à venir. La structure est en place. Les sections, le résumé et les métadonnées sont alignés avec la fiche d'inventaire et la présentation TL;DR. Le corps sera rédigé à partir des transcriptions et des documents de référence, et non généré automatiquement."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
+  },
+  "translation_status": "untranslated",
+  "category": "paper",
+  "related": [
+    "ln4lv",
+    "h70og"
+  ]
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>The Anti-Drift Harness — The Velocity White Papers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="A full technical specification of the Anti-Drift Harness as a worked reference implementation of Paper 8. Walks through the skill files, the hook layer, the standards-driven development pattern, and the agent-mesh architecture used to keep a 50K to 100K line codebase coherent under continuous AI editing." />
+  <link rel="canonical" href="https://alberta-velocity.github.io/velocity-whitepapers/paper/tn0nj/" />
+  <link rel="alternate" hreflang="en" href="https://alberta-velocity.github.io/velocity-whitepapers/paper/tn0nj/" />
+  <link rel="alternate" hreflang="fr" href="https://alberta-velocity.github.io/velocity-whitepapers/paper/tn0nj/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://alberta-velocity.github.io/velocity-whitepapers/paper/tn0nj/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Anti-Drift Harness" />
+  <meta property="og:description" content="A full technical specification of the Anti-Drift Harness as a worked reference implementation of Paper 8. Walks through the skill files, the hook layer, the standards-driven development pattern, and the agent-mesh architecture used to keep a 50K to 100K line codebase coherent under continuous AI editing." />
+  <meta property="og:url" content="https://alberta-velocity.github.io/velocity-whitepapers/paper/tn0nj/" />
+  <meta property="og:site_name" content="The Velocity White Papers" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://alberta-velocity.github.io/velocity-whitepapers/public/images/tn0nj/en/hero.jpg" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Anti-Drift Harness" />
+  <meta name="twitter:description" content="A full technical specification of the Anti-Drift Harness as a worked reference implementation of Paper 8. Walks through the skill files, the hook layer, the standards-driven development pattern, and the agent-mesh architecture used to keep a 50K to 100K line codebase coherent under continuous AI editing." />
+  <meta name="twitter:image" content="https://alberta-velocity.github.io/velocity-whitepapers/public/images/tn0nj/en/hero.jpg" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"The Anti-Drift Harness","description":"A full technical specification of the Anti-Drift Harness as a worked reference implementation of Paper 8. Walks through the skill files, the hook layer, the standards-driven development pattern, and the agent-mesh architecture used to keep a 50K to 100K line codebase coherent under continuous AI editing.","url":"https://alberta-velocity.github.io/velocity-whitepapers/paper/tn0nj/","inLanguage":"en-CA","author":[{"@type":"Person","name":"Janak Alford"}],"publisher":{"@type":"Organization","name":"Government of Alberta · Ministry of Technology and Innovation"},"isPartOf":{"@type":"PublicationVolume","name":"The Velocity White Papers","url":"https://alberta-velocity.github.io/velocity-whitepapers/"},"keywords":"architecture, harness, reference, claude-code","image":"https://alberta-velocity.github.io/velocity-whitepapers/public/images/tn0nj/en/hero.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../styles/base.css" />
+  <link rel="stylesheet" href="../../styles/components.css" />
+  <link rel="stylesheet" href="../../styles/player.css" />
+  <link rel="stylesheet" href="../../styles/visuals.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans); color: var(--ink-70); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback h2 { color: var(--ink); font-weight: 600; font-size: 22px; margin: 32px 0 12px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt); border-left: 3px solid var(--accent); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. A-01 · Technical</p>
+      <h1>The Anti-Drift Harness</h1>
+      <p class="sub">A reference implementation of the well-built harness. Skills, hooks, and the structural patterns that prevent agent-driven code from rotting.</p>
+      <div class="abstract"><strong>Abstract.</strong> A full technical specification of the Anti-Drift Harness as a worked reference implementation of Paper 8. Walks through the skill files, the hook layer, the standards-driven development pattern, and the agent-mesh architecture used to keep a 50K to 100K line codebase coherent under continuous AI editing.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">## §01 Why a harness, and what it is for
+
+Content forthcoming. This article will hold the full technical specification of the Anti-Drift Harness. Structure is in place; the body will be authored section by section. Generic visual primitives such as the TileHeatmap belong in the shared visuals registry; the narrative simulators specific to this harness (chain, walker, burn-down) live as bespoke visuals scoped to this article.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: architecture, harness, reference, claude-code</p>
+      <p><a href="../../index.html#/paper/tn0nj">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try {
+        if (window.localStorage) localStorage.setItem("vw_locale", "en");
+      } catch (e) {}
+      window.location.replace("../../index.html#/paper/tn0nj");
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+{
+  "id": "mwo98",
+  "num": "02",
+  "sequence": "",
+  "tier": "Conceptual",
+  "title": "The Cyber Imperative",
+  "subtitle": "Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment.",
+  "track": "TBD",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "As legacy systems age into vendor rust-out and lose support, the fortress walls are breaking down while in parallel the sophistication of the enemy is growing. One missing board can sink the ship because all the water rushes in. This reframes the modernization conversation from eventually to now.",
+  "hero_image": {
+    "src": "public/images/mwo98/en/hero.jpg",
+    "alt": "Editorial image for: The Cyber Imperative",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"The Cyber Imperative\". Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment. Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/en/mwo98.mp3",
+    "duration_sec": null
+  },
+  "tldr_presentation": {
+    "id": "mwo98-tldr",
+    "title": "The paper, in brief",
+    "locale": "en",
+    "slides": [
+      {
+        "id": "01",
+        "title": "The Cyber Imperative",
+        "audio_file": "public/audio/en/mwo98-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Paper 2 · Cybersecurity",
+        "subcaption": "Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment.",
+        "text": "The Cyber Imperative. Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment."
+      },
+      {
+        "id": "02",
+        "title": "The abstract",
+        "audio_file": "public/audio/en/mwo98-tldr/02.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "As legacy systems age into vendor rust-out and lose support, the fortress walls are breaking down while in parallel the sophistication of the enemy is growing. One missing board can sink the ship because all the water rushes in. This reframes the modernization conversat…",
+          "cite": "Paper 02 — The Cyber Imperative"
+        },
+        "text": "As legacy systems age into vendor rust-out and lose support, the fortress walls are breaking down while in parallel the sophistication of the enemy is growing. One missing board can sink the ship because all the water rushes in. This reframes the modernization conversation from eventually to now."
+      },
+      {
+        "id": "03",
+        "title": "How the paper is laid out",
+        "audio_file": "public/audio/en/mwo98-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Sections",
+        "visual_config": {
+          "items": [
+            {
+              "label": "§01",
+              "desc": "The fortress walls metaphor"
+            },
+            {
+              "label": "§02",
+              "desc": "Vendor rust-out and unsupported platforms"
+            },
+            {
+              "label": "§03",
+              "desc": "Threat sophistication, plotted"
+            },
+            {
+              "label": "§04",
+              "desc": "Why this driver gets its own paper"
+            },
+            {
+              "label": "§05",
+              "desc": "From eventually to now"
+            }
+          ]
+        },
+        "text": "A plan in 5 sections. The fortress walls metaphor. Vendor rust-out and unsupported platforms. Threat sophistication, plotted. Why this driver gets its own paper. From eventually to now."
+      }
+    ],
+    "owner_id": "mwo98"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "The fortress walls metaphor"
+    },
+    {
+      "n": "02",
+      "title": "Vendor rust-out and unsupported platforms"
+    },
+    {
+      "n": "03",
+      "title": "Threat sophistication, plotted"
+    },
+    {
+      "n": "04",
+      "title": "Why this driver gets its own paper"
+    },
+    {
+      "n": "05",
+      "title": "From eventually to now"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "The fortress walls metaphor"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Content forthcoming.</strong> The full body of this paper is forthcoming. The structure is in place. Sections, abstract, and metadata are aligned with the inventory and the TL;DR presentation. The body will be written from the source transcripts and reference documents, not auto-generated."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
+  },
+  "category": "paper",
+  "related": [
+    "cux4h",
+    "p7p2k",
+    "akle0"
+  ]
+}

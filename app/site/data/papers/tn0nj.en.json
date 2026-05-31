@@ -1,0 +1,158 @@
+{
+  "id": "tn0nj",
+  "num": "A-01",
+  "sequence": "Architecture · A-01",
+  "tier": "Technical",
+  "category": "architecture",
+  "title": "The Anti-Drift Harness",
+  "subtitle": "A reference implementation of the well-built harness. Skills, hooks, and the structural patterns that prevent agent-driven code from rotting.",
+  "track": "Reference implementation",
+  "authors": [
+    "Janak Alford"
+  ],
+  "published": null,
+  "reading_min": 45,
+  "status": "Forthcoming",
+  "tags": [
+    "architecture",
+    "harness",
+    "reference",
+    "claude-code"
+  ],
+  "repo": "https://github.com/janakalford/adhd",
+  "abstract": "A full technical specification of the Anti-Drift Harness as a worked reference implementation of Paper 8. Walks through the skill files, the hook layer, the standards-driven development pattern, and the agent-mesh architecture used to keep a 50K to 100K line codebase coherent under continuous AI editing.",
+  "hero_image": {
+    "src": "public/images/tn0nj/en/hero.jpg",
+    "alt": "Anti-Drift Harness — schematic of the agent mesh, skills, and hooks.",
+    "style_prompt": "Editorial-quality flowchart diagram, hand-drawn line work on warm off-white paper background, two-tone palette of deep indigo (#1A3A6E) for primary nodes and rust orange (#C2491A) for accents and arrows. Boxes have subtle shadows, labels in clean sans-serif, arrows are slightly curved with arrowheads. Architectural, calm, technical but human. No photo realism, no people, no logos. Aspect ratio wide editorial cover.",
+    "image_prompt": "A schematic of the Anti-Drift Harness: a central 'Builder agent' node connected by curved arrows to a ring of supporting nodes labelled 'Skills', 'Hooks', 'Standards', 'Evals', 'Walker', 'Tickets', 'Anti-Drift agent'. Each supporting node has two or three small sub-icons (a folder, a gear, a checkmark). A dotted boundary labelled 'The harness' encloses the ring. A horizontal chain of 14 small linked rectangles labelled L01..L14 sits below, representing the codebase chain that the harness watches over.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/en/tn0nj.mp3",
+    "duration_sec": null
+  },
+  "tldr_presentation": {
+    "id": "tn0nj-tldr",
+    "title": "The harness in five minutes",
+    "locale": "en",
+    "slides": [
+      {
+        "id": "01",
+        "title": "The Anti-Drift Harness",
+        "audio_file": "public/audio/en/tn0nj-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Architecture · A-01",
+        "subcaption": "A reference implementation of the patterns described in Paper 8.",
+        "text": "Architecture article A-01. The Anti-Drift Harness. A reference implementation of the patterns described in Paper 8. This is a technical spec, not a narrative. Read it for the implementation detail."
+      },
+      {
+        "id": "02",
+        "title": "50,000 to 100,000 lines",
+        "audio_file": "public/audio/en/tn0nj-tldr/02.mp3",
+        "visual": "stat",
+        "visual_config": {
+          "stat_value": "50K–100K",
+          "stat_label": "lines of code · the small-to-medium-app wall"
+        },
+        "caption": "Where consistency breaks down",
+        "subcaption": "Past this size the agent can no longer hold the whole project in context. Edits land in one corner; the rest erodes. The harness is the answer to that.",
+        "text": "The wall. Somewhere between fifty thousand and one hundred thousand lines of code, agents stop holding the whole project in context. Edits in one corner cause erosion elsewhere. A controller change does not flow to the migration. A renamed field stays in the training material as the old name. The harness is the answer to that."
+      },
+      {
+        "id": "03",
+        "title": "What the harness adds",
+        "audio_file": "public/audio/en/tn0nj-tldr/03.mp3",
+        "visual": "list",
+        "caption": "The seven roles",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Skills",
+              "desc": "Bundled instructions and scripts for specific tasks."
+            },
+            {
+              "label": "Hooks",
+              "desc": "Intercept agent events. Pre-edit, post-commit, on-tool-use."
+            },
+            {
+              "label": "Standards",
+              "desc": "Folder structure, route patterns, OpenAPI, migrations."
+            },
+            {
+              "label": "Evals",
+              "desc": "Deterministic checks that run on every change."
+            },
+            {
+              "label": "Walker",
+              "desc": "Continuously scans the chain for drift between siblings."
+            },
+            {
+              "label": "Tickets",
+              "desc": "When the Walker finds drift, it files a ticket."
+            },
+            {
+              "label": "Anti-Drift",
+              "desc": "A second agent that resolves tickets without disturbing the Builder."
+            }
+          ]
+        },
+        "text": "The seven roles. Skills bundle instructions and scripts for specific tasks. Hooks intercept the events the agent fires as it works. Standards are folder structure, route patterns, OpenAPI, migrations. Evals are deterministic checks that run on every change. The Walker scans the chain for drift. Tickets are filed by the Walker. The Anti-Drift agent resolves tickets without disturbing the Builder."
+      }
+    ],
+    "owner_id": "tn0nj"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Why a harness, and what it is for"
+    },
+    {
+      "n": "02",
+      "title": "Skills, hooks, integrations"
+    },
+    {
+      "n": "03",
+      "title": "Standards-driven development"
+    },
+    {
+      "n": "04",
+      "title": "The chain and the Walker"
+    },
+    {
+      "n": "05",
+      "title": "Tickets and the Anti-Drift agent"
+    },
+    {
+      "n": "06",
+      "title": "The burn-down loop"
+    },
+    {
+      "n": "07",
+      "title": "What the open-source repo includes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Why a harness, and what it is for"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Content forthcoming.</strong> This article will hold the full technical specification of the Anti-Drift Harness. Structure is in place; the body will be authored section by section. Generic visual primitives such as the TileHeatmap belong in the shared visuals registry; the narrative simulators specific to this harness (chain, walker, burn-down) live as bespoke visuals scoped to this article."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "notes": "Structural stub. Body to be authored from the project's primary sources. Generic visual primitives belong in components/visuals/reusable/; narrative simulators live under components/visuals/bespoke/arch-adhd-harness/.",
+    "num_override": "A-01",
+    "sequence_override": "Architecture · A-01"
+  },
+  "related": [
+    "p7p2k",
+    "akle0"
+  ]
+}

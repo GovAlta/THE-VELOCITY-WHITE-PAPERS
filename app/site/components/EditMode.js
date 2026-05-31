@@ -531,10 +531,19 @@
       if (fr) stub.translation_status = 'untranslated';
       return stub;
     },
+    /* Short, opaque, stable id (5 chars). Decoupled from the number, so reorder
+       never changes a paper's id or its asset folder. */
+    _shortId() {
+      const A = 'abcdefghijklmnopqrstuvwxyz', AN = A + '0123456789';
+      const taken = window.VWStore.paperById || {};
+      for (;;) {
+        let s = A[Math.floor(Math.random() * 26)];
+        for (let i = 0; i < 4; i++) s += AN[Math.floor(Math.random() * 36)];
+        if (!taken[s]) return s;
+      }
+    },
     async createPaper(meta) {
-      const id = (meta.id || '').trim();
-      if (!/^[a-z0-9][a-z0-9-]*$/.test(id)) { this.status = 'Invalid id. Use kebab-case, e.g. wp-17 or arch-foo.'; return { ok: false }; }
-      if (window.VWStore.paperById && window.VWStore.paperById[id]) { this.status = 'A paper with id "' + id + '" already exists.'; return { ok: false }; }
+      const id = this._shortId();   // ids are auto-assigned short uuids, not chosen
       const title = (meta.title || '').trim() || 'Untitled paper';
       const tier = meta.tier || 'Technical';
       this.status = 'Creating ' + id + '…';

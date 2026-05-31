@@ -1,0 +1,271 @@
+{
+  "id": "cux4h",
+  "num": "01",
+  "sequence": "1 of 2",
+  "tier": "Conceptual",
+  "title": "The Two-Billion-Dollar Ship of Theseus",
+  "subtitle": "Why the modernization of government IT is a multi-billion-dollar problem that cannot be solved by stopping the ship to rebuild it.",
+  "track": "Foundation",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-04-08",
+  "reading_min": 22,
+  "status": "Published",
+  "tags": [
+    "thesis",
+    "economics",
+    "drivers"
+  ],
+  "repo": null,
+  "abstract": "Lays out why this is at least a two-billion-dollar problem and credibly much higher when you consider that a single ERP system alone runs roughly a billion, and individual transportation, health, or mainframe modernizations each clear $100M. Introduces the four critical drivers that anchor the rest of the collection: cost, service delivery, cybersecurity, and red tape reduction.",
+  "hero_image": {
+    "src": "public/images/cux4h/en/hero.jpg",
+    "alt": "An illustration of a ship being rebuilt one plank at a time while in motion.",
+    "image_prompt": "An editorial-illustration of a wooden ship at sea, mid-voyage, with carpenters replacing planks one at a time while the ship continues forward. Muted Alberta cream palette, navy and rust accents, archival print quality.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/en/cux4h.mp3",
+    "duration_sec": 1320,
+    "script": "transcripts/wp-01.md"
+  },
+  "tldr_presentation": {
+    "id": "cux4h-tldr",
+    "title": "The thesis in six minutes",
+    "locale": "en",
+    "slides": [
+      {
+        "id": "01",
+        "title": "The Two-Billion-Dollar Ship of Theseus",
+        "audio_file": "public/audio/en/cux4h-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Paper 1 · Conceptual foundation",
+        "subcaption": "Why the modernization of government IT is at least a two-billion-dollar problem.",
+        "text": "Paper one. The Two Billion Dollar Ship of Theseus. This is the paper that frames the problem. The credible floor for modernizing the Government of Alberta's application estate is in the multiple billions of dollars over the next decade."
+      },
+      {
+        "id": "02",
+        "title": "$2.1B+",
+        "audio_file": "public/audio/en/cux4h-tldr/02.mp3",
+        "visual": "stat",
+        "caption": "The credible floor",
+        "visual_config": {
+          "stat_value": "$2.1B+",
+          "stat_label": "Credible floor over a decade"
+        },
+        "subcaption": "Single ERP renewals run roughly one billion on their own. Transportation, health, and mainframe modernizations each clear one hundred million. Stack them together and the floor sits in the multiple billions.",
+        "text": "The number. A single enterprise resource planning system runs roughly a billion on its own. Individual transportation, health, and mainframe modernizations each clear one hundred million. The credible floor for the work in front of the province is at least two point one billion, and the real figure is plausibly higher."
+      },
+      {
+        "id": "03",
+        "title": "Eight thousand committers, no shared vision",
+        "audio_file": "public/audio/en/cux4h-tldr/03.mp3",
+        "visual": "list",
+        "caption": "The estate as it stands",
+        "visual_config": {
+          "items": [
+            {
+              "label": "8,000+ committers",
+              "desc": "Built across many languages over an extended period."
+            },
+            {
+              "label": "Many database types",
+              "desc": "Cloud and on prem, with no consistent pattern."
+            },
+            {
+              "label": "Snowflake systems",
+              "desc": "Each application was built down to a specific business user."
+            },
+            {
+              "label": "Silos by ministry",
+              "desc": "No unifying overall vision tied the work together."
+            }
+          ]
+        },
+        "text": "The estate as it stands. More than eight thousand GitHub committers, many languages, many database types, cloud and on prem. Each application was built down to a specific set of business users. Each system is a snowflake. Each ministry has been a silo."
+      },
+      {
+        "id": "04",
+        "title": "Each system is a snowflake.",
+        "audio_file": "public/audio/en/cux4h-tldr/04.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Each system is a snowflake; each ministry has been a silo.",
+          "cite": "Paper 1 — The Two-Billion-Dollar Ship of Theseus"
+        },
+        "text": "The framing. Each system is a snowflake. Each ministry has been a silo. This is the structural problem. The fragmentation is not a failure of any individual team. It is the cumulative result of many smart people building exactly what was needed at the time, with no shared architecture to constrain them."
+      },
+      {
+        "id": "05",
+        "title": "The four drivers",
+        "audio_file": "public/audio/en/cux4h-tldr/05.mp3",
+        "visual": "compare",
+        "caption": "What anchors the rest of the collection",
+        "visual_config": {
+          "left": {
+            "label": "Woven throughout",
+            "body": "Cost. Service delivery. Treated as background pressures across every paper."
+          },
+          "right": {
+            "label": "Dedicated papers",
+            "body": "Cybersecurity (Paper 2). Red tape reduction (Paper 3). Each given its own treatment because of its weight."
+          }
+        },
+        "text": "The four drivers. Cost and service delivery run through every paper. Cybersecurity and red tape reduction get their own dedicated treatment in papers two and three. These four pressures are what justify the urgency. The rest of the collection is the answer to how the work gets done."
+      },
+      {
+        "id": "06",
+        "title": "One plank at a time. While at sea.",
+        "audio_file": "public/audio/en/cux4h-tldr/06.mp3",
+        "visual": "title",
+        "caption": "The reframe",
+        "subcaption": "You cannot stop the proper functioning of government to redesign it. The rest of this collection is the answer to how.",
+        "text": "The reframe. The classical Ship of Theseus asks whether a ship is the same ship after every plank has been replaced. The applied question for government is more practical. How do you replace the planks without sinking. While the ship is at sea. While the cargo is the proper functioning of the province. The rest of this collection is the answer to how."
+      }
+    ],
+    "owner_id": "cux4h"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Why this is at least a two-billion-dollar problem"
+    },
+    {
+      "n": "02",
+      "title": "The 8,000-committer estate"
+    },
+    {
+      "n": "03",
+      "title": "The four critical drivers"
+    },
+    {
+      "n": "04",
+      "title": "Why centralization was a first step, not the solution"
+    },
+    {
+      "n": "05",
+      "title": "The Ship of Theseus reframe"
+    },
+    {
+      "n": "06",
+      "title": "What this collection is for"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "This is at least a two-billion-dollar problem. A single enterprise resource planning system runs roughly a billion on its own. Individual transportation, health, and mainframe modernizations each clear one hundred million. Stacked together, the credible floor for the work in front of the Government of Alberta is in the multiple billions of dollars over a decade."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Why this is at least a two-billion-dollar problem"
+    },
+    {
+      "type": "paragraph",
+      "text": "The figure is not theoretical. It is the sum of work the province has already committed to under existing planning, plus the cost of work that has been deferred so long that deferral is itself a liability. Treasury Board can see the line items. The numbers do not improve by being ignored."
+    },
+    {
+      "type": "keystat",
+      "label": "Credible floor for modernization",
+      "value": "$2.1B+",
+      "body": "Single-ERP renewals alone run near $1B. Transportation, health, and mainframe modernizations each clear $100M. The collection is large enough that conventional project-by-project planning cannot keep pace with the rate of decay."
+    },
+    {
+      "type": "paragraph",
+      "text": "Code and infrastructure have been built by more than 8,000 GitHub committers across many languages, on many database types, on cloud and on prem, over an extended period. Each application was built down to a specific set of business users. There is no consistency between them, because none of them were built with a unifying overall vision. This lack of vision has fragmented government's ability to operate as a single organization."
+    },
+    {
+      "type": "pullquote",
+      "text": "Each system is a snowflake; each ministry has been a silo.",
+      "cite": "Paper 1 — The Two-Billion-Dollar Ship of Theseus"
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "The 8,000-committer estate"
+    },
+    {
+      "type": "paragraph",
+      "text": "The estate as it stands today is not the product of negligence. It is the product of many smart people, working over many years, building exactly what was needed at the time. In that mass of code, there is genius. There is also debt."
+    },
+    {
+      "type": "sidenote",
+      "label": "On scale",
+      "value": "Three-quarters of the active code in the estate was written before the cloud era. Roughly 38% runs on platforms whose vendor support ended before 2015. The carry cost is real and presently unbooked."
+    },
+    {
+      "type": "paragraph",
+      "text": "Centralization of code is a first step, not a solution. The patterns of development have not changed because the code now lives in one place. The complexity has surpassed human ability to overcome through traditional project-based approaches. No amount of money or time, in isolation, is credible to unpack this. You cannot stop the proper functioning of government to redesign it."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "The four critical drivers"
+    },
+    {
+      "type": "paragraph",
+      "text": "This collection is organized around four critical drivers. Two are woven throughout: cost, and service delivery. Two have dedicated treatment in the papers that follow: cybersecurity, and red tape reduction."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 1.1",
+      "title": "The four drivers and where they appear",
+      "caption": "Cost and service delivery appear in every paper. Cybersecurity is the subject of Paper 2. Red tape reduction is the subject of Paper 3.",
+      "chart": {
+        "kind": "drivers-map"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Why centralization was a first step, not the solution"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technology and Innovation was formed as the centralizing response to fragmentation. That was the right move at the right time. It changed where the code lives. It did not change how the code is built. The next move is not more centralization. The next move is a different shape of work entirely."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "The Ship of Theseus reframe"
+    },
+    {
+      "type": "paragraph",
+      "text": "The classical Ship of Theseus asks whether a ship is the same ship after every plank has been replaced. The applied question for government is more practical: how do you replace the planks without sinking, while the ship is at sea, while the cargo is the proper functioning of the province?"
+    },
+    {
+      "type": "paragraph",
+      "text": "One plank at a time. While the ship is moving. Without losing bearing. The rest of this collection is the answer to how."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "What this collection is for"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sixteen papers. Three tiers. Seven public repositories. The collection is open source. The site itself is open source. The papers are downloadable as Markdown and JSON. The full site is cloneable and adaptable by any government that wants to do this work in its own context."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "thesis",
+        "economics",
+        "drivers",
+        "open-source"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "mwo98",
+    "dehkj",
+    "xb5uk"
+  ]
+}

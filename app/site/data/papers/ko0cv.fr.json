@@ -1,0 +1,118 @@
+{
+  "id": "ko0cv",
+  "num": "P",
+  "sequence": "TBD",
+  "tier": "Policy & People",
+  "title": "Culture du milieu de travail et talent",
+  "subtitle": "À déterminer. Le gouvernement ne peut se permettre d'être un anachronisme côté milieu de travail.",
+  "track": "À placer",
+  "authors": [
+    "Ministère de la Technologie et de l'Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Placeholder",
+  "tags": [],
+  "repo": null,
+  "abstract": "Conservé comme livre additionnel possible ou comme matériau à intégrer aux autres. Le gouvernement est raisonnablement contraint sur la rémunération, donc pour attirer les talents, il faut rejoindre leurs attentes. Décision en attente : livre autonome ou absorbé dans le livre 16.",
+  "hero_image": {
+    "src": "public/images/ko0cv/fr/hero.jpg",
+    "alt": "Image éditoriale pour : Culture du milieu de travail et talent",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"Workforce Culture and Talent\". Placeholder. Government cannot afford to be an anachronism with respect to its workplace environment. Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/ko0cv.mp3",
+    "duration_sec": null
+  },
+  "tldr_presentation": {
+    "id": "ko0cv-tldr",
+    "title": "Le livre blanc en bref",
+    "locale": "fr",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Culture du milieu de travail et talent",
+        "audio_file": "public/audio/fr/ko0cv-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Compagnon · À déterminer",
+        "subcaption": "À déterminer. Le gouvernement ne peut se permettre d'être un anachronisme côté milieu de travail.",
+        "text": "Culture du milieu de travail et talent. À déterminer. Le gouvernement ne peut se permettre d'être un anachronisme côté milieu de travail."
+      },
+      {
+        "id": "02",
+        "title": "Le résumé",
+        "audio_file": "public/audio/fr/ko0cv-tldr/02.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Conservé comme livre additionnel possible ou comme matériau à intégrer aux autres. Le gouvernement est raisonnablement contraint sur la rémunération, donc pour attirer les talents, il faut rejoindre leurs attentes. Décision en attente : livre autonome ou absorbé dans le livre 16.",
+          "cite": "Livre P — Culture du milieu de travail et talent"
+        },
+        "text": "Conservé comme livre additionnel possible ou comme matériau à intégrer aux autres. Le gouvernement est raisonnablement contraint sur la rémunération, donc pour attirer les talents, il faut rejoindre leurs attentes. Décision en attente : livre autonome ou absorbé dans le livre 16."
+      },
+      {
+        "id": "03",
+        "title": "Plan du livre blanc",
+        "audio_file": "public/audio/fr/ko0cv-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Sections",
+        "visual_config": {
+          "items": [
+            {
+              "label": "§01",
+              "desc": "La contrainte du talent"
+            },
+            {
+              "label": "§02",
+              "desc": "Rejoindre les attentes"
+            },
+            {
+              "label": "§03",
+              "desc": "Question structurelle ouverte"
+            }
+          ]
+        },
+        "text": "Plan en 3 sections. La contrainte du talent. Rejoindre les attentes. Question structurelle ouverte."
+      }
+    ],
+    "owner_id": "ko0cv"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "La contrainte du talent"
+    },
+    {
+      "n": "02",
+      "title": "Rejoindre les attentes"
+    },
+    {
+      "n": "03",
+      "title": "Question structurelle ouverte"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "La contrainte du talent"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenu à venir.</strong> Le contenu intégral de ce livre blanc est à venir. La structure est en place. Les sections, le résumé et les métadonnées sont alignés avec la fiche d'inventaire et la présentation TL;DR. Le corps sera rédigé à partir des transcriptions et des documents de référence, et non généré automatiquement."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer.",
+    "num_override": "P",
+    "sequence_override": "TBD"
+  },
+  "translation_status": "untranslated",
+  "category": "paper",
+  "related": [
+    "aqtdz"
+  ]
+}
