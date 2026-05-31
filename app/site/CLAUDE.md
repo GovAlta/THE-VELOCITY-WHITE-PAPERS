@@ -25,6 +25,7 @@ Read `STRUCTURE.md` for the layout overview before making any structural change.
 | A new reusable visual                | `components/visuals/reusable/<Name>.js` + entry in `index.html` |
 | A paper-specific visual              | `components/visuals/bespoke/<paper-id>/<Name>.js` + `bespoke_scripts` in paper JSON |
 | A new UI string                      | `data/site.json` under `i18n.<locale>.ui` |
+| Static page content (about, manual, community, repos, updates) | `data/pages/<name>.<locale>.json` (one file per locale); load with `VWLoadPageData` |
 | A new block type                     | New file in `components/`, register on `window.VWComponents`, add a branch in `BlockRenderer.js` |
 | A new slide visual type              | New file in `components/visuals/reusable/`, register with `VWVisuals.registerReusable` |
 | A new chart for the figure block     | Register a Vue component in `components/MiniChart.js` style, map the `chart.kind` in `Figure.js` |
