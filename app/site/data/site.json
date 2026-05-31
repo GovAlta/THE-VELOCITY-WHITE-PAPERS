@@ -32,6 +32,10 @@
         {
           "id": "about",
           "label": "About"
+        },
+        {
+          "id": "manual",
+          "label": "Manual"
         }
       ],
       "ui": {
@@ -198,6 +202,10 @@
         {
           "id": "about",
           "label": "À propos"
+        },
+        {
+          "id": "manual",
+          "label": "Manuel"
         }
       ],
       "ui": {

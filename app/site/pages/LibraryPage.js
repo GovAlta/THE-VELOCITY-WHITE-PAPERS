@@ -14,7 +14,10 @@
       /* Featured is dynamic: the Published stories. Falls back to the first two
          papers only when nothing is published yet, so the hero is never empty. */
       featured() { return this.published.length ? this.published : this.papers.slice(0, 2); },
-      rest() { return this.papers.filter(p => p.status !== 'Placeholder'); },
+      /* The public home shows the live + forthcoming collection. Drafts and
+         placeholders are work-in-progress and live only in the full Index
+         catalog (#/index), so the home and the index stay consistent. */
+      rest() { return this.papers.filter(p => p.status === 'Published' || p.status === 'Forthcoming'); },
       seriesMeta() {
         const tpl = this.store.t.section_titles?.series_meta_tpl || '{n} entries';
         return tpl.replace('{n}', this.papers.length);

@@ -1,0 +1,41 @@
+/* manual.css — typography for the operator's Manual page (and any prose page
+   using .manual-body). Additive; reuses the site tokens. */
+
+.manual-body {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 0 56px 8px;
+}
+.manual-body p { color: var(--ink-70, #374151); line-height: 1.65; margin: 0 0 14px; }
+.manual-body code {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.88em;
+  background: rgba(27, 42, 74, 0.06);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.manual-steps { counter-reset: ms; list-style: none; margin: 0; padding: 0; }
+.manual-steps li {
+  position: relative;
+  counter-increment: ms;
+  padding: 0 0 16px 44px;
+  color: var(--ink-70, #374151);
+  line-height: 1.6;
+}
+.manual-steps li::before {
+  content: counter(ms);
+  position: absolute;
+  left: 0; top: 0;
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono, monospace);
+  font-size: 13px;
+  color: #fff;
+  background: var(--ink, #1b2a4a);
+  border-radius: 50%;
+}
+.manual-steps strong { color: var(--ink, #1b2a4a); }
+
+@media (max-width: 720px) {
+  .manual-body { padding: 0 20px 8px; }
+}
