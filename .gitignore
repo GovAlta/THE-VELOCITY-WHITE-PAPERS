@@ -7,6 +7,8 @@
 *.env
 **/.env
 **/.env.*
+# ...but keep the committed template (no real secrets in it):
+!.env.example
 
 # ============================================================
 #  SENSITIVE INTERNAL MATERIAL
