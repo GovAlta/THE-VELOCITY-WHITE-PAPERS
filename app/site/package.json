@@ -8,6 +8,7 @@
     "dev": "npx --yes http-server . -p 5173 -c-1 -o",
     "edit": "node scripts/edit-server.mjs --enable",
     "preview": "node scripts/edit-server.mjs",
+    "test": "node scripts/test.mjs",
     "build:index": "node scripts/build-index.mjs",
     "migrate:index": "node scripts/migrate-index.mjs",
     "generate:audio": "node scripts/generate-audio.mjs",
