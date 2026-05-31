@@ -1,0 +1,365 @@
+/* edit.css — styling for the dev-only in-page editor. Inert on the public site:
+   the toolbar only renders on localhost and .vw-editable only appears in edit mode. */
+
+.vw-edit-toolbar {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  row-gap: 8px;
+  padding: 10px 14px;
+  background: var(--ink, #1b2a4a);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  max-width: min(880px, calc(100vw - 32px));
+}
+
+.vw-edit-btn {
+  font: inherit;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  padding: 5px 12px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.vw-edit-btn:hover { background: rgba(255, 255, 255, 0.22); }
+.vw-edit-btn:disabled { opacity: 0.45; cursor: default; }
+.vw-edit-toolbar.on .vw-edit-btn:first-child {
+  background: var(--highlight, #b5481f);
+  border-color: var(--highlight, #b5481f);
+}
+.vw-edit-save { background: rgba(120, 200, 140, 0.25); border-color: rgba(120, 200, 140, 0.5); }
+
+.vw-edit-dot { color: #ffd479; font-size: 14px; line-height: 1; font-style: normal; margin-left: 3px; }
+
+/* EN / FR locale switch: which locale's JSON you are editing. */
+.vw-edit-loc { display: inline-flex; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.25); border-radius: 5px; overflow: hidden; }
+.vw-edit-loc button {
+  font: inherit;
+  font-family: var(--font-mono, monospace);
+  color: #fff;
+  background: transparent;
+  border: 0;
+  padding: 5px 9px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+.vw-edit-loc button + button { border-left: 1px solid rgba(255,255,255,0.25); }
+.vw-edit-loc button.on { background: var(--highlight, #b5481f); }
+.vw-edit-status {
+  opacity: 0.85;
+  flex-basis: 100%;
+  white-space: normal;
+  line-height: 1.4;
+}
+.vw-edit-status:empty { display: none; }
+
+/* The editable affordance only exists while editing. white-space:pre-wrap so
+   spaces and line breaks the author types are preserved, not collapsed. */
+.vw-editable {
+  outline: 1px dashed var(--highlight, #b5481f);
+  outline-offset: 3px;
+  border-radius: 2px;
+  cursor: text;
+  white-space: pre-wrap;
+  transition: background-color 120ms ease;
+}
+.vw-editable:hover { background: rgba(181, 72, 31, 0.06); }
+.vw-editable:focus {
+  outline: 2px solid var(--highlight, #b5481f);
+  background: rgba(181, 72, 31, 0.08);
+}
+
+/* Rendered-but-clickable: shows markdown rendered, click to edit the source. */
+.vw-editable-idle { cursor: text; border-radius: 2px; transition: background-color 120ms ease; }
+.vw-editable-idle:hover { background: rgba(181, 72, 31, 0.07); box-shadow: 0 0 0 1px rgba(181, 72, 31, 0.25); }
+@media (prefers-reduced-motion: reduce) { .vw-editable-idle { transition: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .vw-editable { transition: none; }
+}
+
+/* Dropcap rendered from the editable text itself, so the first letter is part
+   of the paragraph and can be edited like any other character. */
+.dropcap-para::first-letter {
+  float: left;
+  font-family: var(--font-serif, Georgia, serif);
+  font-weight: 700;
+  font-size: 3.4em;
+  line-height: 0.82;
+  padding: 0.02em 0.1em 0 0;
+  color: var(--ink, #1b2a4a);
+}
+
+/* ---- Structural editing controls (edit mode only) ---- */
+
+.vw-block {
+  position: relative;
+  border: 1px dashed transparent;
+  border-radius: 4px;
+  padding: 12px 0 0;
+  margin: 4px 0;
+}
+.vw-block:hover { border-color: rgba(181, 72, 31, 0.28); }
+
+/* Floating chip in the top-right gutter, OUT of normal flow, so the controls
+   never reserve space or overlap the text of adjacent blocks. */
+.vw-block-bar {
+  position: absolute;
+  top: -2px;
+  right: 2px;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 120ms ease;
+  background: var(--paper, #F7F4ED);
+  border: 1px solid rgba(27, 42, 74, 0.18);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  padding: 3px 7px;
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+}
+.vw-block:hover .vw-block-bar,
+.vw-block:focus-within .vw-block-bar { opacity: 1; }
+.vw-block-type {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-50, #6b7280);
+}
+.vw-block-bar button,
+.vw-insert button,
+.vw-sec-add,
+.vw-sec-del {
+  font: inherit;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  border: 1px solid rgba(27, 42, 74, 0.3);
+  background: rgba(27, 42, 74, 0.04);
+  color: var(--ink, #1b2a4a);
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.vw-block-bar button:hover,
+.vw-insert button:hover,
+.vw-sec-add:hover { background: rgba(27, 42, 74, 0.12); }
+.vw-del:hover, .vw-sec-del:hover {
+  background: var(--highlight, #b5481f);
+  color: #fff;
+  border-color: var(--highlight, #b5481f);
+}
+
+.vw-insert {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 120ms ease;
+  margin: 6px 0 2px;
+}
+.vw-block:hover .vw-insert,
+.vw-block:focus-within .vw-insert { opacity: 1; }
+.vw-insert-lbl {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-50, #6b7280);
+}
+
+/* Image-figure editing panel. */
+.vw-img-empty {
+  border: 1px dashed rgba(27, 42, 74, 0.4);
+  border-radius: 6px;
+  padding: 24px;
+  text-align: center;
+  color: var(--ink-50, #6b7280);
+  font-size: 13px;
+}
+.vw-img-edit {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(27, 42, 74, 0.04);
+  border-radius: 6px;
+}
+.vw-img-edit label {
+  display: block;
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-50, #6b7280);
+  margin: 8px 0 2px;
+}
+.vw-img-field {
+  font-size: 13px;
+  color: var(--ink, #1b2a4a);
+}
+.vw-img-actions { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.vw-gen-btn {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  background: var(--highlight, #b5481f);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.vw-gen-btn:hover { filter: brightness(1.08); }
+.vw-gen-btn:disabled { opacity: 0.55; cursor: default; }
+.vw-gen-hint { font-family: var(--font-mono, monospace); font-size: 10px; color: var(--ink-50, #6b7280); }
+
+/* AI controls + proposal diff */
+.vw-ai {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  border: 1px solid var(--highlight, #b5481f);
+  background: rgba(181, 72, 31, 0.1);
+  color: var(--highlight, #b5481f);
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.vw-ai:hover { background: var(--highlight, #b5481f); color: #fff; }
+.vw-edit-accept { background: rgba(120, 200, 140, 0.22); border-color: rgba(120, 200, 140, 0.5); }
+
+.vw-proposal {
+  margin: 8px 0 4px;
+  border: 1px solid rgba(120, 160, 120, 0.5);
+  border-left: 3px solid #4a8a5a;
+  border-radius: 6px;
+  background: rgba(120, 200, 140, 0.07);
+  padding: 10px 12px;
+}
+.vw-proposal-head {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3f7a4f;
+  margin-bottom: 6px;
+}
+.vw-proposal-text { color: var(--ink, #1b2a4a); }
+.vw-proposal-actions { display: flex; gap: 8px; margin-top: 8px; }
+
+/* Modals (guides library + revise dialog) */
+.vw-modal-backdrop {
+  position: fixed; inset: 0; z-index: 9500;
+  background: rgba(20, 28, 46, 0.45);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.vw-modal {
+  background: var(--paper, #F7F4ED);
+  color: var(--ink, #1b2a4a);
+  border-radius: 10px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.4);
+  width: min(900px, 100%);
+  max-height: 86vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.vw-modal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; border-bottom: 1px solid rgba(27, 42, 74, 0.12);
+}
+.vw-x { background: none; border: 0; font-size: 22px; line-height: 1; cursor: pointer; color: var(--ink-50, #6b7280); }
+.vw-muted { color: var(--ink-50, #6b7280); font-size: 12px; }
+
+.vw-guides-body { display: flex; min-height: 0; flex: 1; }
+.vw-guides-list { list-style: none; margin: 0; padding: 8px; width: 230px; border-right: 1px solid rgba(27,42,74,0.12); overflow-y: auto; }
+.vw-guides-list li { margin: 2px 0; }
+.vw-guides-list button { width: 100%; text-align: left; font: inherit; font-size: 13px; background: none; border: 0; border-radius: 5px; padding: 7px 9px; cursor: pointer; color: var(--ink, #1b2a4a); }
+.vw-guides-list button:hover { background: rgba(27,42,74,0.06); }
+.vw-guides-list button.on { background: var(--highlight, #b5481f); color: #fff; }
+.vw-guides-editor { flex: 1; display: flex; flex-direction: column; padding: 12px; min-width: 0; }
+.vw-guides-editor textarea { flex: 1; width: 100%; min-height: 360px; resize: vertical; font-family: var(--font-mono, monospace); font-size: 12px; line-height: 1.5; border: 1px solid rgba(27,42,74,0.2); border-radius: 6px; padding: 10px; box-sizing: border-box; }
+.vw-guides-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+
+.vw-revise-body { padding: 14px 16px; overflow-y: auto; }
+.vw-revise-guides { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 10px 0; }
+.vw-check { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; cursor: pointer; }
+.vw-revise-lbl { display: block; font-family: var(--font-mono, monospace); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-50, #6b7280); margin: 8px 0 4px; }
+.vw-revise-body textarea { width: 100%; box-sizing: border-box; font: inherit; font-size: 13px; border: 1px solid rgba(27,42,74,0.2); border-radius: 6px; padding: 10px; resize: vertical; }
+.vw-revise-foot { display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px; }
+.vw-model-toggle { display: inline-flex; border: 1px solid rgba(27,42,74,0.25); border-radius: 6px; overflow: hidden; }
+.vw-model-toggle button { font: inherit; font-size: 12px; background: #fff; border: 0; padding: 6px 12px; cursor: pointer; color: var(--ink, #1b2a4a); }
+.vw-model-toggle button + button { border-left: 1px solid rgba(27,42,74,0.25); }
+.vw-model-toggle button.on { background: var(--highlight, #b5481f); color: #fff; }
+
+/* Index page: add + reorder papers (on the light page, not the dark toolbar) */
+.vw-index-edit {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin: 0 0 16px; padding: 10px 12px;
+  background: rgba(27, 42, 74, 0.04);
+  border: 1px solid rgba(27, 42, 74, 0.12);
+  border-radius: 8px;
+}
+.vw-addpaper { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; flex: 1; }
+.vw-addpaper input, .vw-addpaper select {
+  font: inherit; font-size: 13px; padding: 6px 8px;
+  border: 1px solid rgba(27, 42, 74, 0.25); border-radius: 5px; background: #fff; color: var(--ink, #1b2a4a);
+}
+.vw-addpaper .vw-grow { flex: 1; min-width: 160px; }
+.vw-edit-btn.vw-dark { color: var(--ink, #1b2a4a); background: rgba(27, 42, 74, 0.06); border-color: rgba(27, 42, 74, 0.25); }
+.vw-edit-btn.vw-dark:hover { background: rgba(27, 42, 74, 0.14); }
+.vw-order { white-space: nowrap; }
+.vw-order button {
+  font-family: var(--font-mono, monospace); font-size: 12px;
+  border: 1px solid rgba(27, 42, 74, 0.3); background: rgba(27, 42, 74, 0.05);
+  color: var(--ink, #1b2a4a); border-radius: 4px; padding: 2px 7px; cursor: pointer; margin-right: 4px;
+}
+.vw-order button:disabled { opacity: 0.4; cursor: default; }
+
+/* Paper metadata editor */
+.vw-meta-edit {
+  margin: 12px 0 18px; padding: 12px 14px;
+  background: rgba(27, 42, 74, 0.04); border: 1px solid rgba(27, 42, 74, 0.12); border-radius: 8px;
+}
+.vw-meta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 10px; }
+.vw-meta-edit label { display: flex; flex-direction: column; gap: 3px; font-family: var(--font-mono, monospace); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-50, #6b7280); }
+.vw-meta-edit input, .vw-meta-edit select { font-family: var(--font-sans, inherit); font-size: 13px; text-transform: none; letter-spacing: normal; color: var(--ink, #1b2a4a); padding: 6px 8px; border: 1px solid rgba(27, 42, 74, 0.25); border-radius: 5px; background: #fff; }
+.vw-meta-tags { width: 100%; }
+.vw-meta-tags input { width: 100%; box-sizing: border-box; }
+
+/* TL;DR slide editor */
+.vw-tldr-editor { margin: 10px 0 24px; padding: 14px; border: 1px solid rgba(27, 42, 74, 0.14); border-radius: 10px; background: rgba(27, 42, 74, 0.03); }
+.vw-tldr-head { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-50, #6b7280); margin-bottom: 12px; }
+.vw-slide { border: 1px solid rgba(27, 42, 74, 0.14); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; background: #fff; }
+.vw-slide-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.vw-slide-id { font-family: var(--font-mono, monospace); font-size: 11px; color: var(--ink, #1b2a4a); }
+.vw-slide-bar select { font: inherit; font-size: 12px; padding: 3px 6px; border: 1px solid rgba(27, 42, 74, 0.25); border-radius: 5px; }
+.vw-slide-bar .vw-spacer { flex: 1; }
+.vw-slide-bar button { font-family: var(--font-mono, monospace); font-size: 12px; border: 1px solid rgba(27, 42, 74, 0.3); background: rgba(27, 42, 74, 0.05); color: var(--ink, #1b2a4a); border-radius: 4px; padding: 2px 8px; cursor: pointer; }
+.vw-slide-bar button:disabled { opacity: 0.4; cursor: default; }
+.vw-slide-grid { display: grid; grid-template-columns: 90px 1fr; gap: 6px 10px; align-items: start; }
+.vw-slide-grid label { font-family: var(--font-mono, monospace); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-50, #6b7280); padding-top: 4px; }
+.vw-slide-img { margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(27, 42, 74, 0.15); }
+.vw-slide-img label { display: block; font-family: var(--font-mono, monospace); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-50, #6b7280); margin: 6px 0 2px; }
+.vw-slide-audio { display: flex; align-items: center; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.vw-slide-audio .vw-muted { font-family: var(--font-mono, monospace); font-size: 10px; word-break: break-all; }
+
+/* TOC editing. */
+.vw-toc-drag { display: flex; align-items: center; gap: 4px; }
+.vw-drag-grip { cursor: grab; color: var(--ink-50, #6b7280); user-select: none; }
+.vw-sec-del { padding: 1px 6px; }
+.vw-sec-add {
+  margin: 10px 0 0;
+  width: 100%;
+  border-style: dashed;
+}

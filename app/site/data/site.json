@@ -1,0 +1,245 @@
+{
+  "default_locale": "en",
+  "locales": [
+    { "code": "en", "label": "EN", "name_en": "English",  "name_fr": "Anglais" },
+    { "code": "fr", "label": "FR", "name_en": "French",   "name_fr": "Français" }
+  ],
+  "i18n": {
+    "en": {
+      "title": "The Velocity White Papers",
+      "tagline": "A living, open-source collection on transforming forty years of IT technical debt into a modern government in four years.",
+      "publisher": "Government of Alberta · Ministry of Technology and Innovation",
+      "publisher_short": "Alberta · TI",
+      "nav": [
+        { "id": "library",       "label": "Library" },
+        { "id": "index",         "label": "Index" },
+        { "id": "architecture",  "label": "Architecture" },
+        { "id": "about",         "label": "About" }
+      ],
+      "ui": {
+        "loading_library": "Loading the library…",
+        "loading_index":   "Loading the index…",
+        "loading_paper":   "Loading",
+        "back_to_library": "Library",
+        "abstract":        "Abstract",
+        "contents":        "Contents",
+        "read_next":       "Read next",
+        "tags":            "Tags",
+        "authors":         "Authors",
+        "published":       "Published",
+        "reading":         "Reading",
+        "status":          "Status",
+        "repository":      "Repository",
+        "min":             "min",
+        "narration":       "Narration",
+        "tldr":            "TL;DR",
+        "play":            "Play",
+        "pause":           "Pause",
+        "prev":            "Prev",
+        "next":            "Next",
+        "restart":         "Restart",
+        "auto_advance":    "auto-advance",
+        "search_placeholder": "Search papers by title, subtitle, tag…",
+        "all":             "All",
+        "no_content":      "No content yet",
+        "no_content_body": "This paper has not been written yet. The structure is in place; the body is forthcoming.",
+        "slide":           "Slide",
+        "all_slides":      "All slides",
+        "close":           "Close",
+        "kbd_hint":        "Space = play/pause · ← / → = prev / next · click the slide to toggle",
+        "audio_missing":   "Audio not generated yet.",
+        "audio_missing_label": "Audio not generated",
+        "audio_missing_body":  "Run the generator on this paper to produce the narration MP3.",
+        "translation_labels": {
+          "untranslated": "Untranslated",
+          "draft":        "Draft translation",
+          "reviewed":     "Reviewed translation"
+        },
+        "translation_bodies": {
+          "untranslated": "The English version is the canonical text. This French page is structural only.",
+          "draft":        "A first French pass has been written. It has not yet been reviewed by a human.",
+          "reviewed":     "Reviewed by a human; not yet final."
+        },
+        "audio_ready_aria":          "audio ready",
+        "aria_role_player":          "presentation player",
+        "aria_overall":              "Overall progress through this presentation",
+        "aria_controls":             "Playback controls",
+        "aria_prev":                 "Previous slide",
+        "aria_next":                 "Next slide",
+        "aria_play":                 "Play narration",
+        "aria_pause":                "Pause narration",
+        "aria_play_stage":           "Play narration",
+        "aria_pause_stage":          "Pause narration",
+        "aria_restart":              "Restart from the first slide",
+        "aria_scrubber":             "Seek within current slide",
+        "aria_text_panel":           "Slide text and narration",
+        "aria_slide_announcement":   "Slide {n} of {total}, {title}",
+        "aria_playing_announcement": "Playing",
+        "aria_paused_announcement":  "Paused"
+      },
+      "hero": {
+        "h1_pre":   "Forty years of",
+        "h1_em_1":  "technical debt.",
+        "h1_mid":   "Four years to",
+        "h1_em_2":  "modernize."
+      },
+      "footer": {
+        "primary": {
+          "heading": "The Velocity White Papers",
+          "body": "Sixteen papers and one placeholder. Conceptual papers establish the why. Technical papers are the playbook. Policy & People papers make it real for government and for the workforce. The full site is published via GitHub Pages and is itself open source."
+        },
+        "columns": [
+          {
+            "heading": "Reference",
+            "items": [
+              { "label": "Glossary",          "href": "#/glossary" },
+              { "label": "Architecture",      "href": "#/architecture" },
+              { "label": "Index",             "href": "#/index" },
+              { "label": "Updates",           "href": "#/updates" }
+            ]
+          },
+          {
+            "heading": "Open source",
+            "items": [
+              { "label": "Repositories",      "href": "#/repos" },
+              { "label": "Community",         "href": "#/community" },
+              { "label": "About",             "href": "#/about" },
+              { "label": "Site repository",   "href": "https://github.com/alberta-velocity/velocity-whitepapers" }
+            ]
+          }
+        ],
+        "smallcaps": "Government of Alberta · Technology and Innovation"
+      },
+      "stats": [
+        { "k": "Papers",                 "v": "16",   "sub": "+ 1 placeholder" },
+        { "k": "Repositories released",  "v": "7",    "sub": "open source" },
+        { "k": "Tiers",                  "v": "3",    "sub": "Conceptual · Technical · Policy" },
+        { "k": "Estimated debt",         "v": "$2B+", "sub": "credible floor" }
+      ],
+      "section_titles": {
+        "featured":         "Featured this volume",
+        "complete_series":  "The complete series",
+        "featured_meta":    "Vol. I · Conceptual foundation",
+        "series_meta_tpl":  "{n} entries · 7 public repositories"
+      }
+    },
+    "fr": {
+      "title": "Les livres blancs Velocity",
+      "tagline": "Une collection vivante et libre sur la transformation de quarante années de dette technique en un gouvernement moderne en quatre ans.",
+      "publisher": "Gouvernement de l'Alberta · Ministère de la Technologie et de l'Innovation",
+      "publisher_short": "Alberta · TI",
+      "nav": [
+        { "id": "library",       "label": "Bibliothèque" },
+        { "id": "index",         "label": "Index" },
+        { "id": "architecture",  "label": "Architecture" },
+        { "id": "about",         "label": "À propos" }
+      ],
+      "ui": {
+        "loading_library": "Chargement de la bibliothèque…",
+        "loading_index":   "Chargement de l'index…",
+        "loading_paper":   "Chargement",
+        "back_to_library": "Bibliothèque",
+        "abstract":        "Résumé",
+        "contents":        "Sommaire",
+        "read_next":       "À lire ensuite",
+        "tags":            "Étiquettes",
+        "authors":         "Auteurs",
+        "published":       "Publié",
+        "reading":         "Lecture",
+        "status":          "État",
+        "repository":      "Dépôt",
+        "min":             "min",
+        "narration":       "Narration",
+        "tldr":            "Résumé express",
+        "play":            "Lecture",
+        "pause":           "Pause",
+        "prev":            "Préc.",
+        "next":            "Suiv.",
+        "restart":         "Recommencer",
+        "auto_advance":    "lecture automatique",
+        "search_placeholder": "Rechercher par titre, sous-titre, étiquette…",
+        "all":             "Tous",
+        "no_content":      "Contenu à venir",
+        "no_content_body": "Ce livre blanc n'a pas encore été rédigé. La structure est en place ; le contenu suivra.",
+        "slide":           "Diapo",
+        "all_slides":      "Toutes les diapos",
+        "close":           "Fermer",
+        "kbd_hint":        "Espace = lecture/pause · ← / → = préc. / suiv. · cliquez la diapo pour basculer",
+        "audio_missing":   "Audio non généré.",
+        "audio_missing_label": "Audio non généré",
+        "audio_missing_body":  "Exécutez le générateur sur ce livre blanc pour produire le MP3 de narration.",
+        "translation_labels": {
+          "untranslated": "Non traduit",
+          "draft":        "Traduction provisoire",
+          "reviewed":     "Traduction revue"
+        },
+        "translation_bodies": {
+          "untranslated": "La version anglaise est le texte de référence. Cette page française n'est que structurelle.",
+          "draft":        "Une première version française a été rédigée. Elle n'a pas encore été revue.",
+          "reviewed":     "Revue par un humain ; pas encore finalisée."
+        },
+        "audio_ready_aria":          "audio disponible",
+        "aria_role_player":          "lecteur de présentation",
+        "aria_overall":              "Progression globale de la présentation",
+        "aria_controls":             "Commandes de lecture",
+        "aria_prev":                 "Diapositive précédente",
+        "aria_next":                 "Diapositive suivante",
+        "aria_play":                 "Lire la narration",
+        "aria_pause":                "Mettre la narration en pause",
+        "aria_play_stage":           "Lire la narration",
+        "aria_pause_stage":          "Mettre la narration en pause",
+        "aria_restart":              "Recommencer depuis la première diapositive",
+        "aria_scrubber":             "Avancer dans la diapositive actuelle",
+        "aria_text_panel":           "Texte et narration de la diapositive",
+        "aria_slide_announcement":   "Diapositive {n} sur {total}, {title}",
+        "aria_playing_announcement": "Lecture en cours",
+        "aria_paused_announcement":  "En pause"
+      },
+      "hero": {
+        "h1_pre":   "Quarante années de",
+        "h1_em_1":  "dette technique.",
+        "h1_mid":   "Quatre ans pour",
+        "h1_em_2":  "moderniser."
+      },
+      "footer": {
+        "primary": {
+          "heading": "Les livres blancs Velocity",
+          "body": "Seize livres blancs et un projet en suspens. Les livres conceptuels expliquent le pourquoi. Les livres techniques décrivent la mise en œuvre. Les livres « Politiques et personnes » ancrent l'ensemble pour le gouvernement et son effectif. Le site est publié sur GitHub Pages et il est lui-même libre."
+        },
+        "columns": [
+          {
+            "heading": "Référence",
+            "items": [
+              { "label": "Glossaire",         "href": "#/glossary" },
+              { "label": "Architecture",      "href": "#/architecture" },
+              { "label": "Index",             "href": "#/index" },
+              { "label": "Mises à jour",      "href": "#/updates" }
+            ]
+          },
+          {
+            "heading": "Logiciel libre",
+            "items": [
+              { "label": "Dépôts",            "href": "#/repos" },
+              { "label": "Communauté",        "href": "#/community" },
+              { "label": "À propos",          "href": "#/about" },
+              { "label": "Dépôt du site",     "href": "https://github.com/alberta-velocity/velocity-whitepapers" }
+            ]
+          }
+        ],
+        "smallcaps": "Gouvernement de l'Alberta · Technologie et innovation"
+      },
+      "stats": [
+        { "k": "Livres blancs",          "v": "16",   "sub": "+ 1 en suspens" },
+        { "k": "Dépôts publiés",         "v": "7",    "sub": "logiciel libre" },
+        { "k": "Niveaux",                "v": "3",    "sub": "Conceptuel · Technique · Politiques" },
+        { "k": "Dette estimée",          "v": "2 G$+","sub": "plancher crédible" }
+      ],
+      "section_titles": {
+        "featured":         "À la une de ce volume",
+        "complete_series":  "La collection complète",
+        "featured_meta":    "Vol. I · Fondation conceptuelle",
+        "series_meta_tpl":  "{n} entrées · 7 dépôts publics"
+      }
+    }
+  }
+}

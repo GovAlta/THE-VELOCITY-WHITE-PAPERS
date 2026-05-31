@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\wp-08\\en\\fig-04-hook.jpg",
+  "bytes_jpg": 143157,
+  "bytes_png_source": 2446340,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T10:52:00.812Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of a gate sitting at the boundary between a workshop area on the left and a delivery area on the right. The gate is closed; a small tag reading STOP HOOK hangs from it. On the workshop side, a labelled box reads AGENT. On the delivery side, a clean document labelled DELIVERABLE waits to be released. A small thin arrow points from the agent to the gate, where it stops. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of a gate sitting at the boundary between a workshop area on the left and a delivery area on the right. The gate is closed; a small tag reading STOP HOOK hangs from it. On the workshop side, a labelled box reads AGENT. On the delivery side, a clean document labelled DELIVERABLE waits to be released. A small thin arrow points from the agent to the gate, where it stops. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

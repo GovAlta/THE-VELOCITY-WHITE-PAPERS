@@ -1,0 +1,61 @@
+{
+  "_note": "Optional enrichment for the ReposPage. Keys are paper ids; values may include license, language, status, en_description, fr_description. Anything not set here falls back to papers.json fields.",
+  "repos": {
+    "wp-03": {
+      "license": "MIT",
+      "language": "Python",
+      "status": "Published",
+      "en_description": "Open-source toolset for pan-Canadian benchmarking of legislation, regulation, and policy. Lets a government compare its statutes against peer jurisdictions and identify where it is an outlier, where it is duplicative, where it is silent.",
+      "fr_description": "Outil libre pour étalonner lois, règlements et politiques à l'échelle pancanadienne. Permet à un gouvernement de comparer ses lois à celles de pairs et d'identifier les anomalies, les doublons et les silences."
+    },
+    "wp-08": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Published",
+      "en_description": "The generic harness, plus an Alberta.ca adaptation as a worked example. Skill files, hook layer, opinionated stack. Enterprise-grade Hello World that solves the most complex first-mile challenges.",
+      "fr_description": "Le harnais générique, plus une adaptation Alberta.ca comme exemple travaillé. Fichiers de compétences, couche de hooks, pile opiniâtre. Un Hello World de calibre entreprise qui résout les premiers défis complexes du parcours."
+    },
+    "wp-09": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Published",
+      "en_description": "Recursive, iterative scanner for an enterprise GitHub estate. Maps the technical estate, cybersecurity posture, and human estate (top contributors by language and ministry).",
+      "fr_description": "Scanneur récursif et itératif pour un patrimoine GitHub d'entreprise. Cartographie le patrimoine technique, la posture cybersécurité et le patrimoine humain (principaux contributeurs par langage et par ministère)."
+    },
+    "wp-10": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Forthcoming",
+      "en_description": "From analysis to synthesis. Operates at the ministry scale across hundreds of systems and proposes a modular, reusable, government-owned compute architecture for that ministry.",
+      "fr_description": "De l'analyse à la synthèse. Opère à l'échelle d'un ministère sur des centaines de systèmes et propose une architecture de calcul modulaire et réutilisable, propriété du gouvernement."
+    },
+    "wp-11": {
+      "license": "MIT",
+      "language": "JSON + tooling",
+      "status": "Forthcoming",
+      "en_description": "The downloadable JSON of the repeatable, codified business functions of government, extracted from the actual code that runs today. System-agnostic and ministry-agnostic.",
+      "fr_description": "Le JSON téléchargeable des fonctions d'affaires répétables et codifiées du gouvernement, extraites du code en production. Neutre par rapport au système et au ministère."
+    },
+    "wp-12": {
+      "license": "MIT",
+      "language": "Go + Terraform",
+      "status": "Forthcoming",
+      "en_description": "The secure sandboxed environment that allows agents to work iteratively without degrading the security posture. Where parallel models compete on the same problem.",
+      "fr_description": "L'environnement sécurisé isolé qui permet aux agents de travailler de façon itérative sans dégrader la posture de sécurité. C'est là que des modèles concurrents s'affrontent sur le même problème."
+    },
+    "wp-13": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Forthcoming",
+      "en_description": "Project-management system that replaces Jira-style tooling with a point-based scoring engine. Tracks hundreds of human workers and thousands of agents across 600+ themes.",
+      "fr_description": "Système de gestion de projet qui remplace les outils de type Jira par un moteur de pointage. Suit des centaines de travailleurs humains et des milliers d'agents sur plus de 600 thèmes."
+    },
+    "arch-adhd-harness": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Forthcoming",
+      "en_description": "The Anti-Drift Harness reference site. Skills, hooks, standards, evals, walker, tickets, anti-drift agent.",
+      "fr_description": "Le site de référence du harnais anti-dérive. Compétences, hooks, standards, évaluations, veilleur, tickets, agent anti-dérive."
+    }
+  }
+}

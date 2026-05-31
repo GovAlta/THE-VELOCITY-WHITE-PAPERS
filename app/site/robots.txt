@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# AI crawlers — opted in. Add per-bot disallow rules here if needed.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://alberta-velocity.github.io/velocity-whitepapers/sitemap.xml

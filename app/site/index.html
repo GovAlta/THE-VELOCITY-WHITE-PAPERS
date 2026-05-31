@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The Velocity White Papers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="description" content="A living, open-source collection from the Government of Alberta on transforming forty years of IT technical debt into a modern government in four years." />
+
+  <!-- Open Graph baseline (per-page values are set at runtime by components/_lib/meta.js). -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Velocity White Papers" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="fr_CA" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Preconnect to font + CDN origins to shave handshake latency off the LCP. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+  <!-- Async load the Fonts stylesheet so it doesn't block render. The
+       no-script fallback keeps text rendering with the same family even when
+       JS is off (Lighthouse runs JS-on but bots/crawlers may not). -->
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+  </noscript>
+
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/player.css" />
+  <link rel="stylesheet" href="styles/visuals.css" />
+  <link rel="stylesheet" href="styles/edit.css" />
+
+  <!-- Vue and all our scripts use defer: download in parallel, execute in
+       document order after HTML parse. None block first paint. -->
+  <script defer src="https://unpkg.com/vue@3.5.13/dist/vue.global.prod.js"></script>
+
+  <!-- Accessibility helpers + meta-tag manager. -->
+  <script defer src="components/_lib/a11y.js"></script>
+  <script defer src="components/_lib/meta.js"></script>
+
+  <!-- Visuals shared lib + registry. -->
+  <script defer src="components/visuals/_lib/anim.js"></script>
+  <script defer src="components/visuals/_lib/registry.js"></script>
+
+  <!-- Reusable visuals. -->
+  <script defer src="components/visuals/reusable/TileHeatmap.js"></script>
+
+  <!-- Components -->
+  <script defer src="components/AppNav.js"></script>
+  <script defer src="components/AppFooter.js"></script>
+  <script defer src="components/StatRail.js"></script>
+  <script defer src="components/PaperCard.js"></script>
+  <script defer src="components/LibraryGrid.js"></script>
+  <script defer src="components/IndexTable.js"></script>
+  <script defer src="components/PaperDetail.js"></script>
+  <script defer src="components/ArchitectureDiagram.js"></script>
+  <script defer src="components/MiniChart.js"></script>
+  <script defer src="components/PullQuote.js"></script>
+  <script defer src="components/KeyStat.js"></script>
+  <script defer src="components/Figure.js"></script>
+  <script defer src="components/SideNote.js"></script>
+  <script defer src="components/RelatedPapers.js"></script>
+  <script defer src="components/TagRow.js"></script>
+  <script defer src="components/AudioPlayer.js"></script>
+  <script defer src="components/ImageInspector.js"></script>
+  <script defer src="components/PresentationStage.js"></script>
+  <script defer src="components/PresentationPlayer.js"></script>
+  <script defer src="components/BlockRenderer.js"></script>
+  <script defer src="components/PaperDownloads.js"></script>
+  <script defer src="components/KeyboardShortcuts.js"></script>
+
+  <!-- Dev-only in-page editor. Hard-gated to localhost; inert on the public site. -->
+  <script defer src="components/EditMode.js"></script>
+  <script defer src="components/EditableText.js"></script>
+  <script defer src="components/EditPanels.js"></script>
+  <script defer src="components/TldrEditor.js"></script>
+
+  <!-- Pages -->
+  <script defer src="pages/LibraryPage.js"></script>
+  <script defer src="pages/IndexPage.js"></script>
+  <script defer src="pages/ArchitecturePage.js"></script>
+  <script defer src="pages/PaperPage.js"></script>
+  <script defer src="pages/AboutPage.js"></script>
+  <script defer src="pages/GlossaryPage.js"></script>
+  <script defer src="pages/ReposPage.js"></script>
+  <script defer src="pages/UpdatesPage.js"></script>
+  <script defer src="pages/CommunityPage.js"></script>
+  <script defer src="pages/NotFoundPage.js"></script>
+
+  <!-- App bootstrap (runs last because of defer document order). -->
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <div id="app" v-cloak>
+    <app-nav :page="page" @navigate="navigate"></app-nav>
+    <main id="main-content" class="civic-main" tabindex="-1">
+      <component :is="currentPage" :paper-id="paperId" @navigate="navigate"></component>
+    </main>
+    <!-- Off-screen live region for screen reader announcements -->
+    <div id="vw-announce" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+    <!-- Global keyboard shortcuts dialog (press "?" to open) -->
+    <keyboard-shortcuts></keyboard-shortcuts>
+    <!-- Dev-only editor toolbar + panels; render only when the edit-server enables editing. -->
+    <edit-toolbar></edit-toolbar>
+    <vw-guides-panel></vw-guides-panel>
+    <vw-revise-panel></vw-revise-panel>
+  </div>
+</body>
+</html>

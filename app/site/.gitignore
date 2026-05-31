@@ -1,0 +1,8 @@
+node_modules/
+.env
+.env.local
+*.log
+
+# Generated assets — uncomment if you prefer not to check these in.
+# public/audio/*.mp3
+# public/images/*/

@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "en",
+  "slot": "slide-08",
+  "out_path": "public\\images\\wp-08\\en\\slide-08.jpg",
+  "bytes_jpg": 160428,
+  "bytes_png_source": 2532520,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T11:00:39.390Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of a finished application package sitting on a small delivery platform at the centre. Two small badges are attached to the package, one labelled SAFE and one labelled FAST. A trajectory arc rises out of the package and continues off the right edge of the canvas, suggesting more to come. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of a finished application package sitting on a small delivery platform at the centre. Two small badges are attached to the package, one labelled SAFE and one labelled FAST. A trajectory arc rises out of the package and continues off the right edge of the canvas, suggesting more to come. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

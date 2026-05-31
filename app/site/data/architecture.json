@@ -1,0 +1,31 @@
+{
+  "layers": [
+    { "id": "discover",  "label": "Discovery",     "sub": "Estate ingestion" },
+    { "id": "analyze",   "label": "Analysis",      "sub": "Comprehension and risk" },
+    { "id": "plan",      "label": "Planning",      "sub": "Strategy and sequencing" },
+    { "id": "implement", "label": "Implementation","sub": "Code changes" },
+    { "id": "verify",    "label": "Verification",  "sub": "Behavioural equivalence" },
+    { "id": "govern",    "label": "Governance",    "sub": "Human gates and audit" },
+    { "id": "deploy",    "label": "Deployment",    "sub": "Rollout and rollback" }
+  ],
+  "agents": [
+    { "id": "a-crawl",     "layer": "discover",  "label": "Repo Crawler",        "cls": "autonomous", "throughput": "420 repos/day" },
+    { "id": "a-classify",  "layer": "discover",  "label": "Asset Classifier",    "cls": "autonomous", "throughput": "1.4M files/day" },
+    { "id": "a-dep",       "layer": "discover",  "label": "Dependency Mapper",   "cls": "autonomous", "throughput": "281K edges" },
+    { "id": "a-symbol",    "layer": "analyze",   "label": "Symbol Resolver",     "cls": "autonomous", "throughput": "466M LOC" },
+    { "id": "a-behav",     "layer": "analyze",   "label": "Behavioural Tracer",  "cls": "autonomous", "throughput": "14K services" },
+    { "id": "a-risk",      "layer": "analyze",   "label": "Risk Scorer",         "cls": "autonomous", "throughput": "1,400 apps" },
+    { "id": "a-arch",      "layer": "plan",      "label": "Architecture Planner","cls": "autonomous", "throughput": "92 plans/wk" },
+    { "id": "a-seq",       "layer": "plan",      "label": "Sequencer",           "cls": "autonomous", "throughput": "priority queue" },
+    { "id": "a-author",    "layer": "implement", "label": "Code Author",         "cls": "autonomous", "throughput": "~6.4K PRs/wk" },
+    { "id": "a-refactor",  "layer": "implement", "label": "Refactor Specialist", "cls": "autonomous", "throughput": "pattern-driven" },
+    { "id": "a-migrate",   "layer": "implement", "label": "Migration Engine",    "cls": "autonomous", "throughput": "COBOL · PB · 6i" },
+    { "id": "a-equiv",     "layer": "verify",    "label": "Equivalence Prover",  "cls": "verifier",   "throughput": "differential" },
+    { "id": "a-test",      "layer": "verify",    "label": "Test Synthesizer",    "cls": "verifier",   "throughput": "gen and run" },
+    { "id": "a-sec",       "layer": "verify",    "label": "Security Auditor",    "cls": "verifier",   "throughput": "SAST + policy" },
+    { "id": "a-prov",      "layer": "govern",    "label": "Provenance Ledger",   "cls": "ledger",     "throughput": "signed records" },
+    { "id": "a-review",    "layer": "govern",    "label": "Supervisor Console",  "cls": "human",      "throughput": "engineer review" },
+    { "id": "a-rollout",   "layer": "deploy",    "label": "Rollout Conductor",   "cls": "autonomous", "throughput": "staged" },
+    { "id": "a-rollback",  "layer": "deploy",    "label": "Rollback Sentinel",   "cls": "autonomous", "throughput": "auto-revert" }
+  ]
+}

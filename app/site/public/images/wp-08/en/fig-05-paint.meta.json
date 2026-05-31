@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "en",
+  "slot": "fig-05",
+  "out_path": "public\\images\\wp-08\\en\\fig-05-paint.jpg",
+  "bytes_jpg": 144572,
+  "bytes_png_source": 2424267,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-30T14:43:58.735Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of a paint-by-number illustration partway through being filled in. The subject is the line-art front elevation of a simple symmetrical civic building, drawn as clean outlined regions. Some regions are already painted with flat colour, a few in deep navy and a few in rust, and the remaining regions are left as empty cream outlines still waiting to be filled. To the right sits a small vertical colour key of four plain flat swatches, navy, rust, stone, and cream, each with a short word label beside it. Do not draw any numbers or digits anywhere in the image; the regions are plain shapes, never numbered. Hand-drawn line work, two-tone navy and rust on warm cream paper, calm and architectural. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of a paint-by-number illustration partway through being filled in. The subject is the line-art front elevation of a simple symmetrical civic building, drawn as clean outlined regions. Some regions are already painted with flat colour, a few in deep navy and a few in rust, and the remaining regions are left as empty cream outlines still waiting to be filled. To the right sits a small vertical colour key of four plain flat swatches, navy, rust, stone, and cream, each with a short word label beside it. Do not draw any numbers or digits anywhere in the image; the regions are plain shapes, never numbered. Hand-drawn line work, two-tone navy and rust on warm cream paper, calm and architectural. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

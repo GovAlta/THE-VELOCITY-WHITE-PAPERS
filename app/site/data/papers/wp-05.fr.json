@@ -1,0 +1,121 @@
+{
+  "id": "wp-05",
+  "num": "05",
+  "sequence": "5 of 16",
+  "tier": "Conceptual",
+  "title": "Architecture en écosystème",
+  "subtitle": "Forêt contre pelouse. Permaculture contre jardin anglais. L'architecture adaptée à son milieu.",
+  "track": "À placer",
+  "authors": [
+    "Ministère de la Technologie et de l'Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "Plutôt que de construire un organisme monolithique unique, on cultive les conditions du succès. On établit non du code statique mais des systèmes dynamiques capables de fonctionner et d'interopérer dans un cadre de contraintes inspirées de la nature. Le concept architectural visé est vernaculaire, adapté à son milieu. L'humain reste l'architecte de la vision d'ensemble.",
+  "hero_image": {
+    "src": "public/images/wp-05/fr/hero.jpg",
+    "alt": "Image éditoriale pour : Architecture en écosystème",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"Ecosystem Architecture\". Forest vs lawn. Permaculture vs English garden. Architecture suited to its place. Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/wp-05.mp3",
+    "duration_sec": null
+  },
+  "tldr_presentation": {
+    "id": "wp-05-tldr",
+    "title": "Le livre blanc en bref",
+    "locale": "fr",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Architecture en écosystème",
+        "audio_file": "public/audio/fr/wp-05-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Livre 5 · Architecture",
+        "subcaption": "Forêt contre pelouse. Permaculture contre jardin anglais. L'architecture adaptée à son milieu.",
+        "text": "Architecture en écosystème. Forêt contre pelouse. Permaculture contre jardin anglais. L'architecture adaptée à son milieu."
+      },
+      {
+        "id": "02",
+        "title": "Le résumé",
+        "audio_file": "public/audio/fr/wp-05-tldr/02.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Plutôt que de construire un organisme monolithique unique, on cultive les conditions du succès. On établit non du code statique mais des systèmes dynamiques capables de fonctionner et d'interopérer dans un cadre de contraintes inspirées de la nature. Le concept architec…",
+          "cite": "Livre 05 — Architecture en écosystème"
+        },
+        "text": "Plutôt que de construire un organisme monolithique unique, on cultive les conditions du succès. On établit non du code statique mais des systèmes dynamiques capables de fonctionner et d'interopérer dans un cadre de contraintes inspirées de la nature. Le concept architectural visé est vernaculaire, adapté à son milieu. L'humain reste l'architecte de la vision d'ensemble."
+      },
+      {
+        "id": "03",
+        "title": "Plan du livre blanc",
+        "audio_file": "public/audio/fr/wp-05-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Sections",
+        "visual_config": {
+          "items": [
+            {
+              "label": "§01",
+              "desc": "Forêt contre pelouse anglaise"
+            },
+            {
+              "label": "§02",
+              "desc": "Permaculture et contraintes"
+            },
+            {
+              "label": "§03",
+              "desc": "Symétrie fractale, détail vernaculaire"
+            },
+            {
+              "label": "§04",
+              "desc": "L'humain reste l'architecte"
+            }
+          ]
+        },
+        "text": "Plan en 4 sections. Forêt contre pelouse anglaise. Permaculture et contraintes. Symétrie fractale, détail vernaculaire. L'humain reste l'architecte."
+      }
+    ],
+    "owner_id": "wp-05"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Forêt contre pelouse anglaise"
+    },
+    {
+      "n": "02",
+      "title": "Permaculture et contraintes"
+    },
+    {
+      "n": "03",
+      "title": "Symétrie fractale, détail vernaculaire"
+    },
+    {
+      "n": "04",
+      "title": "L'humain reste l'architecte"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Forêt contre pelouse anglaise"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenu à venir.</strong> Le contenu intégral de ce livre blanc est à venir. La structure est en place. Les sections, le résumé et les métadonnées sont alignés avec la fiche d'inventaire et la présentation TL;DR. Le corps sera rédigé à partir des transcriptions et des documents de référence, et non généré automatiquement."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
+  },
+  "translation_status": "untranslated",
+  "category": "paper"
+}

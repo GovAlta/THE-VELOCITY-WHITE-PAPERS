@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "en",
+  "slot": "slide-07",
+  "out_path": "public\\images\\wp-08\\en\\slide-07.jpg",
+  "bytes_jpg": 129282,
+  "bytes_png_source": 2488788,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T10:59:42.314Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram with two analogue dials drawn side by side at the centre of the canvas. The left dial is labelled DETERMINISTIC and its needle is locked exactly on a single tick mark. The right dial is labelled PROBABILISTIC and its needle hovers between two values with a small motion arc drawn around it. Below the dials a short label reads: same question, two ways of answering. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram with two analogue dials drawn side by side at the centre of the canvas. The left dial is labelled DETERMINISTIC and its needle is locked exactly on a single tick mark. The right dial is labelled PROBABILISTIC and its needle hovers between two values with a small motion arc drawn around it. Below the dials a short label reads: same question, two ways of answering. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

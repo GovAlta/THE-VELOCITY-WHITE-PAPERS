@@ -1,0 +1,129 @@
+{
+  "id": "wp-09",
+  "num": "09",
+  "sequence": "9 of 16",
+  "tier": "Technical",
+  "title": "Git Insights : radiographie du patrimoine",
+  "subtitle": "Un outil sur mesure pour balayer de façon récursive et itérative l'instance GitHub d'entreprise du gouvernement de l'Alberta.",
+  "track": "À placer",
+  "authors": [
+    "Ministère de la Technologie et de l'Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": "https://github.com/alberta-velocity/git-insights",
+  "abstract": "Un inventaire qui cartographie le patrimoine technique, la posture cybersécurité et le patrimoine humain. Architectures, langages, types de bases de données, CI/CD, automatisation, documentation ; vulnérabilités et exposition ; principaux contributeurs par langage et par ministère. Publié avec le livre blanc : les résultats du balayage qui confirment l'urgence du livre 1.",
+  "hero_image": {
+    "src": "public/images/wp-09/fr/hero.jpg",
+    "alt": "Image éditoriale pour : Git Insights : radiographie du patrimoine",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"Git Insights: X-Ray of the Estate\". A custom toolset for recursive, iterative scanning of the Government of Alberta enterprise GitHub instance. Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/wp-09.mp3",
+    "duration_sec": null
+  },
+  "tldr_presentation": {
+    "id": "wp-09-tldr",
+    "title": "Le livre blanc en bref",
+    "locale": "fr",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Git Insights : radiographie du patrimoine",
+        "audio_file": "public/audio/fr/wp-09-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Livre 9 · Radiographie",
+        "subcaption": "Un outil sur mesure pour balayer de façon récursive et itérative l'instance GitHub d'entreprise du gouvernement de l'Alberta.",
+        "text": "Git Insights : radiographie du patrimoine. Un outil sur mesure pour balayer de façon récursive et itérative l'instance GitHub d'entreprise du gouvernement de l'Alberta."
+      },
+      {
+        "id": "02",
+        "title": "Le résumé",
+        "audio_file": "public/audio/fr/wp-09-tldr/02.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Un inventaire qui cartographie le patrimoine technique, la posture cybersécurité et le patrimoine humain. Architectures, langages, types de bases de données, CI/CD, automatisation, documentation ; vulnérabilités et exposition ; principaux contributeurs par langage et pa…",
+          "cite": "Livre 09 — Git Insights : radiographie du patrimoine"
+        },
+        "text": "Un inventaire qui cartographie le patrimoine technique, la posture cybersécurité et le patrimoine humain. Architectures, langages, types de bases de données, CI/CD, automatisation, documentation ; vulnérabilités et exposition ; principaux contributeurs par langage et par ministère. Publié avec le livre blanc : les résultats du balayage qui confirment l'urgence du livre 1."
+      },
+      {
+        "id": "03",
+        "title": "Plan du livre blanc",
+        "audio_file": "public/audio/fr/wp-09-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Sections",
+        "visual_config": {
+          "items": [
+            {
+              "label": "§01",
+              "desc": "Ce que la radiographie couvre"
+            },
+            {
+              "label": "§02",
+              "desc": "Patrimoine technique"
+            },
+            {
+              "label": "§03",
+              "desc": "Posture cybersécurité"
+            },
+            {
+              "label": "§04",
+              "desc": "Patrimoine humain"
+            },
+            {
+              "label": "§05",
+              "desc": "Résultats qui confirment l'urgence"
+            }
+          ]
+        },
+        "text": "Plan en 5 sections. Ce que la radiographie couvre. Patrimoine technique. Posture cybersécurité. Patrimoine humain. Résultats qui confirment l'urgence."
+      }
+    ],
+    "owner_id": "wp-09"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Ce que la radiographie couvre"
+    },
+    {
+      "n": "02",
+      "title": "Patrimoine technique"
+    },
+    {
+      "n": "03",
+      "title": "Posture cybersécurité"
+    },
+    {
+      "n": "04",
+      "title": "Patrimoine humain"
+    },
+    {
+      "n": "05",
+      "title": "Résultats qui confirment l'urgence"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Ce que la radiographie couvre"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenu à venir.</strong> Le contenu intégral de ce livre blanc est à venir. La structure est en place. Les sections, le résumé et les métadonnées sont alignés avec la fiche d'inventaire et la présentation TL;DR. Le corps sera rédigé à partir des transcriptions et des documents de référence, et non généré automatiquement."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
+  },
+  "translation_status": "untranslated",
+  "category": "paper"
+}

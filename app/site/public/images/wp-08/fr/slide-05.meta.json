@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "fr",
+  "slot": "slide-05",
+  "out_path": "public\\images\\wp-08\\fr\\slide-05.jpg",
+  "bytes_jpg": 164807,
+  "bytes_png_source": 2102565,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T11:17:22.942Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of a gate sitting at the boundary between a workshop area on the left and a delivery area on the right. The gate is closed; a small lock and a tag reading STOP HOOK hang from it. On the workshop side, a labelled agent box stands ready. On the delivery side, a clean document waits to be released. Hand-drawn lines, navy and rust on warm cream paper. No people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of a gate sitting at the boundary between a workshop area on the left and a delivery area on the right. The gate is closed; a small lock and a tag reading STOP HOOK hang from it. On the workshop side, a labelled agent box stands ready. On the delivery side, a clean document waits to be released. Hand-drawn lines, navy and rust on warm cream paper. No people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wp-08\\en\\slide-05.source.png"
+}

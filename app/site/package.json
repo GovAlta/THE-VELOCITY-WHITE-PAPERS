@@ -1,0 +1,32 @@
+{
+  "name": "velocity-whitepapers-site",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Static, bilingual, open-source whitepaper compendium. Vue 3 via CDN, served from GitHub Pages. Asset-generation scripts run locally.",
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes http-server . -p 5173 -c-1 -o",
+    "edit": "node scripts/edit-server.mjs --enable",
+    "preview": "node scripts/edit-server.mjs",
+    "generate:audio": "node scripts/generate-audio.mjs",
+    "generate:images": "node scripts/generate-images.mjs",
+    "generate:all": "node scripts/generate-audio.mjs && node scripts/generate-images.mjs",
+    "gen:image": "node scripts/gen-image.mjs",
+    "gen:audio": "node scripts/gen-audio.mjs",
+    "eval": "node scripts/evals/index.mjs",
+    "eval:strict": "node scripts/evals/check-a11y-static.mjs --strict && node scripts/evals/index.mjs",
+    "eval:pages": "node scripts/evals/check-pages.mjs",
+    "eval:all": "node scripts/evals/index.mjs && node scripts/evals/check-pages.mjs",
+    "build:sitemap": "node scripts/build-sitemap.mjs",
+    "build:prerender": "node scripts/prerender.mjs",
+    "build:bundle": "node scripts/build-bundle.mjs",
+    "build:seo": "node scripts/build-sitemap.mjs && node scripts/prerender.mjs",
+    "build:dist": "node scripts/build-bundle.mjs && node scripts/build-sitemap.mjs && node scripts/prerender.mjs",
+    "deploy:swap-in": "node scripts/deploy-swap.mjs --in",
+    "deploy:swap-out": "node scripts/deploy-swap.mjs --out",
+    "stubs": "node scripts/build-stubs.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

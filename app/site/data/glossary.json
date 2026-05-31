@@ -1,0 +1,200 @@
+{
+  "terms": [
+    {
+      "id": "agentic",
+      "en": {
+        "term": "Agentic",
+        "short": "Software that takes actions on a system without per-step human approval.",
+        "long": "An agentic system is one in which an AI model decides what to do next, executes it directly against the system being changed, and continues iterating without requiring a human to approve each step. Different from a chat interface where the model only proposes; an agent commits."
+      },
+      "fr": {
+        "term": "Agentique",
+        "short": "Logiciel qui agit sur un système sans approbation humaine pour chaque étape.",
+        "long": "Un système agentique décide de ses prochaines actions, les exécute directement sur le système à modifier, et continue d'itérer sans approbation humaine étape par étape. Différent d'une interface conversationnelle où le modèle ne fait que proposer ; un agent agit."
+      },
+      "related": ["nexus", "harness", "walker"]
+    },
+    {
+      "id": "harness",
+      "en": {
+        "term": "Harness",
+        "short": "The standards, skills, hooks, and integrations that surround an agent and keep its output coherent.",
+        "long": "A harness is the set of project-side rules and supporting machinery an AI coding agent operates within. It includes folder structure, route patterns, OpenAPI specs, migrations, evaluations, and the hook layer that intercepts agent events. The harness is what stops a coding agent from drifting away from project conventions over time."
+      },
+      "fr": {
+        "term": "Harnais",
+        "short": "Les standards, compétences, hooks et intégrations qui encadrent un agent et maintiennent la cohérence de ses productions.",
+        "long": "Un harnais est l'ensemble des règles et de la machinerie de soutien dans lequel opère un agent de programmation. Il inclut la structure des dossiers, les motifs de routes, les spécifications OpenAPI, les migrations, les évaluations et la couche de hooks qui intercepte les événements de l'agent."
+      },
+      "related": ["agentic", "skill", "hook"]
+    },
+    {
+      "id": "skill",
+      "en": {
+        "term": "Skill",
+        "short": "A bundled set of instructions and scripts an agent can invoke for a specific task.",
+        "long": "A skill is a unit of agent capability: a markdown manifest describing what to do, often paired with executable scripts. The agent loads the skill on demand when it recognizes a matching task. Examples in this codebase: add-paper, translate-paper, regenerate-images."
+      },
+      "fr": {
+        "term": "Compétence",
+        "short": "Un ensemble d'instructions et de scripts qu'un agent peut invoquer pour une tâche précise.",
+        "long": "Une compétence est une unité de capacité agentique : un manifeste en markdown décrivant la marche à suivre, souvent accompagné de scripts exécutables. L'agent charge la compétence à la demande. Exemples ici : add-paper, translate-paper, regenerate-images."
+      },
+      "related": ["harness", "hook"]
+    },
+    {
+      "id": "hook",
+      "en": {
+        "term": "Hook",
+        "short": "A handler that intercepts an event in the agent's lifecycle.",
+        "long": "Hooks fire before or after agent actions: pre-edit, post-commit, on-tool-use. A hook can validate, enrich, or block what the agent is about to do. Hooks are the project's way of catching drift without requiring the agent to re-read every standard on every turn."
+      },
+      "fr": {
+        "term": "Hook",
+        "short": "Un gestionnaire qui intercepte un événement du cycle de vie de l'agent.",
+        "long": "Les hooks se déclenchent avant ou après les actions de l'agent : pré-édition, après-commit, à l'usage d'outil. Un hook peut valider, enrichir ou bloquer ce que l'agent s'apprête à faire."
+      },
+      "related": ["harness", "skill"]
+    },
+    {
+      "id": "drift",
+      "en": {
+        "term": "Drift",
+        "short": "The slow divergence between related parts of a codebase as the agent edits one without updating the others.",
+        "long": "When an agent changes a controller without updating the OpenAPI spec, when a renamed field stays in the training material as the old name, when test coverage stops matching the routes that exist. Drift is the chronic cost of context-limited editing at scale."
+      },
+      "fr": {
+        "term": "Dérive",
+        "short": "La divergence lente entre des parties liées d'une base de code lorsque l'agent modifie l'une sans mettre à jour les autres.",
+        "long": "Un contrôleur change sans que la spécification OpenAPI ne soit mise à jour, un champ renommé reste sous son ancien nom dans la documentation, la couverture des tests cesse de correspondre aux routes existantes. La dérive est le coût chronique de l'édition à contexte limité à grande échelle."
+      },
+      "related": ["walker", "harness"]
+    },
+    {
+      "id": "walker",
+      "en": {
+        "term": "Walker",
+        "short": "An autonomous scanner that checks whether related parts of the codebase are still in sync.",
+        "long": "The walker is the watchdog. It sweeps the codebase looking for drift between siblings: a route without a controller, a controller without a test, a migration without a model. When it finds drift, it files a ticket for the anti-drift agent."
+      },
+      "fr": {
+        "term": "Veilleur",
+        "short": "Un scanneur autonome qui vérifie que les parties liées de la base de code restent synchronisées.",
+        "long": "Le veilleur est le chien de garde. Il parcourt la base de code à la recherche de dérive entre parties liées. Quand il en trouve, il dépose un ticket pour l'agent anti-dérive."
+      },
+      "related": ["drift", "ticket", "anti-drift"]
+    },
+    {
+      "id": "nexus",
+      "en": {
+        "term": "Nexus",
+        "short": "The secure sandboxed environment where agents do their work.",
+        "long": "Nexus is the operating environment that allows agents to operate iteratively, make mistakes, and try different architectures without degrading production security posture. It is also where parallel models compete on the same problem."
+      },
+      "fr": {
+        "term": "Nexus",
+        "short": "L'environnement sécurisé et isolé où les agents accomplissent leur travail.",
+        "long": "Nexus est l'environnement d'exploitation qui permet aux agents d'itérer, de se tromper et d'essayer des architectures sans dégrader la posture de sécurité de production. C'est aussi le lieu où plusieurs modèles s'affrontent sur le même problème."
+      },
+      "related": ["agentic", "sandbox"]
+    },
+    {
+      "id": "ticket",
+      "en": {
+        "term": "Ticket",
+        "short": "A unit of work filed by the walker, picked up by an agent.",
+        "long": "When the walker detects drift, it writes a ticket. Tickets carry just enough context for an agent to fix the problem: which files diverged, what's expected, what was found."
+      },
+      "fr": {
+        "term": "Ticket",
+        "short": "Une unité de travail déposée par le veilleur et prise en charge par un agent.",
+        "long": "Lorsque le veilleur détecte une dérive, il rédige un ticket. Les tickets portent juste assez de contexte pour qu'un agent règle le problème : quels fichiers ont divergé, ce qui est attendu, ce qui a été trouvé."
+      },
+      "related": ["walker", "anti-drift"]
+    },
+    {
+      "id": "anti-drift",
+      "en": {
+        "term": "Anti-drift agent",
+        "short": "The agent that resolves tickets without disturbing the primary builder agent.",
+        "long": "A second agent that runs alongside the builder. The builder writes new code; the anti-drift agent picks up tickets from the walker and reconciles divergence. Separation of duties keeps the builder's working context clean."
+      },
+      "fr": {
+        "term": "Agent anti-dérive",
+        "short": "L'agent qui règle les tickets sans déranger l'agent constructeur principal.",
+        "long": "Un second agent qui fonctionne en parallèle du constructeur. Le constructeur écrit du nouveau code ; l'agent anti-dérive prend les tickets du veilleur et réconcilie les divergences. La séparation des tâches garde propre le contexte de travail du constructeur."
+      },
+      "related": ["walker", "ticket"]
+    },
+    {
+      "id": "evals",
+      "en": {
+        "term": "Evals",
+        "short": "Deterministic checks that run on every change.",
+        "long": "Evaluations: deterministic, reproducible tests that pass or fail on each change. Different from unit tests in that they typically verify cross-cutting properties (bilingual parity, metadata completeness, style-guide compliance) rather than function-level correctness."
+      },
+      "fr": {
+        "term": "Évaluations",
+        "short": "Vérifications déterministes exécutées à chaque changement.",
+        "long": "Évaluations : tests déterministes et reproductibles qui réussissent ou échouent à chaque changement. Vérifient typiquement des propriétés transversales (parité bilingue, complétude des métadonnées, conformité au guide de style)."
+      },
+      "related": ["harness", "hook"]
+    },
+    {
+      "id": "vernacular",
+      "en": {
+        "term": "Vernacular architecture",
+        "short": "Architecture suited to its place; the opposite of a generic master plan.",
+        "long": "Borrowed from architectural theory: buildings designed for their specific climate, materials, and people, not imposed from a master plan. Applied to software, vernacular architecture means systems shaped by their context rather than forced into a one-size-fits-all template."
+      },
+      "fr": {
+        "term": "Architecture vernaculaire",
+        "short": "Architecture adaptée à son milieu ; le contraire d'un plan maître générique.",
+        "long": "Emprunté à la théorie architecturale : des bâtiments conçus pour leur climat, leurs matériaux et leurs habitants, et non imposés depuis un plan maître. Appliqué au logiciel, l'architecture vernaculaire désigne des systèmes façonnés par leur contexte plutôt que forcés dans un gabarit générique."
+      },
+      "related": ["forest-lawn"]
+    },
+    {
+      "id": "forest-lawn",
+      "en": {
+        "term": "Forest vs lawn",
+        "short": "The metaphor for ecosystem architecture vs master-planned architecture.",
+        "long": "A forest has logic, hierarchy, and structure but is unique and specific to its context. An English lawn resists the nature of its participants and forces them into a rigid hierarchy. The metaphor argues for software ecosystems that work with the grain of their components rather than against it."
+      },
+      "fr": {
+        "term": "Forêt contre pelouse",
+        "short": "La métaphore opposant l'architecture en écosystème à l'architecture maître-planifiée.",
+        "long": "Une forêt a une logique, une hiérarchie et une structure mais reste unique à son contexte. Une pelouse anglaise résiste à la nature de ses participants et leur impose une hiérarchie rigide. La métaphore plaide pour des écosystèmes logiciels qui travaillent avec le grain de leurs composants plutôt que contre lui."
+      },
+      "related": ["vernacular"]
+    },
+    {
+      "id": "compression",
+      "en": {
+        "term": "Compression problem",
+        "short": "The inability of any system to reduce granular detail to strategic insight without loss.",
+        "long": "All systems face this: a thousand things happen at the tactical level; leaders need themes. Compress too much and you lose the texture that makes the decisions sound; compress too little and the leader cannot act. Paper 7 addresses this at agentic scale."
+      },
+      "fr": {
+        "term": "Problème de compression",
+        "short": "L'incapacité d'un système à réduire le détail granulaire en intuition stratégique sans perte.",
+        "long": "Tous les systèmes font face à cela : mille choses arrivent au niveau tactique, les dirigeants ont besoin de thèmes. Trop comprimer et l'on perd la texture qui rend les décisions justes ; trop peu et le dirigeant ne peut agir."
+      },
+      "related": ["agentic"]
+    },
+    {
+      "id": "goodhart",
+      "en": {
+        "term": "Goodhart's Law",
+        "short": "When a measure becomes a target, it ceases to be a good measure.",
+        "long": "Once a metric is used to evaluate behaviour, the people or agents being evaluated will optimize for the metric rather than the outcome the metric was supposed to track. Paper 13 (the Velocity Game Engine) discusses this as a deliberate caution for any scoring system."
+      },
+      "fr": {
+        "term": "Loi de Goodhart",
+        "short": "Quand une mesure devient une cible, elle cesse d'être une bonne mesure.",
+        "long": "Dès qu'une métrique sert à évaluer un comportement, les personnes ou agents évalués optimisent pour la métrique plutôt que pour le résultat qu'elle était censée suivre. Le livre 13 en discute comme mise en garde explicite pour tout système de pointage."
+      },
+      "related": ["evals"]
+    }
+  ]
+}

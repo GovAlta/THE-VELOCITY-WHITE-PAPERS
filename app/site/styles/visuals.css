@@ -1,0 +1,217 @@
+/* Visuals — shared styles for reusable visual components. */
+
+@keyframes vw-ping {
+  0%   { transform: scale(0.4); opacity: 1; }
+  100% { transform: scale(var(--vw-ping-scale, 4)); opacity: 0; }
+}
+
+.vw-heatmap {
+  background: #1a1410; padding: 18px;
+  position: relative; min-height: 240px;
+  font-family: var(--font-mono);
+}
+.vw-heatmap-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px; align-items: center; margin-bottom: 6px;
+}
+.vw-heatmap-label {
+  color: #a39483; font-size: 10.5px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.vw-heatmap-cells {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 2px;
+  height: 18px;
+}
+.vw-heatmap-cell {
+  width: 100%; height: 100%;
+  transition: background .25s ease;
+}
+.vw-heatmap-counter {
+  position: absolute; right: 16px; bottom: 12px;
+  color: #ffc350; font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+/* Future reusable visuals: append styles here. */
+
+/* ===== wp-08 bespoke visuals ===== */
+
+/* ----- Agent quartet (4 cards) ----- */
+.wp08-quartet { margin: 0; }
+.wp08-quartet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.wp08-quartet-card {
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 16px 16px 14px;
+  display: flex; flex-direction: column;
+  min-height: 240px;
+}
+.wp08-quartet-head {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.wp08-quartet-pill {
+  display: inline-block; border: 1px solid; border-radius: 999px;
+  padding: 2px 8px; font-weight: 700; font-family: var(--font-mono);
+}
+.wp08-quartet-slash { font-family: var(--font-mono); color: var(--ink-50); }
+.wp08-quartet-name {
+  margin: 10px 0 4px; font-size: 22px; line-height: 1.1;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.wp08-quartet-tag { color: var(--ink-70); font-size: 13.5px; margin: 0 0 12px; }
+.wp08-quartet-meta {
+  display: flex; gap: 8px; font-size: 11.5px; color: var(--ink-70);
+  border-top: 1px dashed rgba(0,0,0,0.12); padding-top: 8px; margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.wp08-quartet-meta .lbl {
+  color: var(--ink-50); font-family: var(--font-mono); font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.wp08-quartet-checks {
+  margin: 0; padding-left: 18px; font-size: 12.5px; color: var(--ink-70);
+}
+.wp08-quartet-checks li { margin-bottom: 3px; line-height: 1.35; }
+
+@media (max-width: 760px) {
+  .wp08-quartet-grid { grid-template-columns: 1fr; }
+  .wp08-quartet-card { min-height: 0; }
+}
+
+/* ----- Periodic table ----- */
+.wp08-periodic { margin: 0; }
+.wp08-periodic-legend {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-bottom: 10px; font-size: 10.5px;
+}
+.wp08-periodic-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: #fff; border: 1px solid; border-radius: 6px;
+  padding: 3px 7px;
+}
+.wp08-periodic-chip strong { font-family: var(--font-mono); font-weight: 600; }
+.wp08-periodic-chip .ct { color: var(--ink-50); }
+
+.wp08-periodic-grid {
+  display: grid; grid-template-columns: repeat(16, minmax(54px, 1fr));
+  gap: 4px;
+  border: 1px solid var(--rule); border-radius: 12px; padding: 8px;
+  background: #fff;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.wp08-periodic-col {
+  display: flex; flex-direction: column; gap: 4px; min-width: 54px;
+}
+.wp08-periodic-head {
+  border-radius: 6px; padding: 6px 5px; color: #fff;
+  text-align: center; box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
+}
+.wp08-periodic-head .mono { font-family: var(--font-mono); font-weight: 600; font-size: 11px; }
+.wp08-periodic-head .nm { font-size: 9px; opacity: 0.92; line-height: 1.1; margin-top: 2px; }
+.wp08-periodic-head .ct { font-size: 9px; opacity: 0.74; }
+
+.wp08-periodic-tile {
+  text-align: left; border: 1px solid; border-radius: 6px;
+  padding: 5px 5px 4px;
+  cursor: pointer; transition: transform .12s ease, box-shadow .12s ease;
+  font-family: inherit; line-height: 1.1;
+}
+.wp08-periodic-tile:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+.wp08-periodic-tile:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.wp08-periodic-tile .row {
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--font-mono); font-size: 8.5px; color: var(--ink-50);
+}
+.wp08-periodic-tile .row .cid { font-weight: 600; }
+.wp08-periodic-tile .sym {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 14px; font-weight: 600; margin-top: 3px;
+}
+.wp08-periodic-tile .nm {
+  font-size: 9.5px; color: var(--ink-70); margin-top: 2px;
+}
+.wp08-periodic-tile .where {
+  font-size: 8.5px; color: var(--ink-50); margin-top: 2px;
+  font-family: var(--font-mono);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.wp08-periodic-totals {
+  margin-top: 12px; font-size: 12px; color: var(--ink-70);
+  border-top: 1px dashed rgba(0,0,0,0.12); padding-top: 10px;
+}
+.wp08-periodic-totals strong { color: var(--ink); font-family: var(--font-mono); }
+
+.wp08-periodic-modal {
+  position: fixed; inset: 0; z-index: 60;
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px; background: rgba(0,0,0,0.55); backdrop-filter: blur(2px);
+}
+.wp08-periodic-modal-card {
+  background: #fff; border-radius: 14px; max-width: 480px; width: 100%;
+  border: 1px solid;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.wp08-periodic-modal-card header {
+  display: flex; justify-content: space-between; align-items: center;
+  color: #fff; padding: 10px 14px;
+}
+.wp08-periodic-modal-card header .mono {
+  font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em;
+}
+.wp08-periodic-modal-card header button {
+  background: rgba(255,255,255,0.2); border: 0; color: #fff;
+  width: 28px; height: 28px; border-radius: 50%;
+  font-size: 18px; cursor: pointer;
+}
+.wp08-periodic-modal-card .body { padding: 18px 22px 22px; }
+.wp08-periodic-modal-card .big {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 56px; line-height: 1; margin-bottom: 4px;
+}
+.wp08-periodic-modal-card h4 { margin: 0 0 6px; font-size: 20px; }
+.wp08-periodic-modal-card .where { font-size: 13px; color: var(--ink-70); margin: 0 0 12px; }
+.wp08-periodic-modal-card .where .mono { font-family: var(--font-mono); color: var(--ink); }
+.wp08-periodic-modal-card .hint { font-size: 12px; color: var(--ink-50); margin: 0; }
+
+@media (max-width: 1000px) {
+  .wp08-periodic-grid { grid-template-columns: repeat(8, minmax(60px, 1fr)); }
+}
+@media (max-width: 600px) {
+  .wp08-periodic-grid { grid-template-columns: repeat(4, minmax(56px, 1fr)); }
+}
+
+/* (HarnessArc + TemplateCompare styles removed in second draft. The principles
+   the paper presents do not benefit from a phase-by-phase or template-vs-template
+   visual — the contract / skills / hooks / cyber / evals story does the work.) */
+
+/* ----- Mobile fits for visuals ----- */
+@media (max-width: 900px) {
+  .vw-heatmap { padding: 14px; min-height: 200px; }
+  .vw-heatmap-row { grid-template-columns: 90px 1fr; gap: 8px; }
+  .vw-heatmap-label { font-size: 9.5px; }
+  .vw-heatmap-cells { height: 14px; gap: 1.5px; }
+  .vw-heatmap-counter { font-size: 10px; right: 10px; bottom: 8px; }
+}
+@media (max-width: 520px) {
+  .vw-heatmap-row { grid-template-columns: 70px 1fr; gap: 6px; }
+  .vw-heatmap-label { font-size: 9px; letter-spacing: 0.04em; }
+  .vw-heatmap-cells { height: 12px; }
+}

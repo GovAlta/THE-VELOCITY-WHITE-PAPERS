@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Velocity Whitepapers — three directions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #f0eee9; font-family: 'Geist', -apple-system, sans-serif; }
+    #root { height: 100%; }
+    /* Make sure scrollbars inside artboards don't look horrible against canvas bg */
+    * { box-sizing: border-box; }
+  </style>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script src="shared/data.js"></script>
+  <script type="text/babel" src="design-canvas.jsx"></script>
+  <script type="text/babel" src="directions/civic.jsx"></script>
+  <script type="text/babel" src="directions/manual.jsx"></script>
+  <script type="text/babel" src="directions/console.jsx"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" data-presets="react">
+    // Use window.* directly — re-declaring with const collides with the
+    // function declarations that design-canvas.jsx has already pushed into
+    // global scope via its own babel-transpiled <script>.
+    const DC_DesignCanvas = window.DesignCanvas;
+    const DC_Section = window.DCSection;
+    const DC_Artboard = window.DCArtboard;
+    const DC_PostIt = window.DCPostIt;
+
+    function ArtboardWrap({ children }) {
+      // Fill the artboard frame; each direction app already does its own
+      // layout / overflow management.
+      return <div style={{ width:'100%', height:'100%', overflow:'hidden' }}>{children}</div>;
+    }
+
+    function App() {
+      return (
+        <DC_DesignCanvas>
+          <DC_Section id="velocity"
+            title="Velocity Whitepapers — three directions"
+            subtitle="Each artboard is a complete multi-page prototype. Click the expand icon (top-right of each card) to step inside; navigate Library / Index / Architecture / a detail paper from the in-prototype nav.">
+
+            <DC_Artboard id="civic" label="A · Civic Technical — modern sans, library aesthetic"
+              width={1280} height={860}>
+              <ArtboardWrap><window.CivicApp /></ArtboardWrap>
+            </DC_Artboard>
+
+            <DC_Artboard id="manual" label="B · Field Manual — editorial whitepaper, archival, marginalia"
+              width={1280} height={860}>
+              <ArtboardWrap><window.FMApp /></ArtboardWrap>
+            </DC_Artboard>
+
+            <DC_Artboard id="console" label="C · Operations Console — dark, dense, agentic-ops dashboard"
+              width={1280} height={860}>
+              <ArtboardWrap><window.OpApp /></ArtboardWrap>
+            </DC_Artboard>
+
+            <DC_PostIt x={40} y={920} w={300}>
+              Three independent directions sharing the same content + agentic architecture diagram. Open one in focus mode to navigate between Library, Index, Architecture and the in-prototype paper detail view.
+            </DC_PostIt>
+          </DC_Section>
+        </DC_DesignCanvas>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
