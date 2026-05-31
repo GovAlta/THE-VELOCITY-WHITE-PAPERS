@@ -49,9 +49,11 @@
       </template>
 
       <pull-quote v-else-if="block.type === 'pullquote'"
+                  :block="block"
                   :text="block.text" :cite="block.cite || ''" />
 
       <key-stat v-else-if="block.type === 'keystat'"
+                :block="block"
                 :label="block.label || ''"
                 :value="block.value"
                 :body="block.body || ''" />

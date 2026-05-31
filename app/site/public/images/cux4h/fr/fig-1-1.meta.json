@@ -1,0 +1,17 @@
+{
+  "paper_id": "cux4h",
+  "locale": "fr",
+  "slot": "fig-1-1",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "A Greek sailing ship, the famous Ship of Theseus of Jason and the Argonauts, but burdened, rotting plans, with riding low in grey seas, hull crusted with barnacles and patched with mismatched planks, the deck overloaded with stacked crates and ledgers. It still moves forward but sits deep in the water under the weight. Dont include legends. Add a label for \"Le navire du gouvernement\". All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: A Greek sailing ship, the famous Ship of Theseus of Jason and the Argonauts, but burdened, rotting plans, with riding low in grey seas, hull crusted with barnacles and patched with mismatched planks, the deck overloaded with stacked crates and ledgers. It still moves forward but sits deep in the water under the weight. Dont include legends. Add a label for \"Le navire du gouvernement\". All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\cux4h\\en\\fig-1-1.source.png",
+  "model": "gpt-image-2",
+  "generated_at": "2026-05-31T20:18:25.649Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 271287,
+  "bytes_png_source": 2956071,
+  "generated_by": "edit-server.mjs"
+}

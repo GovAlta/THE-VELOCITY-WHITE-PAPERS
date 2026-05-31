@@ -204,8 +204,8 @@ async function handleGenerateAudio(body, res) {
     const out = body.out || '';
     if (!text) return sendJSON(res, 400, { error: 'No narration text to synthesize.' });
     if (!/^public\/audio\//.test(out) || out.includes('..')) return sendJSON(res, 400, { error: 'Invalid out path; must be under public/audio/.' });
-    const { synthesize } = await import('./lib/tts.mjs');
-    const buf = await synthesize(text);
+    const { synthesizeLong } = await import('./lib/tts.mjs');
+    const buf = await synthesizeLong(text);
     const outPath = resolve(SITE, out);
     await mkdir(dirname(outPath), { recursive: true });
     await writeFile(outPath, buf);

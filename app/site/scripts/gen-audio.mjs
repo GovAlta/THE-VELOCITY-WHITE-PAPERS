@@ -22,7 +22,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
-import { synthesize } from './lib/tts.mjs';
+import { synthesizeLong } from './lib/tts.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = dirname(__filename);
@@ -73,7 +73,7 @@ if (existsSync(outPath) && !force) {
 }
 
 console.log('Calling ElevenLabs (' + text.length + ' chars)…');
-const buf = await synthesize(text, {
+const buf = await synthesizeLong(text, {
   voiceId: voiceId || undefined,
   outputFormat: format || undefined,
 });

@@ -19,7 +19,7 @@
       block:   { type: Object, default: null },
     },
     setup() { return { edit: window.VWEdit || null }; },
-    data() { return { gen: false, bust: 0 }; },
+    data() { return { gen: false }; },
     methods: {
       async doGenerate() {
         const img = this.imgObj;
@@ -40,10 +40,9 @@
         this.gen = true;
         const r = await this.edit.generateImage({ src: target, prompt: img.image_prompt, style_kind: img.style_kind, regenerate: had });
         this.gen = false;
-        if (r.ok) {
-          if (!had) { img.src = target; this.edit.markDirty(); }  // commit only on success
-          this.bust += 1;                                         // remount <img> to show the new file
-        }
+        if (r.ok && !had) { img.src = target; this.edit.markDirty(); }  // commit path only on first success
+        // The new file shows immediately: generateImage bumps store.imageBust[src],
+        // and image-inspector appends it as a ?v= cache-bust query.
       },
     },
     computed: {
@@ -77,7 +76,7 @@
 
         <component v-if="chartComponent" :is="chartComponent" v-bind="chart" />
         <template v-else-if="imgObj">
-          <image-inspector v-if="imgObj.src" :key="'img-' + bust" :src="imgObj.src" :alt="imgObj.alt || ''" />
+          <image-inspector v-if="imgObj.src" :src="imgObj.src" :alt="imgObj.alt || ''" />
           <div v-else class="vw-img-empty">No image yet. Write a prompt below and click Generate.</div>
         </template>
 

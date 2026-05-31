@@ -822,7 +822,25 @@
   letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--ink-50); flex: 0 0 auto;
 }
+.audio-block { flex-wrap: wrap; }
 .audio-block audio { width: 100%; }
+.vw-audio-row { flex: 1 1 320px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.vw-audio-tools {
+  display: flex; align-items: center; gap: 16px;
+  font-family: var(--font-mono); font-size: 11px; color: var(--ink-50);
+}
+.vw-audio-rate select {
+  font-family: var(--font-mono); font-size: 11px;
+  padding: 2px 6px; border: 1px solid var(--rule); background: var(--paper);
+  color: var(--ink-70);
+}
+.vw-audio-dur { letter-spacing: 0.04em; }
+.vw-audio-dl { color: var(--accent); text-decoration: none; letter-spacing: 0.04em; }
+.vw-audio-dl:hover { text-decoration: underline; }
+.vw-audio-edit {
+  flex: 1 1 100%; display: flex; align-items: center; gap: 10px;
+  flex-wrap: wrap; margin-top: 4px;
+}
 
 /* --- Architecture diagram ----------------------------- */
 .arch-legend {

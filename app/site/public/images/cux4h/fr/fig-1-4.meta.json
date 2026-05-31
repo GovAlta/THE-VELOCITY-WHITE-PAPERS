@@ -1,0 +1,17 @@
+{
+  "paper_id": "cux4h",
+  "locale": "fr",
+  "slot": "fig-1-4",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An allegorical four-headed sea serpent rising from stormy waters, each of its four heads distinct in character, faced by a single resolute figure standing on a ship's deck holding navigational instruments rather than a weapon. The four hydras are labelled « Dette technique », « Cyberrisque », « Demande croissante », « Déficits ». Tense but composed. Don't include a legend or other clutter. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An allegorical four-headed sea serpent rising from stormy waters, each of its four heads distinct in character, faced by a single resolute figure standing on a ship's deck holding navigational instruments rather than a weapon. The four hydras are labelled « Dette technique », « Cyberrisque », « Demande croissante », « Déficits ». Tense but composed. Don't include a legend or other clutter. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\cux4h\\en\\fig-1-4.source.png",
+  "model": "gpt-image-2",
+  "generated_at": "2026-05-31T20:24:27.144Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 404693,
+  "bytes_png_source": 3935467,
+  "generated_by": "edit-server.mjs"
+}

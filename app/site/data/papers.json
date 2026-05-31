@@ -6,21 +6,23 @@
       "sequence": "1 of 2",
       "tier": "Conceptual",
       "title": "The Two-Billion-Dollar Ship of Theseus",
-      "subtitle": "Why the modernization of government IT is a multi-billion-dollar problem that cannot be solved by stopping the ship to rebuild it.",
+      "subtitle": "The technical estate has outgrown the human capacity to manage it, and rebuilding it means rebuilding the ship while it stays at sea.",
       "track": "Foundation",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
       "published": "2026-04-08",
-      "reading_min": 22,
+      "reading_min": 8,
       "status": "Published",
       "tags": [
         "thesis",
-        "economics",
-        "drivers"
+        "technical-debt",
+        "cybersecurity",
+        "ai-agents",
+        "modernization"
       ],
       "repo": null,
-      "abstract": "Lays out why this is at least a two-billion-dollar problem and credibly much higher when you consider that a single ERP system alone runs roughly a billion, and individual transportation, health, or mainframe modernizations each clear $100M. Introduces the four critical drivers that anchor the rest of the collection: cost, service delivery, cybersecurity, and red tape reduction.",
+      "abstract": "The technical estate the Government of Alberta oversees has grown past the point where human effort alone can keep it current. Forty years of code, infrastructure, business rules, and vendor dependencies cost more to carry every year, and known vulnerabilities are rising faster than they can be remediated. Modernizing the estate through conventional project work would take generations. This paper sets out why that math fails, why a paired human and AI workforce is the way through, and what the rest of the collection will show.",
       "related": [
         "mwo98",
         "dehkj",

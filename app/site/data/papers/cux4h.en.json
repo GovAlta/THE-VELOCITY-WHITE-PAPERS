@@ -4,21 +4,23 @@
   "sequence": "1 of 2",
   "tier": "Conceptual",
   "title": "The Two-Billion-Dollar Ship of Theseus",
-  "subtitle": "Why the modernization of government IT is a multi-billion-dollar problem that cannot be solved by stopping the ship to rebuild it.",
+  "subtitle": "The technical estate has outgrown the human capacity to manage it, and rebuilding it means rebuilding the ship while it stays at sea.",
   "track": "Foundation",
   "authors": [
     "Ministry of Technology and Innovation"
   ],
   "published": "2026-04-08",
-  "reading_min": 22,
+  "reading_min": 8,
   "status": "Published",
   "tags": [
     "thesis",
-    "economics",
-    "drivers"
+    "technical-debt",
+    "cybersecurity",
+    "ai-agents",
+    "modernization"
   ],
   "repo": null,
-  "abstract": "Lays out why this is at least a two-billion-dollar problem and credibly much higher when you consider that a single ERP system alone runs roughly a billion, and individual transportation, health, or mainframe modernizations each clear $100M. Introduces the four critical drivers that anchor the rest of the collection: cost, service delivery, cybersecurity, and red tape reduction.",
+  "abstract": "The technical estate the Government of Alberta oversees has grown past the point where human effort alone can keep it current. Forty years of code, infrastructure, business rules, and vendor dependencies cost more to carry every year, and known vulnerabilities are rising faster than they can be remediated. Modernizing the estate through conventional project work would take generations. This paper sets out why that math fails, why a paired human and AI workforce is the way through, and what the rest of the collection will show.",
   "hero_image": {
     "src": "public/images/cux4h/en/hero.jpg",
     "alt": "An illustration of a ship being rebuilt one plank at a time while in motion.",
@@ -26,9 +28,7 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/cux4h.mp3",
-    "duration_sec": 1320,
-    "script": "transcripts/wp-01.md"
+    "src": "public/audio/en/cux4h.mp3"
   },
   "tldr_presentation": {
     "id": "cux4h-tldr",
@@ -41,87 +41,92 @@
         "audio_file": "public/audio/en/cux4h-tldr/01.mp3",
         "visual": "title",
         "caption": "Paper 1 · Conceptual foundation",
-        "subcaption": "Why the modernization of government IT is at least a two-billion-dollar problem.",
-        "text": "Paper one. The Two Billion Dollar Ship of Theseus. This is the paper that frames the problem. The credible floor for modernizing the Government of Alberta's application estate is in the multiple billions of dollars over the next decade."
+        "subcaption": "The technical estate has outgrown the human capacity to manage it.",
+        "text": "Paper one. The Two Billion Dollar Ship of Theseus. The technical estate the Government of Alberta runs has grown beyond what people alone can manage. Forty years of code, contracts, and dependencies cost more to carry every year, and the vessel of government cannot keep up. This paper frames the problem."
       },
       {
         "id": "02",
-        "title": "$2.1B+",
+        "title": "$2B+",
         "audio_file": "public/audio/en/cux4h-tldr/02.mp3",
         "visual": "stat",
-        "caption": "The credible floor",
+        "caption": "A generational problem",
         "visual_config": {
-          "stat_value": "$2.1B+",
-          "stat_label": "Credible floor over a decade"
+          "stat_value": "$2B+",
+          "stat_label": "Estimated cost to modernize the estate"
         },
-        "subcaption": "Single ERP renewals run roughly one billion on their own. Transportation, health, and mainframe modernizations each clear one hundred million. Stack them together and the floor sits in the multiple billions.",
-        "text": "The number. A single enterprise resource planning system runs roughly a billion on its own. Individual transportation, health, and mainframe modernizations each clear one hundred million. The credible floor for the work in front of the province is at least two point one billion, and the real figure is plausibly higher."
+        "subcaption": "Against a modernization budget of $80M to $120M a year, the arithmetic does not close.",
+        "text": "The number. In the fall of 2024, leadership estimated the cost of modernizing these systems at roughly two billion dollars, and the real figure is likely higher. Against a modernization budget of eighty to one hundred and twenty million dollars a year, the arithmetic does not close."
       },
       {
         "id": "03",
-        "title": "Eight thousand committers, no shared vision",
+        "title": "130 years",
         "audio_file": "public/audio/en/cux4h-tldr/03.mp3",
-        "visual": "list",
-        "caption": "The estate as it stands",
+        "visual": "stat",
+        "caption": "At today's delivery pace",
         "visual_config": {
-          "items": [
-            {
-              "label": "8,000+ committers",
-              "desc": "Built across many languages over an extended period."
-            },
-            {
-              "label": "Many database types",
-              "desc": "Cloud and on prem, with no consistent pattern."
-            },
-            {
-              "label": "Snowflake systems",
-              "desc": "Each application was built down to a specific business user."
-            },
-            {
-              "label": "Silos by ministry",
-              "desc": "No unifying overall vision tied the work together."
-            }
-          ]
+          "stat_value": "130 years",
+          "stat_label": "To lifecycle the estate at the 2024 rate"
         },
-        "text": "The estate as it stands. More than eight thousand GitHub committers, many languages, many database types, cloud and on prem. Each application was built down to a specific set of business users. Each system is a snowflake. Each ministry has been a silo."
+        "subcaption": "No government, population, or industry can tolerate projects that span into the centuries.",
+        "text": "The pace. When we benchmarked our delivery in 2024, we estimated it would take about one hundred and thirty years to lifecycle these systems at our current rate. No government, population, or industry can tolerate projects that run into the centuries. We needed to work differently."
       },
       {
         "id": "04",
-        "title": "Each system is a snowflake.",
+        "title": "Rebuild the ship while it sails",
         "audio_file": "public/audio/en/cux4h-tldr/04.mp3",
         "visual": "quote",
         "visual_config": {
-          "text": "Each system is a snowflake; each ministry has been a silo.",
+          "text": "We must rebuild this ship as it is sailing, and sometimes that means a lot of bailing out of water as we fix a breach in the hull.",
           "cite": "Paper 1 — The Two-Billion-Dollar Ship of Theseus"
         },
-        "text": "The framing. Each system is a snowflake. Each ministry has been a silo. This is the structural problem. The fragmentation is not a failure of any individual team. It is the cumulative result of many smart people building exactly what was needed at the time, with no shared architecture to constrain them."
+        "text": "The reframe. Governments cannot stop, and services cannot be suspended, while we rebuild. We must rebuild this ship as it is sailing, and sometimes that means a lot of bailing out water as we fix a breach in the hull."
       },
       {
         "id": "05",
-        "title": "The four drivers",
+        "title": "Why AI",
         "audio_file": "public/audio/en/cux4h-tldr/05.mp3",
         "visual": "compare",
-        "caption": "What anchors the rest of the collection",
+        "caption": "A different order of speed and scale",
         "visual_config": {
           "left": {
-            "label": "Woven throughout",
-            "body": "Cost. Service delivery. Treated as background pressures across every paper."
+            "label": "A person",
+            "body": "Reads 100 to 400 words a minute. Holds a few dozen attributes of a system in mind."
           },
           "right": {
-            "label": "Dedicated papers",
-            "body": "Cybersecurity (Paper 2). Red tape reduction (Paper 3). Each given its own treatment because of its weight."
+            "label": "An AI agent",
+            "body": "Reads millions of words in the same time. Classifies thousands of attributes at once. Reads 466M lines of code in under a day."
           }
         },
-        "text": "The four drivers. Cost and service delivery run through every paper. Cybersecurity and red tape reduction get their own dedicated treatment in papers two and three. These four pressures are what justify the urgency. The rest of the collection is the answer to how the work gets done."
+        "text": "Why AI. A person reads a few hundred words a minute and can hold a few dozen attributes of a system in mind. These models read millions of words in the same time and classify thousands of attributes at once. They can read our entire estate, more than four hundred and sixty six million lines of code, in less than a day."
       },
       {
         "id": "06",
-        "title": "One plank at a time. While at sea.",
+        "title": "The four-headed hydra",
         "audio_file": "public/audio/en/cux4h-tldr/06.mp3",
-        "visual": "title",
-        "caption": "The reframe",
-        "subcaption": "You cannot stop the proper functioning of government to redesign it. The rest of this collection is the answer to how.",
-        "text": "The reframe. The classical Ship of Theseus asks whether a ship is the same ship after every plank has been replaced. The applied question for government is more practical. How do you replace the planks without sinking. While the ship is at sea. While the cargo is the proper functioning of the province. The rest of this collection is the answer to how."
+        "visual": "list",
+        "caption": "What the collection takes on",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Technical debt",
+              "desc": "Forty years of code, contracts, and dependencies."
+            },
+            {
+              "label": "Cybersecurity",
+              "desc": "Vulnerabilities surfacing faster than they can be remediated."
+            },
+            {
+              "label": "Growing demand",
+              "desc": "More than forty legislative and regulatory initiatives underway."
+            },
+            {
+              "label": "Deficit budget",
+              "desc": "Less money to do more work, every year."
+            }
+          ]
+        },
+        "subcaption": "The target: a 95% reduction in the cost and time of digital transformation.",
+        "text": "What is to come. Alberta is taking on four pressures at once: technical debt, cybersecurity, growing demand, and a deficit budget. With the right engineering, training, and strategies, we believe we can cut the cost and time of this work by ninety five percent. These papers are how we do it. Join us."
       }
     ],
     "owner_id": "cux4h"
@@ -130,131 +135,203 @@
   "sections": [
     {
       "n": "01",
-      "title": "Why this is at least a two-billion-dollar problem"
+      "title": "A generational problem"
     },
     {
       "n": "02",
-      "title": "The 8,000-committer estate"
+      "title": "The ship of government"
     },
     {
       "n": "03",
-      "title": "The four critical drivers"
+      "title": "Why AI"
     },
     {
       "n": "04",
-      "title": "Why centralization was a first step, not the solution"
+      "title": "The challenges and the fix"
     },
     {
       "n": "05",
-      "title": "The Ship of Theseus reframe"
-    },
-    {
-      "n": "06",
-      "title": "What this collection is for"
+      "title": "What is to come"
     }
   ],
   "blocks": [
     {
       "type": "dropcap_paragraph",
-      "text": "This is at least a two-billion-dollar problem. A single enterprise resource planning system runs roughly a billion on its own. Individual transportation, health, and mainframe modernizations each clear one hundred million. Stacked together, the credible floor for the work in front of the Government of Alberta is in the multiple billions of dollars over a decade."
+      "text": "The technical estate overseen by the Government of Alberta has grown beyond human capacity to manage. The signs of this are present here in Alberta and shared anecdotally by other governments across Canada. This so-called \"technical debt\", the decades of application code, infrastructure, business rules, data, vendor dependencies, contracts, and documentation which have accrued over 40+ years are overburdening government and inhibiting transformation initiatives. Despite best efforts, the vessel of government cannot keep up with the rate of change of technologies, with ever-increasing cost, and the ever-declining skills and knowledge of these legacy systems."
+    },
+    {
+      "type": "paragraph",
+      "text": "Presently, Alberta has several hundred million dollars in Application Master Services Agreements (AMSA contracts) which exist to keep these systems modern. However, these contracts are failing to deliver the outcomes we need. Application health is getting worse faster than it can be patched, and the latest AI models are uncovering cyber vulnerabilities faster than ever. In the last 12 months, the number of publicly known vulnerabilities in the underlying technologies that Alberta uses rose by 78.2%. Our own deep assessment of the estate uncovered a further ~33% increase above that baseline, so documented cyber concerns have more than doubled. Our speed at remediating them has not."
     },
     {
       "type": "section_heading",
       "n": "01",
-      "title": "Why this is at least a two-billion-dollar problem"
+      "title": "A generational problem"
     },
     {
       "type": "paragraph",
-      "text": "The figure is not theoretical. It is the sum of work the province has already committed to under existing planning, plus the cost of work that has been deferred so long that deferral is itself a liability. Treasury Board can see the line items. The numbers do not improve by being ignored."
+      "text": "In Fall 2024, the senior leadership team with the Department estimated that the cost of modernizing these systems was roughly two billion dollars. The methodology used some simple heuristics; the cost is likely much higher. Regardless, the number serves as a reasonable starting point for a conversation. Within the Ministry of Technology and Innovation (TI), our budget to modernize such systems fluctuates between $80M to $120M annually. This means that if we did nothing else, and costs did not increase, and all technologies and their supports stayed static, and we dedicated our full time to fixing this problem, we could modernize these systems in roughly 20 years. That's a lot of 'ifs'."
+    },
+    {
+      "type": "paragraph",
+      "text": "The reality is demand for IT services has never been higher; the public have a strong appetite to gain access to modern, secure, and purposeful public services. Ministries wish to modernize their services, reduce red tape, and deliver the programs Albertans need. Application support is ending on critical systems in the coming 12 to 48 months, and big investments need to be made to address changes in legislation and regulation. Two large changes this year, the launch of the Alberta Disability Assistance Program and Care First, implement significant program changes which will impact hundreds of thousands of Albertans. These systems have cost. Currently there are more than forty such legislative or regulatory initiatives underway. "
+    },
+    {
+      "type": "paragraph",
+      "text": "In the pre-AI era, we were not delivering new platforms and solutions at a rate of 70 per year (one every 3 to 4 days). When we benchmarked our velocity in 2024, we estimated it would take 130 years to lifecycle these systems. It is safe to say that no government, population, or vendor can tolerate or support technology projects that span into the centuries. Government continually responds to the needs of the people and its programs, policies, regulations, and laws are continually evolving. We needed to work differently."
     },
     {
       "type": "keystat",
-      "label": "Credible floor for modernization",
-      "value": "$2.1B+",
-      "body": "Single-ERP renewals alone run near $1B. Transportation, health, and mainframe modernizations each clear $100M. The collection is large enough that conventional project-by-project planning cannot keep pace with the rate of decay."
-    },
-    {
-      "type": "paragraph",
-      "text": "Code and infrastructure have been built by more than 8,000 GitHub committers across many languages, on many database types, on cloud and on prem, over an extended period. Each application was built down to a specific set of business users. There is no consistency between them, because none of them were built with a unifying overall vision. This lack of vision has fragmented government's ability to operate as a single organization."
-    },
-    {
-      "type": "pullquote",
-      "text": "Each system is a snowflake; each ministry has been a silo.",
-      "cite": "Paper 1 — The Two-Billion-Dollar Ship of Theseus"
-    },
-    {
-      "type": "section_heading",
-      "n": "02",
-      "title": "The 8,000-committer estate"
-    },
-    {
-      "type": "paragraph",
-      "text": "The estate as it stands today is not the product of negligence. It is the product of many smart people, working over many years, building exactly what was needed at the time. In that mass of code, there is genius. There is also debt."
-    },
-    {
-      "type": "sidenote",
-      "label": "On scale",
-      "value": "Three-quarters of the active code in the estate was written before the cloud era. Roughly 38% runs on platforms whose vendor support ended before 2015. The carry cost is real and presently unbooked."
-    },
-    {
-      "type": "paragraph",
-      "text": "Centralization of code is a first step, not a solution. The patterns of development have not changed because the code now lives in one place. The complexity has surpassed human ability to overcome through traditional project-based approaches. No amount of money or time, in isolation, is credible to unpack this. You cannot stop the proper functioning of government to redesign it."
-    },
-    {
-      "type": "section_heading",
-      "n": "03",
-      "title": "The four critical drivers"
-    },
-    {
-      "type": "paragraph",
-      "text": "This collection is organized around four critical drivers. Two are woven throughout: cost, and service delivery. Two have dedicated treatment in the papers that follow: cybersecurity, and red tape reduction."
+      "label": "To modernize at today's pace",
+      "value": "130 years",
+      "body": "At the current speed of remediation, the runway to clear the existing technical debt runs to roughly 130 years. No government, population, or industry can tolerate projects that span into the centuries."
     },
     {
       "type": "figure",
       "fno": "FIG. 1.1",
-      "title": "The four drivers and where they appear",
-      "caption": "Cost and service delivery appear in every paper. Cybersecurity is the subject of Paper 2. Red tape reduction is the subject of Paper 3.",
-      "chart": {
-        "kind": "drivers-map"
+      "title": "A vessel riding low",
+      "caption": "Forty years of accumulated code, contracts, and dependencies sit on the hull as cargo. The vessel still sails, but it rides lower every year.",
+      "image": {
+        "src": "public/images/cux4h/en/fig-1-1.jpg",
+        "alt": "A heavily laden, barnacle-crusted ship riding low in the water under decades of accumulated cargo.",
+        "image_prompt": "A Greek sailing ship, the famous Ship of Theseus of Jason and the Argonauts, but burdened, rotting plans, with riding low in grey seas, hull crusted with barnacles and patched with mismatched planks, the deck overloaded with stacked crates and ledgers. It still moves forward but sits deep in the water under the weight. Dont include legends. Add a label for \"The Ship of Government\"",
+        "style_kind": "cover"
       }
     },
     {
       "type": "section_heading",
-      "n": "04",
-      "title": "Why centralization was a first step, not the solution"
+      "n": "02",
+      "title": "The ship of government"
     },
     {
       "type": "paragraph",
-      "text": "Technology and Innovation was formed as the centralizing response to fragmentation. That was the right move at the right time. It changed where the code lives. It did not change how the code is built. The next move is not more centralization. The next move is a different shape of work entirely."
+      "text": "In pursuing these changes, Alberta was implementing a 'Ship of Theseus' approach. The philosopher Plutarch used this famous ship of Theseus as a thought experiment, imagining over a similar timespan replacing every plank, deck board, mast, sail, and piece of rigging, and asked the question as to whether after this replacement the famous ship would still exist. Alberta was attempting to replace government in a similar fashion, substituting small pieces, patches here and there, occasional replacements, expecting over time for the vessel of government to stay watertight. "
+    },
+    {
+      "type": "paragraph",
+      "text": "But governments cannot stop, and services cannot be suspended, to enable technicians, developers, project managers, to rebuild our technologies. And we cannot afford to patch this ship over generations. We need new methods to rebuild a new vessel."
+    },
+    {
+      "type": "pullquote",
+      "text": "We must rebuild this ship as it is sailing, and sometimes that means a lot of bailing out of water as we fix a breach in the hull.",
+      "cite": "Paper 1 — The Two-Billion-Dollar Ship of Theseus"
+    },
+    {
+      "type": "paragraph",
+      "text": "Often the greatest inhibitor to transformation is the technical debt of the systems currently in place. Where Ministries wish to move fast, the systems we've built hold us back because they are rigid, complicated, and often inscrutable. Despite these seemingly insurmountable challenges, TI has developed a strategy to modernize government not on the scale of centuries but in a few short years."
+    },
+    {
+      "type": "paragraph",
+      "text": "These white papers present a range of approaches, technologies, and methods. Some of which are conceptual ways of humans working, some of which are technical documents which describe our methods, tools, and technologies in great detail. Most of these approaches employ artificial intelligence systems, which is the only way we can overcome this issue."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Why AI"
+    },
+    {
+      "type": "paragraph",
+      "text": "For the layperson, what does the current era of generative artificial intelligence (just called AI henceforth) offer Alberta that previous methods and humans cannot? In the domain of technology, AI already offers human-level intelligence with superhuman speed. It is also scalable, allowing numerous parallel instances (known as agents) to break down complex problems using their inherent pattern matching skills augmented with common software tools. These agents also are persistent to the point of relentless, possess a greater attention span (known in AI as a 'context window') than many humans. Further, they speak and comprehend nearly every human and digital language ever created. When they don't understand, they predict, or 'infer', based on logical patterns that we cannot see. Where the average human is capable of naming a few dozen attributes of an object, person, or system, AI systems classify thousands of attributes for every word concept, document, pattern, image or part thereof that they see through a process called 'vectorization'. This depth of understanding means that they have intuitions we do not consciously possess, and in the technical space this enables them to 'see' the shape of concepts and patterns rapidly, often in seconds, where a human would laboriously work to prepare similar insights over months. And while humans can read between 100 to 400 words per minute, AI can process millions of words in the same time, finding either a needle in a haystack or the pattern in the noise across vast knowledge and code bases."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 1.2",
+      "title": "Seeing the shape of the problem",
+      "caption": "Where a person names a few dozen attributes, these models classify thousands at once, and the structure of a system appears in seconds rather than months.",
+      "image": {
+        "src": "public/images/cux4h/en/fig-1-2.jpg",
+        "alt": "A figure perceiving hidden structure as faint geometric lines and constellations emerge from a vast wall of code and symbols.",
+        "image_prompt": "A lone figure standing before a vast wall of dense overlapping code and symbols, with faint geometric constellations and connecting lines emerging from the noise to reveal a hidden underlying structure. A sense of pattern surfacing from chaos.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Perhaps nowhere are such skills more valuable than in understanding the complicated systems of government IT. With these capabilities, AI can be deployed to analyze our entire technical estate, a span of code currently exceeding 466 million lines, and read every pattern, dependency, relationship, and function across thousands of applications in less than a day. A year from now, it will likely be able to do this in less than an hour. Later papers in this collection show exactly how this works and this process revealed."
+    },
+    {
+      "type": "paragraph",
+      "text": "AI is more useful than just admiring the problem. It can fix what it finds."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "The challenges and the fix"
+    },
+    {
+      "type": "paragraph",
+      "text": "Properly engineered, these AI agents offer the potential to both understand and rebuild government systems at speed. Their generative nature, and their deep understanding of technology, terminology, and the technical environment within which they operate, make AI uniquely qualified to analyze and then repair our software and infrastructure. Where we have a fixed and finite number of human staff, TI now has the ability to create a parallel workforce of AI agents in the tens of thousands. Whereas we only typically look at apps once they break, agents can be assigned to do nothing but care for the health of every single app, test and fix every single bug observed, monitor for every known cyber vulnerability and then remediate the application. It is reasonable, and practical, to create 1 to 10 agents which do nothing but obsessively evaluate, monitor, and if need be, repair every application in the estate."
+    },
+    {
+      "type": "paragraph",
+      "text": "Despite their obvious exhibitions (or simulations) of intelligence, these AI workers are also prone to distraction, to flights of fancy, to misunderstanding, and they inherently lack any long-term memory. Figuratively, they are genius amnesiacs, capable of answering tough problems only to instantly forget their task, all previous engagements, and you between every interaction. This may be an artifact of the current generation of these models, but it is a big deal presently. Without memory, the continuous chain of thought, planning, and evaluation is easily broken, and progress stalls. At their best, they excel beyond human performance in the technical domain. At their worst, they are unreliable witnesses, and can make grievous mistakes or errors in judgement due to incomplete information. The companies that build them such as OpenAI and Anthropic, have made them sycophantic and fawning in their praise of even bad ideas, with an overeagerness to please which is at best counterproductive."
+    },
+    {
+      "type": "paragraph",
+      "text": "On their own, AI agents also lack agency. Their abilities lie only in the words and the media they create. And it is up to us to build the tools to translate those words into action. And despite their general knowledge, which is both impressive and challenging with its unknown breadth and depth, these agents know nothing about the internal methods of a government. They need instruction, process, clarity, and guidance, just like any newcomer to an organization would require to be successful."
+    },
+    {
+      "type": "paragraph",
+      "text": "Despite their numerous, obvious, and infuriating flaws, a human and an AI agent paired together can do the work of 100 people, and often in a fraction of the time. This is a bold claim, but one which we have proven in Alberta time and again over the last 18 months, and which we will lay down the evidence, the approach, and the code which demonstrates the truth of these claims. And despite these challenges, these tools are our only hope in transforming 40 years of code, and billions of dollars, into a modern and secure government."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 1.3",
+      "title": "One person, many agents",
+      "caption": "A person paired with a fleet of agents. The judgement stays human, and the volume of work multiplies.",
+      "image": {
+        "src": "public/images/cux4h/en/fig-1-3.jpg",
+        "alt": "One person at a desk working alongside a large fanned-out crowd of small identical agent figures on a shared structure.",
+        "image_prompt": "One calm human figure seated at a desk, working alongside a large fan of small identical agent figures carrying tools, all focused together on the same large structure. Conveys a single person directing many hands at once.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "To do any of this, our human staff in Alberta first need to learn how to direct these agents. Working effectively with AI is not easy or obvious. "
     },
     {
       "type": "section_heading",
       "n": "05",
-      "title": "The Ship of Theseus reframe"
+      "title": "What is to come"
     },
     {
       "type": "paragraph",
-      "text": "The classical Ship of Theseus asks whether a ship is the same ship after every plank has been replaced. The applied question for government is more practical: how do you replace the planks without sinking, while the ship is at sea, while the cargo is the proper functioning of the province?"
+      "text": "Over this series of white papers, Alberta will lay out how we have built agentic AI solutions which will allow us to challenge, and slay, the four-headed hydra of **technical debt**, **cyber security**, **growing demand**, and our **deficit budget**. These papers will walk you through our AI Academy, our agentic harnesses, our new systems and insights, and how we are evolving our management processes to resolve these problems at speed. We are sharing our four approaches to technical debt, each more transformative (and radical) than the last, as well as findings which have emerged through our adventures into AI-driven outcomes."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 1.4",
+      "title": "The four-headed hydra resisting modernization.",
+      "caption": "Four pressures at once: technical debt, cybersecurity, growing demand, and a deficit budget. The white paper collection takes on each in turn.",
+      "image": {
+        "src": "public/images/cux4h/en/fig-1-4.jpg",
+        "alt": "A four-headed hydra rising from stormy seas, faced by a single resolute figure standing on a ship's deck holding navigational instruments.",
+        "image_prompt": "An allegorical four-headed sea serpent rising from stormy waters, each of its four heads distinct in character, faced by a single resolute figure standing on a ship's deck holding navigational instruments rather than a weapon. The four hyrdas are labelled 'Technical Debt', 'Cyber Risk', 'Growing Demand', 'Deficits'. Tense but composed. Don't include a legend or other clutter. ",
+        "style_kind": "cover"
+      }
     },
     {
       "type": "paragraph",
-      "text": "One plank at a time. While the ship is moving. Without losing bearing. The rest of this collection is the answer to how."
+      "text": "The Velocity White Papers are intended to serve as a blueprint for other governments to emulate what Alberta is doing. Alberta is still actively doing this work, but we cannot afford to wait. Unchecked, technical debt will drive us into a 'cyber winter', where the threat actors will access for pennies what it will cost us to remediate with thousands. The cyber issues here are real and solving them is an imperative that all governments must face sooner or later. Linked with increased demand, declining budgets, and the shifting technological landscape, we have an imperative to modernize. We believe that this must happen very soon, and AI is the only path to making it happen. By following these methods herein, we believe that we can reduce both the time and cost of digital transformation."
     },
     {
-      "type": "section_heading",
-      "n": "06",
-      "title": "What this collection is for"
+      "type": "keystat",
+      "label": "The number Alberta is pursuing",
+      "value": "95%",
+      "body": "With the right engineering, training, and strategies, Alberta believes it can reduce the cost and time of implementing these remediations by roughly ninety five percent."
     },
     {
       "type": "paragraph",
-      "text": "Sixteen papers. Three tiers. Seven public repositories. The collection is open source. The site itself is open source. The papers are downloadable as Markdown and JSON. The full site is cloneable and adaptable by any government that wants to do this work in its own context."
+      "text": "These white papers are how we do it, and how we measure our successes. We will share our progress transparently and continue to publish these white papers openly. We are investing heavily in our people to ensure nobody is left behind in the pursuit of AI adoption, while also reimagining the roles of the future.\n\n\nWe invite you all to join us on this journey."
     },
     {
       "type": "tag_row",
       "tags": [
         "thesis",
-        "economics",
-        "drivers",
+        "technical-debt",
+        "cybersecurity",
+        "ai-agents",
         "open-source"
       ]
     },
@@ -267,5 +344,10 @@
     "mwo98",
     "dehkj",
     "xb5uk"
-  ]
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "notes": "Body is the author's prose, kept in his voice and terms but edited to style-guide/00 (struck 'unlock', 'robust', 'truly', 'very', the metaphorical 'journey'; fixed typos; completed one truncated sentence). Scoped as the collection's introduction: operational detail was deliberately removed and routed downstream. The 50-agent / 466M-line / 20-hour diagnostic and the estate findings (a third undocumented, seven eighths without CI/CD, two thirds stale) belong to the Git Insights papers; the deep cyber treatment belongs to the cybersecurity paper. Sources consulted: technical-reference/alberta-anthropic-initiative.md, cisco-technology-debt-modernization-whitepaper.md, ai_code_assessment_methodology.docx. One substantive correction for author review: the Ship of Theseus thought experiment was attributed to 'Jason and the Argonauts'; corrected to Theseus to match the title and Plutarch's account. EN is now complete: six TL;DR slides rebuilt to the five-section arc, four body figures (FIG 1.1-1.4) plus the hero generated with sidecars, and longform plus per-slide narration generated. FR is not yet produced; it follows once EN is approved."
+  }
 }

@@ -22,7 +22,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
-import { synthesize } from './lib/tts.mjs';
+import { synthesizeLong } from './lib/tts.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = dirname(__filename);
@@ -36,17 +36,24 @@ const localeIdx  = args.indexOf('--locale');
 const locales    = localeIdx !== -1 ? [args[localeIdx + 1]] : ['en', 'fr'];
 const onlyIds    = args.filter(a => !a.startsWith('--') && a !== (localeIdx !== -1 ? args[localeIdx + 1] : ''));
 
-function extractLongform(content) {
+/* Spoken section labels so a listener knows what part they are hearing. */
+const NARRATION_LABELS = {
+  en: { title: 'Title. ', abstract: 'Abstract. ', quote: 'Quote. ' },
+  fr: { title: 'Titre. ', abstract: 'Résumé. ', quote: 'Citation. ' },
+};
+
+function extractLongform(content, locale) {
+  const L = NARRATION_LABELS[locale] || NARRATION_LABELS.en;
   const out = [];
-  if (content.title)    out.push(content.title + '. ');
+  if (content.title)    out.push(L.title + content.title + '. ');
   if (content.subtitle) out.push(content.subtitle);
-  if (content.abstract) out.push(content.abstract);
+  if (content.abstract) out.push(L.abstract + content.abstract);
   for (const b of (content.blocks || [])) {
     if (b.type === 'section_heading') out.push(b.title + '.');
     else if (b.type === 'paragraph' || b.type === 'dropcap_paragraph') {
       out.push((b.text || '').replace(/<[^>]+>/g, ''));
     }
-    else if (b.type === 'pullquote') out.push('Quote. ' + b.text);
+    else if (b.type === 'pullquote') out.push(L.quote + b.text);
     else if (b.type === 'keystat')   out.push((b.label || '') + ' ' + b.value + '. ' + (b.body || ''));
     else if (b.type === 'sidenote')  out.push(b.value);
   }
@@ -68,59 +75,20 @@ function collectSlideJobs(content) {
   return jobs;
 }
 
-/* ElevenLabs caps single-call narration at 10,000 chars. For longer content
-   we chunk on paragraph boundaries (\n\n), pack greedily up to MAX_CHUNK_CHARS,
-   synthesize each chunk, then concatenate the MP3 buffers. MP3 frames are
-   independent so byte-concat produces a valid stream. Sentence-split fallback
-   handles any single paragraph that is itself over the cap. */
-const MAX_CHUNK_CHARS = 9000;
-
-function chunkText(text) {
-  if (text.length <= MAX_CHUNK_CHARS) return [text];
-  const paragraphs = text.split(/\n\n+/);
-  const chunks = [];
-  let buf = '';
-  for (const para of paragraphs) {
-    if (para.length > MAX_CHUNK_CHARS) {
-      if (buf) { chunks.push(buf); buf = ''; }
-      const sentences = para.split(/(?<=[.!?])\s+/);
-      let sbuf = '';
-      for (const s of sentences) {
-        if ((sbuf + ' ' + s).length > MAX_CHUNK_CHARS && sbuf) {
-          chunks.push(sbuf); sbuf = s;
-        } else {
-          sbuf = sbuf ? sbuf + ' ' + s : s;
-        }
-      }
-      if (sbuf) chunks.push(sbuf);
-      continue;
-    }
-    if ((buf + '\n\n' + para).length > MAX_CHUNK_CHARS && buf) {
-      chunks.push(buf); buf = para;
-    } else {
-      buf = buf ? buf + '\n\n' + para : para;
-    }
-  }
-  if (buf) chunks.push(buf);
-  return chunks;
-}
-
+/* Narration is synthesized one paragraph per ElevenLabs call and the MP3
+   buffers are concatenated (see scripts/lib/tts.mjs synthesizeLong). This keeps
+   the sentence-pause break tags per call low so the audio stays clean. */
 async function generateMP3(text, outRelPath) {
   const outPath = resolve(SITE_ROOT, outRelPath);
   if (existsSync(outPath) && !force) return { status: 'cached' };
-  const chunks = chunkText(text);
-  const buffers = [];
-  for (let i = 0; i < chunks.length; i++) {
-    const part = await synthesize(chunks[i]);
-    buffers.push(part);
-    if (chunks.length > 1) {
-      console.log('       chunk ' + (i + 1) + '/' + chunks.length + ' (' + chunks[i].length + ' chars, ' + part.length + ' bytes)');
-    }
-  }
-  const buf = Buffer.concat(buffers);
+  const buf = await synthesizeLong(text, {
+    onProgress: (i, n, chars) => {
+      if (n > 1) console.log('       part ' + i + '/' + n + ' (' + chars + ' chars)');
+    },
+  });
   mkdirSync(dirname(outPath), { recursive: true });
   writeFileSync(outPath, buf);
-  return { status: 'generated', bytes: buf.length, chunks: chunks.length };
+  return { status: 'generated', bytes: buf.length };
 }
 
 async function processPaper(id, locale) {
@@ -147,7 +115,7 @@ async function processPaper(id, locale) {
 
   // 2. Long-form (full paper narration), unless suppressed
   if (!tldrOnly && !noLongform && content.audio && content.audio.src) {
-    const text = extractLongform(content);
+    const text = extractLongform(content, locale);
     if (text.trim()) {
       try {
         const r = await generateMP3(text, content.audio.src);

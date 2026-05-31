@@ -227,6 +227,7 @@
 
             <audio-player v-if="paper.audio && paper.audio.src"
                           :src="paper.audio.src"
+                          :paper="paper"
                           :label="(store.t.ui && store.t.ui.narration) || 'Narration'" />
 
             <div class="body">
@@ -254,6 +255,8 @@
                   <div class="vw-insert">
                     <span class="vw-insert-lbl">insert after</span>
                     <button @click="edit.insertBlockAfter(i, 'paragraph')">+ paragraph</button>
+                    <button @click="edit.insertBlockAfter(i, 'keystat')">+ keystat</button>
+                    <button @click="edit.insertBlockAfter(i, 'pullquote')">+ pullquote</button>
                     <button @click="edit.insertBlockAfter(i, 'image')">+ image</button>
                     <button @click="edit.insertBlockAfter(i, 'section_heading')">+ section</button>
                   </div>

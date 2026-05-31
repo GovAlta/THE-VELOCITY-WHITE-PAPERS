@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "npx --yes http-server . -p 5173 -c-1 -o",
-    "edit": "node scripts/edit-server.mjs --enable",
+    "edit": "node --watch scripts/edit-server.mjs --enable",
     "preview": "node scripts/edit-server.mjs",
     "test": "node scripts/test.mjs",
     "build:index": "node scripts/build-index.mjs",

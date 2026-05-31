@@ -18,6 +18,7 @@
     ready: false,
     locale: initialLocale,
     t: {},                // active-locale string bag (alias to site.i18n[locale])
+    assetBust: {},        // asset path -> cache-bust token; bumped when an image or audio file is regenerated in edit mode
   });
 
   function applyLocale(locale) {

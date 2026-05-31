@@ -95,8 +95,15 @@
         let data = {};
         try { data = await res.json(); } catch (_) {}
         if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
-        this.status = 'Image saved to ' + (data.src || opts.src);
-        return { ok: true, src: data.src || opts.src };
+        const finalSrc = data.src || opts.src;
+        /* The regenerated file overwrites the same path, so the browser keeps
+           serving the cached bytes. Bump a session cache-bust token for this
+           path; the renderer appends it as a ?v= query so the new image shows
+           immediately, and it survives the save (it lives in the store, not the
+           paper JSON). */
+        if (finalSrc && window.VWStore) window.VWStore.assetBust[finalSrc] = Date.now();
+        this.status = 'Image saved to ' + finalSrc;
+        return { ok: true, src: finalSrc };
       } catch (e) {
         const msg = (e && e.message) || String(e);
         this.status = 'Image generation failed: ' + msg + '. Run "npm run edit" (not "npm run dev") to enable generation, and set OPENAI_API_KEY in .env.';
@@ -121,6 +128,40 @@
         this.status = 'Narration failed: ' + msg + ' (needs ELEVENLABS_API_KEY in .env, via npm run edit)';
         return { ok: false, error: msg };
       }
+    },
+
+    /* Build the long-form narration text from the in-memory paper, the same way
+       scripts/generate-audio.mjs extractLongform does, and regenerate the
+       full-paper MP3. Reflects unsaved edits. Number normalization and sentence
+       pauses are applied server-side in tts.mjs. */
+    longformText(p) {
+      const loc = (window.VWStore && window.VWStore.locale) || 'en';
+      const L = loc === 'fr'
+        ? { title: 'Titre. ', abstract: 'Résumé. ', quote: 'Citation. ' }
+        : { title: 'Title. ', abstract: 'Abstract. ', quote: 'Quote. ' };
+      const out = [];
+      if (p.title)    out.push(L.title + p.title + '. ');
+      if (p.subtitle) out.push(p.subtitle);
+      if (p.abstract) out.push(L.abstract + p.abstract);
+      const strip = (s) => (s || '')
+        .replace(/<[^>]+>/g, '')
+        .replace(/\*\*|__|\*|`/g, '')
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+      for (const b of (p.blocks || [])) {
+        if (b.type === 'section_heading') out.push(strip(b.title) + '.');
+        else if (b.type === 'paragraph' || b.type === 'dropcap_paragraph') out.push(strip(b.text));
+        else if (b.type === 'pullquote') out.push(L.quote + strip(b.text));
+        else if (b.type === 'keystat') out.push(strip(b.label) + ' ' + strip(b.value) + '. ' + strip(b.body));
+      }
+      return out.join('\n\n');
+    },
+    async generateNarration(paper) {
+      const p = paper || this.current;
+      if (!p || !p.audio || !p.audio.src) return { ok: false, error: 'This paper has no audio.src to write to.' };
+      this.status = 'Regenerating narration…';
+      const r = await this.generateAudio({ text: this.longformText(p), out: p.audio.src });
+      if (r.ok && window.VWStore) window.VWStore.assetBust[p.audio.src] = Date.now();
+      return r;
     },
 
     /* ---- Structural editing ---------------------------------------------- */
@@ -150,6 +191,8 @@
         };
       }
       if (type === 'section_heading') return { type: 'section_heading', n: '00', title: 'New section' };
+      if (type === 'keystat') return { type: 'keystat', label: 'New label', value: '00', body: 'Explain the number in a sentence.' };
+      if (type === 'pullquote') return { type: 'pullquote', text: 'New pull quote.', cite: '' };
       return { type: 'paragraph', text: 'New paragraph.' };
     },
 

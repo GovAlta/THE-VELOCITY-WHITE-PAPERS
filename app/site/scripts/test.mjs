@@ -6,6 +6,7 @@ import assert from 'node:assert';
 import { computeIndex } from './lib/index-build.mjs';
 import { collectTranslatable, retargetPaths, computeSignature } from './lib/translatable.mjs';
 import { validatePaper, BLOCK_TYPES, VISUALS } from './lib/paper-schema.mjs';
+import { normalizeForSpeech, injectSentencePauses, splitForSynthesis, stripMarkup } from './lib/tts.mjs';
 
 let pass = 0, fail = 0;
 function t(name, fn) {
@@ -66,6 +67,37 @@ t('short id format is a 5-char [a-z][a-z0-9]{4}', () => {
   const re = /^[a-z][a-z0-9]{4}$/;
   assert(re.test('p7p2k') && re.test('cux4h'), 'real ids should pass');
   assert(!re.test('wp-08') && !re.test('1abcd') && !re.test('toolong'), 'bad ids should fail');
+});
+
+/* ---- tts (markdown strip, speech normalization, pauses, paragraph split) ---- */
+t('stripMarkup removes bold, italics, code, links, and tags', () => {
+  assert.strictEqual(stripMarkup('the **four-headed hydra** of debt'), 'the four-headed hydra of debt');
+  assert.strictEqual(stripMarkup('an *emphasis* word'), 'an emphasis word');
+  assert.strictEqual(stripMarkup('run `npm run edit` now'), 'run npm run edit now');
+  assert.strictEqual(stripMarkup('see [the index](#/index) here'), 'see the index here');
+  assert.strictEqual(stripMarkup('plain <em>tagged</em> text'), 'plain tagged text');
+});
+
+t('normalizeForSpeech spells out %, $ magnitudes, ~ and +', () => {
+  assert.strictEqual(normalizeForSpeech('rose by 78.2%'), 'rose by 78.2 percent');
+  assert.strictEqual(normalizeForSpeech('a further ~33%'), 'a further approximately 33 percent');
+  assert.strictEqual(normalizeForSpeech('$120 million a year'), '120 million dollars a year');
+  assert.strictEqual(normalizeForSpeech('roughly $2B'), 'roughly 2 billion dollars');
+  assert.strictEqual(normalizeForSpeech('$80M to $120M'), '80 million dollars to 120 million dollars');
+  assert.strictEqual(normalizeForSpeech('$2,000 in tokens'), '2,000 dollars in tokens');
+  assert.strictEqual(normalizeForSpeech('40+ years'), '40 plus years');
+  // a decimal that is not a percent or currency is left alone
+  assert.strictEqual(normalizeForSpeech('version 1.2 of the doc'), 'version 1.2 of the doc');
+});
+t('injectSentencePauses adds breaks only between sentences, not in decimals', () => {
+  const out = injectSentencePauses('First sentence. Second one.', 0.4);
+  assert(out.includes('<break time="0.4s" />'), 'should insert a break');
+  assert.strictEqual(injectSentencePauses('It rose 78.2 percent today', 0.4), 'It rose 78.2 percent today');
+  assert.strictEqual(injectSentencePauses('no pause here.', 0), 'no pause here.');
+});
+t('splitForSynthesis splits on paragraph boundaries', () => {
+  const pieces = splitForSynthesis('Para one.\n\nPara two.\n\nPara three.');
+  assert.strictEqual(pieces.length, 3, 'one piece per paragraph');
 });
 
 console.log('\n' + pass + ' passed, ' + fail + ' failed');

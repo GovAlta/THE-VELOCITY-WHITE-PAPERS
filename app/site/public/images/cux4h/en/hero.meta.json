@@ -1,0 +1,17 @@
+{
+  "paper_id": "cux4h",
+  "locale": "en",
+  "slot": "hero",
+  "out_path": "public\\images\\cux4h\\en\\hero.jpg",
+  "bytes_jpg": 310269,
+  "bytes_png_source": 2928492,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-31T16:08:26.980Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial-illustration of a wooden ship at sea, mid-voyage, with carpenters replacing planks one at a time while the ship continues forward. Muted Alberta cream palette, navy and rust accents, archival print quality.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial-illustration of a wooden ship at sea, mid-voyage, with carpenters replacing planks one at a time while the ship continues forward. Muted Alberta cream palette, navy and rust accents, archival print quality.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

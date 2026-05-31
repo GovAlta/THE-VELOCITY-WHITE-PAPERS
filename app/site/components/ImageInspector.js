@@ -14,6 +14,16 @@
       src:   { type: String, required: true },
       alt:   { type: String, default: '' },
     },
+    setup() { return { store: window.VWStore }; },
+    computed: {
+      /* Display URL with a cache-bust query when this path was regenerated in
+         edit mode this session. The stored src and the sidecar path stay clean. */
+      displaySrc() {
+        const token = this.store && this.store.assetBust && this.store.assetBust[this.src];
+        if (!token) return this.src;
+        return this.src + (this.src.includes('?') ? '&' : '?') + 'v=' + token;
+      },
+    },
     data() {
       return {
         meta: null, open: false, loading: false,
@@ -60,7 +70,7 @@
     },
     template: `
       <div class="img-inspector">
-        <img :src="src" :alt="alt" />
+        <img :src="displaySrc" :alt="alt" />
         <button class="img-inspector-btn"
                 @click="toggle"
                 :aria-expanded="open ? 'true' : 'false'"
