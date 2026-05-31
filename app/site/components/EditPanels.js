@@ -59,6 +59,54 @@
     `,
   };
 
+  /* ---- Draft a paper from Markdown / scratch ---- */
+  window.VWComponents['vw-draft-panel'] = {
+    setup() { return { edit: window.VWEdit }; },
+    computed: {
+      open() { return !!(this.edit && this.edit.enabled && this.edit.draft.open); },
+      d() { return this.edit.draft; },
+      result() { return this.edit.draft.result; },
+    },
+    methods: { gen() { this.edit.generateDraft(); }, apply() { this.edit.applyDraft(); }, close() { this.edit.closeDraft(); } },
+    template: `
+      <div v-if="open" class="vw-modal-backdrop" @click.self="close()">
+        <div class="vw-modal vw-revise" role="dialog" aria-modal="true" aria-label="Draft from Markdown">
+          <div class="vw-modal-head">
+            <strong>Draft this paper</strong>
+            <button class="vw-x" @click="close()" aria-label="Close">×</button>
+          </div>
+          <div class="vw-revise-body">
+            <p class="vw-muted">Generates the abstract, sections, body blocks, and TL;DR from a rough Markdown draft (or a skeleton from scratch), grounded in your source. It lands as a preview you apply; nothing is written until you click Apply, and you can still refine afterward.</p>
+            <label class="vw-revise-lbl">Mode</label>
+            <div class="vw-model-toggle" role="group" aria-label="Mode">
+              <button type="button" :class="{ on: d.mode === 'draft' }" @click="d.mode = 'draft'">From Markdown</button>
+              <button type="button" :class="{ on: d.mode === 'scratch' }" @click="d.mode = 'scratch'">From scratch</button>
+            </div>
+            <label class="vw-revise-lbl">Model</label>
+            <div class="vw-model-toggle" role="group" aria-label="Model">
+              <button type="button" :class="{ on: d.model === 'sonnet' }" @click="d.model = 'sonnet'">Sonnet 4.6</button>
+              <button type="button" :class="{ on: d.model === 'opus' }" @click="d.model = 'opus'">Opus 4.7</button>
+            </div>
+            <template v-if="d.mode === 'draft'">
+              <label class="vw-revise-lbl">Rough draft (Markdown)</label>
+              <textarea v-model="d.markdown" rows="10" placeholder="Paste your rough draft. Headings become sections; prose becomes paragraphs; the AI never invents facts and marks gaps." aria-label="Markdown draft"></textarea>
+            </template>
+            <div v-if="result" class="vw-proposal" style="margin-top:12px">
+              <div class="vw-proposal-head">Draft preview — {{ (result.sections || []).length }} sections, {{ (result.blocks || []).length }} blocks, {{ ((result.tldr_presentation && result.tldr_presentation.slides) || []).length }} slides</div>
+              <div class="vw-proposal-text"><strong>Abstract:</strong> {{ (result.abstract || '').slice(0, 240) }}{{ (result.abstract || '').length > 240 ? '…' : '' }}</div>
+              <div v-if="(d.warnings || []).length" class="vw-muted" style="margin-top:6px">Warnings: {{ d.warnings.join('; ') }}</div>
+            </div>
+            <div class="vw-revise-foot">
+              <button class="vw-edit-btn" @click="close()">Cancel</button>
+              <button class="vw-gen-btn" @click="gen()" :disabled="d.running">{{ d.running ? 'Drafting…' : (result ? 'Re-draft' : 'Generate draft') }}</button>
+              <button v-if="result" class="vw-gen-btn vw-edit-accept" @click="apply()">Apply to paper</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,
+  };
+
   /* ---- Translate & build (hard overwrite) ---- */
   window.VWComponents['vw-translate-panel'] = {
     setup() { return { edit: window.VWEdit, store: window.VWStore }; },

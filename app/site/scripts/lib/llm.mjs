@@ -101,6 +101,63 @@ export async function translateItems({ items, sourceLocale, targetLocale, glossa
   return JSON.parse(text.slice(start, end + 1));
 }
 
+/* One JSON call: returns the parsed object/array between the given delimiters,
+   with a single retry on parse failure. */
+async function jsonCall(model, system, user, open, close) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const json = await vertexMessages({ model, system, messages: [{ role: 'user', content: user }], max_tokens: 8000 });
+    const text = (json.content || []).filter((c) => c.type === 'text').map((c) => c.text).join('');
+    const s = text.indexOf(open); const e = text.lastIndexOf(close);
+    if (s !== -1 && e !== -1) { try { return JSON.parse(text.slice(s, e + 1)); } catch (_) {} }
+    if (attempt === 1) throw new Error('Model did not return parseable JSON. Got: ' + text.slice(0, 200));
+  }
+}
+
+/* draftPaper — build paper parts from a rough Markdown draft (or a skeleton from
+   scratch), chunked so a long draft never truncates: one outline call, then one
+   blocks call per section. Returns { abstract, subtitle, tags, sections,
+   hero_image, tldr_presentation, blocks }. Never invents; marks gaps. */
+export async function draftPaper({ mode, title, tier, draftMarkdown, guideTexts, modelTier }) {
+  loadEnv();
+  const mdl = (modelTier === 'opus' ? process.env.VERTEX_CLAUDE_OPUS_MODEL : process.env.VERTEX_CLAUDE_SONNET_MODEL) || 'claude-sonnet-4-6';
+  const guide = (guideTexts || []).map((g) => '### ' + g.title + '\n' + g.content).join('\n\n');
+  const source = (mode === 'draft' && draftMarkdown && draftMarkdown.trim())
+    ? draftMarkdown
+    : '(No draft provided. Build a SKELETAL outline from the title and tier: real section titles, placeholder one-line intents, no invented facts.)';
+
+  const voice = (guide ? 'Follow this style guidance:\n' + guide + '\n\n' : '')
+    + 'Write in the author voice: flowing, first person plural, specific, plain. Preserve all facts and numbers from the source. Never invent facts.';
+
+  const outlineSys = voice + '\n\n' + 'From the SOURCE, produce ONLY a JSON object: '
+    + '{ "abstract": "80-140 words", "subtitle": "one line", "tags": ["..."], '
+    + '"sections": [{ "n": "01", "title": "..." }], '
+    + '"hero_image": { "image_prompt": "plain composition brief", "alt": "...", "style_kind": "cover" }, '
+    + '"tldr_presentation": { "slides": [{ "id": "01", "title": "...", "visual": "title|stat|list|quote|compare", "caption": "...", "subcaption": "...", "text": "narration, short spoken sentences" }] } }. '
+    + 'Six to ten sections. Three to six TL;DR slides. No body blocks here.';
+  const outline = await jsonCall(mdl, outlineSys, 'TITLE: ' + title + '\nTIER: ' + tier + '\n\nSOURCE:\n' + source, '{', '}');
+
+  const blocks = [];
+  for (const sec of (outline.sections || [])) {
+    const secSys = voice + '\n\n'
+      + 'Produce ONLY a JSON array of blocks for ONE section. Start with { "type":"section_heading", "n":"' + sec.n + '", "title":"' + (sec.title || '').replace(/"/g, '\\"') + '" }, then 2 to 5 blocks drawn from the SOURCE for this section. '
+      + 'Allowed block types: paragraph {type,text}, dropcap_paragraph {type,text} (only for section 01), pullquote {type,text,cite}, keystat {type,label,value,body}, sidenote {type,label,value}. '
+      + 'Where the source does not cover this section, emit one paragraph whose text is the literal marker "[DRAFT GAP - needs source for: ' + (sec.title || '') + ']".';
+    const arr = await jsonCall(mdl, secSys, 'PAPER: ' + title + '\nSECTION ' + sec.n + ': ' + sec.title + '\n\nSOURCE:\n' + source, '[', ']');
+    if (!Array.isArray(arr) || !arr.length) { blocks.push({ type: 'section_heading', n: sec.n, title: sec.title }); continue; }
+    if (arr[0].type === 'section_heading') { arr[0].n = sec.n; arr[0].title = sec.title; }
+    else arr.unshift({ type: 'section_heading', n: sec.n, title: sec.title });
+    for (const b of arr) blocks.push(b);
+  }
+  blocks.push({ type: 'tag_row', tags: outline.tags || [] });
+  blocks.push({ type: 'related' });
+
+  return {
+    abstract: outline.abstract, subtitle: outline.subtitle, tags: outline.tags || [],
+    sections: outline.sections || [], hero_image: outline.hero_image || null,
+    tldr_presentation: outline.tldr_presentation || null, blocks,
+  };
+}
+
 export async function reviseItems({ items, instructions, guideTexts, model, tier }) {
   loadEnv();
   const mdl = model ||

@@ -26,9 +26,10 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve, extname } from 'node:path';
 import { readFile as readFileP } from 'node:fs/promises';
 import { generatePNG, generatePNGFromReference } from './lib/images.mjs';
-import { reviseItems, translateItems } from './lib/llm.mjs';
+import { reviseItems, translateItems, draftPaper } from './lib/llm.mjs';
 import { buildIndex } from './lib/index-build.mjs';
 import { collectTranslatable, retargetPaths, computeSignature } from './lib/translatable.mjs';
+import { validatePaper } from './lib/paper-schema.mjs';
 
 /* The style guides the editor can view, curate, and save. The .md files live
    one level above the site (style-guide/); image-style is inside the site. The
@@ -229,6 +230,26 @@ async function handleDeletePaper(body, res) {
   } catch (e) { return sendJSON(res, 500, { error: (e && e.message) || String(e) }); }
 }
 
+/* Draft a paper's parts from a rough Markdown draft (or a skeleton from scratch).
+   Returns the generated parts for the editor to preview and apply as proposals. */
+async function handleGeneratePaper(body, res) {
+  if (!EDIT_ENABLED) return sendJSON(res, 403, { error: 'Editing is disabled in this environment.' });
+  try {
+    const title = body.title || 'Untitled paper';
+    const tier = body.tier || 'Technical';
+    const mode = body.mode === 'draft' ? 'draft' : 'scratch';
+    const guideTexts = [];
+    for (const gid of (body.guideIds || [])) {
+      const g = GUIDES.find((x) => x.id === gid);
+      if (g) { try { guideTexts.push({ title: g.title, content: await readFileP(resolve(SITE, g.path), 'utf8') }); } catch (_) {} }
+    }
+    const paper = await draftPaper({ mode, title, tier, draftMarkdown: body.draft_markdown, guideTexts, modelTier: body.model === 'opus' ? 'opus' : 'sonnet' });
+    const warnings = validatePaper({ blocks: paper.blocks, sections: paper.sections, tldr_presentation: paper.tldr_presentation });
+    console.log('Drafted paper parts: ' + (paper.sections || []).length + ' sections, ' + (paper.blocks || []).length + ' blocks');
+    return sendJSON(res, 200, { paper, warnings });
+  } catch (e) { return sendJSON(res, 500, { error: (e && e.message) || String(e) }); }
+}
+
 /* Hard translate-and-build: clone the source structure into the target, translate
    every string, retarget asset paths, stamp status + signature. Returns the asset
    slots for the client to regenerate (images conditioned on the source PNG). */
@@ -334,6 +355,7 @@ const server = createServer((req, res) => {
   if (req.method === 'POST' && req.url === '/api/delete-paper')   { readBody(req, (b) => handleDeletePaper(b, res)); return; }
   if (req.method === 'POST' && req.url === '/api/build-index')    { handleBuildIndex(res); return; }
   if (req.method === 'POST' && req.url === '/api/translate-paper'){ readBody(req, (b) => handleTranslatePaper(b, res)); return; }
+  if (req.method === 'POST' && req.url === '/api/generate-paper') { readBody(req, (b) => handleGeneratePaper(b, res)); return; }
   // Static files.
   (async () => {
     try {

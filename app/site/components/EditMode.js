@@ -38,6 +38,7 @@
     revise: { open: false, scope: '', blocks: [], guideIds: [], instructions: '', running: false, model: 'sonnet' },
     translate: { open: false, target: 'fr', model: 'sonnet', regenImages: true, regenAudio: false, running: false },
     drift: null,           // { primary, inSync, hasTranslation, translatedAt } for the current paper
+    draft: { open: false, mode: 'draft', markdown: '', model: 'sonnet', running: false, result: null, warnings: [] },
 
     /* The JSON is bilingual: data/papers/<id>.en.json and <id>.fr.json are two
        separate files. The page loads one locale at a time, so editing operates
@@ -376,6 +377,47 @@
       } finally { this.translate.running = false; }
     },
 
+    /* ---- Draft a paper from Markdown (or scratch) ------------------------ */
+    openDraft() { this.draft.open = true; this.draft.result = null; this.draft.running = false; },
+    closeDraft() { this.draft.open = false; },
+    async generateDraft() {
+      const p = this.current;
+      if (!p) return;
+      this.draft.running = true;
+      this.status = 'Drafting from ' + (this.draft.mode === 'draft' ? 'your Markdown' : 'scratch') + '…';
+      try {
+        const res = await fetch('/api/generate-paper', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id: p.id, title: p.title, tier: p.tier, mode: this.draft.mode, draft_markdown: this.draft.markdown, model: this.draft.model, guideIds: [] }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        this.draft.result = d.paper;
+        this.draft.warnings = d.warnings || [];
+        this.status = 'Draft ready: ' + (d.paper.sections || []).length + ' sections, ' + (d.paper.blocks || []).length + ' blocks. Review, then apply.';
+      } catch (e) {
+        this.status = 'Draft failed: ' + ((e && e.message) || e) + ' (needs npm run edit + Vertex in .env)';
+      } finally { this.draft.running = false; }
+    },
+    applyDraft() {
+      const p = this.current; const r = this.draft.result;
+      if (!p || !r) return;
+      if (r.abstract != null) p.abstract = r.abstract;
+      if (r.subtitle != null) p.subtitle = r.subtitle;
+      if (Array.isArray(r.tags) && r.tags.length) p.tags = r.tags;
+      if (Array.isArray(r.sections)) p.sections = r.sections;
+      if (r.hero_image) { p.hero_image = p.hero_image || {}; ['image_prompt', 'alt', 'style_kind'].forEach((k) => { if (r.hero_image[k] != null) p.hero_image[k] = r.hero_image[k]; }); }
+      if (Array.isArray(r.blocks)) p.blocks = r.blocks;
+      if (r.tldr_presentation && Array.isArray(r.tldr_presentation.slides)) {
+        const loc = (window.VWStore && window.VWStore.locale) || 'en';
+        p.tldr_presentation = p.tldr_presentation || { id: p.id + '-tldr', locale: loc, owner_id: p.id, slides: [] };
+        p.tldr_presentation.slides = r.tldr_presentation.slides.map((s) => Object.assign({}, s, { audio_file: 'public/audio/' + loc + '/' + p.id + '-tldr/' + (s.id || '01') + '.mp3' }));
+      }
+      this.markDirty();
+      this.draft.open = false; this.draft.result = null;
+      this.status = 'Applied the draft. Review the body, refine, generate assets, then Save.';
+    },
+
     /* primary_locale: which locale owns the structure. Written into both files. */
     async setPrimaryLocale(loc) {
       const id = this.current && this.current.id;
@@ -556,6 +598,7 @@
           <button type="button" class="vw-edit-btn" @click="edit.openGuides()">Guides</button>
           <button type="button" class="vw-edit-btn" @click="edit.openRevise('paper', edit.current ? edit.current.blocks : [])" :disabled="!edit.current">Revise paper</button>
           <button type="button" class="vw-edit-btn" @click="edit.openTranslate()" :disabled="!edit.current">Translate</button>
+          <button type="button" class="vw-edit-btn" @click="edit.openDraft()" :disabled="!edit.current">Draft</button>
           <template v-if="edit.hasProposals()">
             <button type="button" class="vw-edit-btn vw-edit-accept" @click="edit.acceptAllProposals()">Accept all</button>
             <button type="button" class="vw-edit-btn" @click="edit.rejectAllProposals()">Reject all</button>
