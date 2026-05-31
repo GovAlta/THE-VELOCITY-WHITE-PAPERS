@@ -97,7 +97,13 @@
         "aria_text_panel": "Slide text and narration",
         "aria_slide_announcement": "Slide {n} of {total}, {title}",
         "aria_playing_announcement": "Playing",
-        "aria_paused_announcement": "Paused"
+        "aria_paused_announcement": "Paused",
+        "index_title": "The Index",
+        "papers_word": "papers",
+        "col_no": "No.",
+        "col_title": "Title",
+        "col_tier": "Tier",
+        "col_read": "Read"
       },
       "hero": {
         "h1_pre": "Forty years of",
@@ -267,7 +273,13 @@
         "aria_text_panel": "Texte et narration de la diapositive",
         "aria_slide_announcement": "Diapositive {n} sur {total}, {title}",
         "aria_playing_announcement": "Lecture en cours",
-        "aria_paused_announcement": "En pause"
+        "aria_paused_announcement": "En pause",
+        "index_title": "L’index",
+        "papers_word": "livres",
+        "col_no": "Nº",
+        "col_title": "Titre",
+        "col_tier": "Niveau",
+        "col_read": "Lecture"
       },
       "hero": {
         "h1_pre": "Quarante années de",

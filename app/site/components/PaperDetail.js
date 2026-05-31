@@ -161,23 +161,23 @@
 
             <div class="doc-byline">
               <div class="field">
-                <div class="l">Authors</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.authors) || 'Authors' }}</div>
                 <div class="v">{{ (paper.authors || []).join(' · ') }}</div>
               </div>
               <div class="field" v-if="paper.published">
-                <div class="l">Published</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.published) || 'Published' }}</div>
                 <div class="v">{{ paper.published }}</div>
               </div>
               <div class="field" v-if="paper.reading_min">
-                <div class="l">Reading</div>
-                <div class="v">{{ paper.reading_min }} min</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.reading) || 'Reading' }}</div>
+                <div class="v">{{ paper.reading_min }} {{ (store.t.ui && store.t.ui.min) || 'min' }}</div>
               </div>
               <div class="field">
-                <div class="l">Status</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.status) || 'Status' }}</div>
                 <div class="v">{{ paper.status }}</div>
               </div>
               <div class="field" v-if="paper.repo">
-                <div class="l">Repository</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.repository) || 'Repository' }}</div>
                 <div class="v"><a :href="paper.repo">{{ paper.repo.replace('https://github.com/','') }}</a></div>
               </div>
             </div>

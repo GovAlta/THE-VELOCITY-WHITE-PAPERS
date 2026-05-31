@@ -6,7 +6,7 @@
   window.VWComponents['index-table'] = {
     props: { papers: { type: Array, required: true } },
     emits: ['open'],
-    setup() { return { edit: window.VWEdit || null }; },
+    setup() { return { edit: window.VWEdit || null, store: window.VWStore }; },
     data() {
       return { query: '', tier: 'all', adding: false, draft: { id: '', num: '', title: '', tier: 'Technical' } };
     },
@@ -49,8 +49,8 @@
     template: `
       <section class="civic-index">
         <div class="index-head">
-          <h1>The Index</h1>
-          <div class="count">{{ filtered.length }} / {{ papers.length }} papers</div>
+          <h1>{{ (store.t.ui && store.t.ui.index_title) || 'The Index' }}</h1>
+          <div class="count">{{ filtered.length }} / {{ papers.length }} {{ (store.t.ui && store.t.ui.papers_word) || 'papers' }}</div>
         </div>
 
         <div v-if="editing" class="vw-index-edit">
@@ -72,25 +72,25 @@
             <input id="vw-index-search"
                    v-model="query"
                    type="search"
-                   placeholder="Search papers by title, subtitle, tag…"
-                   :aria-label="'Search ' + papers.length + ' papers'" />
+                   :placeholder="(store.t.ui && store.t.ui.search_placeholder) || 'Search…'"
+                   :aria-label="(store.t.ui && store.t.ui.search_placeholder) || 'Search papers'" />
           </div>
           <div class="chips" role="group" aria-label="Filter by tier">
             <button v-for="t in tiers" :key="t"
                     class="chip" :class="{ on: tier === t }"
                     :aria-pressed="tier === t ? 'true' : 'false'"
-                    @click="tier = t">{{ t === 'all' ? 'All' : t }}</button>
+                    @click="tier = t">{{ t === 'all' ? ((store.t.ui && store.t.ui.all) || 'All') : t }}</button>
           </div>
         </div>
         <table>
           <thead>
             <tr>
               <th v-if="editing">Order</th>
-              <th>No.</th>
-              <th>Title</th>
-              <th>Tier</th>
-              <th>Read</th>
-              <th>Status</th>
+              <th>{{ (store.t.ui && store.t.ui.col_no) || 'No.' }}</th>
+              <th>{{ (store.t.ui && store.t.ui.col_title) || 'Title' }}</th>
+              <th>{{ (store.t.ui && store.t.ui.col_tier) || 'Tier' }}</th>
+              <th>{{ (store.t.ui && store.t.ui.col_read) || 'Read' }}</th>
+              <th>{{ (store.t.ui && store.t.ui.status) || 'Status' }}</th>
             </tr>
           </thead>
           <tbody>
