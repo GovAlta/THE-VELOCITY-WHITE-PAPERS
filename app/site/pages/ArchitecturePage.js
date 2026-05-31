@@ -41,7 +41,7 @@
             <span>Reference topology + knowledge articles</span>
           </div>
           <h1>The work, in <em>seven layers</em>.</h1>
-          <p class="lede">From discovery to deployment. Autonomous agents inside each layer. Verifiers and human-gated steps where the cost of mistakes is highest. Below the diagram, a small library of architecture articles — technical specs that sit outside the linear reading sequence and are read on demand.</p>
+          <p class="lede">The path runs from discovery to deployment, with autonomous agents inside each layer and human-gated steps where the cost of a mistake is highest. Below the diagram sits a small library of architecture articles. These are technical specifications that fall outside the linear reading sequence, read on demand.</p>
         </section>
 
         <div v-if="arch">

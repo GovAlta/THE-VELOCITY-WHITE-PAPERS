@@ -22,6 +22,17 @@
         const tpl = this.store.t.section_titles?.series_meta_tpl || '{n} entries';
         return tpl.replace('{n}', this.papers.length);
       },
+      /* Stats with the paper count computed live, so it never drifts from the
+         data or the Index. The first stat is "Papers"; its value tracks the
+         numbered papers and the sub keeps the locale wording from site.json. */
+      stats() {
+        const base = (this.store.t.stats || []).map(s => ({ ...s }));
+        if (base.length) {
+          const numbered = this.papers.filter(p => /^\d+$/.test(String(p.num))).length;
+          base[0] = { ...base[0], v: String(numbered) };
+        }
+        return base;
+      },
     },
     methods: {
       open(id) { this.$emit('navigate', { page: 'paper', id }); },
@@ -50,7 +61,7 @@
           <p class="lede">{{ store.t.tagline }}</p>
         </section>
 
-        <stat-rail :stats="store.t.stats" />
+        <stat-rail :stats="stats" />
 
         <section class="civic-section">
           <div class="head">
