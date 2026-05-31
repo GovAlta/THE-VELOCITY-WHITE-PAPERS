@@ -1,0 +1,31 @@
+{
+  "_note": "Living updates feed for one locale, newest first. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Living updates",
+    "title_lead": "What has",
+    "title_em": "changed.",
+    "lede": "New findings, new code releases, new evidence. A four-year cycle. Newest first.",
+    "empty": "No updates published yet.",
+    "kinds": {
+      "release": "Release",
+      "finding": "Finding",
+      "paper": "Paper",
+      "note": "Note"
+    }
+  },
+  "entries": [
+    {
+      "id": "2026-05-23-site-launch",
+      "date": "2026-05-23",
+      "kind": "release",
+      "title": "Site scaffolded",
+      "body": "The Velocity White Papers compendium goes live with full structure for sixteen papers plus one placeholder, a TL;DR presentation player, image-inspector transparency, and a bilingual workflow.",
+      "links": [
+        {
+          "label": "Read Paper 1",
+          "href": "#/paper/cux4h"
+        }
+      ]
+    }
+  ]
+}

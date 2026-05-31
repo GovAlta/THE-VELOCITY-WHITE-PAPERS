@@ -1,0 +1,46 @@
+{
+  "_note": "About page content for one locale. The sibling .<other>.json holds the translation. The public repositories list is derived from papers.json.",
+  "eyebrow": "About this collection",
+  "title_lead": "Open source by",
+  "title_em": "default.",
+  "lede": "The site itself is open source, published via GitHub Pages. The entire site is cloneable and adaptable. MIT license with explicit disclaimers: not responsible for decisions or costs incurred by adopters; shared in the spirit of national collaboration; users must evaluate and assess these tools in their own context.",
+  "use": {
+    "heading": "How to use this site",
+    "meta": "readme · methodology · feedback",
+    "paras": [
+      "Sequential reading is the recommended path. Each paper builds on what comes before. Lateral links between papers let readers jump sideways without losing context.",
+      "Every paper is downloadable as Markdown and JSON so readers can feed them into their own AI tooling. The full site is cloneable from GitHub. The site uses a small cookie to track which papers a reader has visited and surface what is new since their last visit.",
+      "No vendor or product is being advocated. For transparency, any vendors or models actually used in production will be disclosed."
+    ]
+  },
+  "repos": {
+    "heading": "Public repositories",
+    "meta": "released alongside the papers"
+  },
+  "also": {
+    "heading": "Also on this site",
+    "meta": "four shortcuts",
+    "cards": [
+      {
+        "tag": "Glossary",
+        "title": "Vocabulary of the collection",
+        "href": "#/glossary"
+      },
+      {
+        "tag": "Repositories",
+        "title": "Public companion repositories",
+        "href": "#/repos"
+      },
+      {
+        "tag": "Updates",
+        "title": "What has changed",
+        "href": "#/updates"
+      },
+      {
+        "tag": "Community",
+        "title": "Where to talk about the work",
+        "href": "#/community"
+      }
+    ]
+  }
+}

@@ -400,6 +400,25 @@
   W.VWVisuals = W.VWVisuals || { reusable: {}, bespoke: {} };
 
   
+  const _registered = new Set();
+  let _vueApp = null;
+
+  function _syncToApp() {
+    if (!_vueApp) return;
+    const reg = W.VWComponents || {};
+    Object.keys(reg).forEach((k) => {
+      if (_registered.has(k)) return;
+      try { _vueApp.component(k, reg[k]); } catch (e) {  }
+      _registered.add(k);
+    });
+  }
+
+  W.VWVisuals.attachApp = function (app) {
+    _vueApp = app;
+    _syncToApp();
+  };
+
+  
   W.VWVisuals.registerReusable = function (key, componentName) {
     W.VWVisuals.reusable[key] = componentName || key;
   };
@@ -441,7 +460,11 @@
       const s = document.createElement('script');
       s.src = src;
       s.dataset.vwVisual = src;
-      s.onload  = () => { s.dataset.vwResolved = '1'; resolve(); };
+      s.onload  = () => {
+        s.dataset.vwResolved = '1';
+        _syncToApp();
+        resolve();
+      };
       s.onerror = () => reject(new Error('Failed to load ' + src));
       document.head.appendChild(s);
     });
@@ -597,7 +620,7 @@
       <nav class="civic-nav" v-if="store.site" :class="{ 'drawer-open': drawerOpen }">
         <a class="brand" href="#/"
            @click="onNavigate('library')"
-           :aria-label="(store.locale === 'fr' ? 'Accueil — ' : 'Home — ') + store.t.title">
+           :aria-label="(store.locale === 'fr' ? 'Accueil, ' : 'Home, ') + store.t.title">
           <img src="assets/alberta-wordmark.png"
                alt="Government of Alberta"
                width="100" height="28"
@@ -682,11 +705,11 @@
       <footer class="civic-footer" v-if="store.t && store.t.footer">
         <div>
           <div class="smallcaps">{{ store.t.footer.smallcaps }}</div>
-          <h5>{{ store.t.footer.primary.heading }}</h5>
+          <h2>{{ store.t.footer.primary.heading }}</h2>
           <p>{{ store.t.footer.primary.body }}</p>
         </div>
         <div v-for="col in store.t.footer.columns" :key="col.heading">
-          <h5>{{ col.heading }}</h5>
+          <h2>{{ col.heading }}</h2>
           <ul>
             <li v-for="it in col.items" :key="it.label">
               <a :href="it.href">{{ it.label }}</a>
@@ -781,10 +804,13 @@
   window.VWComponents['index-table'] = {
     props: { papers: { type: Array, required: true } },
     emits: ['open'],
+    setup() { return { edit: window.VWEdit || null, store: window.VWStore }; },
     data() {
-      return { query: '', tier: 'all' };
+      return { query: '', tier: 'all', adding: false, draft: { id: '', num: '', title: '', tier: 'Technical' } };
     },
     computed: {
+      editing() { return !!(this.edit && this.edit.enabled); },
+      canReorder() { return this.editing && !this.query.trim() && this.tier === 'all'; },
       tiers() {
         const set = new Set(this.papers.map(p => p.tier).filter(Boolean));
         return ['all', ...set];
@@ -806,12 +832,37 @@
         if (s === 'forthcoming') return 'status forthcoming';
         return 'status draft';
       },
+      async createPaper() {
+        if (!this.edit) return;
+        const r = await this.edit.createPaper(this.draft);
+        if (r && r.ok) { this.adding = false; this.draft = { id: '', num: '', title: '', tier: 'Technical' }; }
+      },
+      del(i, p) {
+        if (!this.edit) return;
+        if (window.confirm('Delete paper "' + p.id + '" (' + (p.title || '') + ')? This removes its JSON files. Images and audio under public/ are left in place.')) {
+          this.edit.deletePaper(i);
+        }
+      },
     },
     template: `
       <section class="civic-index">
         <div class="index-head">
-          <h1>The Index</h1>
-          <div class="count">{{ filtered.length }} / {{ papers.length }} papers</div>
+          <h1>{{ (store.t.ui && store.t.ui.index_title) || 'The Index' }}</h1>
+          <div class="count">{{ filtered.length }} / {{ papers.length }} {{ (store.t.ui && store.t.ui.papers_word) || 'papers' }}</div>
+        </div>
+
+        <div v-if="editing" class="vw-index-edit">
+          <button v-if="!adding" class="vw-gen-btn" @click="adding = true">+ Add paper</button>
+          <div v-else class="vw-addpaper">
+            <input v-model="draft.title" placeholder="Title (a short id is assigned automatically)" aria-label="Paper title" class="vw-grow" />
+            <select v-model="draft.tier" aria-label="Tier">
+              <option>Conceptual</option><option>Technical</option><option>Policy &amp; People</option>
+            </select>
+            <button class="vw-gen-btn" @click="createPaper()">Create</button>
+            <button class="vw-edit-btn vw-dark" @click="adding = false">Cancel</button>
+          </div>
+          <span class="vw-muted" v-if="!canReorder && !adding">Clear the search and tier filter to reorder papers.</span>
+          <span class="vw-muted" v-else-if="!adding">Use the ↑ ↓ controls to reorder; changes save to papers.json.</span>
         </div>
         <div class="filters" role="search">
           <div class="search">
@@ -819,28 +870,37 @@
             <input id="vw-index-search"
                    v-model="query"
                    type="search"
-                   placeholder="Search papers by title, subtitle, tag…"
-                   :aria-label="'Search ' + papers.length + ' papers'" />
+                   :placeholder="(store.t.ui && store.t.ui.search_placeholder) || 'Search…'"
+                   :aria-label="(store.t.ui && store.t.ui.search_placeholder) || 'Search papers'" />
           </div>
           <div class="chips" role="group" aria-label="Filter by tier">
             <button v-for="t in tiers" :key="t"
                     class="chip" :class="{ on: tier === t }"
                     :aria-pressed="tier === t ? 'true' : 'false'"
-                    @click="tier = t">{{ t === 'all' ? 'All' : t }}</button>
+                    @click="tier = t">{{ t === 'all' ? ((store.t.ui && store.t.ui.all) || 'All') : t }}</button>
           </div>
         </div>
         <table>
           <thead>
             <tr>
-              <th>No.</th>
-              <th>Title</th>
-              <th>Tier</th>
-              <th>Read</th>
-              <th>Status</th>
+              <th v-if="editing">Order</th>
+              <th>{{ (store.t.ui && store.t.ui.col_no) || 'No.' }}</th>
+              <th>{{ (store.t.ui && store.t.ui.col_title) || 'Title' }}</th>
+              <th>{{ (store.t.ui && store.t.ui.col_tier) || 'Tier' }}</th>
+              <th>{{ (store.t.ui && store.t.ui.col_read) || 'Read' }}</th>
+              <th>{{ (store.t.ui && store.t.ui.status) || 'Status' }}</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="p in filtered" :key="p.id" @click="$emit('open', p.id)">
+            <tr v-for="(p, i) in filtered" :key="p.id" @click="$emit('open', p.id)">
+              <td v-if="editing" class="vw-order" data-label="Order" @click.stop>
+                <template v-if="canReorder">
+                  <button @click="edit.movePaper(i, -1)" :disabled="i === 0" aria-label="Move paper up">↑</button>
+                  <button @click="edit.movePaper(i, 1)" :disabled="i === filtered.length - 1" aria-label="Move paper down">↓</button>
+                  <button class="vw-del" @click="del(i, p)" aria-label="Delete paper">✕</button>
+                </template>
+                <span v-else class="vw-muted">—</span>
+              </td>
               <td class="num" data-label="No.">№ {{ p.num }}</td>
               <td class="title" data-label="Title">
                 <h2 class="index-title">{{ p.title }}</h2>
@@ -860,12 +920,21 @@
 (function () {
   window.VWComponents = window.VWComponents || {};
 
+  
+  const blockKeys = new WeakMap();
+  let blockKeySeq = 0;
+  function keyFor(b) {
+    if (!b || typeof b !== 'object') return 'k' + b;
+    if (!blockKeys.has(b)) blockKeys.set(b, 'blk-' + (++blockKeySeq));
+    return blockKeys.get(b);
+  }
+
   window.VWComponents['paper-detail'] = {
     props: {
       paper:   { type: Object, required: true },   
     },
     emits: ['open', 'back'],
-    setup() { return { store: window.VWStore }; },
+    setup() { return { store: window.VWStore, edit: window.VWEdit || null }; },
     data() {
       return {
         active: 0,
@@ -873,9 +942,11 @@
         releaseTocTrap: null,
         releaseTocEsc: null,
         tocTriggerEl: null,
+        dragFrom: null,
       };
     },
     watch: {
+      paper: { handler(p) { if (window.VWEdit) { window.VWEdit.setCurrent(p); if (window.VWEdit.enabled) window.VWEdit.detectDrift(); } }, immediate: true },
       tocOpen(open) {
         
         if (open && window.matchMedia('(max-width: 900px)').matches) {
@@ -907,6 +978,10 @@
         const bodies = (this.store.t.ui && this.store.t.ui.translation_bodies) || {};
         return bodies[s] || '';
       },
+      tagsCsv: {
+        get() { return (this.paper.tags || []).join(', '); },
+        set(v) { this.paper.tags = v.split(',').map((s) => s.trim()).filter(Boolean); this.touch(); },
+      },
     },
     methods: {
       scrollToSection(n) {
@@ -917,6 +992,22 @@
       pickSection(i, n) {
         this.active = i;
         this.scrollToSection(n);
+      },
+      onSecDragStart(i, e) {
+        this.dragFrom = i;
+        if (e.dataTransfer) { e.dataTransfer.effectAllowed = 'move'; try { e.dataTransfer.setData('text/plain', String(i)); } catch (_) {} }
+      },
+      onSecDrop(i) {
+        if (this.edit && this.dragFrom != null && this.dragFrom !== i) this.edit.reorderSection(this.dragFrom, i);
+        this.dragFrom = null;
+      },
+      blockKey(b) { return keyFor(b); },
+      md(s) { return window.VWmd ? window.VWmd(s) : (s || ''); },
+      touch() { if (this.edit) this.edit.markDirty(); },
+      reviseSection(i) {
+        const blocks = this.paper.blocks; const out = [];
+        for (let j = i + 1; j < blocks.length; j++) { if (blocks[j].type === 'section_heading') break; out.push(blocks[j]); }
+        if (this.edit) this.edit.openRevise('section', out);
       },
     },
     template: `
@@ -948,7 +1039,13 @@
           </button>
           <div class="toc-head" id="toc-head" aria-hidden="true">{{ (store.t.ui && store.t.ui.contents) || 'Contents' }}</div>
           <ol class="toc-items" role="list" aria-labelledby="toc-head">
-            <li v-for="(s, i) in paper.sections" :key="s.n">
+            <li v-for="(s, i) in paper.sections" :key="s.n"
+                :class="{ 'vw-toc-drag': edit && edit.enabled }"
+                :draggable="edit && edit.enabled ? 'true' : 'false'"
+                @dragstart="onSecDragStart(i, $event)"
+                @dragover.prevent
+                @drop="onSecDrop(i)">
+              <span v-if="edit && edit.enabled" class="vw-drag-grip" aria-hidden="true">⠿</span>
               <button class="toc-item"
                       :class="{ active: active === i }"
                       :aria-current="active === i ? 'true' : null"
@@ -956,8 +1053,11 @@
                 <span class="n" aria-hidden="true">{{ s.n }}</span>
                 <span>{{ s.title }}</span>
               </button>
+              <button v-if="edit && edit.enabled" class="vw-sec-del"
+                      @click.stop="edit.deleteSection(i)" aria-label="Delete section">✕</button>
             </li>
           </ol>
+          <button v-if="edit && edit.enabled" class="vw-sec-add" @click="edit.addSection()">+ Add section</button>
         </nav>
 
         <section class="col-doc">
@@ -967,30 +1067,55 @@
               <span>{{ paper.tier }}</span>
               <span>{{ paper.sequence }}</span>
             </div>
-            <h1 class="doc-title" :id="'paper-title-' + paper.id">{{ paper.title }}</h1>
-            <div class="doc-sub">{{ paper.subtitle }}</div>
+            <h1 class="doc-title" :id="'paper-title-' + paper.id"><editable-text tag="span" :obj="paper" field="title" /></h1>
+            <div class="doc-sub"><editable-text tag="span" :obj="paper" field="subtitle" /></div>
 
             <div class="doc-byline">
               <div class="field">
-                <div class="l">Authors</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.authors) || 'Authors' }}</div>
                 <div class="v">{{ (paper.authors || []).join(' · ') }}</div>
               </div>
               <div class="field" v-if="paper.published">
-                <div class="l">Published</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.published) || 'Published' }}</div>
                 <div class="v">{{ paper.published }}</div>
               </div>
               <div class="field" v-if="paper.reading_min">
-                <div class="l">Reading</div>
-                <div class="v">{{ paper.reading_min }} min</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.reading) || 'Reading' }}</div>
+                <div class="v">{{ paper.reading_min }} {{ (store.t.ui && store.t.ui.min) || 'min' }}</div>
               </div>
               <div class="field">
-                <div class="l">Status</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.status) || 'Status' }}</div>
                 <div class="v">{{ paper.status }}</div>
               </div>
               <div class="field" v-if="paper.repo">
-                <div class="l">Repository</div>
+                <div class="l">{{ (store.t.ui && store.t.ui.repository) || 'Repository' }}</div>
                 <div class="v"><a :href="paper.repo">{{ paper.repo.replace('https://github.com/','') }}</a></div>
               </div>
+            </div>
+
+            <div v-if="edit && edit.enabled" class="vw-meta-edit">
+              <div class="vw-meta-row">
+                <label>Primary locale (canonical structure)
+                  <select :value="paper.primary_locale || 'en'" @change="edit.setPrimaryLocale($event.target.value)">
+                    <option value="en">EN</option><option value="fr">FR</option>
+                  </select>
+                </label>
+                <label v-if="edit.drift">Language sync<span class="vw-meta-ro" :class="{ 'vw-stale': edit.drift.hasTranslation && !edit.drift.inSync }">{{ edit.drift.hasTranslation ? (edit.drift.inSync ? edit.drift.target.toUpperCase() + ' in sync' : edit.drift.target.toUpperCase() + ' out of date, re-translate') : edit.drift.target.toUpperCase() + ' not yet built' }}</span></label>
+              </div>
+              <div class="vw-meta-row">
+                <label>No. (derived)<span class="vw-meta-ro">{{ paper.num || '—' }}</span></label>
+                <label>Sequence (derived)<span class="vw-meta-ro">{{ paper.sequence || '—' }}</span></label>
+                <label>Read (min)<input type="number" min="0" v-model.number="paper.reading_min" @input="touch()" /></label>
+                <label>Published<input v-model="paper.published" @input="touch()" placeholder="2026-07-15" /></label>
+              </div>
+              <div class="vw-meta-row">
+                <label>Tier<select v-model="paper.tier" @change="touch()"><option>Conceptual</option><option>Technical</option><option>Policy &amp; People</option></select></label>
+                <label>Status<select v-model="paper.status" @change="touch()"><option>Draft</option><option>Forthcoming</option><option>Published</option><option>Placeholder</option></select></label>
+                <label>Category<select v-model="paper.category" @change="touch()"><option>paper</option><option>architecture</option></select></label>
+                <label>Repo<input v-model="paper.repo" @input="touch()" placeholder="https://github.com/…" /></label>
+              </div>
+              <label class="vw-meta-tags">Tags (comma-separated)<input v-model="tagsCsv" /></label>
+              <div class="vw-muted">Editing the paper metadata. Saving updates this paper and syncs the index (papers.json).</div>
             </div>
 
             <div v-if="store.locale === 'fr' && paper.translation_status && paper.translation_status !== 'final'"
@@ -1003,19 +1128,48 @@
 
             <div class="abstract">
               <div class="lbl">{{ (store.t.ui && store.t.ui.abstract) || 'Abstract' }}</div>
-              <p>{{ paper.abstract }}</p>
+              <p><editable-text tag="span" :obj="paper" field="abstract" /></p>
             </div>
 
             <presentation-player v-if="paper.tldr_presentation"
                                  :presentation="paper.tldr_presentation" />
+            <tldr-editor v-if="edit && edit.enabled && paper.tldr_presentation"
+                         :presentation="paper.tldr_presentation" :paper-id="paper.id" />
 
             <audio-player v-if="paper.audio && paper.audio.src"
                           :src="paper.audio.src"
                           :label="(store.t.ui && store.t.ui.narration) || 'Narration'" />
 
             <div class="body">
-              <template v-for="(b, i) in paper.blocks" :key="i">
-                <block-renderer :block="b" :paper="paper" @open="$emit('open', $event)" />
+              <template v-for="(b, i) in paper.blocks" :key="blockKey(b)">
+                <div v-if="edit && edit.enabled" class="vw-block" :data-block-type="b.type">
+                  <div class="vw-block-bar">
+                    <span class="vw-block-type">{{ b.type }}</span>
+                    <button v-if="b.type === 'paragraph' || b.type === 'dropcap_paragraph'"
+                            class="vw-ai" @click="edit.openRevise('paragraph', [b])" aria-label="Revise this paragraph with AI">AI</button>
+                    <button v-if="b.type === 'section_heading'"
+                            class="vw-ai" @click="reviseSection(i)" aria-label="Revise this section with AI">Revise §</button>
+                    <button @click="edit.moveBlock(i, -1)" aria-label="Move block up">↑</button>
+                    <button @click="edit.moveBlock(i, 1)" aria-label="Move block down">↓</button>
+                    <button class="vw-del" @click="edit.deleteBlock(i)" aria-label="Delete block">✕</button>
+                  </div>
+                  <block-renderer :block="b" :paper="paper" @open="$emit('open', $event)" />
+                  <div v-if="b.__ai != null" class="vw-proposal">
+                    <div class="vw-proposal-head">AI proposal. Review before it is saved.</div>
+                    <div class="vw-proposal-text" v-html="md(b.__ai)"></div>
+                    <div class="vw-proposal-actions">
+                      <button class="vw-gen-btn" @click="edit.acceptProposal(b)">Accept</button>
+                      <button class="vw-edit-btn" @click="edit.rejectProposal(b)">Reject</button>
+                    </div>
+                  </div>
+                  <div class="vw-insert">
+                    <span class="vw-insert-lbl">insert after</span>
+                    <button @click="edit.insertBlockAfter(i, 'paragraph')">+ paragraph</button>
+                    <button @click="edit.insertBlockAfter(i, 'image')">+ image</button>
+                    <button @click="edit.insertBlockAfter(i, 'section_heading')">+ section</button>
+                  </div>
+                </div>
+                <block-renderer v-else :block="b" :paper="paper" @open="$emit('open', $event)" />
               </template>
             </div>
           </div>
@@ -1201,24 +1355,90 @@
       caption: { type: String, default: '' },
       chart:   { type: Object, default: null },
       image:   { type: Object, default: null },
+      block:   { type: Object, default: null },
+    },
+    setup() { return { edit: window.VWEdit || null }; },
+    data() { return { gen: false, bust: 0 }; },
+    methods: {
+      async doGenerate() {
+        const img = this.imgObj;
+        if (!this.edit || !img || this.gen) return;
+        if (!img.image_prompt || !img.image_prompt.trim()) {
+          this.edit.status = 'Write an image prompt first.';
+          return;
+        }
+        const had = !!img.src;
+        
+        let target = img.src;
+        if (!target) {
+          const id = (this.edit.current && this.edit.current.id) || 'paper';
+          const loc = (window.VWStore && window.VWStore.locale) || 'en';
+          target = 'public/images/' + id + '/' + loc + '/fig-' + Date.now().toString(36) + '.jpg';
+        }
+        this.gen = true;
+        const r = await this.edit.generateImage({ src: target, prompt: img.image_prompt, style_kind: img.style_kind, regenerate: had });
+        this.gen = false;
+        if (r.ok) {
+          if (!had) { img.src = target; this.edit.markDirty(); }  
+          this.bust += 1;                                         
+        }
+      },
     },
     computed: {
+      editing() { return !!(this.edit && this.edit.enabled); },
+      imgObj() { return (this.block && this.block.image) || this.image || null; },
       chartComponent() {
         if (!this.chart) return null;
         const map = {
-          'mini-chart':   'mini-chart',
-          'drivers-map':  'drivers-map',
+          'mini-chart':            'mini-chart',
+          'drivers-map':           'drivers-map',
+          'wp08-periodic':         'wp08-periodic',
+          'wp08-agent-quartet':    'wp08-agent-quartet',
         };
-        return map[this.chart.kind] || null;
+        if (map[this.chart.kind]) return map[this.chart.kind];
+        if (window.VWVisuals) {
+          const reusable = window.VWVisuals.resolve(this.chart.kind);
+          if (reusable) return reusable;
+        }
+        return null;
       },
     },
     template: `
       <figure class="cd-figure">
-        <div class="fno">{{ fno }}</div>
-        <div class="ftitle" v-if="title">{{ title }}</div>
+        <editable-text v-if="block && (editing || block.fno)" tag="div" cls="fno"
+                       :obj="block" field="fno" />
+        <div class="fno" v-else-if="!block && fno">{{ fno }}</div>
+
+        <editable-text v-if="block && (editing || block.title)" tag="div" cls="ftitle"
+                       :obj="block" field="title" />
+        <div class="ftitle" v-else-if="!block && title">{{ title }}</div>
+
         <component v-if="chartComponent" :is="chartComponent" v-bind="chart" />
-        <image-inspector v-else-if="image" :src="image.src" :alt="image.alt || ''" />
-        <div class="fcaption" v-if="caption">{{ caption }}</div>
+        <template v-else-if="imgObj">
+          <image-inspector v-if="imgObj.src" :key="'img-' + bust" :src="imgObj.src" :alt="imgObj.alt || ''" />
+          <div v-else class="vw-img-empty">No image yet. Write a prompt below and click Generate.</div>
+        </template>
+
+        <editable-text v-if="block && (editing || block.caption)" tag="div" cls="fcaption"
+                       :obj="block" field="caption" />
+        <div class="fcaption" v-else-if="!block && caption">{{ caption }}</div>
+
+        <div v-if="editing && imgObj" class="vw-img-edit">
+          <div class="vw-img-actions">
+            <button type="button" class="vw-gen-btn" @click="doGenerate" :disabled="gen">
+              {{ gen ? (imgObj.src ? 'Regenerating…' : 'Generating…') : (imgObj.src ? 'Regenerate image' : 'Generate image') }}
+            </button>
+            <span class="vw-gen-hint">runs via <code>npm run edit</code></span>
+          </div>
+          <label>Image prompt (what to generate)</label>
+          <editable-text tag="div" cls="vw-img-field" :obj="imgObj" field="image_prompt" />
+          <label>Alt text (accessibility)</label>
+          <editable-text tag="div" cls="vw-img-field" :obj="imgObj" field="alt" />
+          <label>Source path</label>
+          <editable-text tag="div" cls="vw-img-field" :obj="imgObj" field="src" />
+          <label>Style (cover, diagram, default)</label>
+          <editable-text tag="div" cls="vw-img-field" :obj="imgObj" field="style_kind" />
+        </div>
       </figure>
     `,
   };
@@ -1268,7 +1488,7 @@
           <a v-for="p in papers" :key="p.id"
              :href="'#/paper/' + p.id"
              class="tile"
-             :aria-label="(store.locale === 'fr' ? 'Livre ' : 'Paper ') + p.num + ' — ' + p.title + ', ' + p.tier"
+             :aria-label="(store.locale === 'fr' ? 'Livre ' : 'Paper ') + p.num + ', ' + p.title + ', ' + p.tier"
              @click.prevent="$emit('open', p.id)">
             <div class="ref" aria-hidden="true">№ {{ p.num }} · {{ p.tier }}</div>
             <h4>{{ p.title }}</h4>
@@ -1762,6 +1982,9 @@
 
       onKeydown(e) {
         if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+        
+        if (e.target && e.target.isContentEditable) return;
+        if (window.VWEdit && window.VWEdit.enabled) return;
         if (e.code === 'Space')      { e.preventDefault(); this.togglePlay(); }
         else if (e.code === 'ArrowRight') this.next();
         else if (e.code === 'ArrowLeft')  this.prev();
@@ -1984,16 +2207,16 @@
       <template v-if="block.type === 'section_heading'">
         <h2 :id="'sec-' + block.n" class="body-section-heading">
           <span class="n" aria-hidden="true">§{{ block.n }}</span>
-          {{ block.title }}
+          <editable-text tag="span" :obj="block" field="title" />
         </h2>
       </template>
 
       <template v-else-if="block.type === 'paragraph'">
-        <p v-html="block.text"></p>
+        <editable-text tag="p" :obj="block" field="text" :html="true" />
       </template>
 
       <template v-else-if="block.type === 'dropcap_paragraph'">
-        <p><span class="dropcap">{{ block.letter }}</span><span v-html="block.text"></span></p>
+        <p class="dropcap-para"><editable-text tag="span" :obj="block" field="text" :html="true" /></p>
       </template>
 
       <pull-quote v-else-if="block.type === 'pullquote'"
@@ -2005,6 +2228,7 @@
                 :body="block.body || ''" />
 
       <paper-figure v-else-if="block.type === 'figure'"
+                    :block="block"
                     :fno="block.fno || 'FIG.'"
                     :title="block.title || ''"
                     :caption="block.caption || ''"
@@ -2221,6 +2445,966 @@
 })();
 
 (function () {
+  const { reactive } = Vue;
+
+  const host = location.hostname;
+  const onLocalhost =
+    host === 'localhost' || host === '127.0.0.1' || host === '[::1]' || host === '';
+
+  const VWEdit = reactive({
+    available: false,   
+    enabled: false,
+    dirty: false,          
+    dirtyMap: {},          
+    saving: false,
+    status: '',
+    current: null,         
+    guides: [],            
+    guidesOpen: false,     
+    guidesLoading: false,
+    guidesError: '',
+    revise: { open: false, scope: '', blocks: [], guideIds: [], instructions: '', running: false, model: 'sonnet' },
+    translate: { open: false, target: 'fr', model: 'sonnet', regenImages: true, regenAudio: false, running: false },
+    drift: null,           
+    draft: { open: false, mode: 'draft', markdown: '', model: 'sonnet', running: false, result: null, warnings: [] },
+
+    
+    _key(loc) {
+      const l = loc || (window.VWStore && window.VWStore.locale) || 'en';
+      return l + ':' + (this.current && this.current.id);
+    },
+
+    setCurrent(paper) {
+      this.current = paper;
+      this.dirty = !!this.dirtyMap[this._key()];   
+      if (!this.enabled) this.status = '';
+    },
+    toggle() {
+      if (!this.available) return;
+      this.enabled = !this.enabled;
+      this.status = this.enabled ? 'Editing. Click any paragraph, heading, title, or abstract.' : '';
+    },
+    markDirty() {
+      this.dirtyMap[this._key()] = true;
+      this.dirty = true;
+    },
+    
+    dirtyLocales() {
+      const id = this.current && this.current.id;
+      if (!id) return [];
+      return Object.keys(this.dirtyMap)
+        .filter(k => this.dirtyMap[k] && k.endsWith(':' + id))
+        .map(k => k.split(':')[0]);
+    },
+
+    
+
+    
+    async generateImage(opts) {
+      this.status = (opts.regenerate ? 'Regenerating' : 'Generating') + ' image…';
+      try {
+        const res = await fetch('/api/generate-image', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            src: opts.src,
+            prompt: opts.prompt,
+            style_kind: opts.style_kind || 'diagram',
+            locale: (window.VWStore && window.VWStore.locale) || 'en',
+          }),
+        });
+        let data = {};
+        try { data = await res.json(); } catch (_) {}
+        if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
+        this.status = 'Image saved to ' + (data.src || opts.src);
+        return { ok: true, src: data.src || opts.src };
+      } catch (e) {
+        const msg = (e && e.message) || String(e);
+        this.status = 'Image generation failed: ' + msg + '. Run "npm run edit" (not "npm run dev") to enable generation, and set OPENAI_API_KEY in .env.';
+        return { ok: false, error: msg };
+      }
+    },
+
+    
+    async generateAudio(opts) {
+      this.status = 'Generating narration…';
+      try {
+        const res = await fetch('/api/generate-audio', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ text: opts.text, out: opts.out }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        this.status = 'Narration saved to ' + (d.out || opts.out);
+        return { ok: true };
+      } catch (e) {
+        const msg = (e && e.message) || String(e);
+        this.status = 'Narration failed: ' + msg + ' (needs ELEVENLABS_API_KEY in .env, via npm run edit)';
+        return { ok: false, error: msg };
+      }
+    },
+
+    
+
+    
+    rebuildSections() {
+      const p = this.current; if (!p || !Array.isArray(p.blocks)) return;
+      const secs = []; let n = 0;
+      for (const b of p.blocks) {
+        if (b.type === 'section_heading') {
+          n += 1;
+          b.n = String(n).padStart(2, '0');
+          secs.push({ n: b.n, title: b.title });
+        }
+      }
+      p.sections = secs;
+    },
+
+    _newBlock(type) {
+      if (type === 'image') {
+        return {
+          type: 'figure', fno: 'FIG.', title: '',
+          caption: 'New caption. Describe what the figure shows.',
+          image: { src: '', alt: '', image_prompt: 'Describe the image to generate, the way you would brief an illustrator. Name every object and its position.', style_kind: 'diagram' },
+        };
+      }
+      if (type === 'section_heading') return { type: 'section_heading', n: '00', title: 'New section' };
+      return { type: 'paragraph', text: 'New paragraph.' };
+    },
+
+    insertBlockAfter(i, type) {
+      const p = this.current; if (!p) return;
+      p.blocks.splice(i + 1, 0, this._newBlock(type));
+      if (type === 'section_heading') this.rebuildSections();
+      this.markDirty();
+    },
+    deleteBlock(i) {
+      const p = this.current; if (!p) return;
+      const wasHeading = p.blocks[i] && p.blocks[i].type === 'section_heading';
+      p.blocks.splice(i, 1);
+      if (wasHeading) this.rebuildSections();
+      this.markDirty();
+    },
+    moveBlock(i, dir) {
+      const p = this.current; if (!p) return;
+      const j = i + dir;
+      if (j < 0 || j >= p.blocks.length) return;
+      const a = p.blocks; const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+      if (a[i].type === 'section_heading' || a[j].type === 'section_heading') this.rebuildSections();
+      this.markDirty();
+    },
+
+    
+    _sectionGroups() {
+      const p = this.current; const intro = []; const groups = []; let cur = null;
+      for (const b of p.blocks) {
+        if (b.type === 'section_heading') { cur = { heading: b, blocks: [] }; groups.push(cur); }
+        else if (cur) cur.blocks.push(b);
+        else intro.push(b);
+      }
+      return { intro, groups };
+    },
+    _rebuildFromGroups(intro, groups) {
+      const p = this.current;
+      const flat = intro.slice();
+      for (const g of groups) { flat.push(g.heading); for (const b of g.blocks) flat.push(b); }
+      p.blocks = flat;
+      this.rebuildSections();
+      this.markDirty();
+    },
+    reorderSection(from, to) {
+      const { intro, groups } = this._sectionGroups();
+      if (from < 0 || from >= groups.length || to < 0 || to >= groups.length || from === to) return;
+      const [g] = groups.splice(from, 1);
+      groups.splice(to, 0, g);
+      this._rebuildFromGroups(intro, groups);
+    },
+    addSection() {
+      const { intro, groups } = this._sectionGroups();
+      groups.push({ heading: { type: 'section_heading', n: '00', title: 'New section' }, blocks: [{ type: 'paragraph', text: 'New paragraph.' }] });
+      this._rebuildFromGroups(intro, groups);
+    },
+    deleteSection(index) {
+      const { intro, groups } = this._sectionGroups();
+      if (index < 0 || index >= groups.length) return;
+      groups.splice(index, 1);
+      this._rebuildFromGroups(intro, groups);
+    },
+
+    
+    _clean(o) {
+      if (Array.isArray(o)) return o.map((x) => this._clean(x));
+      if (o && typeof o === 'object') {
+        const out = {};
+        for (const k of Object.keys(o)) { if (k.indexOf('__') === 0) continue; out[k] = this._clean(o[k]); }
+        return out;
+      }
+      return o;
+    },
+    async save() {
+      if (!this.available || !this.current) return;
+      const locale = (window.VWStore && window.VWStore.locale) || 'en';
+      const path = 'data/papers/' + this.current.id + '.' + locale + '.json';
+      this.saving = true;
+      this.status = 'Saving ' + path + '…';
+      try {
+        const res = await fetch('/api/save-json', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ path, content: this._clean(this.current) }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        delete this.dirtyMap[this._key(locale)];
+        this.dirty = !!this.dirtyMap[this._key()];
+        
+        
+        await this.rebuildIndex();
+        const inv = (window.VWStore.papers || []).find((p) => p.id === this.current.id);
+        if (inv) this.current.num = inv.num;   
+        this.status = 'Saved ' + path;
+      } catch (e) {
+        this.status = 'Save failed: ' + ((e && e.message) || e);
+      } finally { this.saving = false; }
+    },
+
+    
+    async loadGuides() {
+      this.guidesLoading = true; this.guidesError = '';
+      try {
+        const r = await fetch('/api/style-guides');
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        this.guides = await r.json();
+        if (!this.guides.length) this.guidesError = 'No guides were returned.';
+      } catch (e) {
+        this.guidesError = 'Could not load style guides. Restart the editor server with "npm run edit". A server started before this feature will not have the guides endpoint.';
+      } finally { this.guidesLoading = false; }
+    },
+    openGuides() { this.guidesOpen = true; if (!this.guides.length) this.loadGuides(); },
+    async saveGuide(id, content) {
+      this.status = 'Saving guide…';
+      try {
+        const r = await fetch('/api/save-guide', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id, content }) });
+        const d = await r.json().catch(() => ({}));
+        if (!r.ok) throw new Error(d.error || ('HTTP ' + r.status));
+        const g = this.guides.find((x) => x.id === id); if (g) g.content = content;
+        this.status = 'Saved guide: ' + id;
+        return { ok: true };
+      } catch (e) { this.status = 'Guide save failed: ' + ((e && e.message) || e); return { ok: false }; }
+    },
+
+    
+    
+    openRevise(scope, blocks) {
+      this.revise.scope = scope;
+      this.revise.blocks = blocks || [];
+      this.revise.open = true;
+      this.revise.running = false;
+      if (!this.guides.length) this.loadGuides();
+    },
+    closeRevise() { this.revise.open = false; this.revise.blocks = []; },
+    _reviseTargets(blocks) {
+      return (blocks || []).filter((b) => b && (b.type === 'paragraph' || b.type === 'dropcap_paragraph'));
+    },
+    async runRevise() {
+      const targets = this._reviseTargets(this.revise.blocks);
+      if (!targets.length) { this.status = 'No prose paragraphs in this scope to revise.'; return; }
+      this.revise.running = true;
+      this.status = 'Revising ' + targets.length + ' paragraph(s) with AI…';
+      try {
+        const items = targets.map((b, i) => ({ key: i, text: b.text || '' }));
+        const res = await fetch('/api/revise', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ items, guideIds: this.revise.guideIds, instructions: this.revise.instructions, model: this.revise.model }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        const byKey = {};
+        for (const r of (d.items || [])) byKey[r.key] = r.revised;
+        let n = 0;
+        targets.forEach((b, i) => { if (byKey[i] != null && byKey[i] !== b.text) { b.__ai = byKey[i]; n += 1; } });
+        this.status = n + ' proposal(s) ready. Accept or reject each below.';
+        this.revise.open = false;
+      } catch (e) {
+        this.status = 'AI revise failed: ' + ((e && e.message) || e) + ' (needs ANTHROPIC_API_KEY in .env)';
+      } finally { this.revise.running = false; }
+    },
+    acceptProposal(b) { if (b && b.__ai != null) { b.text = b.__ai; delete b.__ai; this.markDirty(); } },
+    rejectProposal(b) { if (b && b.__ai != null) delete b.__ai; },
+    acceptAllProposals() { const p = this.current; if (!p) return; let n = 0; for (const b of p.blocks) if (b.__ai != null) { b.text = b.__ai; delete b.__ai; n++; } if (n) this.markDirty(); },
+    rejectAllProposals() { const p = this.current; if (!p) return; for (const b of p.blocks) if (b.__ai != null) delete b.__ai; },
+    hasProposals() { const p = this.current; return !!(p && p.blocks && p.blocks.some((b) => b.__ai != null)); },
+
+    
+    
+    openTranslate() {
+      const cur = (window.VWStore && window.VWStore.locale) || 'en';
+      this.translate.target = cur === 'fr' ? 'en' : 'fr';
+      this.translate.open = true;
+      this.translate.running = false;
+    },
+    closeTranslate() { this.translate.open = false; },
+    async translatePaper() {
+      const id = this.current && this.current.id;
+      const src = (window.VWStore && window.VWStore.locale) || 'en';
+      const tgt = this.translate.target;
+      if (!id || src === tgt) { this.status = 'Pick a target locale different from the one you are viewing.'; return; }
+      this.translate.running = true;
+      this.status = 'Translating ' + id + ' ' + src.toUpperCase() + ' → ' + tgt.toUpperCase() + '…';
+      try {
+        const res = await fetch('/api/translate-paper', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id, sourceLocale: src, targetLocale: tgt, model: this.translate.model }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+
+        if (this.translate.regenImages) {
+          const imgs = d.images || [];
+          for (let i = 0; i < imgs.length; i++) {
+            this.status = 'Translated text. Regenerating image ' + (i + 1) + '/' + imgs.length + '…';
+            await fetch('/api/generate-image', {
+              method: 'POST', headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ src: imgs[i].src, prompt: imgs[i].image_prompt, style_kind: imgs[i].style_kind || 'diagram', locale: tgt, conditionFrom: src }),
+            }).catch(() => {});
+          }
+        }
+        if (this.translate.regenAudio) {
+          const au = d.audio || [];
+          for (let i = 0; i < au.length; i++) {
+            this.status = 'Regenerating narration ' + (i + 1) + '/' + au.length + '…';
+            await fetch('/api/generate-audio', {
+              method: 'POST', headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ text: au[i].text, out: au[i].out }),
+            }).catch(() => {});
+          }
+        }
+        this.translate.open = false;
+        this.status = 'Built ' + tgt.toUpperCase() + ' from ' + src.toUpperCase() + ': ' + d.translated + ' strings'
+          + (this.translate.regenImages ? ', images' : '') + (this.translate.regenAudio ? ', audio' : '')
+          + '. Switch to ' + tgt.toUpperCase() + ' to review.';
+        this.detectDrift();
+      } catch (e) {
+        this.status = 'Translate failed: ' + ((e && e.message) || e) + ' (needs npm run edit + Vertex/keys in .env)';
+      } finally { this.translate.running = false; }
+    },
+
+    
+    openDraft() { this.draft.open = true; this.draft.result = null; this.draft.running = false; },
+    closeDraft() { this.draft.open = false; },
+    async generateDraft() {
+      const p = this.current;
+      if (!p) return;
+      this.draft.running = true;
+      this.status = 'Drafting from ' + (this.draft.mode === 'draft' ? 'your Markdown' : 'scratch') + '…';
+      try {
+        const res = await fetch('/api/generate-paper', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id: p.id, title: p.title, tier: p.tier, mode: this.draft.mode, draft_markdown: this.draft.markdown, model: this.draft.model, guideIds: [] }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        this.draft.result = d.paper;
+        this.draft.warnings = d.warnings || [];
+        this.status = 'Draft ready: ' + (d.paper.sections || []).length + ' sections, ' + (d.paper.blocks || []).length + ' blocks. Review, then apply.';
+      } catch (e) {
+        this.status = 'Draft failed: ' + ((e && e.message) || e) + ' (needs npm run edit + Vertex in .env)';
+      } finally { this.draft.running = false; }
+    },
+    applyDraft() {
+      const p = this.current; const r = this.draft.result;
+      if (!p || !r) return;
+      if (r.abstract != null) p.abstract = r.abstract;
+      if (r.subtitle != null) p.subtitle = r.subtitle;
+      if (Array.isArray(r.tags) && r.tags.length) p.tags = r.tags;
+      if (Array.isArray(r.sections)) p.sections = r.sections;
+      if (r.hero_image) { p.hero_image = p.hero_image || {}; ['image_prompt', 'alt', 'style_kind'].forEach((k) => { if (r.hero_image[k] != null) p.hero_image[k] = r.hero_image[k]; }); }
+      if (Array.isArray(r.blocks)) p.blocks = r.blocks;
+      if (r.tldr_presentation && Array.isArray(r.tldr_presentation.slides)) {
+        const loc = (window.VWStore && window.VWStore.locale) || 'en';
+        p.tldr_presentation = p.tldr_presentation || { id: p.id + '-tldr', locale: loc, owner_id: p.id, slides: [] };
+        p.tldr_presentation.slides = r.tldr_presentation.slides.map((s) => Object.assign({}, s, { audio_file: 'public/audio/' + loc + '/' + p.id + '-tldr/' + (s.id || '01') + '.mp3' }));
+      }
+      this.markDirty();
+      this.draft.open = false; this.draft.result = null;
+      this.status = 'Applied the draft. Review the body, refine, generate assets, then Save.';
+    },
+
+    
+    async setPrimaryLocale(loc) {
+      const id = this.current && this.current.id;
+      if (!id) return;
+      for (const l of ['en', 'fr']) {
+        try {
+          const r = await fetch('data/papers/' + id + '.' + l + '.json', { cache: 'no-cache' });
+          if (!r.ok) continue;
+          const pf = await r.json();
+          pf.primary_locale = loc;
+          await this._writeJson('data/papers/' + id + '.' + l + '.json', pf);
+        } catch (_) {}
+      }
+      if (this.current) this.current.primary_locale = loc;
+      this.status = 'Primary locale set to ' + loc.toUpperCase() + ' for ' + id + '.';
+      this.detectDrift();
+    },
+
+    
+    async detectDrift() {
+      const id = this.current && this.current.id;
+      if (!id) { this.drift = null; return; }
+      try {
+        const r = await fetch('/api/structure-drift?id=' + encodeURIComponent(id), { cache: 'no-cache' });
+        if (r.ok) this.drift = await r.json(); else this.drift = null;
+      } catch (_) { this.drift = null; }
+    },
+
+    
+    async _writeJson(path, obj) {
+      const res = await fetch('/api/save-json', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ path, content: obj }),
+      });
+      const d = await res.json().catch(() => ({}));
+      if (!res.ok) { this.status = 'Save failed (' + path + '): ' + (d.error || res.status); return { ok: false }; }
+      return { ok: true };
+    },
+    
+    async rebuildIndex() {
+      try {
+        const res = await fetch('/api/build-index', { method: 'POST' });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        if (Array.isArray(d.papers) && window.VWStore) {
+          window.VWStore.papers.splice(0, window.VWStore.papers.length, ...d.papers);
+          window.VWStore.paperById = Object.fromEntries(d.papers.map((p) => [p.id, p]));
+        }
+        return { ok: true };
+      } catch (e) { this.status = 'Index rebuild failed: ' + ((e && e.message) || e) + ' (needs npm run edit)'; return { ok: false }; }
+    },
+    async _loadOrder() {
+      try { const r = await fetch('data/order.json', { cache: 'no-cache' }); if (r.ok) return await r.json(); } catch (_) {}
+      return { order: [], nonlinear: [] };
+    },
+    _saveOrder(order) { return this._writeJson('data/order.json', order); },
+    async movePaper(i, dir) {
+      const p = window.VWStore.papers[i]; if (!p) return;
+      const id = p.id;
+      const order = await this._loadOrder();
+      for (const list of [order.order, order.nonlinear]) {
+        const k = (list || []).indexOf(id);
+        if (k === -1) continue;
+        const j = k + dir;
+        if (j < 0 || j >= list.length) return;          
+        const t = list[k]; list[k] = list[j]; list[j] = t;
+        if ((await this._saveOrder(order)).ok) await this.rebuildIndex();
+        return;
+      }
+    },
+    async deletePaper(i) {
+      const p = window.VWStore.papers[i]; if (!p) return;
+      const id = p.id;
+      const order = await this._loadOrder();
+      order.order = (order.order || []).filter((x) => x !== id);
+      order.nonlinear = (order.nonlinear || []).filter((x) => x !== id);
+      await this._saveOrder(order);
+      try { await fetch('/api/delete-paper', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id }) }); } catch (_) {}
+      await this.rebuildIndex();
+      this.status = 'Deleted paper "' + id + '". Its JSON files are removed; images/audio under public/ are left in place.';
+    },
+    _paperStub(id, num, title, tier, locale) {
+      const fr = locale === 'fr';
+      const stub = {
+        id, num, sequence: '', tier,
+        title: title || (fr ? 'Document sans titre' : 'Untitled paper'),
+        subtitle: '',
+        authors: [],
+        published: '',
+        reading_min: null,
+        status: 'Draft',
+        tags: [],
+        repo: null,
+        abstract: fr ? 'Résumé à venir.' : 'Abstract forthcoming.',
+        hero_image: { src: 'public/images/' + id + '/' + locale + '/hero.jpg', alt: '', image_prompt: '', style_kind: 'cover' },
+        audio: { src: 'public/audio/' + locale + '/' + id + '.mp3' },
+        tldr_presentation: {
+          id: id + '-tldr', title: title || '', locale, owner_id: id,
+          slides: [{ id: '01', title: title || '', audio_file: 'public/audio/' + locale + '/' + id + '-tldr/01.mp3', visual: 'title', caption: '', text: fr ? 'Narration à venir.' : 'Narration forthcoming.' }],
+        },
+        embedded_presentations: [],
+        sections: [{ n: '01', title: 'Introduction' }],
+        blocks: [
+          { type: 'section_heading', n: '01', title: 'Introduction' },
+          { type: 'paragraph', text: fr ? '<strong>Contenu à venir.</strong>' : '<strong>Content forthcoming.</strong>' },
+        ],
+        _meta: { placeholder: true, written_by: '', notes: 'Created in the editor.' },
+        category: 'paper',
+      };
+      if (fr) stub.translation_status = 'untranslated';
+      return stub;
+    },
+    
+    _shortId() {
+      const A = 'abcdefghijklmnopqrstuvwxyz', AN = A + '0123456789';
+      const taken = window.VWStore.paperById || {};
+      for (;;) {
+        let s = A[Math.floor(Math.random() * 26)];
+        for (let i = 0; i < 4; i++) s += AN[Math.floor(Math.random() * 36)];
+        if (!taken[s]) return s;
+      }
+    },
+    async createPaper(meta) {
+      const id = this._shortId();   
+      const title = (meta.title || '').trim() || 'Untitled paper';
+      const tier = meta.tier || 'Technical';
+      this.status = 'Creating ' + id + '…';
+      
+      const r1 = await this._writeJson('data/papers/' + id + '.en.json', this._paperStub(id, '', title, tier, 'en'));
+      if (!r1.ok) return r1;
+      const r2 = await this._writeJson('data/papers/' + id + '.fr.json', this._paperStub(id, '', title, tier, 'fr'));
+      if (!r2.ok) return r2;
+      const order = await this._loadOrder();
+      order.order = order.order || [];
+      if (!order.order.includes(id)) order.order.push(id);   
+      await this._saveOrder(order);
+      const r3 = await this.rebuildIndex();
+      if (!r3.ok) return r3;
+      this.status = 'Created paper "' + id + '". Its number follows its order position. Open it to write it.';
+      return { ok: true, id };
+    },
+  });
+
+  window.VWEdit = VWEdit;
+
+  
+  if (onLocalhost) {
+    fetch('/api/edit-status', { method: 'GET' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (d && d.enabled) VWEdit.available = true; })
+      .catch(() => {  });
+  }
+
+  window.VWComponents = window.VWComponents || {};
+  window.VWComponents['edit-toolbar'] = {
+    setup() { return { edit: VWEdit, store: window.VWStore }; },
+    computed: {
+      locale() { return (this.store && this.store.locale) || 'en'; },
+      locales() {
+        return (this.store && this.store.site && this.store.site.locales) ||
+               [{ code: 'en', label: 'EN' }, { code: 'fr', label: 'FR' }];
+      },
+      dirtyLocales() { return this.edit.dirtyLocales(); },
+    },
+    methods: {
+      setLoc(l) { if (l !== this.locale && window.VWSetLocale) window.VWSetLocale(l); },
+      locDirty(l) { return this.dirtyLocales.indexOf(l) !== -1; },
+    },
+    template: `
+      <div v-if="edit.available" class="vw-edit-toolbar" :class="{ on: edit.enabled }" role="region" aria-label="Editor (local only)">
+        <button type="button" class="vw-edit-btn" @click="edit.toggle()" :aria-pressed="edit.enabled ? 'true' : 'false'">
+          {{ edit.enabled ? 'Editing on' : 'Edit' }}
+        </button>
+        <template v-if="edit.enabled">
+          <span class="vw-edit-loc" role="group" aria-label="Locale being edited">
+            <button v-for="l in locales" :key="l.code" type="button"
+                    :class="{ on: locale === l.code }" @click="setLoc(l.code)"
+                    :aria-pressed="locale === l.code ? 'true' : 'false'">{{ l.label }}<i v-if="locDirty(l.code)" class="vw-edit-dot" aria-label="unsaved">●</i></button>
+          </span>
+          <button type="button" class="vw-edit-btn" @click="edit.openGuides()">Guides</button>
+          <button type="button" class="vw-edit-btn" @click="edit.openRevise('paper', edit.current ? edit.current.blocks : [])" :disabled="!edit.current">Revise paper</button>
+          <button type="button" class="vw-edit-btn" @click="edit.openTranslate()" :disabled="!edit.current">Translate</button>
+          <button type="button" class="vw-edit-btn" @click="edit.openDraft()" :disabled="!edit.current">Draft</button>
+          <template v-if="edit.hasProposals()">
+            <button type="button" class="vw-edit-btn vw-edit-accept" @click="edit.acceptAllProposals()">Accept all</button>
+            <button type="button" class="vw-edit-btn" @click="edit.rejectAllProposals()">Reject all</button>
+          </template>
+          <button type="button" class="vw-edit-btn vw-edit-save"
+                  @click="edit.save()" :disabled="!edit.dirty || edit.saving">
+            {{ edit.saving ? 'Saving…' : 'Save ' + locale.toUpperCase() }}
+          </button>
+        </template>
+        <span class="vw-edit-status" aria-live="polite">{{ edit.status }}</span>
+      </div>
+    `,
+  };
+})();
+
+(function () {
+  function mdInline(src) {
+    if (src == null) return '';
+    let s = String(src);
+    s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*])\*(?!\s)([^*\n]+?)\*/g, '$1<em>$2</em>');
+    s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>');
+    s = s.replace(/\n/g, '<br>');
+    return s;
+  }
+  window.VWmd = mdInline;
+
+  window.VWComponents = window.VWComponents || {};
+
+  window.VWComponents['editable-text'] = {
+    props: {
+      obj:   { type: Object, required: true },
+      field: { type: String, required: true },
+      html:  { type: Boolean, default: false },
+      tag:   { type: String, default: 'span' },
+      cls:   { type: String, default: '' },
+    },
+    setup() { return { edit: window.VWEdit || null }; },
+    data() { return { active: false }; },
+    computed: {
+      value() { return this.obj[this.field] != null ? this.obj[this.field] : ''; },
+      editable() { return !!(this.edit && this.edit.enabled); },
+      rendered() { return this.html ? mdInline(this.value) : this.value; },
+    },
+    watch: {
+      
+      editable(on) { if (!on) this.active = false; },
+    },
+    methods: {
+      enter() {
+        if (!this.editable || this.active) return;
+        this.active = true;
+        this.$nextTick(() => {
+          const el = this.$refs.el;
+          if (!el) return;
+          el.textContent = this.value;          
+          el.focus();
+          const r = document.createRange(); r.selectNodeContents(el); r.collapse(false);
+          const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        });
+      },
+      commit(e) {
+        const next = e.target.innerText;
+        this.active = false;
+        if (next !== this.value) {
+          this.obj[this.field] = next;
+          if (this.edit) this.edit.markDirty();
+        }
+      },
+    },
+    template: `
+      <component :is="tag" v-if="active" ref="el"
+                 contenteditable="true" spellcheck="true"
+                 :class="['vw-editable', cls]" @blur="commit"></component>
+      <component :is="tag" v-else-if="html"
+                 :class="[cls, editable ? 'vw-editable-idle' : '']"
+                 @click="enter" v-html="rendered"></component>
+      <component :is="tag" v-else
+                 :class="[cls, editable ? 'vw-editable-idle' : '']"
+                 @click="enter">{{ value }}</component>
+    `,
+  };
+})();
+
+(function () {
+  window.VWComponents = window.VWComponents || {};
+
+  
+  window.VWComponents['vw-guides-panel'] = {
+    setup() { return { edit: window.VWEdit }; },
+    data() { return { activeId: '', draft: '', saving: false }; },
+    computed: {
+      open() { return !!(this.edit && this.edit.enabled && this.edit.guidesOpen); },
+      guides() { return (this.edit && this.edit.guides) || []; },
+      active() { return this.guides.find((g) => g.id === this.activeId) || null; },
+    },
+    watch: {
+      open(v) { if (v && !this.activeId && this.guides.length) this.select(this.guides[0].id); },
+      guides(list) { if (this.open && !this.activeId && list.length) this.select(list[0].id); },
+    },
+    methods: {
+      select(id) { this.activeId = id; const g = this.guides.find((x) => x.id === id); this.draft = g ? g.content : ''; },
+      async save() {
+        if (!this.active) return;
+        this.saving = true;
+        await this.edit.saveGuide(this.activeId, this.draft);
+        this.saving = false;
+      },
+      close() { this.edit.guidesOpen = false; },
+    },
+    template: `
+      <div v-if="open" class="vw-modal-backdrop" @click.self="close()">
+        <div class="vw-modal vw-guides" role="dialog" aria-modal="true" aria-label="Style guide library">
+          <div class="vw-modal-head">
+            <strong>Style guides</strong>
+            <button class="vw-x" @click="close()" aria-label="Close">×</button>
+          </div>
+          <div class="vw-guides-body">
+            <ul class="vw-guides-list">
+              <li v-for="g in guides" :key="g.id">
+                <button :class="{ on: activeId === g.id }" @click="select(g.id)">{{ g.title }}</button>
+              </li>
+              <li v-if="edit.guidesLoading" class="vw-muted">Loading…</li>
+              <li v-else-if="!guides.length" class="vw-muted">{{ edit.guidesError || 'No guides.' }}</li>
+            </ul>
+            <div class="vw-guides-editor">
+              <textarea v-if="active" v-model="draft" spellcheck="false" :aria-label="active.title + ' content'"></textarea>
+              <div class="vw-guides-foot" v-if="active">
+                <span class="vw-muted">{{ active.kind === 'json' ? 'JSON, must stay valid' : 'Markdown' }} · saves over the local file</span>
+                <button class="vw-gen-btn" @click="save()" :disabled="saving">{{ saving ? 'Saving…' : 'Save guide' }}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,
+  };
+
+  
+  window.VWComponents['vw-draft-panel'] = {
+    setup() { return { edit: window.VWEdit }; },
+    computed: {
+      open() { return !!(this.edit && this.edit.enabled && this.edit.draft.open); },
+      d() { return this.edit.draft; },
+      result() { return this.edit.draft.result; },
+    },
+    methods: { gen() { this.edit.generateDraft(); }, apply() { this.edit.applyDraft(); }, close() { this.edit.closeDraft(); } },
+    template: `
+      <div v-if="open" class="vw-modal-backdrop" @click.self="close()">
+        <div class="vw-modal vw-revise" role="dialog" aria-modal="true" aria-label="Draft from Markdown">
+          <div class="vw-modal-head">
+            <strong>Draft this paper</strong>
+            <button class="vw-x" @click="close()" aria-label="Close">×</button>
+          </div>
+          <div class="vw-revise-body">
+            <p class="vw-muted">Generates the abstract, sections, body blocks, and TL;DR from a rough Markdown draft (or a skeleton from scratch), grounded in your source. It lands as a preview you apply; nothing is written until you click Apply, and you can still refine afterward.</p>
+            <label class="vw-revise-lbl">Mode</label>
+            <div class="vw-model-toggle" role="group" aria-label="Mode">
+              <button type="button" :class="{ on: d.mode === 'draft' }" @click="d.mode = 'draft'">From Markdown</button>
+              <button type="button" :class="{ on: d.mode === 'scratch' }" @click="d.mode = 'scratch'">From scratch</button>
+            </div>
+            <label class="vw-revise-lbl">Model</label>
+            <div class="vw-model-toggle" role="group" aria-label="Model">
+              <button type="button" :class="{ on: d.model === 'sonnet' }" @click="d.model = 'sonnet'">Sonnet 4.6</button>
+              <button type="button" :class="{ on: d.model === 'opus' }" @click="d.model = 'opus'">Opus 4.7</button>
+            </div>
+            <template v-if="d.mode === 'draft'">
+              <label class="vw-revise-lbl">Rough draft (Markdown)</label>
+              <textarea v-model="d.markdown" rows="10" placeholder="Paste your rough draft. Headings become sections; prose becomes paragraphs; the AI never invents facts and marks gaps." aria-label="Markdown draft"></textarea>
+            </template>
+            <div v-if="result" class="vw-proposal" style="margin-top:12px">
+              <div class="vw-proposal-head">Draft preview: {{ (result.sections || []).length }} sections, {{ (result.blocks || []).length }} blocks, {{ ((result.tldr_presentation && result.tldr_presentation.slides) || []).length }} slides</div>
+              <div class="vw-proposal-text"><strong>Abstract:</strong> {{ (result.abstract || '').slice(0, 240) }}{{ (result.abstract || '').length > 240 ? '…' : '' }}</div>
+              <div v-if="(d.warnings || []).length" class="vw-muted" style="margin-top:6px">Warnings: {{ d.warnings.join('; ') }}</div>
+            </div>
+            <div class="vw-revise-foot">
+              <button class="vw-edit-btn" @click="close()">Cancel</button>
+              <button class="vw-gen-btn" @click="gen()" :disabled="d.running">{{ d.running ? 'Drafting…' : (result ? 'Re-draft' : 'Generate draft') }}</button>
+              <button v-if="result" class="vw-gen-btn vw-edit-accept" @click="apply()">Apply to paper</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,
+  };
+
+  
+  window.VWComponents['vw-translate-panel'] = {
+    setup() { return { edit: window.VWEdit, store: window.VWStore }; },
+    computed: {
+      open() { return !!(this.edit && this.edit.enabled && this.edit.translate.open); },
+      source() { return (this.store && this.store.locale) || 'en'; },
+      t() { return this.edit.translate; },
+    },
+    methods: { run() { this.edit.translatePaper(); }, close() { this.edit.closeTranslate(); } },
+    template: `
+      <div v-if="open" class="vw-modal-backdrop" @click.self="close()">
+        <div class="vw-modal vw-revise" role="dialog" aria-modal="true" aria-label="Translate and build">
+          <div class="vw-modal-head">
+            <strong>Translate &amp; build, from {{ source.toUpperCase() }} (canonical)</strong>
+            <button class="vw-x" @click="close()" aria-label="Close">×</button>
+          </div>
+          <div class="vw-revise-body">
+            <p class="vw-muted">Builds the target as a structural clone of the {{ source.toUpperCase() }} version, translates every string, and regenerates the target assets. <strong>This overwrites the target locale entirely</strong> (no merge).</p>
+            <label class="vw-revise-lbl">Target locale</label>
+            <div class="vw-model-toggle" role="group" aria-label="Target locale">
+              <button type="button" :class="{ on: t.target === 'en' }" @click="t.target = 'en'" :disabled="source === 'en'">EN</button>
+              <button type="button" :class="{ on: t.target === 'fr' }" @click="t.target = 'fr'" :disabled="source === 'fr'">FR</button>
+            </div>
+            <label class="vw-revise-lbl">Model</label>
+            <div class="vw-model-toggle" role="group" aria-label="Model">
+              <button type="button" :class="{ on: t.model === 'sonnet' }" @click="t.model = 'sonnet'">Sonnet 4.6</button>
+              <button type="button" :class="{ on: t.model === 'opus' }" @click="t.model = 'opus'">Opus 4.7</button>
+            </div>
+            <label class="vw-check" style="margin-top:10px"><input type="checkbox" v-model="t.regenImages" /> <span>Regenerate images (conditioned on the {{ source.toUpperCase() }} source)</span></label>
+            <label class="vw-check"><input type="checkbox" v-model="t.regenAudio" /> <span>Regenerate narration audio (slower; costs ElevenLabs)</span></label>
+            <div class="vw-revise-foot">
+              <button class="vw-edit-btn" @click="close()">Cancel</button>
+              <button class="vw-gen-btn" @click="run()" :disabled="t.running || source === t.target">
+                {{ t.running ? 'Building…' : 'Translate & build ' + t.target.toUpperCase() }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,
+  };
+
+  
+  window.VWComponents['vw-revise-panel'] = {
+    setup() { return { edit: window.VWEdit }; },
+    computed: {
+      open() { return !!(this.edit && this.edit.enabled && this.edit.revise.open); },
+      guides() { return (this.edit && this.edit.guides) || []; },
+      scope() { return this.edit ? this.edit.revise.scope : ''; },
+      count() {
+        if (!this.edit) return 0;
+        return (this.edit.revise.blocks || []).filter((b) => b && (b.type === 'paragraph' || b.type === 'dropcap_paragraph')).length;
+      },
+    },
+    methods: {
+      toggleGuide(id) {
+        const arr = this.edit.revise.guideIds;
+        const i = arr.indexOf(id);
+        if (i === -1) arr.push(id); else arr.splice(i, 1);
+      },
+      run() { this.edit.runRevise(); },
+      close() { this.edit.closeRevise(); },
+    },
+    template: `
+      <div v-if="open" class="vw-modal-backdrop" @click.self="close()">
+        <div class="vw-modal vw-revise" role="dialog" aria-modal="true" aria-label="Revise with AI">
+          <div class="vw-modal-head">
+            <strong>Revise with AI: {{ scope }}</strong>
+            <button class="vw-x" @click="close()" aria-label="Close">×</button>
+          </div>
+          <div class="vw-revise-body">
+            <p class="vw-muted">{{ count }} paragraph(s) in scope. Pick any style guides to apply, add direction, then run. You review each change before it is saved.</p>
+            <div class="vw-revise-guides">
+              <label v-for="g in guides" :key="g.id" class="vw-check">
+                <input type="checkbox" :checked="edit.revise.guideIds.indexOf(g.id) !== -1" @change="toggleGuide(g.id)" />
+                <span>{{ g.title }}</span>
+              </label>
+              <span v-if="edit.guidesLoading" class="vw-muted">Loading guides…</span>
+              <span v-else-if="!guides.length" class="vw-muted">{{ edit.guidesError || 'No guides available.' }}</span>
+            </div>
+            <label class="vw-revise-lbl">Model</label>
+            <div class="vw-model-toggle" role="group" aria-label="Model">
+              <button type="button" :class="{ on: edit.revise.model === 'sonnet' }" @click="edit.revise.model = 'sonnet'">Sonnet 4.6 · faster</button>
+              <button type="button" :class="{ on: edit.revise.model === 'opus' }" @click="edit.revise.model = 'opus'">Opus 4.7 · stronger</button>
+            </div>
+            <label class="vw-revise-lbl">Your direction (optional)</label>
+            <textarea v-model="edit.revise.instructions" rows="4"
+                      placeholder="e.g. Tighten this, keep my voice, cut the throat-clearing, make the numbers concrete."
+                      aria-label="Revision instructions"></textarea>
+            <div class="vw-revise-foot">
+              <button class="vw-edit-btn" @click="close()">Cancel</button>
+              <button class="vw-gen-btn" @click="run()" :disabled="edit.revise.running || count === 0">
+                {{ edit.revise.running ? 'Revising…' : 'Run AI revise' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,
+  };
+})();
+
+(function () {
+  window.VWComponents = window.VWComponents || {};
+
+  const VISUALS = ['title', 'stat', 'list', 'quote', 'compare', 'image', 'chart', 'custom'];
+
+  window.VWComponents['tldr-editor'] = {
+    props: {
+      presentation: { type: Object, required: true },
+      paperId: { type: String, default: 'paper' },
+    },
+    setup() { return { edit: window.VWEdit || null }; },
+    data() { return { genning: '', genningAudio: '', visuals: VISUALS }; },
+    computed: {
+      slides() { return this.presentation.slides || (this.presentation.slides = []); },
+      locale() { return (window.VWStore && window.VWStore.locale) || 'en'; },
+    },
+    methods: {
+      dirty() { if (this.edit) this.edit.markDirty(); },
+      _nextId() {
+        let max = 0;
+        for (const s of this.slides) { const n = parseInt(s.id, 10); if (!isNaN(n) && n > max) max = n; }
+        return String(max + 1).padStart(2, '0');
+      },
+      add() {
+        const id = this._nextId();
+        this.slides.push({
+          id, title: '', caption: '', subcaption: '', visual: 'title', text: '',
+          audio_file: 'public/audio/' + this.locale + '/' + this.presentation.id + '/' + id + '.mp3',
+        });
+        this.dirty();
+      },
+      remove(i) {
+        if (window.confirm('Remove slide ' + this.slides[i].id + '?')) { this.slides.splice(i, 1); this.dirty(); }
+      },
+      move(i, dir) {
+        const j = i + dir; if (j < 0 || j >= this.slides.length) return;
+        const t = this.slides[i]; this.slides[i] = this.slides[j]; this.slides[j] = t; this.dirty();
+      },
+      async genAudio(s) {
+        if (!this.edit) return;
+        if (!s.text || !s.text.trim()) { this.edit.status = 'Write narration text for the slide first.'; return; }
+        if (!s.audio_file) s.audio_file = 'public/audio/' + this.locale + '/' + this.presentation.id + '/' + s.id + '.mp3';
+        this.genningAudio = s.id;
+        const r = await this.edit.generateAudio({ text: s.text, out: s.audio_file });
+        this.genningAudio = '';
+        if (r.ok) this.dirty();
+      },
+      addImage(s) { s.image = { src: '', alt: '', image_prompt: '', style_kind: 'diagram' }; this.dirty(); },
+      async genImage(s) {
+        if (!this.edit || !s.image) return;
+        const img = s.image;
+        if (!img.image_prompt || !img.image_prompt.trim()) { this.edit.status = 'Write an image prompt for the slide first.'; return; }
+        const had = !!img.src;
+        const target = had ? img.src : 'public/images/' + this.paperId + '/' + this.locale + '/slide-' + s.id + '.jpg';
+        this.genning = s.id;
+        const r = await this.edit.generateImage({ src: target, prompt: img.image_prompt, style_kind: img.style_kind || 'diagram', regenerate: had });
+        this.genning = '';
+        if (r.ok) { if (!had) { img.src = target; } this.dirty(); }
+      },
+    },
+    template: `
+      <div class="vw-tldr-editor">
+        <div class="vw-tldr-head">TL;DR slides: {{ slides.length }}<span class="vw-muted"> · narration edits need <code>npm run generate:audio</code> to refresh the MP3</span></div>
+        <div v-for="(s, i) in slides" :key="s.id" class="vw-slide">
+          <div class="vw-slide-bar">
+            <span class="vw-slide-id">Slide {{ s.id }}</span>
+            <select v-model="s.visual" @change="dirty()" aria-label="Visual type">
+              <option v-for="v in visuals" :key="v" :value="v">{{ v }}</option>
+            </select>
+            <span class="vw-spacer"></span>
+            <button @click="move(i, -1)" :disabled="i === 0" aria-label="Move slide up">↑</button>
+            <button @click="move(i, 1)" :disabled="i === slides.length - 1" aria-label="Move slide down">↓</button>
+            <button class="vw-del" @click="remove(i)" aria-label="Remove slide">✕</button>
+          </div>
+          <div class="vw-slide-grid">
+            <label>Caption</label><editable-text tag="div" cls="vw-img-field" :obj="s" field="caption" />
+            <label>Title</label><editable-text tag="div" cls="vw-img-field" :obj="s" field="title" />
+            <label>Subcaption</label><editable-text tag="div" cls="vw-img-field" :obj="s" field="subcaption" />
+            <label>Narration</label><editable-text tag="div" cls="vw-img-field" :obj="s" field="text" />
+          </div>
+          <div class="vw-slide-audio">
+            <button class="vw-gen-btn" @click="genAudio(s)" :disabled="genningAudio === s.id">
+              {{ genningAudio === s.id ? 'Synthesizing…' : 'Generate narration' }}
+            </button>
+            <span class="vw-muted">{{ s.audio_file || '(audio path will be set on first generate)' }}</span>
+          </div>
+          <div v-if="s.image" class="vw-slide-img">
+            <label>Image prompt</label>
+            <editable-text tag="div" cls="vw-img-field" :obj="s.image" field="image_prompt" />
+            <label>Alt text</label>
+            <editable-text tag="div" cls="vw-img-field" :obj="s.image" field="alt" />
+            <button class="vw-gen-btn" @click="genImage(s)" :disabled="genning === s.id">
+              {{ genning === s.id ? 'Working…' : (s.image.src ? 'Regenerate image' : 'Generate image') }}
+            </button>
+          </div>
+          <button v-else class="vw-edit-btn vw-dark" @click="addImage(s)">+ Add image to slide</button>
+        </div>
+        <button class="vw-gen-btn" @click="add()">+ Add slide</button>
+      </div>
+    `,
+  };
+})();
+
+(function () {
   window.VWComponents = window.VWComponents || {};
 
   window.VWComponents['library-page'] = {
@@ -2230,11 +3414,23 @@
       papers() {
         return (this.store.papers || []).filter(p => p.category !== 'architecture');
       },
-      featured() { return this.papers.slice(0, 2); },
-      rest() { return this.papers.filter(p => p.status !== 'Placeholder'); },
+      published() { return this.papers.filter(p => p.status === 'Published'); },
+      
+      featured() { return this.published.length ? this.published : this.papers.slice(0, 2); },
+      
+      rest() { return this.papers.filter(p => p.status === 'Published' || p.status === 'Forthcoming'); },
       seriesMeta() {
         const tpl = this.store.t.section_titles?.series_meta_tpl || '{n} entries';
         return tpl.replace('{n}', this.papers.length);
+      },
+      
+      stats() {
+        const base = (this.store.t.stats || []).map(s => ({ ...s }));
+        if (base.length) {
+          const numbered = this.papers.filter(p => /^\d+$/.test(String(p.num))).length;
+          base[0] = { ...base[0], v: String(numbered) };
+        }
+        return base;
       },
     },
     methods: {
@@ -2264,7 +3460,7 @@
           <p class="lede">{{ store.t.tagline }}</p>
         </section>
 
-        <stat-rail :stats="store.t.stats" />
+        <stat-rail :stats="stats" />
 
         <section class="civic-section">
           <div class="head">
@@ -2317,12 +3513,16 @@
     setup() {
       return { store: window.VWStore };
     },
+    computed: {
+      
+      papers() { return (this.store.papers || []).filter(p => p.category !== 'architecture'); },
+    },
     methods: {
       open(id) { this.$emit('navigate', { page: 'paper', id }); },
     },
     template: `
       <div v-if="store.ready">
-        <index-table :papers="store.papers" @open="open" />
+        <index-table :papers="papers" @open="open" />
         <app-footer />
       </div>
       <div v-else style="padding:80px 56px;color:var(--ink-50);font-family:var(--font-mono);font-size:12px;">
@@ -2364,7 +3564,7 @@
             <span>Reference topology + knowledge articles</span>
           </div>
           <h1>The work, in <em>seven layers</em>.</h1>
-          <p class="lede">From discovery to deployment. Autonomous agents inside each layer. Verifiers and human-gated steps where the cost of mistakes is highest. Below the diagram, a small library of architecture articles — technical specs that sit outside the linear reading sequence and are read on demand.</p>
+          <p class="lede">The path runs from discovery to deployment, with autonomous agents inside each layer and human-gated steps where the cost of a mistake is highest. Below the diagram sits a small library of architecture articles. These are technical specifications that fall outside the linear reading sequence, read on demand.</p>
         </section>
 
         <div v-if="arch">
@@ -2466,36 +3666,46 @@
 
   window.VWComponents['about-page'] = {
     setup() { return { store: window.VWStore }; },
+    data() { return { doc: null, error: null }; },
+    computed: {
+      loadKey() { return this.store.locale || 'en'; },
+      repoPapers() { return (this.store.papers || []).filter(p => p.repo); },
+    },
+    watch: { loadKey: { handler: 'load', immediate: true } },
+    methods: {
+      async load() {
+        try { this.doc = await window.VWLoadPageData('about', this.store.locale); }
+        catch (e) { this.error = e.message; }
+      },
+    },
     template: `
-      <div v-if="store.site">
+      <div v-if="doc">
         <section class="civic-hero">
           <div class="civic-eyebrow">
             <span class="dot"></span>
-            <span>About this collection</span>
+            <span>{{ doc.eyebrow }}</span>
           </div>
-          <h1>Open source by <em>default</em>.</h1>
-          <p class="lede">The site itself is open source, published via GitHub Pages. The entire site is cloneable and adaptable. MIT license with explicit disclaimers: not responsible for decisions or costs incurred by adopters; shared in the spirit of national collaboration; users must evaluate and assess these tools in their own context.</p>
+          <h1>{{ doc.title_lead }} <em>{{ doc.title_em }}</em></h1>
+          <p class="lede">{{ doc.lede }}</p>
         </section>
 
         <section class="civic-section">
           <div class="head">
-            <h2>How to use this site</h2>
-            <div class="meta">readme · methodology · feedback</div>
+            <h2>{{ doc.use.heading }}</h2>
+            <div class="meta">{{ doc.use.meta }}</div>
           </div>
           <div style="padding-bottom:24px;max-width:60ch;color:var(--ink-70);font-size:15px;line-height:1.7;">
-            <p>Sequential reading is the recommended path. Each paper builds on what comes before. Lateral links between papers let readers jump sideways without losing context.</p>
-            <p>Every paper is downloadable as Markdown and JSON so readers can feed them into their own AI tooling. The full site is cloneable from GitHub. The site uses a small cookie to track which papers a reader has visited and surface what is new since their last visit.</p>
-            <p>No vendor or product is being advocated. For transparency, any vendors or models actually used in production will be disclosed.</p>
+            <p v-for="(p, i) in doc.use.paras" :key="i">{{ p }}</p>
           </div>
         </section>
 
         <section class="civic-section">
           <div class="head">
-            <h2>Public repositories</h2>
-            <div class="meta">released alongside the papers</div>
+            <h2>{{ doc.repos.heading }}</h2>
+            <div class="meta">{{ doc.repos.meta }}</div>
           </div>
           <ul style="list-style:none;padding:0;margin:0;border-top:1px solid var(--rule);">
-            <li v-for="p in store.papers.filter(p => p.repo)" :key="p.id"
+            <li v-for="p in repoPapers" :key="p.id"
                 style="padding:14px 0;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:baseline;gap:24px;">
               <div>
                 <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;color:var(--highlight);text-transform:uppercase;">№ {{ p.num }}</div>
@@ -2508,31 +3718,74 @@
 
         <section class="civic-section">
           <div class="head">
-            <h2>{{ store.locale === 'fr' ? 'Aussi sur ce site' : 'Also on this site' }}</h2>
-            <div class="meta">{{ store.locale === 'fr' ? 'cinq raccourcis' : 'five shortcuts' }}</div>
+            <h2>{{ doc.also.heading }}</h2>
+            <div class="meta">{{ doc.also.meta }}</div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-bottom:24px;">
-            <a href="#/glossary" class="civic-card" style="text-decoration:none;cursor:pointer;">
-              <div class="head"><span class="num">→</span><span>{{ store.locale === 'fr' ? 'Glossaire' : 'Glossary' }}</span></div>
-              <h3>{{ store.locale === 'fr' ? 'Vocabulaire de la collection' : 'Vocabulary of the collection' }}</h3>
-            </a>
-            <a href="#/repos" class="civic-card" style="text-decoration:none;cursor:pointer;">
-              <div class="head"><span class="num">→</span><span>{{ store.locale === 'fr' ? 'Dépôts' : 'Repositories' }}</span></div>
-              <h3>{{ store.locale === 'fr' ? 'Les dépôts publics' : 'Public companion repositories' }}</h3>
-            </a>
-            <a href="#/updates" class="civic-card" style="text-decoration:none;cursor:pointer;">
-              <div class="head"><span class="num">→</span><span>{{ store.locale === 'fr' ? 'Mises à jour' : 'Updates' }}</span></div>
-              <h3>{{ store.locale === 'fr' ? 'Ce qui a changé' : 'What has changed' }}</h3>
-            </a>
-            <a href="#/community" class="civic-card" style="text-decoration:none;cursor:pointer;">
-              <div class="head"><span class="num">→</span><span>{{ store.locale === 'fr' ? 'Communauté' : 'Community' }}</span></div>
-              <h3>{{ store.locale === 'fr' ? 'Où parler du travail' : 'Where to talk about the work' }}</h3>
+            <a v-for="c in doc.also.cards" :key="c.href" :href="c.href" class="civic-card" style="text-decoration:none;cursor:pointer;">
+              <div class="head"><span class="num">→</span><span>{{ c.tag }}</span></div>
+              <h3>{{ c.title }}</h3>
             </a>
           </div>
         </section>
 
         <app-footer />
       </div>
+      <div v-else-if="error" style="padding:80px 56px;color:var(--highlight);font-family:var(--font-mono);font-size:12px;">{{ error }}</div>
+    `,
+  };
+})();
+
+(function () {
+  window.VWComponents = window.VWComponents || {};
+
+  window.VWComponents['manual-page'] = {
+    emits: ['navigate'],
+    setup() { return { store: window.VWStore }; },
+    data() { return { doc: null, error: null }; },
+    computed: {
+      loadKey() { return this.store.locale || 'en'; },
+    },
+    watch: { loadKey: { handler: 'load', immediate: true } },
+    methods: {
+      async load() {
+        try { this.doc = await window.VWLoadPageData('manual', this.store.locale); }
+        catch (e) { this.error = e.message; }
+      },
+    },
+    template: `
+      <div v-if="doc" class="civic-doc-page">
+        <section class="civic-hero">
+          <div class="civic-eyebrow">
+            <span class="dot"></span>
+            <template v-for="(seg, i) in doc.eyebrow" :key="i">
+              <span v-if="i > 0">·</span>
+              <span>{{ seg }}</span>
+            </template>
+          </div>
+          <h1>{{ doc.h1 }}</h1>
+          <p class="lede">{{ doc.lede }}</p>
+        </section>
+
+        <template v-for="(s, i) in doc.sections" :key="i">
+          <section class="civic-section">
+            <div class="head">
+              <h2>{{ s.heading }}</h2>
+              <div class="meta" v-if="s.meta">{{ s.meta }}</div>
+            </div>
+          </section>
+          <div class="manual-body">
+            <p v-for="(p, j) in (s.paras || [])" :key="'p'+j" v-html="p"></p>
+            <ol class="manual-steps" v-if="s.steps">
+              <li v-for="(st, k) in s.steps" :key="'s'+k" v-html="st"></li>
+            </ol>
+          </div>
+        </template>
+
+        <app-footer />
+      </div>
+      <div v-else-if="error" style="padding:80px 56px;color:var(--highlight);font-family:var(--font-mono);font-size:12px;">{{ error }}</div>
+      <div v-else style="padding:80px 56px;color:var(--ink-50);font-family:var(--font-mono);font-size:12px;">Loading…</div>
     `,
   };
 })();
@@ -2641,23 +3894,17 @@
   window.VWComponents['repos-page'] = {
     emits: ['navigate'],
     setup() { return { store: window.VWStore }; },
-    data() { return { enrichment: {}, error: null }; },
-    async mounted() {
-      try {
-        const res = await fetch('data/repos.json', { cache: 'no-cache' });
-        if (res.ok) {
-          const j = await res.json();
-          this.enrichment = j.repos || {};
-        }
-      } catch {  }
-    },
+    data() { return { doc: null, error: null }; },
     computed: {
+      loadKey() { return this.store.locale || 'en'; },
+      pg() { return (this.doc && this.doc.page) || {}; },
       repos() {
+        const enrichment = (this.doc && this.doc.repos) || {};
         const out = [];
         for (const p of (this.store.papers || [])) {
           if (!p.repo) continue;
           const slug = p.repo.replace('https://github.com/', '');
-          const ex = this.enrichment[p.id] || {};
+          const ex = enrichment[p.id] || {};
           out.push({
             paper_id: p.id,
             num: p.num,
@@ -2668,15 +3915,18 @@
             license: ex.license || 'MIT',
             language: ex.language || null,
             status: ex.status || p.status || 'Forthcoming',
-            description: ex[this.store.locale + '_description']
-                      || ex.en_description
-                      || p.subtitle,
+            description: ex.description || p.subtitle,
           });
         }
         return out;
       },
     },
+    watch: { loadKey: { handler: 'load', immediate: true } },
     methods: {
+      async load() {
+        try { this.doc = await window.VWLoadPageData('repos', this.store.locale); }
+        catch (e) { this.error = e.message; }
+      },
       openPaper(id) { this.$emit('navigate', { page: 'paper', id }); },
     },
     template: `
@@ -2684,14 +3934,12 @@
         <section class="civic-hero">
           <div class="civic-eyebrow">
             <span class="dot"></span>
-            <span>{{ store.locale === 'fr' ? 'Dépôts publics' : 'Public repositories' }}</span>
+            <span>{{ pg.eyebrow }}</span>
             <span>·</span>
-            <span>{{ repos.length }} {{ store.locale === 'fr' ? 'dépôts' : 'repositories' }}</span>
+            <span>{{ repos.length }} {{ pg.repos_word }}</span>
           </div>
-          <h1>{{ store.locale === 'fr' ? 'Tout est' : 'Everything is' }} <em>{{ store.locale === 'fr' ? 'libre.' : 'open source.' }}</em></h1>
-          <p class="lede">{{ store.locale === 'fr'
-            ? "Chaque livre blanc qui s'accompagne d'un logiciel publie ce logiciel ici. Le site lui-même est dans cette liste. Aucun verrouillage propriétaire, aucune confiance aveugle."
-            : 'Every paper that ships with software publishes that software here. The site itself is in the list. No proprietary lock-in, no blind trust required.' }}</p>
+          <h1>{{ pg.title_lead }} <em>{{ pg.title_em }}</em></h1>
+          <p class="lede">{{ pg.lede }}</p>
         </section>
 
         <section class="civic-section">
@@ -2711,12 +3959,12 @@
                 </div>
               </div>
               <button class="repo-link" @click="openPaper(r.paper_id)">
-                {{ store.locale === 'fr' ? 'Lire le livre →' : 'Read the paper →' }}
+                {{ pg.read }}
               </button>
             </li>
           </ul>
           <div v-if="!repos.length" style="color:var(--ink-50);font-family:var(--font-mono);padding:24px 0;">
-            {{ store.locale === 'fr' ? 'Aucun dépôt publié pour le moment.' : 'No repositories published yet.' }}
+            {{ pg.empty }}
           </div>
         </section>
 
@@ -2731,20 +3979,23 @@
 
   window.VWComponents['updates-page'] = {
     setup() { return { store: window.VWStore }; },
-    data() { return { entries: [], error: null }; },
-    async mounted() {
-      try {
-        const res = await fetch('data/updates.json', { cache: 'no-cache' });
-        const j = await res.json();
-        this.entries = (j.entries || []).slice().sort((a, b) => b.date.localeCompare(a.date));
-      } catch (e) { this.error = e.message; }
+    data() { return { doc: null, error: null }; },
+    computed: {
+      loadKey() { return this.store.locale || 'en'; },
+      pg() { return (this.doc && this.doc.page) || {}; },
+      entries() {
+        return ((this.doc && this.doc.entries) || []).slice().sort((a, b) => b.date.localeCompare(a.date));
+      },
     },
+    watch: { loadKey: { handler: 'load', immediate: true } },
     methods: {
+      async load() {
+        try { this.doc = await window.VWLoadPageData('updates', this.store.locale); }
+        catch (e) { this.error = e.message; }
+      },
       kindLabel(k) {
-        const labels_en = { release: 'Release', finding: 'Finding', paper: 'Paper', note: 'Note' };
-        const labels_fr = { release: 'Mise en service', finding: 'Constat', paper: 'Livre', note: 'Note' };
-        const map = this.store.locale === 'fr' ? labels_fr : labels_en;
-        return map[k] || k;
+        const kinds = (this.pg && this.pg.kinds) || {};
+        return kinds[k] || k;
       },
     },
     template: `
@@ -2752,12 +4003,10 @@
         <section class="civic-hero">
           <div class="civic-eyebrow">
             <span class="dot"></span>
-            <span>{{ store.locale === 'fr' ? 'Mises à jour vivantes' : 'Living updates' }}</span>
+            <span>{{ pg.eyebrow }}</span>
           </div>
-          <h1>{{ store.locale === 'fr' ? 'Ce qui a' : 'What has' }} <em>{{ store.locale === 'fr' ? 'changé.' : 'changed.' }}</em></h1>
-          <p class="lede">{{ store.locale === 'fr'
-            ? "Nouveaux constats, nouvelles versions logicielles, nouvelles preuves. Quatre ans de cycle. Du plus récent au plus ancien."
-            : 'New findings, new code releases, new evidence. A four-year cycle. Newest first.' }}</p>
+          <h1>{{ pg.title_lead }} <em>{{ pg.title_em }}</em></h1>
+          <p class="lede">{{ pg.lede }}</p>
         </section>
 
         <section class="civic-section">
@@ -2767,16 +4016,15 @@
                 <span class="upd-date">{{ e.date }}</span>
                 <span class="upd-kind" :class="'k-' + e.kind">{{ kindLabel(e.kind) }}</span>
               </div>
-              <h2 class="upd-title">{{ (e[store.locale] || e.en).title }}</h2>
-              <p>{{ (e[store.locale] || e.en).body }}</p>
+              <h2 class="upd-title">{{ e.title }}</h2>
+              <p>{{ e.body }}</p>
               <div class="upd-links" v-if="e.links && e.links.length">
-                <a v-for="l in e.links" :key="l.href"
-                   :href="l.href">{{ store.locale === 'fr' ? l.label_fr : l.label_en }}</a>
+                <a v-for="l in e.links" :key="l.href" :href="l.href">{{ l.label }}</a>
               </div>
             </li>
           </ol>
           <div v-if="!entries.length && !error" style="color:var(--ink-50);font-family:var(--font-mono);padding:24px 0;">
-            {{ store.locale === 'fr' ? 'Aucune mise à jour publiée pour le moment.' : 'No updates published yet.' }}
+            {{ pg.empty }}
           </div>
           <div v-if="error" style="color:var(--highlight);font-family:var(--font-mono);">{{ error }}</div>
         </section>
@@ -2792,39 +4040,42 @@
 
   window.VWComponents['community-page'] = {
     setup() { return { store: window.VWStore }; },
-    data() { return { channels: [], contributing: null, error: null }; },
-    async mounted() {
-      try {
-        const res = await fetch('data/community.json', { cache: 'no-cache' });
-        const j = await res.json();
-        this.channels = j.channels || [];
-        this.contributing = j.contributing || null;
-      } catch (e) { this.error = e.message; }
+    data() { return { doc: null, error: null }; },
+    computed: {
+      loadKey() { return this.store.locale || 'en'; },
+      pg() { return (this.doc && this.doc.page) || {}; },
+      channels() { return (this.doc && this.doc.channels) || []; },
+      contributing() { return this.doc && this.doc.contributing; },
+    },
+    watch: { loadKey: { handler: 'load', immediate: true } },
+    methods: {
+      async load() {
+        try { this.doc = await window.VWLoadPageData('community', this.store.locale); }
+        catch (e) { this.error = e.message; }
+      },
     },
     template: `
-      <div>
+      <div v-if="doc">
         <section class="civic-hero">
           <div class="civic-eyebrow">
             <span class="dot"></span>
-            <span>{{ store.locale === 'fr' ? 'Communauté' : 'Community' }}</span>
+            <span>{{ pg.eyebrow }}</span>
           </div>
-          <h1>{{ store.locale === 'fr' ? 'Où parler de' : 'Where to talk about' }} <em>{{ store.locale === 'fr' ? 'tout ceci.' : 'this work.' }}</em></h1>
-          <p class="lede">{{ store.locale === 'fr'
-            ? 'Forum ouvert, tickets publics, discussions de fond. La conversation sur la modernisation ne se tient pas en privé.'
-            : 'Open forum, public issues, longer-form discussions. The modernization conversation does not happen behind a closed door.' }}</p>
+          <h1>{{ pg.title_lead }} <em>{{ pg.title_em }}</em></h1>
+          <p class="lede">{{ pg.lede }}</p>
         </section>
 
         <section class="civic-section">
           <ul class="channel-list">
             <li v-for="c in channels" :key="c.id" :class="{ 'is-unavailable': !c.available }">
               <div class="channel-kind">{{ c.kind }}</div>
-              <h2 class="channel-name">{{ (c[store.locale] || c.en).label }}</h2>
-              <p>{{ (c[store.locale] || c.en).blurb }}</p>
+              <h2 class="channel-name">{{ c.label }}</h2>
+              <p>{{ c.blurb }}</p>
               <a v-if="c.available" :href="c.href" target="_blank" rel="noopener" class="channel-link">
-                {{ store.locale === 'fr' ? 'Ouvrir →' : 'Open →' }}
+                {{ pg.open }}
               </a>
               <span v-else class="channel-pending">
-                {{ store.locale === 'fr' ? 'À venir' : 'Coming soon' }}
+                {{ pg.soon }}
               </span>
             </li>
           </ul>
@@ -2832,16 +4083,17 @@
 
         <section class="civic-section" v-if="contributing">
           <div class="head">
-            <h2>{{ (contributing[store.locale] || contributing.en).title }}</h2>
+            <h2>{{ contributing.title }}</h2>
             <div class="meta">MIT</div>
           </div>
           <p style="max-width:60ch;color:var(--ink-70);font-size:15px;line-height:1.7;">
-            {{ (contributing[store.locale] || contributing.en).body }}
+            {{ contributing.body }}
           </p>
         </section>
 
         <app-footer />
       </div>
+      <div v-else-if="error" style="padding:80px 56px;color:var(--highlight);font-family:var(--font-mono);font-size:12px;">{{ error }}</div>
     `,
   };
 })();
@@ -2982,6 +4234,30 @@
     return content;
   }
 
+  
+  const pageCache = {};
+  async function loadPageData(name, localeOverride) {
+    const locale = localeOverride || store.locale;
+    const cacheKey = locale + ':' + name;
+    if (pageCache[cacheKey]) return pageCache[cacheKey];
+
+    const fallback = (store.site && store.site.default_locale) || 'en';
+    const candidates = [
+      'data/pages/' + name + '.' + locale + '.json',
+      'data/pages/' + name + '.' + fallback + '.json',
+    ];
+    let content = null, lastError = null;
+    for (const url of candidates) {
+      try {
+        const res = await fetch(url, { cache: 'no-cache' });
+        if (res.ok) { content = await res.json(); break; }
+      } catch (e) { lastError = e; }
+    }
+    if (!content) throw (lastError || new Error('No content found for page ' + name));
+    pageCache[cacheKey] = content;
+    return content;
+  }
+
   function markVisited(id) {
     store.visited.add(id);
     localStorage.setItem('vw_visited', JSON.stringify([...store.visited]));
@@ -2990,6 +4266,7 @@
   
   window.VWStore = store;
   window.VWLoadPaper = loadPaper;
+  window.VWLoadPageData = loadPageData;
   window.VWMarkVisited = markVisited;
   window.VWSetLocale = applyLocale;
 
@@ -3001,6 +4278,7 @@
     if (parts[0] === 'index')        return { page: 'index',        paperId: null };
     if (parts[0] === 'architecture') return { page: 'architecture', paperId: null };
     if (parts[0] === 'about')        return { page: 'about',        paperId: null };
+    if (parts[0] === 'manual')       return { page: 'manual',       paperId: null };
     if (parts[0] === 'glossary')     return { page: 'glossary',     paperId: null };
     if (parts[0] === 'repos')        return { page: 'repos',        paperId: null };
     if (parts[0] === 'updates')      return { page: 'updates',      paperId: null };
@@ -3021,6 +4299,7 @@
           case 'index':         return 'index-page';
           case 'architecture':  return 'architecture-page';
           case 'about':         return 'about-page';
+          case 'manual':        return 'manual-page';
           case 'glossary':      return 'glossary-page';
           case 'repos':         return 'repos-page';
           case 'updates':       return 'updates-page';
@@ -3049,6 +4328,7 @@
             index:        'Index',
             architecture: 'Architecture',
             about:        'About',
+            manual:       'Manual',
             glossary:     'Glossary',
             repos:        'Repositories',
             updates:      'Updates',
@@ -3085,8 +4365,12 @@
   });
 
   
-  const reg = window.VWComponents || {};
-  Object.keys(reg).forEach(k => app.component(k, reg[k]));
+  if (window.VWVisuals && window.VWVisuals.attachApp) {
+    window.VWVisuals.attachApp(app);
+  } else {
+    const reg = window.VWComponents || {};
+    Object.keys(reg).forEach(k => app.component(k, reg[k]));
+  }
 
   app.mount('#app');
 })();

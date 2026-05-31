@@ -1,0 +1,46 @@
+{
+  "_note": "About page content for one locale. The sibling .<other>.json holds the translation. The public repositories list is derived from papers.json.",
+  "eyebrow": "À propos de cette collection",
+  "title_lead": "Libre par",
+  "title_em": "défaut.",
+  "lede": "Le site lui-même est libre, publié via GitHub Pages. Tout le site est clonable et adaptable. Licence MIT avec des avertissements explicites : aucune responsabilité pour les décisions ou les coûts engagés par ceux qui l'adoptent ; partagé dans l'esprit d'une collaboration nationale ; chacun doit évaluer ces outils dans son propre contexte.",
+  "use": {
+    "heading": "Comment utiliser ce site",
+    "meta": "lisez-moi · méthodologie · rétroaction",
+    "paras": [
+      "La lecture séquentielle est le parcours recommandé. Chaque livre s'appuie sur ce qui précède. Les liens latéraux entre les livres permettent au lecteur de se déplacer de côté sans perdre le fil.",
+      "Chaque livre se télécharge en Markdown et en JSON, de sorte que le lecteur peut l'alimenter dans ses propres outils d'IA. Tout le site se clone depuis GitHub. Le site utilise un petit témoin pour suivre les livres déjà consultés et signaler ce qui est nouveau depuis la dernière visite.",
+      "Aucun fournisseur ni produit n'est promu. Par souci de transparence, tout fournisseur ou modèle réellement utilisé en production sera divulgué."
+    ]
+  },
+  "repos": {
+    "heading": "Dépôts publics",
+    "meta": "publiés en parallèle des livres"
+  },
+  "also": {
+    "heading": "Aussi sur ce site",
+    "meta": "quatre raccourcis",
+    "cards": [
+      {
+        "tag": "Glossaire",
+        "title": "Vocabulaire de la collection",
+        "href": "#/glossary"
+      },
+      {
+        "tag": "Dépôts",
+        "title": "Les dépôts publics qui accompagnent les livres",
+        "href": "#/repos"
+      },
+      {
+        "tag": "Mises à jour",
+        "title": "Ce qui a changé",
+        "href": "#/updates"
+      },
+      {
+        "tag": "Communauté",
+        "title": "Où parler du travail",
+        "href": "#/community"
+      }
+    ]
+  }
+}

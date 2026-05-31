@@ -56,11 +56,19 @@ const JS_FILES = [
   'components/BlockRenderer.js',
   'components/PaperDownloads.js',
   'components/KeyboardShortcuts.js',
+  /* Editor components ship in prod but stay dormant: the toolbar only activates
+     when /api/edit-status confirms a local edit-server, which never exists on
+     the public host. They are in the bundle so the repo and prod match. */
+  'components/EditMode.js',
+  'components/EditableText.js',
+  'components/EditPanels.js',
+  'components/TldrEditor.js',
   'pages/LibraryPage.js',
   'pages/IndexPage.js',
   'pages/ArchitecturePage.js',
   'pages/PaperPage.js',
   'pages/AboutPage.js',
+  'pages/ManualPage.js',
   'pages/GlossaryPage.js',
   'pages/ReposPage.js',
   'pages/UpdatesPage.js',
@@ -75,6 +83,8 @@ const CSS_FILES = [
   'styles/components.css',
   'styles/player.css',
   'styles/visuals.css',
+  'styles/manual.css',
+  'styles/edit.css',
 ];
 
 function concat(files) {

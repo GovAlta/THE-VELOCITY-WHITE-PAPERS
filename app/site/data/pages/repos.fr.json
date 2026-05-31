@@ -1,0 +1,62 @@
+{
+  "_note": "ReposPage enrichment for one locale, keyed by paper id (short uuid). The sibling .<other>.json holds the translation. Fields not set here fall back to papers.json.",
+  "page": {
+    "eyebrow": "Dépôts publics",
+    "repos_word": "dépôts",
+    "title_lead": "Tout est",
+    "title_em": "libre.",
+    "lede": "Chaque livre blanc qui s'accompagne d'un logiciel publie ce logiciel ici. Le site lui-même est dans cette liste. Aucun verrouillage propriétaire, aucune confiance aveugle.",
+    "read": "Lire le livre →",
+    "empty": "Aucun dépôt publié pour le moment."
+  },
+  "repos": {
+    "dehkj": {
+      "license": "MIT",
+      "language": "Python",
+      "status": "Published",
+      "description": "Outil libre pour étalonner lois, règlements et politiques à l'échelle pancanadienne. Permet à un gouvernement de comparer ses lois à celles de pairs et d'identifier les anomalies, les doublons et les silences."
+    },
+    "p7p2k": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Published",
+      "description": "Le harnais générique, plus une adaptation Alberta.ca comme exemple travaillé. Fichiers de compétences, couche de hooks, pile opiniâtre. Un Hello World de calibre entreprise qui résout les premiers défis complexes du parcours."
+    },
+    "akle0": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Published",
+      "description": "Scanneur récursif et itératif pour un patrimoine GitHub d'entreprise. Cartographie le patrimoine technique, la posture cybersécurité et le patrimoine humain (principaux contributeurs par langage et par ministère)."
+    },
+    "offjm": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Forthcoming",
+      "description": "De l'analyse à la synthèse. Opère à l'échelle d'un ministère sur des centaines de systèmes et propose une architecture de calcul modulaire et réutilisable, propriété du gouvernement."
+    },
+    "bxvjn": {
+      "license": "MIT",
+      "language": "JSON + tooling",
+      "status": "Forthcoming",
+      "description": "Le JSON téléchargeable des fonctions d'affaires répétables et codifiées du gouvernement, extraites du code en production. Neutre par rapport au système et au ministère."
+    },
+    "ln4lv": {
+      "license": "MIT",
+      "language": "Go + Terraform",
+      "status": "Forthcoming",
+      "description": "L'environnement sécurisé isolé qui permet aux agents de travailler de façon itérative sans dégrader la posture de sécurité. C'est là que des modèles concurrents s'affrontent sur le même problème."
+    },
+    "k20ck": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Forthcoming",
+      "description": "Système de gestion de projet qui remplace les outils de type Jira par un moteur de pointage. Suit des centaines de travailleurs humains et des milliers d'agents sur plus de 600 thèmes."
+    },
+    "tn0nj": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Forthcoming",
+      "description": "Le site de référence du harnais anti-dérive. Compétences, hooks, standards, évaluations, veilleur, tickets, agent anti-dérive."
+    }
+  }
+}

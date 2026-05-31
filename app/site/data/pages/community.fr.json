@@ -1,0 +1,41 @@
+{
+  "_note": "Community channels and contribution paths for one locale. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Communauté",
+    "title_lead": "Où parler de",
+    "title_em": "tout ceci.",
+    "lede": "Forum ouvert, tickets publics, discussions de fond. La conversation sur la modernisation ne se tient pas en privé.",
+    "open": "Ouvrir →",
+    "soon": "À venir"
+  },
+  "channels": [
+    {
+      "id": "discord",
+      "kind": "forum",
+      "href": "https://discord.gg/velocity-placeholder",
+      "available": false,
+      "label": "Discord Velocity",
+      "blurb": "Forum ouvert aux artisans du changement. Canal de rétroaction et lieu où se tient la conversation sur la modernisation."
+    },
+    {
+      "id": "github-issues",
+      "kind": "issues",
+      "href": "https://github.com/alberta-velocity/velocity-whitepapers/issues",
+      "available": true,
+      "label": "Tickets GitHub",
+      "blurb": "Rapports de bogues, corrections de contenu, révision de la traduction française, constats d'accessibilité. Public."
+    },
+    {
+      "id": "github-discussions",
+      "kind": "discussions",
+      "href": "https://github.com/alberta-velocity/velocity-whitepapers/discussions",
+      "available": true,
+      "label": "Discussions GitHub",
+      "blurb": "Questions de fond sur la méthodologie, le harnais, l'outillage. Public."
+    }
+  ],
+  "contributing": {
+    "title": "Contribuer",
+    "body": "Le site est sous licence MIT et le contenu est publié librement. Les pull requests sur le dépôt public sont bienvenues. Marche à suivre : ouvrir un ticket d'abord pour s'aligner sur la direction ; soumettre un PR ciblé et de taille raisonnable ; faire passer la suite d'évaluations ; citer les sources de toute nouvelle affirmation."
+  }
+}

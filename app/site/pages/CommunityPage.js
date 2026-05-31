@@ -1,28 +1,29 @@
 /* CommunityPage — Discord, GitHub Issues, contribution path.
-   Content is data-driven and bilingual: data/community.json carries the page
-   chrome (page.en/fr), the channels (each with en/fr), and the contributing
-   block (en/fr). */
+   Content is data-driven and bilingual: data/pages/community.<locale>.json,
+   loaded per locale and reloaded when the locale changes. The file carries the
+   page chrome, the channels, and the contributing block, all in one locale. */
 
 (function () {
   window.VWComponents = window.VWComponents || {};
 
   window.VWComponents['community-page'] = {
     setup() { return { store: window.VWStore }; },
-    data() { return { channels: [], contributing: null, page: null, error: null }; },
-    async mounted() {
-      try {
-        const res = await fetch('data/community.json', { cache: 'no-cache' });
-        const j = await res.json();
-        this.channels = j.channels || [];
-        this.contributing = j.contributing || null;
-        this.page = j.page || null;
-      } catch (e) { this.error = e.message; }
-    },
+    data() { return { doc: null, error: null }; },
     computed: {
-      pg() { return this.page ? (this.page[this.store.locale] || this.page.en) : {}; },
+      loadKey() { return this.store.locale || 'en'; },
+      pg() { return (this.doc && this.doc.page) || {}; },
+      channels() { return (this.doc && this.doc.channels) || []; },
+      contributing() { return this.doc && this.doc.contributing; },
+    },
+    watch: { loadKey: { handler: 'load', immediate: true } },
+    methods: {
+      async load() {
+        try { this.doc = await window.VWLoadPageData('community', this.store.locale); }
+        catch (e) { this.error = e.message; }
+      },
     },
     template: `
-      <div>
+      <div v-if="doc">
         <section class="civic-hero">
           <div class="civic-eyebrow">
             <span class="dot"></span>
@@ -36,8 +37,8 @@
           <ul class="channel-list">
             <li v-for="c in channels" :key="c.id" :class="{ 'is-unavailable': !c.available }">
               <div class="channel-kind">{{ c.kind }}</div>
-              <h2 class="channel-name">{{ (c[store.locale] || c.en).label }}</h2>
-              <p>{{ (c[store.locale] || c.en).blurb }}</p>
+              <h2 class="channel-name">{{ c.label }}</h2>
+              <p>{{ c.blurb }}</p>
               <a v-if="c.available" :href="c.href" target="_blank" rel="noopener" class="channel-link">
                 {{ pg.open }}
               </a>
@@ -50,16 +51,17 @@
 
         <section class="civic-section" v-if="contributing">
           <div class="head">
-            <h2>{{ (contributing[store.locale] || contributing.en).title }}</h2>
+            <h2>{{ contributing.title }}</h2>
             <div class="meta">MIT</div>
           </div>
           <p style="max-width:60ch;color:var(--ink-70);font-size:15px;line-height:1.7;">
-            {{ (contributing[store.locale] || contributing.en).body }}
+            {{ contributing.body }}
           </p>
         </section>
 
         <app-footer />
       </div>
+      <div v-else-if="error" style="padding:80px 56px;color:var(--highlight);font-family:var(--font-mono);font-size:12px;">{{ error }}</div>
     `,
   };
 })();

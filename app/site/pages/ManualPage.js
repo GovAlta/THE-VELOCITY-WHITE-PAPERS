@@ -1,6 +1,7 @@
 /* ManualPage — operator's manual: the steps a human and an AI take to populate
-   and run this CMS. Content is data-driven and bilingual: data/manual.json
-   carries en + fr. Paragraph and step strings may include inline <code> and
+   and run this CMS. Content is data-driven and bilingual:
+   data/pages/manual.<locale>.json, loaded per locale and reloaded when the
+   locale changes. Paragraph and step strings may include inline <code> and
    <strong> markup, rendered with v-html (trusted static content only).
 
    Reader-visible prose follows style-guide/00: plain declarative sentences,
@@ -13,30 +14,31 @@
     emits: ['navigate'],
     setup() { return { store: window.VWStore }; },
     data() { return { doc: null, error: null }; },
-    async mounted() {
-      try {
-        const res = await fetch('data/manual.json', { cache: 'no-cache' });
-        this.doc = await res.json();
-      } catch (e) { this.error = e.message; }
-    },
     computed: {
-      pg() { return this.doc ? (this.doc[this.store.locale] || this.doc.en) : null; },
+      loadKey() { return this.store.locale || 'en'; },
+    },
+    watch: { loadKey: { handler: 'load', immediate: true } },
+    methods: {
+      async load() {
+        try { this.doc = await window.VWLoadPageData('manual', this.store.locale); }
+        catch (e) { this.error = e.message; }
+      },
     },
     template: `
-      <div v-if="pg" class="civic-doc-page">
+      <div v-if="doc" class="civic-doc-page">
         <section class="civic-hero">
           <div class="civic-eyebrow">
             <span class="dot"></span>
-            <template v-for="(seg, i) in pg.eyebrow" :key="i">
+            <template v-for="(seg, i) in doc.eyebrow" :key="i">
               <span v-if="i > 0">·</span>
               <span>{{ seg }}</span>
             </template>
           </div>
-          <h1>{{ pg.h1 }}</h1>
-          <p class="lede">{{ pg.lede }}</p>
+          <h1>{{ doc.h1 }}</h1>
+          <p class="lede">{{ doc.lede }}</p>
         </section>
 
-        <template v-for="(s, i) in pg.sections" :key="i">
+        <template v-for="(s, i) in doc.sections" :key="i">
           <section class="civic-section">
             <div class="head">
               <h2>{{ s.heading }}</h2>

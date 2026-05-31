@@ -82,6 +82,32 @@
     return content;
   }
 
+  /* Load a static page's content JSON, the same per-locale way papers load.
+     Tries: data/pages/<name>.<locale>.json
+     Falls back to: data/pages/<name>.<default_locale>.json */
+  const pageCache = {};
+  async function loadPageData(name, localeOverride) {
+    const locale = localeOverride || store.locale;
+    const cacheKey = locale + ':' + name;
+    if (pageCache[cacheKey]) return pageCache[cacheKey];
+
+    const fallback = (store.site && store.site.default_locale) || 'en';
+    const candidates = [
+      'data/pages/' + name + '.' + locale + '.json',
+      'data/pages/' + name + '.' + fallback + '.json',
+    ];
+    let content = null, lastError = null;
+    for (const url of candidates) {
+      try {
+        const res = await fetch(url, { cache: 'no-cache' });
+        if (res.ok) { content = await res.json(); break; }
+      } catch (e) { lastError = e; }
+    }
+    if (!content) throw (lastError || new Error('No content found for page ' + name));
+    pageCache[cacheKey] = content;
+    return content;
+  }
+
   function markVisited(id) {
     store.visited.add(id);
     localStorage.setItem('vw_visited', JSON.stringify([...store.visited]));
@@ -90,6 +116,7 @@
   // Expose for components
   window.VWStore = store;
   window.VWLoadPaper = loadPaper;
+  window.VWLoadPageData = loadPageData;
   window.VWMarkVisited = markVisited;
   window.VWSetLocale = applyLocale;
 

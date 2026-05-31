@@ -1,0 +1,31 @@
+{
+  "_note": "Living updates feed for one locale, newest first. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Mises à jour vivantes",
+    "title_lead": "Ce qui a",
+    "title_em": "changé.",
+    "lede": "Nouveaux constats, nouvelles versions logicielles, nouvelles preuves. Quatre ans de cycle. Du plus récent au plus ancien.",
+    "empty": "Aucune mise à jour publiée pour le moment.",
+    "kinds": {
+      "release": "Mise en service",
+      "finding": "Constat",
+      "paper": "Livre",
+      "note": "Note"
+    }
+  },
+  "entries": [
+    {
+      "id": "2026-05-23-site-launch",
+      "date": "2026-05-23",
+      "kind": "release",
+      "title": "Squelette du site mis en place",
+      "body": "La collection des livres blancs Velocity est en ligne avec la structure complète des seize livres et un projet en attente, un lecteur de présentation TL;DR, l'inspecteur d'images pour la transparence et un flux bilingue.",
+      "links": [
+        {
+          "label": "Lire le livre 1",
+          "href": "#/paper/cux4h"
+        }
+      ]
+    }
+  ]
+}

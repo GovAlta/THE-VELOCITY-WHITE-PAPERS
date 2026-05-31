@@ -1,0 +1,62 @@
+{
+  "_note": "ReposPage enrichment for one locale, keyed by paper id (short uuid). The sibling .<other>.json holds the translation. Fields not set here fall back to papers.json.",
+  "page": {
+    "eyebrow": "Public repositories",
+    "repos_word": "repositories",
+    "title_lead": "Everything is",
+    "title_em": "open source.",
+    "lede": "Every paper that ships with software publishes that software here. The site itself is in the list. No proprietary lock-in, no blind trust required.",
+    "read": "Read the paper →",
+    "empty": "No repositories published yet."
+  },
+  "repos": {
+    "dehkj": {
+      "license": "MIT",
+      "language": "Python",
+      "status": "Published",
+      "description": "Open-source toolset for pan-Canadian benchmarking of legislation, regulation, and policy. Lets a government compare its statutes against peer jurisdictions and identify where it is an outlier, where it is duplicative, where it is silent."
+    },
+    "p7p2k": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Published",
+      "description": "The generic harness, plus an Alberta.ca adaptation as a worked example. Skill files, hook layer, opinionated stack. Enterprise-grade Hello World that solves the most complex first-mile challenges."
+    },
+    "akle0": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Published",
+      "description": "Recursive, iterative scanner for an enterprise GitHub estate. Maps the technical estate, cybersecurity posture, and human estate (top contributors by language and ministry)."
+    },
+    "offjm": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Forthcoming",
+      "description": "From analysis to synthesis. Operates at the ministry scale across hundreds of systems and proposes a modular, reusable, government-owned compute architecture for that ministry."
+    },
+    "bxvjn": {
+      "license": "MIT",
+      "language": "JSON + tooling",
+      "status": "Forthcoming",
+      "description": "The downloadable JSON of the repeatable, codified business functions of government, extracted from the actual code that runs today. System-agnostic and ministry-agnostic."
+    },
+    "ln4lv": {
+      "license": "MIT",
+      "language": "Go + Terraform",
+      "status": "Forthcoming",
+      "description": "The secure sandboxed environment that allows agents to work iteratively without degrading the security posture. Where parallel models compete on the same problem."
+    },
+    "k20ck": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Forthcoming",
+      "description": "Project-management system that replaces Jira-style tooling with a point-based scoring engine. Tracks hundreds of human workers and thousands of agents across 600+ themes."
+    },
+    "tn0nj": {
+      "license": "MIT",
+      "language": "TypeScript",
+      "status": "Forthcoming",
+      "description": "The Anti-Drift Harness reference site. Skills, hooks, standards, evals, walker, tickets, anti-drift agent."
+    }
+  }
+}

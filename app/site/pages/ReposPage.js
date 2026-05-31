@@ -1,7 +1,8 @@
 /* ReposPage — list of public companion repositories released alongside papers.
-   Derived from papers.json (every paper with a `repo` field). Enriched and made
-   bilingual by data/repos.json: the `page` block holds the hero and labels
-   (en/fr), and each repo entry holds en_description / fr_description. */
+   Derived from store.papers (every paper with a `repo` field). Enriched and made
+   bilingual by data/pages/repos.<locale>.json, loaded per locale and reloaded
+   when the locale changes: the `page` block holds the hero and labels, and each
+   repo entry (keyed by paper id) holds the locale-specific description. */
 
 (function () {
   window.VWComponents = window.VWComponents || {};
@@ -9,25 +10,17 @@
   window.VWComponents['repos-page'] = {
     emits: ['navigate'],
     setup() { return { store: window.VWStore }; },
-    data() { return { enrichment: {}, page: null, error: null }; },
-    async mounted() {
-      try {
-        const res = await fetch('data/repos.json', { cache: 'no-cache' });
-        if (res.ok) {
-          const j = await res.json();
-          this.enrichment = j.repos || {};
-          this.page = j.page || null;
-        }
-      } catch { /* enrichment is optional */ }
-    },
+    data() { return { doc: null, error: null }; },
     computed: {
-      pg() { return this.page ? (this.page[this.store.locale] || this.page.en) : {}; },
+      loadKey() { return this.store.locale || 'en'; },
+      pg() { return (this.doc && this.doc.page) || {}; },
       repos() {
+        const enrichment = (this.doc && this.doc.repos) || {};
         const out = [];
         for (const p of (this.store.papers || [])) {
           if (!p.repo) continue;
           const slug = p.repo.replace('https://github.com/', '');
-          const ex = this.enrichment[p.id] || {};
+          const ex = enrichment[p.id] || {};
           out.push({
             paper_id: p.id,
             num: p.num,
@@ -38,15 +31,18 @@
             license: ex.license || 'MIT',
             language: ex.language || null,
             status: ex.status || p.status || 'Forthcoming',
-            description: ex[this.store.locale + '_description']
-                      || ex.en_description
-                      || p.subtitle,
+            description: ex.description || p.subtitle,
           });
         }
         return out;
       },
     },
+    watch: { loadKey: { handler: 'load', immediate: true } },
     methods: {
+      async load() {
+        try { this.doc = await window.VWLoadPageData('repos', this.store.locale); }
+        catch (e) { this.error = e.message; }
+      },
       openPaper(id) { this.$emit('navigate', { page: 'paper', id }); },
     },
     template: `

@@ -1,0 +1,41 @@
+{
+  "_note": "Community channels and contribution paths for one locale. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Community",
+    "title_lead": "Where to talk about",
+    "title_em": "this work.",
+    "lede": "Open forum, public issues, longer-form discussions. The modernization conversation does not happen behind a closed door.",
+    "open": "Open →",
+    "soon": "Coming soon"
+  },
+  "channels": [
+    {
+      "id": "discord",
+      "kind": "forum",
+      "href": "https://discord.gg/velocity-placeholder",
+      "available": false,
+      "label": "Velocity Discord",
+      "blurb": "An open forum for change makers. A feedback channel and a place for the modernization conversation to happen."
+    },
+    {
+      "id": "github-issues",
+      "kind": "issues",
+      "href": "https://github.com/alberta-velocity/velocity-whitepapers/issues",
+      "available": true,
+      "label": "GitHub Issues",
+      "blurb": "Bug reports, content corrections, French translation review, accessibility findings. Public."
+    },
+    {
+      "id": "github-discussions",
+      "kind": "discussions",
+      "href": "https://github.com/alberta-velocity/velocity-whitepapers/discussions",
+      "available": true,
+      "label": "GitHub Discussions",
+      "blurb": "Longer-form questions about the methodology, the harness, the tooling. Public."
+    }
+  ],
+  "contributing": {
+    "title": "Contributing",
+    "body": "The site is MIT-licensed and the content is openly published. Pull requests against the public repository are welcome. The contribution path: open an issue first to align on direction; submit a small, focused PR; pass the eval suite; cite sources for any new claim."
+  }
+}
