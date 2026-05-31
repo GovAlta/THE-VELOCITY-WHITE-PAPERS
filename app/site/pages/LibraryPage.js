@@ -10,7 +10,10 @@
       papers() {
         return (this.store.papers || []).filter(p => p.category !== 'architecture');
       },
-      featured() { return this.papers.slice(0, 2); },
+      published() { return this.papers.filter(p => p.status === 'Published'); },
+      /* Featured is dynamic: the Published stories. Falls back to the first two
+         papers only when nothing is published yet, so the hero is never empty. */
+      featured() { return this.published.length ? this.published : this.papers.slice(0, 2); },
       rest() { return this.papers.filter(p => p.status !== 'Placeholder'); },
       seriesMeta() {
         const tpl = this.store.t.section_titles?.series_meta_tpl || '{n} entries';

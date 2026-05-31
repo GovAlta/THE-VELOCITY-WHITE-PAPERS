@@ -1,7 +1,13 @@
 /* ArchitecturePage — two purposes:
    1. The agentic-architecture diagram (the layered seven-row visual).
    2. A library of category=architecture knowledge articles (technical specs
-      that sit outside the linear 1..16 reading sequence). Read on demand. */
+      that sit outside the linear 1..16 reading sequence). Read on demand.
+
+   PLACEHOLDER CONTENT (2026-05): this page is not production-ready and was
+   REMOVED FROM THE TOP NAV (see data/site.json i18n.*.nav). The route at
+   #/architecture still resolves so existing/deep links keep working, but it is
+   no longer surfaced in the menu. Flesh out the diagram + articles before
+   re-adding it to nav; do not treat the current content as final. */
 
 (function () {
   window.VWComponents = window.VWComponents || {};
