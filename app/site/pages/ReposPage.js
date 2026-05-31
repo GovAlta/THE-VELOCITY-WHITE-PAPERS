@@ -1,6 +1,7 @@
 /* ReposPage — list of public companion repositories released alongside papers.
-   Derived from papers.json (every paper with a `repo` field). Optionally
-   enriched by data/repos.json for descriptions, license, status. */
+   Derived from papers.json (every paper with a `repo` field). Enriched and made
+   bilingual by data/repos.json: the `page` block holds the hero and labels
+   (en/fr), and each repo entry holds en_description / fr_description. */
 
 (function () {
   window.VWComponents = window.VWComponents || {};
@@ -8,17 +9,19 @@
   window.VWComponents['repos-page'] = {
     emits: ['navigate'],
     setup() { return { store: window.VWStore }; },
-    data() { return { enrichment: {}, error: null }; },
+    data() { return { enrichment: {}, page: null, error: null }; },
     async mounted() {
       try {
         const res = await fetch('data/repos.json', { cache: 'no-cache' });
         if (res.ok) {
           const j = await res.json();
           this.enrichment = j.repos || {};
+          this.page = j.page || null;
         }
       } catch { /* enrichment is optional */ }
     },
     computed: {
+      pg() { return this.page ? (this.page[this.store.locale] || this.page.en) : {}; },
       repos() {
         const out = [];
         for (const p of (this.store.papers || [])) {
@@ -51,14 +54,12 @@
         <section class="civic-hero">
           <div class="civic-eyebrow">
             <span class="dot"></span>
-            <span>{{ store.locale === 'fr' ? 'Dépôts publics' : 'Public repositories' }}</span>
+            <span>{{ pg.eyebrow }}</span>
             <span>·</span>
-            <span>{{ repos.length }} {{ store.locale === 'fr' ? 'dépôts' : 'repositories' }}</span>
+            <span>{{ repos.length }} {{ pg.repos_word }}</span>
           </div>
-          <h1>{{ store.locale === 'fr' ? 'Tout est' : 'Everything is' }} <em>{{ store.locale === 'fr' ? 'libre.' : 'open source.' }}</em></h1>
-          <p class="lede">{{ store.locale === 'fr'
-            ? "Chaque livre blanc qui s'accompagne d'un logiciel publie ce logiciel ici. Le site lui-même est dans cette liste. Aucun verrouillage propriétaire, aucune confiance aveugle."
-            : 'Every paper that ships with software publishes that software here. The site itself is in the list. No proprietary lock-in, no blind trust required.' }}</p>
+          <h1>{{ pg.title_lead }} <em>{{ pg.title_em }}</em></h1>
+          <p class="lede">{{ pg.lede }}</p>
         </section>
 
         <section class="civic-section">
@@ -78,12 +79,12 @@
                 </div>
               </div>
               <button class="repo-link" @click="openPaper(r.paper_id)">
-                {{ store.locale === 'fr' ? 'Lire le livre →' : 'Read the paper →' }}
+                {{ pg.read }}
               </button>
             </li>
           </ul>
           <div v-if="!repos.length" style="color:var(--ink-50);font-family:var(--font-mono);padding:24px 0;">
-            {{ store.locale === 'fr' ? 'Aucun dépôt publié pour le moment.' : 'No repositories published yet.' }}
+            {{ pg.empty }}
           </div>
         </section>
 

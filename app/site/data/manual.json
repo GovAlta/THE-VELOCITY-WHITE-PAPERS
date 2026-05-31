@@ -1,0 +1,107 @@
+{
+  "_note": "Operator's manual content. Bilingual. Prose follows style-guide/00. Paragraph and step strings may contain inline <code> and <strong> markup and are rendered with v-html, so keep them to trusted static content only.",
+  "en": {
+    "eyebrow": ["Operator's manual", "Local authoring"],
+    "h1": "How this platform is built and run",
+    "lede": "The Velocity White Papers are a static, bilingual, open-source site. Vue runs from a CDN, the content is JSON, images and audio are files, and GitHub Pages serves the result. There is no backend in production. You author locally through a dev-only editor, and the published site stays read-only. This page sets out how to fill it and ship it.",
+    "sections": [
+      {
+        "heading": "Who does what",
+        "paras": [
+          "The human is the architect, the author, and the reviewer. You decide the collection, the order, the argument of each paper, and the voice. You accept or reject every AI suggestion. Nothing the AI produces reaches a file without your sign-off.",
+          "The AI drafts, refines, translates, and generates assets, always as proposals. It scaffolds a body from your raw material, tightens prose against the style guides, translates a paper into the other language, and produces imagery and narration. It never invents facts, and it never publishes on its own."
+        ]
+      },
+      {
+        "heading": "Start the editor",
+        "paras": [
+          "From <code>app/site</code>, run <code>npm run edit</code>. This serves the site at <code>127.0.0.1:5173</code> and turns editing on. The gate is local-only, so the public site can never be edited. The server reads <code>.env</code> for the Vertex service account (Claude), the OpenAI key (images), and the ElevenLabs key (audio). Open the site and click <strong>Edit</strong> in the toolbar.",
+          "Run <code>npm run dev</code> for a read-only preview with no editor. Run <code>npm run preview</code> to serve the site through the same server without turning editing on."
+        ]
+      },
+      {
+        "heading": "The life of a paper",
+        "meta": "add, draft, refine, assets, translate, publish",
+        "steps": [
+          "<strong>Add it to the collection.</strong> On the Index at <code>#/index</code> in edit mode, use <strong>+ Add paper</strong> and give it an id, a title, and a tier. The number and the sequence are derived from order position. Reorder with the up and down controls and the numbering follows. <code>data/papers.json</code> is generated, so you never edit it by hand.",
+          "<strong>Draft the body.</strong> Build from scratch, or paste a rough Markdown draft and let the AI fill the paper schema: sections, paragraphs, TL;DR, and metadata. When the source is mixed, the source hierarchy applies. Your prose is the spine, the code is the technical ground truth, and transcripts are third-order and never quoted verbatim.",
+          "<strong>Refine the prose.</strong> Use <strong>AI</strong> on a paragraph, <strong>Revise §</strong> on a section, or <strong>Revise paper</strong>. Pick style guides or give direction, choose Sonnet for speed or Opus for the heavier passes, then accept or reject each change. The guides apply to the prose the AI generates. They leave your own wording alone.",
+          "<strong>Generate the imagery.</strong> On each figure or slide, write an image prompt and click <strong>Generate</strong> or <strong>Regenerate</strong>. The image is produced from the prompt and saved with a metadata sidecar, and the inspector shows the prompt that made it.",
+          "<strong>Generate the narration.</strong> In the TL;DR slide editor, write each slide's narration and click <strong>Generate narration</strong>. The full-paper audio comes from the script through <code>npm run generate:audio</code>.",
+          "<strong>Translate and build the other language.</strong> Set the canonical primary locale, then use <strong>Translate</strong>. It clones the structure into the target language, translates every string, and regenerates the target images and audio. The target is overwritten. A sync chip shows when a translation falls behind its source.",
+          "<strong>Publish.</strong> Set the paper's status to Published. It then appears on the home page and counts in the sequence. Save, then commit and push."
+        ]
+      },
+      {
+        "heading": "What the editor changes",
+        "paras": [
+          "In edit mode you click any heading, paragraph, abstract, title, caption, or narration to edit its source, and the Markdown renders when you click off. You reorder, insert, and delete blocks. You reorder, add, and delete TL;DR slides. You edit figure prompts and captions. You edit paper metadata such as tier, status, read time, and tags. The contents menu reorders sections by drag and renumbers them. The Guides panel lets you curate the editable style guides. Save writes back to the JSON through the local edit-server."
+        ]
+      },
+      {
+        "heading": "Voice and substance",
+        "paras": [
+          "Two disciplines govern every reader-visible string. Substance comes first. Every claim traces to a source, every number says what it measures, and nothing is invented. Voice comes second. Match the author's exemplar, which is flowing, first person, and specific. Treat the style rules as a list of things to avoid adding. Do not use them to flatten the author's own sentences. When the author wrote the words, the words stand, and the AI fixes only what is wrong."
+        ]
+      },
+      {
+        "heading": "How it is stored and shipped",
+        "paras": [
+          "Each paper is two JSON files, <code>&lt;id&gt;.en.json</code> and <code>&lt;id&gt;.fr.json</code>, under <code>data/papers</code>. The inventory <code>data/papers.json</code> and the numbers are generated from <code>data/order.json</code> and the primary files, so they cannot drift. Images and audio live under <code>public</code>. You work locally, commit, and push to GitHub, and GitHub Pages serves the static result. Secrets, internal source material, and recordings stay out of the repository."
+        ]
+      }
+    ]
+  },
+  "fr": {
+    "eyebrow": ["Manuel de l'opérateur", "Rédaction en local"],
+    "h1": "Comment cette plateforme est construite et exploitée",
+    "lede": "Les livres blancs Velocity forment un site statique, bilingue et libre. Vue s'exécute depuis un CDN, le contenu est en JSON, les images et l'audio sont des fichiers, et GitHub Pages sert le résultat. Il n'y a aucun serveur d'application en production. Vous rédigez en local au moyen d'un éditeur réservé au développement, et le site publié reste en lecture seule. Cette page explique comment le remplir et le mettre en service.",
+    "sections": [
+      {
+        "heading": "Qui fait quoi",
+        "paras": [
+          "L'humain est l'architecte, l'auteur et le réviseur. Vous décidez de la collection, de l'ordre, de l'argument de chaque livre et de la voix. Vous acceptez ou rejetez chaque suggestion de l'IA. Rien de ce que produit l'IA n'atteint un fichier sans votre approbation.",
+          "L'IA rédige, peaufine, traduit et génère les ressources, toujours sous forme de propositions. Elle échafaude un corps à partir de votre matière brute, resserre la prose selon les guides de style, traduit un livre dans l'autre langue et produit les images et la narration. Elle n'invente jamais de faits, et elle ne publie jamais d'elle-même."
+        ]
+      },
+      {
+        "heading": "Démarrer l'éditeur",
+        "paras": [
+          "Depuis <code>app/site</code>, lancez <code>npm run edit</code>. Cela sert le site à <code>127.0.0.1:5173</code> et active l'édition. La barrière est locale seulement, donc le site public ne peut jamais être édité. Le serveur lit <code>.env</code> pour le compte de service Vertex (Claude), la clé OpenAI (images) et la clé ElevenLabs (audio). Ouvrez le site et cliquez sur <strong>Modifier</strong> dans la barre d'outils.",
+          "Lancez <code>npm run dev</code> pour un aperçu en lecture seule sans éditeur. Lancez <code>npm run preview</code> pour servir le site par le même serveur sans activer l'édition."
+        ]
+      },
+      {
+        "heading": "La vie d'un livre",
+        "meta": "ajouter, rédiger, peaufiner, ressources, traduire, publier",
+        "steps": [
+          "<strong>Ajoutez-le à la collection.</strong> Dans l'Index à <code>#/index</code> en mode édition, utilisez <strong>+ Ajouter un livre</strong> et donnez-lui un identifiant, un titre et un palier. Le numéro et la séquence se déduisent de la position dans l'ordre. Réordonnez avec les commandes haut et bas et la numérotation suit. <code>data/papers.json</code> est généré, vous ne l'éditez donc jamais à la main.",
+          "<strong>Rédigez le corps.</strong> Partez de zéro, ou collez un brouillon Markdown approximatif et laissez l'IA remplir le schéma du livre : sections, paragraphes, TL;DR et métadonnées. Quand la source est mixte, la hiérarchie des sources s'applique. Votre prose est la colonne vertébrale, le code est la vérité technique de terrain, et les transcriptions sont de troisième ordre et ne sont jamais citées mot à mot.",
+          "<strong>Peaufinez la prose.</strong> Utilisez <strong>IA</strong> sur un paragraphe, <strong>Réviser §</strong> sur une section, ou <strong>Réviser le livre</strong>. Choisissez des guides de style ou donnez une consigne, choisissez Sonnet pour la vitesse ou Opus pour les passes plus lourdes, puis acceptez ou rejetez chaque changement. Les guides s'appliquent à la prose que l'IA génère. Ils laissent vos propres formulations intactes.",
+          "<strong>Générez les images.</strong> Sur chaque figure ou diapositive, écrivez une consigne d'image et cliquez sur <strong>Générer</strong> ou <strong>Régénérer</strong>. L'image est produite à partir de la consigne et enregistrée avec un fichier de métadonnées, et l'inspecteur montre la consigne qui l'a produite.",
+          "<strong>Générez la narration.</strong> Dans l'éditeur de diapositives TL;DR, écrivez la narration de chaque diapositive et cliquez sur <strong>Générer la narration</strong>. L'audio du livre complet provient du script par <code>npm run generate:audio</code>.",
+          "<strong>Traduisez et construisez l'autre langue.</strong> Définissez la langue principale canonique, puis utilisez <strong>Traduire</strong>. Elle clone la structure dans la langue cible, traduit chaque chaîne et régénère les images et l'audio de la cible. La cible est écrasée. Une pastille de synchronisation indique quand une traduction prend du retard sur sa source.",
+          "<strong>Publiez.</strong> Réglez le statut du livre à Publié. Il paraît alors sur la page d'accueil et compte dans la séquence. Enregistrez, puis validez et poussez."
+        ]
+      },
+      {
+        "heading": "Ce que l'éditeur modifie",
+        "paras": [
+          "En mode édition, vous cliquez sur tout titre, paragraphe, résumé, titre de page, légende ou narration pour en éditer la source, et le Markdown se rend quand vous cliquez ailleurs. Vous réordonnez, insérez et supprimez des blocs. Vous réordonnez, ajoutez et supprimez des diapositives TL;DR. Vous éditez les consignes et les légendes de figures. Vous éditez les métadonnées du livre comme le palier, le statut, le temps de lecture et les étiquettes. Le menu du sommaire réordonne les sections par glisser et les renumérote. Le panneau Guides vous permet de tenir à jour les guides de style modifiables. Enregistrer réécrit dans le JSON par le serveur d'édition local."
+        ]
+      },
+      {
+        "heading": "Voix et substance",
+        "paras": [
+          "Deux disciplines régissent chaque chaîne visible par le lecteur. La substance vient en premier. Chaque affirmation remonte à une source, chaque nombre dit ce qu'il mesure, et rien n'est inventé. La voix vient ensuite. Calquez l'exemplaire de l'auteur, qui est fluide, à la première personne et précis. Traitez les règles de style comme une liste de choses à ne pas ajouter. Ne vous en servez pas pour aplatir les phrases de l'auteur. Quand l'auteur a écrit les mots, les mots restent, et l'IA ne corrige que ce qui est faux."
+        ]
+      },
+      {
+        "heading": "Comment c'est stocké et expédié",
+        "paras": [
+          "Chaque livre est deux fichiers JSON, <code>&lt;id&gt;.en.json</code> et <code>&lt;id&gt;.fr.json</code>, sous <code>data/papers</code>. L'inventaire <code>data/papers.json</code> et les numéros sont générés à partir de <code>data/order.json</code> et des fichiers principaux, ils ne peuvent donc pas dériver. Les images et l'audio vivent sous <code>public</code>. Vous travaillez en local, validez et poussez vers GitHub, et GitHub Pages sert le résultat statique. Les secrets, la matière source interne et les enregistrements restent hors du dépôt."
+        ]
+      }
+    ]
+  }
+}

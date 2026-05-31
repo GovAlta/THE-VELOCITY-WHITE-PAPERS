@@ -1,5 +1,23 @@
 {
-  "_note": "Community channels and contribution paths. Update href values as channels go live.",
+  "_note": "Community channels and contribution paths. Update href values as channels go live. The `page` block holds the bilingual hero and labels.",
+  "page": {
+    "en": {
+      "eyebrow": "Community",
+      "title_lead": "Where to talk about",
+      "title_em": "this work.",
+      "lede": "Open forum, public issues, longer-form discussions. The modernization conversation does not happen behind a closed door.",
+      "open": "Open →",
+      "soon": "Coming soon"
+    },
+    "fr": {
+      "eyebrow": "Communauté",
+      "title_lead": "Où parler de",
+      "title_em": "tout ceci.",
+      "lede": "Forum ouvert, tickets publics, discussions de fond. La conversation sur la modernisation ne se tient pas en privé.",
+      "open": "Ouvrir →",
+      "soon": "À venir"
+    }
+  },
   "channels": [
     {
       "id": "discord",
