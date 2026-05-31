@@ -49,7 +49,7 @@
             <div class="vw-guides-editor">
               <textarea v-if="active" v-model="draft" spellcheck="false" :aria-label="active.title + ' content'"></textarea>
               <div class="vw-guides-foot" v-if="active">
-                <span class="vw-muted">{{ active.kind === 'json' ? 'JSON — must stay valid' : 'Markdown' }} · saves over the local file</span>
+                <span class="vw-muted">{{ active.kind === 'json' ? 'JSON, must stay valid' : 'Markdown' }} · saves over the local file</span>
                 <button class="vw-gen-btn" @click="save()" :disabled="saving">{{ saving ? 'Saving…' : 'Save guide' }}</button>
               </div>
             </div>
@@ -92,7 +92,7 @@
               <textarea v-model="d.markdown" rows="10" placeholder="Paste your rough draft. Headings become sections; prose becomes paragraphs; the AI never invents facts and marks gaps." aria-label="Markdown draft"></textarea>
             </template>
             <div v-if="result" class="vw-proposal" style="margin-top:12px">
-              <div class="vw-proposal-head">Draft preview — {{ (result.sections || []).length }} sections, {{ (result.blocks || []).length }} blocks, {{ ((result.tldr_presentation && result.tldr_presentation.slides) || []).length }} slides</div>
+              <div class="vw-proposal-head">Draft preview: {{ (result.sections || []).length }} sections, {{ (result.blocks || []).length }} blocks, {{ ((result.tldr_presentation && result.tldr_presentation.slides) || []).length }} slides</div>
               <div class="vw-proposal-text"><strong>Abstract:</strong> {{ (result.abstract || '').slice(0, 240) }}{{ (result.abstract || '').length > 240 ? '…' : '' }}</div>
               <div v-if="(d.warnings || []).length" class="vw-muted" style="margin-top:6px">Warnings: {{ d.warnings.join('; ') }}</div>
             </div>
@@ -120,7 +120,7 @@
       <div v-if="open" class="vw-modal-backdrop" @click.self="close()">
         <div class="vw-modal vw-revise" role="dialog" aria-modal="true" aria-label="Translate and build">
           <div class="vw-modal-head">
-            <strong>Translate &amp; build — from {{ source.toUpperCase() }} (canonical)</strong>
+            <strong>Translate &amp; build, from {{ source.toUpperCase() }} (canonical)</strong>
             <button class="vw-x" @click="close()" aria-label="Close">×</button>
           </div>
           <div class="vw-revise-body">
@@ -174,7 +174,7 @@
       <div v-if="open" class="vw-modal-backdrop" @click.self="close()">
         <div class="vw-modal vw-revise" role="dialog" aria-modal="true" aria-label="Revise with AI">
           <div class="vw-modal-head">
-            <strong>Revise with AI — {{ scope }}</strong>
+            <strong>Revise with AI: {{ scope }}</strong>
             <button class="vw-x" @click="close()" aria-label="Close">×</button>
           </div>
           <div class="vw-revise-body">

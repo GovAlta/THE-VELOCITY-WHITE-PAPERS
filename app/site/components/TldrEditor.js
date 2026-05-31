@@ -68,7 +68,7 @@
     },
     template: `
       <div class="vw-tldr-editor">
-        <div class="vw-tldr-head">TL;DR slides — {{ slides.length }}<span class="vw-muted"> · narration edits need <code>npm run generate:audio</code> to refresh the MP3</span></div>
+        <div class="vw-tldr-head">TL;DR slides: {{ slides.length }}<span class="vw-muted"> · narration edits need <code>npm run generate:audio</code> to refresh the MP3</span></div>
         <div v-for="(s, i) in slides" :key="s.id" class="vw-slide">
           <div class="vw-slide-bar">
             <span class="vw-slide-id">Slide {{ s.id }}</span>

@@ -263,7 +263,7 @@
         this.guides = await r.json();
         if (!this.guides.length) this.guidesError = 'No guides were returned.';
       } catch (e) {
-        this.guidesError = 'Could not load style guides. Restart the editor server with "npm run edit" — a server started before this feature will not have the guides endpoint.';
+        this.guidesError = 'Could not load style guides. Restart the editor server with "npm run edit". A server started before this feature will not have the guides endpoint.';
       } finally { this.guidesLoading = false; }
     },
     openGuides() { this.guidesOpen = true; if (!this.guides.length) this.loadGuides(); },

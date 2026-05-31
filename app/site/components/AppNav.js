@@ -33,7 +33,7 @@
       <nav class="civic-nav" v-if="store.site" :class="{ 'drawer-open': drawerOpen }">
         <a class="brand" href="#/"
            @click="onNavigate('library')"
-           :aria-label="(store.locale === 'fr' ? 'Accueil — ' : 'Home — ') + store.t.title">
+           :aria-label="(store.locale === 'fr' ? 'Accueil, ' : 'Home, ') + store.t.title">
           <img src="assets/alberta-wordmark.png"
                alt="Government of Alberta"
                width="100" height="28"

@@ -27,7 +27,7 @@
           <a v-for="p in papers" :key="p.id"
              :href="'#/paper/' + p.id"
              class="tile"
-             :aria-label="(store.locale === 'fr' ? 'Livre ' : 'Paper ') + p.num + ' — ' + p.title + ', ' + p.tier"
+             :aria-label="(store.locale === 'fr' ? 'Livre ' : 'Paper ') + p.num + ', ' + p.title + ', ' + p.tier"
              @click.prevent="$emit('open', p.id)">
             <div class="ref" aria-hidden="true">№ {{ p.num }} · {{ p.tier }}</div>
             <h4>{{ p.title }}</h4>

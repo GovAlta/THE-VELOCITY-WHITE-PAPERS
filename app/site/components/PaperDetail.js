@@ -189,7 +189,7 @@
                     <option value="en">EN</option><option value="fr">FR</option>
                   </select>
                 </label>
-                <label v-if="edit.drift">Language sync<span class="vw-meta-ro" :class="{ 'vw-stale': edit.drift.hasTranslation && !edit.drift.inSync }">{{ edit.drift.hasTranslation ? (edit.drift.inSync ? edit.drift.target.toUpperCase() + ' in sync' : edit.drift.target.toUpperCase() + ' out of date — re-translate') : edit.drift.target.toUpperCase() + ' not yet built' }}</span></label>
+                <label v-if="edit.drift">Language sync<span class="vw-meta-ro" :class="{ 'vw-stale': edit.drift.hasTranslation && !edit.drift.inSync }">{{ edit.drift.hasTranslation ? (edit.drift.inSync ? edit.drift.target.toUpperCase() + ' in sync' : edit.drift.target.toUpperCase() + ' out of date, re-translate') : edit.drift.target.toUpperCase() + ' not yet built' }}</span></label>
               </div>
               <div class="vw-meta-row">
                 <label>No. (derived)<span class="vw-meta-ro">{{ paper.num || '—' }}</span></label>
@@ -244,7 +244,7 @@
                   </div>
                   <block-renderer :block="b" :paper="paper" @open="$emit('open', $event)" />
                   <div v-if="b.__ai != null" class="vw-proposal">
-                    <div class="vw-proposal-head">AI proposal — review before it is saved</div>
+                    <div class="vw-proposal-head">AI proposal. Review before it is saved.</div>
                     <div class="vw-proposal-text" v-html="md(b.__ai)"></div>
                     <div class="vw-proposal-actions">
                       <button class="vw-gen-btn" @click="edit.acceptProposal(b)">Accept</button>
