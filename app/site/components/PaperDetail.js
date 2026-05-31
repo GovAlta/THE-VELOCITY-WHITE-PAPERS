@@ -34,7 +34,7 @@
       };
     },
     watch: {
-      paper: { handler(p) { if (window.VWEdit) window.VWEdit.setCurrent(p); }, immediate: true },
+      paper: { handler(p) { if (window.VWEdit) { window.VWEdit.setCurrent(p); if (window.VWEdit.enabled) window.VWEdit.detectDrift(); } }, immediate: true },
       tocOpen(open) {
         /* Focus trap is only active on mobile where the TOC is a drawer.
            On desktop the col-toc is a static sidebar and the trap would be wrong. */
@@ -183,6 +183,14 @@
             </div>
 
             <div v-if="edit && edit.enabled" class="vw-meta-edit">
+              <div class="vw-meta-row">
+                <label>Primary locale (canonical structure)
+                  <select :value="paper.primary_locale || 'en'" @change="edit.setPrimaryLocale($event.target.value)">
+                    <option value="en">EN</option><option value="fr">FR</option>
+                  </select>
+                </label>
+                <label v-if="edit.drift">Language sync<span class="vw-meta-ro" :class="{ 'vw-stale': edit.drift.hasTranslation && !edit.drift.inSync }">{{ edit.drift.hasTranslation ? (edit.drift.inSync ? edit.drift.target.toUpperCase() + ' in sync' : edit.drift.target.toUpperCase() + ' out of date — re-translate') : edit.drift.target.toUpperCase() + ' not yet built' }}</span></label>
+              </div>
               <div class="vw-meta-row">
                 <label>No. (derived)<span class="vw-meta-ro">{{ paper.num || '—' }}</span></label>
                 <label>Sequence (derived)<span class="vw-meta-ro">{{ paper.sequence || '—' }}</span></label>

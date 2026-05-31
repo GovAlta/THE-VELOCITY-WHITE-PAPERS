@@ -36,6 +36,8 @@
     guidesLoading: false,
     guidesError: '',
     revise: { open: false, scope: '', blocks: [], guideIds: [], instructions: '', running: false, model: 'sonnet' },
+    translate: { open: false, target: 'fr', model: 'sonnet', regenImages: true, regenAudio: false, running: false },
+    drift: null,           // { primary, inSync, hasTranslation, translatedAt } for the current paper
 
     /* The JSON is bilingual: data/papers/<id>.en.json and <id>.fr.json are two
        separate files. The page loads one locale at a time, so editing operates
@@ -318,6 +320,90 @@
     rejectAllProposals() { const p = this.current; if (!p) return; for (const b of p.blocks) if (b.__ai != null) delete b.__ai; },
     hasProposals() { const p = this.current; return !!(p && p.blocks && p.blocks.some((b) => b.__ai != null)); },
 
+    /* ---- Hard translate + asset regeneration ----------------------------- */
+    /* The locale currently on screen is the canonical source; this builds the
+       target locale as a structural clone, translates every string, and
+       regenerates the target assets. It OVERWRITES the target. */
+    openTranslate() {
+      const cur = (window.VWStore && window.VWStore.locale) || 'en';
+      this.translate.target = cur === 'fr' ? 'en' : 'fr';
+      this.translate.open = true;
+      this.translate.running = false;
+    },
+    closeTranslate() { this.translate.open = false; },
+    async translatePaper() {
+      const id = this.current && this.current.id;
+      const src = (window.VWStore && window.VWStore.locale) || 'en';
+      const tgt = this.translate.target;
+      if (!id || src === tgt) { this.status = 'Pick a target locale different from the one you are viewing.'; return; }
+      this.translate.running = true;
+      this.status = 'Translating ' + id + ' ' + src.toUpperCase() + ' → ' + tgt.toUpperCase() + '…';
+      try {
+        const res = await fetch('/api/translate-paper', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id, sourceLocale: src, targetLocale: tgt, model: this.translate.model }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+
+        if (this.translate.regenImages) {
+          const imgs = d.images || [];
+          for (let i = 0; i < imgs.length; i++) {
+            this.status = 'Translated text. Regenerating image ' + (i + 1) + '/' + imgs.length + '…';
+            await fetch('/api/generate-image', {
+              method: 'POST', headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ src: imgs[i].src, prompt: imgs[i].image_prompt, style_kind: imgs[i].style_kind || 'diagram', locale: tgt, conditionFrom: src }),
+            }).catch(() => {});
+          }
+        }
+        if (this.translate.regenAudio) {
+          const au = d.audio || [];
+          for (let i = 0; i < au.length; i++) {
+            this.status = 'Regenerating narration ' + (i + 1) + '/' + au.length + '…';
+            await fetch('/api/generate-audio', {
+              method: 'POST', headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ text: au[i].text, out: au[i].out }),
+            }).catch(() => {});
+          }
+        }
+        this.translate.open = false;
+        this.status = 'Built ' + tgt.toUpperCase() + ' from ' + src.toUpperCase() + ': ' + d.translated + ' strings'
+          + (this.translate.regenImages ? ', images' : '') + (this.translate.regenAudio ? ', audio' : '')
+          + '. Switch to ' + tgt.toUpperCase() + ' to review.';
+        this.detectDrift();
+      } catch (e) {
+        this.status = 'Translate failed: ' + ((e && e.message) || e) + ' (needs npm run edit + Vertex/keys in .env)';
+      } finally { this.translate.running = false; }
+    },
+
+    /* primary_locale: which locale owns the structure. Written into both files. */
+    async setPrimaryLocale(loc) {
+      const id = this.current && this.current.id;
+      if (!id) return;
+      for (const l of ['en', 'fr']) {
+        try {
+          const r = await fetch('data/papers/' + id + '.' + l + '.json', { cache: 'no-cache' });
+          if (!r.ok) continue;
+          const pf = await r.json();
+          pf.primary_locale = loc;
+          await this._writeJson('data/papers/' + id + '.' + l + '.json', pf);
+        } catch (_) {}
+      }
+      if (this.current) this.current.primary_locale = loc;
+      this.status = 'Primary locale set to ' + loc.toUpperCase() + ' for ' + id + '.';
+      this.detectDrift();
+    },
+
+    /* Staleness: is the target locale in sync with the canonical it was built from? */
+    async detectDrift() {
+      const id = this.current && this.current.id;
+      if (!id) { this.drift = null; return; }
+      try {
+        const r = await fetch('/api/structure-drift?id=' + encodeURIComponent(id), { cache: 'no-cache' });
+        if (r.ok) this.drift = await r.json(); else this.drift = null;
+      } catch (_) { this.drift = null; }
+    },
+
     /* ---- The index: add and reorder papers ------------------------------- */
     async _writeJson(path, obj) {
       const res = await fetch('/api/save-json', {
@@ -469,6 +555,7 @@
           </span>
           <button type="button" class="vw-edit-btn" @click="edit.openGuides()">Guides</button>
           <button type="button" class="vw-edit-btn" @click="edit.openRevise('paper', edit.current ? edit.current.blocks : [])" :disabled="!edit.current">Revise paper</button>
+          <button type="button" class="vw-edit-btn" @click="edit.openTranslate()" :disabled="!edit.current">Translate</button>
           <template v-if="edit.hasProposals()">
             <button type="button" class="vw-edit-btn vw-edit-accept" @click="edit.acceptAllProposals()">Accept all</button>
             <button type="button" class="vw-edit-btn" @click="edit.rejectAllProposals()">Reject all</button>

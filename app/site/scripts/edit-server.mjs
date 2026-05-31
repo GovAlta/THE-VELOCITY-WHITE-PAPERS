@@ -26,8 +26,9 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve, extname } from 'node:path';
 import { readFile as readFileP } from 'node:fs/promises';
 import { generatePNG, generatePNGFromReference } from './lib/images.mjs';
-import { reviseItems } from './lib/llm.mjs';
+import { reviseItems, translateItems } from './lib/llm.mjs';
 import { buildIndex } from './lib/index-build.mjs';
+import { collectTranslatable, retargetPaths, computeSignature } from './lib/translatable.mjs';
 
 /* The style guides the editor can view, curate, and save. The .md files live
    one level above the site (style-guide/); image-style is inside the site. The
@@ -90,12 +91,15 @@ async function handleGenerate(body, res) {
     const composed = buildPrompt(style, loc, prompt);
     const outPath = resolve(SITE, src);
 
-    // FR conditions on the EN source PNG when present, to keep the bilingual pair consistent.
+    // Condition on the source-locale PNG when present, to keep the bilingual
+    // pair consistent. conditionFrom is the canonical locale; absent, the legacy
+    // fr->en default is preserved so existing behavior is unchanged.
     let refAbs = null;
-    if (loc === 'fr') {
-      const enSrc = src.replace('/fr/', '/en/').replace(/\.jpg$/i, '.source.png');
-      const enAbs = resolve(SITE, enSrc);
-      if (existsSync(enAbs)) refAbs = enAbs;
+    const refLoc = body.conditionFrom || (loc === 'fr' ? 'en' : null);
+    if (refLoc && refLoc !== loc) {
+      const refSrc = src.replace('/' + loc + '/', '/' + refLoc + '/').replace(/\.jpg$/i, '.source.png');
+      const cand = resolve(SITE, refSrc);
+      if (existsSync(cand)) refAbs = cand;
     }
 
     const pngBuf = refAbs ? await generatePNGFromReference(composed, refAbs) : await generatePNG(composed);
@@ -225,6 +229,78 @@ async function handleDeletePaper(body, res) {
   } catch (e) { return sendJSON(res, 500, { error: (e && e.message) || String(e) }); }
 }
 
+/* Hard translate-and-build: clone the source structure into the target, translate
+   every string, retarget asset paths, stamp status + signature. Returns the asset
+   slots for the client to regenerate (images conditioned on the source PNG). */
+async function handleTranslatePaper(body, res) {
+  if (!EDIT_ENABLED) return sendJSON(res, 403, { error: 'Editing is disabled in this environment.' });
+  try {
+    const id = String(body.id || '');
+    const src = String(body.sourceLocale || '');
+    const tgt = String(body.targetLocale || '');
+    if (!/^[a-z0-9][a-z0-9-]*$/.test(id) || !['en', 'fr'].includes(src) || !['en', 'fr'].includes(tgt) || src === tgt) {
+      return sendJSON(res, 400, { error: 'Need id and distinct sourceLocale/targetLocale (en|fr).' });
+    }
+    const srcPath = resolve(SITE, 'data/papers/' + id + '.' + src + '.json');
+    if (!existsSync(srcPath)) return sendJSON(res, 404, { error: 'Source file not found: ' + id + '.' + src });
+
+    const source = JSON.parse(readFileSync(srcPath, 'utf8'));
+    const target = JSON.parse(JSON.stringify(source));   // structural clone (hard overwrite, no merge)
+
+    const items = collectTranslatable(target);
+    const map = {};
+    for (let i = 0; i < items.length; i += 40) {
+      const batch = items.slice(i, i + 40).map((it) => ({ key: it.key, text: it.text }));
+      const out = await translateItems({ items: batch, sourceLocale: src, targetLocale: tgt, tier: body.model === 'opus' ? 'opus' : 'sonnet' });
+      for (const r of (out || [])) map[r.key] = r.revised;
+    }
+    let n = 0;
+    for (const it of items) if (map[it.key] != null) { it.apply(map[it.key]); n++; }
+
+    const modelId = (body.model === 'opus' ? process.env.VERTEX_CLAUDE_OPUS_MODEL : process.env.VERTEX_CLAUDE_SONNET_MODEL) || 'claude-sonnet-4-6';
+    retargetPaths(target, src, tgt);
+    target.translation_status = 'draft';
+    target._meta = target._meta || {};
+    target._meta.translated_from = { source_locale: src, model: modelId, translated_at: new Date().toISOString() };
+    target.source_signature = computeSignature(source);
+
+    await writeFile(resolve(SITE, 'data/papers/' + id + '.' + tgt + '.json'), JSON.stringify(target, null, 2) + '\n');
+
+    const images = [];
+    if (target.hero_image && target.hero_image.src) images.push({ src: target.hero_image.src, image_prompt: target.hero_image.image_prompt, style_kind: target.hero_image.style_kind });
+    (target.blocks || []).forEach((b) => { if (b.image && b.image.src) images.push({ src: b.image.src, image_prompt: b.image.image_prompt, style_kind: b.image.style_kind }); });
+    ((target.tldr_presentation && target.tldr_presentation.slides) || []).forEach((s) => { if (s.image && s.image.src) images.push({ src: s.image.src, image_prompt: s.image.image_prompt, style_kind: s.image.style_kind }); });
+    const audio = [];
+    ((target.tldr_presentation && target.tldr_presentation.slides) || []).forEach((s) => { if (s.audio_file && s.text) audio.push({ out: s.audio_file, text: s.text }); });
+
+    console.log('Translated ' + id + ' ' + src + '->' + tgt + ' (' + n + ' strings, ' + images.length + ' images, ' + audio.length + ' audio)');
+    return sendJSON(res, 200, { translated: n, images, audio, targetLocale: tgt });
+  } catch (e) { return sendJSON(res, 500, { error: (e && e.message) || String(e) }); }
+}
+
+/* Is the target locale in sync with the canonical it was translated from? */
+function handleDrift(reqUrl, res) {
+  try {
+    const id = new URL('http://x' + reqUrl).searchParams.get('id') || '';
+    if (!/^[a-z0-9][a-z0-9-]*$/.test(id)) return sendJSON(res, 400, { error: 'bad id' });
+    const read = (loc) => { const p = resolve(SITE, 'data/papers/' + id + '.' + loc + '.json'); return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : null; };
+    const en = read('en'); const fr = read('fr');
+    if (!en && !fr) return sendJSON(res, 404, { error: 'not found' });
+    const primary = (en && en.primary_locale) || (fr && fr.primary_locale) || 'en';
+    const source = primary === 'fr' ? fr : en;
+    const target = primary === 'fr' ? en : fr;
+    if (!source) return sendJSON(res, 200, { primary, target: primary === 'fr' ? 'en' : 'fr', hasTranslation: false, inSync: false });
+    const tgtSig = target && target.source_signature;
+    return sendJSON(res, 200, {
+      primary,
+      target: primary === 'fr' ? 'en' : 'fr',
+      hasTranslation: !!(target && tgtSig),
+      inSync: !!(tgtSig && tgtSig === computeSignature(source)),
+      translatedAt: (target && target._meta && target._meta.translated_from && target._meta.translated_from.translated_at) || null,
+    });
+  } catch (e) { return sendJSON(res, 500, { error: (e && e.message) || String(e) }); }
+}
+
 function handleBuildIndex(res) {
   if (!EDIT_ENABLED) return sendJSON(res, 403, { error: 'Editing is disabled in this environment.' });
   try {
@@ -247,6 +323,9 @@ const server = createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/api/style-guides') {
     handleStyleGuides(res); return;
   }
+  if (req.method === 'GET' && req.url.indexOf('/api/structure-drift') === 0) {
+    handleDrift(req.url, res); return;
+  }
   if (req.method === 'POST' && req.url === '/api/generate-image') { readBody(req, (b) => handleGenerate(b, res)); return; }
   if (req.method === 'POST' && req.url === '/api/generate-audio') { readBody(req, (b) => handleGenerateAudio(b, res)); return; }
   if (req.method === 'POST' && req.url === '/api/save-json')      { readBody(req, (b) => handleSaveJson(b, res)); return; }
@@ -254,6 +333,7 @@ const server = createServer((req, res) => {
   if (req.method === 'POST' && req.url === '/api/revise')         { readBody(req, (b) => handleRevise(b, res)); return; }
   if (req.method === 'POST' && req.url === '/api/delete-paper')   { readBody(req, (b) => handleDeletePaper(b, res)); return; }
   if (req.method === 'POST' && req.url === '/api/build-index')    { handleBuildIndex(res); return; }
+  if (req.method === 'POST' && req.url === '/api/translate-paper'){ readBody(req, (b) => handleTranslatePaper(b, res)); return; }
   // Static files.
   (async () => {
     try {

@@ -59,6 +59,48 @@
     `,
   };
 
+  /* ---- Translate & build (hard overwrite) ---- */
+  window.VWComponents['vw-translate-panel'] = {
+    setup() { return { edit: window.VWEdit, store: window.VWStore }; },
+    computed: {
+      open() { return !!(this.edit && this.edit.enabled && this.edit.translate.open); },
+      source() { return (this.store && this.store.locale) || 'en'; },
+      t() { return this.edit.translate; },
+    },
+    methods: { run() { this.edit.translatePaper(); }, close() { this.edit.closeTranslate(); } },
+    template: `
+      <div v-if="open" class="vw-modal-backdrop" @click.self="close()">
+        <div class="vw-modal vw-revise" role="dialog" aria-modal="true" aria-label="Translate and build">
+          <div class="vw-modal-head">
+            <strong>Translate &amp; build — from {{ source.toUpperCase() }} (canonical)</strong>
+            <button class="vw-x" @click="close()" aria-label="Close">×</button>
+          </div>
+          <div class="vw-revise-body">
+            <p class="vw-muted">Builds the target as a structural clone of the {{ source.toUpperCase() }} version, translates every string, and regenerates the target assets. <strong>This overwrites the target locale entirely</strong> (no merge).</p>
+            <label class="vw-revise-lbl">Target locale</label>
+            <div class="vw-model-toggle" role="group" aria-label="Target locale">
+              <button type="button" :class="{ on: t.target === 'en' }" @click="t.target = 'en'" :disabled="source === 'en'">EN</button>
+              <button type="button" :class="{ on: t.target === 'fr' }" @click="t.target = 'fr'" :disabled="source === 'fr'">FR</button>
+            </div>
+            <label class="vw-revise-lbl">Model</label>
+            <div class="vw-model-toggle" role="group" aria-label="Model">
+              <button type="button" :class="{ on: t.model === 'sonnet' }" @click="t.model = 'sonnet'">Sonnet 4.6</button>
+              <button type="button" :class="{ on: t.model === 'opus' }" @click="t.model = 'opus'">Opus 4.7</button>
+            </div>
+            <label class="vw-check" style="margin-top:10px"><input type="checkbox" v-model="t.regenImages" /> <span>Regenerate images (conditioned on the {{ source.toUpperCase() }} source)</span></label>
+            <label class="vw-check"><input type="checkbox" v-model="t.regenAudio" /> <span>Regenerate narration audio (slower; costs ElevenLabs)</span></label>
+            <div class="vw-revise-foot">
+              <button class="vw-edit-btn" @click="close()">Cancel</button>
+              <button class="vw-gen-btn" @click="run()" :disabled="t.running || source === t.target">
+                {{ t.running ? 'Building…' : 'Translate & build ' + t.target.toUpperCase() }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,
+  };
+
   /* ---- AI revise dialog ---- */
   window.VWComponents['vw-revise-panel'] = {
     setup() { return { edit: window.VWEdit }; },

@@ -71,6 +71,36 @@ async function vertexMessages({ model, system, messages, max_tokens }) {
   return res.json();
 }
 
+/* translateItems — translate each item's text from sourceLocale to targetLocale.
+   Same [{key},{key,revised}] envelope as reviseItems. Keys prefixed "imgprompt:"
+   get composition-preserving label-only translation. Preserves inline HTML,
+   numbers, names. Canadian-French conventions for fr targets. */
+export async function translateItems({ items, sourceLocale, targetLocale, glossary, model, tier }) {
+  loadEnv();
+  const mdl = model || (tier === 'opus' ? process.env.VERTEX_CLAUDE_OPUS_MODEL : process.env.VERTEX_CLAUDE_SONNET_MODEL) || 'claude-sonnet-4-6';
+  const langName = (l) => (l === 'fr' ? 'Canadian French' : l === 'en' ? 'English' : l);
+
+  const frConventions = targetLocale === 'fr'
+    ? ' Use Canadian French government conventions: "livre blanc" for whitepaper, "logiciel libre" for open source, "ministère"/"ministre"/"sous-ministre", currency like "2 G$". '
+    : ' ';
+
+  const system = [
+    'You are a professional government translator. Translate each item from ' + langName(sourceLocale) + ' to ' + langName(targetLocale) + '.' + frConventions,
+    'Preserve meaning, facts, numbers, proper names, and any inline HTML tags (<code>, <strong>, <em>, <a href>, <ul>, <li>) exactly — translate only the human-readable text between/around them.',
+    'For keys beginning "imgprompt:", keep the composition description and only translate the words that would appear as labels in the image; end such values with: "All text labels in ' + langName(targetLocale) + '. Match the composition of the source image exactly; only the text labels change."',
+    (glossary ? 'Apply this glossary where relevant:\n' + glossary : ''),
+    'Return ONLY a JSON array, one object per input item: [{"key": <key copied from input>, "revised": "<translation>"}]. No prose, no code fences.',
+  ].filter(Boolean).join(' ');
+
+  const user = 'ITEMS TO TRANSLATE (return one translation per key, preserving each key):\n' + JSON.stringify(items, null, 2);
+
+  const json = await vertexMessages({ model: mdl, system, messages: [{ role: 'user', content: user }], max_tokens: 8000 });
+  const text = (json.content || []).filter((c) => c.type === 'text').map((c) => c.text).join('');
+  const start = text.indexOf('['); const end = text.lastIndexOf(']');
+  if (start === -1 || end === -1) throw new Error('Model did not return a JSON array. Got: ' + text.slice(0, 200));
+  return JSON.parse(text.slice(start, end + 1));
+}
+
 export async function reviseItems({ items, instructions, guideTexts, model, tier }) {
   loadEnv();
   const mdl = model ||
