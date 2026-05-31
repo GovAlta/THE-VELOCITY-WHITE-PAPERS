@@ -1,7 +1,7 @@
 {
   "id": "wp-06",
   "num": "06",
-  "sequence": "6 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "Observabilité sans étouffer l'intelligence créative",
   "subtitle": "Comment exercer un contrôle suffisant sans étouffer l'intelligence du système.",
@@ -117,5 +117,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-05",
+    "wp-12",
+    "wp-15"
+  ]
 }

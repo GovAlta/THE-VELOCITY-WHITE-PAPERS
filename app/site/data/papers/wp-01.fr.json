@@ -1,7 +1,7 @@
 {
   "id": "wp-01",
   "num": "01",
-  "sequence": "1 sur 16",
+  "sequence": "1 sur 2",
   "tier": "Conceptual",
   "title": "Le navire de Thésée à deux milliards de dollars",
   "subtitle": "Pourquoi la modernisation des TI gouvernementales est un problème de plusieurs milliards de dollars qui ne peut être résolu en arrêtant le navire pour le reconstruire.",
@@ -169,5 +169,10 @@
     "notes": "Traduction du corps à venir, à partir de wp-01.en.json. Le résumé, les sections et la présentation TL;DR sont rédigés en FR."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-02",
+    "wp-03",
+    "wp-04"
+  ]
 }

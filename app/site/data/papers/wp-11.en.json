@@ -1,7 +1,7 @@
 {
   "id": "wp-11",
   "num": "11",
-  "sequence": "11 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "The Business Functions of Government",
   "subtitle": "What are the repeatable, codified business functions of government, as evidenced by the code that runs today?",
@@ -116,5 +116,9 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-10",
+    "wp-14"
+  ]
 }

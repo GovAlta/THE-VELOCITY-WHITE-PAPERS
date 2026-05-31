@@ -1,7 +1,7 @@
 {
   "id": "wp-03",
   "num": "03",
-  "sequence": "3 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "The Wisdom of Crowds",
   "subtitle": "Red tape reduction through AI benchmarking of legislation, regulation, and policy across jurisdictions.",
@@ -116,5 +116,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-01",
+    "wp-11",
+    "wp-16"
+  ]
 }

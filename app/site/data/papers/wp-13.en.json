@@ -1,7 +1,7 @@
 {
   "id": "wp-13",
   "num": "13",
-  "sequence": "13 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "The Velocity Game Engine",
   "subtitle": "Gamification and score keeping. A project management system that replaces Jira-style tooling and uses a point-based system to observe progress.",
@@ -116,5 +116,9 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-12",
+    "wp-15"
+  ]
 }

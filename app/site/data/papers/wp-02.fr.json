@@ -1,7 +1,7 @@
 {
   "id": "wp-02",
   "num": "02",
-  "sequence": "2 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "L'impératif cyber",
   "subtitle": "Remparts et marées montantes. Le moteur cybersécurité, traité à part entière.",
@@ -125,5 +125,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-01",
+    "wp-08",
+    "wp-09"
+  ]
 }

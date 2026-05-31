@@ -1,7 +1,7 @@
 {
   "id": "wp-13",
   "num": "13",
-  "sequence": "13 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "Le moteur Velocity",
   "subtitle": "Ludification et pointage. Un système de gestion de projet qui remplace les outils de type Jira et utilise un système de points pour suivre la progression.",
@@ -117,5 +117,9 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-12",
+    "wp-15"
+  ]
 }

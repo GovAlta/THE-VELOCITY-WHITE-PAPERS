@@ -106,8 +106,13 @@
   "_meta": {
     "placeholder": true,
     "written_by": "structural-stub",
-    "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
+    "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer.",
+    "num_override": "P",
+    "sequence_override": "TBD"
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-16"
+  ]
 }

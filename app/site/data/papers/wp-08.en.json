@@ -1,7 +1,7 @@
 {
   "id": "wp-08",
   "num": "08",
-  "sequence": "8 of 16",
+  "sequence": "2 of 2",
   "tier": "Technical",
   "title": "The Well-Built Harness",
   "subtitle": "How AI lets the public service build and ship enterprise-grade software at speed, without lowering the bar.",
@@ -665,5 +665,10 @@
       "golden/_l3/challenges/alberta-ca-harness/"
     ]
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-09",
+    "wp-10",
+    "wp-14"
+  ]
 }

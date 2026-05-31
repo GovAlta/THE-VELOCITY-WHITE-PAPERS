@@ -1,7 +1,7 @@
 {
   "id": "wp-10",
   "num": "10",
-  "sequence": "10 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "Git Insights Ministère",
   "subtitle": "De l'analyse à la synthèse. Architecture de reconstruction à l'échelle d'un ministère, à partir de centaines de systèmes simultanément.",
@@ -117,5 +117,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-09",
+    "wp-11",
+    "wp-14"
+  ]
 }

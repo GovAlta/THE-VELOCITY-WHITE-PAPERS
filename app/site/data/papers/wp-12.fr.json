@@ -1,7 +1,7 @@
 {
   "id": "wp-12",
   "num": "12",
-  "sequence": "12 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "Nexus : le bac à sable agentique sécurisé",
   "subtitle": "Un environnement virtualisé sécuritaire où les agents peuvent travailler sans dégrader la posture de sécurité.",
@@ -117,5 +117,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-06",
+    "wp-07",
+    "wp-13"
+  ]
 }

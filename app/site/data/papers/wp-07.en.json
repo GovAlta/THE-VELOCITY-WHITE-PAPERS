@@ -1,7 +1,7 @@
 {
   "id": "wp-07",
   "num": "07",
-  "sequence": "7 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "The Compression Problem",
   "subtitle": "Organizational design at agentic scale. Command and control vs delegation of authority.",
@@ -116,5 +116,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-05",
+    "wp-06",
+    "wp-12"
+  ]
 }

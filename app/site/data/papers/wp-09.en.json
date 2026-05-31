@@ -1,7 +1,7 @@
 {
   "id": "wp-09",
   "num": "09",
-  "sequence": "9 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "Git Insights: X-Ray of the Estate",
   "subtitle": "A custom toolset for recursive, iterative scanning of the Government of Alberta enterprise GitHub instance.",
@@ -124,5 +124,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-08",
+    "wp-10",
+    "wp-11"
+  ]
 }

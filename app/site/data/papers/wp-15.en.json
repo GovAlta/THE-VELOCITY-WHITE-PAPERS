@@ -1,7 +1,7 @@
 {
   "id": "wp-15",
   "num": "15",
-  "sequence": "15 of 16",
+  "sequence": "",
   "tier": "Policy & People",
   "title": "Governance for Confidence",
   "subtitle": "Observability for non-technical stakeholders. Frameworks that translate agentic activity into terms ministers, deputy ministers, auditors, and the public can act on.",
@@ -116,5 +116,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-06",
+    "wp-13",
+    "wp-16"
+  ]
 }

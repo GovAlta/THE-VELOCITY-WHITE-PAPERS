@@ -1,7 +1,7 @@
 {
   "id": "wp-12",
   "num": "12",
-  "sequence": "12 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "Nexus: The Secure Agentic Sandbox",
   "subtitle": "A virtualized safe environment for agentic operators to work without degrading security posture.",
@@ -116,5 +116,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-06",
+    "wp-07",
+    "wp-13"
+  ]
 }

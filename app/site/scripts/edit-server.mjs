@@ -27,6 +27,7 @@ import { dirname, resolve, extname } from 'node:path';
 import { readFile as readFileP } from 'node:fs/promises';
 import { generatePNG, generatePNGFromReference } from './lib/images.mjs';
 import { reviseItems } from './lib/llm.mjs';
+import { buildIndex } from './lib/index-build.mjs';
 
 /* The style guides the editor can view, curate, and save. The .md files live
    one level above the site (style-guide/); image-style is inside the site. The
@@ -224,6 +225,15 @@ async function handleDeletePaper(body, res) {
   } catch (e) { return sendJSON(res, 500, { error: (e && e.message) || String(e) }); }
 }
 
+function handleBuildIndex(res) {
+  if (!EDIT_ENABLED) return sendJSON(res, 403, { error: 'Editing is disabled in this environment.' });
+  try {
+    const inv = buildIndex();
+    console.log('Rebuilt index: ' + inv.papers.length + ' entries');
+    return sendJSON(res, 200, { ok: true, papers: inv.papers });
+  } catch (e) { return sendJSON(res, 500, { error: (e && e.message) || String(e) }); }
+}
+
 function readBody(req, cb) {
   let data = '';
   req.on('data', (c) => { data += c; if (data.length > 4e6) req.destroy(); });
@@ -243,6 +253,7 @@ const server = createServer((req, res) => {
   if (req.method === 'POST' && req.url === '/api/save-guide')     { readBody(req, (b) => handleSaveGuide(b, res)); return; }
   if (req.method === 'POST' && req.url === '/api/revise')         { readBody(req, (b) => handleRevise(b, res)); return; }
   if (req.method === 'POST' && req.url === '/api/delete-paper')   { readBody(req, (b) => handleDeletePaper(b, res)); return; }
+  if (req.method === 'POST' && req.url === '/api/build-index')    { handleBuildIndex(res); return; }
   // Static files.
   (async () => {
     try {

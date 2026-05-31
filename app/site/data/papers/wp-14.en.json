@@ -1,7 +1,7 @@
 {
   "id": "wp-14",
   "num": "14",
-  "sequence": "14 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "The Four Approaches: Modernization at Scale",
   "subtitle": "Patch and remediate. Drop-in replacement. Refactor and modernize. Agentic. The tactical playbook for choosing the right tool.",
@@ -124,5 +124,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-08",
+    "wp-10",
+    "wp-12"
+  ]
 }

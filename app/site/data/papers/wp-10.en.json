@@ -1,7 +1,7 @@
 {
   "id": "wp-10",
   "num": "10",
-  "sequence": "10 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "Git Insights Ministry",
   "subtitle": "From analysis to synthesis. Ministry-scale rebuild architecture from hundreds of systems at once.",
@@ -116,5 +116,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-09",
+    "wp-11",
+    "wp-14"
+  ]
 }

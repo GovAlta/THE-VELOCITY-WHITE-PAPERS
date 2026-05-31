@@ -336,6 +336,7 @@
 .vw-meta-edit input, .vw-meta-edit select { font-family: var(--font-sans, inherit); font-size: 13px; text-transform: none; letter-spacing: normal; color: var(--ink, #1b2a4a); padding: 6px 8px; border: 1px solid rgba(27, 42, 74, 0.25); border-radius: 5px; background: #fff; }
 .vw-meta-tags { width: 100%; }
 .vw-meta-tags input { width: 100%; box-sizing: border-box; }
+.vw-meta-ro { font-family: var(--font-mono, monospace); font-size: 13px; color: var(--ink-50, #6b7280); padding: 6px 0; }
 
 /* TL;DR slide editor */
 .vw-tldr-editor { margin: 10px 0 24px; padding: 14px; border: 1px solid rgba(27, 42, 74, 0.14); border-radius: 10px; background: rgba(27, 42, 74, 0.03); }

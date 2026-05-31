@@ -1,7 +1,7 @@
 {
   "id": "wp-07",
   "num": "07",
-  "sequence": "7 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "Le problème de compression",
   "subtitle": "Conception organisationnelle à l'échelle agentique. Commandement central contre délégation de l'autorité.",
@@ -117,5 +117,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-05",
+    "wp-06",
+    "wp-12"
+  ]
 }

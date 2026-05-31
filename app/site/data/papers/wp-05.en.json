@@ -1,7 +1,7 @@
 {
   "id": "wp-05",
   "num": "05",
-  "sequence": "5 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "Ecosystem Architecture",
   "subtitle": "Forest vs lawn. Permaculture vs English garden. Architecture suited to its place.",
@@ -116,5 +116,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-04",
+    "wp-06",
+    "wp-07"
+  ]
 }

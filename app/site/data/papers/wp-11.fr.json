@@ -1,7 +1,7 @@
 {
   "id": "wp-11",
   "num": "11",
-  "sequence": "11 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "Les fonctions d'affaires du gouvernement",
   "subtitle": "Quelles sont les fonctions d'affaires répétables et codifiées du gouvernement, selon le code qui tourne aujourd'hui ?",
@@ -117,5 +117,9 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-10",
+    "wp-14"
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "wp-16",
   "num": "16",
-  "sequence": "16 of 16",
+  "sequence": "",
   "tier": "Policy & People",
   "title": "The Future of Technology and Innovation",
   "subtitle": "A policy statement on how government itself will operate differently as agents become more capable.",
@@ -116,5 +116,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-03",
+    "wp-13",
+    "wp-15"
+  ]
 }

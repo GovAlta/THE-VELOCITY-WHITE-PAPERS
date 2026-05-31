@@ -1,7 +1,7 @@
 {
   "id": "wp-01",
   "num": "01",
-  "sequence": "1 of 16",
+  "sequence": "1 of 2",
   "tier": "Conceptual",
   "title": "The Two-Billion-Dollar Ship of Theseus",
   "subtitle": "Why the modernization of government IT is a multi-billion-dollar problem that cannot be solved by stopping the ship to rebuild it.",
@@ -262,5 +262,10 @@
       "type": "related"
     }
   ],
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-02",
+    "wp-03",
+    "wp-04"
+  ]
 }

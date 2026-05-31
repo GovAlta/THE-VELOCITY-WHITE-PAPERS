@@ -1,7 +1,7 @@
 {
   "id": "wp-16",
   "num": "16",
-  "sequence": "16 of 16",
+  "sequence": "",
   "tier": "Policy & People",
   "title": "L'avenir de Technologie et innovation",
   "subtitle": "Un énoncé de politique sur la manière dont le gouvernement lui-même fonctionnera différemment à mesure que les agents gagnent en capacité.",
@@ -117,5 +117,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-03",
+    "wp-13",
+    "wp-15"
+  ]
 }

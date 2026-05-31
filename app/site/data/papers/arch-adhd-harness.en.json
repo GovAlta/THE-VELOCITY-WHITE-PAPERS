@@ -147,6 +147,12 @@
   "_meta": {
     "placeholder": true,
     "written_by": "structural-stub",
-    "notes": "Structural stub. Body to be authored from the project's primary sources. Generic visual primitives belong in components/visuals/reusable/; narrative simulators live under components/visuals/bespoke/arch-adhd-harness/."
-  }
+    "notes": "Structural stub. Body to be authored from the project's primary sources. Generic visual primitives belong in components/visuals/reusable/; narrative simulators live under components/visuals/bespoke/arch-adhd-harness/.",
+    "num_override": "A-01",
+    "sequence_override": "Architecture · A-01"
+  },
+  "related": [
+    "wp-08",
+    "wp-09"
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "wp-05",
   "num": "05",
-  "sequence": "5 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "Architecture en écosystème",
   "subtitle": "Forêt contre pelouse. Permaculture contre jardin anglais. L'architecture adaptée à son milieu.",
@@ -117,5 +117,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-04",
+    "wp-06",
+    "wp-07"
+  ]
 }

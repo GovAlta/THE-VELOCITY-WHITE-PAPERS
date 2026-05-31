@@ -1,7 +1,7 @@
 {
   "id": "wp-03",
   "num": "03",
-  "sequence": "3 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "La sagesse des foules",
   "subtitle": "Réduction de la paperasse par étalonnage automatisé des lois, règlements et politiques entre administrations.",
@@ -117,5 +117,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-01",
+    "wp-11",
+    "wp-16"
+  ]
 }

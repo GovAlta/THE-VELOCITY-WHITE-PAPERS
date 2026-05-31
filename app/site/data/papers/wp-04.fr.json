@@ -1,7 +1,7 @@
 {
   "id": "wp-04",
   "num": "04",
-  "sequence": "4 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "Des ambiances aux conceptions",
   "subtitle": "Le pivot du problème vers une philosophie de solution. Pourquoi le « vibe coding » et les plans maîtres rigides échouent tous deux.",
@@ -117,5 +117,9 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-05",
+    "wp-06"
+  ]
 }

@@ -238,23 +238,14 @@
         });
         const d = await res.json().catch(() => ({}));
         if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
-        // Keep the index (papers.json) in sync with the paper's display metadata,
-        // so edits to number, title, tier, status, read time, tags show up there too.
-        let synced = false;
-        const inv = (window.VWStore.papers || []).find((p) => p.id === this.current.id);
-        if (inv) {
-          ['num', 'title', 'subtitle', 'tier', 'status', 'reading_min', 'tags'].forEach((k) => { if (this.current[k] !== undefined) inv[k] = this.current[k]; });
-          try {
-            let cur = {};
-            const rr = await fetch('data/papers.json', { cache: 'no-cache' }); if (rr.ok) cur = await rr.json();
-            cur.papers = (window.VWStore.papers || []).map((p) => this._clean(p));
-            const r2 = await this._writeJson('data/papers.json', cur);
-            synced = r2.ok;
-          } catch (_) {}
-        }
         delete this.dirtyMap[this._key(locale)];
         this.dirty = !!this.dirtyMap[this._key()];
-        this.status = 'Saved ' + path + (synced ? ' + index synced' : '');
+        // papers.json is generated; rebuild so status/title/tier/read-time edits
+        // propagate to the index (and re-derive the Published-only sequences).
+        await this.rebuildIndex();
+        const inv = (window.VWStore.papers || []).find((p) => p.id === this.current.id);
+        if (inv) this.current.num = inv.num;   // keep the on-screen number fresh
+        this.status = 'Saved ' + path;
       } catch (e) {
         this.status = 'Save failed: ' + ((e && e.message) || e);
       } finally { this.saving = false; }
@@ -337,34 +328,49 @@
       if (!res.ok) { this.status = 'Save failed (' + path + '): ' + (d.error || res.status); return { ok: false }; }
       return { ok: true };
     },
-    /* Persist the inventory (data/papers.json), preserving any other top-level
-       keys it already carries. */
-    async saveIndex() {
+    /* papers.json is GENERATED. Rebuild it on the server from order.json + the
+       paper files, then refresh the in-memory inventory from the result. */
+    async rebuildIndex() {
       try {
-        let cur = {};
-        try { const r = await fetch('data/papers.json', { cache: 'no-cache' }); if (r.ok) cur = await r.json(); } catch (_) {}
-        cur.papers = (window.VWStore.papers || []).map((p) => this._clean(p));
-        return await this._writeJson('data/papers.json', cur).then((r) => {
-          if (r.ok) this.status = 'Saved the index (papers.json).';
-          return r;
-        });
-      } catch (e) { this.status = 'Index save failed: ' + ((e && e.message) || e); return { ok: false }; }
+        const res = await fetch('/api/build-index', { method: 'POST' });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        if (Array.isArray(d.papers) && window.VWStore) {
+          window.VWStore.papers.splice(0, window.VWStore.papers.length, ...d.papers);
+          window.VWStore.paperById = Object.fromEntries(d.papers.map((p) => [p.id, p]));
+        }
+        return { ok: true };
+      } catch (e) { this.status = 'Index rebuild failed: ' + ((e && e.message) || e) + ' (needs npm run edit)'; return { ok: false }; }
     },
-    movePaper(i, dir) {
-      const a = window.VWStore.papers; const j = i + dir;
-      if (j < 0 || j >= a.length) return;
-      const t = a[i]; a[i] = a[j]; a[j] = t;
-      this.saveIndex();
+    async _loadOrder() {
+      try { const r = await fetch('data/order.json', { cache: 'no-cache' }); if (r.ok) return await r.json(); } catch (_) {}
+      return { order: [], nonlinear: [] };
+    },
+    _saveOrder(order) { return this._writeJson('data/order.json', order); },
+    async movePaper(i, dir) {
+      const p = window.VWStore.papers[i]; if (!p) return;
+      const id = p.id;
+      const order = await this._loadOrder();
+      for (const list of [order.order, order.nonlinear]) {
+        const k = (list || []).indexOf(id);
+        if (k === -1) continue;
+        const j = k + dir;
+        if (j < 0 || j >= list.length) return;          // can't move past its own list's ends
+        const t = list[k]; list[k] = list[j]; list[j] = t;
+        if ((await this._saveOrder(order)).ok) await this.rebuildIndex();
+        return;
+      }
     },
     async deletePaper(i) {
-      const a = window.VWStore.papers; const p = a[i];
-      if (!p) return;
+      const p = window.VWStore.papers[i]; if (!p) return;
       const id = p.id;
-      a.splice(i, 1);
-      if (window.VWStore.paperById) delete window.VWStore.paperById[id];
+      const order = await this._loadOrder();
+      order.order = (order.order || []).filter((x) => x !== id);
+      order.nonlinear = (order.nonlinear || []).filter((x) => x !== id);
+      await this._saveOrder(order);
       try { await fetch('/api/delete-paper', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id }) }); } catch (_) {}
-      await this.saveIndex();
-      this.status = 'Deleted paper "' + id + '". Its JSON files are removed; any images/audio under public/ are left in place.';
+      await this.rebuildIndex();
+      this.status = 'Deleted paper "' + id + '". Its JSON files are removed; images/audio under public/ are left in place.';
     },
     _paperStub(id, num, title, tier, locale) {
       const fr = locale === 'fr';
@@ -401,20 +407,21 @@
       const id = (meta.id || '').trim();
       if (!/^[a-z0-9][a-z0-9-]*$/.test(id)) { this.status = 'Invalid id. Use kebab-case, e.g. wp-17 or arch-foo.'; return { ok: false }; }
       if (window.VWStore.paperById && window.VWStore.paperById[id]) { this.status = 'A paper with id "' + id + '" already exists.'; return { ok: false }; }
-      const num = (meta.num || '').trim() || id;
       const title = (meta.title || '').trim() || 'Untitled paper';
       const tier = meta.tier || 'Technical';
       this.status = 'Creating ' + id + '…';
-      const r1 = await this._writeJson('data/papers/' + id + '.en.json', this._paperStub(id, num, title, tier, 'en'));
+      // num/sequence are derived; the stub leaves them empty and buildIndex stamps them.
+      const r1 = await this._writeJson('data/papers/' + id + '.en.json', this._paperStub(id, '', title, tier, 'en'));
       if (!r1.ok) return r1;
-      const r2 = await this._writeJson('data/papers/' + id + '.fr.json', this._paperStub(id, num, title, tier, 'fr'));
+      const r2 = await this._writeJson('data/papers/' + id + '.fr.json', this._paperStub(id, '', title, tier, 'fr'));
       if (!r2.ok) return r2;
-      const entry = { id, num, title, subtitle: '', tier, status: 'Draft', tags: [], reading_min: null };
-      window.VWStore.papers.push(entry);
-      if (window.VWStore.paperById) window.VWStore.paperById[id] = entry;
-      const r3 = await this.saveIndex();
+      const order = await this._loadOrder();
+      order.order = order.order || [];
+      if (!order.order.includes(id)) order.order.push(id);   // new papers append to the linear order
+      await this._saveOrder(order);
+      const r3 = await this.rebuildIndex();
       if (!r3.ok) return r3;
-      this.status = 'Created paper "' + id + '". Open it from the index to write it.';
+      this.status = 'Created paper "' + id + '". Its number follows its order position. Open it to write it.';
       return { ok: true, id };
     },
   });

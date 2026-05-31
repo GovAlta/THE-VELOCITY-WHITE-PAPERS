@@ -1,7 +1,7 @@
 {
   "id": "wp-15",
   "num": "15",
-  "sequence": "15 of 16",
+  "sequence": "",
   "tier": "Policy & People",
   "title": "Gouvernance pour la confiance",
   "subtitle": "Observabilité pour parties prenantes non techniques. Cadres qui traduisent l'activité agentique en termes exploitables par les ministres, sous-ministres, vérificateurs et le public.",
@@ -117,5 +117,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-06",
+    "wp-13",
+    "wp-16"
+  ]
 }

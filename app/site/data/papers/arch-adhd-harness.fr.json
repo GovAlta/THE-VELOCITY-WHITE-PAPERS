@@ -147,7 +147,13 @@
   "_meta": {
     "placeholder": true,
     "written_by": "structural-stub",
-    "notes": "Ébauche structurelle. Le corps sera rédigé à partir des sources primaires du projet."
+    "notes": "Ébauche structurelle. Le corps sera rédigé à partir des sources primaires du projet.",
+    "num_override": "A-01",
+    "sequence_override": "Architecture · A-01"
   },
-  "translation_status": "untranslated"
+  "translation_status": "untranslated",
+  "related": [
+    "wp-08",
+    "wp-09"
+  ]
 }

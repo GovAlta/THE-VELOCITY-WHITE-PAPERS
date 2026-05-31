@@ -184,8 +184,8 @@
 
             <div v-if="edit && edit.enabled" class="vw-meta-edit">
               <div class="vw-meta-row">
-                <label>No.<input v-model="paper.num" @input="touch()" /></label>
-                <label>Sequence<input v-model="paper.sequence" @input="touch()" placeholder="8 of 16" /></label>
+                <label>No. (derived)<span class="vw-meta-ro">{{ paper.num || '—' }}</span></label>
+                <label>Sequence (derived)<span class="vw-meta-ro">{{ paper.sequence || '—' }}</span></label>
                 <label>Read (min)<input type="number" min="0" v-model.number="paper.reading_min" @input="touch()" /></label>
                 <label>Published<input v-model="paper.published" @input="touch()" placeholder="2026-07-15" /></label>
               </div>

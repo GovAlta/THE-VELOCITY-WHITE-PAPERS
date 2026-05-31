@@ -1,7 +1,7 @@
 {
   "id": "wp-09",
   "num": "09",
-  "sequence": "9 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "Git Insights : radiographie du patrimoine",
   "subtitle": "Un outil sur mesure pour balayer de façon récursive et itérative l'instance GitHub d'entreprise du gouvernement de l'Alberta.",
@@ -125,5 +125,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-08",
+    "wp-10",
+    "wp-11"
+  ]
 }

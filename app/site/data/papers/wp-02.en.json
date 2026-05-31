@@ -1,7 +1,7 @@
 {
   "id": "wp-02",
   "num": "02",
-  "sequence": "2 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "The Cyber Imperative",
   "subtitle": "Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment.",
@@ -124,5 +124,10 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-01",
+    "wp-08",
+    "wp-09"
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "wp-14",
   "num": "14",
-  "sequence": "14 of 16",
+  "sequence": "",
   "tier": "Technical",
   "title": "Les quatre approches : moderniser à grande échelle",
   "subtitle": "Corriger et remédier. Remplacement direct. Refactoriser et moderniser. Approche agentique. Le manuel tactique pour choisir le bon outil.",
@@ -125,5 +125,10 @@
     "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
   },
   "translation_status": "untranslated",
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-08",
+    "wp-10",
+    "wp-12"
+  ]
 }

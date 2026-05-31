@@ -106,7 +106,12 @@
   "_meta": {
     "placeholder": true,
     "written_by": "structural-stub",
-    "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
+    "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate.",
+    "num_override": "P",
+    "sequence_override": "TBD"
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-16"
+  ]
 }

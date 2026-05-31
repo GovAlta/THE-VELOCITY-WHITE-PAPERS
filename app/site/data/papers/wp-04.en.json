@@ -1,7 +1,7 @@
 {
   "id": "wp-04",
   "num": "04",
-  "sequence": "4 of 16",
+  "sequence": "",
   "tier": "Conceptual",
   "title": "From Vibes to Designs",
   "subtitle": "The pivot from problem to philosophy of solution. Why both vibe coding and rigid master plans fail.",
@@ -116,5 +116,9 @@
     "written_by": "structural-stub",
     "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
   },
-  "category": "paper"
+  "category": "paper",
+  "related": [
+    "wp-05",
+    "wp-06"
+  ]
 }
