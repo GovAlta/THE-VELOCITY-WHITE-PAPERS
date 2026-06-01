@@ -1,8 +1,8 @@
 /* PullQuote — a large in-body quote with optional citation.
 
    When a block object is passed and dev edit mode is on, the quote text and the
-   citation become editable in place. The em dash before the citation is chrome,
-   so it stays outside the editable field. */
+   citation become editable in place. The separator before the citation is
+   chrome, so it stays outside the editable field. */
 
 (function () {
   window.VWComponents = window.VWComponents || {};
@@ -21,11 +21,11 @@
       <blockquote class="pullquote">
         <template v-if="block">
           <editable-text tag="span" :obj="block" field="text" />
-          <div class="cite" v-if="editing || block.cite">— <editable-text tag="span" :obj="block" field="cite" /></div>
+          <div class="cite" v-if="editing || block.cite">· <editable-text tag="span" :obj="block" field="cite" /></div>
         </template>
         <template v-else>
           {{ text }}
-          <div class="cite" v-if="cite">— {{ cite }}</div>
+          <div class="cite" v-if="cite">· {{ cite }}</div>
         </template>
       </blockquote>
     `,

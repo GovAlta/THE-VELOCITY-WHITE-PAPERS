@@ -54,7 +54,7 @@ function blocksToText(paper) {
     if (b.type === 'section_heading') lines.push('\n## §' + (b.n || '') + ' ' + (b.title || ''));
     else if (b.type === 'paragraph' || b.type === 'dropcap_paragraph') {
       lines.push(String(b.text || '').replace(/<[^>]+>/g, ''));
-    } else if (b.type === 'pullquote') lines.push('"' + (b.text || '') + '"' + (b.cite ? ' — ' + b.cite : ''));
+    } else if (b.type === 'pullquote') lines.push('"' + (b.text || '') + '"' + (b.cite ? ' · ' + b.cite : ''));
     else if (b.type === 'keystat') lines.push((b.label || '') + ' ' + b.value + '. ' + (b.body || '').replace(/<[^>]+>/g, ''));
     else if (b.type === 'sidenote') lines.push((b.label || 'Note') + '. ' + (b.value || ''));
   }
@@ -68,7 +68,7 @@ function buildPaperHTML(paper, locale, otherLocale, otherPaper) {
   const altURL = otherPaper
     ? BASE + '/paper/' + otherPaper.id + (otherLocale === 'fr' ? '/fr/' : '/')
     : url;
-  const title = paper.title + ' — ' + (site.i18n[locale].title);
+  const title = paper.title + ' · ' + (site.i18n[locale].title);
   const desc = (paper.abstract || paper.subtitle || '').replace(/\s+/g, ' ').trim();
   const heroSrc = paper.hero_image && paper.hero_image.src
     ? BASE + '/' + paper.hero_image.src
@@ -194,7 +194,7 @@ function buildStaticRouteHTML(routeSegment, locale) {
     community: { title: locale === 'fr' ? 'Communauté' : 'Community' },
   };
   const lbl = labels[routeSegment] || { title: routeSegment };
-  const title = lbl.title + ' — ' + i.title;
+  const title = lbl.title + ' · ' + i.title;
   const desc = i.tagline;
 
   return '<!doctype html>\n' +

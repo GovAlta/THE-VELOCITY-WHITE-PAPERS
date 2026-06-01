@@ -157,19 +157,19 @@
     },
     {
       "type": "paragraph",
-      "text": "The second approach builds new. Instead of repairing an old system, we build a fresh one from scratch, designed the way we would design it today. We do this in what we call the AI Factory, a production line where AI agents, working to a strict specification and under human direction, plan, build, test, and deliver an application. The Factory is opinionated on purpose. Every application it produces is built the same modern way, on the same modern foundation, so that quality is a property of the line rather than of any one team."
+      "text": "The second approach builds new. Instead of repairing an old system, we build a fresh one from scratch, designed the way we would design it today. We build it in what we call the AI Factory. The factory is made of software, not machinery. Inside it, a team of specialist AI agents works the way a strong delivery team works. One agent designs the architecture. Another writes the code. Others take the database, the testing, the security review, the accessibility, the documentation. They work together against one shared specification, checking and correcting each other until the application is finished."
     },
     {
       "type": "paragraph",
-      "text": "Two things make a Factory-built application different from what it replaces. First, it is modular. The system is assembled from small, self-contained parts, none of them much larger than a thousand lines of code, each small enough to be read and checked on its own. Second, the government owns all of it. The code is ours, built on open-source foundations, with no licence we cannot exit and no vendor we cannot leave. Where it makes sense, we can publish a module openly for others to inspect and reuse."
+      "text": "The Factory is opinionated on purpose. Every application it produces is built the same modern way, on the same foundation, so quality comes from the line itself rather than from any one person's care. The specification is the contract. The agents build to it, the work is checked against it, and a person stays in the loop to accept or reject what the agents produce. Two things then make a Factory-built application different from what it replaces. It is modular, assembled from small parts, none of them much larger than a thousand lines of code, each one small enough to read and check on its own. And the government owns all of it, built on open-source foundations, with no licence we cannot exit and no vendor we cannot leave."
     },
     {
       "type": "paragraph",
-      "text": "Building new also lets us shed the past. A Factory-built application carries none of the dead dependencies, the unsupported libraries, or the decades-old assumptions of the system it replaces. It starts clean. This is the approach for a system whose technology is beyond saving, and for a brand-new service that has no legacy at all, one of the many new requests that keep arriving while the older work is still underway."
+      "text": "Building new also lets us start clean, free of the dead dependencies and decades-old assumptions of the system it replaces. This is the approach for a system whose technology is beyond saving, and for a brand-new service that has no legacy at all, one of the many new requests that keep arriving while the older work is still underway."
     },
     {
       "type": "paragraph",
-      "text": "The Factory is a real, working thing, not a metaphor. Its parts, the place where applications are designed, the environment where agents build and test them, and the system that tracks and measures the work, are the subject of their own papers later in this collection, beginning with [the design environment](#/paper/qthji). What matters here is the approach. When a system is best replaced rather than repaired, the Factory builds its replacement new, modular, and owned."
+      "text": "The Factory is the most developed of the four approaches, and it has three moving parts, each the subject of its own paper. The work is shaped and specified in a [design environment](#/paper/qthji), where a plain-language request becomes a buildable plan the agents can work to. The agents then build, test, and deploy it inside a [secure sandbox](#/paper/uwpxr) under enterprise controls. And the whole effort is [tracked and scored](#/paper/k3tc3) in a system that makes progress visible and lets competing approaches race on the same piece of work. This paper introduces the approach. Those three papers show how the Factory actually runs."
     },
     {
       "type": "table",
@@ -210,12 +210,12 @@
     {
       "type": "figure",
       "fno": "FIG. 5.2",
-      "title": "Built new, built the same way",
-      "caption": "The Factory produces applications from a standard set of modular parts, on one modern foundation, with the broken parts of the old system set aside. The result is owned by the government and free of legacy.",
+      "title": "A delivery team, built from agents",
+      "caption": "The Factory is a software production line. A team of specialist AI agents, covering design, build, testing, and security, works together to one specification and produces a finished, modern application the government owns.",
       "image": {
         "src": "public/images/zgym1/en/fig-5-2.jpg",
-        "alt": "A clean factory production line assembling small identical modular blocks into finished modern applications, with broken old parts discarded to one side.",
-        "image_prompt": "An editorial illustration of a clean, orderly factory production line assembling small identical modular building blocks into finished modern applications, with a few broken, rusted old parts set aside and discarded. A sense of new, standard, and owned. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "alt": "A team of distinct specialist AI agents collaborating around a shared workspace where a modern application takes shape on screen.",
+        "image_prompt": "An editorial illustration of a software factory shown as a coordinated team of distinct specialist figures working around one large shared board or screen on which a clean modern application is taking shape. The specialists read as an architect with a blueprint, a builder, a tester, a security reviewer, and a data specialist, drawn as stylized agents rather than literal people, with lines of collaboration linking them to the shared board. A sense of an entire delivery team working in concert, made of software rather than a physical assembly line. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
         "style_kind": "diagram"
       }
     },
@@ -226,7 +226,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The third approach steps back from the single system and looks at a whole ministry at once. Many of our applications are like medieval paintings, where one layer has been painted over another for decades. The first system was built long ago. A new interface was bolted on ten years later. Another integration was added on top of that. The original logic is still in there, buried under the layers. Rationalization strips the layers back to find what the ministry actually does, and rebuilds from that intent rather than from the accumulated build-up."
+      "text": "The third approach steps back from the single system and looks at a whole ministry at once. Picture a town that grew without a plan. Every building sank its own well, ran its own generator, and paved its own road to the door. Government software grew the same way. Almost every application built its own login, its own file upload, its own reporting, again and again, no two quite alike. Rationalization is the work of mapping what the ministry actually does, then laying the shared infrastructure once, so each common need is built a single time and used by everyone."
     },
     {
       "type": "paragraph",
@@ -238,8 +238,8 @@
     },
     {
       "type": "pullquote",
-      "text": "Many of our applications are like medieval paintings, where one layer has been painted over another for decades. The only way to reach the original logic is to carefully remove the layers above it.",
-      "cite": "Paper 5 — The Four Approaches to AI Modernization"
+      "text": "The same login, rebuilt in dozens of applications, becomes one shared sign-on. Rationalization finds every such duplication and builds it a single time, for everyone.",
+      "cite": "Paper 5 · The Four Approaches to AI Modernization"
     },
     {
       "type": "table",
@@ -276,12 +276,12 @@
     {
       "type": "figure",
       "fno": "FIG. 5.3",
-      "title": "Strip the layers, rebuild from intent",
-      "caption": "Rationalization treats a portfolio like an over-painted canvas. It removes the accumulated layers to recover what the ministry actually does, then rebuilds that intent as a small set of modern modules.",
+      "title": "Build the shared infrastructure once",
+      "caption": "Rationalization treats a ministry like a town that grew without a plan. Instead of every application running its own login, upload, and reporting, the common needs are mapped and built a single time, then shared across the whole portfolio.",
       "image": {
         "src": "public/images/zgym1/en/fig-5-3.jpg",
-        "alt": "A layered old painting being carefully stripped back to reveal a clean original beneath, then re-rendered as a small set of modern modular panels.",
-        "image_prompt": "An editorial illustration of a layered old painting being carefully stripped back, layer by layer, to reveal a clear original image beneath, which is then re-rendered as a small set of clean modern modular panels. A sense of accumulated layers resolved into a single clear modern form. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "alt": "An isometric town: on the left each building has its own redundant well, generator, and dirt path; on the right the same buildings share one water tower, one power station, and a clean network of roads.",
+        "image_prompt": "An editorial isometric illustration of a small town, split into a before and after. On the left, scattered buildings each with its own small redundant well, its own generator, and its own dirt path, a picture of duplicated private infrastructure. On the right, the same buildings connected to a single shared water tower, one shared power station, and a clean shared network of roads. A sense of redundant per-building infrastructure replaced by shared infrastructure built once and used by all. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
         "style_kind": "diagram"
       }
     },

@@ -97,7 +97,7 @@
      They're indexable but generic. */
   V.setSitePage = function (pageId, pageTitle, descriptionOverride) {
     const d = siteDefaults();
-    const title = pageTitle ? (pageTitle + ' — ' + d.title) : d.title;
+    const title = pageTitle ? (pageTitle + ' · ' + d.title) : d.title;
     const desc = descriptionOverride || d.description;
     const url  = SITE_URL_BASE + '/#/' + (pageId === 'library' ? '' : pageId);
 
@@ -135,7 +135,7 @@
     if (!paper) return V.clear();
     const d = siteDefaults();
     const url = SITE_URL_BASE + '/#/paper/' + paper.id;
-    const title = paper.title + ' — ' + d.title;
+    const title = paper.title + ' · ' + d.title;
     const desc  = paper.abstract || paper.subtitle || '';
 
     document.title = title;

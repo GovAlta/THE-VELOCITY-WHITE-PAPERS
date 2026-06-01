@@ -760,7 +760,7 @@
   font-weight: 600; font-size: 15px;
   margin: 0 0 12px; letter-spacing: -0.012em;
 }
-.cd-table-scroll { overflow-x: auto; }
+.cd-table-scroll { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
 .cd-table table {
   width: 100%; border-collapse: collapse;
   font-size: 14px;
@@ -796,6 +796,15 @@
 }
 .cd-table .cd-rowctl .vw-del:hover { color: var(--highlight); }
 .cd-table-edit { display: flex; gap: 8px; margin-top: 12px; }
+
+/* Mobile guard: never let article content scroll the whole page sideways.
+   Wide blocks (data tables) keep their own internal horizontal scroll via
+   .cd-table-scroll; this only clips anything that would otherwise spill past
+   the viewport edge. `clip` (not hidden) leaves vertical scroll untouched and
+   does not trap fixed elements like the table-of-contents button. */
+@media (max-width: 900px) {
+  .civic-detail { overflow-x: clip; }
+}
 
 /* --- step-flow process diagram --------------------------- */
 /* Fully fluid: the text column keeps wrapping as the screen narrows, down to
