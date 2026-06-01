@@ -44,7 +44,103 @@
         "visual": "title",
         "caption": "Paper 5 · Defining the Problem",
         "subcaption": "Four routes to modernization, climbing in ambition.",
-        "text": "The Four Approaches to AI Modernization. Content forthcoming."
+        "text": "The Four Approaches to AI Modernization. We know the estate, and we know it cannot be fixed the old way. There are four ways to modernize a government system with AI. They climb in ambition, from the lightest touch to the most complete rebuild, and no single one covers everything. We need all four."
+      },
+      {
+        "id": "02",
+        "title": "The AI Garage",
+        "audio_file": "public/audio/en/zgym1-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Approach one · The AI Garage",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Repair",
+              "desc": "Patch a flaw, upgrade an aging library, add a missing test."
+            },
+            {
+              "label": "Remediate",
+              "desc": "Fix the security exposure first, the most exposed systems before the rest."
+            },
+            {
+              "label": "Match",
+              "desc": "Rebuild on a modern stack that behaves exactly like the original."
+            }
+          ]
+        },
+        "text": "First, the lightest. The AI Garage fixes one system at a time, the way you take a car into the garage. It repairs a flaw, it remediates a security exposure, or it matches the old system with a modern rebuild that works exactly the same. It is the lowest risk, and it treats the symptoms rather than the disease."
+      },
+      {
+        "id": "03",
+        "title": "The AI Factory",
+        "audio_file": "public/audio/en/zgym1-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Approach two · The AI Factory",
+        "visual_config": {
+          "items": [
+            {
+              "label": "A team of agents",
+              "desc": "Architect, developer, tester, and security, working to one shared spec."
+            },
+            {
+              "label": "Modular",
+              "desc": "Small parts, each under about a thousand lines, each checkable on its own."
+            },
+            {
+              "label": "Government-owned",
+              "desc": "Open-source foundations, with no vendor we cannot leave."
+            },
+            {
+              "label": "Free of legacy",
+              "desc": "Built clean, none of the dead dependencies of the old system."
+            }
+          ]
+        },
+        "text": "Second, build new. The AI Factory is a software production line, a team of specialist agents that design, build, test, and secure a fresh application together. Everything it makes is modular, owned by the government, and free of old dependencies. How the Factory runs is the subject of the next three papers."
+      },
+      {
+        "id": "04",
+        "title": "185 applications into 16 modules",
+        "audio_file": "public/audio/en/zgym1-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Approach three · Rationalization",
+        "visual_config": {
+          "stat_value": "185 → 16",
+          "stat_label": "Applications collapsed into shared modules, in one ministry"
+        },
+        "subcaption": "A town that grew without a plan, finally given shared infrastructure.",
+        "text": "Third, rationalization. It looks at a whole ministry at once, like a town that grew without a plan, where every application built its own login and its own reporting. It maps what the ministry actually does and builds the shared parts once. In one ministry, one hundred and eighty-five applications collapsed into sixteen modules, in weeks to months rather than years."
+      },
+      {
+        "id": "05",
+        "title": "Government 3.0",
+        "audio_file": "public/audio/en/zgym1-tldr/05.mp3",
+        "visual": "compare",
+        "caption": "Approach four · Government 3.0",
+        "visual_config": {
+          "left": {
+            "label": "Today",
+            "body": "Thousands of fixed applications, each maintained, patched, and secured on its own."
+          },
+          "right": {
+            "label": "Government 3.0",
+            "body": "Governed data, rules written once as code, and interfaces an agent builds on demand."
+          }
+        },
+        "text": "Fourth, and most radical, Government 3.0. Here the application itself mostly disappears. The data is governed, and the rules are written once as code, drawn straight from legislation. AI agents work against that data and build the interface a person needs in the moment. It is the fastest and most cost-effective model, and it is the direction the work is headed."
+      },
+      {
+        "id": "06",
+        "title": "All four, and what comes next",
+        "audio_file": "public/audio/en/zgym1-tldr/06.mp3",
+        "visual": "stat",
+        "caption": "All four, and what comes next",
+        "visual_config": {
+          "stat_value": "~95%",
+          "stat_label": "Target cut in the cost and time of government software"
+        },
+        "subcaption": "Each system routed to the approach that fits: tolerate, invest, migrate, or eliminate.",
+        "text": "We do not choose just one. Each system is routed to the approach that fits it. Together the four reach for a roughly ninety-five percent reduction in the cost and time of government software, inside a single term. That raises the next question. If AI does this much of the work, how do we make sure it does it well and safely? That is the harness, and the subject of the next paper."
       }
     ]
   },

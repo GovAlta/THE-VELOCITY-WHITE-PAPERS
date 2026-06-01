@@ -627,7 +627,12 @@
 }
 .civic-detail .toc-item.active { color: var(--accent); }
 
-.civic-detail .col-doc { padding: 56px 64px 96px; }
+/* min-width:0 lets the doc column shrink inside the grid track instead of
+   being forced wide by a wide child (e.g. a data table). Without it, a wide
+   table pushes the column past the viewport and the right padding falls
+   off-screen, so paragraph text sits flush against the edge on mobile. The
+   table keeps its own internal scroll via .cd-table-scroll. */
+.civic-detail .col-doc { padding: 56px 64px 96px; min-width: 0; }
 .civic-detail .doc-inner { max-width: var(--doc-max-w); }
 .civic-detail .doc-meta {
   display: flex; gap: 18px;
