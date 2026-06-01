@@ -1,0 +1,17 @@
+{
+  "paper_id": "bbkac",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\bbkac\\en\\fig-3-2.jpg",
+  "bytes_jpg": 279141,
+  "bytes_png_source": 3366295,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-01T00:11:49.423Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a large fleet of small identical agent figures fanning out across a vast field of code repositories, each one inspecting a repository and carrying a neat report card back to a single central collection point. A sense of organized parallel reconnaissance returning structured findings. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a large fleet of small identical agent figures fanning out across a vast field of code repositories, each one inspecting a repository and carrying a neat report card back to a single central collection point. A sense of organized parallel reconnaissance returning structured findings. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

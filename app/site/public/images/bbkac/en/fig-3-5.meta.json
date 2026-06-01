@@ -1,0 +1,17 @@
+{
+  "paper_id": "bbkac",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\bbkac\\en\\fig-3-5.jpg",
+  "bytes_jpg": 256681,
+  "bytes_png_source": 2818410,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-01T00:14:45.803Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a calm control room where two senior officials stand before one large, clear dashboard showing the health of a whole estate of systems at a glance. Behind them, a wall of scattered binders, tickets, and spreadsheets is fading away. A sense of clarity replacing chaos. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a calm control room where two senior officials stand before one large, clear dashboard showing the health of a whole estate of systems at a glance. Behind them, a wall of scattered binders, tickets, and spreadsheets is fading away. A sense of clarity replacing chaos. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

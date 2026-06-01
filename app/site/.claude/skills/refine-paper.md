@@ -13,8 +13,9 @@ If you find yourself "improving" a sentence that was true, clear, and in his voi
 ## Read these first
 
 1. `../../style-guide/voice-exemplar.md` — the author's real cadence and the poison-phrase list. This is the standard you are protecting, not overwriting.
-2. `../../style-guide/02-substance-and-structure-guide.md` — the substance passes (truth, sourcing, numbers-carry-units). Run on substance only.
-3. The `CLAUDE.md` style section — the negative filter. Apply only to remove things that should not be there, never to re-cadence the author.
+2. `../../style-guide/00-writing-style-guide.md` — the hard rules and the "Clarity for a mixed audience" section. The clarity rules apply to prose you generate (Pass 5).
+3. `../../style-guide/02-substance-and-structure-guide.md` — the substance passes (truth, sourcing, numbers-carry-units). Run on substance only.
+4. `../../style-guide/03-fidelity-and-sourcing.md` — completeness, and the rule that enumerations go in tables or lists, never crammed into a prose sentence.
 
 ## Inputs
 
@@ -53,6 +54,19 @@ Remove only what should not be there:
 ### Pass 4 — Typos and grammar
 
 Fix obvious typos, agreement errors, and dropped words (the author drafts fast: "prototcols," "quicky," "Slot" for "Slop," a trailing "with."). This is mechanical cleanup, not editing. Do not change word choice while you are at it.
+
+### Pass 5 — Clarity for a mixed audience (on the prose you generated)
+
+Apply the "Clarity for a mixed audience" rules in `00` to the connective and explanatory prose you wrote, the sentences that are not the author's own. Most papers are built by expanding the author's notes into full prose, and that expansion is yours. It is where dense, crammed, AI-flavoured writing creeps in.
+
+On the prose you generated:
+- Split any sentence that stacks several ideas, or a list of items, joined by commas. One idea per sentence.
+- Move any list longer than three items into a table or a bulleted list. Never leave it crammed inside a sentence as a wall of commas (also required by `03-fidelity-and-sourcing.md`).
+- Rewrite abstract or self-referential openers ("X holds the design honest," "the design rests on two commitments") to lead with the plain point and name the actor: "we," "the tool."
+- Explain a technical term in plain words the first time it appears, or cut it.
+- Read each paragraph as a smart non-specialist. If it is white noise to them, simplify it until it is not.
+
+This pass does **not** touch the author's own sentences. His long, flowing, comma-joined prose is his voice (see Pass 3 and `voice-exemplar.md`); leave it. The clarity rules are for the prose you added around it.
 
 ## Per-string discipline
 

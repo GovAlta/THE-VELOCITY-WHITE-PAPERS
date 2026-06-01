@@ -1,0 +1,69 @@
+{
+  "id": "zgym1",
+  "num": "05",
+  "sequence": "",
+  "tier": "Conceptual",
+  "category": "paper",
+  "title": "The Four Approaches to AI Modernization at Scale (Gov 3.0)",
+  "subtitle": "Four routes to modernization, from patching to full rebuild.",
+  "track": "Defining the Problem",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "Forthcoming. This paper sits in the Defining the Problem group of the collection. The body will be written from source materials.",
+  "translation_status": "untranslated",
+  "hero_image": {
+    "src": "public/images/zgym1/fr/hero.jpg",
+    "alt": "Editorial image for: The Four Approaches to AI Modernization at Scale (Gov 3.0)",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"The Four Approaches to AI Modernization at Scale (Gov 3.0)\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/zgym1.mp3"
+  },
+  "tldr_presentation": {
+    "id": "zgym1-tldr",
+    "title": "The paper, in brief",
+    "locale": "fr",
+    "owner_id": "zgym1",
+    "slides": [
+      {
+        "id": "01",
+        "title": "The Four Approaches to AI Modernization at Scale (Gov 3.0)",
+        "audio_file": "public/audio/fr/zgym1-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Defining the Problem",
+        "subcaption": "",
+        "text": "The Four Approaches to AI Modernization at Scale (Gov 3.0). Content forthcoming."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Overview"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub"
+  },
+  "related": []
+}

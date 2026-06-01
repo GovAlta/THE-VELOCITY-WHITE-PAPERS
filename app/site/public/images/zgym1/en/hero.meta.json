@@ -1,0 +1,17 @@
+{
+  "paper_id": "zgym1",
+  "locale": "en",
+  "slot": "hero",
+  "out_path": "public\\images\\zgym1\\en\\hero.jpg",
+  "bytes_jpg": 220622,
+  "bytes_png_source": 3009354,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-01T03:46:13.439Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration of four diverging paths or routes that climb in ambition: the first leading to a single building being repaired, the second to a clean factory producing modular buildings, the third to many buildings collapsing into a few, and the fourth to a field of small autonomous agents working around a glowing data core with no buildings at all. A sense of an escalating ladder of transformation. Muted Alberta cream palette, navy and rust accents, archival print quality, no text, no logos.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration of four diverging paths or routes that climb in ambition: the first leading to a single building being repaired, the second to a clean factory producing modular buildings, the third to many buildings collapsing into a few, and the fourth to a field of small autonomous agents working around a glowing data core with no buildings at all. A sense of an escalating ladder of transformation. Muted Alberta cream palette, navy and rust accents, archival print quality, no text, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

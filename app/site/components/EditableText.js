@@ -33,8 +33,8 @@
 
   window.VWComponents['editable-text'] = {
     props: {
-      obj:   { type: Object, required: true },
-      field: { type: String, required: true },
+      obj:   { type: [Object, Array], required: true },
+      field: { type: [String, Number], required: true },
       html:  { type: Boolean, default: false },
       tag:   { type: String, default: 'span' },
       cls:   { type: String, default: '' },

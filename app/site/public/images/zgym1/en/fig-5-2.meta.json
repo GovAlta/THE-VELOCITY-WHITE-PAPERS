@@ -1,0 +1,17 @@
+{
+  "paper_id": "zgym1",
+  "locale": "en",
+  "slot": "fig-02",
+  "out_path": "public\\images\\zgym1\\en\\fig-5-2.jpg",
+  "bytes_jpg": 228804,
+  "bytes_png_source": 2758877,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-01T03:50:12.401Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration of a clean, orderly factory production line assembling small identical modular building blocks into finished modern applications, with a few broken, rusted old parts set aside and discarded. A sense of new, standard, and owned. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration of a clean, orderly factory production line assembling small identical modular building blocks into finished modern applications, with a few broken, rusted old parts set aside and discarded. A sense of new, standard, and owned. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

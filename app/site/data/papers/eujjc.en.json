@@ -1,11 +1,11 @@
 {
   "id": "eujjc",
-  "num": "07",
+  "num": "14",
   "sequence": "",
-  "tier": "Conceptual",
+  "tier": "Policy & People",
   "title": "The Compression Problem",
   "subtitle": "Organizational design at agentic scale. Command and control vs delegation of authority.",
-  "track": "TBD",
+  "track": "Human and Change Management",
   "authors": [
     "Ministry of Technology and Innovation"
   ],
@@ -113,13 +113,8 @@
   ],
   "_meta": {
     "placeholder": true,
-    "written_by": "structural-stub",
-    "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
+    "written_by": "structural-stub"
   },
   "category": "paper",
-  "related": [
-    "veoht",
-    "rnlt3",
-    "ln4lv"
-  ]
+  "related": []
 }

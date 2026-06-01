@@ -1,0 +1,17 @@
+{
+  "paper_id": "mwo98",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\mwo98\\en\\fig-2-1-bars.jpg",
+  "bytes_jpg": 160076,
+  "bytes_png_source": 2622426,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-31T21:53:36.305Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A clean editorial bar chart with exactly three vertical bars rising steeply from left to right on a warm cream background. The bottom axis labels, left to right, read 2022-23, then 2023-24, then 2024-25. The first bar is short, the second is roughly half again as tall, and the third is the tallest by a clear margin. A value label sits above each bar reading 81.2, then 126.3, then 189. A short title across the top reads: Connection attempts blocked per day, in millions. Deep navy bars with a thin rust accent baseline, crisp legible sans-serif labels, generous whitespace, no clutter.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A clean editorial bar chart with exactly three vertical bars rising steeply from left to right on a warm cream background. The bottom axis labels, left to right, read 2022-23, then 2023-24, then 2024-25. The first bar is short, the second is roughly half again as tall, and the third is the tallest by a clear margin. A value label sits above each bar reading 81.2, then 126.3, then 189. A short title across the top reads: Connection attempts blocked per day, in millions. Deep navy bars with a thin rust accent baseline, crisp legible sans-serif labels, generous whitespace, no clutter.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

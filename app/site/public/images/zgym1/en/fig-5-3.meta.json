@@ -1,0 +1,17 @@
+{
+  "paper_id": "zgym1",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\zgym1\\en\\fig-5-3.jpg",
+  "bytes_jpg": 243691,
+  "bytes_png_source": 2824827,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-01T03:51:39.742Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration of a layered old painting being carefully stripped back, layer by layer, to reveal a clear original image beneath, which is then re-rendered as a small set of clean modern modular panels. A sense of accumulated layers resolved into a single clear modern form. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration of a layered old painting being carefully stripped back, layer by layer, to reveal a clear original image beneath, which is then re-rendered as a small set of clean modern modular panels. A sense of accumulated layers resolved into a single clear modern form. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

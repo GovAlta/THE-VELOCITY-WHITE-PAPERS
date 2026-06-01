@@ -49,7 +49,7 @@ async function getAccessToken() {
   return _token;
 }
 
-async function vertexMessages({ model, system, messages, max_tokens }) {
+export async function vertexMessages({ model, system, messages, max_tokens }) {
   const token = await getAccessToken();
   const project = process.env.VERTEX_PROJECT_ID;
   const location = process.env.VERTEX_LOCATION_ID || 'global';

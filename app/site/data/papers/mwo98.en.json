@@ -4,31 +4,37 @@
   "sequence": "",
   "tier": "Conceptual",
   "title": "The Cyber Imperative",
-  "subtitle": "Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment.",
-  "track": "TBD",
+  "subtitle": "The walls are aging from within while the tide rises from without. Modernization is no longer separable from security.",
+  "track": "Defining the Problem",
   "authors": [
     "Ministry of Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 16,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "cybersecurity",
+    "supply-chain",
+    "technical-debt",
+    "drivers",
+    "ai-agents"
+  ],
   "repo": null,
-  "abstract": "As legacy systems age into vendor rust-out and lose support, the fortress walls are breaking down while in parallel the sophistication of the enemy is growing. One missing board can sink the ship because all the water rushes in. This reframes the modernization conversation from eventually to now.",
+  "abstract": "Alberta runs one of the strongest cyber security programs in Canada, and over the last 18 months it has held the line against a steady run of attacks. Holding it is getting harder for two reasons at once. The tide outside the walls is rising: cyber controls now block 189 million connection attempts a day, more than double two years ago, and AI moves an exploit from proof of concept to live in hours, often ahead of the vendor patch. The walls themselves are aging: much of the estate runs on technology a decade or more past vendor support, where no patch exists to apply. The software supply chain has become a primary target, and a single incident carries a heavy and recurring cost. This paper makes the case that modernization is a security requirement, and sets up the deep look at the estate that follows.",
   "hero_image": {
     "src": "public/images/mwo98/en/hero.jpg",
-    "alt": "Editorial image for: The Cyber Imperative",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The Cyber Imperative\". Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment. Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Old stone fortress walls part-submerged by a fast-rising sea, defenders still holding the upper ramparts.",
+    "image_prompt": "An editorial illustration of old stone fortress walls standing against a fast-rising sea, water already lapping over the lower ramparts while defenders hold the line above. A sense of strong defenses meeting a tide that keeps climbing. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/mwo98.mp3",
-    "duration_sec": null
+    "src": "public/audio/en/mwo98.mp3"
   },
   "tldr_presentation": {
     "id": "mwo98-tldr",
     "title": "The paper, in brief",
     "locale": "en",
+    "owner_id": "mwo98",
     "slides": [
       {
         "id": "01",
@@ -36,98 +42,265 @@
         "audio_file": "public/audio/en/mwo98-tldr/01.mp3",
         "visual": "title",
         "caption": "Paper 2 · Cybersecurity",
-        "subcaption": "Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment.",
-        "text": "The Cyber Imperative. Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment."
+        "subcaption": "The walls age from within while the tide rises from without.",
+        "text": "The Cyber Imperative. Alberta runs one of the strongest cyber programs in Canada, and for eighteen months it has held the line. Holding it is getting harder for two reasons at once. The tide outside the walls is rising, and the walls themselves are aging. This paper makes the case that modernization and security are now the same case."
       },
       {
         "id": "02",
-        "title": "The abstract",
+        "title": "189 million a day",
         "audio_file": "public/audio/en/mwo98-tldr/02.mp3",
-        "visual": "quote",
+        "visual": "stat",
+        "caption": "The tide, rising",
         "visual_config": {
-          "text": "As legacy systems age into vendor rust-out and lose support, the fortress walls are breaking down while in parallel the sophistication of the enemy is growing. One missing board can sink the ship because all the water rushes in. This reframes the modernization conversat…",
-          "cite": "Paper 02 — The Cyber Imperative"
+          "stat_value": "189M / day",
+          "stat_label": "Connection attempts blocked, 2024-25"
         },
-        "text": "As legacy systems age into vendor rust-out and lose support, the fortress walls are breaking down while in parallel the sophistication of the enemy is growing. One missing board can sink the ship because all the water rushes in. This reframes the modernization conversation from eventually to now."
+        "subcaption": "Up from 126.3 million the year before, and 81.2 million the year before that.",
+        "text": "The tide. In 2024-25, Alberta's cyber controls blocked an average of one hundred and eighty-nine million attempts to connect to the government network every day. The year before it was one hundred and twenty-six million, and the year before that eighty-one million. The province attributes the surge to sophisticated nation-state actors and financially motivated criminal groups."
       },
       {
         "id": "03",
-        "title": "How the paper is laid out",
+        "title": "What changed: speed",
         "audio_file": "public/audio/en/mwo98-tldr/03.mp3",
+        "visual": "compare",
+        "caption": "Discovery is no longer the slow part",
+        "visual_config": {
+          "left": {
+            "label": "Before",
+            "body": "Finding a flaw was the slow part. An exploit took weeks to build."
+          },
+          "right": {
+            "label": "Now",
+            "body": "Proof of concept to live in hours, often ahead of the vendor patch. AI surfaces flaws buried for years."
+          }
+        },
+        "text": "What changed most is speed. We have weathered AI-orchestrated attacks where an exploit moves from proof of concept to live in hours, often before the vendor's patch arrives. The same models now find flaws that sat undocumented for years. Project Glasswing surfaced more than ten thousand vulnerabilities in its first month, and Mozilla fixed two hundred and seventy-one in Firefox using the Claude Mythos model. The capability sits on both sides of the wall."
+      },
+      {
+        "id": "04",
+        "title": "You cannot patch what the vendor no longer ships",
+        "audio_file": "public/audio/en/mwo98-tldr/04.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "You cannot patch what the vendor no longer ships.",
+          "cite": "Paper 2 — The Cyber Imperative"
+        },
+        "text": "Now the walls. We maintain roughly one thousand two hundred and eighty applications, many of them aging. A meaningful share runs on technology more than a decade past vendor support, where for some there is no patch left to apply. You cannot patch what the vendor no longer ships. This is why patching alone cannot answer the problem, and why the cyber case and the modernization case are one case."
+      },
+      {
+        "id": "05",
+        "title": "A sprawling attack surface",
+        "audio_file": "public/audio/en/mwo98-tldr/05.mp3",
         "visual": "list",
-        "caption": "Sections",
+        "caption": "Wide, and widening",
         "visual_config": {
           "items": [
             {
-              "label": "§01",
-              "desc": "The fortress walls metaphor"
+              "label": "Too many stacks",
+              "desc": "More operating systems, languages, and dependencies than anyone can patch."
             },
             {
-              "label": "§02",
-              "desc": "Vendor rust-out and unsupported platforms"
+              "label": "Committed secrets",
+              "desc": "Keys and tokens in source, found by AI in 2025 and cleared."
             },
             {
-              "label": "§03",
-              "desc": "Threat sophistication, plotted"
+              "label": "Supply chain",
+              "desc": "Megalodon hit 5,500+ repositories; a hijacked Axios reached 100M downloads a week."
             },
             {
-              "label": "§04",
-              "desc": "Why this driver gets its own paper"
-            },
-            {
-              "label": "§05",
-              "desc": "From eventually to now"
+              "label": "Foreign contributions",
+              "desc": "Traced through commit histories and moved off."
             }
           ]
         },
-        "text": "A plan in 5 sections. The fortress walls metaphor. Vendor rust-out and unsupported platforms. Threat sophistication, plotted. Why this driver gets its own paper. From eventually to now."
+        "text": "The surface is wide. Too many operating systems, languages, and dependencies. Secrets committed into source, found by AI and cleared. Contributions from foreign countries, traced and moved off. And the fastest-growing front, the supply chain: the Megalodon campaign reached more than five thousand five hundred repositories, and a hijacked release of Axios, downloaded over one hundred million times a week, carried trojans into developer pipelines."
+      },
+      {
+        "id": "06",
+        "title": "The cost, and the answer",
+        "audio_file": "public/audio/en/mwo98-tldr/06.mp3",
+        "visual": "stat",
+        "caption": "Modernization is the security strategy",
+        "visual_config": {
+          "stat_value": "$5M / month",
+          "stat_label": "Rough cost of one government cyber incident"
+        },
+        "subcaption": "Alberta spent $47M in 2024-25 on patching and security alone.",
+        "text": "And the cost is real. A single government cyber incident runs around five million dollars a month, and a breach or ransomware far more. Alberta spent forty-seven million dollars last year on patching and security alone. The contest does not end, and standing still is the same as falling behind. The answer is to modernize the estate, and the next paper shows how we see it whole."
       }
-    ],
-    "owner_id": "mwo98"
+    ]
   },
   "embedded_presentations": [],
   "sections": [
     {
       "n": "01",
-      "title": "The fortress walls metaphor"
+      "title": "A growing threat"
     },
     {
       "n": "02",
-      "title": "Vendor rust-out and unsupported platforms"
+      "title": "A sprawling attack surface"
     },
     {
       "n": "03",
-      "title": "Threat sophistication, plotted"
+      "title": "The cost of cyber exposure"
     },
     {
       "n": "04",
-      "title": "Why this driver gets its own paper"
-    },
-    {
-      "n": "05",
-      "title": "From eventually to now"
+      "title": "Critical insights"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Alberta runs one of the strongest cyber security programs in Canada, and over the last 18 months it has held the line against a steady run of attacks, with layered defence-in-depth controls and extensive monitoring catching the incursions before they land. Holding that line is getting harder, and for two reasons at once. The tide outside the walls is rising, in both the volume and the sophistication of what arrives each day, and the walls themselves are aging, because a large part of the estate was built decades ago on technologies that are now slipping out of vendor support. This is the cyber imperative, stated plainly: modernization is no longer separable from security."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "The fortress walls metaphor"
+      "title": "A growing threat"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The full body of this paper is forthcoming. The structure is in place. Sections, abstract, and metadata are aligned with the inventory and the TL;DR presentation. The body will be written from the source transcripts and reference documents, not auto-generated."
+      "text": "Start with the tide. In 2024-25, Alberta's cyber controls blocked an average of 189 million attempts to connect to the government network every single day. The year before it was 126.3 million, and the year before that 81.2 million, so the daily volume has more than doubled in two years. The province's own annual report attributes the surge to sophisticated nation-state actors and financially motivated criminal groups. This is the background pressure our teams work inside every day, and the line is still climbing."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 2.1",
+      "title": "Connection attempts blocked per day",
+      "caption": "Alberta cyber controls blocked an average of 81.2 million attempts a day in 2022-23, 126.3 million in 2023-24, and 189 million in 2024-25. The annual report attributes the rise to sophisticated nation-state actors and financially motivated criminal groups. Source: Technology and Innovation 2024-2025 Annual Report, Performance Indicator 2.b.",
+      "image": {
+        "src": "public/images/mwo98/en/fig-2-1-bars.jpg",
+        "alt": "A bar chart of daily connection attempts blocked, rising from 81.2 million in 2022-23 to 126.3 million in 2023-24 to 189 million in 2024-25.",
+        "image_prompt": "A clean editorial bar chart with exactly three vertical bars rising steeply from left to right on a warm cream background. The bottom axis labels, left to right, read 2022-23, then 2023-24, then 2024-25. The first bar is short, the second is roughly half again as tall, and the third is the tallest by a clear margin. A value label sits above each bar reading 81.2, then 126.3, then 189. A short title across the top reads: Connection attempts blocked per day, in millions. Deep navy bars with a thin rust accent baseline, crisp legible sans-serif labels, generous whitespace, no clutter.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "sidenote",
+      "label": "AI as a vulnerability engine",
+      "value": "Across Project Glasswing, partner organizations report their rate of bug-finding rising more than tenfold, validated at roughly 90 percent, with a median time to patch of about two weeks. The bottleneck has shifted from finding the flaw to fixing it. The lesson for any large estate is blunt: assume the undocumented vulnerabilities in your oldest code are now discoverable, by either side."
+    },
+    {
+      "type": "paragraph",
+      "text": "What has changed most is the speed. We have now weathered AI-orchestrated attacks where an exploit moves from proof of concept to live in a matter of hours, and in numerous instances the exploit arrives before the vendor's patch does. The same models that compress an attacker's timeline are also, for the first time, finding flaws that have sat undocumented in widely used code for years, the kind only an attacker with deep knowledge would previously have uncovered. Anthropic's [Project Glasswing](https://www.anthropic.com/research/glasswing-initial-update), which points AI at critical software to find and patch flaws before attackers can use them, surfaced more than 10,000 vulnerabilities across systemically important software in its first month. Using the Claude Mythos model, Mozilla found and shipped fixes for [271 security bugs in Firefox](https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/), more than ten times what its earlier methods had ever surfaced. The capability now sits on both sides of the wall."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 2.2",
+      "title": "Discovery is no longer the slow part",
+      "caption": "AI now reads code at depth and surfaces flaws that sat undocumented for years. The same capability is available to defenders and to attackers, which is why the discovery advantage is temporary and the remediation backlog is what matters.",
+      "image": {
+        "src": "public/images/mwo98/en/fig-2-1.jpg",
+        "alt": "A vast field of dense code with several previously hidden flaws lighting up as a line of light reads across it.",
+        "image_prompt": "An editorial illustration of a vast field of dense code with several previously hidden cracks or flaws suddenly lit up, as a sweeping army of bots, with light beams downward, reads across the whole field at once. A sense of long-buried weaknesses becoming visible in seconds. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "We are putting that same capability to work on our own defense. Two new cyber agents, a Red and a Blue, now run against our own code as a standing part of the toolkit, and they are a recent and fast-growing part of the arsenal. The paper [Red, Blue, Green, and Yellow Agents](#/paper/l199t) covers them in detail; here it is enough to say that the defenders now have the machine on their side too."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now turn to the walls. Technology and Innovation maintains roughly 1,400 applications, many of them aging, and a meaningful share of the estate runs on technologies that are more than a decade past vendor support, where for some there is no patch left to apply. You cannot patch what the vendor no longer ships. Even where a patch does exist, it often leaves a tool that is thirty or forty years old, reached through Citrix and other workarounds, held secure for another quarter but no closer to modern. This is why patching alone cannot answer the problem, and it is the precise point where the cyber case and the modernization case become a single case."
+    },
+    {
+      "type": "paragraph",
+      "text": "[Paper 1](#/paper/cux4h) reported that publicly known vulnerabilities in the technologies Alberta runs rose 78.2 percent in a single year, with an AI assessment of our own estate uncovering a further increase on top of that baseline. Read against the volume and the speed above, the conclusion is hard to avoid. An unremediated legacy system is an unremediated attack surface, and the gap between a flaw becoming known and a flaw being used is closing toward zero."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "A sprawling attack surface"
+    },
+    {
+      "type": "paragraph",
+      "text": "The shape of the estate widens the target. Different teams, over many years, adopted different technologies, and the result is too many operating systems, too many languages, and too many dependencies, each one its own set of patches to track and its own way in. Every stack we run is another perimeter to defend."
+    },
+    {
+      "type": "sidenote",
+      "label": "How the supply chain is being hit",
+      "value": "Three threads run through the year's campaigns. AI-augmented volume: attackers flood maintainers with fake pull requests and mass-scan for flaws faster than human teams can review, trying to merge malicious code before anyone catches it. Trusted-integration abuse: groups such as HAFNIUM ride hijacked OAuth tokens and stolen API keys from cloud and SaaS platforms, which lets them move while looking like a sanctioned integration. Infiltrated ranks: state-sponsored actors, notably from North Korea, pose as remote IT workers to reach source code directly. The defensive response is equally concrete: cool-down periods before adopting auto-updates, strict access controls with fast revocation of leaked secrets, and a software bill of materials to audit the indirect dependencies an application actually pulls in."
+    },
+    {
+      "type": "paragraph",
+      "text": "We deployed AI agents to analyze the history of GitHub commit histories, traced open-source code contributions that originated in foreign countries, and shut down and moved off the systems and dependencies tied to them. The scan also surfaced instances where staff had mistakenly committed secrets into the code repositories. AI effectively surfaced these in 2025, and we put controls in place that removed, cycled, or invalidated every one of them, closing the matter in Alberta. Unmitigated, such secrets would represent serious exposures for governments and organizations around the world."
+    },
+    {
+      "type": "paragraph",
+      "text": "The fastest-growing front is the software supply chain. Through 2026, attackers have shifted from breaching the perimeter directly to poisoning the shared upstream that everyone trusts: less-scrutinized third parties, open-source repositories, developer environments, and managed service providers, from which a single malicious payload cascades to thousands of organizations at once. The year's campaigns make the pattern concrete. The Megalodon campaign injected malicious build workflows into more than 5,500 open-source repositories and harvested API tokens, SSH keys, and cloud credentials. A hijacked release of Axios, a package downloaded more than 100 million times a week, pushed remote-access trojans straight into developer machines and continuous-integration pipelines. The TeamPCP group poisoned widely used developer and security tools to push malicious updates into enterprise pipelines, and a fresh wave of npm attacks targeted the SAP developer community through compromised packages."
+    },
+    {
+      "type": "keystat",
+      "label": "Repositories hit in one 2026 supply-chain campaign",
+      "value": "5,500+",
+      "body": "The Megalodon campaign reached more than 5,500 open-source repositories through poisoned build workflows. A separate hijack of the Axios package, downloaded over 100 million times a week, carried remote-access trojans into developer machines and pipelines. Sources: CISA, Zscaler, Unit 42, 2026. Alberta was unaffected, but many were."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 2.3",
+      "title": "One poisoned dependency, many victims",
+      "caption": "A single compromised open-source package reaches every system that depends on it. Attackers target the shared upstream precisely because it cascades downstream, which is why the supply chain has become the preferred route.",
+      "image": {
+        "src": "public/images/mwo98/en/fig-2-2.jpg",
+        "alt": "A branching dependency tree where one poisoned upstream node spreads its mark down to many downstream systems.",
+        "image_prompt": "An editorial illustration of a branching tree of software dependencies, where a single node near the top glows with a poison mark and thin lines carry that mark down to dozens of systems below it. A sense of one compromise cascading to many. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "The cost of cyber exposure"
+    },
+    {
+      "type": "paragraph",
+      "text": "The hard part is finding the room to act. When a legislative change carries a hard deadline, there is no flexibility on delivery. Historically, Technology and Innovation built agile delivery teams from individual contractors resources, known as 'Contingent Labour', to stand up new solutions, while the Application Master Services Agreement teams focused on maintenance and minor enhancements. In IT it is difficult to return to an application once it has shipped. Items are triaged reactively, and there is often little or no money to fund remediation except in the most extreme cases, where the danger is clear and present."
+    },
+    {
+      "type": "keystat",
+      "label": "Rough cost of a single government cyber incident",
+      "value": "$5M / month",
+      "body": "And that is closer to a best case. A significant data breach or ransomware event runs far higher. Alberta holds a firm position of never paying ransom, but the secondary reputational damage can be significant and long-lasting."
+    },
+    {
+      "type": "paragraph",
+      "text": "None of this comes free, and the province is already paying for it. In 2024-25, Alberta spent 47 million dollars maintaining applications with upgrades and security patching to reduce vulnerabilities and chip away at the technical debt, and its dedicated cybersecurity program grew to 14.5 million dollars from 12.3 million the year before. Across the 115 applications classified as critical, 97 percent now hold tested disaster-recovery plans, up from 91 percent. The spend is real, it is rising, and it is the price of holding a line that will not hold still. The contest between cyber professionals and cyber criminals does not end, and standing still is the same as falling behind."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Critical insights"
+    },
+    {
+      "type": "paragraph",
+      "text": "Defending an estate this large means first being able to see it whole: a current configuration view of what we run, and a way to harvest evidence from the code itself rather than from memory and folklore. That is exactly what we built. The next paper is a deep dive into how we pointed AI at our entire GitHub estate, what it found, and how that evidence now decides where we defend first. See [Git Insights](#/paper/bbkac)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sources: [Project Glasswing, Anthropic (2026)](https://www.anthropic.com/research/glasswing-initial-update); [Hardening Firefox, Mozilla (2026)](https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/); [CISA supply-chain alert (2026)](https://www.cisa.gov/news-events/alerts/2026/05/28/supply-chain-compromises-impact-nx-console-and-github-repositories); [Zscaler supply-chain research (2026)](https://www.zscaler.com/blogs/security-research/supply-chain-attacks-surge-march-2026); [Unit 42 on npm supply-chain attacks](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/); [Technology and Innovation 2024-2025 Annual Report](https://open.alberta.ca/dataset/50f6b5a7-c870-4c87-8c6c-38735140fff9/resource/f5c86436-66ff-4d2d-85bb-b6a23633d8b6/download/ti-annual-report-2024-2025.pdf)."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "cybersecurity",
+        "supply-chain",
+        "technical-debt",
+        "drivers"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
-  "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub",
-    "notes": "Structural stub. Body to be written from human sources (transcripts, technical-reference) — do not auto-generate."
-  },
   "category": "paper",
   "related": [
     "cux4h",
-    "p7p2k",
-    "akle0"
-  ]
+    "bbkac",
+    "l199t"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation"
+  }
 }

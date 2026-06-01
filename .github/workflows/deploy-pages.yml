@@ -1,0 +1,72 @@
+name: Deploy site to GitHub Pages
+
+# Builds and deploys the static site in app/site to GitHub Pages.
+#
+# The repo is pushed to two remotes: the private GovAlta-EMU mirror and the
+# public GovAlta Pages repo. Both receive this workflow file, but the build
+# only runs in the public repo (see the `if:` guard below). The private
+# mirror skips it cleanly and never publishes.
+#
+# Everything is built in the ephemeral runner, never in your local working
+# tree, so your local index.html is never swapped or rewritten.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+# Permissions required by the GitHub Pages deploy actions.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two Pages deploys at once; let the newest push win.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    # Only the public Pages repo builds and deploys. Update this string if the
+    # public repo is ever renamed.
+    if: github.repository == 'GovAlta/THE-VELOCITY-WHITE-PAPERS'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # The build scripts use only Node built-ins, so there is no npm install
+      # and no node_modules in the published artifact.
+      - name: Build optimized site (bundle, sitemap, prerender)
+        working-directory: app/site
+        env:
+          # Project Pages are served from a subpath named after the repo.
+          BASE_URL: https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS
+        run: |
+          node scripts/build-bundle.mjs --replace
+          node scripts/build-sitemap.mjs --base "$BASE_URL"
+          node scripts/prerender.mjs --base "$BASE_URL"
+          # Disable Jekyll so files and folders beginning with "_"
+          # (components/_lib, components/visuals/_lib) are served.
+          touch .nojekyll
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the site as a Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/site
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

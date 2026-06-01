@@ -751,6 +751,92 @@
   line-height: 1.5;
 }
 
+/* --- Data table block ------------------------------------ */
+.cd-table {
+  margin: 32px 0; background: var(--paper-alt);
+  border: 1px solid var(--rule); padding: 24px 28px 22px;
+}
+.cd-table .ftitle {
+  font-weight: 600; font-size: 15px;
+  margin: 0 0 12px; letter-spacing: -0.012em;
+}
+.cd-table-scroll { overflow-x: auto; }
+.cd-table table {
+  width: 100%; border-collapse: collapse;
+  font-size: 14px;
+}
+.cd-table th, .cd-table td {
+  text-align: left; padding: 9px 12px;
+  border-bottom: 1px solid var(--rule); vertical-align: top;
+}
+.cd-table th {
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-50);
+  border-bottom: 1px solid var(--ink-30, var(--rule));
+}
+.cd-table th.num, .cd-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cd-table tbody tr:last-child td { border-bottom: none; }
+.cd-table .fcaption {
+  font-style: italic; font-size: 13px; color: var(--ink-70);
+  margin-top: 12px; padding-top: 10px; border-top: 1px dotted var(--rule);
+  line-height: 1.5; display: flex; flex-direction: column; gap: 4px;
+}
+.cd-table .cd-table-src { font-style: normal; font-family: var(--font-mono); font-size: 11px; color: var(--ink-50); }
+/* edit-mode controls */
+.cd-table th { position: relative; }
+.cd-table .cd-col-del {
+  margin-left: 6px; border: none; background: none; cursor: pointer;
+  color: var(--ink-50); font-size: 11px; line-height: 1; padding: 0;
+}
+.cd-table .cd-col-del:hover { color: var(--highlight); }
+.cd-table .cd-rowctl { width: 28px; text-align: center; border-bottom: none; }
+.cd-table .cd-rowctl .vw-del {
+  border: none; background: none; cursor: pointer; color: var(--ink-50);
+  font-size: 11px; line-height: 1; padding: 2px;
+}
+.cd-table .cd-rowctl .vw-del:hover { color: var(--highlight); }
+.cd-table-edit { display: flex; gap: 8px; margin-top: 12px; }
+
+/* --- step-flow process diagram --------------------------- */
+/* Fully fluid: the text column keeps wrapping as the screen narrows, down to
+   small phones. min-width:0 on the wrapper lets it shrink inside any flex/grid
+   parent instead of forcing the column to stop shrinking. */
+.gi-flow-scroll { min-width: 0; }
+.gi-flow { list-style: none; margin: 8px 0 2px; padding: 0; }
+.gi-flow--column .gi-step {
+  display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 16px;
+  position: relative; padding: 0 0 22px;
+}
+/* The connecting line is centred under the 30px badge (centre at 15px). */
+.gi-flow--column .gi-step:not(:last-child)::before {
+  content: ""; position: absolute; left: 14px; top: 32px; bottom: -8px;
+  width: 2px; background: var(--rule);
+}
+.gi-step-n {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--navy, var(--ink)); color: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: 13px; font-weight: 600;
+  position: relative; z-index: 1;
+}
+.gi-step-title { font-weight: 600; font-size: 15px; letter-spacing: -0.01em; margin-top: 4px; }
+.gi-step-desc { font-size: 14px; color: var(--ink-70); line-height: 1.55; margin-top: 3px; }
+.gi-step-del {
+  display: inline-block; margin-top: 6px; border: none; background: none;
+  cursor: pointer; color: var(--ink-50); font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.06em; padding: 0;
+}
+.gi-step-del:hover { color: var(--highlight); }
+.gi-step-add .gi-step-n { background: var(--paper-alt); color: var(--ink-50); border: 1px dashed var(--rule); }
+
+/* Horizontal variant for short chains */
+.gi-flow--row { display: flex; gap: 10px; align-items: stretch; }
+.gi-flow--row .gi-step {
+  flex: 1 1 140px; display: block; border: 1px solid var(--rule);
+  background: var(--paper); padding: 12px 14px; position: relative;
+}
+.gi-flow--row .gi-step-n { margin-bottom: 8px; }
+
 .cd-sidenote {
   width: 240px; float: right; clear: right;
   margin: 4px 0 16px 24px;

@@ -1,11 +1,11 @@
 {
   "id": "p7p2k",
-  "num": "08",
+  "num": "06",
   "sequence": "2 of 2",
   "tier": "Technical",
   "title": "The Well-Built Harness",
   "subtitle": "How AI lets the public service build and ship enterprise-grade software at speed, without lowering the bar.",
-  "track": "Foundation",
+  "track": "Engineering the Solution",
   "authors": [
     "Janak Alford",
     "Platform Engineering",
@@ -655,20 +655,12 @@
     "placeholder": false,
     "written_by": "human-authored",
     "author_verbatim": [],
-    "draft": "v5",
-    "notes": "Fifth draft. Restructured to lead with the author's own words (Tier 1), with the code-derived technical detail kept as support (Tier 2), per style-guide/source-hierarchy.md. Restored the author's three missing sections verbatim: Driving outcomes (section 2), Building harnesses (section 5, including the author's exact three craft points, the templates-breakthrough and spec-driven-development paragraphs, the red/blue/green/yellow review teams, and the harness-as-sharable-skill close), and Driving with speed (section 7, the how-to-move-fast list and the Academy/Nexus close). Restored the author's three failure modes verbatim to section 1 (reproducibility, security, over-confidence). Replaced the paraphrased Clarke pullquote with the author's exact wording. Dropped the previous draft's invented framing paragraphs (the 'two principles' preamble, the 'note on the word harness') and the duplicated photocopier/masterpiece paraphrases now that the author's verbatim text covers them. Author paragraphs carry block-level author_verbatim:true so the style scanner does not flag the author's deliberate word choices (leverage, extremely, very). Tier-2 technical detail retained: the three real template repos, the hook lifecycle events, the periodic table of ~95 controls, the four review teams figure, and the full security appendix. Minimal typo/grammar fixes only on author prose; one garbled sentence in the move-fast list (the rework/harness sentence) was given a minimal grammatical fix and should be confirmed by the author. TL;DR slides 01 and 08 updated to the new framing; their audio needs regeneration. FR sibling needs regeneration to match this structure.",
-    "sources": [
-      "author draft (The Well-Built Harness, May 2026)",
-      "technical-reference/AICON/AICON Transcript.md",
-      "technical-reference/harness/index.html (Anatomy of an Enterprise Template)",
-      "golden/velocity-harness-setup/.claude/",
-      "golden/_l3/challenges/alberta-ca-harness/"
-    ]
+    "draft": "v5"
   },
   "category": "paper",
   "related": [
-    "akle0",
-    "offjm",
-    "jy3dg"
+    "l199t",
+    "qthji",
+    "qxlzo"
   ]
 }

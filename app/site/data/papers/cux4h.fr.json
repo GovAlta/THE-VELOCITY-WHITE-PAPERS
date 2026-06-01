@@ -5,7 +5,7 @@
   "tier": "Conceptual",
   "title": "Le navire de Thésée à deux milliards de dollars",
   "subtitle": "Le parc technologique a dépassé la capacité humaine de le gérer, et le reconstruire signifie le reconstruire pendant qu'il reste en mer.",
-  "track": "Foundation",
+  "track": "Defining the Problem",
   "authors": [
     "Ministry of Technology and Innovation"
   ],
@@ -135,23 +135,23 @@
   "sections": [
     {
       "n": "01",
-      "title": "A generational problem"
+      "title": "Un problème générationnel"
     },
     {
       "n": "02",
-      "title": "The ship of government"
+      "title": "Le navire du gouvernement"
     },
     {
       "n": "03",
-      "title": "Why AI"
+      "title": "Pourquoi l'IA"
     },
     {
       "n": "04",
-      "title": "The challenges and the fix"
+      "title": "Les défis et la solution"
     },
     {
       "n": "05",
-      "title": "What is to come"
+      "title": "Ce qui s'en vient"
     }
   ],
   "blocks": [
@@ -342,13 +342,12 @@
   "category": "paper",
   "related": [
     "mwo98",
-    "dehkj",
-    "xb5uk"
+    "bbkac",
+    "zgym1"
   ],
   "_meta": {
     "placeholder": false,
     "written_by": "Ministry of Technology and Innovation",
-    "notes": "Body is the author's prose, kept in his voice and terms but edited to style-guide/00 (struck 'unlock', 'robust', 'truly', 'very', the metaphorical 'journey'; fixed typos; completed one truncated sentence). Scoped as the collection's introduction: operational detail was deliberately removed and routed downstream. The 50-agent / 466M-line / 20-hour diagnostic and the estate findings (a third undocumented, seven eighths without CI/CD, two thirds stale) belong to the Git Insights papers; the deep cyber treatment belongs to the cybersecurity paper. Sources consulted: technical-reference/alberta-anthropic-initiative.md, cisco-technology-debt-modernization-whitepaper.md, ai_code_assessment_methodology.docx. One substantive correction for author review: the Ship of Theseus thought experiment was attributed to 'Jason and the Argonauts'; corrected to Theseus to match the title and Plutarch's account. EN is now complete: six TL;DR slides rebuilt to the five-section arc, four body figures (FIG 1.1-1.4) plus the hero generated with sidecars, and longform plus per-slide narration generated. FR is not yet produced; it follows once EN is approved.",
     "translated_from": {
       "source_locale": "en",
       "model": "claude-opus-4-7",

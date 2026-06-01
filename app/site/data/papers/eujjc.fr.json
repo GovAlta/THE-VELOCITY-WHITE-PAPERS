@@ -1,11 +1,11 @@
 {
   "id": "eujjc",
-  "num": "07",
+  "num": "14",
   "sequence": "",
-  "tier": "Conceptual",
+  "tier": "Policy & People",
   "title": "Le problème de compression",
   "subtitle": "Conception organisationnelle à l'échelle agentique. Commandement central contre délégation de l'autorité.",
-  "track": "À placer",
+  "track": "Human and Change Management",
   "authors": [
     "Ministère de la Technologie et de l'Innovation"
   ],
@@ -86,18 +86,6 @@
     {
       "n": "01",
       "title": "La compression, définie"
-    },
-    {
-      "n": "02",
-      "title": "Commandement central contre délégation"
-    },
-    {
-      "n": "03",
-      "title": "Pourquoi le biais humain force un faux choix"
-    },
-    {
-      "n": "04",
-      "title": "Bacs à sable parallèles, comparaison empirique"
     }
   ],
   "blocks": [
@@ -113,14 +101,9 @@
   ],
   "_meta": {
     "placeholder": true,
-    "written_by": "structural-stub",
-    "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
+    "written_by": "structural-stub"
   },
   "translation_status": "untranslated",
   "category": "paper",
-  "related": [
-    "veoht",
-    "rnlt3",
-    "ln4lv"
-  ]
+  "related": []
 }

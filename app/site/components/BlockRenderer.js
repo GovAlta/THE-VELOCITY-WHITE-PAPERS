@@ -66,6 +66,14 @@
                     :chart="block.chart || null"
                     :image="block.image || null" />
 
+      <data-table v-else-if="block.type === 'table'"
+                  :block="block"
+                  :title="block.title || ''"
+                  :columns="block.columns || []"
+                  :rows="block.rows || []"
+                  :caption="block.caption || ''"
+                  :source="block.source || ''" />
+
       <side-note v-else-if="block.type === 'sidenote'"
                  :label="block.label || 'Note'"
                  :value="block.value" />

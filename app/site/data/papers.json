@@ -7,7 +7,7 @@
       "tier": "Conceptual",
       "title": "The Two-Billion-Dollar Ship of Theseus",
       "subtitle": "The technical estate has outgrown the human capacity to manage it, and rebuilding it means rebuilding the ship while it stays at sea.",
-      "track": "Foundation",
+      "track": "Defining the Problem",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
@@ -25,8 +25,8 @@
       "abstract": "The technical estate the Government of Alberta oversees has grown past the point where human effort alone can keep it current. Forty years of code, infrastructure, business rules, and vendor dependencies cost more to carry every year, and known vulnerabilities are rising faster than they can be remediated. Modernizing the estate through conventional project work would take generations. This paper sets out why that math fails, why a paired human and AI workforce is the way through, and what the rest of the collection will show.",
       "related": [
         "mwo98",
-        "dehkj",
-        "xb5uk"
+        "bbkac",
+        "zgym1"
       ],
       "category": "paper"
     },
@@ -36,151 +36,129 @@
       "sequence": "",
       "tier": "Conceptual",
       "title": "The Cyber Imperative",
-      "subtitle": "Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment.",
-      "track": "TBD",
+      "subtitle": "The walls are aging from within while the tide rises from without. Modernization is no longer separable from security.",
+      "track": "Defining the Problem",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 16,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "cybersecurity",
+        "supply-chain",
+        "technical-debt",
+        "drivers",
+        "ai-agents"
+      ],
       "repo": null,
-      "abstract": "As legacy systems age into vendor rust-out and lose support, the fortress walls are breaking down while in parallel the sophistication of the enemy is growing. One missing board can sink the ship because all the water rushes in. This reframes the modernization conversation from eventually to now.",
+      "abstract": "Alberta runs one of the strongest cyber security programs in Canada, and over the last 18 months it has held the line against a steady run of attacks. Holding it is getting harder for two reasons at once. The tide outside the walls is rising: cyber controls now block 189 million connection attempts a day, more than double two years ago, and AI moves an exploit from proof of concept to live in hours, often ahead of the vendor patch. The walls themselves are aging: much of the estate runs on technology a decade or more past vendor support, where no patch exists to apply. The software supply chain has become a primary target, and a single incident carries a heavy and recurring cost. This paper makes the case that modernization is a security requirement, and sets up the deep look at the estate that follows.",
       "related": [
         "cux4h",
-        "p7p2k",
-        "akle0"
+        "bbkac",
+        "l199t"
       ],
       "category": "paper"
     },
     {
-      "id": "dehkj",
+      "id": "bbkac",
       "num": "03",
       "sequence": "",
-      "tier": "Conceptual",
-      "title": "The Wisdom of Crowds",
-      "subtitle": "Red tape reduction through AI benchmarking of legislation, regulation, and policy across jurisdictions.",
-      "track": "TBD",
+      "tier": "Technical",
+      "title": "Git Insights",
+      "subtitle": "We pointed AI at the whole of Alberta's code estate to get the ground truth. Here is how it works and what it found.",
+      "track": "Defining the Problem",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 18,
       "status": "Draft",
-      "tags": [],
-      "repo": "https://github.com/alberta-velocity/wisdom-of-crowds",
-      "abstract": "A methodology and open-source toolset for pan-Canadian benchmarking of legislation, regulation, and policy using AI. A form of self-reflection on the proper function of government that was not previously possible.",
+      "tags": [
+        "git-insights",
+        "code-analysis",
+        "agents",
+        "technical-debt",
+        "cybersecurity"
+      ],
+      "repo": "https://github.com/GovAlta-EMU/git-insights",
+      "abstract": "Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. 50 agents read 466 million lines of code in roughly 20 hours, a scan no consultant engagement could match. This paper explains the problem, shows in detail how the tool works, and reveals what the scan found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code.",
       "related": [
-        "cux4h",
-        "bxvjn",
-        "aqtdz"
+        "offjm",
+        "p7p2k",
+        "mwo98"
       ],
       "category": "paper"
     },
     {
-      "id": "xb5uk",
+      "id": "offjm",
       "num": "04",
       "sequence": "",
-      "tier": "Conceptual",
-      "title": "From Vibes to Designs",
-      "subtitle": "The pivot from problem to philosophy of solution. Why both vibe coding and rigid master plans fail.",
-      "track": "TBD",
+      "tier": "Technical",
+      "title": "Git Insights Ministry",
+      "subtitle": "From knowing the estate to rebuilding it: synthesizing thousands of findings into one modular, government-owned architecture.",
+      "track": "Defining the Problem",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 19,
       "status": "Draft",
-      "tags": [],
-      "repo": null,
-      "abstract": "Argues against vibe coding, where AI takes on the large share of work and humans are along for the ride, because unconstrained it just exacerbates the snowflake problem at greater speed. Argues equally against rigid hierarchical master plans, which fail through the curse of knowledge when applied to a chaotic and complex system. Sets up what the next two papers answer: there is a third way.",
+      "tags": [
+        "git-insights",
+        "modernization",
+        "architecture",
+        "shared-services",
+        "agents"
+      ],
+      "repo": "https://github.com/GovAlta-EMU/git-insights-ministries",
+      "abstract": "Git Insights told us the truth about every repository, one at a time. Knowing was the first step, and we acted on it. But knowing what is wrong is not the same as knowing how to rebuild. Git Insights Ministry is the second lens. It reads a whole ministry of code at once, around 200 repositories, and works out everything those systems actually do. Then it proposes a way to rebuild them: as modern, government-owned modules, each built once, with nothing duplicated. In one Alberta ministry, 185 applications collapsed into 16 reusable modules. This paper shows how the tool works, what it gives a decision-maker, and how the shared architecture of government gets rebuilt.",
       "related": [
-        "veoht",
-        "rnlt3"
+        "bbkac",
+        "zgym1",
+        "p7p2k"
       ],
       "category": "paper"
     },
     {
-      "id": "veoht",
+      "id": "zgym1",
       "num": "05",
       "sequence": "",
       "tier": "Conceptual",
-      "title": "Ecosystem Architecture",
-      "subtitle": "Forest vs lawn. Permaculture vs English garden. Architecture suited to its place.",
-      "track": "TBD",
+      "title": "The Four Approaches to AI Modernization",
+      "subtitle": "From repairing one system at a time to dissolving the application altogether: the four routes by which a government rebuilds itself at speed.",
+      "track": "Defining the Problem",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 16,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "modernization",
+        "architecture",
+        "ai-factory",
+        "government-3-0",
+        "strategy"
+      ],
       "repo": null,
-      "abstract": "Instead of building a single monolithic organism, curate the conditions for success. Establish not static code but dynamic systems that can function and interoperate within a set of constraints, borrowed from nature. The architectural concept being reached for is vernacular, architecture suited to its place. The human element remains in the drivers seat as the architect of comprehensive vision.",
+      "abstract": "We know the estate, and we know it cannot be fixed the old way. The question this paper answers is how. There are four ways to modernize a government system with AI, and they climb in ambition. The AI Garage repairs and replaces systems one at a time. The AI Factory builds brand-new applications the government fully owns. Rationalization collapses a whole ministry of overlapping systems into a small set of modern modules. And Government 3.0 dissolves the application itself, letting AI agents work directly against governed data and generate the interface a person needs in the moment. No single approach covers everything, so we need all four. Together they are how a government reaches a roughly ninety-five percent reduction in the cost and time of its software, inside a single term rather than over the better part of a century.",
       "related": [
-        "xb5uk",
-        "rnlt3",
-        "eujjc"
-      ],
-      "category": "paper"
-    },
-    {
-      "id": "rnlt3",
-      "num": "06",
-      "sequence": "",
-      "tier": "Conceptual",
-      "title": "Observability Without Suppressing Creative Intelligence",
-      "subtitle": "How to implement sufficient control without strangling the inherent intelligence of the system.",
-      "track": "TBD",
-      "authors": [
-        "Ministry of Technology and Innovation"
-      ],
-      "published": null,
-      "reading_min": null,
-      "status": "Draft",
-      "tags": [],
-      "repo": null,
-      "abstract": "If you over-constrain, the system is limited by your own intelligence. We need an environment where the cost of mistakes is mitigated, but not so mitigated that it eliminates the potential for novel solutions. Sets the philosophical groundwork that Nexus and the Velocity Game Engine operationalize.",
-      "related": [
-        "veoht",
-        "ln4lv",
-        "h70og"
-      ],
-      "category": "paper"
-    },
-    {
-      "id": "eujjc",
-      "num": "07",
-      "sequence": "",
-      "tier": "Conceptual",
-      "title": "The Compression Problem",
-      "subtitle": "Organizational design at agentic scale. Command and control vs delegation of authority.",
-      "track": "TBD",
-      "authors": [
-        "Ministry of Technology and Innovation"
-      ],
-      "published": null,
-      "reading_min": null,
-      "status": "Draft",
-      "tags": [],
-      "repo": null,
-      "abstract": "All systems face an inability to compress the granular into the strategic. The flawed human framing is to treat command-and-control vs delegation as an either/or. In the agentic space, agents operate tens to hundreds of times faster than humans. The correct answer is to create sufficiently autonomous, isolated societies and compete the different models against each other through Nexus, then empirically decide.",
-      "related": [
-        "veoht",
-        "rnlt3",
-        "ln4lv"
+        "offjm",
+        "p7p2k",
+        "qthji",
+        "bbkac"
       ],
       "category": "paper"
     },
     {
       "id": "p7p2k",
-      "num": "08",
+      "num": "06",
       "sequence": "2 of 2",
       "tier": "Technical",
       "title": "The Well-Built Harness",
       "subtitle": "How AI lets the public service build and ship enterprise-grade software at speed, without lowering the bar.",
-      "track": "Foundation",
+      "track": "Engineering the Solution",
       "authors": [
         "Janak Alford",
         "Platform Engineering",
@@ -202,20 +180,60 @@
       "repo": "https://github.com/alberta-velocity/velocity-harness",
       "abstract": "Early in Alberta's AI Maximalist program, coding tools like Cursor, Lovable, and Claude Code collapsed the time to build a working prototype from roughly six weeks to thirty minutes. The speed was genuine, but the prototypes could not be reproduced, they skipped the controls a public service requires, and the agents reported themselves finished when they were not. This paper describes the working environment Technology and Innovation built to close that gap, the harness, a combination of skills, standards, and pre-built templates that lets a coding agent take on the technical work while people keep the vision, the architecture, and the decisions that matter. The harness, the templates, and the skill files are released as open source.",
       "related": [
-        "akle0",
-        "offjm",
-        "jy3dg"
+        "l199t",
+        "qthji",
+        "qxlzo"
       ],
       "category": "paper"
     },
     {
-      "id": "akle0",
+      "id": "l199t",
+      "num": "07",
+      "sequence": "",
+      "tier": "Technical",
+      "title": "Red, Blue, Green, and Yellow Agents",
+      "subtitle": "The agent roles that build, test, secure, and remediate.",
+      "track": "Engineering the Solution",
+      "authors": [
+        "Ministry of Technology and Innovation"
+      ],
+      "published": null,
+      "reading_min": null,
+      "status": "Draft",
+      "tags": [],
+      "repo": null,
+      "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+      "related": [],
+      "category": "paper"
+    },
+    {
+      "id": "qthji",
+      "num": "08",
+      "sequence": "",
+      "tier": "Technical",
+      "title": "The AI Factory: Design and Ideation (Pronghorn)",
+      "subtitle": "Turning a requirement into a working design.",
+      "track": "Engineering the Solution",
+      "authors": [
+        "Ministry of Technology and Innovation"
+      ],
+      "published": null,
+      "reading_min": null,
+      "status": "Draft",
+      "tags": [],
+      "repo": null,
+      "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+      "related": [],
+      "category": "paper"
+    },
+    {
+      "id": "uwpxr",
       "num": "09",
       "sequence": "",
       "tier": "Technical",
-      "title": "Git Insights: X-Ray of the Estate",
-      "subtitle": "A custom toolset for recursive, iterative scanning of the Government of Alberta enterprise GitHub instance.",
-      "track": "TBD",
+      "title": "The AI Factory: Orchestration and Observation (Nexus)",
+      "subtitle": "Running and watching a fleet of agents at scale.",
+      "track": "Engineering the Solution",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
@@ -223,141 +241,119 @@
       "reading_min": null,
       "status": "Draft",
       "tags": [],
-      "repo": "https://github.com/alberta-velocity/git-insights",
-      "abstract": "A taking-stock exercise that maps the technical estate, cybersecurity posture, and human estate. Architecture, languages, database types, CI/CD, automation, documentation; vulnerabilities and exposure; top contributors by language and ministry. Published alongside the paper: scan findings that reinforce the critical sense of urgency stated in Paper 1.",
-      "related": [
-        "p7p2k",
-        "offjm",
-        "bxvjn"
-      ],
+      "repo": null,
+      "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+      "related": [],
       "category": "paper"
     },
     {
-      "id": "offjm",
+      "id": "k3tc3",
       "num": "10",
       "sequence": "",
       "tier": "Technical",
-      "title": "Git Insights Ministry",
-      "subtitle": "From analysis to synthesis. Ministry-scale rebuild architecture from hundreds of systems at once.",
-      "track": "TBD",
+      "title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+      "subtitle": "Tracking delivery across people and agents.",
+      "track": "Engineering the Solution",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
       "published": null,
       "reading_min": null,
-      "status": "Forthcoming",
+      "status": "Draft",
       "tags": [],
-      "repo": "https://github.com/alberta-velocity/git-insights-ministry",
-      "abstract": "Where Paper 9 was analysis, this is synthesis. Operates at the ministry scale, not one or two or ten systems but hundreds at once. Looks for patterns of business functions, endpoints, dependencies, interactions, and interoperability, then proposes a modular, reusable, government-owned compute architecture for that ministry.",
-      "related": [
-        "akle0",
-        "bxvjn",
-        "jy3dg"
-      ],
+      "repo": null,
+      "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+      "related": [],
       "category": "paper"
     },
     {
-      "id": "bxvjn",
+      "id": "qxlzo",
       "num": "11",
       "sequence": "",
       "tier": "Technical",
-      "title": "The Business Functions of Government",
-      "subtitle": "What are the repeatable, codified business functions of government, as evidenced by the code that runs today?",
-      "track": "TBD",
+      "title": "The Agentic Technology Stack",
+      "subtitle": "The stack that runs the agent workforce.",
+      "track": "Engineering the Solution",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
       "published": null,
       "reading_min": null,
-      "status": "Forthcoming",
-      "tags": [],
-      "repo": "https://github.com/alberta-velocity/business-functions",
-      "abstract": "Extracts the actual business logic buried inside the existing code base and presents it in a system-agnostic and ministry-agnostic way. Presented visually at high level with downloadable JSON metadata for use in other tools. The artifact that reveals the commonalities hidden in all those siloed snowflake systems.",
-      "related": [
-        "offjm",
-        "jy3dg"
-      ],
-      "category": "paper"
-    },
-    {
-      "id": "ln4lv",
-      "num": "12",
-      "sequence": "",
-      "tier": "Technical",
-      "title": "Nexus: The Secure Agentic Sandbox",
-      "subtitle": "A virtualized safe environment for agentic operators to work without degrading security posture.",
-      "track": "TBD",
-      "authors": [
-        "Ministry of Technology and Innovation"
-      ],
-      "published": null,
-      "reading_min": null,
-      "status": "Forthcoming",
-      "tags": [],
-      "repo": "https://github.com/alberta-velocity/nexus",
-      "abstract": "The operating environment built by the Government of Alberta that allows a virtualized safe environment for agentic operators to work without degrading our security posture. A secure sandbox where agents can be iterative, make mistakes, try different things, install architectures, and where the parallel-model competition described in Paper 7 actually runs.",
-      "related": [
-        "rnlt3",
-        "eujjc",
-        "k20ck"
-      ],
-      "category": "paper"
-    },
-    {
-      "id": "k20ck",
-      "num": "13",
-      "sequence": "",
-      "tier": "Technical",
-      "title": "The Velocity Game Engine",
-      "subtitle": "Gamification and score keeping. A project management system that replaces Jira-style tooling and uses a point-based system to observe progress.",
-      "track": "TBD",
-      "authors": [
-        "Ministry of Technology and Innovation"
-      ],
-      "published": null,
-      "reading_min": null,
-      "status": "Forthcoming",
-      "tags": [],
-      "repo": "https://github.com/alberta-velocity/velocity-game-engine",
-      "abstract": "A reward system for progress and a penalty system for mistakes. Designed to observe hundreds of human workers and thousands of agentic workers across a backlog of over 600 themes to enhance or build at any time. Centralizes knowledge for independent audit of agents and project delivery. Includes a deliberate caution on Goodharts Law.",
-      "related": [
-        "ln4lv",
-        "h70og"
-      ],
-      "category": "paper"
-    },
-    {
-      "id": "jy3dg",
-      "num": "14",
-      "sequence": "",
-      "tier": "Technical",
-      "title": "The Four Approaches: Modernization at Scale",
-      "subtitle": "Patch and remediate. Drop-in replacement. Refactor and modernize. Agentic. The tactical playbook for choosing the right tool.",
-      "track": "TBD",
-      "authors": [
-        "Ministry of Technology and Innovation"
-      ],
-      "published": null,
-      "reading_min": null,
-      "status": "Forthcoming",
+      "status": "Draft",
       "tags": [],
       "repo": null,
-      "abstract": "The tactical playbook. Four approaches for applying the harnesses and tooling described in earlier papers, plus the orchestration layer that coordinates them across hundreds of agents and multiple projects at speed without chaos.",
-      "related": [
-        "p7p2k",
-        "offjm",
-        "ln4lv"
-      ],
+      "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+      "related": [],
       "category": "paper"
     },
     {
-      "id": "h70og",
+      "id": "dt725",
+      "num": "12",
+      "sequence": "",
+      "tier": "Policy & People",
+      "title": "The AI Academy: Investing in People",
+      "subtitle": "Training the public service to direct AI.",
+      "track": "Human and Change Management",
+      "authors": [
+        "Ministry of Technology and Innovation"
+      ],
+      "published": null,
+      "reading_min": null,
+      "status": "Draft",
+      "tags": [],
+      "repo": null,
+      "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
+      "related": [],
+      "category": "paper"
+    },
+    {
+      "id": "oxj36",
+      "num": "13",
+      "sequence": "",
+      "tier": "Policy & People",
+      "title": "Establishing a Builder Culture",
+      "subtitle": "Shifting from buying systems to building them.",
+      "track": "Human and Change Management",
+      "authors": [
+        "Ministry of Technology and Innovation"
+      ],
+      "published": null,
+      "reading_min": null,
+      "status": "Draft",
+      "tags": [],
+      "repo": null,
+      "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
+      "related": [],
+      "category": "paper"
+    },
+    {
+      "id": "eujjc",
+      "num": "14",
+      "sequence": "",
+      "tier": "Policy & People",
+      "title": "The Compression Problem",
+      "subtitle": "Organizational design at agentic scale. Command and control vs delegation of authority.",
+      "track": "Human and Change Management",
+      "authors": [
+        "Ministry of Technology and Innovation"
+      ],
+      "published": null,
+      "reading_min": null,
+      "status": "Draft",
+      "tags": [],
+      "repo": null,
+      "abstract": "All systems face an inability to compress the granular into the strategic. The flawed human framing is to treat command-and-control vs delegation as an either/or. In the agentic space, agents operate tens to hundreds of times faster than humans. The correct answer is to create sufficiently autonomous, isolated societies and compete the different models against each other through Nexus, then empirically decide.",
+      "related": [],
+      "category": "paper"
+    },
+    {
+      "id": "yzuob",
       "num": "15",
       "sequence": "",
       "tier": "Policy & People",
-      "title": "Governance for Confidence",
-      "subtitle": "Observability for non-technical stakeholders. Frameworks that translate agentic activity into terms ministers, deputy ministers, auditors, and the public can act on.",
-      "track": "TBD",
+      "title": "Managing Change",
+      "subtitle": "Leading the organization through the shift.",
+      "track": "Human and Change Management",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
@@ -366,22 +362,18 @@
       "status": "Draft",
       "tags": [],
       "repo": null,
-      "abstract": "A practical companion to the conceptual Paper 6. How does a non-technical ministry gain confidence that what they are getting is, in fact, what they were told they would get? Frameworks for observability and reporting that translate agentic activity into terms ministers, deputy ministers, auditors, and the public can act on.",
-      "related": [
-        "rnlt3",
-        "k20ck",
-        "aqtdz"
-      ],
+      "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
+      "related": [],
       "category": "paper"
     },
     {
-      "id": "aqtdz",
+      "id": "yu5k9",
       "num": "16",
       "sequence": "",
       "tier": "Policy & People",
-      "title": "The Future of Technology and Innovation",
-      "subtitle": "A policy statement on how government itself will operate differently as agents become more capable.",
-      "track": "TBD",
+      "title": "Measuring Failure and Success",
+      "subtitle": "How we judge what works and what does not.",
+      "track": "Human and Change Management",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
@@ -390,63 +382,9 @@
       "status": "Draft",
       "tags": [],
       "repo": null,
-      "abstract": "IT decision-making today is housed centrally within Technology and Innovation, which is solving a legacy problem. We do not want centralization to become the next legacy problem. As agents become more autonomous and capable, there is no reason a business function in any ministry could not work directly with a rule-following agent to achieve the same outcomes as any IT practitioner.",
-      "related": [
-        "dehkj",
-        "k20ck",
-        "h70og"
-      ],
+      "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
+      "related": [],
       "category": "paper"
-    },
-    {
-      "id": "ko0cv",
-      "num": "P",
-      "sequence": "TBD",
-      "tier": "Policy & People",
-      "title": "Workforce Culture and Talent",
-      "subtitle": "Placeholder. Government cannot afford to be an anachronism with respect to its workplace environment.",
-      "track": "TBD",
-      "authors": [
-        "Ministry of Technology and Innovation"
-      ],
-      "published": null,
-      "reading_min": null,
-      "status": "Placeholder",
-      "tags": [],
-      "repo": null,
-      "abstract": "Carried forward as a possible additional paper or as material to be woven through others. Government is reasonably constrained on compensation, so to get talent, we need to meet them where their expectations are. Decision pending on standalone vs absorbed into the AI Academy or Future of T&I paper.",
-      "related": [
-        "aqtdz"
-      ],
-      "category": "paper"
-    },
-    {
-      "id": "tn0nj",
-      "num": "A-01",
-      "sequence": "Architecture · A-01",
-      "tier": "Technical",
-      "title": "The Anti-Drift Harness",
-      "subtitle": "A reference implementation of the well-built harness. Skills, hooks, and the structural patterns that prevent agent-driven code from rotting.",
-      "track": "Reference implementation",
-      "authors": [
-        "Janak Alford"
-      ],
-      "published": null,
-      "reading_min": 45,
-      "status": "Forthcoming",
-      "tags": [
-        "architecture",
-        "harness",
-        "reference",
-        "claude-code"
-      ],
-      "repo": "https://github.com/janakalford/adhd",
-      "abstract": "A full technical specification of the Anti-Drift Harness as a worked reference implementation of Paper 8. Walks through the skill files, the hook layer, the standards-driven development pattern, and the agent-mesh architecture used to keep a 50K to 100K line codebase coherent under continuous AI editing.",
-      "related": [
-        "p7p2k",
-        "akle0"
-      ],
-      "category": "architecture"
     }
   ],
   "categories": [

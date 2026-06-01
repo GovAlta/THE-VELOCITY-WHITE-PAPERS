@@ -1,0 +1,69 @@
+{
+  "id": "qthji",
+  "num": "08",
+  "sequence": "",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "The AI Factory: Design and Ideation (Pronghorn)",
+  "subtitle": "Turning a requirement into a working design.",
+  "track": "Engineering the Solution",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+  "translation_status": "untranslated",
+  "hero_image": {
+    "src": "public/images/qthji/fr/hero.jpg",
+    "alt": "Editorial image for: The AI Factory: Design and Ideation (Pronghorn)",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"The AI Factory: Design and Ideation (Pronghorn)\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/qthji.mp3"
+  },
+  "tldr_presentation": {
+    "id": "qthji-tldr",
+    "title": "The paper, in brief",
+    "locale": "fr",
+    "owner_id": "qthji",
+    "slides": [
+      {
+        "id": "01",
+        "title": "The AI Factory: Design and Ideation (Pronghorn)",
+        "audio_file": "public/audio/fr/qthji-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Engineering the Solution",
+        "subcaption": "",
+        "text": "The AI Factory: Design and Ideation (Pronghorn). Content forthcoming."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Overview"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub"
+  },
+  "related": []
+}

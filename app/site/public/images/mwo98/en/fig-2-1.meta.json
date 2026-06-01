@@ -1,0 +1,17 @@
+{
+  "paper_id": "mwo98",
+  "locale": "en",
+  "slot": "fig-2-1",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a vast field of dense code with several previously hidden cracks or flaws suddenly lit up, as a sweeping army of bots, with light beams downward, reads across the whole field at once. A sense of long-buried weaknesses becoming visible in seconds. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a vast field of dense code with several previously hidden cracks or flaws suddenly lit up, as a sweeping army of bots, with light beams downward, reads across the whole field at once. A sense of long-buried weaknesses becoming visible in seconds. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-05-31T22:01:13.170Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 450658,
+  "bytes_png_source": 3895145,
+  "generated_by": "edit-server.mjs"
+}

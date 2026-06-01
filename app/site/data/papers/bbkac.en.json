@@ -1,0 +1,626 @@
+{
+  "id": "bbkac",
+  "num": "03",
+  "sequence": "",
+  "tier": "Technical",
+  "title": "Git Insights",
+  "subtitle": "We pointed AI at the whole of Alberta's code estate to get the ground truth. Here is how it works and what it found.",
+  "track": "Defining the Problem",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": 18,
+  "status": "Draft",
+  "tags": [
+    "git-insights",
+    "code-analysis",
+    "agents",
+    "technical-debt",
+    "cybersecurity"
+  ],
+  "repo": "https://github.com/GovAlta-EMU/git-insights",
+  "abstract": "Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. 50 agents read 466 million lines of code in roughly 20 hours, a scan no consultant engagement could match. This paper explains the problem, shows in detail how the tool works, and reveals what the scan found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code.",
+  "hero_image": {
+    "src": "public/images/bbkac/en/hero.jpg",
+    "alt": "A cartographer-scout charting a vast, sprawling territory of code repositories from a high vantage point.",
+    "image_prompt": "An editorial illustration of a lone scout or cartographer on a high ridge, mapping a vast sprawling territory below made of thousands of small buildings and repositories stretching to the horizon, drawing the true map for the first time. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/en/bbkac.mp3"
+  },
+  "tldr_presentation": {
+    "id": "bbkac-tldr",
+    "title": "The paper, in brief",
+    "locale": "en",
+    "owner_id": "bbkac",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Git Insights",
+        "audio_file": "public/audio/en/bbkac-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Paper 3 · Git Insights",
+        "subcaption": "Ground truth for the whole estate.",
+        "text": "Git Insights. Alberta's code estate had grown into a mire where prototypes mixed with production, and no one could get a definitive answer about what we run or how healthy it is. So we built a scout: an agentic tool that reads every repository and reports the ground truth."
+      },
+      {
+        "id": "02",
+        "title": "466 million lines, in about 20 hours",
+        "audio_file": "public/audio/en/bbkac-tldr/02.mp3",
+        "visual": "stat",
+        "caption": "The scan",
+        "visual_config": {
+          "stat_value": "466M lines",
+          "stat_label": "Read by roughly 50 agents in about 20 hours"
+        },
+        "subcaption": "A scan of the whole estate that no consultant engagement could match in time or cost.",
+        "text": "The scan. Around fifty agents read four hundred and sixty-six million lines of code across the whole estate in about twenty hours, a scan no consultant engagement could match in time or cost."
+      },
+      {
+        "id": "03",
+        "title": "Two tiers: deterministic, then probabilistic",
+        "audio_file": "public/audio/en/bbkac-tldr/03.mp3",
+        "visual": "compare",
+        "caption": "How it works, and why you can trust it",
+        "visual_config": {
+          "left": {
+            "label": "Deterministic code",
+            "body": "Lists files and finds known-bad patterns. Exact, and cannot invent a result."
+          },
+          "right": {
+            "label": "AI judgment",
+            "body": "Grades health and explains each problem, and must point to the exact file and line."
+          }
+        },
+        "text": "How it works, in two tiers. The exact, countable work, listing files and finding known-bad patterns, is done by ordinary code that cannot invent a result. The AI is only asked for judgment, and when it reports a problem it must name the exact file and line, so every claim can be checked against the real code."
+      },
+      {
+        "id": "04",
+        "title": "What it found",
+        "audio_file": "public/audio/en/bbkac-tldr/04.mp3",
+        "visual": "list",
+        "caption": "The estate, measured",
+        "visual_config": {
+          "items": [
+            {
+              "label": "73.9% had no CI/CD pipeline",
+              "desc": "No automated way to build and release the code."
+            },
+            {
+              "label": "49.6% had no automated tests",
+              "desc": "Half the estate could not be changed safely."
+            },
+            {
+              "label": "39.2% had no documentation",
+              "desc": "The 1,280 missing READMEs were then written by the agents."
+            },
+            {
+              "label": "3.2 / 10 average health",
+              "desc": "Across the whole estate, on the ten-point scale."
+            }
+          ]
+        },
+        "text": "What it found. Nearly three quarters of repositories had no automated build pipeline, half had no tests, and a third had no documentation at all, which the agents then wrote. Across the whole estate, the average health score was three point two out of ten."
+      },
+      {
+        "id": "05",
+        "title": "The first benchmark of its kind",
+        "audio_file": "public/audio/en/bbkac-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "Human work, measured at scale",
+        "visual_config": {
+          "stat_value": "948,571",
+          "stat_label": "Commits measured, across 8,178 contributors over 8 years"
+        },
+        "subcaption": "No analysis of human software work at this scale had been done before.",
+        "text": "And a first. We measured the real work of more than eight thousand people over eight years, nearly a million commits across thirty-four hundred repositories. No analysis of human software work at this scale had been done before. It is the baseline against which we can now compare AI, with certainty rather than intuition."
+      },
+      {
+        "id": "06",
+        "title": "What comes next",
+        "audio_file": "public/audio/en/bbkac-tldr/06.mp3",
+        "visual": "title",
+        "caption": "From the estate to the ministry",
+        "subcaption": "Knowing the estate is the start. Next, the ministry-scale rebuild.",
+        "text": "Knowing the estate is the start. The next paper takes Git Insights up a level, to the ministry scale, where hundreds of overlapping systems are read together and collapsed into a smaller set of modern, rebuilt capabilities with a costed plan attached."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "The data we could not see"
+    },
+    {
+      "n": "02",
+      "title": "Building a scout"
+    },
+    {
+      "n": "03",
+      "title": "How Git Insights works"
+    },
+    {
+      "n": "04",
+      "title": "What the estate actually looked like"
+    },
+    {
+      "n": "05",
+      "title": "AI versus human, measured"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Alberta uses GitHub Enterprise as its primary code repository. It provides powerful insights into code through CodeQL, and integrations with NPM and Maven for dependency vulnerability scanning. Secrets are automatically flagged and blocked so they can be removed, and our cyber team has well-integrated evaluations. The trouble is that these checks are mostly deterministic, logic-based rules, so they carry a high rate of false positives, and they say nothing at all about the things that matter just as much: the absence of documentation, automated build and deployment pipelines, and automated unit tests."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "The data we could not see"
+    },
+    {
+      "type": "paragraph",
+      "text": "The deeper problem we faced was that nothing joined up. Dependency information from GitHub did not flow into our Configuration Management Database. That database lived in ServiceNow and was maintained by hand, with more than 100,000 entries covering these applications. The record of an application was scattered across GitHub, Jira and Confluence tickets, the ServiceNow CMDB, its incidents, SharePoint documentation, and a scatter of spreadsheet trackers. Integrating that data was effectively impossible, because there was no linking key to tie one dataset to the next."
+    },
+    {
+      "type": "keystat",
+      "label": "CMDB entries maintained by hand",
+      "value": "100,000+",
+      "body": "Kept in ServiceNow, with no automated flow from GitHub. The logical structure runs Ministry to Project or Program to Application to repository, and fans out from there into sprints, the CMDB, tickets, and documentation, none of it linked."
+    },
+    {
+      "type": "paragraph",
+      "text": "The result was that management at the Deputy Minister and Assistant Deputy Minister levels could not get meaningful answers from standard tools. GitHub itself was also at risk of turning into a mire where quick prototypes sat beside production systems with nothing to tell them apart. We could not say with confidence what we ran, how healthy it was, or where the real exposure sat. So we did something about it."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Building a scout"
+    },
+    {
+      "type": "paragraph",
+      "text": "Using Claude Code as the coding agent, the Opus and Sonnet models for the analysis, and Google Vertex (now the Google Agent Platform) as the agentic layer, Alberta built a tool called **Git Insights**. It is an agentic-first tool that recursively scans the entire GitHub estate. It functions as a ground-truth scout, sent into every repository to come back and report what is actually there. Code forms the ground truth."
+    },
+    {
+      "type": "keystat",
+      "label": "Read by roughly 50 agents in about 20 hours",
+      "value": "466M lines",
+      "body": "A scan of the whole estate that no consultant engagement could match in time or cost. A third of the repositories had no documentation at all, so the agents wrote it, and every dependency was itemized."
+    },
+    {
+      "type": "paragraph",
+      "text": "The timing matters. Alberta has seen significant increases in the number of known vulnerabilities across the estate, and the most significant inflection in that growth aligns with the release of Anthropic's Mythos, the latest Opus models, and OpenAI's GPT 5.4 and 5.5. The same capability that lets a tool like Git Insights read the estate at depth is what lets attackers find the flaws in it, a point taken up in detail in the [cybersecurity paper](#/paper/mwo98)."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "How Git Insights works"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here is what Git Insights actually does, in plain terms. It works in two layers. At the top, a fleet of agents works through the whole estate at once. Inside each repository, every agent runs the same fixed routine. One rule holds it together: the exact, countable work is done by ordinary code that cannot make anything up, and the AI is only ever asked for judgment, in a form we can check against the real code."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.1",
+      "title": "How a full scan runs",
+      "caption": "Git Insights finds every repository, hands them out to a fleet of agents working in parallel, and gathers everything into one database that leaders can question.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Find every repository",
+            "desc": "Git Insights lists every repository in our GitHub, recursively, leaving nothing out."
+          },
+          {
+            "title": "Hand them to a fleet of agents",
+            "desc": "Around 50 agents work in parallel, each taking one repository at a time so no two ever collide."
+          },
+          {
+            "title": "Analyze each repository",
+            "desc": "Every agent runs the same fixed routine on its repository, shown in the figure below."
+          },
+          {
+            "title": "Write to one shared database",
+            "desc": "Thousands of separate findings add up to a single, queryable picture of the whole estate."
+          },
+          {
+            "title": "Answer questions on a dashboard",
+            "desc": "Leaders explore health, risk, and recommendations, and export reports."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The agents run on Google Vertex, and the scan is built to survive the real world. If one repository fails or hits a rate limit, that single job waits and retries while the rest carry on, and if the whole scan is stopped it resumes exactly where it left off. That resilience is what lets it read 466 million lines across thousands of repositories in about 20 hours, rather than the months a manual review would take."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.2",
+      "title": "A fleet scanning the estate",
+      "caption": "Around fifty agents fan out across the estate at once. Each inspects one repository and carries a structured set of findings back to a single shared store, so thousands of separate reads become one picture.",
+      "image": {
+        "src": "public/images/bbkac/en/fig-3-2.jpg",
+        "alt": "A fleet of agent figures spreading across a field of code repositories and carrying structured report cards back to a central collection point.",
+        "image_prompt": "An editorial illustration of a large fleet of small identical agent figures fanning out across a vast field of code repositories, each one inspecting a repository and carrying a neat report card back to a single central collection point. A sense of organized parallel reconnaissance returning structured findings. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.3",
+      "title": "Inside a single repository",
+      "caption": "The same six steps run on every repository. Ordinary code does the exact, checkable work; the AI is asked only for judgment, and must point to the exact file and line for every problem it reports.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Copy it and read its history",
+            "desc": "The agent clones the repository and reads every change ever made, offline. This is fast and does not strain GitHub."
+          },
+          {
+            "title": "Check the basics",
+            "desc": "Is there documentation? Are there tests? Is there an automated way to build and release the code? Is there a licence? Plain yes-or-no checks, done by code."
+          },
+          {
+            "title": "Search every file for known flaws",
+            "desc": "Code searches all files for known-bad patterns, the specific mistakes that cause real security holes, such as turned-off security checks or unsafe database queries."
+          },
+          {
+            "title": "Let the AI read the files that matter",
+            "desc": "The AI reads the most important files rather than every line. That selectivity is how a scan this size stays affordable."
+          },
+          {
+            "title": "Grade health and list every problem",
+            "desc": "The AI scores the repository on a fixed checklist and lists each issue with its exact file and line, how serious it is, and how to fix it."
+          },
+          {
+            "title": "Classify and fill the gaps",
+            "desc": "It recommends what to do with the system, keep, invest, migrate, or retire, and where documentation was missing, it writes it."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "A fair question is how far a government can trust what an AI reports. Three things keep it honest. First, the boring, countable work, listing files and finding the known-bad patterns, is done by ordinary code, which cannot invent a result. Second, the AI is never taken at its word: when it reports a problem it must name the exact file and line, say how serious it is and why, and say how to fix it, so a developer can open the file and confirm the claim. Third, it grades every repository against the same fixed checklist, covering security, code quality, architecture, documentation, tests, maintainability, and the health of the libraries it depends on, so a score means the same thing on the thousandth repository as it did on the first. The output is a finding you can check, not an opinion you have to take on faith."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.4",
+      "title": "Two tiers: deterministic, then probabilistic",
+      "caption": "The lower tier is deterministic: ordinary code does the exact, countable work and cannot invent a result. The upper tier is probabilistic: the AI weighs and judges what the lower tier surfaced, and must cite the exact file and line. Each does only what it is good at.",
+      "image": {
+        "src": "public/images/bbkac/en/fig-3-4.jpg",
+        "alt": "Two stacked tiers: a row of precise mechanical inspectors below feeding a single thoughtful judging figure above.",
+        "image_prompt": "An editorial illustration of two stacked tiers of work. The lower tier is a neat row of precise, mechanical inspectors stamping exact checkmarks across code, dependable and literal. The upper tier is a single thoughtful figure weighing and judging what the lower tier surfaced and pointing back to specific lines. The exact work below feeds the judgment above. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The same pass does more than grade health. It works out what each system actually does for citizens, detects the old technologies hiding inside, such as COBOL, classic ASP, and long-unsupported versions of .NET and Java, and infers which ministry owns it. It itemizes every dependency a system relies on, which is the exact inventory our Configuration Management Database never had and can now be fed from. It flags the repositories that hold sensitive personal information, so a privacy risk becomes visible rather than buried. And for the 1,280 repositories that had no documentation at all, the agent wrote it from what it had just read, while validating or improving the README on every other repository. That closed the gap to zero: for the first time, every single system in the estate has documentation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The record it builds for each repository is far deeper than any inventory we had before. It is a full dossier, not a pass or a fail."
+    },
+    {
+      "type": "table",
+      "title": "What Git Insights records for every repository",
+      "columns": [
+        "Category",
+        "What it captures"
+      ],
+      "rows": [
+        [
+          "Health scores (out of 10)",
+          "Overall, plus separate scores for code quality, architecture, security, tests, documentation, maintainability, and dependency health."
+        ],
+        [
+          "Engineering checks",
+          "README, tests, CI/CD pipeline, container definition, licence, example environment file, contributing guide, and changelog, each marked present or absent."
+        ],
+        [
+          "Frameworks and stack",
+          "The frameworks in use, the full AI-detected technology stack, and the build tools."
+        ],
+        [
+          "Dependencies",
+          "Production dependencies and development dependencies, each itemized."
+        ],
+        [
+          "Narrative judgments",
+          "Strengths, weaknesses, risk areas, and concrete recommendations."
+        ],
+        [
+          "Business capability canvas",
+          "The business topics it covers, the twelve standard government capabilities, any additional capabilities, and its integration dependencies."
+        ],
+        [
+          "Classification",
+          "The kind of component it is, its complexity, and the recommended disposition: keep, invest, migrate, or retire."
+        ],
+        [
+          "Effort and issues",
+          "An AI-assisted estimate of the effort to modernize it, and a full itemized list of code issues."
+        ]
+      ],
+      "caption": "Every repository comes back with this complete record, all of it queryable alongside every other repository.",
+      "source": "Git Insights deep scan and capability scan."
+    },
+    {
+      "type": "paragraph",
+      "text": "All of it lands in one queryable database and a dashboard built for the people who needed answers. There is an executive view of health and risk, a nine-box grid that plots each system by how active it is against how healthy it is, code-health cards per repository, contributor profiles, and the disposition breakdown, all exportable to a document, a spreadsheet, or raw data. The deep cross-repository rollup, where hundreds of overlapping systems in a single ministry are collapsed into a smaller set of rebuilt capabilities, is its own engine and its own paper; see [Git Insights Ministry](#/paper/offjm)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.5",
+      "title": "One dashboard, one source of truth",
+      "caption": "The thousands of structured findings become a single dashboard a leader can question: the health of every system at a glance, in place of a wall of disconnected trackers, tickets, and spreadsheets.",
+      "image": {
+        "src": "public/images/bbkac/en/fig-3-5.jpg",
+        "alt": "Senior officials standing before a single clear dashboard of an estate's health, with scattered binders and spreadsheets left behind.",
+        "image_prompt": "An editorial illustration of a calm control room where two senior officials stand before one large, clear dashboard showing the health of a whole estate of systems at a glance. Behind them, a wall of scattered binders, tickets, and spreadsheets is fading away. A sense of clarity replacing chaos. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "For the first time, a Deputy Minister could ask a question about the estate and get an answer grounded in the code itself.",
+      "cite": "Paper 3 — Git Insights"
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "What the estate actually looked like"
+    },
+    {
+      "type": "paragraph",
+      "text": "With the scan complete, we could finally measure what we had only ever estimated. The domain Git Insights mapped was wider than anyone had counted."
+    },
+    {
+      "type": "table",
+      "title": "A domain we had never measured",
+      "columns": [
+        "Dimension",
+        "Count"
+      ],
+      "rows": [
+        [
+          "Languages",
+          "25"
+        ],
+        [
+          "Runtimes",
+          "6"
+        ],
+        [
+          "Frameworks",
+          "32"
+        ],
+        [
+          "Architectures",
+          "5"
+        ]
+      ],
+      "caption": "The technologies in active use across the estate, as mapped by Git Insights.",
+      "source": "Git Insights capability scan."
+    },
+    {
+      "type": "paragraph",
+      "text": "That spread is the case for an opinionated technology stack made in a single table. We are moving toward a small set of supported choices, investing in major platforms such as ServiceNow and the Alberta.ca platform, and eliminating the unique and the underserved. The full argument for that stack is its own paper; see [The Agentic Technology Stack](#/paper/qxlzo)."
+    },
+    {
+      "type": "paragraph",
+      "text": "The structural picture was harder. Across roughly 3,400 repositories, the practices that make code safe to change were missing far more often than they were present."
+    },
+    {
+      "type": "table",
+      "title": "Structural deficiencies across the portfolio",
+      "columns": [
+        "Missing practice",
+        "Repos affected",
+        "% of portfolio"
+      ],
+      "rows": [
+        [
+          "No README or documentation",
+          "1,280",
+          "39.2%"
+        ],
+        [
+          "No automated tests",
+          "1,617",
+          "49.6%"
+        ],
+        [
+          "No CI/CD pipeline",
+          "2,410",
+          "73.9%"
+        ],
+        [
+          "No Docker or containerization",
+          "3,098",
+          "95.0%"
+        ],
+        [
+          "No licence file",
+          "3,078",
+          "94.4%"
+        ]
+      ],
+      "caption": "Nearly three quarters of the estate had no automated build and deployment pipeline, and almost none was containerized. These are not edge cases; they are the baseline.",
+      "source": "Git Insights deep scan."
+    },
+    {
+      "type": "paragraph",
+      "text": "In aggregate, this analysis was scored to give each repository a health score, rounding to a total score of 10. The composite score across the whole set was not great. "
+    },
+    {
+      "type": "keystat",
+      "label": "Average repository health across the estate",
+      "value": "3.2 / 10",
+      "body": "On the ten-point health scale Git Insights applies to every repository, the estate averaged 3.2. The missing tests, pipelines, and documentation above are most of the reason why."
+    },
+    {
+      "type": "paragraph",
+      "text": "We also measured the habits of our staff and contractors. We did not use this as a punitive or a performance measure. We measured it to find where ordinary human variance degrades our security controls and best practices, so we know where training and better tooling will help most. Across more than 8,100 contributors and eight years of history, the pattern was clear."
+    },
+    {
+      "type": "table",
+      "title": "Contributor risk across the estate",
+      "columns": [
+        "Signal",
+        "Count"
+      ],
+      "rows": [
+        [
+          "Contributors analyzed",
+          "8,178"
+        ],
+        [
+          "Critical or high-risk contributors (repeatedly commit vulnerabilities)",
+          "109"
+        ],
+        [
+          "Medium-risk contributors (occasionally commit vulnerabilities)",
+          "1,261"
+        ],
+        [
+          "Duplicate account activity",
+          "47"
+        ],
+        [
+          "Changes bypassing review more than half the time",
+          "80"
+        ]
+      ],
+      "caption": "Aggregate posture only. Individual names and repositories are held under restricted access and are not published.",
+      "source": "Git Insights contributor and PII scans."
+    },
+    {
+      "type": "paragraph",
+      "text": "These gaps are not caused malicious actors. They are ordinary, hard-working people working at varying skill levels, and the point of measuring them is that the same patterns which degrade our security controls and best practices are exactly the patterns an AI agent, properly directed, can be set to catch and fix at scale."
+    },
+    {
+      "type": "paragraph",
+      "text": "Underneath the risk tiers, Git Insights builds a full profile of every contributor, drawn from the record rather than from opinion."
+    },
+    {
+      "type": "table",
+      "title": "What Git Insights records for every contributor",
+      "columns": [
+        "Category",
+        "What it captures"
+      ],
+      "rows": [
+        [
+          "Activity",
+          "Repositories touched, commits, lines changed, and pull requests authored, merged, and reviewed."
+        ],
+        [
+          "Workforce ranking",
+          "Percentile standing against all contributors, separately for commits, lines changed, repositories, pull requests authored, pull requests reviewed, and code-quality score."
+        ],
+        [
+          "Patterns over time",
+          "Monthly activity across all repositories, and a breakdown of the work by type: features, fixes, refactors, documentation, and tests."
+        ],
+        [
+          "AI assessment (averaged across repositories)",
+          "Communication, code volume, consistency, balance, and review quality."
+        ],
+        [
+          "Profile",
+          "Named strengths, growth areas, the technologies they have worked in, and the repositories they contribute to."
+        ]
+      ],
+      "caption": "The same profile is built for all 8,178 contributors. It is what lets us see the strongest contributors in any given repository, and rank each repository's velocity by commits, lines changed, pull requests, and quality score.",
+      "source": "Git Insights contributor scan."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "AI versus human, measured"
+    },
+    {
+      "type": "paragraph",
+      "text": "There is a great deal of criticism aimed at AI for the mistakes it makes, its hallucinations, and there is a strong human recency bias in how those failures get reported: the one wrong answer is remembered, the thousand right ones are not. Viewed in aggregate, and with the proper harnesses described in [the harness paper](#/paper/p7p2k), AI makes significantly fewer mistakes than the criticism assumes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Git Insights gave us the benchmark to say so with evidence, and it is a benchmark of a kind no one had built before. We measured the real work of more than eight thousand people over eight years: every commit, every pull request, and the state of the code they produced, across the entire estate. We are not aware of a prior analysis of human software work at this scale and over this span anywhere."
+    },
+    {
+      "type": "table",
+      "title": "The first benchmark of its kind",
+      "columns": [
+        "Measure",
+        "Count"
+      ],
+      "rows": [
+        [
+          "Repositories",
+          "3,400"
+        ],
+        [
+          "Contributors",
+          "8,178"
+        ],
+        [
+          "Years of history",
+          "8"
+        ],
+        [
+          "Commits",
+          "948,571"
+        ],
+        [
+          "Pull requests",
+          "145,486"
+        ],
+        [
+          "Lines of code",
+          "466,792,649"
+        ]
+      ],
+      "caption": "The scale of the human record Git Insights measured. It is the baseline against which AI can now be compared, with certainty rather than intuition.",
+      "source": "Git Insights."
+    },
+    {
+      "type": "paragraph",
+      "text": "With a baseline this complete, we can now say with certainty how AI compares to humans on our own code, measured rather than assumed. Skill levels vary widely, and the mistakes humans make are significant and constant. AI, properly harnessed, makes far fewer of them, and it can be deployed at scale to fix the problems it finds rather than only to count them. We will unpack that comparison in full in a later paper. With this ground truth in hand, the case to invest heavily in the tools, the training, and the harnesses was no longer a matter of faith."
+    },
+    {
+      "type": "paragraph",
+      "text": "Knowing the estate is the start. The next paper takes Git Insights up a level, to the ministry scale, where hundreds of overlapping systems are read together and collapsed into a smaller set of modern, rebuilt capabilities with a costed plan attached. See [Git Insights Ministry](#/paper/offjm)."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "git-insights",
+        "code-analysis",
+        "agents",
+        "technical-debt"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "offjm",
+    "p7p2k",
+    "mwo98"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation"
+  }
+}

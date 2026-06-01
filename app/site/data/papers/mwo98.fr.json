@@ -5,7 +5,7 @@
   "tier": "Conceptual",
   "title": "L'impératif cyber",
   "subtitle": "Remparts et marées montantes. Le moteur cybersécurité, traité à part entière.",
-  "track": "À placer",
+  "track": "Defining the Problem",
   "authors": [
     "Ministère de la Technologie et de l'Innovation"
   ],
@@ -90,22 +90,6 @@
     {
       "n": "01",
       "title": "La métaphore des remparts"
-    },
-    {
-      "n": "02",
-      "title": "Obsolescence des fournisseurs et plateformes non prises en charge"
-    },
-    {
-      "n": "03",
-      "title": "Sophistication des menaces, en graphique"
-    },
-    {
-      "n": "04",
-      "title": "Pourquoi ce moteur a son propre livre blanc"
-    },
-    {
-      "n": "05",
-      "title": "D'« un jour » à « maintenant »"
     }
   ],
   "blocks": [
@@ -121,14 +105,12 @@
   ],
   "_meta": {
     "placeholder": true,
-    "written_by": "structural-stub",
-    "notes": "Stub structurel. Le corps doit être rédigé à partir des sources humaines (transcripts, technical-reference) — ne pas auto-générer."
+    "written_by": "structural-stub"
   },
   "translation_status": "untranslated",
   "category": "paper",
   "related": [
     "cux4h",
-    "p7p2k",
-    "akle0"
+    "p7p2k"
   ]
 }

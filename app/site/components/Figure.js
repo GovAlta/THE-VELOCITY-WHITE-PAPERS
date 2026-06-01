@@ -53,6 +53,7 @@
         const map = {
           'mini-chart':            'mini-chart',
           'drivers-map':           'drivers-map',
+          'step-flow':             'step-flow',
           'wp08-periodic':         'wp08-periodic',
           'wp08-agent-quartet':    'wp08-agent-quartet',
         };

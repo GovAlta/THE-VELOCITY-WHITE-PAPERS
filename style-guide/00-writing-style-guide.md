@@ -10,6 +10,26 @@ If a sentence works only because of its rhythm, its symmetry, or the way it soun
 
 ---
 
+## Clarity for a mixed audience
+
+Write so a thoughtful person who is not a specialist can follow it on the first read. Most readers are not engineers. Clear, friendly, explanatory sentences beat dense, impressive ones every time. These rules are as binding as the hard rules below; density is its own kind of AI smell.
+
+**One idea per sentence.** A sentence carries one point. If you are joining separate ideas, or a list of things, with commas, split it. A sentence the reader has to read twice has failed, however correct it is.
+
+**Never cram a list into a sentence.** Three items is the most a sentence should hold. A longer list, the fields a tool records, the steps in a process, the parts of a system, belongs in a table or a bulleted list, not stacked inside one sentence as a wall of commas. (`03-fidelity-and-sourcing.md` requires keeping enumerations in full; keep them in tables and lists, never crammed into prose.)
+
+**Lead with the plain point, then explain.** Open a paragraph with the simple thing you are saying, in ordinary words, and then explain it. Avoid abstract openers that personify the work or stall before the point: "Grounding holds the synthesis honest," "The design rests on two commitments," "It is worth understanding how this works." Name who does what instead: "We do not ask anyone to take this on trust," "The tool checks every capability."
+
+**Short to medium, and varied.** Default to short and medium sentences. A long sentence is allowed only when it develops one easy-to-follow thought, the way the author's own writing does. It is wrong when it stacks separate items or clauses. Read it aloud; if you run out of breath or lose the thread, split it.
+
+**Explain the jargon or drop it.** The first time a technical term appears, give it in plain words, as the author does ("known as agents," "a process called vectorization"). If a sentence only lands for a specialist, rewrite it so everyone else can follow.
+
+**Be direct and friendly.** Address the reader and name the actor: "we," "our," "the tool," "you." Concrete nouns, real examples, and the occasional plain line ("It can fix what it finds") carry more than an abstract summary.
+
+**The test.** Imagine handing the paragraph to a smart colleague outside technology. If it reads as white noise, or they cannot say back what it means, it is not finished, no matter how accurate or complete it is.
+
+---
+
 ## Hard Rules
 
 ### 1. No "this is not A, but B" constructions
@@ -170,9 +190,14 @@ Before sending any draft, run this checklist. If a sentence fails on any item, r
 8. Does any sentence open with Moreover, Furthermore, In essence, At its core, or similar? Cut the opener.
 9. Does the closing sentence of the section restate what was just said? Cut it.
 10. Are there intensifiers (very, deeply, truly, particularly)? Strike unless they carry real meaning.
+11. Does any sentence stack more than three items, or several separate ideas, joined by commas? Split it, or move the list to a table or bullets.
+12. Does a paragraph open with an abstract or self-referential topic sentence ("X holds the design honest," "There are two commitments") instead of the plain point? Rewrite the opener to say who does what.
+13. Could a smart non-specialist follow this on the first read? If not, simplify until they can.
 
 ---
 
 ## Quick Test
 
 Read the draft aloud. If any sentence sounds like a movie trailer, a TED talk opening, or a LinkedIn post, rewrite it. The target voice is a competent senior official briefing a peer. Direct, specific, declarative, unhurried.
+
+Then read it again as someone outside technology. If a sentence is white noise to that reader, or they could not say back what it means, it is the wrong sentence. Clear and friendly always beats dense and impressive.

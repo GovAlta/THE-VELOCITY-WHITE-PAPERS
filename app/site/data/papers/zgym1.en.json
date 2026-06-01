@@ -1,0 +1,395 @@
+{
+  "id": "zgym1",
+  "num": "05",
+  "sequence": "",
+  "tier": "Conceptual",
+  "category": "paper",
+  "title": "The Four Approaches to AI Modernization",
+  "subtitle": "From repairing one system at a time to dissolving the application altogether: the four routes by which a government rebuilds itself at speed.",
+  "track": "Defining the Problem",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": 16,
+  "status": "Draft",
+  "tags": [
+    "modernization",
+    "architecture",
+    "ai-factory",
+    "government-3-0",
+    "strategy"
+  ],
+  "repo": null,
+  "abstract": "We know the estate, and we know it cannot be fixed the old way. The question this paper answers is how. There are four ways to modernize a government system with AI, and they climb in ambition. The AI Garage repairs and replaces systems one at a time. The AI Factory builds brand-new applications the government fully owns. Rationalization collapses a whole ministry of overlapping systems into a small set of modern modules. And Government 3.0 dissolves the application itself, letting AI agents work directly against governed data and generate the interface a person needs in the moment. No single approach covers everything, so we need all four. Together they are how a government reaches a roughly ninety-five percent reduction in the cost and time of its software, inside a single term rather than over the better part of a century.",
+  "hero_image": {
+    "src": "public/images/zgym1/en/hero.jpg",
+    "alt": "Four diverging routes climbing from a single repaired building up to a field of autonomous agents working against a clean data core.",
+    "image_prompt": "An editorial cover illustration of four diverging paths or routes that climb in ambition: the first leading to a single building being repaired, the second to a clean factory producing modular buildings, the third to many buildings collapsing into a few, and the fourth to a field of small autonomous agents working around a glowing data core with no buildings at all. A sense of an escalating ladder of transformation. Muted Alberta cream palette, navy and rust accents, archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/en/zgym1.mp3"
+  },
+  "tldr_presentation": {
+    "id": "zgym1-tldr",
+    "title": "The paper, in brief",
+    "locale": "en",
+    "owner_id": "zgym1",
+    "slides": [
+      {
+        "id": "01",
+        "title": "The Four Approaches to AI Modernization",
+        "audio_file": "public/audio/en/zgym1-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Paper 5 · Defining the Problem",
+        "subcaption": "Four routes to modernization, climbing in ambition.",
+        "text": "The Four Approaches to AI Modernization. Content forthcoming."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Four routes forward"
+    },
+    {
+      "n": "02",
+      "title": "The AI Garage"
+    },
+    {
+      "n": "03",
+      "title": "The AI Factory"
+    },
+    {
+      "n": "04",
+      "title": "Rationalization"
+    },
+    {
+      "n": "05",
+      "title": "Government 3.0"
+    },
+    {
+      "n": "06",
+      "title": "All four, and what comes next"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "The earlier papers in this collection measured the estate and showed why it cannot be fixed the old way. We know what we run, we know its health, and we know that at the pace government has always worked the repair bill is counted in decades. This paper is about what we do with that knowledge. There are four ways to modernize a government system with AI. They climb in ambition, from the lightest touch to the most complete rebuild, and no single one of them covers everything. A real government estate needs all four."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Four routes forward"
+    },
+    {
+      "type": "paragraph",
+      "text": "The four approaches are the AI Garage, the AI Factory, Rationalization, and Government 3.0. The Garage fixes a system in place. The Factory builds a new one to replace it. Rationalization collapses a whole portfolio of overlapping systems into a few modern modules. Government 3.0 dissolves the application altogether and lets AI agents work directly against governed data. Each is suited to a different kind of system, and each asks more of the organization than the one before it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Which approach a system gets depends on its condition. The Ministry decides with a simple four-way test, applied to one system at a time: tolerate it, invest in it, migrate it, or eliminate it. A healthy system can be tolerated and lightly patched. A sound system on dying technology should be migrated to a new build. A tangle of overlapping systems is a candidate for rationalization. A system with no remaining business need is eliminated. The test is what keeps the effort pointed at the systems where it pays off, and it is what makes the four approaches a plan rather than a menu."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "The AI Garage"
+    },
+    {
+      "type": "paragraph",
+      "text": "The first approach is the lightest. We take one system at a time, the way you take a car into the garage, and fix what is wrong with it. A person clones the code, the AI reads it and makes the repair, the person checks the result, and the change goes back. We call it the Garage. It is the lowest-risk approach and the closest to how teams already work, which is why it was the first one we put into production."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Garage does three kinds of work, and the right one depends on the system in front of it. It repairs: the AI patches a known flaw, upgrades an out-of-date library, writes a missing test. It remediates: where a system carries a security exposure, that is fixed first, and we work through the portfolio in order of risk, public-facing systems before the back office. And it matches: where the technology underneath a system has reached the end of its life but the way the system works is still sound, the AI rebuilds it on a modern foundation that behaves exactly like the original. The screens and the data land where the user expects them. Only the aging technology underneath is replaced, so a system once reached through a Citrix workaround becomes an ordinary application in a modern browser, back inside a supported lifecycle."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Garage has a deliberate limit. It treats the symptoms rather than the disease. A repaired system is still the same old system, and a matched rebuild is still the same workflow on newer parts. For many systems that is exactly right, because they work, people rely on them, and all they need is to be made safe and supported. For others it is not enough, because the thing in front of us is the problem. The next three approaches go further."
+    },
+    {
+      "type": "table",
+      "title": "The three modes of the Garage",
+      "columns": [
+        "Mode",
+        "What the AI does",
+        "Best for"
+      ],
+      "rows": [
+        [
+          "Repair",
+          "Patches flaws, upgrades aging libraries, writes the missing tests and documentation.",
+          "A working system with specific, fixable defects."
+        ],
+        [
+          "Remediate",
+          "Fixes security exposure first, worst and most exposed systems ahead of the rest.",
+          "Systems carrying known vulnerabilities; public-facing ones first."
+        ],
+        [
+          "Match",
+          "Rebuilds the system on a modern stack that behaves exactly like the original.",
+          "Sound workflows trapped on technology past its end of life."
+        ]
+      ],
+      "caption": "One system at a time, lowest risk, closest to how teams already work. The Garage makes a system safe and supported without changing what it does.",
+      "source": "Ministry of Technology and Innovation."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.1",
+      "title": "One system at a time",
+      "caption": "The Garage takes in a single aging system, repairs or re-fits it, and returns it to service. The work is familiar and low-risk, and it is the only feasible immediate answer for many systems.",
+      "image": {
+        "src": "public/images/zgym1/en/fig-5-1.jpg",
+        "alt": "A single aging application, drawn as an old vehicle, raised on a lift inside a clean repair garage while a modern engine is fitted.",
+        "image_prompt": "An editorial illustration of a single aging application drawn as an old vehicle raised on a lift inside a clean, orderly repair garage, with a modern engine and new parts being fitted while the body stays the same. A sense of one-at-a-time careful repair. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "The AI Factory"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second approach builds new. Instead of repairing an old system, we build a fresh one from scratch, designed the way we would design it today. We do this in what we call the AI Factory, a production line where AI agents, working to a strict specification and under human direction, plan, build, test, and deliver an application. The Factory is opinionated on purpose. Every application it produces is built the same modern way, on the same modern foundation, so that quality is a property of the line rather than of any one team."
+    },
+    {
+      "type": "paragraph",
+      "text": "Two things make a Factory-built application different from what it replaces. First, it is modular. The system is assembled from small, self-contained parts, none of them much larger than a thousand lines of code, each small enough to be read and checked on its own. Second, the government owns all of it. The code is ours, built on open-source foundations, with no licence we cannot exit and no vendor we cannot leave. Where it makes sense, we can publish a module openly for others to inspect and reuse."
+    },
+    {
+      "type": "paragraph",
+      "text": "Building new also lets us shed the past. A Factory-built application carries none of the dead dependencies, the unsupported libraries, or the decades-old assumptions of the system it replaces. It starts clean. This is the approach for a system whose technology is beyond saving, and for a brand-new service that has no legacy at all, one of the many new requests that keep arriving while the older work is still underway."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Factory is a real, working thing, not a metaphor. Its parts, the place where applications are designed, the environment where agents build and test them, and the system that tracks and measures the work, are the subject of their own papers later in this collection, beginning with [the design environment](#/paper/qthji). What matters here is the approach. When a system is best replaced rather than repaired, the Factory builds its replacement new, modular, and owned."
+    },
+    {
+      "type": "table",
+      "title": "What a Factory-built application is",
+      "columns": [
+        "Property",
+        "What it means"
+      ],
+      "rows": [
+        [
+          "Opinionated",
+          "Built the same modern way every time, on one standard foundation."
+        ],
+        [
+          "Modular",
+          "Assembled from small parts, none much over a thousand lines, each checkable on its own."
+        ],
+        [
+          "Government-owned",
+          "The code is ours, on open-source foundations, with no vendor we cannot leave."
+        ],
+        [
+          "Modern by default",
+          "A current web front end, a supported back end, governed data, standard identity."
+        ],
+        [
+          "Free of legacy",
+          "None of the dead dependencies or unsupported libraries of the system it replaces."
+        ],
+        [
+          "Compliant by default",
+          "Security and architecture standards built in from the first line, not bolted on at audit."
+        ]
+      ],
+      "caption": "The Factory builds replacements and new services from scratch, to one modern standard the government owns end to end.",
+      "source": "Ministry of Technology and Innovation."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.2",
+      "title": "Built new, built the same way",
+      "caption": "The Factory produces applications from a standard set of modular parts, on one modern foundation, with the broken parts of the old system set aside. The result is owned by the government and free of legacy.",
+      "image": {
+        "src": "public/images/zgym1/en/fig-5-2.jpg",
+        "alt": "A clean factory production line assembling small identical modular blocks into finished modern applications, with broken old parts discarded to one side.",
+        "image_prompt": "An editorial illustration of a clean, orderly factory production line assembling small identical modular building blocks into finished modern applications, with a few broken, rusted old parts set aside and discarded. A sense of new, standard, and owned. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Rationalization"
+    },
+    {
+      "type": "paragraph",
+      "text": "The third approach steps back from the single system and looks at a whole ministry at once. Many of our applications are like medieval paintings, where one layer has been painted over another for decades. The first system was built long ago. A new interface was bolted on ten years later. Another integration was added on top of that. The original logic is still in there, buried under the layers. Rationalization strips the layers back to find what the ministry actually does, and rebuilds from that intent rather than from the accumulated build-up."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the approach that [Git Insights Ministry](#/paper/offjm) makes executable. That tool reads an entire ministry of code at once and proposes a target architecture; rationalization is the act of building it. The pattern repeats wherever it is applied: hundreds of overlapping applications inside a ministry collapse into a small set of well-factored modules, with the common parts built once and shared. In one ministry, 185 applications resolved to 16 modules. Because the AI does the heavy analysis and most of the building, a program that once ran five to eight years can run in weeks to months."
+    },
+    {
+      "type": "paragraph",
+      "text": "Rationalization delivers the largest near-term gain of any approach in cost, speed, and quality, and it also asks the most of people. Collapsing 185 applications into 16 is a real change for the staff who have built their working habits around the old tools, and that change has to be planned with as much care as the rebuild itself. The technology is the easier half of the problem. The harder half is bringing people with it."
+    },
+    {
+      "type": "pullquote",
+      "text": "Many of our applications are like medieval paintings, where one layer has been painted over another for decades. The only way to reach the original logic is to carefully remove the layers above it.",
+      "cite": "Paper 5 — The Four Approaches to AI Modernization"
+    },
+    {
+      "type": "table",
+      "title": "What rationalization collapses, in one ministry",
+      "columns": [
+        "Before: legacy sprawl",
+        "After: rationalized"
+      ],
+      "rows": [
+        [
+          "185 separate applications",
+          "16 modern modules"
+        ],
+        [
+          "A login built into almost every application",
+          "One shared sign-on for all of them"
+        ],
+        [
+          "File upload, reporting, and audit rebuilt many times over",
+          "Each common part built once and shared"
+        ],
+        [
+          "The same capability duplicated across ministries",
+          "Shared services any ministry can draw on"
+        ],
+        [
+          "A five-to-eight-year replacement program",
+          "A rebuild measured in weeks to months"
+        ]
+      ],
+      "caption": "Rationalization works on a whole portfolio at once. The redundancy the analysis measures is the redundancy the rebuild removes.",
+      "source": "Git Insights Ministry target architecture."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.3",
+      "title": "Strip the layers, rebuild from intent",
+      "caption": "Rationalization treats a portfolio like an over-painted canvas. It removes the accumulated layers to recover what the ministry actually does, then rebuilds that intent as a small set of modern modules.",
+      "image": {
+        "src": "public/images/zgym1/en/fig-5-3.jpg",
+        "alt": "A layered old painting being carefully stripped back to reveal a clean original beneath, then re-rendered as a small set of modern modular panels.",
+        "image_prompt": "An editorial illustration of a layered old painting being carefully stripped back, layer by layer, to reveal a clear original image beneath, which is then re-rendered as a small set of clean modern modular panels. A sense of accumulated layers resolved into a single clear modern form. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Government 3.0"
+    },
+    {
+      "type": "paragraph",
+      "text": "The fourth approach is the most radical, and it questions whether we need traditional applications at all. In this model the data stays where it is, but it is properly governed and exposed through a clean, well-documented interface that an AI agent can read. On top of that governed data sits a layer of agents. There is no fixed application in the middle. When a person needs to do something, the agent assembles the interface for that task, that person, and that moment, then takes it away again when the work is done."
+    },
+    {
+      "type": "paragraph",
+      "text": "Two ideas make this work. First, the business rules are written once, as code, drawn straight from legislation, regulation, and policy. As the law changes, the rules change, and every interaction follows the new rule the same day. Second, the AI becomes the customer of the data. Instead of a thousand screens each reaching into the database in their own way, agents read and write through one governed, audited interface. The thousands of separate user interfaces that government maintains today, each one built, patched, and secured on its own, largely disappear, and with them most of the code that has to be kept alive."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the most cost-effective and the fastest model of the four, because the most expensive thing in government software, the software itself, is mostly gone. It is also the most demanding. It depends on data being genuinely well governed, on rules being faithfully codified, and on every agent action being observable and accountable to a named person. We are not there yet. But it is the direction the work is pointed, and the choices we make now are meant to be compatible with it. It is, as the saying goes, where the puck is heading."
+    },
+    {
+      "type": "paragraph",
+      "text": "It helps to see the arc. Government 1.0 was paper and counters. Government 2.0 was digital forms and websites, faster than paper but still slow. Government 3.0 is the public service working with AI agents as first-class workers, accountable at every step, where a request that once took days is answered in minutes."
+    },
+    {
+      "type": "table",
+      "title": "From today to Government 3.0",
+      "columns": [
+        "Today",
+        "Government 3.0"
+      ],
+      "rows": [
+        [
+          "Thousands of fixed applications, each maintained on its own",
+          "Interfaces generated just in time, for the task and the person"
+        ],
+        [
+          "Business rules buried inside each system's code",
+          "Rules written once as code, drawn from legislation and policy"
+        ],
+        [
+          "Every application reaches into the data its own way",
+          "Agents read and write through one governed, audited interface"
+        ],
+        [
+          "People operate the software",
+          "Agents do the work, accountable to a named person"
+        ],
+        [
+          "A change in the law means months of rework",
+          "The rule changes and every interaction follows it at once"
+        ]
+      ],
+      "caption": "Government 3.0 dissolves the application. The governed data and the codified rules stay; the static screens give way to interfaces an agent builds on demand.",
+      "source": "Government 3.0 framing."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.4",
+      "title": "The application dissolves",
+      "caption": "In the agentic model, governed data sits at the centre and agents work against it directly. The interface is no longer a permanent piece of software; it is assembled for the person in the moment and dissolved when the task is done.",
+      "image": {
+        "src": "public/images/zgym1/en/fig-5-4.jpg",
+        "alt": "A clean, well-organized data core at the centre surrounded by small AI agents, with a lightweight interface assembling itself in front of a person and dissolving again.",
+        "image_prompt": "An editorial illustration of a single clean, well-organized data core glowing at the centre, surrounded by small AI agents working around it, with a lightweight interface assembling itself on demand in front of a single person and partly dissolving back into light. A sense of software giving way to agents working against governed data. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "All four, and what comes next"
+    },
+    {
+      "type": "paragraph",
+      "text": "These four approaches are not rivals, and we do not have to choose one. A government estate is too varied for that. Some systems are tolerated and lightly patched in the Garage. Some are rebuilt new in the Factory. Some are folded into a larger consolidation through rationalization. And over time, more and more of the work moves toward the agentic model of Government 3.0. The four-way test, tolerate, invest, migrate, or eliminate, routes each system to the approach that fits it, so the effort lands where it produces the most value. All four are needed to modernize a government at speed."
+    },
+    {
+      "type": "keystat",
+      "label": "The target the four approaches reach for",
+      "value": "~95%",
+      "body": "A reduction of roughly ninety-five percent in the cost and time of building and maintaining government software. That is the difference between rebuilding the estate inside a single term of government and taking the better part of a century at the conventional pace."
+    },
+    {
+      "type": "paragraph",
+      "text": "Taken together, the four approaches are how we reach that target. We now have a clear picture of how government can be rebuilt. That raises the next question. If AI is going to do this much of the work, repairing, building, consolidating, and in time operating the systems government runs on, how do we make sure it does that work well, safely, and to a standard we can defend? The answer lies in the structure we build around the AI itself. We call that structure the harness, and it is the subject of the next paper: **[The Well-Built Harness](#/paper/p7p2k)**."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "modernization",
+        "ai-factory",
+        "government-3-0",
+        "strategy"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "related": [
+    "offjm",
+    "p7p2k",
+    "qthji",
+    "bbkac"
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "Ministry of Technology and Innovation"
+  }
+}

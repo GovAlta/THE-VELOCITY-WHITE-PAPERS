@@ -280,6 +280,15 @@ async function handleTranslatePaper(body, res) {
 
     const modelId = (body.model === 'opus' ? process.env.VERTEX_CLAUDE_OPUS_MODEL : process.env.VERTEX_CLAUDE_SONNET_MODEL) || 'claude-sonnet-4-6';
     retargetPaths(target, src, tgt);
+    /* The `sections` array is the TOC source and is derived from the heading
+       blocks. collectTranslatable translates the blocks, so re-derive sections
+       from the translated headings to keep the table of contents in the target
+       language (otherwise the TOC stays in the source language). */
+    if (Array.isArray(target.blocks)) {
+      target.sections = target.blocks
+        .filter((b) => b.type === 'section_heading')
+        .map((b) => ({ n: b.n, title: b.title }));
+    }
     target.translation_status = 'draft';
     target._meta = target._meta || {};
     target._meta.translated_from = { source_locale: src, model: modelId, translated_at: new Date().toISOString() };

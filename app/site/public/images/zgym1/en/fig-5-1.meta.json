@@ -1,0 +1,17 @@
+{
+  "paper_id": "zgym1",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\zgym1\\en\\fig-5-1.jpg",
+  "bytes_jpg": 295291,
+  "bytes_png_source": 2949966,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-01T03:49:02.318Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration of a single aging application drawn as an old vehicle raised on a lift inside a clean, orderly repair garage, with a modern engine and new parts being fitted while the body stays the same. A sense of one-at-a-time careful repair. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration of a single aging application drawn as an old vehicle raised on a lift inside a clean, orderly repair garage, with a modern engine and new parts being fitted while the body stays the same. A sense of one-at-a-time careful repair. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

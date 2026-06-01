@@ -1,11 +1,11 @@
 {
   "id": "p7p2k",
-  "num": "08",
+  "num": "06",
   "sequence": "2 sur 2",
   "tier": "Technical",
   "title": "Le harnais bien conçu",
   "subtitle": "Comment un petit ensemble de principes transforme un agent de codage en équipe de livraison qui expédie sans risque à la vitesse du « vibe coding ».",
-  "track": "Foundation",
+  "track": "Engineering the Solution",
   "authors": [
     "Janak Alford",
     "Ingénierie de plateforme",
@@ -499,14 +499,13 @@
   ],
   "_meta": {
     "placeholder": false,
-    "written_by": "human-authored",
-    "notes": "Deuxième brouillon FR, traduit à partir de la version EN polie. Restructuré autour des cinq principes du harnais (CLAUDE.md, fichiers de compétences, hooks, cyber de premier rang, vérifications déterministes et probabilistes). Audio en style explicatif conversationnel pour un public profane. Diapositives TL;DR converties en illustrations éditoriales générées dans le même langage de conception navy/rouille/crème."
+    "written_by": "human-authored"
   },
   "translation_status": "reviewed",
   "category": "paper",
   "related": [
-    "akle0",
-    "offjm",
-    "jy3dg"
+    "l199t",
+    "qthji",
+    "qxlzo"
   ]
 }
