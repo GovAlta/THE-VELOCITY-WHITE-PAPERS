@@ -21,10 +21,12 @@ permissions:
   pages: write
   id-token: write
 
-# Never run two Pages deploys at once; let the newest push win.
+# Allow only one concurrent Pages deployment, and let in-progress deploys
+# finish. Cancelling a Pages deploy mid-publish can leave the site with no
+# active deployment (a 404), so we queue instead of cancel.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
