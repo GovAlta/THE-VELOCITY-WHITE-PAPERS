@@ -4,7 +4,7 @@
   "sequence": "1 of 2",
   "tier": "Conceptual",
   "title": "The Two-Billion-Dollar Ship of Theseus",
-  "subtitle": "The technical estate has outgrown the human capacity to manage it, and rebuilding it means rebuilding the ship while it stays at sea.",
+  "subtitle": "Alberta's technical estate has outgrown the human capacity to manage it. AI provides a meaningful path forward to modernization at speed.",
   "track": "Defining the Problem",
   "authors": [
     "Ministry of Technology and Innovation"
@@ -20,7 +20,7 @@
     "modernization"
   ],
   "repo": null,
-  "abstract": "The technical estate the Government of Alberta oversees has grown past the point where human effort alone can keep it current. Forty years of code, infrastructure, business rules, and vendor dependencies cost more to carry every year, and known vulnerabilities are rising faster than they can be remediated. Modernizing the estate through conventional project work would take generations. This paper sets out why that math fails, why a paired human and AI workforce is the way through, and what the rest of the collection will show.",
+  "abstract": "The technical estate the Government of Alberta oversees has grown past the point where human effort alone can keep it current. More than forty years of code, infrastructure, business rules, and vendor dependencies cost more to carry every year, and known vulnerabilities are emerging faster than they can be remediated. Modernizing the estate through conventional project work would take generations. This paper sets out human ingenuity paired with an AI workforce can solve these challenges while rebuilding the ship of government in just a few short years.",
   "hero_image": {
     "src": "public/images/cux4h/en/hero.jpg",
     "alt": "An illustration of a ship being rebuilt one plank at a time while in motion.",
@@ -157,11 +157,11 @@
   "blocks": [
     {
       "type": "dropcap_paragraph",
-      "text": "The technical estate overseen by the Government of Alberta has grown beyond human capacity to manage. The signs of this are present here in Alberta and shared anecdotally by other governments across Canada. This so-called \"technical debt\", the decades of application code, infrastructure, business rules, data, vendor dependencies, contracts, and documentation which have accrued over 40+ years are overburdening government and inhibiting transformation initiatives. Despite best efforts, the vessel of government cannot keep up with the rate of change of technologies, with ever-increasing cost, and the ever-declining skills and knowledge of these legacy systems."
+      "text": "The technical estate overseen by the Government of Alberta has grown beyond human capacity to manage. The signs of this are present here in Alberta and shared anecdotally by other governments across Canada. This so-called \"technical debt\", the decades of application code, infrastructure, business rules, data, vendor dependencies, contracts, and documentation which have accrued over 40 years are overburdening government and inhibiting transformation initiatives. Despite best efforts, the vessel of government cannot keep up with the rate of change of technologies, with ever-increasing cost, and the ever-declining skills and knowledge needed to maintain these legacy systems."
     },
     {
       "type": "paragraph",
-      "text": "Presently, Alberta has several hundred million dollars in Application Master Services Agreements (AMSA contracts) which exist to keep these systems modern. However, these contracts are failing to deliver the outcomes we need. Application health is getting worse faster than it can be patched, and the latest AI models are uncovering cyber vulnerabilities faster than ever. In the last 12 months, the number of publicly known vulnerabilities in the underlying technologies that Alberta uses rose by 78.2%. Our own deep assessment of the estate uncovered a further ~33% increase above that baseline, so documented cyber concerns have more than doubled. Our speed at remediating them has not."
+      "text": "Presently, Alberta has several hundred million dollars in Application Master Services Agreements with vendors which exist to keep these systems modern. However, these contracts are failing to deliver the outcomes we need. Application health is getting worse faster than it can be patched, and the latest AI models are uncovering cyber vulnerabilities faster than ever. In the last 12 months, the number of publicly known vulnerabilities in the underlying technologies that Alberta uses rose by 78.2%. Our own deep assessment of the estate uncovered a further ~33% increase above that baseline, so documented cyber concerns have more than doubled. Our speed at remediating them has not."
     },
     {
       "type": "section_heading",
@@ -170,15 +170,15 @@
     },
     {
       "type": "paragraph",
-      "text": "In Fall 2024, the senior leadership team with the Department estimated that the cost of modernizing these systems was roughly two billion dollars. The methodology used some simple heuristics; the cost is likely much higher. Regardless, the number serves as a reasonable starting point for a conversation. Within the Ministry of Technology and Innovation (TI), our budget to modernize such systems fluctuates between $80M to $120M annually. This means that if we did nothing else, and costs did not increase, and all technologies and their supports stayed static, and we dedicated our full time to fixing this problem, we could modernize these systems in roughly 20 years. That's a lot of 'ifs'."
+      "text": "In Fall 2024, the senior leadership team with the Department estimated that the cost of modernizing these systems was roughly two billion dollars. The methodology used some simple heuristics; the cost is likely much higher. Regardless, the number serves as a reasonable starting point for a conversation. Within the Ministry of Technology and Innovation (TI), our budget to modernize such systems fluctuates between $80M to $120M annually. This means that if we did nothing else, and costs did not increase, and all technologies and their supports stayed static, and we dedicated our full time to fixing this problem, we could modernize these systems in roughly 20 years. That's a lot of 'if's."
     },
     {
       "type": "paragraph",
-      "text": "The reality is demand for IT services has never been higher; the public have a strong appetite to gain access to modern, secure, and purposeful public services. Ministries wish to modernize their services, reduce red tape, and deliver the programs Albertans need. Application support is ending on critical systems in the coming 12 to 48 months, and big investments need to be made to address changes in legislation and regulation. Two large changes this year, the launch of the Alberta Disability Assistance Program and Care First, implement significant program changes which will impact hundreds of thousands of Albertans. These systems have cost. Currently there are more than forty such legislative or regulatory initiatives underway. "
+      "text": "The reality is demand for IT services has never been higher; the public have a strong appetite to gain access to modern, secure, and purposeful public supports. Ministries wish to modernize their programs, reduce red tape, and deliver results for Albertans. Vendor application support is ending on numerous critical systems in the coming 12 to 48 months, and big investments need to be made to address changes in legislation and regulation. As an example, the launch of the Alberta Disability Assistance Program and Care First insurance model are introducing significant program changes which will impact hundreds of thousands of Albertans. The systems supporting these programs have cost. Currently there are more than forty such legislative or regulatory initiatives underway. "
     },
     {
       "type": "paragraph",
-      "text": "In the pre-AI era, we were not delivering new platforms and solutions at a rate of 70 per year (one every 3 to 4 days). When we benchmarked our velocity in 2024, we estimated it would take 130 years to lifecycle these systems. It is safe to say that no government, population, or vendor can tolerate or support technology projects that span into the centuries. Government continually responds to the needs of the people and its programs, policies, regulations, and laws are continually evolving. We needed to work differently."
+      "text": "In the pre-AI era, we were not delivering new platforms and solutions fast enough. When we benchmarked our delivery velocity in 2024, we estimated it would take 130 years to lifecycle our existing systems. It is safe to say that no government, population, or vendor can tolerate or support technology projects that span into the centuries. Government continually responds to the needs of the people and its programs, policies, regulations, and laws are continually evolving. We needed to work differently."
     },
     {
       "type": "keystat",
@@ -189,7 +189,7 @@
     {
       "type": "figure",
       "fno": "FIG. 1.1",
-      "title": "A vessel riding low",
+      "title": "The vessel of government IT ",
       "caption": "Forty years of accumulated code, contracts, and dependencies sit on the hull as cargo. The vessel still sails, but it rides lower every year.",
       "image": {
         "src": "public/images/cux4h/en/fig-1-1.jpg",
@@ -231,7 +231,7 @@
     },
     {
       "type": "paragraph",
-      "text": "For the layperson, what does the current era of generative artificial intelligence (just called AI henceforth) offer Alberta that previous methods and humans cannot? In the domain of technology, AI already offers human-level intelligence with superhuman speed. It is also scalable, allowing numerous parallel instances (known as agents) to break down complex problems using their inherent pattern matching skills augmented with common software tools. These agents also are persistent to the point of relentless, possess a greater attention span (known in AI as a 'context window') than many humans. Further, they speak and comprehend nearly every human and digital language ever created. When they don't understand, they predict, or 'infer', based on logical patterns that we cannot see. Where the average human is capable of naming a few dozen attributes of an object, person, or system, AI systems classify thousands of attributes for every word concept, document, pattern, image or part thereof that they see through a process called 'vectorization'. This depth of understanding means that they have intuitions we do not consciously possess, and in the technical space this enables them to 'see' the shape of concepts and patterns rapidly, often in seconds, where a human would laboriously work to prepare similar insights over months. And while humans can read between 100 to 400 words per minute, AI can process millions of words in the same time, finding either a needle in a haystack or the pattern in the noise across vast knowledge and code bases."
+      "text": "For the layperson, what does the current era of generative artificial intelligence (just called AI henceforth) offer Alberta that previous methods and humans cannot? \nIn the domain of technology, AI already offers human-level intelligence with superhuman speed. It is also scalable, allowing numerous parallel instances (known as agents) to break down complex problems using their inherent pattern matching skills augmented with common software tools. These agents also are persistent to the point of relentless, possess a greater attention span (known in AI as a 'context window') than many humans. Further, they speak and comprehend nearly every human and digital language ever created. When they don't understand, they predict, or 'infer', based on logical patterns that we cannot see. \nWhere the average human is capable of naming a few dozen attributes of an object, person, or system, AI systems classify thousands of attributes for every word concept, document, pattern, image or part thereof that they see through a process called 'vectorization'. This depth of understanding means that they have intuitions we do not consciously possess, and in the technical space this enables them to 'see' the shape of concepts and patterns rapidly, often in seconds, where a human would laboriously work to prepare similar insights over months. And while humans can read between 100 to 400 words per minute, AI can process millions of words in the same time, finding either a needle in a haystack or the pattern in the noise across vast knowledge and code bases."
     },
     {
       "type": "figure",
@@ -264,7 +264,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Despite their obvious exhibitions (or simulations) of intelligence, these AI workers are also prone to distraction, to flights of fancy, to misunderstanding, and they inherently lack any long-term memory. Figuratively, they are genius amnesiacs, capable of answering tough problems only to instantly forget their task, all previous engagements, and you between every interaction. This may be an artifact of the current generation of these models, but it is a big deal presently. Without memory, the continuous chain of thought, planning, and evaluation is easily broken, and progress stalls. At their best, they excel beyond human performance in the technical domain. At their worst, they are unreliable witnesses, and can make grievous mistakes or errors in judgement due to incomplete information. The companies that build them such as OpenAI and Anthropic, have made them sycophantic and fawning in their praise of even bad ideas, with an overeagerness to please which is at best counterproductive."
+      "text": "Yet AI is still far from perfect. Despite their obvious exhibitions (or simulations) of intelligence, these AI workers are also prone to distraction, to flights of fancy, to misunderstanding, and they inherently lack any long-term memory. Figuratively, they are genius amnesiacs, capable of answering tough problems only to instantly forget their task, all previous engagements, and you between every interaction. This may be an artifact of the current generation of these models, but it is a big deal presently. Without memory, the continuous chain of thought, planning, and evaluation is easily broken, and progress stalls. At their best, they excel beyond human performance in the technical domain. At their worst, they are unreliable witnesses, and can make grievous mistakes or errors in judgement due to incomplete information. The companies that build them such as OpenAI and Anthropic, have made them sycophantic and fawning in their praise of even bad ideas, with an overeagerness to please which is at best counterproductive."
     },
     {
       "type": "paragraph",
@@ -272,7 +272,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Despite their numerous, obvious, and infuriating flaws, a human and an AI agent paired together can do the work of 100 people, and often in a fraction of the time. This is a bold claim, but one which we have proven in Alberta time and again over the last 18 months, and which we will lay down the evidence, the approach, and the code which demonstrates the truth of these claims. And despite these challenges, these tools are our only hope in transforming 40 years of code, and billions of dollars, into a modern and secure government."
+      "text": "Despite their numerous, obvious, and sometimes infuriating flaws, a human and an AI agent paired together can frequently do the work of 20 people, and often in a fraction of the time. This is a bold claim, but one which we have proven in Alberta time and again over the last 18 months, and which we will lay down the evidence, the approach, and the code which demonstrates the truth of these claims. And despite these challenges, these tools are our only hope in transforming 40 years of code, and billions of dollars, into a modern and secure government."
     },
     {
       "type": "figure",
@@ -288,7 +288,7 @@
     },
     {
       "type": "paragraph",
-      "text": "To do any of this, our human staff in Alberta first need to learn how to direct these agents. Working effectively with AI is not easy or obvious. "
+      "text": "To do any of this, our human staff in Alberta first need to learn how to direct these agents, overcome their limitations, and build new processes which maximize human and AI creativity and productivity. Working effectively with AI is not easy or obvious. "
     },
     {
       "type": "section_heading",
@@ -313,7 +313,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The Velocity White Papers are intended to serve as a blueprint for other governments to emulate what Alberta is doing. Alberta is still actively doing this work, but we cannot afford to wait. Unchecked, technical debt will drive us into a 'cyber winter', where the threat actors will access for pennies what it will cost us to remediate with thousands. The cyber issues here are real and solving them is an imperative that all governments must face sooner or later. Linked with increased demand, declining budgets, and the shifting technological landscape, we have an imperative to modernize. We believe that this must happen very soon, and AI is the only path to making it happen. By following these methods herein, we believe that we can reduce both the time and cost of digital transformation."
+      "text": "The Velocity White Papers are intended to serve as a blueprint for other governments to emulate what Alberta is doing. Alberta is still actively doing this work, but we cannot afford to wait. Unchecked, technical debt will drive us into a 'cyber winter', where the threat actors will access for pennies what it will cost us to remediate with thousands. As you will see in the next paper, the cyber issues here are real and solving them is an imperative that all governments must face sooner or later. Linked with increased demand, declining budgets, and the shifting technological landscape, we have an imperative to modernize. We believe that this must happen very soon, and AI is the only path to making it happen. By following these methods herein, we believe that we can reduce both the time and cost of digital transformation."
     },
     {
       "type": "keystat",
@@ -323,7 +323,7 @@
     },
     {
       "type": "paragraph",
-      "text": "These white papers are how we do it, and how we measure our successes. We will share our progress transparently and continue to publish these white papers openly. We are investing heavily in our people to ensure nobody is left behind in the pursuit of AI adoption, while also reimagining the roles of the future.\n\n\nWe invite you all to join us on this journey."
+      "text": "These white papers are how we do it, and how we measure our successes. We will share our progress transparently and continue to publish these white papers openly. We are investing heavily in our people to ensure nobody is left behind in the pursuit of AI adoption, while also reimagining the roles of the future.\n\n\nWe invite you all to join us on this journey. Let's get building."
     },
     {
       "type": "tag_row",
