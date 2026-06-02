@@ -7,10 +7,11 @@
   "subtitle": "The walls are aging from within while the tide rises from without. AI-driven modernization is no longer separable from security.",
   "track": "Defining the Problem",
   "authors": [
+    "Janak Alford",
     "Ministry of Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 16,
+  "reading_min": 11,
   "status": "Draft",
   "tags": [
     "cybersecurity",
@@ -142,7 +143,7 @@
     },
     {
       "n": "03",
-      "title": "The evolving threat"
+      "title": "The evolving threat landscape"
     },
     {
       "n": "04",
@@ -214,12 +215,12 @@
     },
     {
       "type": "paragraph",
-      "text": "These insights have driven Technology and Innovation to become much more 'opinionated' and standards driven organization. By setting clear standards for net new development, which will be enforced through AI-based delivery methods (see the white paper for [The Well Built Harness](#/paper/p7p2k)), we are closing this attack surface and rationalizing into well-supported open-source platforms and technologies."
+      "text": "These insights have driven Technology and Innovation to become much more 'opinionated' and standards driven organization. By setting clear standards for net new development, which will be enforced through AI-based delivery methods (see the white paper [The Well Built Harness](#/paper/p7p2k)), we are closing this attack surface and rationalizing into well-supported open-source platforms and technologies."
     },
     {
       "type": "section_heading",
       "n": "03",
-      "title": "The evolving threat"
+      "title": "The evolving threat landscape"
     },
     {
       "type": "paragraph",
@@ -254,7 +255,7 @@
     },
     {
       "type": "paragraph",
-      "text": "To stay ahead, Alberta proactively invests in maintaining our digital estate. In 2024-25, we spent 47 million dollars maintaining applications with upgrades and security patching to reduce vulnerabilities and chip away at the technical debt, and its dedicated cybersecurity program grew to 14.5 million dollars from 12.3 million the year before. Across the 115 applications classified as critical, 97 percent now hold tested disaster-recovery plans, up from 91 percent. The spend is real, it is rising, and it is the price of holding a line that will not hold still. The contest between cyber professionals and cyber criminals does not end, and standing still is the same as falling behind."
+      "text": "To stay ahead, Alberta proactively invests in maintaining our digital estate. In 2024-25, we spent 47 million dollars maintaining applications with upgrades and security patching to reduce vulnerabilities and chip away at the technical debt, and its dedicated cybersecurity program grew to 14.5 million dollars from 12.3 million the year before. Across the 115 applications classified as critical, 97 percent now hold tested disaster-recovery plans, up from 91 percent. The spend is real, it is rising, and it is the price of holding a line that will not hold still. The contest between cyber professionals and cyber criminals does not end, and standing still is the same as falling behind.\n\nThe latest insights into this domain can be found through our industry-leading [CyberAlberta](https://cyberalberta.ca) platform. \n\n"
     },
     {
       "type": "section_heading",

@@ -83,7 +83,7 @@
                :tags="block.tags || []" />
 
       <related-papers v-else-if="block.type === 'related'"
-                      :ids="paper.related || []"
+                      :current="paper.id"
                       @open="$emit('open', $event)" />
 
       <audio-player v-else-if="block.type === 'audio'"

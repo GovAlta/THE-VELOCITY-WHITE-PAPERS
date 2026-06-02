@@ -922,6 +922,34 @@
   line-height: 1.3; letter-spacing: -0.012em;
 }
 
+/* Previous / next pager (rendered by the related block). Previous on the left,
+   next on the right; each is a full-card link. Stacks to one column on phones. */
+.cd-pager {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin-top: 56px; padding-top: 28px; border-top: 2px solid var(--ink);
+}
+.cd-pager-link {
+  display: flex; flex-direction: column; gap: 5px;
+  background: var(--paper-alt); border: 1px solid transparent;
+  padding: 16px 18px 18px; text-decoration: none; color: inherit;
+}
+.cd-pager-link:hover { border-color: var(--rule-strong); }
+.cd-pager-link.next { text-align: right; align-items: flex-end; }
+.cd-pager-link .dir {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent);
+}
+.cd-pager-link .ref {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--ink-50);
+}
+.cd-pager-link .t { font-weight: 600; font-size: 15px; line-height: 1.3; letter-spacing: -0.012em; }
+.cd-pager-link.is-home .t { color: var(--ink-70); font-weight: 500; }
+@media (max-width: 560px) {
+  .cd-pager { grid-template-columns: 1fr; }
+  .cd-pager-link.next { text-align: left; align-items: flex-start; }
+}
+
 .cd-tagrow {
   margin-top: 32px; padding-top: 18px;
   border-top: 1px dotted var(--rule);
