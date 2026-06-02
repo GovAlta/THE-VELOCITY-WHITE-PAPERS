@@ -51,8 +51,9 @@ jobs:
       - name: Build optimized site (bundle, sitemap, prerender)
         working-directory: app/site
         env:
-          # Project Pages are served from a subpath named after the repo.
-          BASE_URL: https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS
+          # Served from the custom domain (apex), set via the CNAME file in
+          # app/site so the GitHub Actions deploy preserves it on every run.
+          BASE_URL: https://thevelocitywhitepapers.com
         run: |
           node scripts/build-bundle.mjs --replace
           node scripts/build-sitemap.mjs --base "$BASE_URL"

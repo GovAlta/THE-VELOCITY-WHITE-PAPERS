@@ -278,6 +278,10 @@
       this.saving = true;
       this.status = 'Saving ' + path + '…';
       try {
+        // The section_heading blocks are the source of truth. Rebuild the
+        // sections array from them on every save so the saved file, the index,
+        // and the SEO prerender never drift from the headings the reader sees.
+        this.rebuildSections();
         const res = await fetch('/api/save-json', {
           method: 'POST', headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ path, content: this._clean(this.current) }),

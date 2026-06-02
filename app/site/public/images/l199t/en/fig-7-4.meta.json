@@ -1,17 +1,17 @@
 {
   "paper_id": "l199t",
   "locale": "en",
-  "slot": "fig-04",
-  "out_path": "public\\images\\l199t\\en\\fig-7-4.jpg",
-  "bytes_jpg": 252911,
-  "bytes_png_source": 2915904,
-  "model": "gpt-image-1",
-  "generated_at": "2026-06-02T03:06:55.607Z",
+  "slot": "fig-7-4",
+  "style_kind": "diagram",
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A wise security mentor, consolidating the findings from the yellow, green, red agents, and the full blue agent analysis, assembling them into one clear defensive map. These reports tie together 95 different key insights which form the security analysis report, kill chain analysis, and remediation plan. A sense of evidence being turned into a calm, authoritative verdict. Muted Alberta cream base with a clear navy-blue accent, archival print quality, no text.",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A wise security mentor, consolidating the findings from the yellow, green, red agents, and the full blue agent analysis, assembling them into one clear defensive map. These reports tie together 95 different key insights which form the security analysis report, kill chain analysis, and remediation plan. A sense of evidence being turned into a calm, authoritative verdict. Muted Alberta cream base with a clear navy-blue accent, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-02T03:30:48.496Z",
   "jpg_quality": 80,
   "jpg_max_width": 1600,
-  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
-  "image_prompt": "An editorial illustration, navy-blue accented, of an architect inside a building assembling scattered findings into one clear defensive map and a bound report, with a shield rising over the structure. A sense of evidence being turned into a calm, authoritative verdict. Muted Alberta cream base with a clear navy-blue accent, archival print quality, no text.",
-  "style_kind": "diagram",
-  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration, navy-blue accented, of an architect inside a building assembling scattered findings into one clear defensive map and a bound report, with a shield rising over the structure. A sense of evidence being turned into a calm, authoritative verdict. Muted Alberta cream base with a clear navy-blue accent, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
-  "conditioned_on": null
+  "bytes_jpg": 279961,
+  "bytes_png_source": 2523134,
+  "generated_by": "edit-server.mjs"
 }

@@ -1,17 +1,17 @@
 {
   "paper_id": "l199t",
   "locale": "en",
-  "slot": "fig-01",
-  "out_path": "public\\images\\l199t\\en\\fig-7-1.jpg",
-  "bytes_jpg": 308099,
-  "bytes_png_source": 2994261,
-  "model": "gpt-image-1",
-  "generated_at": "2026-06-02T03:03:19.956Z",
+  "slot": "fig-7-1",
+  "style_kind": "diagram",
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration, green-accented, of a meticulous inspector going part by part over the inner workings of a machine or engine, ticking items on a clipboard checklist and pulling out one faulty bolt and one exposed key. A sense of patient, exact, repeatable code hygiene. Muted Alberta cream base with a clear green accent, archival print quality, no text. This must be related to software development, the engine an analogy to the software. No legend.",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration, green-accented, of a meticulous inspector going part by part over the inner workings of a machine or engine, ticking items on a clipboard checklist and pulling out one faulty bolt and one exposed key. A sense of patient, exact, repeatable code hygiene. Muted Alberta cream base with a clear green accent, archival print quality, no text. This must be related to software development, the engine an analogy to the software. No legend.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-02T03:20:27.913Z",
   "jpg_quality": 80,
   "jpg_max_width": 1600,
-  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
-  "image_prompt": "An editorial illustration, green-accented, of a meticulous inspector going part by part over the inner workings of a machine or engine, ticking items on a clipboard checklist and pulling out one faulty bolt and one exposed key. A sense of patient, exact, repeatable code hygiene. Muted Alberta cream base with a clear green accent, archival print quality, no text.",
-  "style_kind": "diagram",
-  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration, green-accented, of a meticulous inspector going part by part over the inner workings of a machine or engine, ticking items on a clipboard checklist and pulling out one faulty bolt and one exposed key. A sense of patient, exact, repeatable code hygiene. Muted Alberta cream base with a clear green accent, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
-  "conditioned_on": null
+  "bytes_jpg": 355990,
+  "bytes_png_source": 3703107,
+  "generated_by": "edit-server.mjs"
 }

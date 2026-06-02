@@ -1,0 +1,17 @@
+{
+  "paper_id": "p7p2k",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\p7p2k\\en\\fig-05-factory.jpg",
+  "bytes_jpg": 274678,
+  "bytes_png_source": 2790025,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-02T03:57:44.607Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of an assembly line. On the left, a rack or bin of identical pre-made modular parts, drawn as clean repeated shapes. Along the line, those parts are assembled into a small symmetrical civic building, shown part-finished, following a posted design or blueprint pinned above the line. A sense of fast, faithful assembly from proven parts against a design settled in advance. Hand-drawn line work, two-tone navy and rust on warm cream paper, calm and architectural. No people, no logos, no text.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of an assembly line. On the left, a rack or bin of identical pre-made modular parts, drawn as clean repeated shapes. Along the line, those parts are assembled into a small symmetrical civic building, shown part-finished, following a posted design or blueprint pinned above the line. A sense of fast, faithful assembly from proven parts against a design settled in advance. Hand-drawn line work, two-tone navy and rust on warm cream paper, calm and architectural. No people, no logos, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

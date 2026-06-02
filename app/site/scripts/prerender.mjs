@@ -129,6 +129,7 @@ function buildPaperHTML(paper, locale, otherLocale, otherPaper) {
     '  <link rel="preconnect" href="https://fonts.googleapis.com">\n' +
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
     '  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">\n' +
+    '  <link rel="icon" type="image/webp" href="' + upPrefix + 'alberta-logo.webp" />\n' +
     '  <link rel="stylesheet" href="' + upPrefix + 'styles/tokens.css" />\n' +
     '  <link rel="stylesheet" href="' + upPrefix + 'styles/base.css" />\n' +
     '  <link rel="stylesheet" href="' + upPrefix + 'styles/components.css" />\n' +

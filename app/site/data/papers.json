@@ -157,7 +157,7 @@
       "sequence": "2 of 2",
       "tier": "Technical",
       "title": "The Well-Built Harness",
-      "subtitle": "How AI lets the public service build and ship enterprise-grade software at speed, without lowering the bar.",
+      "subtitle": "How the public service can build and ship enterprise-grade software at speed, without lowering the bar.",
       "track": "Engineering the Solution",
       "authors": [
         "Janak Alford",
@@ -178,7 +178,7 @@
         "open-source"
       ],
       "repo": "https://github.com/alberta-velocity/velocity-harness",
-      "abstract": "Early in Alberta's AI Maximalist program, coding tools like Cursor, Lovable, and Claude Code collapsed the time to build a working prototype from roughly six weeks to thirty minutes. The speed was genuine, but the prototypes could not be reproduced, they skipped the controls a public service requires, and the agents reported themselves finished when they were not. This paper describes the working environment Technology and Innovation built to close that gap, the harness, a combination of skills, standards, and pre-built templates that lets a coding agent take on the technical work while people keep the vision, the architecture, and the decisions that matter. The harness, the templates, and the skill files are released as open source.",
+      "abstract": "Coding tools like Cursor, Lovable, and Claude Code produce applications which often lack the controls a public service requires. AI agents are often unreliable witnesses of their own performance. Clear instructions, tests, and templates help to overcome these challenges. Alberta has developed and released a collection of files called a 'harness' which clearly define your expectations for the AI, driving enterprise quality outputs at the speed of the 'vibe coded' application.",
       "related": [
         "l199t",
         "qthji",
@@ -208,7 +208,7 @@
         "quality"
       ],
       "repo": null,
-      "abstract": "If AI writes and repairs the code, something has to check the AI. That something is more AI, of a particular kind, pointed back at the work. Four review agents ride inside the harness, each named for a colour. Green checks code quality and hygiene. Yellow checks how the writing reads. Red attacks the application the way an outsider would. Blue defends it, judging the code against an international security standard and turning the evidence into a verdict a decision-maker can act on. Bundled into the harness as mechanical gates, the four act as checks and balances: a piece of work cannot be called done until it passes. This is how the cyber problem from Paper 2 is answered without patching forever, and how the build methods from Paper 5 stay safe at speed. Security and quality stop being something we chase after the fact and become a property of how the code is made.",
+      "abstract": "If AI writes and repairs the code, something has to check the AI. Four review agents ride inside the harness, each nicknamed for a colour. Green checks code quality and hygiene. Yellow checks how the writing reads. Red attacks the application the way an outsider would. Blue defends it, judging the code against an international security standard and turning the evidence into a verdict a decision-maker can act on. These agents are bundled into the harness as checks and balances: a piece of work cannot be called done until it passes. Security and quality stop being something we chase after the fact and become first-class concerns.",
       "related": [
         "mwo98",
         "zgym1",

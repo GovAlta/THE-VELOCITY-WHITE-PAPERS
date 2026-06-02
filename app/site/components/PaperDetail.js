@@ -71,6 +71,16 @@
         get() { return (this.paper.tags || []).join(', '); },
         set(v) { this.paper.tags = v.split(',').map((s) => s.trim()).filter(Boolean); this.touch(); },
       },
+      /* The table of contents is derived from the section_heading blocks, which
+         are the single source of truth. Editing a heading's title in the body
+         updates the side menu immediately, and the two can never fall out of
+         sync. Each entry's n and title come straight from its block, and the
+         anchor it scrolls to (sec-<n>) is the same id the block renders. */
+      tocSections() {
+        return (this.paper.blocks || [])
+          .filter((b) => b && b.type === 'section_heading')
+          .map((b) => ({ n: b.n, title: b.title }));
+      },
     },
     methods: {
       scrollToSection(n) {
@@ -128,7 +138,7 @@
           </button>
           <div class="toc-head" id="toc-head" aria-hidden="true">{{ (store.t.ui && store.t.ui.contents) || 'Contents' }}</div>
           <ol class="toc-items" role="list" aria-labelledby="toc-head">
-            <li v-for="(s, i) in paper.sections" :key="s.n"
+            <li v-for="(s, i) in tocSections" :key="'toc-' + i"
                 :class="{ 'vw-toc-drag': edit && edit.enabled }"
                 :draggable="edit && edit.enabled ? 'true' : 'false'"
                 @dragstart="onSecDragStart(i, $event)"
