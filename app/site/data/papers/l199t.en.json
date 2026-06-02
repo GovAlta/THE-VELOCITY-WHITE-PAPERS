@@ -5,21 +5,27 @@
   "tier": "Technical",
   "category": "paper",
   "title": "Red, Blue, Green, and Yellow Agents",
-  "subtitle": "The agent roles that build, test, secure, and remediate.",
+  "subtitle": "Four review agents, bundled into the harness, that check every application for quality, consistency, and security before it ships.",
   "track": "Engineering the Solution",
   "authors": [
     "Ministry of Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 18,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "security",
+    "agents",
+    "harness",
+    "red-team",
+    "quality"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+  "abstract": "If AI writes and repairs the code, something has to check the AI. That something is more AI, of a particular kind, pointed back at the work. Four review agents ride inside the harness, each named for a colour. Green checks code quality and hygiene. Yellow checks how the writing reads. Red attacks the application the way an outsider would. Blue defends it, judging the code against an international security standard and turning the evidence into a verdict a decision-maker can act on. Bundled into the harness as mechanical gates, the four act as checks and balances: a piece of work cannot be called done until it passes. This is how the cyber problem from Paper 2 is answered without patching forever, and how the build methods from Paper 5 stay safe at speed. Security and quality stop being something we chase after the fact and become a property of how the code is made.",
   "hero_image": {
     "src": "public/images/l199t/en/hero.jpg",
-    "alt": "Editorial image for: Red, Blue, Green, and Yellow Agents",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"Red, Blue, Green, and Yellow Agents\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "One application at the centre, surrounded by four review agents coloured green, yellow, red, and blue, forming a balanced protective seal.",
+    "image_prompt": "An editorial cover illustration of a single application or building at the centre, surrounded by four distinct review agents arranged in balance around it, one tinted green, one yellow, one red, one blue, together forming a protective seal or set of checks and balances. A sense of four disciplines guarding one piece of work in concert. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos.",
     "style_kind": "cover"
   },
   "audio": {
@@ -36,8 +42,8 @@
         "title": "Red, Blue, Green, and Yellow Agents",
         "audio_file": "public/audio/en/l199t-tldr/01.mp3",
         "visual": "title",
-        "caption": "Engineering the Solution",
-        "subcaption": "",
+        "caption": "Paper 7 · Engineering the Solution",
+        "subcaption": "Four review agents that keep every build honest.",
         "text": "Red, Blue, Green, and Yellow Agents. Content forthcoming."
       }
     ]
@@ -46,23 +52,316 @@
   "sections": [
     {
       "n": "01",
-      "title": "Overview"
+      "title": "Who checks the AI"
+    },
+    {
+      "n": "02",
+      "title": "Green: quality and hygiene"
+    },
+    {
+      "n": "03",
+      "title": "Yellow: how the writing reads"
+    },
+    {
+      "n": "04",
+      "title": "Red: the attacker"
+    },
+    {
+      "n": "05",
+      "title": "Blue: the defender"
+    },
+    {
+      "n": "06",
+      "title": "Four agents, one system of checks and balances"
+    },
+    {
+      "n": "07",
+      "title": "What it runs on: Claude, the Agent SDK, and Vertex"
+    },
+    {
+      "n": "08",
+      "title": "What this gives the builders"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "The earlier papers set out two halves of the same problem. We can now find what is wrong across the whole estate, from the [rising cyber pressure](#/paper/mwo98) to the health of every repository, and we have [four ways to rebuild it](#/paper/zgym1). Both halves lean on AI doing the work. That raises the obvious question. If an AI writes or repairs the code, who checks the AI? The answer is more AI, of a particular kind, pointed back at the work. Four review agents, each named for a colour, ride inside [the harness](#/paper/p7p2k) and inspect every application for quality, consistency, and security. They are the checks and balances on everything the builders produce."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Who checks the AI"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "The colours come from security practice, where red is the attacker and blue is the defender. We added two more. Green covers code quality and hygiene. Yellow covers how the writing reads. Each colour is a separate agent with its own command and its own report, and each looks at the work from an angle the others do not. A developer runs them on a finished piece of work the way a team would call in four different reviewers."
+    },
+    {
+      "type": "paragraph",
+      "text": "The four are split on purpose between mechanical and judgment work. Green and Yellow are fully deterministic: give them the same code and they return the same findings every time. Red's reconnaissance is deterministic too, with one step that uses Claude to plan how an attack would go. Blue is mostly judgment, the kind a senior reviewer brings. Determinism is what lets an agent act as a gate that never drifts. Judgment is what catches the problem a checklist would miss. The harness uses each where it fits."
+    },
+    {
+      "type": "table",
+      "title": "The four review agents at a glance",
+      "columns": [
+        "Agent",
+        "What it reviews",
+        "How it works",
+        "When it runs"
+      ],
+      "rows": [
+        [
+          "Green",
+          "Code quality, dependencies, committed secrets, test coverage, the build pipeline.",
+          "Deterministic, around 30 checks in two rounds.",
+          "First. The evidence base the others read."
+        ],
+        [
+          "Yellow",
+          "Every piece of writing in the project, for the tells of machine-made prose.",
+          "Deterministic, 12 rules.",
+          "In parallel, before anything is published."
+        ],
+        [
+          "Red",
+          "The finished application from an outside attacker's point of view.",
+          "Reconnaissance by ordinary tooling; attack-planning by Claude.",
+          "After the core features land."
+        ],
+        [
+          "Blue",
+          "The defensive posture, against an international security standard.",
+          "Mostly judgment, built on the others' evidence.",
+          "Last. It reads Green and Red and writes the verdict."
+        ]
+      ],
+      "caption": "Four disciplines, four agents, one piece of work. Three are deterministic enough to act as gates; Blue brings the expert read.",
+      "source": "AIDE common harness, four-team review framework."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Green: quality and hygiene"
+    },
+    {
+      "type": "paragraph",
+      "text": "Green is the foundation, and it runs first. It reads the code and reports the plain facts of its health. Which dependencies carry known vulnerabilities. Whether a password or key has been committed into the source. Whether dangerous patterns are present. How much of the code the tests actually cover. Whether the build pipeline has the gates it should. It works in two rounds: the first reads the code without running it, the second runs the existing tests and watches what happens, including which parts of the code the tests never touch."
+    },
+    {
+      "type": "paragraph",
+      "text": "Because Green is deterministic, the same code always produces the same findings. That is what makes it the evidence base every other agent builds on. It does not guess; it counts. When it flags a file with almost no test coverage, or a secret sitting in the source, that finding is a fact rather than an opinion, and it can be checked the same way twice."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.1",
+      "title": "Green: the plain facts of the code's health",
+      "caption": "Green inspects the code itself: vulnerable dependencies, committed secrets, dangerous patterns, thin test coverage, and gaps in the build pipeline. Deterministic by design, so the same code returns the same findings every time.",
+      "image": {
+        "src": "public/images/l199t/en/fig-7-1.jpg",
+        "alt": "A green-tinted inspector methodically checking the parts of a machine against a checklist, finding a loose component.",
+        "image_prompt": "An editorial illustration, green-accented, of a meticulous inspector going part by part over the inner workings of a machine or engine, ticking items on a clipboard checklist and pulling out one faulty bolt and one exposed key. A sense of patient, exact, repeatable code hygiene. Muted Alberta cream base with a clear green accent, archival print quality, no text.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Yellow: how the writing reads"
+    },
+    {
+      "type": "paragraph",
+      "text": "Yellow reads the writing. Government software carries a lot of prose: documentation, the copy inside the interface, release notes, the messages a citizen actually sees. When AI writes that prose it leaves tells, the turns of phrase that mark text as machine-made and quietly erode trust. Yellow walks twelve rules across every piece of writing in the project and flags each tell with the offending line, a plain rewrite, and a short note on why it reads as a machine wrote it."
+    },
+    {
+      "type": "paragraph",
+      "text": "These are the same rules that govern the papers you are reading now. An em dash, a stock cliché, a fawning opening, an \"ensure\" standing in for a real verb: each is caught and named. The point is simple. If the public is going to read it, it should read like a person wrote it. Yellow is the cheapest of the four to run, a matter of seconds, and it keeps the whole estate sounding human."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.2",
+      "title": "Yellow: writing that reads like a person wrote it",
+      "caption": "Yellow runs twelve rules across all the prose in a project, flagging the tells of machine-made text and proposing a plain rewrite for each. The same rules that govern these papers.",
+      "image": {
+        "src": "public/images/l199t/en/fig-7-2.jpg",
+        "alt": "A yellow-tinted editor's pass over a page of text, circling tell-tale phrases and writing a cleaner line in the margin.",
+        "image_prompt": "An editorial illustration, amber-yellow accented, of a careful editor passing over a page of text, circling a few tell-tale phrases and writing a cleaner, plainer line in the margin. A sense of prose being made to sound human again. Muted Alberta cream base with a clear amber-yellow accent, archival print quality, no text.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Red: the attacker"
+    },
+    {
+      "type": "paragraph",
+      "text": "Red is the attacker. It looks at a finished application the way an outsider with bad intentions would, from the outside in. It maps the domain and its subdomains, scans for open ports, checks the encryption and the security headers, and works out which technologies are in use. That reconnaissance is ordinary, repeatable tooling, and it runs on any machine without special setup."
+    },
+    {
+      "type": "paragraph",
+      "text": "Then Red does the part that used to need a specialist. It reasons over everything it found and plans how it would break in, proposing concrete attack paths: slipping past a login, chaining a remote exploit, drawing data out a side door. In that planning step, Claude does the thinking, and it is the one part of Red that varies from run to run. Red only ever runs against systems the government owns and has authorized for testing. Its job is to find the hole before someone else does, and to hand the next agent a map of how an attack would actually unfold."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.3",
+      "title": "Red: thinks like an adversary",
+      "caption": "Red studies a finished application from the outside, maps its exposed surface, then plans concrete attack paths from what it finds. Reconnaissance is repeatable tooling; the attack plan is where Claude reasons.",
+      "image": {
+        "src": "public/images/l199t/en/fig-7-3.jpg",
+        "alt": "A red-accented security analyst studying a stylized application drawn as a fortress and network diagram, tracing test probes against its outer wall and marking exposed entry points.",
+        "image_prompt": "An editorial illustration, rust-red accented, of a security analyst at a desk in daylight studying a stylized application drawn as a small fortress and network diagram, tracing authorized test-probe lines against its outer wall and marking the exposed entry points on a chart. A professional scene conveying authorized offensive security testing, mapping where a system is weak so it can be strengthened. Muted Alberta cream base with a clear rust-red accent, archival print quality, no text.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Blue: the defender"
+    },
+    {
+      "type": "paragraph",
+      "text": "Blue is the defender, and it runs last because it reads everything the others found. It builds a map of the application, classifies how sensitive each part is, and writes a threat model. Then it walks every requirement in the OWASP Application Security Verification Standard at Level 2, the international baseline for a serious web application, and records each one as pass, fail, or not applicable, with the evidence behind the call. It checks the same code against Alberta's cybersecurity architecture standard, folds Red's reconnaissance into a step-by-step picture of how an attack would unfold, and writes security tests that prove each fix holds."
+    },
+    {
+      "type": "paragraph",
+      "text": "Blue's last act is to write the report a decision-maker can act on. An executive summary. The findings ranked by severity. The standards met and missed. A remediation plan that points to the exact files. Where Green counts and Red probes, Blue judges, the way a senior security architect would, and turns a pile of evidence into a defensible verdict that an auditor can follow."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.4",
+      "title": "Blue: turns evidence into a verdict",
+      "caption": "Blue reads the deterministic evidence and the attack map, checks the code against an international standard and Alberta's architecture standard, and writes the ranked, evidence-backed report leadership and auditors rely on.",
+      "image": {
+        "src": "public/images/l199t/en/fig-7-4.jpg",
+        "alt": "A blue-tinted architect inside, assembling the findings into a defensive map and a clear report, raising a shield over the building.",
+        "image_prompt": "An editorial illustration, navy-blue accented, of an architect inside a building assembling scattered findings into one clear defensive map and a bound report, with a shield rising over the structure. A sense of evidence being turned into a calm, authoritative verdict. Muted Alberta cream base with a clear navy-blue accent, archival print quality, no text.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Four agents, one system of checks and balances"
+    },
+    {
+      "type": "paragraph",
+      "text": "On their own, each agent is useful. Together they are a system of checks and balances. Green and Yellow run first and fast, side by side. Red attacks from the outside. Blue takes the deterministic evidence from Green and the attack picture from Red and renders the judgment. The deterministic agents give gates that never regress; Blue gives the expert read a checklist alone would miss. No single agent could do both jobs, so the work is divided four ways and recombined at the end."
+    },
+    {
+      "type": "paragraph",
+      "text": "What turns these reviews from advice into enforcement is that they are bundled into the harness as gates. The harness will not let a piece of work be called done, and will not even let the working session end, if the security scan shows a critical finding, if the scan is stale, or if the review never ran. Every \"must do\" is backed by a check that fails loudly when it is skipped. The gates are mechanical, not aspirational."
+    },
+    {
+      "type": "table",
+      "title": "What the gates actually enforce",
+      "columns": [
+        "The harness blocks the work when…",
+        "Caught by"
+      ],
+      "rows": [
+        [
+          "A critical security finding is still open.",
+          "the security gate, checked before a session can end"
+        ],
+        [
+          "The security scan is missing, or more than a day old.",
+          "the security gate"
+        ],
+        [
+          "A must-have requirement has no actual code behind it.",
+          "the development gate"
+        ],
+        [
+          "A database change cannot be safely re-run.",
+          "the migration gate"
+        ],
+        [
+          "A fixed problem has no new rule to stop it returning.",
+          "the finding-codified gate"
+        ]
+      ],
+      "caption": "Each gate is a check that fails loudly when its condition is not met, so a review cannot be skipped by hand-waving. A blocked gate is fixed or formally re-planned, never bypassed.",
+      "source": "AIDE common harness, mechanical gate scripts."
+    },
+    {
+      "type": "paragraph",
+      "text": "Two rules keep the system honest. A finding that will not be fixed is accepted in writing, with a reason, a named owner, and a review date, and it stays visible until then. A critical finding cannot be waved away at all. And every finding that does get fixed becomes a new rule in the harness, so the same class of mistake cannot come back. The estate gets a little safer with every pass, and the lesson is kept rather than relearned."
+    },
+    {
+      "type": "keystat",
+      "label": "Security controls built into the template the agents check against",
+      "value": "~95",
+      "body": "Across sixteen categories, from authentication and session handling to cross-site request protection, input validation, and supply-chain hygiene. The four agents check each application against this baseline on every pass, so the same standard is met whether the code was repaired or built new."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.5",
+      "title": "The four working in concert",
+      "caption": "Green and Yellow check the work, Red attacks it, Blue defends and judges. Bundled into the harness as gates, the four reach one verdict, and the application passes only when it clears them all.",
+      "image": {
+        "src": "public/images/l199t/en/fig-7-5.jpg",
+        "alt": "Four review agents coloured green, yellow, red, and blue working in concert around one application as it passes through a checkpoint gate.",
+        "image_prompt": "An editorial illustration of four review agents, one green, one amber-yellow, one rust-red, one navy-blue, working in concert and in balance around a single application as it passes through a checkpoint or gate. Each agent contributes its own check and the four combine into one verdict. A sense of harmonious checks and balances guarding one piece of work. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "Security and quality stop being something we chase after the fact, and become a property of how the code is made.",
+      "cite": "Paper 7 · Red, Blue, Green, and Yellow Agents"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is how the cyber problem from [The Cyber Imperative](#/paper/mwo98) is answered without patching forever. And it is what makes the build methods from [The Four Approaches](#/paper/zgym1) safe to run at speed. Whether the AI repairs an old system in the Garage or builds a new one in the Factory, the same four agents pass judgment before anything ships. The builders get their speed, and the public gets code that has been attacked, defended, and proof-read before it ever reaches them."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "What it runs on: Claude, the Agent SDK, and Vertex"
+    },
+    {
+      "type": "paragraph",
+      "text": "All of this runs on the Anthropic Claude platform. The deterministic agents, Green, Yellow, and Red's reconnaissance, are ordinary code that needs no model at all. The parts that call for judgment, Red's attack planner and Blue's whole assessment, are built with the Claude Agent SDK, the toolkit for running a model through many steps with a fixed set of tools and a budget of turns. The harness pins which model does which job and how hard it is allowed to work, so a review is repeatable and its cost is known before it starts."
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta runs these models through Claude on Google Vertex AI, now the Google Agent Platform. That keeps the work inside a governed Canadian cloud, with the model provider held behind a clean boundary so it can be changed as the field moves. The same boundary lets a local or open model be tested against the commercial one on identical work, which matters as the economics shift. The agents do not care which model answers, only that the answer meets the standard."
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "What this gives the builders"
+    },
+    {
+      "type": "paragraph",
+      "text": "The four agents are how Alberta makes \"the AI built it\" a sentence a security reviewer can trust. They catch what a tired person would miss, they never skip a step, and they turn quality and security from a hope into a gate the code has to pass. The builders move faster because the safety net is automatic and always on, and because a found problem becomes a permanent rule rather than a recurring surprise."
+    },
+    {
+      "type": "paragraph",
+      "text": "With the harness and its review agents in place, the question turns to the factory that puts them to work on every build. The next papers open up that factory: where applications are [designed and specified](#/paper/qthji), where agents build and test them under these same controls, and where the work is tracked and measured."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "security",
+        "agents",
+        "harness",
+        "red-team"
+      ]
+    },
+    {
+      "type": "related"
     }
+  ],
+  "related": [
+    "mwo98",
+    "zgym1",
+    "p7p2k",
+    "qthji"
   ],
   "_meta": {
     "placeholder": true,
-    "written_by": "structural-stub"
-  },
-  "related": []
+    "written_by": "Ministry of Technology and Innovation"
+  }
 }

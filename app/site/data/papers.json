@@ -192,18 +192,29 @@
       "sequence": "",
       "tier": "Technical",
       "title": "Red, Blue, Green, and Yellow Agents",
-      "subtitle": "The agent roles that build, test, secure, and remediate.",
+      "subtitle": "Four review agents, bundled into the harness, that check every application for quality, consistency, and security before it ships.",
       "track": "Engineering the Solution",
       "authors": [
         "Ministry of Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 18,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "security",
+        "agents",
+        "harness",
+        "red-team",
+        "quality"
+      ],
       "repo": null,
-      "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
-      "related": [],
+      "abstract": "If AI writes and repairs the code, something has to check the AI. That something is more AI, of a particular kind, pointed back at the work. Four review agents ride inside the harness, each named for a colour. Green checks code quality and hygiene. Yellow checks how the writing reads. Red attacks the application the way an outsider would. Blue defends it, judging the code against an international security standard and turning the evidence into a verdict a decision-maker can act on. Bundled into the harness as mechanical gates, the four act as checks and balances: a piece of work cannot be called done until it passes. This is how the cyber problem from Paper 2 is answered without patching forever, and how the build methods from Paper 5 stay safe at speed. Security and quality stop being something we chase after the fact and become a property of how the code is made.",
+      "related": [
+        "mwo98",
+        "zgym1",
+        "p7p2k",
+        "qthji"
+      ],
       "category": "paper"
     },
     {

@@ -1,0 +1,17 @@
+{
+  "paper_id": "l199t",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\l199t\\en\\fig-7-3.jpg",
+  "bytes_jpg": 357780,
+  "bytes_png_source": 3507607,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-02T03:09:37.069Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration, rust-red accented, of a security analyst at a desk in daylight studying a stylized application drawn as a small fortress and network diagram, tracing authorized test-probe lines against its outer wall and marking the exposed entry points on a chart. A professional scene conveying authorized offensive security testing, mapping where a system is weak so it can be strengthened. Muted Alberta cream base with a clear rust-red accent, archival print quality, no text.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration, rust-red accented, of a security analyst at a desk in daylight studying a stylized application drawn as a small fortress and network diagram, tracing authorized test-probe lines against its outer wall and marking the exposed entry points on a chart. A professional scene conveying authorized offensive security testing, mapping where a system is weak so it can be strengthened. Muted Alberta cream base with a clear rust-red accent, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}
