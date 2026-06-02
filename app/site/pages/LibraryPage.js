@@ -57,9 +57,10 @@
             <span class="dot"></span>
             <span>{{ store.t.publisher }}</span>
             <span>·</span>
-            <span>Open source · MIT</span>
+            <a class="oss-link" href="https://github.com/GovAlta/the-velocity-white-papers"
+               target="_blank" rel="noopener">Open source · MIT</a>
           </div>
-          <h1>{{ store.t.hero.title }}</h1>
+          <h1 v-html="store.t.hero.title"></h1>
           <p class="lede">{{ store.t.hero.subtitle }}</p>
         </section>
 

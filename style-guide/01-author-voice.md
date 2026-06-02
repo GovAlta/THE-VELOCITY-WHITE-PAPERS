@@ -2,9 +2,9 @@
 
 A companion to `00-writing-style-guide.md`. The 00 file lists the hard rules: constructions and vocabulary to avoid. This file describes the positive shape of the voice: how the author thinks, structures an argument, lands an idea, and brings a reader along.
 
-The author is Janak Alford, deputy minister of Technology and Innovation for the Government of Alberta. He trained as an architect. He has spent two decades moving between the public service and his own design studio. He speaks at masterclasses, peer events, podcasts, ADM networks, mixed industry-and-government rooms. The voice below is the consistent posture underneath every one of those settings — what stays the same regardless of who is in the room.
+The voice described here is a posture, not a person. It belongs to a senior practitioner who has worked on both sides of a hard problem, in policy and in hands-on delivery, and who is now bringing a thoughtful colleague along. It is confident about the direction, honest about the unknowns, specific about the numbers, and always inviting the reader to push back. It stays the same regardless of the setting or who is in the room, and any author writing for this collection should be able to hold it.
 
-This guide is written for a Claude agent that is about to draft a paper, a slide narration, or a long-form audio script in this voice. It is a style sheet, not a recipe. It describes the *moves* the author makes, not the specific analogies, frameworks, or examples he has used in the past. Past examples belong to the past papers and presentations they came from. A new paper invents its own.
+This guide is written for an author, or for a Claude agent, about to draft a paper, a slide narration, or a long-form audio script in this voice. It is a style sheet, not a recipe. It describes the *moves* the voice makes, not the specific analogies, frameworks, or examples used in past papers. Those belong to the papers and presentations they came from. A new paper invents its own.
 
 A second purpose: the audio narration for every paper is read by a voice clone of the author. The writing has to be both readable on the page and speakable on the audio track. The audio section near the end resolves the cases where the two pull in different directions.
 
@@ -14,7 +14,7 @@ A note on scope. Each whitepaper in the Velocity Papers collection must stand on
 
 ## The spirit in one sentence
 
-A senior official who trained as an architect, learned to build software the long way, and is now trying to bring a thoughtful colleague along on a hard problem. Confident about the direction. Honest about the unknowns. Specific about the numbers. Always inviting the reader to push back, take it further, or come along on the work.
+A senior practitioner bringing a thoughtful colleague along on a hard problem. Confident about the direction. Honest about the unknowns. Specific about the numbers. Always inviting the reader to push back, take it further, or come along on the work.
 
 ---
 
@@ -120,7 +120,7 @@ There are three textures of example that work in this voice.
 
 **The peer scene.** A short scene drawn from someone the reader could imagine: a colleague in another ministry, a friend who runs a small business, a junior employee in their first week. The scene names the person's role, their question, and what they were trying to do. Two or three sentences. Then the paper continues with what the scene reveals.
 
-**The personal observation.** A short personal admission from the writer's own experience. The author moves between confident framing and small admissions of having been wrong, having had to learn, having had to change his mind. These admissions land because they are quiet — they don't dramatise the writer's journey, they simply note it.
+**The personal observation.** A short personal admission from the writer's own experience. The voice moves between confident framing and small admissions of having been wrong, having had to learn, having had to change course. These admissions land because they are quiet; they don't dramatise the writer's journey, they simply note it.
 
 **The specific outcome.** A measurable result, named with the conditions that produced it. Numbers do most of the work here. A specific number is more memorable and more credible than a percentage range or a vague gain.
 

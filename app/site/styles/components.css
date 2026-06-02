@@ -76,6 +76,10 @@
 .civic-eyebrow .dot {
   width: 6px; height: 6px; background: var(--highlight); border-radius: 50%;
 }
+.civic-eyebrow a.oss-link {
+  color: inherit; text-decoration: underline; text-underline-offset: 2px;
+}
+.civic-eyebrow a.oss-link:hover { color: var(--accent); }
 .civic-hero h1 {
   font-weight: 600; font-size: 58px; line-height: 1.02;
   letter-spacing: -0.03em; margin: 0 0 22px; max-width: 18ch;

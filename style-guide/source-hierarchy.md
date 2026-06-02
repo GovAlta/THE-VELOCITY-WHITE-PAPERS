@@ -12,9 +12,9 @@ A paper is built from sources of three different kinds. They are not equal. Each
 
 The author's written prose is the spine of the paper and the authority on **voice, narrative, framing, and concepts.** Everything else is woven around it, not over it.
 
-- Integrate it preserving his words. Place it; do not paraphrase it. Clean only genuine defects (see `refine-paper`).
-- Mark it `author_verbatim` so the style scanner leaves his deliberate choices alone.
-- Where his prose sets the structure of an argument, the technical material fills it in; it does not rearrange it.
+- Integrate it preserving the author's words. Place it; do not paraphrase it. Clean only genuine defects (see `refine-paper`).
+- Mark it `author_verbatim` so the style scanner leaves the author's deliberate choices alone.
+- Where the author's prose sets the structure of an argument, the technical material fills it in; it does not rearrange it.
 
 ### Tier 2 — Provided and linked secondary sources (the ground truth)
 
