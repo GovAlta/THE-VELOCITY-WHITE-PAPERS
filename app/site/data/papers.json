@@ -84,7 +84,7 @@
         "cybersecurity"
       ],
       "repo": "https://github.com/GovAlta-EMU/git-insights",
-      "abstract": "Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. 50 agents read 466 million lines of code in roughly 20 hours, a scan no consultant engagement could match. This paper explains the problem, shows in detail how the tool works, and reveals what the scan found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code.",
+      "abstract": "Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. Fifty agents read 466 million lines of code in roughly 20 hours, mapping the digital landscape and capabilities of government. This paper explains the problem, shows in detail how the tool works, and reveals what the scan found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code.",
       "related": [
         "offjm",
         "p7p2k",
@@ -114,7 +114,7 @@
         "agents"
       ],
       "repo": "https://github.com/GovAlta-EMU/git-insights-ministries",
-      "abstract": "Git Insights told us the truth about every repository, one at a time. Knowing was the first step, and we acted on it. But knowing what is wrong is not the same as knowing how to rebuild. Git Insights Ministry is the second lens. It reads a whole ministry of code at once, around 200 repositories, and works out everything those systems actually do. Then it proposes a way to rebuild them: as modern, government-owned modules, each built once, with nothing duplicated. In one Alberta ministry, 185 applications collapsed into 16 reusable modules. This paper shows how the tool works, what it gives a decision-maker, and how the shared architecture of government gets rebuilt.",
+      "abstract": "Git Insights told us the truth about every repository, one at a time. But knowing what is wrong is not the same as knowing how to rebuild. Git Insights Ministry is the second lens. It reads a whole ministry of code at once, around 200 repositories, and works out everything those systems actually do. Then AI proposes a way to rebuild these capabilities as modern, government-owned modules, each built once, with nothing duplicated. In one Alberta ministry, 185 applications can be collapsed into 16 reusable modules. This paper shows how the tool works, what it gives a decision-maker, and how the shared architecture of government gets rebuilt.",
       "related": [
         "bbkac",
         "zgym1",

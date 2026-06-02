@@ -222,7 +222,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Since starting the AI Maximalist program in March 2025 to today in May 2026, the Department has produced far more than 1,000 applications. The vast majority are prototypes, but dozens have made it into production, offering real value. The prototypes themselves follow a pattern of exploration, experimentation, and even play. Without a sense of play, it is impossible for staff to learn the boundaries of these models, and to learn how to work effectively. It may be odd to say 'play' within this context, especially in a government environment, but that is how we humans learn. We learn best when we are in a psychologically safe environment, when we are challenged to push our boundaries, and when we are having fun. In those 1,000+ applications we've built, we've explored the limits of AI, and found its real gaps. Each insight allowed us to capture and refine our own processes, manually closing and overcoming those gaps with better instructions, better scripts, and better tests. We see where AI breaks down, and we find innovative ways to leverage its immense capability while also recognizing its real, and often glaring, shortcomings. Over this period of exploration and play, we've created a recipe book on how to work well."
+      "text": "Since starting the AI Maximalist program in March 2025 to today in May 2026, the Department has produced far more than 1,000 applications. The vast majority are prototypes, but dozens have made it into production, offering real value. The prototypes themselves follow a pattern of exploration, experimentation, and even play. Without a sense of play, it is impossible for staff to learn the boundaries of these models, and to learn how to work effectively. It may be odd to say 'play' within this context, especially in a government environment, but that is how we humans learn. We learn best when we are in a psychologically safe environment, when we are challenged to push our boundaries, and when we are having fun. In those 1,000+ applications we've built, we've explored the limits of AI, and found its real gaps. Each insight allowed us to capture and refine our own processes, manually closing and overcoming those gaps with better instructions, better scripts, and better tests. We see where AI breaks down, and we find innovative ways to use its immense capability while also recognizing its real, and often glaring, shortcomings. Over this period of exploration and play, we've created a recipe book on how to work well."
     },
     {
       "type": "paragraph",
@@ -236,7 +236,7 @@
     {
       "type": "paragraph",
       "author_verbatim": true,
-      "text": "To drive repeatable outcomes, we need to follow a set of patterns and styles that increase the probability that the model will perform the correct series of tasks. For a large language model, it should be no surprise that we codify these rules through words. Effective AI instructions, which are called prompts, explain our intent with an extremely high degree of specificity. When we want the AI to be creative, we provide outcomes-based prompts and let it explore. When we want to be prescriptive, we provide step-by-step rules-based prompts. Through iteration, Alberta has assembled thousands of these prompts into a collection of so-called AI 'skills', instructions which describe the methods and intended outcomes we are achieving. These skills are highly 'opinionated', a technical term meaning that we are leaving little room for imagination for our AI coders. They also try to be as minimalist as possible, avoiding prose to preserve the AI agent's 'context window' attention space. Finding that middle ground is truly an art mastered through practice."
+      "text": "To drive repeatable outcomes, we need to follow a set of patterns and styles that increase the probability that the model will perform the correct series of tasks. For a large language model, it should be no surprise that we codify these rules through words. Effective AI instructions, which are called prompts, explain our intent with a high degree of specificity. When we want the AI to be creative, we provide outcomes-based prompts and let it explore. When we want to be prescriptive, we provide step-by-step rules-based prompts. Through iteration, Alberta has assembled thousands of these prompts into a collection of so-called AI 'skills', instructions which describe the methods and intended outcomes we are achieving. These skills are highly 'opinionated', a technical term meaning that we are leaving little room for imagination for our AI coders. They also try to be as minimalist as possible, avoiding prose to preserve the AI agent's 'context window' attention space. Finding that middle ground is truly an art mastered through practice."
     },
     {
       "type": "paragraph",
@@ -255,7 +255,7 @@
     {
       "type": "paragraph",
       "author_verbatim": true,
-      "text": "Building harnesses is difficult and takes extreme diligence. You need to be extremely diligent because you're not just building an app, you're curating the skills that a human might gain intuitively over 10-20 years."
+      "text": "Building harnesses is difficult and takes extreme diligence. You're curating the skills that a human might gain intuitively over 10-20 years."
     },
     {
       "type": "paragraph",
@@ -364,7 +364,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Alberta runs a program to invest in our public servants called the Alberta AI Academy. This program will be covered in depth in a future paper but suffice to say thousands of our public servants and more than ten thousand public participants have leveraged the AlbertaAIAcademy.com platform to learn the essentials of effective AI use, from prompting through product delivery. Staff participate in 'cohorts', groups ranging from sixty to six hundred who are learning over three levels.\n\n\nThe most recent Level 3 cohort ran over six days where students took a harness-based approach to delivery. Participants came from a range of backgrounds and levels of seniority; three of the department's five Assistant Deputy Ministers sat in the room as students, alongside executive directors, directors, managers, staff, and interns. Few would have called themselves software engineers when the week began. Yet all were willing to be builders, working alongside AI with a harness-driven appraoch."
+      "text": "Alberta runs a program to invest in our public servants called the Alberta AI Academy. This program will be covered in depth in a future paper but suffice to say thousands of our public servants and more than ten thousand public participants have used the AlbertaAIAcademy.com platform to learn the essentials of effective AI use, from prompting through product delivery. Staff participate in 'cohorts', groups ranging from sixty to six hundred who are learning over three levels.\n\n\nThe most recent Level 3 cohort ran over six days where students took a harness-based approach to delivery. Participants came from a range of backgrounds and levels of seniority; three of the department's five Assistant Deputy Ministers sat in the room as students, alongside executive directors, directors, managers, staff, and interns. Few would have called themselves software engineers when the week began. Yet all were willing to be builders, working alongside AI with a harness-driven approach."
     },
     {
       "type": "paragraph",
@@ -438,6 +438,18 @@
       "type": "paragraph",
       "author_verbatim": true,
       "text": "Give yourself time to experiment. These methods are neither obvious nor easy, and providing staff time to learn, create, and refine these methods is a worthwhile investment. "
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "harness",
+        "claude",
+        "templates",
+        "skills"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
   "bespoke_scripts": [],

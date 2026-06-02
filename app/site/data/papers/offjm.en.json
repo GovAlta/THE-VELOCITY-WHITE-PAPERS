@@ -20,7 +20,7 @@
     "agents"
   ],
   "repo": "https://github.com/GovAlta-EMU/git-insights-ministries",
-  "abstract": "Git Insights told us the truth about every repository, one at a time. Knowing was the first step, and we acted on it. But knowing what is wrong is not the same as knowing how to rebuild. Git Insights Ministry is the second lens. It reads a whole ministry of code at once, around 200 repositories, and works out everything those systems actually do. Then it proposes a way to rebuild them: as modern, government-owned modules, each built once, with nothing duplicated. In one Alberta ministry, 185 applications collapsed into 16 reusable modules. This paper shows how the tool works, what it gives a decision-maker, and how the shared architecture of government gets rebuilt.",
+  "abstract": "Git Insights told us the truth about every repository, one at a time. But knowing what is wrong is not the same as knowing how to rebuild. Git Insights Ministry is the second lens. It reads a whole ministry of code at once, around 200 repositories, and works out everything those systems actually do. Then AI proposes a way to rebuild these capabilities as modern, government-owned modules, each built once, with nothing duplicated. In one Alberta ministry, 185 applications can be collapsed into 16 reusable modules. This paper shows how the tool works, what it gives a decision-maker, and how the shared architecture of government gets rebuilt.",
   "hero_image": {
     "src": "public/images/offjm/en/hero.jpg",
     "alt": "A chaotic sprawl of mismatched old buildings being reorganized into a small set of clean, identical modern modules on a shared foundation.",
@@ -163,7 +163,7 @@
     },
     {
       "n": "04",
-      "title": "The synthesis: a government rebuilt"
+      "title": "The synthesis vision: a government rebuilt"
     },
     {
       "n": "05",
@@ -177,7 +177,7 @@
   "blocks": [
     {
       "type": "dropcap_paragraph",
-      "text": "Git Insights offered the first step, by analyzing each repository and each application and giving us actionable intelligence. Not all of insights were welcome. The estate needed remediation, and with those findings in hand we have and continue to fix the most critical issues. But knowing is only the first part. We cannot right the ship of government one plank at a time. Sometimes we need a whole new vessel."
+      "text": "Git Insights offered the first step, by analyzing each repository and each application and giving us actionable intelligence. Not all of the insights were welcome or easy to review. The estate needed remediation, and with those findings in hand we have and continue to fix the most critical issues. But knowing is only the first part. We cannot always right the ship of government one plank at a time. Sometimes we need a whole new vessel."
     },
     {
       "type": "section_heading",
@@ -186,7 +186,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Git Insights Ministry (GIM) was created as a fast follow. Where [Git Insights](#/paper/bbkac) reads one repository at a time and reports its health, GIM reads an entire ministry of code at once and synthesizes the findings into a plan to rebuild it. It looks for the patterns that only appear across a whole portfolio such as the same login component built forty times or the same report written in a dozen ways. From those patterns it proposes a modular, reusable, government-owned compute architecture to replace the sprawl."
+      "text": "Where [Git Insights](#/paper/bbkac) reads one repository at a time and reports its health, its sibling process Git Insights Ministry (GIM) reads an entire ministry of application code at once and synthesizes the findings into a plan. It looks for the patterns that only appear across a whole portfolio such as the same login component built forty times or the same report written in a dozen ways. From those patterns it proposes a modular, reusable, government-owned compute architecture to replace the sprawl."
     },
     {
       "type": "keystat",
@@ -270,11 +270,11 @@
           },
           {
             "title": "Cluster into business capabilities",
-            "desc": "AI groups the findings from all the repositories into the distinct things the ministry actually does for citizens."
+            "desc": "AI groups the findings from all the repositories into the distinct things the ministry actually does for citizens. This business capability map becomes the basis for remediation."
           },
           {
             "title": "Design the target modules",
-            "desc": "AI proposes a small set of modern modules that deliver those capabilities once each, with no gaps or overlaps. A clear spec is built which can be vetted by human subject matter experts."
+            "desc": "AI proposes a small set of modern modules that deliver those capabilities just once, with no gaps or overlaps. A clear spec is built which can be vetted by human subject matter experts."
           },
           {
             "title": "Write a buildable spec per module",
@@ -298,7 +298,7 @@
     {
       "type": "section_heading",
       "n": "04",
-      "title": "The synthesis: a government rebuilt"
+      "title": "The synthesis vision: a government rebuilt"
     },
     {
       "type": "paragraph",
@@ -324,7 +324,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Every new module is built on one modern stack. That matters. It means we are no longer locked into a vendor we cannot leave. Each module is based on open-source technologies and expanded to meet our specific policies. The staff and agents which build these systems retain the knowledge to maintain them. "
+      "text": "Every new module is built on one modern stack. That matters. It means we are no longer locked into a vendor we cannot leave. Our attack surface is minimized. Each module is based on open-source technologies and expanded to meet our specific policies. The staff and agents which build these systems retain the knowledge to maintain them. "
     },
     {
       "type": "section_heading",
@@ -405,7 +405,7 @@
         ],
         [
           "Engineering and coding",
-          "About 90 percent. The bulk of the build."
+          "About 95 percent. The bulk of the build."
         ],
         [
           "Quality assurance",
@@ -421,7 +421,7 @@
         ],
         [
           "Product and validation",
-          "About 30 percent. People decide what is right for the public."
+          "About 30 percent. Deep human engagement with stakeholders."
         ]
       ],
       "caption": "A contingency and a program overhead are added on top, and the figure is recomputed line by line from this rubric rather than taken as a single number the AI produced. A capable 'AI harness' makes the building itself trustworthy.",
@@ -434,7 +434,7 @@
     },
     {
       "type": "paragraph",
-      "text": "All of this is turned into outputs a decision-maker can act on, not a pile of raw analysis. The dashboard presents the whole ministry as a single, evidence-backed picture, and the same source produces a plain-language executive report."
+      "text": "GIM creates outputs a decision-maker can act on, not a pile of raw analysis. The dashboard presents the whole ministry as a single, evidence-backed picture, and the same source produces a plain-language executive report."
     },
     {
       "type": "table",
