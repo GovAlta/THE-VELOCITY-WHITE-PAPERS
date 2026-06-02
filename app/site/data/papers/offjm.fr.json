@@ -1,7 +1,7 @@
 {
   "id": "offjm",
   "num": "04",
-  "sequence": "",
+  "sequence": "4 sur 7",
   "tier": "Technical",
   "title": "Git Insights Ministère",
   "subtitle": "De l'analyse à la synthèse. Architecture de reconstruction à l'échelle d'un ministère, à partir de centaines de systèmes simultanément.",
@@ -11,7 +11,7 @@
   ],
   "published": null,
   "reading_min": null,
-  "status": "Forthcoming",
+  "status": "Published",
   "tags": [],
   "repo": "https://github.com/alberta-velocity/git-insights-ministry",
   "abstract": "Là où le livre 9 était de l'analyse, celui-ci est de la synthèse. Opère à l'échelle d'un ministère, sur des centaines de systèmes à la fois. Cherche les motifs de fonctions d'affaires, d'extrémités, de dépendances, d'interactions et d'interopérabilité, puis propose une architecture de calcul modulaire et réutilisable, propriété du gouvernement.",

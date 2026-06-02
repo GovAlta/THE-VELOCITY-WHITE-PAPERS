@@ -112,7 +112,7 @@
       "footer": {
         "primary": {
           "heading": "The Velocity White Papers",
-          "body": "Sixteen papers and one placeholder. Conceptual papers establish the why. Technical papers are the playbook. Policy & People papers make it real for government and for the workforce. The full site is published via GitHub Pages and is itself open source."
+          "body": "{n} papers across three tiers. Conceptual papers establish the why. Technical papers are the playbook. Policy & People papers make it real for government and for the workforce. The full site is published via GitHub Pages and is itself open source."
         },
         "columns": [
           {
@@ -164,7 +164,7 @@
         {
           "k": "Papers",
           "v": "16",
-          "sub": "+ 1 placeholder"
+          "sub": "across three tiers"
         },
         {
           "k": "Repositories released",
@@ -175,19 +175,21 @@
           "k": "Tiers",
           "v": "3",
           "sub": "Conceptual · Technical · Policy"
-        },
-        {
-          "k": "Estimated debt",
-          "v": "$2B+",
-          "sub": "credible floor"
         }
       ],
       "section_titles": {
+        "about": "About",
         "featured": "Featured",
         "complete_series": "The complete series",
         "featured_meta": "Start here",
         "series_meta_tpl": "{n} entries · 7 public repositories"
-      }
+      },
+      "about_body": [
+        "Alberta is on a journey to become the most AI-enabled public service in North America.",
+        "A major driver behind this vision is to ensure we can maintain and modernize our digital systems to be cyber safe, modern, and secure. These white papers lay out a strategy on how Alberta is doing this at speed, addressing more than forty years of technical debt and pursuing as much as a ninety-five percent reduction in time and cost in application remediation and delivery.",
+        "In these white papers, Alberta walks you through our methodology: how we're using artificial intelligence at speed, how we're enabling our workforce through custom AI agents, and delivering capabilities through the Alberta AI Academy.",
+        "We are sharing these papers so that other governments and organizations can follow in our steps. We, by no means, have this solved. These white papers are a living artifact, and we will continue to post our findings and progress, as well as our successes and setbacks, on this site moving forward. We encourage you to engage with us. Together, we can build a robust digital public service for the AI era."
+      ]
     },
     "fr": {
       "title": "Les livres blancs Velocity",
@@ -286,7 +288,7 @@
       "footer": {
         "primary": {
           "heading": "Les livres blancs Velocity",
-          "body": "Seize livres blancs et un projet en suspens. Les livres conceptuels expliquent le pourquoi. Les livres techniques décrivent la mise en œuvre. Les livres « Politiques et personnes » ancrent l'ensemble pour le gouvernement et son effectif. Le site est publié sur GitHub Pages et il est lui-même libre."
+          "body": "{n} livres blancs répartis sur trois niveaux. Les livres conceptuels expliquent le pourquoi. Les livres techniques décrivent la mise en œuvre. Les livres « Politiques et personnes » ancrent l'ensemble pour le gouvernement et son effectif. Le site est publié sur GitHub Pages et il est lui-même libre."
         },
         "columns": [
           {
@@ -338,7 +340,7 @@
         {
           "k": "Livres blancs",
           "v": "16",
-          "sub": "+ 1 en suspens"
+          "sub": "sur trois niveaux"
         },
         {
           "k": "Dépôts publiés",
@@ -349,19 +351,21 @@
           "k": "Niveaux",
           "v": "3",
           "sub": "Conceptuel · Technique · Politiques"
-        },
-        {
-          "k": "Dette estimée",
-          "v": "2 G$+",
-          "sub": "plancher crédible"
         }
       ],
       "section_titles": {
+        "about": "À propos",
         "featured": "À la une",
         "complete_series": "La collection complète",
         "featured_meta": "Pour commencer",
         "series_meta_tpl": "{n} entrées · 7 dépôts publics"
-      }
+      },
+      "about_body": [
+        "L'Alberta s'est engagée à devenir la fonction publique la plus outillée en intelligence artificielle en Amérique du Nord.",
+        "Un moteur majeur de cette vision est de veiller à pouvoir maintenir et moderniser nos systèmes numériques pour qu'ils soient cybersécuritaires, modernes et sûrs. Ces livres blancs exposent une stratégie sur la façon dont l'Alberta y parvient à grande vitesse, en s'attaquant à plus de quarante ans de dette technique et en visant jusqu'à quatre-vingt-quinze pour cent de réduction du temps et du coût de remédiation et de livraison des applications.",
+        "Dans ces livres blancs, l'Alberta vous présente sa méthodologie : comment nous utilisons l'intelligence artificielle à grande vitesse, comment nous outillons notre effectif au moyen d'agents d'IA sur mesure, et comment nous offrons des capacités grâce à l'Alberta AI Academy.",
+        "Nous partageons ces documents afin que d'autres gouvernements et organisations puissent emboîter le pas. Nous sommes loin d'avoir tout résolu. Ces livres blancs sont un artefact vivant : nous continuerons d'y publier nos constats et nos progrès, ainsi que nos réussites et nos revers. Nous vous invitons à dialoguer avec nous. Ensemble, nous pouvons bâtir une fonction publique numérique solide pour l'ère de l'IA."
+      ]
     }
   },
   "sequence_format": {

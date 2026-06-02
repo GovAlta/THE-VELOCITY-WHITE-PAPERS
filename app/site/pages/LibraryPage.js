@@ -68,28 +68,11 @@
 
         <section class="civic-section">
           <div class="head">
-            <h2>{{ store.t.section_titles.featured }}</h2>
-            <div class="meta">{{ store.t.section_titles.featured_meta }}</div>
+            <h2>{{ store.t.section_titles.about }}</h2>
           </div>
         </section>
-        <div class="civic-featured">
-          <a v-for="p in featured" :key="p.id"
-             :href="'#/paper/' + p.id"
-             class="cell"
-             :aria-label="'Paper ' + p.num + ', ' + paperTitle(p) + ', ' + p.tier"
-             @click.prevent="open(p.id)">
-            <div class="top" aria-hidden="true">
-              <span class="num">№ {{ p.num }}</span>
-              <span>{{ p.tier }}</span>
-            </div>
-            <h3>{{ paperTitle(p) }}</h3>
-            <div class="sub">{{ paperSubtitle(p) }}</div>
-            <div class="meta" aria-hidden="true">
-              <span>{{ p.status }}</span>
-              <span v-if="p.reading_min">{{ p.reading_min }} {{ store.t.ui.min }}</span>
-              <span v-if="p.repo">repo ✓</span>
-            </div>
-          </a>
+        <div class="civic-about">
+          <p v-for="(para, i) in (store.t.about_body || [])" :key="'about-' + i">{{ para }}</p>
         </div>
 
         <section class="civic-section">

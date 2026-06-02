@@ -1,7 +1,7 @@
 {
   "id": "l199t",
   "num": "07",
-  "sequence": "",
+  "sequence": "7 of 7",
   "tier": "Technical",
   "category": "paper",
   "title": "Red, Blue, Green, and Yellow Agents",
@@ -12,7 +12,7 @@
   ],
   "published": null,
   "reading_min": 18,
-  "status": "Draft",
+  "status": "Published",
   "tags": [
     "security",
     "agents",
@@ -54,10 +54,22 @@
         "caption": "Green · quality and hygiene",
         "visual_config": {
           "items": [
-            { "label": "Dependencies", "desc": "Flags libraries with known vulnerabilities." },
-            { "label": "Secrets", "desc": "Catches any password or key committed into the code." },
-            { "label": "Coverage", "desc": "Finds the code the tests never touch." },
-            { "label": "The pipeline", "desc": "Checks the build has the gates it should." }
+            {
+              "label": "Dependencies",
+              "desc": "Flags libraries with known vulnerabilities."
+            },
+            {
+              "label": "Secrets",
+              "desc": "Catches any password or key committed into the code."
+            },
+            {
+              "label": "Coverage",
+              "desc": "Finds the code the tests never touch."
+            },
+            {
+              "label": "The pipeline",
+              "desc": "Checks the build has the gates it should."
+            }
           ]
         },
         "text": "Green is the foundation, and it runs first. It reports the plain facts of the code's health: vulnerable dependencies, secrets left in the source, thin test coverage, gaps in the build pipeline. It is deterministic, so the same code always returns the same findings. It does not guess; it counts. That is what makes it the evidence base every other agent reads."
@@ -83,9 +95,18 @@
         "caption": "Red · the attacker",
         "visual_config": {
           "items": [
-            { "label": "Reconnaissance", "desc": "Maps the domain, ports, encryption, and exposed surface." },
-            { "label": "Attack planning", "desc": "Claude proposes concrete ways in, from the evidence." },
-            { "label": "Authorized only", "desc": "Runs against systems we own and have cleared for testing." }
+            {
+              "label": "Reconnaissance",
+              "desc": "Maps the domain, ports, encryption, and exposed surface."
+            },
+            {
+              "label": "Attack planning",
+              "desc": "Claude proposes concrete ways in, from the evidence."
+            },
+            {
+              "label": "Authorized only",
+              "desc": "Runs against systems we own and have cleared for testing."
+            }
           ]
         },
         "text": "Red is the attacker. It studies a finished application from the outside, the way an adversary would, and maps its exposed surface. Then Claude reasons over what it found and plans how it would break in, proposing concrete attack paths. The reconnaissance is repeatable tooling; the attack plan is judgment. Red finds the hole before someone else does."
@@ -98,10 +119,22 @@
         "caption": "Blue · the defender",
         "visual_config": {
           "items": [
-            { "label": "Threat model", "desc": "Maps the application and the threats to each part." },
-            { "label": "ASVS Level 2", "desc": "Walks every requirement: pass, fail, or not applicable." },
-            { "label": "Kill chains", "desc": "Folds Red's recon into how an attack would unfold." },
-            { "label": "The verdict", "desc": "A ranked, evidence-backed report leadership can act on." }
+            {
+              "label": "Threat model",
+              "desc": "Maps the application and the threats to each part."
+            },
+            {
+              "label": "ASVS Level 2",
+              "desc": "Walks every requirement: pass, fail, or not applicable."
+            },
+            {
+              "label": "Kill chains",
+              "desc": "Folds Red's recon into how an attack would unfold."
+            },
+            {
+              "label": "The verdict",
+              "desc": "A ranked, evidence-backed report leadership can act on."
+            }
           ]
         },
         "text": "Blue is the defender, and it runs last because it reads everything the others found. It builds a threat model, walks every requirement of the international security standard at Level 2 with the evidence behind each call, folds in Red's reconnaissance, and writes the report a decision-maker can act on. Where Green counts and Red probes, Blue judges."

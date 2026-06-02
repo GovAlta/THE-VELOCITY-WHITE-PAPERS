@@ -92,9 +92,21 @@
   max-width: 58ch; color: var(--ink-70); letter-spacing: -0.005em;
 }
 
+/* --- About / mission statement on the home page -------- */
+.civic-about { padding: 4px 56px 40px; }
+.civic-about p {
+  max-width: 72ch; margin: 0 0 16px;
+  font-size: 16.5px; line-height: 1.62; color: var(--ink-70);
+}
+.civic-about p:last-child { margin-bottom: 0; }
+@media (max-width: 760px) {
+  .civic-about { padding: 4px 20px 28px; }
+  .civic-about p { font-size: 15.5px; }
+}
+
 /* --- Stat rail ------------------------------------------ */
 .civic-rail {
-  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
   border-bottom: 1px solid var(--rule);
   min-height: 102px;          /* reserves space; prevents CLS when stats render */
 }

@@ -3,7 +3,7 @@
     {
       "id": "cux4h",
       "num": "01",
-      "sequence": "1 of 2",
+      "sequence": "1 of 7",
       "tier": "Conceptual",
       "title": "The Two-Billion-Dollar Ship of Theseus",
       "subtitle": "Alberta's technical estate has outgrown the human capacity to manage it. AI provides a meaningful path forward to modernization at speed.",
@@ -34,7 +34,7 @@
     {
       "id": "mwo98",
       "num": "02",
-      "sequence": "",
+      "sequence": "2 of 7",
       "tier": "Conceptual",
       "title": "The Cyber Imperative",
       "subtitle": "The walls are aging from within while the tide rises from without. AI-driven modernization is no longer separable from security.",
@@ -45,7 +45,7 @@
       ],
       "published": null,
       "reading_min": 11,
-      "status": "Draft",
+      "status": "Published",
       "tags": [
         "cybersecurity",
         "supply-chain",
@@ -65,7 +65,7 @@
     {
       "id": "bbkac",
       "num": "03",
-      "sequence": "",
+      "sequence": "3 of 7",
       "tier": "Technical",
       "title": "Git Insights",
       "subtitle": "We pointed AI at the whole of Alberta's code estate to get the ground truth. Here is how it works and what it found.",
@@ -75,7 +75,7 @@
       ],
       "published": null,
       "reading_min": 18,
-      "status": "Draft",
+      "status": "Published",
       "tags": [
         "git-insights",
         "code-analysis",
@@ -95,7 +95,7 @@
     {
       "id": "offjm",
       "num": "04",
-      "sequence": "",
+      "sequence": "4 of 7",
       "tier": "Technical",
       "title": "Git Insights Ministry",
       "subtitle": "From knowing the estate to rebuilding it: synthesizing thousands of findings into one modular, government-owned architecture.",
@@ -105,7 +105,7 @@
       ],
       "published": null,
       "reading_min": 19,
-      "status": "Draft",
+      "status": "Published",
       "tags": [
         "git-insights",
         "modernization",
@@ -125,7 +125,7 @@
     {
       "id": "zgym1",
       "num": "05",
-      "sequence": "",
+      "sequence": "5 of 7",
       "tier": "Conceptual",
       "title": "The Four Approaches to AI Modernization",
       "subtitle": "From repairing one system at a time to dissolving the application altogether: the four routes by which a government rebuilds itself at speed.",
@@ -135,7 +135,7 @@
       ],
       "published": null,
       "reading_min": 16,
-      "status": "Draft",
+      "status": "Published",
       "tags": [
         "modernization",
         "architecture",
@@ -156,7 +156,7 @@
     {
       "id": "p7p2k",
       "num": "06",
-      "sequence": "2 of 2",
+      "sequence": "6 of 7",
       "tier": "Technical",
       "title": "The Well-Built Harness",
       "subtitle": "How the public service can build and ship enterprise-grade software at speed, without lowering the bar.",
@@ -191,7 +191,7 @@
     {
       "id": "l199t",
       "num": "07",
-      "sequence": "",
+      "sequence": "7 of 7",
       "tier": "Technical",
       "title": "Red, Blue, Green, and Yellow Agents",
       "subtitle": "Four review agents, bundled into the harness, that check every application for quality, consistency, and security before it ships.",
@@ -201,7 +201,7 @@
       ],
       "published": null,
       "reading_min": 18,
-      "status": "Draft",
+      "status": "Published",
       "tags": [
         "security",
         "agents",
