@@ -165,18 +165,22 @@
     },
     {
       "n": "02",
-      "title": "Introducing the AI 'harness'"
+      "title": "Experimentation and play"
     },
     {
       "n": "03",
-      "title": "Building harnesses"
+      "title": "Introducing the AI 'harness'"
     },
     {
       "n": "04",
-      "title": "Applying the harness at scale"
+      "title": "Building harnesses"
     },
     {
       "n": "05",
+      "title": "Applying the harness at scale"
+    },
+    {
+      "n": "06",
       "title": "Lessons learned"
     }
   ],
@@ -209,21 +213,24 @@
     {
       "type": "paragraph",
       "author_verbatim": true,
-      "text": "The third significant challenge was the over-confidence of the coding agent. AI agents routinely claim completeness in their code, but when probed demonstrate significant gaps. AI agents are unreliable witnesses to the state and performance of their code creations, and as a result, non-technical staff were unable to accurately evaluate application readiness. Trusting the agent's output without independent evaluation resulted in erroneous outputs which failed downstream security audits.  Understanding these limitations, the team began to address these challenges through trial and error, experimentation, and smart play."
-    },
-    {
-      "type": "paragraph",
-      "author_verbatim": true,
-      "text": "Since starting the AI Maximalist program in March 2025 to today in May 2026, the Department has produced far more than 1,000 applications. The vast majority are prototypes, but dozens have made it into production, offering real value. The prototypes themselves follow a pattern of exploration, experimentation, and even play. Without a sense of play, it is impossible for staff to learn the boundaries of these models, and to learn how to work effectively. It may be odd to say 'play' within this context, especially in a government environment, but that is how we humans learn. We learn best when we are in a psychologically safe environment, when we are challenged to push our boundaries, and when we are having fun. In those 1,000+ applications we've built, we've explored the limits of AI, and found its real gaps. Each insight allowed us to capture and refine our own processes, manually closing and overcoming those gaps with better instructions, better scripts, and better tests. We see where AI breaks down, and we find innovative ways to leverage its immense capability while also recognizing its real, and often glaring, shortcomings. Over this period of exploration and play, we've created a recipe book on how to work well."
-    },
-    {
-      "type": "paragraph",
-      "author_verbatim": true,
-      "text": "Significantly, the variability between people was also revealed to be a major factor. Two people can have a very different experience with the same model on the same task. How you introduce an idea, explain context, and set direction can drive extremely different outcomes. And in an environment where repeatability and quality are paramount, these small differences can drive unacceptable divergence between individuals in their use of AI. "
+      "text": "The third significant challenge was the over-confidence of the coding agent. AI agents routinely claim completeness in their code, but when probed demonstrate significant gaps. AI agents are unreliable witnesses to the state and performance of their code creations, and as a result, non-technical staff were unable to accurately evaluate application readiness. Trusting the agent's output without independent evaluation resulted in erroneous outputs which failed downstream security audits.  \n\n\nUnderstanding these limitations, the team began to address these challenges through trial and error, experimentation, and smart play."
     },
     {
       "type": "section_heading",
       "n": "02",
+      "title": "Experimentation and play"
+    },
+    {
+      "type": "paragraph",
+      "text": "Since starting the AI Maximalist program in March 2025 to today in May 2026, the Department has produced far more than 1,000 applications. The vast majority are prototypes, but dozens have made it into production, offering real value. The prototypes themselves follow a pattern of exploration, experimentation, and even play. Without a sense of play, it is impossible for staff to learn the boundaries of these models, and to learn how to work effectively. It may be odd to say 'play' within this context, especially in a government environment, but that is how we humans learn. We learn best when we are in a psychologically safe environment, when we are challenged to push our boundaries, and when we are having fun. In those 1,000+ applications we've built, we've explored the limits of AI, and found its real gaps. Each insight allowed us to capture and refine our own processes, manually closing and overcoming those gaps with better instructions, better scripts, and better tests. We see where AI breaks down, and we find innovative ways to leverage its immense capability while also recognizing its real, and often glaring, shortcomings. Over this period of exploration and play, we've created a recipe book on how to work well."
+    },
+    {
+      "type": "paragraph",
+      "text": "Significantly, the variability between people was also revealed to be a major factor. Two people can have a very different experience with the same model on the same task. How you introduce an idea, explain context, and set direction can drive extremely different outcomes. And in an environment where repeatability and quality are paramount, these small differences can drive unacceptable divergence between individuals in their use of AI. \n\n\nThe genius of the AI needed a set of rules within which to work effectively."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
       "title": "Introducing the AI 'harness'"
     },
     {
@@ -242,7 +249,7 @@
     },
     {
       "type": "section_heading",
-      "n": "03",
+      "n": "04",
       "title": "Building harnesses"
     },
     {
@@ -271,20 +278,80 @@
       "text": "A harness is a small number of parts that work together, and the first is a file named <code>CLAUDE.md</code>. The agent reads it at the start of every session and follows it as the project's rules. It is short and plain: what the project is, who it serves, the standards it holds to, what the agent may change, and what it must never touch. It is the one place the project's settled decisions are written down, so the agent, and any person who joins, starts from the same page."
     },
     {
+      "type": "figure",
+      "fno": "FIG. 6.1",
+      "title": "The rules the agent reads first",
+      "caption": "Every session opens with the CLAUDE.md: the short set of rules that says what the project is and what the agent may and may not do. It is read first, and it is the authority on the project.",
+      "image": {
+        "src": "public/images/p7p2k/en/fig-6-1.jpg",
+        "alt": "A diagram of a single upright card labelled CLAUDE.md posted at the entrance to a small workshop, with the agent’s path beginning at the card before continuing inside.",
+        "image_prompt": "An editorial diagram. A single upright card labelled CLAUDE.md stands at the entrance to a small workshop, like a charter posted beside a doorway, with a few short rule lines sketched on it. A thin arrow shows the path beginning at the card and only then continuing into the workshop beyond, so the card is clearly the first thing reached. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.",
+        "style_kind": "diagram"
+      }
+    },
+    {
       "type": "paragraph",
       "text": "The skills sit in a folder named <code>.claude/skills</code>. Each skill is a small playbook for one kind of work: how to structure requirements, how to write a database migration, how to run a security audit, how to review a stretch of prose. The agent does not load them all at once. At the start it reads only each skill's name and one-line description, enough to know when each one applies, and it pulls the full playbook only when the task in front of it matches. The skills come in when they are needed, the way a tradesperson reaches into a roll for the one tool the job calls for."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.2",
+      "title": "Skills, pulled in only when the work needs them",
+      "caption": "The skills live in a folder, kept closed. The agent reads only each one’s name, then opens the single playbook the task in front of it calls for.",
+      "image": {
+        "src": "public/images/p7p2k/en/fig-6-2.jpg",
+        "alt": "A diagram of a grid of closed labelled skill folders with one folder open and in use, the rest shut.",
+        "image_prompt": "An editorial diagram of a grid of small labelled folders, each a closed skill, with short labels such as REQUIREMENTS, MIGRATION, SECURITY, REVIEW. One folder near the centre is pulled open and a single sheet rises from it, clearly the one in use; every other folder stays shut. A thin arrow from a small marked point selects the open folder. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.",
+        "style_kind": "diagram"
+      }
     },
     {
       "type": "paragraph",
       "text": "The template is the masterpiece the harness is built around, and it is deliberately opinionated about the technology. The stack is fixed and open source: Vue.js with Vite on the front end, Node.js with Express on the back end, Postgres 18 for the data, and single sign-on for identity. It ships as a working pair, a client and a server, with the hard technical problems already solved and running from day one. More than a hundred decisions a public system has to get right, how a user signs in, how input is validated, how secrets are held, how the application logs and defends itself and meets the accessibility standard, are made once, here, before any project begins."
     },
     {
+      "type": "figure",
+      "fno": "FIG. 6.3",
+      "title": "The template: a working client and server, decided in advance",
+      "caption": "The template ships as a connected pair, a Vue client and an Express server over a Postgres database with single sign-on, with the hundred-odd decisions a public system needs already made and set.",
+      "image": {
+        "src": "public/images/p7p2k/en/fig-6-3.jpg",
+        "alt": "A diagram of a pre-assembled application: a client panel and a server panel joined to a database and a lock, with a row of switches already set.",
+        "image_prompt": "An editorial diagram of a pre-assembled application shown as two connected panels, the left labelled CLIENT and the right labelled SERVER, joined by a clean line to a small database cylinder and a padlock for sign-on. Along the base, a neat row of small toggle switches are all already flipped to the same position, suggesting decisions settled in advance. The assembly looks finished and ready. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.",
+        "style_kind": "diagram"
+      }
+    },
+    {
       "type": "paragraph",
       "text": "Skills, standards, templates, and crystal-clear requirements are what drive the outcome. The requirements say what to build. The skills say how, leading the work through each stage in turn, from requirements to planning, architecture, development, testing, and deployment, with each stage refusing to proceed until the one before it is real. The standards say what good looks like. And the template carries all of it already wired together, so wherever the agent looks it reads the same set of preferences. This is also what lets a non-technical Builder succeed: they add the content their service needs on top of a foundation an auditor has already cleared, and the only thing that changes between projects is the part that genuinely should."
     },
     {
+      "type": "figure",
+      "fno": "FIG. 6.4",
+      "title": "Four inputs, one dependable result",
+      "caption": "Requirements, skills, standards, and the template converge on the build. Each says a different thing, what to make, how, what good looks like, and what is already settled, and together they produce a finished application.",
+      "image": {
+        "src": "public/images/p7p2k/en/fig-6-4.jpg",
+        "alt": "A diagram of four labelled streams, requirements, skills, standards, and template, converging into one node that outputs a finished application.",
+        "image_prompt": "An editorial diagram of four labelled streams, REQUIREMENTS, SKILLS, STANDARDS, and TEMPLATE, drawn as four lines entering from the left and converging into a single node at the centre, from which one clean line exits to the right and ends in a small finished application icon. The convergence is orderly and balanced. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.",
+        "style_kind": "diagram"
+      }
+    },
+    {
       "type": "paragraph",
       "text": "Riding alongside the build skills are four review agents, named for colours, that check every application for quality, consistency, and security as it is built. Green covers code and supply-chain hygiene, Yellow the writing, Red adversarial testing from the outside, and Blue the defensive review. They are bundled into the harness, and they are the subject of the next paper, [Red, Blue, Green, and Yellow Agents](#/paper/l199t)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.5",
+      "title": "Four reviewers riding alongside the build",
+      "caption": "As the application is built, four review agents, one each in green, yellow, red, and blue, check it for code quality, writing, attack resistance, and defensive soundness. They are the subject of the next paper.",
+      "image": {
+        "src": "public/images/p7p2k/en/fig-6-5.jpg",
+        "alt": "A diagram of an application moving along a line past four small coloured review markers, green, yellow, red, and blue, each checking it as it passes.",
+        "image_prompt": "An editorial diagram of a small application moving left to right along a line, with four small round review markers spaced along the path, one tinted green, one amber-yellow, one rust-red, and one navy-blue, each inspecting the work as it passes and adding a small check mark. The four are evenly spaced and balanced. Warm cream paper with clear green, amber-yellow, rust-red, and navy-blue accents, hand-drawn and calm. No people, no logos.",
+        "style_kind": "diagram"
+      }
     },
     {
       "type": "paragraph",
@@ -292,7 +359,7 @@
     },
     {
       "type": "section_heading",
-      "n": "04",
+      "n": "05",
       "title": "Applying the harness at scale"
     },
     {
@@ -320,7 +387,7 @@
     },
     {
       "type": "section_heading",
-      "n": "05",
+      "n": "06",
       "title": "Lessons learned"
     },
     {
@@ -330,16 +397,12 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 6.1",
+      "fno": "FIG. 6.6",
       "title": "Lessons from sixteen months of building with AI",
       "caption": "The practices that make a harness work, drawn from more than a thousand applications built across the department.",
       "chart": {
         "kind": "step-flow",
         "steps": [
-          {
-            "title": "AI is best when creating new",
-            "desc": "It is the worst when reworking its own code. It is a myopic and forgetful genius, better at building than modifying. The harness does not so much prevent rework as do it so often, in small steps, that significant drifts in intent are mitigated as you go."
-          },
           {
             "title": "Start with the harness",
             "desc": "After months or years with AI you may outgrow it, but for the beginner the harness drives rigour."
@@ -349,8 +412,8 @@
             "desc": "Have them work with monk-like dedication. You cannot over-value the time spent perfecting the templates, skills, and standards for AI. A perfected template means the same flaws do not materialize time and again."
           },
           {
-            "title": "Ship harnesses early and often",
-            "desc": "Get them in front of the first ten to fifty people to test."
+            "title": "Avoid rework within your development process",
+            "desc": "AI is the worst when reworking its own code. It is a myopic and forgetful genius, better at building than modifying. The harness does not so much prevent rework as do it so often, in small steps, that significant drifts in intent are mitigated as you go."
           },
           {
             "title": "Enable non-technical Builders",

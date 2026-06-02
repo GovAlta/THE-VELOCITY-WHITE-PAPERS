@@ -1,0 +1,17 @@
+{
+  "paper_id": "p7p2k",
+  "locale": "en",
+  "slot": "fig-05",
+  "out_path": "public\\images\\p7p2k\\en\\fig-6-5.jpg",
+  "bytes_jpg": 143801,
+  "bytes_png_source": 2566673,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-02T05:39:38.712Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of a small application moving left to right along a line, with four small round review markers spaced along the path, one tinted green, one amber-yellow, one rust-red, and one navy-blue, each inspecting the work as it passes and adding a small check mark. The four are evenly spaced and balanced. Warm cream paper with clear green, amber-yellow, rust-red, and navy-blue accents, hand-drawn and calm. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of a small application moving left to right along a line, with four small round review markers spaced along the path, one tinted green, one amber-yellow, one rust-red, and one navy-blue, each inspecting the work as it passes and adding a small check mark. The four are evenly spaced and balanced. Warm cream paper with clear green, amber-yellow, rust-red, and navy-blue accents, hand-drawn and calm. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "p7p2k",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\p7p2k\\en\\fig-6-1.jpg",
+  "bytes_jpg": 217587,
+  "bytes_png_source": 2673356,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-02T05:35:56.364Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram. A single upright card labelled CLAUDE.md stands at the entrance to a small workshop, like a charter posted beside a doorway, with a few short rule lines sketched on it. A thin arrow shows the path beginning at the card and only then continuing into the workshop beyond, so the card is clearly the first thing reached. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram. A single upright card labelled CLAUDE.md stands at the entrance to a small workshop, like a charter posted beside a doorway, with a few short rule lines sketched on it. A thin arrow shows the path beginning at the card and only then continuing into the workshop beyond, so the card is clearly the first thing reached. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}
