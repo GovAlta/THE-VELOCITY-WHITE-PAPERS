@@ -25,7 +25,7 @@
     "open-source"
   ],
   "repo": "https://github.com/alberta-velocity/velocity-harness",
-  "abstract": "Coding tools like Cursor, Lovable, and Claude Code produce applications which often lack the controls a public service requires. AI agents are often unreliable witnesses of their own performance. Clear instructions, tests, and templates help to overcome these challenges. Alberta has developed and released a collection of files called a 'harness' which clearly define your expectations for the AI, driving enterprise quality outputs at the speed of the 'vibe coded' application.",
+  "abstract": "Coding tools like Cursor, Lovable, and Claude Code produce applications which often lack the controls a public service requires. AI agents are often unreliable witnesses of their own performance. Clear instructions, tests, and templates help to overcome these challenges. Alberta has developed and released a collection of files called a 'harness' which clearly defines your expectations for the AI, driving enterprise quality outputs at the speed of the 'vibe coded' application.",
   "hero_image": {
     "src": "public/images/p7p2k/en/hero.jpg",
     "alt": "Editorial cover diagram for The Well-Built Harness: a fine leather work harness laid out on warm cream paper, drawn in deep Alberta navy line work with small rust accents along the leads.",
@@ -96,7 +96,7 @@
           "image_prompt": "An editorial diagram of a tall column of labelled drawers, each drawer a thin rectangle stacked vertically. The drawers carry labels: BUILD, REVIEW, CYBER, A11Y, RELEASE, TRANSLATE, DOCUMENT. One drawer in the middle is pulled half open and a small stack of pages rises out of it. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.",
           "style_kind": "diagram"
         },
-        "text": "Around the contract, the harness stacks playbooks. Each playbook is a small folder for one kind of work. How to write a database migration. How to review a stretch of prose. How to do a security audit. The agent does not load all of them at once. It pulls the playbook it needs at the moment of need, the way a tradesperson reaches into a tool roll for the wrench that matches today's job."
+        "text": "Around the rules file, the harness stacks playbooks. Each playbook is a small folder for one kind of work. How to write a database migration. How to review a stretch of prose. How to do a security audit. The agent does not load all of them at once. It pulls the playbook it needs at the moment of need, the way a tradesperson reaches into a tool roll for the wrench that matches today's job."
       },
       {
         "id": "05",
@@ -124,7 +124,7 @@
           "image_prompt": "An editorial diagram of an application drawn as a vertical layered stack of boxes labelled UI, API, DATA. A thin ribbon labelled CYBER weaves through the stack from top to bottom, threading through each layer rather than sitting beside it. The ribbon is drawn in rust on the navy stack. Hand-drawn lines, calm and architectural, on warm cream paper. No people, no logos.",
           "style_kind": "diagram"
         },
-        "text": "Security in the harness is part of the structure, the way a building's load-bearing walls and fire-safety details are part of the original drawings. The contract names the standards. The playbooks know how to apply them. The inspections check that the application has happened. By the time the agent reports finished, the security work is finished too."
+        "text": "Security in the harness is part of the structure, the way a building's load-bearing walls and fire-safety details are part of the original drawings. The rules file names the standards. The playbooks know how to apply them. The inspections check that the application has happened. By the time the agent reports finished, the security work is finished too."
       },
       {
         "id": "07",
@@ -184,7 +184,7 @@
     {
       "type": "dropcap_paragraph",
       "author_verbatim": true,
-      "text": "Large language models (LLM) have become highly proficient at developing application code. Early in our AI Maximalist program in 2025, Technology and Innovation staff began to evaluate these tools to see how they could be deployed within our government environment. A range of agentic coding tools were explored, such as Cursor, Lovable, Gemini CLI, and Claude Code. These tools made application development faster for skilled developers and easy for even non-technical staff. The time to transform an idea into a functional prototype dropped from roughly 6 weeks (as benchmarked by management in that unit) to as little as 30 minutes. The speed increases have changed how teams work. Now, subject matter experts can participate in co-design as these ideas were worked out, providing real-time feedback and sign-off. This factor alone has resulted in a significant increase in the speed of delivery, reducing or eliminating the time-consuming sharing of emails, screenshots, and designs for manual review. Often, such work can now be completed in as little as single session.\n\nThis experimentation also identified some large gaps when these agents were tasked to produce highly secure, repeatable, and compliant applications. Several challenges needed to be addressed before these tools were usable in day-to-day government delivery.\n"
+      "text": "Large language models (LLM) have become highly proficient at developing application code. Early in our AI Maximalist program in 2025, Technology and Innovation staff began to evaluate these tools to see how they could be deployed within our government environment. A range of agentic coding tools were explored, such as Cursor, Lovable, Gemini CLI, and Claude Code. These tools made application development faster for skilled developers and easy for even non-technical staff. The time to transform an idea into a functional prototype dropped from roughly 6 weeks (as benchmarked by management in that unit) to as little as 30 minutes. The speed increases have changed how teams work. Now, subject matter experts can participate in co-design as these ideas are worked out, providing real-time feedback and sign-off. This factor alone has resulted in a significant increase in the speed of delivery, reducing or eliminating the time-consuming sharing of emails, screenshots, and designs for manual review. Often, such work can now be completed in as little as a single session.\n\nThis experimentation also identified some large gaps when these agents were tasked to produce highly secure, repeatable, and compliant applications. Several challenges needed to be addressed before these tools were usable in day-to-day government delivery.\n"
     },
     {
       "type": "section_heading",
@@ -199,12 +199,12 @@
     {
       "type": "paragraph",
       "author_verbatim": true,
-      "text": "First, it was difficult to recreate the same application twice. Given is probabilistic nature, each interaction with AI resulted in it generating applications with a different look and feel, layout, and functionality. The inability to replicate the same application twice offers a significant barrier to deploying AI in a government environment. Further, it eroded trust from Ministry partners and delayed rework and the sharing of tasks between teams of people whose AIs would make different design or technical designs."
+      "text": "First, it was difficult to recreate the same application twice. Given its probabilistic nature, each interaction with AI resulted in it generating applications with a different look and feel, layout, and functionality. The inability to replicate the same application twice offers a significant barrier to deploying AI in a government environment. Further, it eroded trust from Ministry partners and delayed rework and the sharing of tasks between teams of people whose AIs would make different design or technical decisions."
     },
     {
       "type": "paragraph",
       "author_verbatim": true,
-      "text": "Second, these tools prioritize user experience while frequently failing to implement the necessary security protocols. While prototypes can be achieved quickly, it can often take significant time and effort to fix the gaps in the security model (even with AI assistance). And like at the user interfaces, the fixes applied to the security, accessibility, and mobile code was often are also inconsistent and difficult to replicate between any two applications. Months of time saved on the frontend can easily be lost on the backend implementing the necessary security controls to protect the cyber posture of these applications."
+      "text": "Second, these tools prioritize user experience while frequently failing to implement the necessary security protocols. While prototypes can be achieved quickly, it can often take significant time and effort to fix the gaps in the security model (even with AI assistance). And like at the user interfaces, the fixes applied to the security, accessibility, and mobile code were often also inconsistent and difficult to replicate between any two applications. Months of time saved on the frontend can easily be lost on the backend implementing the necessary security controls to protect the cyber posture of these applications."
     },
     {
       "type": "paragraph",
@@ -297,7 +297,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The clearest evidence in the effectiveness of the harness comes from our Alberta AI Academy. The Level 3 cohort that ran over six days in early summer drew a hundred students, as often from the policy and program side of the public service as from engineering. Three of the department's five Assistant Deputy Ministers sat in the room as students, alongside executive directors, directors, managers, staff, and interns. Few would have called themselves software engineers when the week began. They were Builders: domain experts paired with coding agents, working inside the harness."
+      "text": "The clearest evidence of the effectiveness of the harness comes from our Alberta AI Academy. The Level 3 cohort that ran over six days in early summer drew a hundred students, as often from the policy and program side of the public service as from engineering. Three of the department's five Assistant Deputy Ministers sat in the room as students, alongside executive directors, directors, managers, staff, and interns. Few would have called themselves software engineers when the week began. They were Builders: domain experts paired with coding agents, working inside the harness."
     },
     {
       "type": "paragraph",
@@ -329,9 +329,51 @@
       "text": "Reflecting on the last 16 months of learning, some key insights bear repeating:"
     },
     {
-      "type": "paragraph",
-      "author_verbatim": true,
-      "text": "<ul><li><strong>AI is best when creating new.</strong> It is the worst when it is reworking its own code. It is a myopic and forgetful genius, and it is better at building than modifying. The harness does not so much prevent rework as do it so frequently, in small steps, that significant drifts in intent are reasonably mitigated as you go.</li><li><strong>Start with the harness.</strong> After months or years with AI, you may outgrow them, but for the beginner, the harness drives rigour.</li><li><strong>Have your very best software developers focus with 'monk-like' dedication on building templates.</strong> You cannot over-index or over-value the time you spend perfecting a set of templates, skills, and standards for AI. Perfecting the template means the flaws do not materialize time and again.</li><li><strong>Ship these harnesses early and often,</strong> and get them in front of the first 10-50 people to test.</li><li><strong>Enable non-technical 'builders'</strong> to leverage AI to build applications that meet the same standards as those built by technical staff.</li><li><strong>Always integrate cyber security quality controls</strong> to ensure that no standard is ever lowered in the application of AI.</li><li><strong>Enshrine all standards into AI-readable formats</strong> so that AI is capable of meeting our requirements without guessing or making incorrect assumptions.</li><li><strong>Provide templates (pre-created code samples) that solve all standard security protocols.</strong> These templates, called in the Academy 'Hello World' templates, meet 100% of all cyber, accessibility, branding, functionality, and mobility requirements 'out of the box'. This allows AI to 'fill in the gaps'. These templates are non-trivial; they take months to build and refine, and we use an iterative process to build, test, refine, and review to maximize performance.</li><li><strong>Educate staff</strong> to effectively use these tools and templates to drive consistency.</li></ul>"
+      "type": "figure",
+      "fno": "FIG. 6.1",
+      "title": "Lessons from sixteen months of building with AI",
+      "caption": "The practices that make a harness work, drawn from more than a thousand applications built across the department.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "AI is best when creating new",
+            "desc": "It is the worst when reworking its own code. It is a myopic and forgetful genius, better at building than modifying. The harness does not so much prevent rework as do it so often, in small steps, that significant drifts in intent are mitigated as you go."
+          },
+          {
+            "title": "Start with the harness",
+            "desc": "After months or years with AI you may outgrow it, but for the beginner the harness drives rigour."
+          },
+          {
+            "title": "Put your best developers on the templates",
+            "desc": "Have them work with monk-like dedication. You cannot over-value the time spent perfecting the templates, skills, and standards for AI. A perfected template means the same flaws do not materialize time and again."
+          },
+          {
+            "title": "Ship harnesses early and often",
+            "desc": "Get them in front of the first ten to fifty people to test."
+          },
+          {
+            "title": "Enable non-technical Builders",
+            "desc": "Let domain experts use AI to build applications that meet the same standards as those built by technical staff."
+          },
+          {
+            "title": "Always integrate cyber security controls",
+            "desc": "So that no standard is ever lowered in the application of AI."
+          },
+          {
+            "title": "Enshrine all standards in AI-readable formats",
+            "desc": "So the AI can meet our requirements without guessing or making incorrect assumptions."
+          },
+          {
+            "title": "Provide templates that solve security out of the box",
+            "desc": "The Academy's 'Hello World' templates meet one hundred percent of the cyber, accessibility, branding, functionality, and mobility requirements out of the box, so the AI fills in the gaps. They are non-trivial: months of building, testing, refining, and review."
+          },
+          {
+            "title": "Educate staff",
+            "desc": "Train people to use these tools and templates well, so the whole team works to one consistent standard."
+          }
+        ]
+      }
     },
     {
       "type": "paragraph",
@@ -339,10 +381,7 @@
       "text": "These methods are neither obvious nor easy, and providing staff time to learn, create, and refine these methods through the Alberta AI Academy is a critical part of the strategy. The Academy provides the training ground to effectively use these methods and to leverage our Nexus sandbox (see the article on Nexus)."
     }
   ],
-  "bespoke_scripts": [
-    "components/visuals/bespoke/wp-08/PeriodicTable.js",
-    "components/visuals/bespoke/wp-08/AgentQuartet.js"
-  ],
+  "bespoke_scripts": [],
   "_meta": {
     "placeholder": false,
     "written_by": "human-authored",
