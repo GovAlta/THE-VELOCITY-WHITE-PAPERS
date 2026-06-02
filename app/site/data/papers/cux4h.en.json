@@ -162,7 +162,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Presently, Alberta has several hundred million dollars in Application Master Services Agreements with vendors which exist to keep these systems modern. However, these contracts are failing to deliver the outcomes we need. Application health is getting worse faster than it can be patched, and the latest AI models are uncovering cyber vulnerabilities faster than ever. In the last 12 months, the number of publicly known vulnerabilities in the underlying technologies that Alberta uses rose by 78.2%. Our own deep assessment of the estate uncovered a further ~33% increase above that baseline, so documented cyber concerns have more than doubled. Our speed at remediating them has not."
+      "text": "Presently, our government has several hundred million dollars in Application Master Services Agreements with vendors which exist to keep these systems modern. However, these contracts are failing to deliver the outcomes we need. Application health is getting worse faster than it can be patched, and the latest AI models are uncovering cyber vulnerabilities faster than ever. In the last 12 months, the number of publicly known vulnerabilities in the underlying technologies that Alberta uses rose by 78.2%. Our own deep assessment of the estate uncovered a further ~33% increase above that baseline, so documented cyber concerns have more than doubled. Our speed at remediating them has not."
     },
     {
       "type": "section_heading",
@@ -206,7 +206,7 @@
     },
     {
       "type": "paragraph",
-      "text": "In pursuing these changes, Alberta was implementing a 'Ship of Theseus' approach. The philosopher Plutarch used this famous ship of Theseus as a thought experiment, imagining over a similar timespan replacing every plank, deck board, mast, sail, and piece of rigging, and asked the question as to whether after this replacement the famous ship would still exist. Alberta was attempting to replace government in a similar fashion, substituting small pieces, patches here and there, occasional replacements, expecting over time for the vessel of government to stay watertight. "
+      "text": "In pursuing these changes, TI was implementing a 'Ship of Theseus' approach. The philosopher Plutarch used this famous ship of Theseus as a thought experiment, imagining over a similar timespan replacing every plank, deck board, mast, sail, and piece of rigging, and asked the question as to whether after this replacement the famous ship would still exist. Alberta was attempting to replace government digital systems in a similar fashion, substituting small pieces, patches here and there, occasional replacements, expecting over time for the vessel of government to stay watertight. "
     },
     {
       "type": "paragraph",
@@ -265,11 +265,11 @@
     },
     {
       "type": "paragraph",
-      "text": "Yet AI is still far from perfect. Despite their obvious exhibitions (or simulations) of intelligence, these AI workers are also prone to distraction, to flights of fancy, to misunderstanding, and they inherently lack any long-term memory. Figuratively, they are genius amnesiacs, capable of answering tough problems only to instantly forget their task, all previous engagements, and you between every interaction. This may be an artifact of the current generation of these models, but it is a big deal presently. Without memory, the continuous chain of thought, planning, and evaluation is easily broken, and progress stalls. At their best, they excel beyond human performance in the technical domain. At their worst, they are unreliable witnesses, and can make grievous mistakes or errors in judgement due to incomplete information. The companies that build them such as OpenAI and Anthropic, have made them sycophantic and fawning in their praise of even bad ideas, with an overeagerness to please which is at best counterproductive."
+      "text": "Yet AI is still far from perfect. Despite their obvious exhibitions (or simulations) of intelligence, these AI workers are also prone to distraction, to flights of fancy, to misunderstanding, and they inherently lack any long-term memory. Figuratively, they are genius amnesiacs, capable of answering tough problems only to instantly forget their task, all previous engagements, and you between every interaction. This may be an artifact of the current generation of these models, but it is a big deal presently. Without memory, the continuous chain of thought, planning, and evaluation is easily broken, and progress stalls. At their best, they excel beyond human performance in the technical domain. At their worst, they are unreliable witnesses and can make grievous mistakes or errors in judgement due to incomplete information. The companies that build them have also made them frequently sycophantic and fawning in their praise of even bad ideas, with an overeagerness to please which is at best counterproductive."
     },
     {
       "type": "paragraph",
-      "text": "On their own, AI agents also lack agency. Their abilities lie only in the words and the media they create. And it is up to us to build the tools to translate those words into action. And despite their general knowledge, which is both impressive and challenging with its unknown breadth and depth, these agents know nothing about the internal methods of a government. They need instruction, process, clarity, and guidance, just like any newcomer to an organization would require to be successful."
+      "text": "On their own, AI agents also lack agency. Their abilities lie only in the words and the media they create. And it is up to us to build the tools to translate those words into action. And despite their general knowledge, which is both impressive and challenging with its unknown breadth and depth, these agents know little about the internal methods of government and nothing of our specific policies and processes. They need instruction, process, clarity, and guidance, just like any newcomer to an organization would require to be successful."
     },
     {
       "type": "paragraph",
@@ -314,7 +314,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The Velocity White Papers are intended to serve as a blueprint for other governments to emulate what Alberta is doing. Alberta is still actively doing this work, but we cannot afford to wait. Unchecked, technical debt will drive us into a 'cyber winter', where the threat actors will access for pennies what it will cost us to remediate with thousands. As you will see in the next paper, the cyber issues here are real and solving them is an imperative that all governments must face sooner or later. Linked with increased demand, declining budgets, and the shifting technological landscape, we have an imperative to modernize. We believe that this must happen very soon, and AI is the only path to making it happen. By following these methods herein, we believe that we can reduce both the time and cost of digital transformation."
+      "text": "The Velocity White Papers are intended to serve as a blueprint for other governments to emulate what Alberta is doing. We are still actively doing this work, but we cannot afford to wait in sharing and collaborating. Unchecked, technical debt will drive us into a 'cyber winter', where the threat actors will access for pennies what it will cost us to remediate for thousands. As you will see in the next paper, the cyber issues here are real and solving them is an imperative that all governments must face sooner or later. Linked with increased demand, declining budgets, and the shifting technological landscape, we have an imperative to modernize. We believe that this must happen very soon, and AI is the only path to making it happen. By following these methods herein, we believe that we can reduce both the time and cost of digital transformation."
     },
     {
       "type": "keystat",
