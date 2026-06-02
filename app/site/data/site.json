@@ -106,10 +106,8 @@
         "col_read": "Read"
       },
       "hero": {
-        "h1_pre": "Forty years of",
-        "h1_em_1": "technical debt.",
-        "h1_mid": "Four years to",
-        "h1_em_2": "modernize."
+        "title": "The Velocity White Papers",
+        "subtitle": "How Alberta is leveraging artificial intelligence to transform its technical estate."
       },
       "footer": {
         "primary": {
@@ -185,9 +183,9 @@
         }
       ],
       "section_titles": {
-        "featured": "Featured this volume",
+        "featured": "Featured",
         "complete_series": "The complete series",
-        "featured_meta": "Vol. I · Conceptual foundation",
+        "featured_meta": "Start here",
         "series_meta_tpl": "{n} entries · 7 public repositories"
       }
     },
@@ -282,10 +280,8 @@
         "col_read": "Lecture"
       },
       "hero": {
-        "h1_pre": "Quarante années de",
-        "h1_em_1": "dette technique.",
-        "h1_mid": "Quatre ans pour",
-        "h1_em_2": "moderniser."
+        "title": "Les livres blancs Velocity",
+        "subtitle": "Comment l'Alberta utilise l'intelligence artificielle pour transformer son parc technologique."
       },
       "footer": {
         "primary": {
@@ -361,9 +357,9 @@
         }
       ],
       "section_titles": {
-        "featured": "À la une de ce volume",
+        "featured": "À la une",
         "complete_series": "La collection complète",
-        "featured_meta": "Vol. I · Fondation conceptuelle",
+        "featured_meta": "Pour commencer",
         "series_meta_tpl": "{n} entrées · 7 dépôts publics"
       }
     }

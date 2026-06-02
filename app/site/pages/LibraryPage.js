@@ -11,9 +11,14 @@
         return (this.store.papers || []).filter(p => p.category !== 'architecture');
       },
       published() { return this.papers.filter(p => p.status === 'Published'); },
-      /* Featured is dynamic: the Published stories. Falls back to the first two
-         papers only when nothing is published yet, so the hero is never empty. */
-      featured() { return this.published.length ? this.published : this.papers.slice(0, 2); },
+      /* Featured is the "start here" on-ramp: the first three papers in reading
+         order, regardless of publish status, so the row is always meaningful and
+         stable rather than tracking whichever papers happen to be Published. */
+      featured() {
+        return this.papers.slice()
+          .sort((a, b) => String(a.num || '').localeCompare(String(b.num || ''), undefined, { numeric: true }))
+          .slice(0, 3);
+      },
       /* The public home shows the live + forthcoming collection. Drafts and
          placeholders are work-in-progress and live only in the full Index
          catalog (#/index), so the home and the index stay consistent. */
@@ -54,11 +59,8 @@
             <span>·</span>
             <span>Open source · MIT</span>
           </div>
-          <h1>
-            {{ store.t.hero.h1_pre }} <em>{{ store.t.hero.h1_em_1 }}</em>
-            {{ store.t.hero.h1_mid }} <em>{{ store.t.hero.h1_em_2 }}</em>
-          </h1>
-          <p class="lede">{{ store.t.tagline }}</p>
+          <h1>{{ store.t.hero.title }}</h1>
+          <p class="lede">{{ store.t.hero.subtitle }}</p>
         </section>
 
         <stat-rail :stats="stats" />
