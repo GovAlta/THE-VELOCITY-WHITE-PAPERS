@@ -187,7 +187,6 @@ function buildStaticRouteHTML(routeSegment, locale) {
   const upPrefix = '../'.repeat(depth);
   const labels = {
     index: { title: locale === 'fr' ? 'Index' : 'Index' },
-    architecture: { title: 'Architecture' },
     about: { title: locale === 'fr' ? 'À propos' : 'About' },
     glossary: { title: locale === 'fr' ? 'Glossaire' : 'Glossary' },
     repos: { title: locale === 'fr' ? 'Dépôts' : 'Repositories' },
@@ -260,7 +259,7 @@ for (const p of inventory) {
   }
 }
 
-const STATIC = ['index', 'architecture', 'about', 'glossary', 'repos', 'updates', 'community'];
+const STATIC = ['index', 'about', 'glossary', 'repos', 'updates', 'community'];
 for (const r of STATIC) {
   for (const locale of ['en', 'fr']) {
     const dir = locale === 'fr'

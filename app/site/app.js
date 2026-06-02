@@ -127,7 +127,6 @@
     const parts = h.split('/').filter(Boolean);
     if (parts.length === 0) return { page: 'library', paperId: null };
     if (parts[0] === 'index')        return { page: 'index',        paperId: null };
-    if (parts[0] === 'architecture') return { page: 'architecture', paperId: null };
     if (parts[0] === 'about')        return { page: 'about',        paperId: null };
     if (parts[0] === 'manual')       return { page: 'manual',       paperId: null };
     if (parts[0] === 'glossary')     return { page: 'glossary',     paperId: null };
@@ -148,7 +147,6 @@
         switch (route.value.page) {
           case 'library':       return 'library-page';
           case 'index':         return 'index-page';
-          case 'architecture':  return 'architecture-page';
           case 'about':         return 'about-page';
           case 'manual':        return 'manual-page';
           case 'glossary':      return 'glossary-page';
@@ -178,7 +176,6 @@
           const pageTitles = {
             library:      null,
             index:        'Index',
-            architecture: 'Architecture',
             about:        'About',
             manual:       'Manual',
             glossary:     'Glossary',
