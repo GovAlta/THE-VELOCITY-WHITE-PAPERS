@@ -287,7 +287,7 @@
     },
     {
       "type": "paragraph",
-      "text": "A fair question is how far a government can trust what an AI reports. Three things keep it honest. First, the boring, countable work, listing files and finding the known-bad patterns, is done by ordinary code, which cannot invent a result. Second, the AI is never taken at its word: when it reports a problem it must name the exact file and line, say how serious it is and why, and say how to fix it, so a developer can open the file and confirm the claim. Third, it grades every repository against the same fixed checklist, covering security, code quality, architecture, documentation, tests, maintainability, and the health of the libraries it depends on, so a score means the same thing on the thousandth repository as it did on the first. The output is a finding you can check, not an opinion you have to take on faith."
+      "text": "A fair question is how far a government can trust what an AI reports. Three things keep it honest. First, the boring, countable work, listing files and finding the known-bad patterns, is done by ordinary code, which cannot invent a result. Second, the AI is never taken at its word: when it reports a problem it must name the exact file and line, say how serious it is and why, and say how to fix it, so a developer can open the file and confirm the claim. Third, it grades every repository against the same fixed checklist, covering security, code quality, architecture, documentation, tests, maintainability, and the health of the libraries it depends on, so a score means the same thing on the thousandth repository as it did on the first. Every finding the AI reports can be opened and checked against the real code."
     },
     {
       "type": "figure",
@@ -307,7 +307,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The record it builds for each repository is far deeper than any inventory we had before. It is a full dossier, not a pass or a fail."
+      "text": "The record it builds for each repository is a full dossier, far deeper than any inventory we had before."
     },
     {
       "type": "table",
@@ -454,12 +454,12 @@
           "94.4%"
         ]
       ],
-      "caption": "Nearly three quarters of the estate had no automated build and deployment pipeline, and almost none was containerized. These are not edge cases; they are the baseline.",
+      "caption": "Nearly three quarters of the estate had no automated build and deployment pipeline, and almost none was containerized. Across the estate, these gaps are the norm.",
       "source": "Git Insights deep scan."
     },
     {
       "type": "paragraph",
-      "text": "In aggregate, this analysis was scored to give each repository a health score, rounding to a total score of 10. The composite score across the whole set was not great. "
+      "text": "Every repository was scored out of ten on its overall health. Across the whole estate, the average came out low."
     },
     {
       "type": "keystat",
@@ -505,7 +505,7 @@
     },
     {
       "type": "paragraph",
-      "text": "These gaps are not caused malicious actors. They are ordinary, hard-working people working at varying skill levels, and the point of measuring them is that the same patterns which degrade our security controls and best practices are exactly the patterns an AI agent, properly directed, can be set to catch and fix at scale."
+      "text": "These gaps are not the work of bad actors. They come from ordinary, hard-working people at varying skill levels, and the point of measuring them is that the same patterns that degrade our security controls and best practices are exactly the patterns an AI agent, properly directed, can catch and fix at scale."
     },
     {
       "type": "paragraph",
@@ -550,7 +550,7 @@
     },
     {
       "type": "paragraph",
-      "text": "There is a great deal of criticism aimed at AI for the mistakes it makes, its hallucinations, and there is a strong human recency bias in how those failures get reported: the one wrong answer is remembered, the thousand right ones are not. Viewed in aggregate, and with the proper harnesses described in [the harness paper](#/paper/p7p2k), AI makes significantly fewer mistakes than the criticism assumes."
+      "text": "There is a great deal of criticism aimed at AI for the mistakes it makes, its hallucinations, and there is a strong human recency bias in how those failures get reported: the one wrong answer is remembered, the thousand right ones are not. Viewed in aggregate, and with the proper harnesses described in [the harness paper](#/paper/p7p2k), AI makes far fewer mistakes than the criticism assumes."
     },
     {
       "type": "paragraph",
@@ -594,7 +594,7 @@
     },
     {
       "type": "paragraph",
-      "text": "With a baseline this complete, we can now say with certainty how AI compares to humans on our own code, measured rather than assumed. Skill levels vary widely, and the mistakes humans make are significant and constant. AI, properly harnessed, makes far fewer of them, and it can be deployed at scale to fix the problems it finds rather than only to count them. We will unpack that comparison in full in a later paper. With this ground truth in hand, the case to invest heavily in the tools, the training, and the harnesses was no longer a matter of faith."
+      "text": "With a baseline this complete, we can now say with certainty how AI compares to humans on our own code, measured rather than assumed. Skill levels vary widely, and the mistakes humans make are frequent and constant. AI, properly harnessed, makes far fewer of them, and it can be deployed at scale to fix the problems it finds rather than only to count them. We will unpack that comparison in full in a later paper. With this ground truth in hand, the case to invest heavily in the tools, the training, and the harnesses was no longer a matter of faith."
     },
     {
       "type": "paragraph",
