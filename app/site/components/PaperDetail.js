@@ -71,6 +71,13 @@
         get() { return (this.paper.tags || []).join(', '); },
         set(v) { this.paper.tags = v.split(',').map((s) => s.trim()).filter(Boolean); this.touch(); },
       },
+      /* Authors edit as a single field, split on a middot or a comma, and join
+         with the same middot the byline shows, so what you type matches what
+         you see. */
+      authorsCsv: {
+        get() { return (this.paper.authors || []).join(' · '); },
+        set(v) { this.paper.authors = v.split(/\s*[·,]\s*/).map((s) => s.trim()).filter(Boolean); this.touch(); },
+      },
       /* The table of contents is derived from the section_heading blocks, which
          are the single source of truth. Editing a heading's title in the body
          updates the side menu immediately, and the two can never fall out of
@@ -213,6 +220,8 @@
                 <label>Category<select v-model="paper.category" @change="touch()"><option>paper</option><option>architecture</option></select></label>
                 <label>Repo<input v-model="paper.repo" @input="touch()" placeholder="https://github.com/…" /></label>
               </div>
+              <label class="vw-meta-tags">Authors (separate with · or comma)<input v-model="authorsCsv" /></label>
+              <label class="vw-meta-tags">Track<input v-model="paper.track" @input="touch()" placeholder="Defining the Problem / Engineering the Solution" /></label>
               <label class="vw-meta-tags">Tags (comma-separated)<input v-model="tagsCsv" /></label>
               <div class="vw-muted">Editing the paper metadata. Saving updates this paper and syncs the index (papers.json).</div>
             </div>

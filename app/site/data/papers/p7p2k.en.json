@@ -8,8 +8,8 @@
   "track": "Engineering the Solution",
   "authors": [
     "Janak Alford",
-    "Platform Engineering",
-    "Ministry of Technology and Innovation"
+    "Deputy Minister",
+    "Technology and Innovation"
   ],
   "published": "2026-07-15",
   "reading_min": 30,
@@ -355,7 +355,7 @@
     },
     {
       "type": "paragraph",
-      "text": "All of this runs on Claude. The long-horizon reasoning on a project, the planning, the architecture, the threat modelling, uses Claude Opus, which can hold a whole delivery loop in a single context. The many smaller jobs that run in parallel, the deterministic scans and the reviews, run on Claude Sonnet through the Claude Agent SDK, the toolkit for driving a model through many steps with a fixed set of tools. The harness pins which model does which job, so a result is repeatable and its cost is known before it starts."
+      "text": "All of this runs on Claude. The long-horizon reasoning on a project, the planning, the architecture, the threat modelling, uses Claude Opus, which can hold a whole delivery loop in a single context. The many smaller jobs that run in parallel, the deterministic scans and the reviews, run on Claude Sonnet through the Claude Agent SDK, the toolkit for driving a model through many steps with a fixed set of tools. \n\n\nHowever, the skills and standards are model agnostic and can be run with any leading frontier or open-source AI model. The intellectual property of the harness is what differentiates the outcome more than the specific model. Any individual, team, or organization can codify and share these skills, uplifting the common capacity of all team members. Suddenly everyone has the best coding skills, requirement gathering skills, project planning skills, and security skills. These are like tools in your agentic toolbelt. You still need to learn how to use them."
     },
     {
       "type": "section_heading",
@@ -364,25 +364,25 @@
     },
     {
       "type": "paragraph",
-      "text": "The clearest evidence of the effectiveness of the harness comes from our Alberta AI Academy. The Level 3 cohort that ran over six days in early summer drew a hundred students, as often from the policy and program side of the public service as from engineering. Three of the department's five Assistant Deputy Ministers sat in the room as students, alongside executive directors, directors, managers, staff, and interns. Few would have called themselves software engineers when the week began. They were Builders: domain experts paired with coding agents, working inside the harness."
+      "text": "Alberta runs a program to invest in our public servants called the Alberta AI Academy. This program will be covered in depth in a future paper but suffice to say thousands of our public servants and more than ten thousand public participants have leveraged the AlbertaAIAcademy.com platform to learn the essentials of effective AI use, from prompting through product delivery. Staff participate in 'cohorts', groups ranging from sixty to six hundred who are learning over three levels.\n\n\nThe most recent Level 3 cohort ran over six days where students took a harness-based approach to delivery. Participants came from a range of backgrounds and levels of seniority; three of the department's five Assistant Deputy Ministers sat in the room as students, alongside executive directors, directors, managers, staff, and interns. Few would have called themselves software engineers when the week began. Yet all were willing to be builders, working alongside AI with a harness-driven appraoch."
     },
     {
       "type": "paragraph",
-      "text": "Over those six days the cohort produced more than five hundred and sixty working applications. Students were submitting homework at 11:59 the night before the course ended, the way students always have. Every application cleared the cyber review, the accessibility check, and the look-and-feel standard at first release. The benchmark before the harness was about four in ten. The number now is ten in ten."
+      "text": "Over those six days the cohort produced more than **five hundred and sixty working applications**. To graduate Level 3, every student's application cleared the cyber review, the accessibility check, and the look-and-feel standard at first release. "
     },
     {
       "type": "keystat",
       "label": "Level 3 cohort outcome",
       "value": "560 / 100",
-      "body": "More than five hundred and sixty applications produced by one hundred students in six days. Every one cleared the cyber assessment, the accessibility check, and the look-and-feel standard at first release. The cohort included three Assistant Deputy Ministers as students."
+      "body": "More than five hundred and sixty applications produced by one hundred students in six days."
     },
     {
       "type": "paragraph",
-      "text": "On the final day the cyber team came online with their full toolkit and walked every submission. The top submissions cleared the bar with a clean bill of health: zero known cyber vulnerabilities, zero known accessibility violations, full compliance with the government standard. That same team used to receive an application at the end of a project and field a panicked request for an authority to operate four days before launch, with a penetration test squeezed into the gap. Now they sit inside the harness as the red review team and ride along from the first commit. The change in posture is the difference between a cyber team that polices and a cyber team that builds."
+      "text": "On the final day of the class, members of the Cyber team came online with their own toolkit and scanned every submission. The top submissions cleared the bar with a clean bill of health: zero known cyber vulnerabilities or accessibility violations and full compliance with the government standard. Many of the best methods Cyber team now lived natively within the AI harnesses that the students were using, so cybersecurity was a first-class concern for the agent. At every commit and milestone, can run these agents to perform more than ninety-five checks. The apps ship with their own clean bill of health and the receipts to prove it. By the time cybersecurity has to sign off on the app, all the security issues are mitigated, resulting in apps that are highly consistent, easy to understand, and fully cyber compliant out of the gate. "
     },
     {
       "type": "pullquote",
-      "text": "We brought the cyber team into the tent. We asked them to build the toughest review agent they could imagine. Then we baked it in.",
+      "text": "We brought the cyber team into the tent. We asked them to build the toughest review agent they could imagine. \nThen we baked it in to the harness.",
       "cite": "Janak Alford, Deputy Minister, Ministry of Technology and Innovation"
     },
     {
@@ -393,47 +393,43 @@
     {
       "type": "paragraph",
       "author_verbatim": true,
-      "text": "Reflecting on the last 16 months of learning, some key insights bear repeating:"
+      "text": "Reflecting on the last 16 months of learning within the AI Maximalist programs, there are some key insights which are worth surfacing:"
     },
     {
       "type": "figure",
       "fno": "FIG. 6.6",
       "title": "Lessons from sixteen months of building with AI",
-      "caption": "The practices that make a harness work, drawn from more than a thousand applications built across the department.",
+      "caption": "Over Alberta's more than thousand apps we've built using AI in a year.",
       "chart": {
         "kind": "step-flow",
         "steps": [
           {
-            "title": "Start with the harness",
-            "desc": "After months or years with AI you may outgrow it, but for the beginner the harness drives rigour."
+            "title": "Start building with the harness",
+            "desc": "Today, there is no substitute for starting with a solidly built AI harness. If you care about quality, consistency, and cyber security, a well-built harness is a must. "
           },
           {
             "title": "Put your best developers on the templates",
-            "desc": "Have them work with monk-like dedication. You cannot over-value the time spent perfecting the templates, skills, and standards for AI. A perfected template means the same flaws do not materialize time and again."
+            "desc": "The net quality of your AI output is driven as much by the templates as the skills. Gather your best developers and put them on creating templates with monk-like dedication. Co-design these templates with your Cybersecurity team. You cannot over-value the time spent perfecting the templates, skills, and standards for AI. "
           },
           {
-            "title": "Avoid rework within your development process",
-            "desc": "AI is the worst when reworking its own code. It is a myopic and forgetful genius, better at building than modifying. The harness does not so much prevent rework as do it so often, in small steps, that significant drifts in intent are mitigated as you go."
+            "title": "Skills may vary. The harness democratizes development.",
+            "desc": "Some of your best thinkers and builders will not be developers. Enable those creative individuals by giving them the tools to get the job done right. Skills vary wildly within dev teams as well. Enabling your diverse teams with common skills and templates means you get the creativity and the quality together."
           },
           {
             "title": "Enable non-technical Builders",
-            "desc": "Let domain experts use AI to build applications that meet the same standards as those built by technical staff."
+            "desc": "Let domain experts use AI to build applications that meet the same standards as those built by technical staff. The harness enables the non-technical thinker, with the creative business solution, to participate in the ideation and solution process from Day 1 without sacrificing quality. "
           },
           {
-            "title": "Always integrate cyber security controls",
-            "desc": "So that no standard is ever lowered in the application of AI."
+            "title": "Benchmark and monitor",
+            "desc": "Alberta took the time to benchmark the quality of human and AI outputs before building the harness. Now we iterate on the harness, confident that we are exceeding our standards."
           },
           {
-            "title": "Enshrine all standards in AI-readable formats",
-            "desc": "So the AI can meet our requirements without guessing or making incorrect assumptions."
+            "title": "Empower and enable your staff",
+            "desc": "Train people to use these tools and templates well, so the whole team works to one consistent standard. Standards do not inhibit creativity, they strengthen it."
           },
           {
-            "title": "Provide templates that solve security out of the box",
-            "desc": "The Academy's 'Hello World' templates meet one hundred percent of the cyber, accessibility, branding, functionality, and mobility requirements out of the box, so the AI fills in the gaps. They are non-trivial: months of building, testing, refining, and review."
-          },
-          {
-            "title": "Educate staff",
-            "desc": "Train people to use these tools and templates well, so the whole team works to one consistent standard."
+            "title": "The proof is in the product. Ship good product.",
+            "desc": ""
           }
         ]
       }
@@ -441,7 +437,7 @@
     {
       "type": "paragraph",
       "author_verbatim": true,
-      "text": "These methods are neither obvious nor easy, and providing staff time to learn, create, and refine these methods through the Alberta AI Academy is a critical part of the strategy. The Academy provides the training ground to effectively use these methods and to leverage our Nexus sandbox (see the article on Nexus)."
+      "text": "Give yourself time to experiment. These methods are neither obvious nor easy, and providing staff time to learn, create, and refine these methods is a worthwhile investment. "
     }
   ],
   "bespoke_scripts": [],
