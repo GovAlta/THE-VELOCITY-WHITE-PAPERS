@@ -36,7 +36,7 @@
       "sequence": "",
       "tier": "Conceptual",
       "title": "The Cyber Imperative",
-      "subtitle": "The walls are aging from within while the tide rises from without. Modernization is no longer separable from security.",
+      "subtitle": "The walls are aging from within while the tide rises from without. AI-driven modernization is no longer separable from security.",
       "track": "Defining the Problem",
       "authors": [
         "Ministry of Technology and Innovation"
@@ -52,7 +52,7 @@
         "ai-agents"
       ],
       "repo": null,
-      "abstract": "Alberta runs one of the strongest cyber security programs in Canada, and over the last 18 months it has held the line against a steady run of attacks. Holding it is getting harder for two reasons at once. The tide outside the walls is rising: cyber controls now block 189 million connection attempts a day, more than double two years ago, and AI moves an exploit from proof of concept to live in hours, often ahead of the vendor patch. The walls themselves are aging: much of the estate runs on technology a decade or more past vendor support, where no patch exists to apply. The software supply chain has become a primary target, and a single incident carries a heavy and recurring cost. This paper makes the case that modernization is a security requirement, and sets up the deep look at the estate that follows.",
+      "abstract": "Alberta runs one of the strongest cyber security programs in Canada, and over the last 18 months it has held the line against a steady run of attacks. Holding it is getting harder for two reasons at once. The tide outside the walls is rising: cyber controls now block 189 million connection attempts a day, more than double two years ago, and AI moves an exploit from proof of concept to live in hours, often ahead of the vendor patch. The walls themselves are aging: much of the estate runs on technology a decade or more past vendor support, where no patch exists to apply. The software supply chain has become a primary target, and a single incident carries a heavy and recurring cost. This paper makes the case that AI-driven modernization is a security requirement.",
       "related": [
         "cux4h",
         "bbkac",

@@ -802,6 +802,34 @@
 .cd-table .cd-rowctl .vw-del:hover { color: var(--highlight); }
 .cd-table-edit { display: flex; gap: 8px; margin-top: 12px; }
 
+/* Inline markdown links in the article prose. The global reset flattens every
+   <a> to inherit colour with no underline, which hides cross-references like
+   [The Well-Built Harness](#/paper/p7p2k) inside body copy. Re-assert a proper
+   blue, underlined hyperlink wherever prose carries a link, scoped so the
+   related-papers cards, tags, and nav keep their own styling. */
+.civic-detail .body p a,
+.civic-detail .abstract a,
+.civic-detail .body .pullquote a,
+.civic-detail .body .cd-keystat a,
+.civic-detail .body .cd-figure .fcaption a,
+.civic-detail .body .cd-table .fcaption a,
+.civic-detail .body .cd-sidenote a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.civic-detail .body p a:hover,
+.civic-detail .abstract a:hover,
+.civic-detail .body .pullquote a:hover,
+.civic-detail .body .cd-keystat a:hover,
+.civic-detail .body .cd-figure .fcaption a:hover,
+.civic-detail .body .cd-table .fcaption a:hover,
+.civic-detail .body .cd-sidenote a:hover {
+  color: var(--accent-soft);
+  text-decoration-thickness: 2px;
+}
+
 /* Mobile guard: never let article content scroll the whole page sideways.
    Wide blocks (data tables) keep their own internal horizontal scroll via
    .cd-table-scroll; this only clips anything that would otherwise spill past
