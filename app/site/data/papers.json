@@ -37,14 +37,14 @@
       "sequence": "2 of 7",
       "tier": "Conceptual",
       "title": "The Cyber Imperative",
-      "subtitle": "The walls are aging from within while the tide rises from without. AI-driven modernization is no longer separable from security.",
+      "subtitle": "As external threats grow daily, AI-driven modernization will enable a stronger cybersecurity defense.",
       "track": "Defining the Problem",
       "authors": [
         "Janak Alford",
         "Ministry of Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 11,
+      "reading_min": 8,
       "status": "Published",
       "tags": [
         "cybersecurity",
@@ -54,7 +54,7 @@
         "ai-agents"
       ],
       "repo": null,
-      "abstract": "Alberta runs one of the strongest cyber security programs in Canada, and over the last 18 months it has held the line against a steady run of attacks. Holding it is getting harder for two reasons at once. The tide outside the walls is rising: cyber controls now block 189 million connection attempts a day, more than double two years ago, and AI moves an exploit from proof of concept to live in hours, often ahead of the vendor patch. The walls themselves are aging: much of the estate runs on technology a decade or more past vendor support, where no patch exists to apply. The software supply chain has become a primary target, and a single incident carries a heavy and recurring cost. This paper makes the case that AI-driven modernization is a security requirement.",
+      "abstract": "Alberta runs one of the strongest cyber security programs in Canada, and over the last 24 months it has held the line against a steady rise of attacks. The siege outside is intensifying: cyber controls now block 189 million connection attempts a day, more than double two years ago, and AI is generating exploits at lightning speed. The walls themselves are aging: much of the estate runs on technology which is moving past vendor support. The software supply chain has become a primary target, and a single incident can carry a heavy financial and operational cost. This paper makes the case that AI-driven modernization is a security requirement.",
       "related": [
         "cux4h",
         "bbkac",
@@ -71,10 +71,11 @@
       "subtitle": "We pointed AI at the whole of Alberta's code estate to get the ground truth. Here is how it works and what it found.",
       "track": "Defining the Problem",
       "authors": [
+        "Janak Alford",
         "Ministry of Technology and Innovation"
       ],
-      "published": null,
-      "reading_min": 18,
+      "published": "2026-06-16",
+      "reading_min": 14,
       "status": "Published",
       "tags": [
         "git-insights",
@@ -84,7 +85,7 @@
         "cybersecurity"
       ],
       "repo": "https://github.com/GovAlta-EMU/git-insights",
-      "abstract": "Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. Fifty agents read 466 million lines of code in roughly 20 hours, mapping the digital landscape and capabilities of government. This paper explains the problem, shows in detail how the tool works, and reveals what the scan found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code.",
+      "abstract": "Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. Fifty agents read 466 million lines of code in roughly 20 hours, mapping the digital landscape and capabilities of government. This paper explains the problem, shows in detail how the tool works, and reveals what the scans found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code.",
       "related": [
         "offjm",
         "p7p2k",

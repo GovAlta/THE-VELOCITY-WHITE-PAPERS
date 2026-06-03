@@ -38,7 +38,6 @@
         playing: false,
         currentTime: 0,
         duration: 0,
-        scrubbing: false,
         autoOn: this.autoAdvance,
         error: null,
         tocOpen: false,
@@ -124,7 +123,7 @@
     mounted() {
       const a = new Audio();
       a.preload = 'auto';
-      a.addEventListener('timeupdate',     () => { if (!this.scrubbing) this.currentTime = a.currentTime || 0; });
+      a.addEventListener('timeupdate',     () => { this.currentTime = a.currentTime || 0; });
       a.addEventListener('loadedmetadata', () => { this.duration = a.duration || 0; });
       a.addEventListener('ended',          () => {
         if (this.autoOn && this.index < this.total - 1) {
@@ -215,46 +214,21 @@
         this.imageErrored = false;
         this.$nextTick(() => this.loadCurrent(true));
       },
-      /* Apply a seek and reflect it in the reactive state immediately, so the
-         fill and the actual audio position stay in sync even while paused (a
-         programmatic currentTime set does not always fire 'timeupdate'). */
-      applySeek(seconds) {
-        if (!this.audio || !this.duration) return;
-        const t = Math.max(0, Math.min(this.duration, seconds));
-        this.audio.currentTime = t;
-        this.currentTime = t;
-      },
-      seekFromEvent(e) {
-        if (!this.duration) return;
+      seek(e) {
+        if (!this.duration || !this.audio) return;
         const rect = e.currentTarget.getBoundingClientRect();
-        if (!rect.width) return;
-        const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-        this.applySeek(pct * this.duration);
-      },
-      /* Pointer drag scrubbing: a single click and a press-drag-release both
-         work, on mouse and touch. Pointer capture keeps move events flowing even
-         if the cursor leaves the track mid-drag. */
-      onScrubDown(e) {
-        if (!this.duration) return;
-        this.scrubbing = true;
-        try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {}
-        this.seekFromEvent(e);
-      },
-      onScrubMove(e) {
-        if (this.scrubbing) this.seekFromEvent(e);
-      },
-      onScrubUp(e) {
-        if (!this.scrubbing) return;
-        this.scrubbing = false;
-        try { e.currentTarget.releasePointerCapture(e.pointerId); } catch (_) {}
+        const x = e.clientX - rect.left;
+        const pct = Math.max(0, Math.min(1, x / rect.width));
+        this.audio.currentTime = pct * this.duration;
       },
       /* Keyboard seek for the role="slider" scrubber. */
       seekRelative(deltaSeconds) {
         if (!this.audio || !this.duration) return;
-        this.applySeek(this.audio.currentTime + deltaSeconds);
+        this.audio.currentTime = Math.max(0, Math.min(this.duration, this.audio.currentTime + deltaSeconds));
       },
       seekTo(absoluteSeconds) {
-        this.applySeek(absoluteSeconds);
+        if (!this.audio || !this.duration) return;
+        this.audio.currentTime = Math.max(0, Math.min(this.duration, absoluteSeconds));
       },
       /* Click-to-toggle-play on the stage. The YouTube-style interaction.
          Ignored if the user clicks an interactive child (button, link, input). */
@@ -418,7 +392,6 @@
           <div class="vp-scrub">
             <span class="vp-time" aria-hidden="true">{{ currentTimeLabel }} / {{ durationLabel }}</span>
             <div class="vp-track"
-                 style="touch-action:none;"
                  role="slider"
                  tabindex="0"
                  :aria-label="t.aria_scrubber || 'Seek within current slide'"
@@ -426,10 +399,7 @@
                  :aria-valuemax="Math.round(duration) || 0"
                  :aria-valuenow="Math.round(currentTime) || 0"
                  :aria-valuetext="currentTimeLabel + ' of ' + durationLabel"
-                 @pointerdown="onScrubDown"
-                 @pointermove="onScrubMove"
-                 @pointerup="onScrubUp"
-                 @pointercancel="onScrubUp"
+                 @click="seek"
                  @keydown.left.prevent="seekRelative(-5)"
                  @keydown.right.prevent="seekRelative(5)"
                  @keydown.home.prevent="seekTo(0)"
