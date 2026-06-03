@@ -18,7 +18,7 @@
       paper: { type: Object, default: null },
     },
     setup() { return { edit: window.VWEdit || null, store: window.VWStore }; },
-    data() { return { available: false, duration: 0, rate: 1, regenerating: false, msg: '', fixing: false }; },
+    data() { return { available: false, duration: 0, rate: 1, regenerating: false, msg: '', fixing: false, durationKnown: false }; },
     async mounted() {
       try { this.available = (await fetch(this.src, { method: 'HEAD' })).ok; }
       catch { this.available = false; }
@@ -46,12 +46,18 @@
          Infinity. Seeking past the end forces a scan to the real end; once the
          browser knows it, we read the duration and reset to the start. */
       resolveDuration(a) {
-        if (isFinite(a.duration) && a.duration > 0) { this.duration = a.duration; return; }
+        /* Run at most once. The browser can re-report duration as Infinity for
+           this concatenated MP3 (notably when playback starts), and re-running
+           the seek-to-end probe would reset the playhead and clobber a seek the
+           user just made. Once we know the real duration, never touch it again. */
+        if (this.durationKnown) return;
+        if (isFinite(a.duration) && a.duration > 0) { this.duration = a.duration; this.durationKnown = true; return; }
         if (this.fixing) return;
         this.fixing = true;
         const onChange = () => {
           if (isFinite(a.duration) && a.duration > 0) {
             this.duration = a.duration;
+            this.durationKnown = true;
             a.removeEventListener('durationchange', onChange);
             a.removeEventListener('timeupdate', onChange);
             try { a.currentTime = 0; } catch (_) {}

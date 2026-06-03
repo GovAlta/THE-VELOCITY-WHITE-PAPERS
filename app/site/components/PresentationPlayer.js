@@ -124,7 +124,7 @@
     mounted() {
       const a = new Audio();
       a.preload = 'auto';
-      a.addEventListener('timeupdate',     () => { this.currentTime = a.currentTime || 0; });
+      a.addEventListener('timeupdate',     () => { if (!this.scrubbing) this.currentTime = a.currentTime || 0; });
       a.addEventListener('loadedmetadata', () => { this.duration = a.duration || 0; });
       a.addEventListener('ended',          () => {
         if (this.autoOn && this.index < this.total - 1) {
