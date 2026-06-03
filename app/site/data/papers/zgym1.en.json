@@ -11,7 +11,7 @@
     "Ministry of Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 16,
+  "reading_min": 12,
   "status": "Published",
   "tags": [
     "modernization",
@@ -160,7 +160,7 @@
     },
     {
       "n": "04",
-      "title": "Rationalization"
+      "title": "AI Rationalization"
     },
     {
       "n": "05",
@@ -183,7 +183,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The four approaches are the AI Garage, the AI Factory, Rationalization, and Government 3.0. The Garage fixes a system in place. The Factory builds a new one to replace it. Rationalization collapses a whole portfolio of overlapping systems into a few modern modules. Government 3.0 dissolves the application altogether and lets AI agents work directly against governed data. Each is suited to a different kind of system, and each asks more of the organization than the one before it."
+      "text": "The four approaches are the **AI Garage**, the **AI Factory**, **AI Rationalization**, and **Government 3.0**. The Garage fixes a system in place. The Factory builds a new one to replace it. Rationalization collapses a whole portfolio of overlapping systems into a few modern modules. Government 3.0 dissolves the application altogether and lets AI agents work directly against governed data. Each is suited to a different kind of system, and each asks more of the organization than the one before it."
     },
     {
       "type": "paragraph",
@@ -318,7 +318,7 @@
     {
       "type": "section_heading",
       "n": "04",
-      "title": "Rationalization"
+      "title": "AI Rationalization"
     },
     {
       "type": "paragraph",
@@ -453,7 +453,7 @@
     },
     {
       "type": "paragraph",
-      "text": "These four approaches are not rivals, and we do not have to choose one. A government estate is too varied for that. Some systems are tolerated and lightly patched in the Garage. Some are rebuilt new in the Factory. Some are folded into a larger consolidation through rationalization. And over time, more and more of the work moves toward the agentic model of Government 3.0. The four-way test, tolerate, invest, migrate, or eliminate, routes each system to the approach that fits it, so the effort lands where it produces the most value. All four are needed to modernize a government at speed."
+      "text": "These four approaches are compatible within one organization. We do not have to choose just one. A government estate is too varied for that. Some systems are tolerated and lightly patched in the Garage. Some are rebuilt new in the Factory. Some are folded into a larger consolidation through Rationalization. And over time, more and more of the work moves toward the agentic model of Government 3.0. The four-way test, tolerate, invest, migrate, or eliminate, routes each system to the approach that fits it, so the effort lands where it produces the most value. All four are needed to modernize a government at speed."
     },
     {
       "type": "keystat",
@@ -463,7 +463,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Taken together, the four approaches are how we reach that target. We now have a clear picture of how government can be rebuilt. That raises the next question. If AI is going to do this much of the work, repairing, building, consolidating, and in time operating the systems government runs on, how do we make sure it does that work well, safely, and to a standard we can defend? The answer lies in the structure we build around the AI itself. We call that structure the harness, and it is the subject of the next paper: **[The Well-Built Harness](#/paper/p7p2k)**."
+      "text": "Taken together, the four approaches are how we reach that target. We now have a clear picture of how government can be rebuilt. That raises the next question. If AI is going to do this much of the work, repairing, building, consolidating, and in time operating the systems government runs on, how do we make sure it does that work well, safely, and to a standard we can defend? The answer lies in the structure we build around the AI itself. \n\n\nWe call that structure the harness, and it is the subject of the next paper: **[The Well-Built Harness](#/paper/p7p2k)**."
     },
     {
       "type": "tag_row",
