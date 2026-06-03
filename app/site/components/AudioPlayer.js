@@ -78,7 +78,7 @@
       <div class="audio-block" v-if="available || editing">
         <span class="lbl">{{ label }}</span>
         <div class="vw-audio-row" v-if="available">
-          <audio ref="audio" :src="displaySrc" controls preload="metadata" @loadedmetadata="onMeta" @durationchange="onMeta"></audio>
+          <audio ref="audio" :src="displaySrc" controls preload="auto" @loadedmetadata="onMeta" @durationchange="onMeta"></audio>
           <div class="vw-audio-tools">
             <label class="vw-audio-rate">
               <span class="sr-only">Playback speed</span>
