@@ -373,7 +373,24 @@ const server = createServer((req, res) => {
       const filePath = resolve(SITE, '.' + pathname);
       if (!filePath.startsWith(SITE)) { res.writeHead(403); res.end('Forbidden'); return; }
       const buf = await readFile(filePath);
-      res.writeHead(200, { 'content-type': MIME[extname(filePath).toLowerCase()] || 'application/octet-stream', 'cache-control': 'no-store' });
+      const type = MIME[extname(filePath).toLowerCase()] || 'application/octet-stream';
+      const total = buf.length;
+      /* Honour HTTP Range so media (the narration MP3s) is seekable, matching
+         GitHub Pages. Without 206 the browser treats audio as non-seekable. */
+      const range = req.headers.range;
+      if (range) {
+        const m = /bytes=(\d*)-(\d*)/.exec(range);
+        const start = m && m[1] ? parseInt(m[1], 10) : 0;
+        const end = m && m[2] ? parseInt(m[2], 10) : total - 1;
+        if (isNaN(start) || isNaN(end) || start > end || end >= total) {
+          res.writeHead(416, { 'content-range': 'bytes */' + total }); res.end(); return;
+        }
+        res.writeHead(206, { 'content-type': type, 'accept-ranges': 'bytes', 'cache-control': 'no-store',
+          'content-range': 'bytes ' + start + '-' + end + '/' + total, 'content-length': end - start + 1 });
+        res.end(buf.subarray(start, end + 1));
+        return;
+      }
+      res.writeHead(200, { 'content-type': type, 'accept-ranges': 'bytes', 'cache-control': 'no-store', 'content-length': total });
       res.end(buf);
     } catch (_) {
       res.writeHead(404, { 'content-type': 'text/plain' });
