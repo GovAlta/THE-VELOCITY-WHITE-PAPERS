@@ -1,0 +1,17 @@
+{
+  "paper_id": "uwpxr",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\uwpxr\\en\\fig-9-4.jpg",
+  "bytes_jpg": 175651,
+  "bytes_png_source": 2524585,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-04T14:08:41.392Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a short stacked column of small icons labelled DEVELOPERS AND AGENTS. Arrows lead rightward through a tall central gate labelled BIFROST AI GATEWAY, drawn with three horizontal filter bands stacked inside it labelled PII DETECTION AND REMOVAL, DAILY BUDGETS, and AUDIT AND REVIEW. One arrow passing through carries a small rust flag labelled PII FLAGGED and bends back. On the right, cleared arrows reach a row of small boxes labelled MODELS and TOOLS. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a short stacked column of small icons labelled DEVELOPERS AND AGENTS. Arrows lead rightward through a tall central gate labelled BIFROST AI GATEWAY, drawn with three horizontal filter bands stacked inside it labelled PII DETECTION AND REMOVAL, DAILY BUDGETS, and AUDIT AND REVIEW. One arrow passing through carries a small rust flag labelled PII FLAGGED and bends back. On the right, cleared arrows reach a row of small boxes labelled MODELS and TOOLS. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

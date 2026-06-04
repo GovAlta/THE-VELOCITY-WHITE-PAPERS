@@ -5,21 +5,30 @@
   "tier": "Technical",
   "category": "paper",
   "title": "The AI Factory: Orchestration and Observation (Nexus)",
-  "subtitle": "Running and watching a fleet of agents at scale.",
+  "subtitle": "A secure cloud sandbox where agents work with autonomy, and every action stays observable and auditable as they go.",
   "track": "Engineering the Solution",
   "authors": [
     "Ministry of Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 15,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "ai-factory",
+    "nexus",
+    "sandbox",
+    "gcp",
+    "agents",
+    "orchestration",
+    "observability",
+    "claw"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+  "abstract": "Granting agents autonomy lets them solve problems in novel and creative ways. To do this safely in a government environment, Alberta built a custom tool called Nexus that makes the agents' actions observable as they work. Nexus provides a secure sandbox where agents work independently or in groups on hard problems that have no clear solution in advance. Because every action an agent takes in that technical space stays visible and auditable, the autonomy is safe to grant. An enterprise-grade application can now be deployed securely within Nexus in minutes. Scaling the platform to support greater orchestration will enable all four AI-based modernization strategies and open new doors for autonomous agent operations.",
   "hero_image": {
     "src": "public/images/uwpxr/en/hero.jpg",
-    "alt": "Editorial image for: The AI Factory: Orchestration and Observation (Nexus)",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The AI Factory: Orchestration and Observation (Nexus)\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Editorial cover diagram for Nexus: a glass-walled control room on warm cream paper, several small workstations with glowing screens and small agent tokens at work inside it, watched from above by a single calm eye drawn in line work, the room sealed within a larger cloud boundary.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust accents. A clean rounded enclosure, like a glass-walled control room, containing several small workstations each with a glowing screen and a tiny robot token at work. Above them, a single calm eye motif rendered in simple line work, watching. The enclosure sits within a larger rounded cloud boundary, sealed and observed. Wide cover aspect, calm and archival. No text, no logos, no people.",
     "style_kind": "cover"
   },
   "audio": {
@@ -33,36 +42,312 @@
     "slides": [
       {
         "id": "01",
-        "title": "The AI Factory: Orchestration and Observation (Nexus)",
+        "title": "The AI Factory: Orchestration and Observation",
         "audio_file": "public/audio/en/uwpxr-tldr/01.mp3",
         "visual": "title",
-        "caption": "Engineering the Solution",
-        "subcaption": "",
-        "text": "The AI Factory: Orchestration and Observation (Nexus). Content forthcoming."
+        "caption": "Paper 9 · Engineering the Solution",
+        "subcaption": "Nexus: autonomy made safe by observability.",
+        "text": "Orchestration and Observation. Giving agents room to act lets them solve hard problems in creative ways. To do that safely in government, Alberta built Nexus, a secure cloud sandbox where agents work with autonomy and every action they take stays visible and auditable. The freedom is safe to grant because the work is always observable."
+      },
+      {
+        "id": "02",
+        "title": "Autonomy, with the work shown",
+        "audio_file": "public/audio/en/uwpxr-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "Verify then trust",
+        "visual_config": {
+          "left": { "label": "Give them latitude", "body": "Unbounded agents, free to choose their own path, find novel solutions and catch hidden bugs." },
+          "right": { "label": "Hold them to account", "body": "Every action is observed and logged. An output without evidence is not trusted." }
+        },
+        "text": "An agent is an AI given the latitude and the tools to choose its own next steps. The latest agents run for hours or days with little supervision. The balance Alberta strikes is to give them that autonomy while enforcing observability and an audit trail. We teach our staff to verify, then trust. An output that cannot show its work is not trusted, however good it looks."
+      },
+      {
+        "id": "03",
+        "title": "What Nexus is",
+        "audio_file": "public/audio/en/uwpxr-tldr/03.mp3",
+        "visual": "list",
+        "caption": "A virtual machine per developer",
+        "visual_config": {
+          "items": [
+            { "label": "A secure sandbox", "desc": "Each developer gets a cloud machine running any number of agents." },
+            { "label": "Built for the work", "desc": "A terminal, a browser, a file system, observability, and publishing controls." },
+            { "label": "Publish in one prompt", "desc": "An agent deploys an enterprise-grade app to the cloud from a single instruction." },
+            { "label": "Behind the wall", "desc": "Apps sit behind a private endpoint, reachable only on the government VPN." }
+          ]
+        },
+        "text": "Nexus is a virtual environment in Google Cloud where each developer has their own machine and can run any number of agent instances in a secure sandbox. It comes with a terminal, a browser, a file system, observability, and publishing controls, with a security overlay on top. Agents act as first-class users of the cloud: a single instruction, publish this app, deploys it in minutes, behind a private endpoint reachable only on the government VPN."
+      },
+      {
+        "id": "04",
+        "title": "Tools, gateways, and oversight",
+        "audio_file": "public/audio/en/uwpxr-tldr/04.mp3",
+        "visual": "list",
+        "caption": "What surrounds the agent",
+        "visual_config": {
+          "items": [
+            { "label": "Delegated access", "desc": "The agent acts on the user's behalf, with access that expires every few hours." },
+            { "label": "Ent Tools", "desc": "Search, voice, cloud APIs, open models, private compute, and more, through one gateway." },
+            { "label": "Bifrost gateway", "desc": "Detects and strips sensitive data, caps spend, and audits every outbound call." },
+            { "label": "Observability", "desc": "Developers watch their agents; admins audit every agent on every machine." }
+          ]
+        },
+        "text": "Around the agent sits a controlled supply of access. The agent works under delegated access that expires every few hours, so nothing it is granted is permanent. An enterprise tool suite called Ent Tools extends what it can reach, from search and voice to cloud APIs, open models, and a private compute cluster. A gateway called Bifrost detects and removes sensitive data, caps spend, and audits every outbound call. And observability lets a developer watch their own agents while administrators audit every agent on every machine."
+      },
+      {
+        "id": "05",
+        "title": "Six hundred apps in three months",
+        "audio_file": "public/audio/en/uwpxr-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "The velocity it unlocked",
+        "visual_config": {
+          "stat_value": "600+ apps",
+          "stat_label": "Built on Nexus in its first three months"
+        },
+        "subcaption": "Git Insights, Git Insights Ministry, and dozens of applications were all built here.",
+        "text": "Since it went live just three months ago, more than six hundred applications have been built on Nexus, including the Git Insights tools and dozens of others. By simplifying the build down to a single prompt, it removed the manual ticketing and the waiting that would otherwise stall a developer, and it is the platform behind our aim of a twentyfold acceleration in delivery."
+      },
+      {
+        "id": "06",
+        "title": "The blueprint for what comes next",
+        "audio_file": "public/audio/en/uwpxr-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Toward the claw, and Velocity",
+        "subcaption": "Scaling orchestration, and a second layer of observability.",
+        "text": "Nexus supports the AI Garage and the AI Factory today, and it is the blueprint for the next two approaches: layered orchestration over hundreds of environments, and a headless layer where government functions are consumed by agents through APIs. It is also where claw-style agents, continuous learning autonomous workers, will run. Nexus shows that the agents are working. The next paper, Velocity, adds the layer that shows the business where the work stands."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "Setting the conditions for success" },
+    { "n": "02", "title": "Connecting the pieces is the hard part" },
+    { "n": "03", "title": "What is Nexus" },
+    { "n": "04", "title": "The expanded universe" },
+    { "n": "05", "title": "Nexus and the four approaches" },
+    { "n": "06", "title": "Enter the claw" },
+    { "n": "07", "title": "Expanding AI access" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "When AI systems are provided the latitude and tools to act with some autonomy, choosing their own next steps based on their own judgment, they can be accurately called 'agents'. This agency is enabled by tools which the AI can activate through its outputs, which run on the computer and often return a result. The AI picks up that result, evaluates its successes or failures, and is activated to try again in an ongoing process of experimentation. This is an effective pattern of working. Agentic processes elevate the effectiveness of AI past how most people use it today, as a chat tool. An AI agent becomes a persistent, capable collaborator."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Setting the conditions for success"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "Today, the latest agents can do meaningful work with minimal intervention, running with limited or no supervision for hours or even days. Like any worker, an agent's outputs and outcomes must be measured and managed so we can confirm its actions are meeting our goals. An AI-generated output that lacks evidence cannot be trusted, regardless of what the final product looks like. AI needs to show its work, and our Alberta AI Academy training teaches our staff to 'verify, then trust' all AI outputs."
+    },
+    {
+      "type": "paragraph",
+      "text": "The right balance is to give agents autonomy while enforcing observability and an audit trail, for AI to operate with speed but also to provide proof that they are following the correct processes. These tools carry extensive built-in knowledge of the commands needed to operate a computer, and over-constraining them wastes that capability. We need to know what they are doing and how, but sometimes we also need to get out of their way."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Connecting the pieces is the hard part"
+    },
+    {
+      "type": "paragraph",
+      "text": "The problem-solving ability of an AI agent is a critical success factor in building or repairing technology solutions. Creating a software application is only partly about producing code. An app sits inside a larger, often complicated environment of operating systems, permission structures, networks, databases, tools, and third-party systems. Connecting these pieces together correctly is one of the most time-consuming parts of the work. We know how to write code; making it run reliably across all those connections is the hard part, because the pieces do not always fit. A good developer spends a great deal of time designing and testing these integrations, while also preparing the application to survive the move from the development environment to production, where thousands of unpredictable users may interact with it at once. Good code has to be logically correct, applying the right policies and rules, and also functionally aligned to the environment it runs in. Any experienced developer will tell you that this work demands persistent problem solving, experimentation, and steady learning. In short, grit. Persistence."
+    },
+    {
+      "type": "paragraph",
+      "text": "Over the last 18 months, Technology and Innovation staff have studied and monitored these AI agents in the domain of software development. We have seen significant growth in the capabilities of these AI agents, and also in the tools which allow them to be effective. Alberta's AI Maximalists also observed that unbounded agents, those given latitude to solve a problem without a predefined solution path, frequently revealed novel solutions to tough problems. Often the agents used methods the Maximalists grasped conceptually but lacked the specific technical knowledge to anticipate. Not all of their interventions were wanted, and so guard rails were introduced through [the harness](#/paper/p7p2k) to make the agents' work more opinionated, following enterprise standards, without inhibiting forward momentum. When given instruction to create sub-agents, the AI agents spawned dozens of instances to approach the same problem from different angles. Such investigation revealed that they were effective in identifying workable new solutions, and also bugs and gaps in existing code, which could be closed quickly."
+    },
+    {
+      "type": "paragraph",
+      "text": "Enabling effective agents means guiding them with your judgment and knowing when to step back. An agent often needs context and direction from a human orchestrator to begin the work, and again at critical decisions and junctions. But the human's own knowledge can be both enabling and limiting. If the human says 'do A' and A is wrong, the agent is bound by that mistake. If instead the human says 'develop and test ten approaches in parallel' and leaves the agent to evaluate them, an unexpected solution has room to emerge. Being prescriptive about how the agent must work often confines it to your own view of the problem. So how can we get the best of both worlds? Enter Nexus."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "What is Nexus"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nexus is a Google Cloud Platform-hosted virtual environment where each developer has access to their own virtual machine and can run an unlimited number of AI agent instances in a secure sandbox, while delegating access to the agent to assist in containerization and deployment to Google Cloud. It comes with a terminal, a browser, a file system, observability, and publishing controls, as well as an overlay security model. As a further layer of protection, all apps are deployed behind a private endpoint, accessible only through a VPN connection internal to the Government of Alberta."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.1",
+      "title": "Inside Nexus",
+      "caption": "Each developer has their own virtual machine in Google Cloud, running any number of agents at once, with a terminal, a browser, and a file system. A security overlay surrounds the environment, and the applications agents deploy sit behind a private endpoint reachable only on the government VPN.",
+      "image": {
+        "src": "public/images/uwpxr/en/fig-9-1.jpg",
+        "alt": "A hand-drawn diagram of a Nexus cloud environment: a large box labelled Nexus, Google Cloud, containing a Developer VM box with a terminal panel of stacked agent windows, a browser panel, and a file-system tree, with several small agent icons; a security-overlay band around the box; and a private VPN endpoint on the right gating a deployed app.",
+        "image_prompt": "An editorial architecture diagram on warm cream paper, deep navy line work with small rust accents. A large rounded box labelled NEXUS, GOOGLE CLOUD. Inside it, a box labelled DEVELOPER VM containing three small labelled panels: a dark TERMINAL panel showing several stacked windows each with a tiny robot icon, a small BROWSER panel, and a FILE SYSTEM tree. Several more small robot icons inside the VM labelled AGENTS suggest many running at once. A thin outer band around the large box is labelled SECURITY OVERLAY. On the right edge, a small locked gateway icon labelled PRIVATE VPN ENDPOINT, through which a small box labelled APP connects outward. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The system makes it so that agents can operate as first-class users of the cloud environment, doing immediate deployments into the cloud with a single 'publish this app' prompt. They have their own built-in harness that enables them to access the system's controls, and you can redelegate access every few hours so that no access you grant the agent is permanent. It is a privileged-identity-management style of access granting on behalf of the user, allowing the agent to operate on their behalf."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.2",
+      "title": "Delegated access and one-prompt publishing",
+      "caption": "An agent deploys an application to Google Cloud from a single instruction, packaging and publishing it without a ticket. The access it uses is delegated by the user and expires every few hours, so nothing the agent is granted is permanent. It acts on the user's behalf.",
+      "image": {
+        "src": "public/images/uwpxr/en/fig-9-2.jpg",
+        "alt": "A hand-drawn diagram: a robot agent icon with a speech bubble reading publish this app, an arrow through a Containerize box to a Google Cloud box holding a running app; above, a user token handing a key labelled delegated access down to the agent, with a clock labelled expires every few hours.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a small robot icon labelled AGENT with a speech bubble reading PUBLISH THIS APP. An arrow leads rightward through a box labelled CONTAINERIZE to a rounded cloud box labelled GOOGLE CLOUD holding a small running box labelled APP. Above, a simple person token labelled USER hands a small key icon labelled DELEGATED ACCESS down to the AGENT, beside a small clock and a label reading EXPIRES EVERY FEW HOURS. A small caption tag near the agent reads ACTS ON THE USER'S BEHALF. Calm, architectural, legible labels. No logos, no people beyond a schematic token.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "It also integrates with a suite called Ent Tools, our enterprise tools, which extend the capability of any agent. We have Brave Search, ElevenLabs, all of the API endpoints for the major cloud providers, open-source models, and a private compute cluster. We have a series of other open APIs: time, weather, and news. We have social media integration so that an agent can tap into real-time information about the world. And we have enterprise tools being built out to support SharePoint, ServiceNow, and OneGX ERP integrations. Through single sign-on, the user can delegate their access into these. We will expand it into the Microsoft 365 space in the near future, so a user can delegate Teams, email, calendar, and other access."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.3",
+      "title": "Ent Tools, the enterprise gateway",
+      "caption": "Through a single sign-on, a user delegates their access to an agent, which then reaches a suite of enterprise tools through one gateway: search, voice, the cloud provider APIs, open models, a private compute cluster, and open feeds like time, weather, and news. SharePoint, ServiceNow, OneGX, and Microsoft 365 are being added.",
+      "image": {
+        "src": "public/images/uwpxr/en/fig-9-3.jpg",
+        "alt": "A hand-drawn hub-and-spoke diagram: a robot agent connects through an SSO key into a central box labelled Ent Tools, enterprise gateway, with labelled spokes to Brave Search, ElevenLabs, Cloud Provider APIs, Open-source Models, Private Compute, Time Weather News, and Social Media, plus a dashed cluster labelled coming soon holding SharePoint, ServiceNow, OneGX ERP, and Microsoft 365.",
+        "image_prompt": "An editorial hub-and-spoke diagram on warm cream paper, deep navy line work with small rust accents. A central rounded box labelled ENT TOOLS, ENTERPRISE GATEWAY, with a small key icon labelled SSO at its left entrance. A single robot icon labelled AGENT connects to the key from the left. From the gateway, labelled spokes fan out to small boxes: BRAVE SEARCH, ELEVENLABS, CLOUD PROVIDER APIs, OPEN-SOURCE MODELS, PRIVATE COMPUTE, TIME WEATHER NEWS, and SOCIAL MEDIA. Below, a separate dashed-outline cluster labelled COMING SOON holds four small boxes: SHAREPOINT, SERVICENOW, ONEGX ERP, MICROSOFT 365. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The purpose of the enterprise tools is to safely provide agentic resources to ministry partners who do not have an IT shop but want to build meaningful tools. Through delegation, we make it easy to gain access to these resources in a safe and monitored way."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "The expanded universe"
+    },
+    {
+      "type": "paragraph",
+      "text": "We are also layering the [Bifrost AI Gateway](https://github.com/maximhq/bifrost) and custom scripts to add personally identifiable information (PII) detection and removal. Users who submit PII to models that do not have sufficient classification get flagged and notified that there is a misalignment between their model selection and their use case. Tool use through the Enterprise Tools gateway adds a further layer of security, and provides meaningful audit and review of outbound interactions. Both platforms enable cost containment, where developers and workloads can be given daily budgets to prevent runaway token use for long-form jobs, or request point-in-time budget approvals right through the console for large amounts of data processing."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.4",
+      "title": "The gateways that keep it safe",
+      "caption": "Requests from developers and agents pass through a gateway that detects and removes sensitive data, holds them to daily budgets, and audits every outbound call. A request carrying personal information to an under-classified model is flagged and the user is notified. Cleared requests reach the models and tools.",
+      "image": {
+        "src": "public/images/uwpxr/en/fig-9-4.jpg",
+        "alt": "A hand-drawn diagram: a column labelled Developers and Agents on the left, requests passing through a tall central gate labelled Bifrost AI Gateway with three stacked filter bands reading PII detection and removal, Daily budgets, and Audit and review, one request carrying a rust flag labelled PII flagged, and cleared requests reaching a row of boxes labelled Models and Tools on the right.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a short stacked column of small icons labelled DEVELOPERS AND AGENTS. Arrows lead rightward through a tall central gate labelled BIFROST AI GATEWAY, drawn with three horizontal filter bands stacked inside it labelled PII DETECTION AND REMOVAL, DAILY BUDGETS, and AUDIT AND REVIEW. One arrow passing through carries a small rust flag labelled PII FLAGGED and bends back. On the right, cleared arrows reach a row of small boxes labelled MODELS and TOOLS. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Observability comes in by allowing the human developer in their own Nexus environment to monitor what the coding agents are doing. Administrative users of Nexus can also observe and audit all agents on all virtual machines. Administrative views have shown interesting and sometimes unexpected patterns. Agents have demonstrated growing persistence in probing their own environments to understand what options are available. Some moves surprised us. We used observability to see what the agents were doing, and created other agents to audit them, which caused us to change our patterns as agents pushed the boundaries and found gaps. This 'shakedown' period made Nexus more robust and surfaced gaps that had initially been hidden."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.5",
+      "title": "Watching the work",
+      "caption": "A developer watches the agents on their own machine. An administrator observes and audits every agent on every machine across the platform. And agents are set to audit other agents, a practice that surfaced surprising behaviour during the platform's shakedown and made it more robust.",
+      "image": {
+        "src": "public/images/uwpxr/en/fig-9-5.jpg",
+        "alt": "A hand-drawn diagram split into a Developer View panel showing one VM with a few agent dots watched by an eye, and a wider Admin View panel showing a grid of many VMs each with agent dots under one large eye labelled observe and audit all, with a small inset of one agent icon pointing an eye at another labelled agents auditing agents.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a panel labelled DEVELOPER VIEW showing one box labelled VM with a few small agent dots, watched by a simple eye icon. On the right, a wider panel labelled ADMIN VIEW showing a three-by-three grid of small boxes each labelled VM with agent dots, all beneath one larger eye icon labelled OBSERVE AND AUDIT ALL. In a small inset between them, one robot icon labelled AUDIT AGENT points an eye line at another robot icon labelled AGENT, with a caption AGENTS AUDITING AGENTS. Calm, architectural, legible labels. No logos, no people beyond schematic icons.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Nexus and the four approaches"
+    },
+    {
+      "type": "paragraph",
+      "text": "For Alberta, Nexus has allowed us to use these agents to solve novel problems, and we have. All of the workloads we have talked about, through [Git Insights](#/paper/bbkac), [Git Insights Ministry](#/paper/offjm), and dozens of apps, have been built in Nexus. Since it went live just three months ago, over 600 applications have been built on the platform, and it has enabled the kind of velocity necessary to achieve the transformations we are looking for. Nexus was a necessary evolution that unblocked a significant boost in acceleration for our AI Garage and AI Factory models. Without Nexus simplifying the complex build process down to a single 'publish this app' prompt, the forward velocity of our developers would be stymied by the manual processes of requesting tickets and waiting days or weeks for elements of the infrastructure."
+    },
+    {
+      "type": "paragraph",
+      "text": "Looking forward, Nexus provides the blueprint for two of the transformation approaches coming next, discussed in the white paper on [The Four Approaches to AI Modernization](#/paper/zgym1). Nexus currently supports Approach 1, the AI Garage, and Approach 2, the AI Factory, which take on direct application remediation and development. Expanding Nexus enables Approach 3, with layers of orchestrator agents overseeing hundreds of virtual environments, one for each legacy application. We can imagine a situation where all the applications in a ministry are booted up in their own virtual environment with an overarching orchestration that monitors them. Embedded within each app, one agent manages its health and performance, patching, and security. If there are 200 apps in a ministry, there would be 200 agents overseeing them, and then oversight agents on top, monitoring the telemetry on the uptime and downtime of the apps, the status of the agents, and what they are working on. Are they patching? Are they releasing? Are they documenting? And then there are further abstracted layers of architects, hard at work integrating and rebuilding systems into new target environments and tech stacks."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.6",
+      "title": "Scaling the orchestration",
+      "caption": "Expanding Nexus layers agents over hundreds of environments. One agent per application handles health, patching, and security; oversight agents above them watch the telemetry and the agents' status; architect agents above those integrate and rebuild. A fourth approach exposes the functions of government as APIs that trained staff point their own agents at.",
+      "image": {
+        "src": "public/images/uwpxr/en/fig-9-6.jpg",
+        "alt": "A hand-drawn pyramid of tiers: a bottom row of many App boxes each with a small agent icon labelled one agent per app, health, patching, security; a middle tier of Oversight Agents boxes labelled telemetry, uptime, status; a top tier of Architect Agents labelled integrate and rebuild; and a side panel labelled Approach 4, headless API layer showing government functions as API plugs that defined agents connect to.",
+        "image_prompt": "An editorial layered diagram on warm cream paper, deep navy line work with small rust accents, drawn as a three-tier pyramid. Bottom tier: a long row of small boxes each labelled APP with a tiny robot icon, captioned ONE AGENT PER APP: HEALTH, PATCHING, SECURITY. Middle tier: a few boxes labelled OVERSIGHT AGENTS, captioned TELEMETRY, UPTIME, STATUS. Top tier: two boxes labelled ARCHITECT AGENTS, captioned INTEGRATE AND REBUILD. To the right, a separate slim panel labelled APPROACH 4: HEADLESS API LAYER shows several small API plug icons that a couple of small defined-agent tokens connect into. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Nexus also lays the groundwork for Approach 4, where we build an entirely headless agent orchestration layer, with the functions of government exposed and consumed via API. In this environment, individuals from across government who have been trained through the AI Academy will be able to define an agent, delegate access to it, and then monitor and track its steps to complete their objectives. That future version of Nexus is not far off, and we are working diligently to understand how it scales out."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Enter the claw"
+    },
+    {
+      "type": "paragraph",
+      "text": "This platform is also allowing our AI Delivery and Enablement branch to begin implementing 'claw-based' orchestration, where self-directed agents, known now as claws, or continuous learning autonomous workers, like OpenClaw or Hermes, are activated in a controlled government environment. This is the likely target state for agentic use in government. A claw agent operates in a networked environment, where the development, the networking, the cybersecurity, and the monitoring are all handled by claw-style agents working somewhat collaboratively, or even adversarially, in an environment. In such a scenario, white-hat agents can simulate cyber threat actors, playing cat and mouse. This is the kind of persistent pattern being emulated by threat actors, so it is reasonable for us to mimic these patterns using an OpenClaw or Hermes. Expanding the use of this kind of claw architecture through Nexus becomes a reasonable next step within the coming 6 to 12 months."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.7",
+      "title": "Enter the claw",
+      "caption": "A claw, a continuous learning autonomous worker, runs in a networked environment alongside others. Claws handle development, networking, cybersecurity, and monitoring, working together or, in a security exercise, against each other: a white-hat claw plays cat and mouse with a simulated threat actor, mimicking the patterns real attackers use.",
+      "image": {
+        "src": "public/images/uwpxr/en/fig-9-7.jpg",
+        "alt": "A hand-drawn diagram of a networked environment containing four claw-agent badges labelled DevOps, NetOps, CyberOps, and Monitoring connected to each other, and to one side a rust white-hat claw token facing a dashed simulated threat actor token across a line labelled cat and mouse, captioned continuous learning autonomous workers.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A central rounded boundary labelled NETWORKED ENVIRONMENT. Inside it, four labelled rounded badges, each marked with a small claw symbol, reading DEVOPS, NETOPS, CYBEROPS, and MONITORING, connected to one another by thin lines to show collaboration. On the right side, a rust-coloured badge labelled WHITE-HAT CLAW faces a dashed-outline badge labelled SIMULATED THREAT ACTOR across a line labelled CAT AND MOUSE. A small caption below reads CONTINUOUS LEARNING AUTONOMOUS WORKERS. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The virtualization and containerization of our workloads, the speed to deployment, the observability, and the scalability across hundreds of developers, each running tens to hundreds of agents, each managing tens to hundreds of applications, is an absolute requirement for using AI at scale within a large organization like government. So is the ability to run agents autonomously with sufficient confidence that they are working in alignment, that mistakes can be caught, that integrations to GitHub are happening, and that commits enable undo and revert. All of this increases confidence in AI use and management. These habits are codified into the harnesses, so AI agents follow the patterns set out by best practice. Nexus has unlocked the forward velocity needed to advance our vision of a twentyfold acceleration of delivery."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Expanding AI access"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Nexus platform lets us prepare for democratized access, even for non-IT staff, to autonomous agentic AI across a larger workforce, where the aggregate effect of unmanaged AI usage could otherwise cause chaos if left unconstrained. Nexus drives AI operation workloads into a state of consistency, where every Builder has their own environment, every environment is observable, and every agent is managed, where model access is controlled through gateways like Bifrost, and tools access is air-traffic-controlled by the rules at the Enterprise Tools gateway. Any government organization seeking to move at speed with agentic AI needs to lay down a similar architecture to match security with speed."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nexus solves one critical half of observability: knowing that the agents are working, and being able to audit their technical activities. But that information remains inaccessible to business clients and partners, subject matter experts, the engagement team, and project managers. For this, we built a second observability layer, which the next paper covers, called [Velocity](#/paper/k3tc3)."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "nexus",
+        "sandbox",
+        "gcp",
+        "orchestration",
+        "claw"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": true,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "k3tc3",
+    "qthji",
+    "p7p2k",
+    "zgym1"
+  ]
 }

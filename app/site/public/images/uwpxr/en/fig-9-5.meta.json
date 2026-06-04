@@ -1,0 +1,17 @@
+{
+  "paper_id": "uwpxr",
+  "locale": "en",
+  "slot": "fig-05",
+  "out_path": "public\\images\\uwpxr\\en\\fig-9-5.jpg",
+  "bytes_jpg": 132880,
+  "bytes_png_source": 2525475,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-04T14:09:38.290Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a panel labelled DEVELOPER VIEW showing one box labelled VM with a few small agent dots, watched by a simple eye icon. On the right, a wider panel labelled ADMIN VIEW showing a three-by-three grid of small boxes each labelled VM with agent dots, all beneath one larger eye icon labelled OBSERVE AND AUDIT ALL. In a small inset between them, one robot icon labelled AUDIT AGENT points an eye line at another robot icon labelled AGENT, with a caption AGENTS AUDITING AGENTS. Calm, architectural, legible labels. No logos, no people beyond schematic icons.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a panel labelled DEVELOPER VIEW showing one box labelled VM with a few small agent dots, watched by a simple eye icon. On the right, a wider panel labelled ADMIN VIEW showing a three-by-three grid of small boxes each labelled VM with agent dots, all beneath one larger eye icon labelled OBSERVE AND AUDIT ALL. In a small inset between them, one robot icon labelled AUDIT AGENT points an eye line at another robot icon labelled AGENT, with a caption AGENTS AUDITING AGENTS. Calm, architectural, legible labels. No logos, no people beyond schematic icons.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}
