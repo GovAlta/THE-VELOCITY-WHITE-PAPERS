@@ -3,7 +3,7 @@
     {
       "id": "cux4h",
       "num": "01",
-      "sequence": "1 of 7",
+      "sequence": "1 of 8",
       "tier": "Conceptual",
       "title": "The Two-Billion-Dollar Ship of Theseus",
       "subtitle": "Alberta's technical estate has outgrown the human capacity to manage it. AI provides a meaningful path forward to modernization at speed.",
@@ -12,7 +12,7 @@
         "Janak Alford",
         "Ministry of Technology and Innovation"
       ],
-      "published": "2026-04-08",
+      "published": "2026-06-16",
       "reading_min": 14,
       "status": "Published",
       "tags": [
@@ -34,7 +34,7 @@
     {
       "id": "mwo98",
       "num": "02",
-      "sequence": "2 of 7",
+      "sequence": "2 of 8",
       "tier": "Conceptual",
       "title": "The Cyber Imperative",
       "subtitle": "As external threats grow daily, AI-driven modernization will enable a stronger cybersecurity defense.",
@@ -43,7 +43,7 @@
         "Janak Alford",
         "Ministry of Technology and Innovation"
       ],
-      "published": null,
+      "published": "2026-06-16",
       "reading_min": 8,
       "status": "Published",
       "tags": [
@@ -65,7 +65,7 @@
     {
       "id": "bbkac",
       "num": "03",
-      "sequence": "3 of 7",
+      "sequence": "3 of 8",
       "tier": "Technical",
       "title": "Git Insights",
       "subtitle": "We pointed AI at the whole of Alberta's code estate to get the ground truth. Here is how it works and what it found.",
@@ -96,15 +96,16 @@
     {
       "id": "offjm",
       "num": "04",
-      "sequence": "4 of 7",
+      "sequence": "4 of 8",
       "tier": "Technical",
       "title": "Git Insights Ministry",
       "subtitle": "From knowing the estate to rebuilding it: synthesizing thousands of findings into one modular, government-owned architecture.",
       "track": "Defining the Problem",
       "authors": [
+        "Janak Alford",
         "Ministry of Technology and Innovation"
       ],
-      "published": null,
+      "published": "2026-06-16",
       "reading_min": 7,
       "status": "Published",
       "tags": [
@@ -126,15 +127,16 @@
     {
       "id": "zgym1",
       "num": "05",
-      "sequence": "5 of 7",
+      "sequence": "5 of 8",
       "tier": "Conceptual",
       "title": "The Four Approaches to AI Modernization",
       "subtitle": "From repairing one system at a time to dissolving the application altogether: the four routes by which a government rebuilds itself at speed.",
       "track": "Defining the Problem",
       "authors": [
+        "Janak Alford",
         "Ministry of Technology and Innovation"
       ],
-      "published": null,
+      "published": "2026-06-16",
       "reading_min": 12,
       "status": "Published",
       "tags": [
@@ -157,7 +159,7 @@
     {
       "id": "p7p2k",
       "num": "06",
-      "sequence": "6 of 7",
+      "sequence": "6 of 8",
       "tier": "Technical",
       "title": "The Well-Built Harness",
       "subtitle": "How the public service can build and ship enterprise-grade software at speed, without lowering the bar.",
@@ -167,8 +169,8 @@
         "Deputy Minister",
         "Technology and Innovation"
       ],
-      "published": "2026-07-15",
-      "reading_min": 30,
+      "published": "2026-06-16",
+      "reading_min": 16,
       "status": "Published",
       "tags": [
         "velocity",
@@ -192,7 +194,7 @@
     {
       "id": "l199t",
       "num": "07",
-      "sequence": "7 of 7",
+      "sequence": "7 of 8",
       "tier": "Technical",
       "title": "Red, Blue, Green, and Yellow Agents",
       "subtitle": "Four review agents, bundled into the harness, that check every application for quality, consistency, and security before it ships.",
@@ -200,7 +202,7 @@
       "authors": [
         "Ministry of Technology and Innovation"
       ],
-      "published": null,
+      "published": "2026-06-16",
       "reading_min": 10,
       "status": "Published",
       "tags": [
@@ -243,18 +245,17 @@
     {
       "id": "uwpxr",
       "num": "09",
-      "sequence": "",
+      "sequence": "8 of 8",
       "tier": "Technical",
       "title": "The AI Factory: Orchestration and Observation (Nexus)",
       "subtitle": "A secure cloud sandbox where agents work with autonomy, and every action stays observable and auditable as they go.",
       "track": "Engineering the Solution",
       "authors": [
-        "Janak Alford",
-        "Zoran Mijajlovic"
+        "Janak Alford and Zoran Mijajlovic"
       ],
-      "published": null,
+      "published": "2026-06-16",
       "reading_min": 15,
-      "status": "Draft",
+      "status": "Published",
       "tags": [
         "ai-factory",
         "nexus",

@@ -1,19 +1,18 @@
 {
   "id": "uwpxr",
   "num": "09",
-  "sequence": "",
+  "sequence": "8 of 8",
   "tier": "Technical",
   "category": "paper",
   "title": "The AI Factory: Orchestration and Observation (Nexus)",
   "subtitle": "A secure cloud sandbox where agents work with autonomy, and every action stays observable and auditable as they go.",
   "track": "Engineering the Solution",
   "authors": [
-    "Janak Alford",
-    "Zoran Mijajlovic"
+    "Janak Alford and Zoran Mijajlovic"
   ],
-  "published": null,
+  "published": "2026-06-16",
   "reading_min": 15,
-  "status": "Draft",
+  "status": "Published",
   "tags": [
     "ai-factory",
     "nexus",
@@ -57,8 +56,14 @@
         "visual": "compare",
         "caption": "Verify then trust",
         "visual_config": {
-          "left": { "label": "Give them latitude", "body": "Unbounded agents, free to choose their own path, find novel solutions and catch hidden bugs." },
-          "right": { "label": "Hold them to account", "body": "Every action is observed and logged. An output without evidence is not trusted." }
+          "left": {
+            "label": "Give them latitude",
+            "body": "Unbounded agents, free to choose their own path, find novel solutions and catch hidden bugs."
+          },
+          "right": {
+            "label": "Hold them to account",
+            "body": "Every action is observed and logged. An output without evidence is not trusted."
+          }
         },
         "text": "An agent is an AI given the latitude and the tools to choose its own next steps. The latest agents run for hours or days with little supervision. The balance Alberta strikes is to give them that autonomy while enforcing observability and an audit trail. We teach our staff to verify, then trust. An output that cannot show its work is not trusted, however good it looks."
       },
@@ -70,10 +75,22 @@
         "caption": "A virtual machine per developer",
         "visual_config": {
           "items": [
-            { "label": "A secure sandbox", "desc": "Each developer gets a cloud machine running any number of agents." },
-            { "label": "Built for the work", "desc": "A terminal, a browser, a file system, observability, and publishing controls." },
-            { "label": "Publish in one prompt", "desc": "An agent deploys an enterprise-grade app to the cloud from a single instruction." },
-            { "label": "Behind the wall", "desc": "Apps sit behind a private endpoint, reachable only on the government VPN." }
+            {
+              "label": "A secure sandbox",
+              "desc": "Each developer gets a cloud machine running any number of agents."
+            },
+            {
+              "label": "Built for the work",
+              "desc": "A terminal, a browser, a file system, observability, and publishing controls."
+            },
+            {
+              "label": "Publish in one prompt",
+              "desc": "An agent deploys an enterprise-grade app to the cloud from a single instruction."
+            },
+            {
+              "label": "Behind the wall",
+              "desc": "Apps sit behind a private endpoint, reachable only on the government VPN."
+            }
           ]
         },
         "text": "Nexus is a virtual environment in Google Cloud where each developer has their own machine and can run any number of agent instances in a secure sandbox. It comes with a terminal, a browser, a file system, observability, and publishing controls, with a security overlay on top. Agents act as first-class users of the cloud: a single instruction, publish this app, deploys it in minutes, behind a private endpoint reachable only on the government VPN."
@@ -86,10 +103,22 @@
         "caption": "What surrounds the agent",
         "visual_config": {
           "items": [
-            { "label": "Delegated access", "desc": "The agent acts on the user's behalf, with access that expires every few hours." },
-            { "label": "Ent Tools", "desc": "Search, voice, cloud APIs, open models, private compute, and more, through one gateway." },
-            { "label": "Bifrost gateway", "desc": "Detects and strips sensitive data, caps spend, and audits every outbound call." },
-            { "label": "Observability", "desc": "Developers watch their agents; admins audit every agent on every machine." }
+            {
+              "label": "Delegated access",
+              "desc": "The agent acts on the user's behalf, with access that expires every few hours."
+            },
+            {
+              "label": "Ent Tools",
+              "desc": "Search, voice, cloud APIs, open models, private compute, and more, through one gateway."
+            },
+            {
+              "label": "Bifrost gateway",
+              "desc": "Detects and strips sensitive data, caps spend, and audits every outbound call."
+            },
+            {
+              "label": "Observability",
+              "desc": "Developers watch their agents; admins audit every agent on every machine."
+            }
           ]
         },
         "text": "Around the agent sits a controlled supply of access. The agent works under delegated access that expires every few hours, so nothing it is granted is permanent. An enterprise tool suite called Ent Tools extends what it can reach, from search and voice to cloud APIs, open models, and a private compute cluster. A gateway called Bifrost detects and removes sensitive data, caps spend, and audits every outbound call. And observability lets a developer watch their own agents while administrators audit every agent on every machine."
@@ -120,13 +149,34 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "Setting the conditions for success" },
-    { "n": "02", "title": "Connecting the pieces is the hard part" },
-    { "n": "03", "title": "What is Nexus" },
-    { "n": "04", "title": "The expanded universe" },
-    { "n": "05", "title": "Nexus and the four approaches" },
-    { "n": "06", "title": "Enter the claw" },
-    { "n": "07", "title": "Expanding AI access" }
+    {
+      "n": "01",
+      "title": "Setting the conditions for success"
+    },
+    {
+      "n": "02",
+      "title": "Connecting the pieces is the hard part"
+    },
+    {
+      "n": "03",
+      "title": "What is Nexus"
+    },
+    {
+      "n": "04",
+      "title": "The expanded universe"
+    },
+    {
+      "n": "05",
+      "title": "Nexus and the four approaches"
+    },
+    {
+      "n": "06",
+      "title": "Enter the claw"
+    },
+    {
+      "n": "07",
+      "title": "Expanding AI access"
+    }
   ],
   "blocks": [
     {
