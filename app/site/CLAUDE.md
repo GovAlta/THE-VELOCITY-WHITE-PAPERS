@@ -114,6 +114,7 @@ The full schema for a paper JSON lives at the top of each `data/papers/<id>.en.j
     { "type": "pullquote", "text": "…", "cite": "…" },   // visible callout only; NOT read in the long-form audio narration
     { "type": "keystat", "label": "…", "value": "…", "body": "…" },
     { "type": "figure", "fno": "…", "title": "…", "caption": "…", "chart": { "kind": "mini-chart", … }, "image": { … } },
+    { "type": "youtube", "fno": "…", "title": "…", "caption": "…", "url": "https://youtu.be/…", "alt": "…" },
     { "type": "sidenote", "label": "…", "value": "…" },
     { "type": "tag_row", "tags": [] },
     { "type": "related" },

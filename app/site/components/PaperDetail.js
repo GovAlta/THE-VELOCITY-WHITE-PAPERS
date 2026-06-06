@@ -277,6 +277,7 @@
                     <button @click="edit.insertBlockAfter(i, 'keystat')">+ keystat</button>
                     <button @click="edit.insertBlockAfter(i, 'pullquote')">+ pullquote</button>
                     <button @click="edit.insertBlockAfter(i, 'image')">+ image</button>
+                    <button @click="edit.insertBlockAfter(i, 'youtube')">+ youtube</button>
                     <button @click="edit.insertBlockAfter(i, 'section_heading')">+ section</button>
                   </div>
                 </div>

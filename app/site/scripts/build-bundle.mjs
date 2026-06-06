@@ -46,6 +46,7 @@ const JS_FILES = [
   'components/PullQuote.js',
   'components/KeyStat.js',
   'components/Figure.js',
+  'components/YouTubeEmbed.js',
   'components/Table.js',
   'components/SideNote.js',
   'components/RelatedPapers.js',

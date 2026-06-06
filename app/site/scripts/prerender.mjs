@@ -56,6 +56,7 @@ function blocksToText(paper) {
       lines.push(String(b.text || '').replace(/<[^>]+>/g, ''));
     } else if (b.type === 'pullquote') lines.push('"' + (b.text || '') + '"' + (b.cite ? ' · ' + b.cite : ''));
     else if (b.type === 'keystat') lines.push((b.label || '') + ' ' + b.value + '. ' + (b.body || '').replace(/<[^>]+>/g, ''));
+    else if (b.type === 'youtube') lines.push([b.title, b.caption, b.url ? 'Video: ' + b.url : ''].filter(Boolean).join('. '));
     else if (b.type === 'sidenote') lines.push((b.label || 'Note') + '. ' + (b.value || ''));
   }
   return lines.join('\n\n').trim();

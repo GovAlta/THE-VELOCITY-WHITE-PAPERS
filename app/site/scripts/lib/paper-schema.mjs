@@ -3,7 +3,7 @@
 
 export const BLOCK_TYPES = [
   'section_heading', 'paragraph', 'dropcap_paragraph', 'pullquote',
-  'keystat', 'figure', 'table', 'sidenote', 'tag_row', 'related', 'presentation', 'audio',
+  'keystat', 'figure', 'youtube', 'table', 'sidenote', 'tag_row', 'related', 'presentation', 'audio',
 ];
 
 export const VISUALS = ['title', 'stat', 'list', 'quote', 'compare', 'image', 'chart', 'custom'];
@@ -17,6 +17,7 @@ export const BLOCK_SCHEMA_NOTE = [
   '- pullquote: { type, text, cite }',
   '- keystat: { type, label, value (short), body }',
   '- figure: { type, fno ("FIG. X.Y"), title, caption, image: { src:"", alt, image_prompt, style_kind:"diagram" } }',
+  '- youtube: { type, fno ("FIG. X.Y"), title, caption, url (standard, youtu.be, or embed URL), alt } (embeds a YouTube video; no image_prompt)',
   '- table: { type, title, columns: ["Col A", "Col B"], rows: [["a1","b1"],["a2","b2"]], caption, source } (for tabular facts)',
   '- sidenote: { type, label, value }',
   'Use real, source-grounded content. Where the source does not support something, write the literal marker [DRAFT GAP — needs source: ...] instead of inventing.',

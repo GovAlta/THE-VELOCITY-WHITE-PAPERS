@@ -8,6 +8,7 @@
      - pullquote         { text, cite }
      - keystat           { label, value, body }
      - figure            { fno, title, caption, chart, image }
+     - youtube           { fno, title, caption, url, alt }  (embeds a YouTube video)
      - sidenote          { label, value }
      - tag_row           { tags, label? }
      - related           {}  (uses paper.related from store)
@@ -65,6 +66,14 @@
                     :caption="block.caption || ''"
                     :chart="block.chart || null"
                     :image="block.image || null" />
+
+      <youtube-embed v-else-if="block.type === 'youtube'"
+                     :block="block"
+                     :fno="block.fno || 'FIG.'"
+                     :title="block.title || ''"
+                     :caption="block.caption || ''"
+                     :url="block.url || ''"
+                     :alt="block.alt || ''" />
 
       <data-table v-else-if="block.type === 'table'"
                   :block="block"

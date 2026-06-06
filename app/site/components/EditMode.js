@@ -190,6 +190,13 @@
           image: { src: '', alt: '', image_prompt: 'Describe the image to generate, the way you would brief an illustrator. Name every object and its position.', style_kind: 'diagram' },
         };
       }
+      if (type === 'youtube') {
+        return {
+          type: 'youtube', fno: 'FIG.', title: '',
+          caption: 'New caption. Describe what the video shows.',
+          url: '', alt: '',
+        };
+      }
       if (type === 'section_heading') return { type: 'section_heading', n: '00', title: 'New section' };
       if (type === 'keystat') return { type: 'keystat', label: 'New label', value: '00', body: 'Explain the number in a sentence.' };
       if (type === 'pullquote') return { type: 'pullquote', text: 'New pull quote.', cite: '' };
