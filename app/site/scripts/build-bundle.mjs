@@ -51,6 +51,7 @@ const JS_FILES = [
   'components/RelatedPapers.js',
   'components/TagRow.js',
   'components/AudioPlayer.js',
+  'components/FloatingAudio.js',
   'components/ImageInspector.js',
   'components/PresentationStage.js',
   'components/PresentationPlayer.js',

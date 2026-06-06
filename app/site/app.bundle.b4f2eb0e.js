@@ -167,7 +167,7 @@
   
   V.setSitePage = function (pageId, pageTitle, descriptionOverride) {
     const d = siteDefaults();
-    const title = pageTitle ? (pageTitle + ' — ' + d.title) : d.title;
+    const title = pageTitle ? (pageTitle + ' · ' + d.title) : d.title;
     const desc = descriptionOverride || d.description;
     const url  = SITE_URL_BASE + '/#/' + (pageId === 'library' ? '' : pageId);
 
@@ -205,7 +205,7 @@
     if (!paper) return V.clear();
     const d = siteDefaults();
     const url = SITE_URL_BASE + '/#/paper/' + paper.id;
-    const title = paper.title + ' — ' + d.title;
+    const title = paper.title + ' · ' + d.title;
     const desc  = paper.abstract || paper.subtitle || '';
 
     document.title = title;
@@ -701,12 +701,23 @@
 
   window.VWComponents['app-footer'] = {
     setup() { return { store: window.VWStore }; },
+    computed: {
+      
+      papersCount() {
+        return (this.store.papers || [])
+          .filter(p => p.category !== 'architecture' && /^\d+$/.test(String(p.num))).length;
+      },
+      primaryBody() {
+        const tpl = (this.store.t.footer && this.store.t.footer.primary && this.store.t.footer.primary.body) || '';
+        return tpl.replace('{n}', this.papersCount);
+      },
+    },
     template: `
       <footer class="civic-footer" v-if="store.t && store.t.footer">
         <div>
           <div class="smallcaps">{{ store.t.footer.smallcaps }}</div>
           <h2>{{ store.t.footer.primary.heading }}</h2>
-          <p>{{ store.t.footer.primary.body }}</p>
+          <p>{{ primaryBody }}</p>
         </div>
         <div v-for="col in store.t.footer.columns" :key="col.heading">
           <h2>{{ col.heading }}</h2>
@@ -982,6 +993,17 @@
         get() { return (this.paper.tags || []).join(', '); },
         set(v) { this.paper.tags = v.split(',').map((s) => s.trim()).filter(Boolean); this.touch(); },
       },
+      
+      authorsCsv: {
+        get() { return (this.paper.authors || []).join(' · '); },
+        set(v) { this.paper.authors = v.split(/\s*[·,]\s*/).map((s) => s.trim()).filter(Boolean); this.touch(); },
+      },
+      
+      tocSections() {
+        return (this.paper.blocks || [])
+          .filter((b) => b && b.type === 'section_heading')
+          .map((b) => ({ n: b.n, title: b.title }));
+      },
     },
     methods: {
       scrollToSection(n) {
@@ -1039,7 +1061,7 @@
           </button>
           <div class="toc-head" id="toc-head" aria-hidden="true">{{ (store.t.ui && store.t.ui.contents) || 'Contents' }}</div>
           <ol class="toc-items" role="list" aria-labelledby="toc-head">
-            <li v-for="(s, i) in paper.sections" :key="s.n"
+            <li v-for="(s, i) in tocSections" :key="'toc-' + i"
                 :class="{ 'vw-toc-drag': edit && edit.enabled }"
                 :draggable="edit && edit.enabled ? 'true' : 'false'"
                 @dragstart="onSecDragStart(i, $event)"
@@ -1114,6 +1136,8 @@
                 <label>Category<select v-model="paper.category" @change="touch()"><option>paper</option><option>architecture</option></select></label>
                 <label>Repo<input v-model="paper.repo" @input="touch()" placeholder="https://github.com/…" /></label>
               </div>
+              <label class="vw-meta-tags">Authors (separate with · or comma)<input v-model="authorsCsv" /></label>
+              <label class="vw-meta-tags">Track<input v-model="paper.track" @input="touch()" placeholder="Defining the Problem / Engineering the Solution" /></label>
               <label class="vw-meta-tags">Tags (comma-separated)<input v-model="tagsCsv" /></label>
               <div class="vw-muted">Editing the paper metadata. Saving updates this paper and syncs the index (papers.json).</div>
             </div>
@@ -1178,50 +1202,6 @@
           </div>
         </section>
       </article>
-    `,
-  };
-})();
-
-(function () {
-  window.VWComponents = window.VWComponents || {};
-
-  window.VWComponents['architecture-diagram'] = {
-    props: { arch: { type: Object, required: true } },
-    methods: {
-      agentsForLayer(layerId) {
-        return (this.arch.agents || []).filter(a => a.layer === layerId);
-      },
-      classFor(a) {
-        return 'arch-agent ' + (a.cls || 'autonomous');
-      },
-    },
-    template: `
-      <section role="region" aria-labelledby="arch-diagram-title">
-        <h2 id="arch-diagram-title" class="sr-only">Seven-layer agentic architecture</h2>
-        <ul class="arch-legend" role="list" aria-label="Agent class legend">
-          <li class="item"><span class="stripe" aria-hidden="true" style="background:var(--accent)"></span> Autonomous</li>
-          <li class="item"><span class="stripe" aria-hidden="true" style="background:var(--ok)"></span> Verifier</li>
-          <li class="item"><span class="stripe" aria-hidden="true" style="background:var(--highlight)"></span> Human-gated · Ledger</li>
-        </ul>
-        <ol class="arch-rows" role="list">
-          <li class="arch-row" v-for="(layer, i) in arch.layers" :key="layer.id"
-              :aria-label="'Layer ' + (i + 1) + ': ' + layer.label">
-            <div class="label-cell">
-              <div class="l-num" aria-hidden="true">L{{ String(i + 1).padStart(2, '0') }}</div>
-              <h3 class="l-name">{{ layer.label }}</h3>
-              <div class="l-sub">{{ layer.sub }}</div>
-            </div>
-            <ul class="agents-cell" role="list" :aria-label="layer.label + ' agents'">
-              <li v-for="a in agentsForLayer(layer.id)" :key="a.id"
-                  :class="classFor(a)"
-                  :aria-label="a.label + ', ' + (a.cls || 'autonomous') + ', ' + a.throughput">
-                <div class="a-name">{{ a.label }}</div>
-                <div class="a-throughput" aria-hidden="true">{{ a.throughput }}</div>
-              </li>
-            </ul>
-          </li>
-        </ol>
-      </section>
     `,
   };
 })();
@@ -1367,11 +1347,11 @@
       <blockquote class="pullquote">
         <template v-if="block">
           <editable-text tag="span" :obj="block" field="text" />
-          <div class="cite" v-if="editing || block.cite">— <editable-text tag="span" :obj="block" field="cite" /></div>
+          <div class="cite" v-if="editing || block.cite">· <editable-text tag="span" :obj="block" field="cite" /></div>
         </template>
         <template v-else>
           {{ text }}
-          <div class="cite" v-if="cite">— {{ cite }}</div>
+          <div class="cite" v-if="cite">· {{ cite }}</div>
         </template>
       </blockquote>
     `,
@@ -1616,35 +1596,50 @@
 
   window.VWComponents['related-papers'] = {
     props: {
-      ids: { type: Array, default: () => [] },
+      current: { type: String, default: '' },   
     },
     emits: ['open'],
     setup() {
       return { store: window.VWStore };
     },
     computed: {
-      papers() {
-        return (this.ids || [])
-          .map(id => this.store.paperById[id])
-          .filter(Boolean);
+      ordered() {
+        return (this.store.papers || []).slice().sort((a, b) =>
+          String(a.num || '').localeCompare(String(b.num || ''), undefined, { numeric: true }));
       },
+      idx() { return this.ordered.findIndex((p) => p.id === this.current); },
+      prev() { return this.idx > 0 ? this.ordered[this.idx - 1] : null; },
+      next() { return (this.idx > -1 && this.idx < this.ordered.length - 1) ? this.ordered[this.idx + 1] : null; },
+      fr() { return this.store.locale === 'fr'; },
     },
-    methods: {},
     template: `
-      <section class="cd-related" v-if="papers.length"
-               :aria-label="store.locale === 'fr' ? 'À lire ensuite' : 'Read next'">
-        <div class="lbl" aria-hidden="true">{{ store.locale === 'fr' ? 'À lire ensuite' : 'Read next' }}</div>
-        <div class="grid">
-          <a v-for="p in papers" :key="p.id"
-             :href="'#/paper/' + p.id"
-             class="tile"
-             :aria-label="(store.locale === 'fr' ? 'Livre ' : 'Paper ') + p.num + ', ' + p.title + ', ' + p.tier"
-             @click.prevent="$emit('open', p.id)">
-            <div class="ref" aria-hidden="true">№ {{ p.num }} · {{ p.tier }}</div>
-            <h4>{{ p.title }}</h4>
-          </a>
-        </div>
-      </section>
+      <nav class="cd-pager" :aria-label="fr ? 'Navigation entre les articles' : 'Article navigation'">
+        <a v-if="prev" class="cd-pager-link prev" :href="'#/paper/' + prev.id"
+           @click.prevent="$emit('open', prev.id)"
+           :aria-label="(fr ? 'Précédent : ' : 'Previous: ') + prev.title">
+          <span class="dir" aria-hidden="true">{{ fr ? '← Précédent' : '← Previous' }}</span>
+          <span class="ref" aria-hidden="true">№ {{ prev.num }} · {{ prev.tier }}</span>
+          <span class="t">{{ prev.title }}</span>
+        </a>
+        <a v-else class="cd-pager-link prev is-home" href="#/"
+           :aria-label="fr ? 'Retour à la bibliothèque' : 'Back to the library'">
+          <span class="dir" aria-hidden="true">{{ fr ? '← Accueil' : '← Home' }}</span>
+          <span class="t">{{ fr ? 'La bibliothèque' : 'The library' }}</span>
+        </a>
+
+        <a v-if="next" class="cd-pager-link next" :href="'#/paper/' + next.id"
+           @click.prevent="$emit('open', next.id)"
+           :aria-label="(fr ? 'Suivant : ' : 'Next: ') + next.title">
+          <span class="dir" aria-hidden="true">{{ fr ? 'Suivant →' : 'Next →' }}</span>
+          <span class="ref" aria-hidden="true">№ {{ next.num }} · {{ next.tier }}</span>
+          <span class="t">{{ next.title }}</span>
+        </a>
+        <a v-else class="cd-pager-link next is-home" href="#/"
+           :aria-label="fr ? 'Retour à la bibliothèque' : 'Back to the library'">
+          <span class="dir" aria-hidden="true">{{ fr ? 'Accueil →' : 'Home →' }}</span>
+          <span class="t">{{ fr ? 'La bibliothèque' : 'The library' }}</span>
+        </a>
+      </nav>
     `,
   };
 })();
@@ -1665,6 +1660,8 @@
     `,
   };
 })();
+
+
 
 (function () {
   window.VWComponents = window.VWComponents || {};
@@ -1755,6 +1752,77 @@
           <span class="vw-gen-hint">runs via <code>npm run edit</code></span>
           <span v-if="msg" class="vw-muted">{{ msg }}</span>
         </div>
+      </div>
+    `,
+  };
+})();
+
+(function () {
+  window.VWComponents = window.VWComponents || {};
+
+  function isNarration(el) {
+    return el && el.tagName === 'AUDIO' && typeof el.closest === 'function' && el.closest('.audio-block');
+  }
+
+  window.VWComponents['floating-audio'] = {
+    data() { return { audioEl: null, visible: false, playing: false }; },
+    watch: {
+      
+      visible(v) { document.body.classList.toggle('vw-narration-fab', !!v); },
+    },
+    mounted() {
+      this._onPlay  = (e) => this.onActivity(e, true);
+      this._onPause = (e) => this.onActivity(e, false);
+      this._onEnded = (e) => { if (e.target === this.audioEl) this.playing = false; };
+      this._onHash  = () => this.reset();
+      
+      document.addEventListener('play',  this._onPlay,  true);
+      document.addEventListener('pause', this._onPause, true);
+      document.addEventListener('ended', this._onEnded, true);
+      window.addEventListener('hashchange', this._onHash);
+    },
+    beforeUnmount() {
+      document.removeEventListener('play',  this._onPlay,  true);
+      document.removeEventListener('pause', this._onPause, true);
+      document.removeEventListener('ended', this._onEnded, true);
+      window.removeEventListener('hashchange', this._onHash);
+      document.body.classList.remove('vw-narration-fab');
+    },
+    methods: {
+      
+      onActivity(e, playing) {
+        if (!isNarration(e.target)) return;
+        this.audioEl = e.target;
+        this.playing = playing;
+        this.visible = true;
+      },
+      toggle() {
+        const a = this.audioEl;
+        if (!a || !a.isConnected) return;
+        if (a.paused) { a.play().catch(() => {}); } else { a.pause(); }
+      },
+      close() { this.visible = false; },
+      reset() { this.visible = false; this.playing = false; this.audioEl = null; },
+    },
+    template: `
+      <div class="vw-fab-audio"
+           v-if="visible && audioEl" role="group" aria-label="Narration controls">
+        <button type="button" class="vw-fab-btn vw-fab-toggle" @click="toggle"
+                :aria-label="playing ? 'Pause narration' : 'Play narration'"
+                :aria-pressed="playing ? 'true' : 'false'">
+          <svg v-if="playing" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+            <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+          </svg>
+          <svg v-else viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path d="M8 5.5v13l11-6.5z"></path>
+          </svg>
+        </button>
+        <button type="button" class="vw-fab-btn vw-fab-close" @click="close" aria-label="Hide narration controls">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"></path>
+          </svg>
+        </button>
       </div>
     `,
   };
@@ -1972,6 +2040,8 @@
     `,
   };
 })();
+
+
 
 (function () {
   window.VWComponents = window.VWComponents || {};
@@ -2483,7 +2553,7 @@
                :tags="block.tags || []" />
 
       <related-papers v-else-if="block.type === 'related'"
-                      :ids="paper.related || []"
+                      :current="paper.id"
                       @open="$emit('open', $event)" />
 
       <audio-player v-else-if="block.type === 'audio'"
@@ -2923,6 +2993,10 @@
       this.saving = true;
       this.status = 'Saving ' + path + '…';
       try {
+        
+        
+        
+        this.rebuildSections();
         const res = await fetch('/api/save-json', {
           method: 'POST', headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ path, content: this._clean(this.current) }),
@@ -3691,7 +3765,11 @@
       },
       published() { return this.papers.filter(p => p.status === 'Published'); },
       
-      featured() { return this.published.length ? this.published : this.papers.slice(0, 2); },
+      featured() {
+        return this.papers.slice()
+          .sort((a, b) => String(a.num || '').localeCompare(String(b.num || ''), undefined, { numeric: true }))
+          .slice(0, 3);
+      },
       
       rest() { return this.papers.filter(p => p.status === 'Published' || p.status === 'Forthcoming'); },
       seriesMeta() {
@@ -3726,41 +3804,22 @@
             <span class="dot"></span>
             <span>{{ store.t.publisher }}</span>
             <span>·</span>
-            <span>Open source · MIT</span>
+            <a class="oss-link" href="https://github.com/GovAlta/the-velocity-white-papers"
+               target="_blank" rel="noopener">Open source · MIT</a>
           </div>
-          <h1>
-            {{ store.t.hero.h1_pre }} <em>{{ store.t.hero.h1_em_1 }}</em>
-            {{ store.t.hero.h1_mid }} <em>{{ store.t.hero.h1_em_2 }}</em>
-          </h1>
-          <p class="lede">{{ store.t.tagline }}</p>
+          <h1 v-html="store.t.hero.title"></h1>
+          <p class="lede">{{ store.t.hero.subtitle }}</p>
         </section>
 
         <stat-rail :stats="stats" />
 
         <section class="civic-section">
           <div class="head">
-            <h2>{{ store.t.section_titles.featured }}</h2>
-            <div class="meta">{{ store.t.section_titles.featured_meta }}</div>
+            <h2>{{ store.t.section_titles.about }}</h2>
           </div>
         </section>
-        <div class="civic-featured">
-          <a v-for="p in featured" :key="p.id"
-             :href="'#/paper/' + p.id"
-             class="cell"
-             :aria-label="'Paper ' + p.num + ', ' + paperTitle(p) + ', ' + p.tier"
-             @click.prevent="open(p.id)">
-            <div class="top" aria-hidden="true">
-              <span class="num">№ {{ p.num }}</span>
-              <span>{{ p.tier }}</span>
-            </div>
-            <h3>{{ paperTitle(p) }}</h3>
-            <div class="sub">{{ paperSubtitle(p) }}</div>
-            <div class="meta" aria-hidden="true">
-              <span>{{ p.status }}</span>
-              <span v-if="p.reading_min">{{ p.reading_min }} {{ store.t.ui.min }}</span>
-              <span v-if="p.repo">repo ✓</span>
-            </div>
-          </a>
+        <div class="civic-about">
+          <p v-for="(para, i) in (store.t.about_body || [])" :key="'about-' + i">{{ para }}</p>
         </div>
 
         <section class="civic-section">
@@ -3802,67 +3861,6 @@
       </div>
       <div v-else style="padding:80px 56px;color:var(--ink-50);font-family:var(--font-mono);font-size:12px;">
         Loading the index…
-      </div>
-    `,
-  };
-})();
-
-(function () {
-  window.VWComponents = window.VWComponents || {};
-
-  window.VWComponents['architecture-page'] = {
-    emits: ['navigate'],
-    data() { return { arch: null, error: null }; },
-    setup() { return { store: window.VWStore }; },
-    async mounted() {
-      try {
-        const res = await fetch('data/architecture.json', { cache: 'no-cache' });
-        if (!res.ok) throw new Error('Failed to load architecture.json');
-        this.arch = await res.json();
-      } catch (e) { this.error = e.message; }
-    },
-    computed: {
-      architectureArticles() {
-        return (this.store.papers || []).filter(p => p.category === 'architecture');
-      },
-    },
-    methods: {
-      open(id) { this.$emit('navigate', { page: 'paper', id }); },
-    },
-    template: `
-      <div>
-        <section class="civic-hero">
-          <div class="civic-eyebrow">
-            <span class="dot"></span>
-            <span>The agentic architecture</span>
-            <span>·</span>
-            <span>Reference topology + knowledge articles</span>
-          </div>
-          <h1>The work, in <em>seven layers</em>.</h1>
-          <p class="lede">The path runs from discovery to deployment, with autonomous agents inside each layer and human-gated steps where the cost of a mistake is highest. Below the diagram sits a small library of architecture articles. These are technical specifications that fall outside the linear reading sequence, read on demand.</p>
-        </section>
-
-        <div v-if="arch">
-          <architecture-diagram :arch="arch" />
-        </div>
-        <div v-else-if="error" style="padding:60px 56px;color:var(--highlight);font-family:var(--font-mono);">
-          {{ error }}
-        </div>
-        <div v-else style="padding:60px 56px;color:var(--ink-50);font-family:var(--font-mono);font-size:12px;">
-          Loading the architecture…
-        </div>
-
-        <section class="civic-section" v-if="architectureArticles.length">
-          <div class="head">
-            <h2>Architecture articles</h2>
-            <div class="meta">{{ architectureArticles.length }} entries · technical reference</div>
-          </div>
-        </section>
-        <library-grid v-if="architectureArticles.length"
-                      :papers="architectureArticles"
-                      @open="open" />
-
-        <app-footer />
       </div>
     `,
   };
@@ -4398,14 +4396,14 @@
           </div>
           <h1>{{ store.locale === 'fr' ? 'Cette page' : 'This page' }} <em>{{ store.locale === 'fr' ? "n'existe pas." : 'does not exist.' }}</em></h1>
           <p class="lede">{{ store.locale === 'fr'
-            ? "Le chemin demandé n'est pas dans la collection. La bibliothèque, l'index et la page d'architecture sont les bons points de départ."
-            : 'The requested path is not in this collection. The library, the index, and the architecture page are good places to start.' }}</p>
+            ? "Le chemin demandé n'est pas dans la collection. La bibliothèque et l'index sont les bons points de départ."
+            : 'The requested path is not in this collection. The library and the index are good places to start.' }}</p>
         </section>
 
         <section class="civic-section">
           <div class="head">
             <h2>{{ store.locale === 'fr' ? 'Où aller' : 'Where to go' }}</h2>
-            <div class="meta">{{ store.locale === 'fr' ? 'quatre raccourcis' : 'four shortcuts' }}</div>
+            <div class="meta">{{ store.locale === 'fr' ? 'trois raccourcis' : 'three shortcuts' }}</div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-bottom:24px;">
             <a href="#/" class="civic-card" style="text-decoration:none;cursor:pointer;">
@@ -4415,10 +4413,6 @@
             <a href="#/index" class="civic-card" style="text-decoration:none;cursor:pointer;">
               <div class="head" aria-hidden="true"><span class="num">→</span><span>{{ store.locale === 'fr' ? 'Index' : 'Index' }}</span></div>
               <h3>{{ store.locale === 'fr' ? 'Recherche dans la collection' : 'Search the collection' }}</h3>
-            </a>
-            <a href="#/architecture" class="civic-card" style="text-decoration:none;cursor:pointer;">
-              <div class="head" aria-hidden="true"><span class="num">→</span><span>Architecture</span></div>
-              <h3>{{ store.locale === 'fr' ? 'Diagramme et articles techniques' : 'Diagram and technical articles' }}</h3>
             </a>
             <a href="#/glossary" class="civic-card" style="text-decoration:none;cursor:pointer;">
               <div class="head" aria-hidden="true"><span class="num">→</span><span>{{ store.locale === 'fr' ? 'Glossaire' : 'Glossary' }}</span></div>
@@ -4552,7 +4546,6 @@
     const parts = h.split('/').filter(Boolean);
     if (parts.length === 0) return { page: 'library', paperId: null };
     if (parts[0] === 'index')        return { page: 'index',        paperId: null };
-    if (parts[0] === 'architecture') return { page: 'architecture', paperId: null };
     if (parts[0] === 'about')        return { page: 'about',        paperId: null };
     if (parts[0] === 'manual')       return { page: 'manual',       paperId: null };
     if (parts[0] === 'glossary')     return { page: 'glossary',     paperId: null };
@@ -4573,7 +4566,6 @@
         switch (route.value.page) {
           case 'library':       return 'library-page';
           case 'index':         return 'index-page';
-          case 'architecture':  return 'architecture-page';
           case 'about':         return 'about-page';
           case 'manual':        return 'manual-page';
           case 'glossary':      return 'glossary-page';
@@ -4602,7 +4594,6 @@
           const pageTitles = {
             library:      null,
             index:        'Index',
-            architecture: 'Architecture',
             about:        'About',
             manual:       'Manual',
             glossary:     'Glossary',
