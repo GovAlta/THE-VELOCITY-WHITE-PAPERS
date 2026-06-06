@@ -6,6 +6,7 @@
   right: 16px;
   bottom: 16px;
   z-index: 9000;
+  transition: bottom 160ms ease;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -19,6 +20,24 @@
   font-family: var(--font-mono, monospace);
   font-size: 12px;
   max-width: min(880px, calc(100vw - 32px));
+}
+
+/* When the floating narration control is showing (bottom-right), lift the
+   editor toolbar above it so the edit button is never covered. The body class
+   is toggled by components/FloatingAudio.js. On desktop the section-nav (TOC)
+   button is hidden, so the toolbar only needs to clear the audio control. */
+body.vw-narration-fab .vw-edit-toolbar {
+  bottom: calc(80px + var(--safe-bottom, 0px));
+}
+/* On mobile the TOC button is visible and sits at 80px, so the toolbar rises
+   above it — audio control, then TOC, then toolbar, stacked top to bottom. */
+@media (max-width: 900px) {
+  body.vw-narration-fab .vw-edit-toolbar {
+    bottom: calc(140px + var(--safe-bottom, 0px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vw-edit-toolbar { transition: none; }
 }
 
 .vw-edit-btn {

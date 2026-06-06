@@ -76,6 +76,7 @@
   <script defer src="components/RelatedPapers.js"></script>
   <script defer src="components/TagRow.js"></script>
   <script defer src="components/AudioPlayer.js"></script>
+  <script defer src="components/FloatingAudio.js"></script>
   <script defer src="components/ImageInspector.js"></script>
   <script defer src="components/PresentationStage.js"></script>
   <script defer src="components/PresentationPlayer.js"></script>
@@ -116,6 +117,8 @@
     <div id="vw-announce" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
     <!-- Global keyboard shortcuts dialog (press "?" to open) -->
     <keyboard-shortcuts></keyboard-shortcuts>
+    <!-- Page-level quick control for the long-form narration (play/pause/close). -->
+    <floating-audio></floating-audio>
     <!-- Dev-only editor toolbar + panels; render only when the edit-server enables editing. -->
     <edit-toolbar></edit-toolbar>
     <vw-guides-panel></vw-guides-panel>

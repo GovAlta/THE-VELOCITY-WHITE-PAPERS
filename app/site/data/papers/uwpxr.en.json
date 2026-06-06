@@ -252,7 +252,7 @@
     },
     {
       "type": "paragraph",
-      "text": "It also integrates with a suite called Ent Tools, our enterprise tools, which extend the capability of any agent. We have Brave Search, ElevenLabs, all of the API endpoints for the major cloud providers, open-source models, and a private compute cluster. We have a series of other open APIs: time, weather, and news. We have social media integration so that an agent can tap into real-time information about the world. And we have enterprise tools being built out to support SharePoint, ServiceNow, and OneGX ERP integrations. Through single sign-on, the user can delegate their access into these. We will expand it into the Microsoft 365 space in the near future, so a user can delegate Teams, email, calendar, and other access."
+      "text": "It also integrates with a suite called Ent Tools, our enterprise tools, which extend the capability of any agent. We have Brave Search, ElevenLabs, all of the API endpoints for the major cloud providers, open-source models, and a private compute cluster. We have a series of other open APIs: time, weather, and news. We have social media integration so that an agent can tap into real-time information about the world. And we have enterprise tools being built out to support SharePoint, ServiceNow, and 1GX ERP integrations. Through single sign-on, the user can delegate their access into these. We will expand it into the Microsoft 365 space in the near future, so a user can delegate Teams, email, calendar, and other access."
     },
     {
       "type": "figure",
@@ -262,7 +262,7 @@
       "image": {
         "src": "public/images/uwpxr/en/fig-9-3.jpg",
         "alt": "A hand-drawn hub-and-spoke diagram: a robot agent connects through an SSO key into a central box labelled Ent Tools, enterprise gateway, with labelled spokes to Brave Search, ElevenLabs, Cloud Provider APIs, Open-source Models, Private Compute, Time Weather News, and Social Media, plus a dashed cluster labelled coming soon holding SharePoint, ServiceNow, OneGX ERP, and Microsoft 365.",
-        "image_prompt": "An editorial hub-and-spoke diagram on warm cream paper, deep navy line work with small rust accents. A central rounded box labelled ENT TOOLS, ENTERPRISE GATEWAY, with a small key icon labelled SSO at its left entrance. A single robot icon labelled AGENT connects to the key from the left. From the gateway, labelled spokes fan out to small boxes: BRAVE SEARCH, ELEVENLABS, CLOUD PROVIDER APIs, OPEN-SOURCE MODELS, PRIVATE COMPUTE, TIME WEATHER NEWS, and SOCIAL MEDIA. Below, a separate dashed-outline cluster labelled COMING SOON holds four small boxes: SHAREPOINT, SERVICENOW, ONEGX ERP, MICROSOFT 365. Calm, architectural, legible labels. No logos, no people.",
+        "image_prompt": "An editorial hub-and-spoke diagram on warm cream paper, deep navy line work with small rust accents. A central rounded box labelled ENT TOOLS, ENTERPRISE GATEWAY, with a small key icon labelled SSO at its left entrance. A single robot icon labelled AGENT connects to the key from the left. From the gateway, labelled spokes fan out to small boxes: BRAVE SEARCH, ELEVENLABS, CLOUD PROVIDER APIs, OPEN-SOURCE MODELS, PRIVATE COMPUTE, TIME WEATHER NEWS, and SOCIAL MEDIA. Below, a separate dashed-outline cluster labelled COMING SOON holds four small boxes: SHAREPOINT, SERVICENOW, 1GX ERP, MICROSOFT 365. Calm, architectural, legible labels. No logos, no people.",
         "style_kind": "diagram"
       }
     },

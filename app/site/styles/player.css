@@ -484,3 +484,63 @@
 
 /* Image-inspector bottom sheet — honor iOS home-indicator safe area */
 .img-inspector-panel { padding-bottom: max(12px, var(--safe-bottom, 0px)); }
+
+/* Floating narration control — page-level quick play/pause/close for the
+   long-form narration. Fixed bottom-right; sits below modals (9500) and, in
+   edit mode, lifts above the editor toolbar (9000 at bottom:16px) so the edit
+   button stays visible. */
+.vw-fab-audio {
+  position: fixed;
+  right: calc(16px + var(--safe-right, 0px));
+  bottom: calc(16px + var(--safe-bottom, 0px));
+  z-index: 8000;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  background: var(--paper, #F7F4ED);
+  border: 1px solid var(--rule-strong, #B8AE99);
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(11, 12, 15, 0.22);
+  animation: vw-fab-in 160ms ease-out;
+}
+
+.vw-fab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;          /* never let flex shrink the circle into an oval */
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent, #1A3A6E);
+  padding: 0;
+  line-height: 0;
+}
+.vw-fab-btn svg { display: block; }
+.vw-fab-toggle { background: var(--accent, #1A3A6E); color: var(--paper, #F7F4ED); }
+.vw-fab-toggle svg { fill: currentColor; }
+.vw-fab-toggle:hover { background: var(--accent-soft, #2E5A9E); }
+.vw-fab-close { color: var(--ink-50, #5E5F66); }
+.vw-fab-close:hover { color: var(--ink, #0B0C0F); background: var(--paper-alt, #EFEAD9); }
+
+@keyframes vw-fab-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vw-fab-audio { animation: none; }
+  .civic-detail .toc-fab { transition: none; }
+}
+
+/* While the narration control occupies the bottom-right corner, lift the
+   mobile section-navigation (TOC) button above it so the two never overlap.
+   Higher specificity (body + two classes) wins over the breakpoint overrides. */
+body.vw-narration-fab .civic-detail .toc-fab {
+  bottom: calc(80px + var(--safe-bottom, 0px));
+}

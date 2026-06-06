@@ -1,0 +1,17 @@
+{
+  "paper_id": "qthji",
+  "locale": "en",
+  "slot": "fig-mq1i9ir3",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. Wide cover aspect. The only text permitted in the entire image is three short hand-lettered label words; render no other writing of any kind. No logos.",
+  "image_prompt": "A fine-art editorial illustration: a single anatomically correct pronghorn antelope standing in profile on the open Alberta prairie, with exactly four legs (two near, two far), deep navy pen-and-ink line work with small rust-coloured accents on warm cream paper, rolling foothills and tufts of prairie grass around it, like a hand-drawn book plate. Exactly three short hand-lettered labels appear in the open sky around the animal, in clean navy sans-serif, each joined to it by a thin rust leader line, reading word-for-word: \"Fast\", \"Far-sighted\", \"High endurance\". Those three labels are the only writing anywhere in the image. Do not add any other words, sentences, facts, statistics, numbers, captions, headings, legends, boxes, or arrows. No people, no logos.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. Wide cover aspect. The only text permitted in the entire image is three short hand-lettered label words; render no other writing of any kind. No logos.\n\nSubject: A fine-art editorial illustration: a single anatomically correct pronghorn antelope standing in profile on the open Alberta prairie, with exactly four legs (two near, two far), deep navy pen-and-ink line work with small rust-coloured accents on warm cream paper, rolling foothills and tufts of prairie grass around it, like a hand-drawn book plate. Exactly three short hand-lettered labels appear in the open sky around the animal, in clean navy sans-serif, each joined to it by a thin rust leader line, reading word-for-word: \"Fast\", \"Far-sighted\", \"High endurance\". Those three labels are the only writing anywhere in the image. Do not add any other words, sentences, facts, statistics, numbers, captions, headings, legends, boxes, or arrows. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-06T00:11:21.032Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 330385,
+  "bytes_png_source": 3620790,
+  "generated_by": "gen-image.mjs"
+}

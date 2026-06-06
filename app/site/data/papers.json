@@ -228,18 +228,32 @@
       "sequence": "",
       "tier": "Technical",
       "title": "The AI Factory: Design and Ideation (Pronghorn)",
-      "subtitle": "Turning a requirement into a working design.",
+      "subtitle": "Project Pronghorn is the first of the factory's three stages. AI tools translate Ministry requirements into prototypes, artifacts, visual canvases, and project artifacts before the build process begins.",
       "track": "Engineering the Solution",
       "authors": [
+        "Janak Alford",
         "Ministry of Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 17,
       "status": "Draft",
-      "tags": [],
-      "repo": null,
-      "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
-      "related": [],
+      "tags": [
+        "ai-factory",
+        "pronghorn",
+        "design",
+        "requirements",
+        "canvas",
+        "architecture",
+        "open-source"
+      ],
+      "repo": "https://github.com/pronghorn-red/pronghorn",
+      "abstract": "A quality AI-built application requires the presence of clearly defined requirements, standards, and architectures. These essential artifacts are often skipped in the AI-enabled development process as staff often move immediately into creating the user experience components of an application, leaving significant security and technical decisions to the AI. Without clear direction, AI agents frequently omit essential functions and controls. Alberta built Project Pronghorn to enable technical and non-technical staff to collaborate to define clear assumptions, working prototypes, business requirements, and an interactive architecture design canvas. These artifacts start off AI-based delivery on the right foot and enforce consistency throughout while providing a benchmark to assess the final product.",
+      "related": [
+        "uwpxr",
+        "k3tc3",
+        "zgym1",
+        "p7p2k"
+      ],
       "category": "paper"
     },
     {

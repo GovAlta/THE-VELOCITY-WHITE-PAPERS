@@ -1,0 +1,17 @@
+{
+  "paper_id": "qthji",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\qthji\\en\\fig-8-2.jpg",
+  "bytes_jpg": 152578,
+  "bytes_png_source": 2483863,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-05T23:32:25.118Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial tree diagram on warm cream paper, deep navy line work with small rust accents, branching top to bottom in four clear tiers. At the top, one box labelled EPIC. Lines down to a row of three boxes labelled FEATURE. From each feature, lines to smaller boxes labelled USER STORY. From each user story, lines to small tags labelled ACCEPTANCE CRITERIA. The four tiers are clearly separated and labelled at the left edge EPICS, FEATURES, USER STORIES, ACCEPTANCE CRITERIA. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial tree diagram on warm cream paper, deep navy line work with small rust accents, branching top to bottom in four clear tiers. At the top, one box labelled EPIC. Lines down to a row of three boxes labelled FEATURE. From each feature, lines to smaller boxes labelled USER STORY. From each user story, lines to small tags labelled ACCEPTANCE CRITERIA. The four tiers are clearly separated and labelled at the left edge EPICS, FEATURES, USER STORIES, ACCEPTANCE CRITERIA. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

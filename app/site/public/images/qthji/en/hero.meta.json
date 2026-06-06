@@ -1,0 +1,17 @@
+{
+  "paper_id": "qthji",
+  "locale": "en",
+  "slot": "hero",
+  "out_path": "public\\images\\qthji\\en\\hero.jpg",
+  "bytes_jpg": 211251,
+  "bytes_png_source": 2872563,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-05T23:29:45.719Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. Wide cover aspect. The only text permitted in the entire image is three short hand-lettered label words; render no other writing of any kind. No logos.",
+  "image_prompt": "An editorial cover illustration of a single pronghorn antelope mid-stride in profile, drawn in deep Alberta navy line work with small rust-coloured accents on warm cream paper. A sense of speed and endurance, a calm wide eye, a few sparse lines suggesting open grassland behind it. Archival print quality, calm and confident. Wide cover aspect. Exactly three short hand-lettered labels appear in the open space around the animal, in clean navy sans-serif, reading word-for-word: \"Fast\", \"Far-sighted\", \"High endurance\". Those three labels are the only writing anywhere in the image. Do not add any other words, sentences, facts, statistics, numbers, captions, or descriptive text of any kind. No logos, no people.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. Wide cover aspect. The only text permitted in the entire image is three short hand-lettered label words; render no other writing of any kind. No logos.\n\nSubject: An editorial cover illustration of a single pronghorn antelope mid-stride in profile, drawn in deep Alberta navy line work with small rust-coloured accents on warm cream paper. A sense of speed and endurance, a calm wide eye, a few sparse lines suggesting open grassland behind it. Archival print quality, calm and confident. Wide cover aspect. Exactly three short hand-lettered labels appear in the open space around the animal, in clean navy sans-serif, reading word-for-word: \"Fast\", \"Far-sighted\", \"High endurance\". Those three labels are the only writing anywhere in the image. Do not add any other words, sentences, facts, statistics, numbers, captions, or descriptive text of any kind. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

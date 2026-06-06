@@ -1,17 +1,17 @@
 {
   "paper_id": "uwpxr",
   "locale": "en",
-  "slot": "fig-03",
-  "out_path": "public\\images\\uwpxr\\en\\fig-9-3.jpg",
-  "bytes_jpg": 160695,
-  "bytes_png_source": 2717939,
-  "model": "gpt-image-1",
-  "generated_at": "2026-06-04T14:07:39.095Z",
+  "slot": "fig-9-3",
+  "style_kind": "diagram",
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial hub-and-spoke diagram on warm cream paper, deep navy line work with small rust accents. A central rounded box labelled ENT TOOLS, ENTERPRISE GATEWAY, with a small key icon labelled SSO at its left entrance. A single robot icon labelled AGENT connects to the key from the left. From the gateway, labelled spokes fan out to small boxes: BRAVE SEARCH, ELEVENLABS, CLOUD PROVIDER APIs, OPEN-SOURCE MODELS, PRIVATE COMPUTE, TIME WEATHER NEWS, and SOCIAL MEDIA. Below, a separate dashed-outline cluster labelled COMING SOON holds four small boxes: SHAREPOINT, SERVICENOW, 1GX ERP, MICROSOFT 365. Calm, architectural, legible labels. No logos, no people.",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial hub-and-spoke diagram on warm cream paper, deep navy line work with small rust accents. A central rounded box labelled ENT TOOLS, ENTERPRISE GATEWAY, with a small key icon labelled SSO at its left entrance. A single robot icon labelled AGENT connects to the key from the left. From the gateway, labelled spokes fan out to small boxes: BRAVE SEARCH, ELEVENLABS, CLOUD PROVIDER APIs, OPEN-SOURCE MODELS, PRIVATE COMPUTE, TIME WEATHER NEWS, and SOCIAL MEDIA. Below, a separate dashed-outline cluster labelled COMING SOON holds four small boxes: SHAREPOINT, SERVICENOW, 1GX ERP, MICROSOFT 365. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-06T00:02:04.914Z",
   "jpg_quality": 80,
   "jpg_max_width": 1600,
-  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
-  "image_prompt": "An editorial hub-and-spoke diagram on warm cream paper, deep navy line work with small rust accents. A central rounded box labelled ENT TOOLS, ENTERPRISE GATEWAY, with a small key icon labelled SSO at its left entrance. A single robot icon labelled AGENT connects to the key from the left. From the gateway, labelled spokes fan out to small boxes: BRAVE SEARCH, ELEVENLABS, CLOUD PROVIDER APIs, OPEN-SOURCE MODELS, PRIVATE COMPUTE, TIME WEATHER NEWS, and SOCIAL MEDIA. Below, a separate dashed-outline cluster labelled COMING SOON holds four small boxes: SHAREPOINT, SERVICENOW, ONEGX ERP, MICROSOFT 365. Calm, architectural, legible labels. No logos, no people.",
-  "style_kind": "diagram",
-  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial hub-and-spoke diagram on warm cream paper, deep navy line work with small rust accents. A central rounded box labelled ENT TOOLS, ENTERPRISE GATEWAY, with a small key icon labelled SSO at its left entrance. A single robot icon labelled AGENT connects to the key from the left. From the gateway, labelled spokes fan out to small boxes: BRAVE SEARCH, ELEVENLABS, CLOUD PROVIDER APIs, OPEN-SOURCE MODELS, PRIVATE COMPUTE, TIME WEATHER NEWS, and SOCIAL MEDIA. Below, a separate dashed-outline cluster labelled COMING SOON holds four small boxes: SHAREPOINT, SERVICENOW, ONEGX ERP, MICROSOFT 365. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
-  "conditioned_on": null
+  "bytes_jpg": 138665,
+  "bytes_png_source": 2289755,
+  "generated_by": "edit-server.mjs"
 }

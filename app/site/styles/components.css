@@ -1124,6 +1124,7 @@
   display: none;                               /* shown only on mobile */
   position: fixed; bottom: 20px; right: 20px;
   z-index: 60;
+  transition: bottom 160ms ease;
   background: var(--accent); color: var(--paper);
   border: 0;
   padding: 12px 16px;

@@ -5,21 +5,30 @@
   "tier": "Technical",
   "category": "paper",
   "title": "The AI Factory: Design and Ideation (Pronghorn)",
-  "subtitle": "Turning a requirement into a working design.",
+  "subtitle": "Project Pronghorn is the first of the factory's three stages. AI tools translate Ministry requirements into prototypes, artifacts, visual canvases, and project artifacts before the build process begins.",
   "track": "Engineering the Solution",
   "authors": [
+    "Janak Alford",
     "Ministry of Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 17,
   "status": "Draft",
-  "tags": [],
-  "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+  "tags": [
+    "ai-factory",
+    "pronghorn",
+    "design",
+    "requirements",
+    "canvas",
+    "architecture",
+    "open-source"
+  ],
+  "repo": "https://github.com/pronghorn-red/pronghorn",
+  "abstract": "A quality AI-built application requires the presence of clearly defined requirements, standards, and architectures. These essential artifacts are often skipped in the AI-enabled development process as staff often move immediately into creating the user experience components of an application, leaving significant security and technical decisions to the AI. Without clear direction, AI agents frequently omit essential functions and controls. Alberta built Project Pronghorn to enable technical and non-technical staff to collaborate to define clear assumptions, working prototypes, business requirements, and an interactive architecture design canvas. These artifacts start off AI-based delivery on the right foot and enforce consistency throughout while providing a benchmark to assess the final product.",
   "hero_image": {
     "src": "public/images/qthji/en/hero.jpg",
-    "alt": "Editorial image for: The AI Factory: Design and Ideation (Pronghorn)",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The AI Factory: Design and Ideation (Pronghorn)\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Editorial cover illustration of a pronghorn antelope mid-stride in profile, drawn in deep Alberta navy line work with small rust accents on warm cream paper.",
+    "image_prompt": "An editorial cover illustration of a single pronghorn antelope mid-stride in profile, drawn in deep Alberta navy line work with small rust-coloured accents on warm cream paper. A sense of speed and endurance, a calm wide eye, a few sparse lines suggesting open grassland behind it. Archival print quality, calm and confident. Wide cover aspect. No text, no logos, no people.",
     "style_kind": "cover"
   },
   "audio": {
@@ -33,12 +42,109 @@
     "slides": [
       {
         "id": "01",
-        "title": "The AI Factory: Design and Ideation (Pronghorn)",
+        "title": "The AI Factory: Design and Ideation",
         "audio_file": "public/audio/en/qthji-tldr/01.mp3",
         "visual": "title",
-        "caption": "Engineering the Solution",
-        "subcaption": "",
-        "text": "The AI Factory: Design and Ideation (Pronghorn). Content forthcoming."
+        "caption": "Paper 8 · Engineering the Solution",
+        "subcaption": "Pronghorn, the first of the factory's three stages.",
+        "text": "Design and Ideation, the first stage of the AI factory. After building hundreds of prototypes with tools like Lovable and Cursor, we found the limit on quality was rarely the AI model. It was the absence of a clear definition of what we were building. Pronghorn is the place where technical and non-technical staff define a project together, to one standard, before any of it is built."
+      },
+      {
+        "id": "02",
+        "title": "Define the target first",
+        "audio_file": "public/audio/en/qthji-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "Why definition comes first",
+        "visual_config": {
+          "left": {
+            "label": "Jump straight to building",
+            "body": "Fast and satisfying, and it leads to an architecture misaligned with the tech stack."
+          },
+          "right": {
+            "label": "Define it in Pronghorn",
+            "body": "Agree the prototype, the requirements, and the architecture, then hand a clear package to the build."
+          }
+        },
+        "text": "You cannot land on a target you have not defined. The temptation in agentic development is to start building straight away, which is satisfying and fast, and which leaves you with an architecture misaligned with the stack you have to live in. Pronghorn is the place to agree the prototype, the standards, the requirements, and the architecture first."
+      },
+      {
+        "id": "03",
+        "title": "Built to a standard",
+        "audio_file": "public/audio/en/qthji-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Like a car off the line",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Crafted today",
+              "desc": "One or two people set the look and feel; consistency is hard to come by."
+            },
+            {
+              "label": "Assembled tomorrow",
+              "desc": "Accessible, well-made, and highly repeatable, to one common standard."
+            },
+            {
+              "label": "Why it matters",
+              "desc": "Across thousands of public services, a consistent experience is how people find help."
+            }
+          ]
+        },
+        "text": "A car can be beautiful and comfortable while being nearly identical to the next one off the line. Government applications should work the same way. Today they are crafted more than assembled, with the taste of one or two people shaping each one. Across thousands of public services, what people need is a consistent, accessible experience, so Pronghorn pushes toward one common standard."
+      },
+      {
+        "id": "04",
+        "title": "From an idea to a specification",
+        "audio_file": "public/audio/en/qthji-tldr/04.mp3",
+        "visual": "list",
+        "caption": "Chat, artifacts, requirements, canvas",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Chat",
+              "desc": "Builds a live HTML prototype in the browser to share with a client."
+            },
+            {
+              "label": "Artifacts",
+              "desc": "Brings in decks, PDFs, and images for the AI to use; full version control."
+            },
+            {
+              "label": "Requirements",
+              "desc": "Epics, features, user stories, and acceptance criteria, in a four-level map."
+            },
+            {
+              "label": "Canvas",
+              "desc": "The architecture drawn as nodes and edges, before any code exists."
+            }
+          ]
+        },
+        "text": "Pronghorn turns an idea into a specification. A chat builds a live prototype in the browser. The artifact space brings in decks, PDFs, and images and keeps a version history. The requirements section builds a four-level map of epics, features, user stories, and acceptance criteria. And a visual canvas holds the architecture itself, drawn as nodes and edges before any code is written."
+      },
+      {
+        "id": "05",
+        "title": "A specification a machine can read",
+        "audio_file": "public/audio/en/qthji-tldr/05.mp3",
+        "visual": "compare",
+        "caption": "Functional plus architectural",
+        "visual_config": {
+          "left": {
+            "label": "Functional requirements",
+            "body": "What the application must do, mapped from the chats and artifacts."
+          },
+          "right": {
+            "label": "The architecture canvas",
+            "body": "How it is shaped, drawn as nodes and edges a coding agent can read."
+          }
+        },
+        "text": "Pair the functional requirements from the requirements section with the architecture from the canvas, and you have a thorough specification that says clearly how the application should work. A set of prep agents writes the business case, the charter, and the plan for client buy-in. The whole package comes away cleanly and is handed to a coding agent to build."
+      },
+      {
+        "id": "06",
+        "title": "The first of three stages",
+        "audio_file": "public/audio/en/qthji-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Do not skip this step",
+        "subcaption": "Define it here, then build it in Nexus.",
+        "text": "Pronghorn is the first critical phase: ideation, architecture, and requirements, grounded in the client's own documents. An agent can read all of it natively, and link both ways through an API. Do not skip this step, or you will ship applications that look right and behave as a jagged experience underneath. The next paper shows where these specifications are acted on, in the Nexus environment."
       }
     ]
   },
@@ -46,23 +152,241 @@
   "sections": [
     {
       "n": "01",
-      "title": "Overview"
+      "title": "Enter the pronghorn"
+    },
+    {
+      "n": "02",
+      "title": "The AI factory in three stages"
+    },
+    {
+      "n": "03",
+      "title": "The automobile factory as a useful analogy"
+    },
+    {
+      "n": "04",
+      "title": "Automation vs. artisan crafted"
+    },
+    {
+      "n": "05",
+      "title": "Enter Pronghorn"
+    },
+    {
+      "n": "06",
+      "title": "From an idea to a specification"
+    },
+    {
+      "n": "07",
+      "title": "The architecture canvas"
+    },
+    {
+      "n": "08",
+      "title": "Agents that prepare the project"
+    },
+    {
+      "n": "09",
+      "title": "The first third of the factory"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "By late 2025, Technology and Innovation's AI Maximalist team had \"vibe-coded\" several hundred prototype applications on platforms like [Lovable](https://lovable.dev). As models became more capable and staff became more experienced, application development and prototyping accelerated. However, AI agents typically focused on user experience and made undocumented architectural decisions which negatively impacted security, deployment, and suitability for government workloads. These platforms also forced specific technology choices (such as using [Supabase](https://supabase.com) and other software-as-a-service platforms) which were not part of our standard and when implemented incorrectly could easily introduce new security risks. \n\nTo be clear, these deficiencies have nothing to do with the capabilities of the models themselves, but in how they are used. Staff do not seem to implement robust security controls from the beginning, and backend solution delivery was unplanned, inconsistent, and ad-hoc in their implementation. It was clear that Alberta needed tools that were easy for anyone to use and powerful enough to create an integrated picture of what was being built **before** development began. New processes are needed to formalize these steps to ensure they are not missed. In November of 2025, the AI Maximalist team began to build a solution to address these challenges which became Project Pronghorn."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Enter the pronghorn"
     },
     {
       "type": "paragraph",
-      "text": "**Content forthcoming.**"
+      "text": "Pronghorn was the right mascot for this initiative. The pronghorn is the second-fastest land animal in the world and the fastest in North America, native to Alberta, with a wide field of view and the endurance to run for hours. We wanted a tool with the same qualities: fast, far-seeing, and able to maintain a high velocity over a long distance. Our initial ambition was for Pronghorn to become a single, comprehensive solution which solved the whole build end-to-end, from requirements and prototyping through architecture, database, and deployment. The initial release did this moderately effectively, allowing our first end-to-end build within a common platform. However, as technology evolved and agentic coding platforms like Claude Code, GitHub Copilot, and Perplexity Computer evolved, we narrowed Pronghorn's scope to focus more specifically on transforming ideas and requirements into prototypes, architectures, and artifacts needed to initiate a project. This was, and remains, an underserved and overlooked step in the development process. So, we pivoted and stayed nimble (like a pronghorn), the platform became more focused on the first of the three stages of what we call an AI factory."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG.",
+      "title": "",
+      "caption": "The pronghorn: fast, far-sighted, and built for endurance over distance.",
+      "image": {
+        "src": "public/images/qthji/en/fig-mq1i9ir3.jpg",
+        "alt": "A single pronghorn standing in profile on the open Alberta prairie, labelled fast, far-sighted, and high endurance, drawn in deep navy line work with small rust accents on warm cream paper.",
+        "image_prompt": "A fine-art editorial illustration: a single pronghorn antelope standing in profile on the open Alberta prairie, deep navy pen-and-ink line work with small rust-coloured accents on warm cream paper, rolling foothills and tufts of prairie grass around it, like a hand-drawn book plate. Exactly three short hand-lettered labels appear in the open sky around the animal, in clean navy sans-serif, each joined to it by a thin rust leader line, reading word-for-word: \"Fast\", \"Far-sighted\", \"High endurance\". Those three labels are the only writing anywhere in the image. Do not add any other words, sentences, facts, statistics, numbers, captions, headings, legends, boxes, or arrows. No people, no logos.",
+        "style_kind": "cover",
+        "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. Wide cover aspect. The only text permitted in the entire image is three short hand-lettered label words; render no other writing of any kind. No logos."
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "The AI factory in three stages"
+    },
+    {
+      "type": "paragraph",
+      "text": "The concept of the AI factory is to maximally leverage agentic AI to lead application development from ideation through delivery. Alberta's objective is to maximally leverage AI to increase quality and speed while reducing cost. To do this effectively, we imagined the process being split into three distinct stages. \n\n\nThe first stage gathers the raw material such as requirements, dependencies, transcripts, and current processes and workflows. AI supports this stage by transforming these artifacts into clear prototypes, designs, requirements, specifications, and project artifacts such as business cases, charters, and clear and well-documented architectural designs. The second builds. The third measures. \n\n\nPronghorn serves this first stage, where the common parts, the components, the specifications, and the architecture are settled, and where you decide what you are actually trying to build."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.1",
+      "title": "The three stages, and solutions, of the factory",
+      "caption": "A piece of work moves through the factory in three connected stages. Pronghorn is the first, where the idea is designed, prototyped, and specified. Nexus builds it. Velocity tracks and scores the delivery. Each stage hands the next a finished, machine-readable result.",
+      "image": {
+        "src": "public/images/qthji/en/fig-8-1.jpg",
+        "alt": "A hand-drawn diagram of three connected stages left to right: a highlighted box labelled Pronghorn, Design; an arrow to a box labelled Nexus, Build; an arrow to a box labelled Velocity, Measure.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three rounded boxes in a row, left to right, joined by curved arrows. The first box, drawn with a rust outline to emphasise it, is labelled PRONGHORN with a smaller word DESIGN beneath. The second box is labelled NEXUS with BUILD beneath. The third box is labelled VELOCITY with MEASURE beneath. A small caption under the row reads THREE STAGES, ONE ASSEMBLY LINE. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "The automobile factory as a useful analogy"
+    },
+    {
+      "type": "paragraph",
+      "text": "An automobile factory is a useful analogy to understand the application design process in the AI era. \n\n\nMany car designs begin a block of clay, shaped by an artist who has a sense of style and a set of hard constraints: the shape has to be aerodynamic, attractive, road-safe, and within the limits for clearance, height, windows, and doors. The clay is only the look, and that is enough to start from. Once sculpted, it is scanned, digitized into a 3D model, and refined in software into something stronger. Then come the specifications. In Canada, Transport Canada sets out what a car must meet to be legal on the road, an exhaustive set of safety standards. And then the skills: a design is converted into tens of thousands of distinct parts, each pre-manufactured and catalogued with its own design, materials, and data sheet, all assembled first inside a computer. Validation software ensures that nothing collides and that every part can be installed and removed in sequence with ordinary tools. \n\n\nTraditional (pre-AI) software follows similar development processes to the automobile design. Visual prototypes and wireframes are created to validate the core assumptions. Branding and styles over integrated.  Architectural decisions are made, and enterprise standards are layered over into the plans. Functional requirements (what the user sees and does) and non-functional requirements (how the application works and is protected) and defined and approved for sign-off by a range of stakeholders. Costing is broken down by distinct components and features, and a timeline and cost are set and approved. \n\n\nAI-based application development skips many if not most of these steps by default, springing straight into user interface and workflow. This provides immediate visual gratification but pushes those decisions to later. To extend the analogy, you see the body of the car, but the brakes, engine, axles, and chassis are absent. Visually attractive, but not ready or safe to drive."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Automation vs. artisan crafted"
+    },
+    {
+      "type": "paragraph",
+      "text": "The factory points at where we want to go on standardization. \n\nHumans also struggle with consistency across applications. Without a clearly defined standard, two different human developers will make a range of decisions which inform the experience. For a distinct software product, that uniqueness can be an asset. In government it is mostly a liability. Government highly values a positive user experience and creativity that solves a novel problem, and yet repeatability, security, usability, and accessibility matter far more than a distinct, bespoke feel. Across thousands of public-facing services, a departure from the common look is disorienting rather than charming."
+    },
+    {
+      "type": "paragraph",
+      "text": "Across decades of development and ministries, the user experience has drifted. Individual applications aim for consistency within the code base, but across the technology estate there is significant diversity which becomes a bewildering for users. For someone seeking social services, using a screen reader or another assistive technology, that inconsistency is the difference between getting help and giving up. The standard has to meet the public where they are. \n\n\nAI-enabled delivery can compound problem, as every vibe-coded prototype tends to be different unless a clear standard is introduced from the very first step. However, AI can also effectively solve this problem by defining universal standards which each AI agent follows. This requires a central, machine-readable repository of standards, templates, and code samples (such as a library of common, reusable components) which are defined and enforced throughout the build process. The [Well Built Harness](/#/paper/p7p2k) is an example of how these standards can be enforced."
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta is seeking to eliminate this complexity through AI-driven implementation. Using our standards-driven approach, we are rationalizing this complexity into a clear, common set of AI-readable standards. This ensures usability is high, accessibility is assured, and the experience is consistent across every interface a person has to use. In executing [The Four Approaches to AI Modernization](#/paper/zgym1), we harmonize this experience in the approaches provided therein. These standards and approaches are applied within the first step of the factory through the Pronghorn platform."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Enter Pronghorn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta built the first version of Pronghorn (known as Pronghorn Red) as an open-source React / Supabase application. It was initially on Lovable and integrated into Render.com and 3rd party Cloud providers for database integration. It supports a range of different Google, Anthropic, and SpaceXAI models, and provides a suite of AI-enabled tools which support the application development lifecycle. \n\n\nMore recently, Alberta worked with Microsoft Canada to port Pronghorn Blue into a refactored version which is more aligned to enterprise environments. It introduces OpenAI model support, and leverages Azure-native stack components such as databases and containerized deployments. Pronghorn Blue is maintained in partnership between Microsoft and the Government of Alberta  and will be developed and maintained throughout the year ahead to add additional features. Red remains a good reference architecture but is no longer under active development. Both versions are for deployment by any organization into their own private or public cloud environment. Both are released under the open-source MIT License for unfettered use. "
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "From an idea to a specification"
+    },
+    {
+      "type": "paragraph",
+      "text": "A project in Pronghorn starts with a little metadata and a choice of models, and moves quickly into a chat with the latest AI. The chat is familiar but introduces a rapid prototyping ability. Described apps show up immediately in the body of the chat, so ideas can be worked out faster. Someone with no technical background, and no place to host an app, can describe what they want and watch a live, functional mock-up appear, ready to share with a client for reactions. You can keep an unlimited number of threaded conversations, clone conversations, and you can download the whole chat. As an aside, we commonly reiterate that any platform that will not let you take your chat content away is inherently flawed. The content is your intellectual property, and you need to be able to keep it, curate it, and pass it to an agent. Pronghorn enables this."
+    },
+    {
+      "type": "paragraph",
+      "text": "Next is the Artifact space, where Pronghorn has deep functionality, because an agent is only as good as the context it is given. Projects usually are initiated with a range of diverse artifacts, such as slide decks, PDFs, Word documents, and web pages, and the artifact space brings all of that in, indexed and ready for the AI to use. Pronghorn enables you to generate and analyze images, so a user-interface mock-up can be made with an image model and refined in place. You can edit any artifact collaboratively with an AI editor that keeps an immutable history of every change, so a document of any kind can be drafted and iterated quickly, with real version control, image and PDF processing, and clean file management."
+    },
+    {
+      "type": "paragraph",
+      "text": "From your chats and the artifacts, Pronghorn builds the business requirements. Point it at the material, and it works through a structured, agile hierarchy: epics at the top, then the features inside them, then the user stories, and the acceptance criteria that say when each story is done. The result is a four-level map you can build out, track, and hand on, grounded in the documents the project actually started from rather than in someone's memory of a meeting."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.2",
+      "title": "The four-level requirements hierarchy",
+      "caption": "Pronghorn turns the chats and artifacts into a structured set of requirements: epics at the top, the features inside each epic, the user stories inside each feature, and the acceptance criteria that say when a story is done. The whole tree can be built out, mapped, and tracked.",
+      "image": {
+        "src": "public/images/qthji/en/fig-8-2.jpg",
+        "alt": "A hand-drawn four-level tree: a single box labelled Epic at the top branching down to several Feature boxes, each branching to User Story boxes, each branching to small Acceptance Criteria tags at the bottom.",
+        "image_prompt": "An editorial tree diagram on warm cream paper, deep navy line work with small rust accents, branching top to bottom in four clear tiers. At the top, one box labelled EPIC. Lines down to a row of three boxes labelled FEATURE. From each feature, lines to smaller boxes labelled USER STORY. From each user story, lines to small tags labelled ACCEPTANCE CRITERIA. The four tiers are clearly separated and labelled at the left edge EPICS, FEATURES, USER STORIES, ACCEPTANCE CRITERIA. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "The architecture canvas"
+    },
+    {
+      "type": "paragraph",
+      "text": "The feature we are most excited about over the long run is a shared visual canvas, built on React Flow, where you drag and drop the parts of an application's architecture and work on them alongside AI agents that can both read the canvas and draw on it. A modern application has many layers: the cloud it runs in, the firewall, the front-end, the server, the third-party APIs, the databases, and the internal integrations. Drawn out as a functional architecture, that is dozens or hundreds of components linked into one diagram. In Pronghorn you can generate a notional architecture at the start, settle on it, and keep versioned copies that describe the whole application before any code exists."
+    },
+    {
+      "type": "paragraph",
+      "text": "This matters because it is another way to keep an interface from being vibe-coded into existence. In place of the long, verbose output of a language model, the canvas is a compact, tight description: a clear hierarchy of nodes joined by labelled edges, with metadata on each one saying what it does and how it connects. That is the right starting point for building, and it can be downloaded and handed straight to a coding agent. The shape of an enterprise application is a decision to make deliberately, up front, rather than one to leave to the choices an unpredictable model makes as it goes. The canvas is the functional architecture, which is itself a requirement, a non-functional one. Pair the functional requirements from the requirements section with the architecture from the canvas, and you have a thorough specification that says clearly how the application should work."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.3",
+      "title": "The architecture canvas",
+      "caption": "On a shared canvas built with React Flow, the layers of an application are laid out as labelled nodes joined by labelled edges: the cloud, the firewall, the front-end, the server, the third-party APIs, the databases, and the integrations. A person and AI agents both read and draw on the same canvas, and the result is versioned and taken away as the architecture.",
+      "image": {
+        "src": "public/images/qthji/en/fig-8-3.jpg",
+        "alt": "A hand-drawn node graph of an application's architecture: labelled nodes for Cloud, Firewall, Front-end, Server, Third-party API, Database, and Integration joined by labelled edges, with a small person token and a small AI agent token both connected to the canvas.",
+        "image_prompt": "An editorial architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as a node graph. Labelled rounded nodes joined by curved labelled edges: CLOUD, FIREWALL, FRONT-END, SERVER, THIRD-PARTY API, DATABASE, and INTEGRATION, arranged in a connected layout. At the edge of the canvas, a small person token labelled HUMAN and a small robot token labelled AGENT, each with a thin line reaching onto the canvas to show they both author it. A small corner tag reads VERSIONED, TAKE AWAY. Calm, architectural, legible labels. No logos, no people beyond the small schematic tokens.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Agents that prepare the project"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pronghorn ships a set of agents that prepare a project for approval and for the build. A business-case writer, a charter and RFP writer, a project planner, and a timeline builder read your chats, your artifacts, and your canvases, and produce a project plan ready to take to a client for buy-in. You can change these agents, build your own, and arrange them into a workflow that expands a thin idea into the full set of artifacts a project needs to begin."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.4",
+      "title": "Preparing the project before the build",
+      "caption": "A set of agents reads the chats, the artifacts, the requirements, and the canvas, and produces the materials a project needs to start: a business case, a charter, an RFP, a project plan, and a timeline. The finished package is handed to the build stage, so the work arrives defined rather than improvised.",
+      "image": {
+        "src": "public/images/qthji/en/fig-8-4.jpg",
+        "alt": "A hand-drawn diagram: four inputs labelled Chat, Artifacts, Requirements, and Canvas feed a row of agent badges labelled Business Case, Charter & RFP, Project Planner, and Timeline, which produce a Project Plan document, with an arrow labelled handoff leading to a box labelled The Build.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, flowing left to right. On the left, four small labelled inputs stacked: CHAT, ARTIFACTS, REQUIREMENTS, CANVAS. They feed into a central row of four rounded agent badges labelled BUSINESS CASE, CHARTER AND RFP, PROJECT PLANNER, and TIMELINE, shown working together with small connecting lines. To the right, they produce a document labelled PROJECT PLAN, and a curved arrow labelled HANDOFF leads from there to a box labelled THE BUILD. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Pronghorn also includes coding agents and a database agent, quick ways to scale an idea out: importing data already in JSON or CSV, connecting to a range of databases, and working against a Postgres database hosted on Azure, Render, AWS, or elsewhere, with handy deployment into Azure and render.com in the Red edition. Those build-and-deploy features now live more fully in the next stage of the factory, [Nexus](#/paper/uwpxr), which adds the security controls and the agent observability that Pronghorn was never meant to carry."
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "The first third of the factory"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pronghorn is the first critical phase: research and ideation, architectural development, and requirements mapping. Set alongside the client's own requirements, documents, and meeting transcripts, it grounds an enterprise application in a clear set of artifacts that an agentic coding agent can read natively. Pronghorn exposes those connections both ways. A listener in Claude Code can watch for changes in a Pronghorn project, and an API lets any agentic coding platform write back into it, so an agent can be a first-class contributor, adding to the architecture, the requirements, and the artifacts. From [Nexus](#/paper/uwpxr), the two link in both directions, and the development is driven from there."
+    },
+    {
+      "type": "paragraph",
+      "text": "A word to our builders. The temptation in agentic development is to start building the application straight away. It is satisfying, it lets you test an idea fast, and it is also how you end up with an architecture badly misaligned with the technology stack you have to live in. Pronghorn is the place for technical and non-technical staff to agree on scope, plans, and requirements before that happens. Nothing in it is locked in; the artifacts come away cleanly and move straight into the build. Skip this step at your peril, or you will ship applications that look right, follow the common standards, and still behave as a jagged, uneven experience underneath, especially at the API layer, where service delivery in the Government 3.0 model described in [the four approaches](#/paper/zgym1) is won or lost. The next paper shows where these specifications come together and are acted on, in the [Nexus](#/paper/uwpxr) environment, by the agents that do the building."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "pronghorn",
+        "design",
+        "requirements",
+        "canvas",
+        "open-source"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "uwpxr",
+    "k3tc3",
+    "zgym1",
+    "p7p2k"
+  ]
 }
