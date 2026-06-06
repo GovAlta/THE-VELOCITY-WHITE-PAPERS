@@ -5,21 +5,32 @@
   "tier": "Policy & People",
   "category": "paper",
   "title": "The AI Academy: Investing in People",
-  "subtitle": "Training the public service to direct AI.",
+  "subtitle": "A graduated, open-source program that trains public servants to work with artificial intelligence, from prompting through building enterprise-grade applications.",
   "track": "Human and Change Management",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 17,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "ai-academy",
+    "training",
+    "change-management",
+    "personas",
+    "harness",
+    "prompting",
+    "agents",
+    "open-source"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
+  "abstract": "The Alberta AI Academy is a graduated training program that prepares public servants to work with artificial intelligence. It grew out of the AI Maximalist program, where a first cohort of about sixty-five volunteers revealed both the demand for structured training and the wide range of responses to a new technology. Launched in September 2025, the Academy runs in three levels: prompting and the foundations of trusted AI use, reusable agents for repeatable work, and the building of enterprise-grade applications with a harness. Cohorts range from sixty to several hundred participants and cross every level of seniority. Course materials are published openly at albertaaiacademy.com. This paper describes the program's origins, its structure across the three levels, the persona-based approach used in Level 3, and the mindset the Academy works to instill: that effective AI adoption is a discipline of persistent, verified practice rather than a metric to be optimized.",
   "hero_image": {
     "src": "public/images/dt725/en/hero.jpg",
-    "alt": "Editorial image for: The AI Academy: Investing in People",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The AI Academy: Investing in People\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Editorial cover illustration for the AI Academy: three broad steps rising left to right on warm cream paper, each carrying a simple motif, a chat bubble, an agent gear, and an application window, drawn in deep Alberta navy line work with small rust accents.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. Three broad stone steps rise from lower left to upper right, like a graduated ascent. On the first step rests a simple speech-bubble motif; on the second, a small gear with a tiny robot token; on the third, a clean application window outline. A wide calm sky behind them. Archival, calm, and confident. Wide cover aspect. No text, no logos, no people.",
     "style_kind": "cover"
   },
   "audio": {
@@ -36,33 +47,349 @@
         "title": "The AI Academy: Investing in People",
         "audio_file": "public/audio/en/dt725-tldr/01.mp3",
         "visual": "title",
-        "caption": "Human and Change Management",
-        "subcaption": "",
-        "text": "The AI Academy: Investing in People. Content forthcoming."
+        "caption": "Paper 12 · Human and Change Management",
+        "subcaption": "Training the public service to work with AI.",
+        "text": "The Alberta AI Academy is how we invest in the people behind the technology. It grew out of the AI Maximalist program, where a first cohort of about sixty-five volunteers showed us both the appetite for training and how differently people respond to something as new as artificial intelligence. Launched in September 2025, the Academy now teaches thousands of public servants to work with these tools, and all of its materials are open."
+      },
+      {
+        "id": "02",
+        "title": "Three levels, one path",
+        "audio_file": "public/audio/en/dt725-tldr/02.mp3",
+        "visual": "list",
+        "caption": "How the program is built",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Level 1: Prompting",
+              "desc": "How to hold a real conversation with a chat agent, and how to verify before you trust."
+            },
+            {
+              "label": "Level 2: Agents",
+              "desc": "Reusable agents for repeatable work, built once and shared across a unit."
+            },
+            {
+              "label": "Level 3: Applications",
+              "desc": "Building enterprise-grade software with a harness, the factory, and the four approaches."
+            }
+          ]
+        },
+        "text": "The Academy is graduated, and it runs in three levels. Level one is prompting: how to interact with a chat agent as a genuine conversation rather than a search box. Level two is reusable agents, for the repeatable work you do more than three times a week. Level three is building enterprise-grade applications with a harness. Each level builds on the one before, and people can repeat any level as often as they need."
+      },
+      {
+        "id": "03",
+        "title": "Verify, then trust",
+        "audio_file": "public/audio/en/dt725-tldr/03.mp3",
+        "visual": "compare",
+        "caption": "The Level 1 mindset",
+        "visual_config": {
+          "left": {
+            "label": "What we teach to do",
+            "body": "Treat it as a conversation. Bring your own use cases. Build the habit of checking the work."
+          },
+          "right": {
+            "label": "What we teach to avoid",
+            "body": "Using it like a search box, trusting it blindly, or loading sensitive data into the wrong tool."
+          }
+        },
+        "text": "Level one teaches two frameworks. RICECO, for writing a good prompt, and TRUST, for handling what comes back. The rule we repeat is verify, then trust. Much of the early learning is what to avoid: do not treat it like a search box, do not trust it blindly, do not load sensitive data into a tool that is not classified for it, and do not expect it to be perfect on the first try. None of this is obvious, so we teach it directly."
+      },
+      {
+        "id": "04",
+        "title": "Reach",
+        "audio_file": "public/audio/en/dt725-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Who the Academy has reached",
+        "visual_config": {
+          "stat_value": "10,000+",
+          "stat_label": "Public participants on the AlbertaAIAcademy.com platform"
+        },
+        "subcaption": "Alongside thousands of public servants learning across three levels.",
+        "text": "More than ten thousand public participants have used the Alberta AI Academy platform, alongside thousands of public servants. Level one satisfaction averages around nine out of ten. We have compressed level one down to a single week to lower the time commitment, while reminding people that even a simple chat interface takes two to three months to use well on a consistent basis."
+      },
+      {
+        "id": "05",
+        "title": "Warrior, wizard, craftsperson",
+        "audio_file": "public/audio/en/dt725-tldr/05.mp3",
+        "visual": "list",
+        "caption": "The Level 3 personas",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Warrior",
+              "desc": "Ships. Speed, delivery, and the leaderboard: the work of the AI Factory."
+            },
+            {
+              "label": "Wizard",
+              "desc": "Strategizes. Modernization and architecture: the work of Government 3.0."
+            },
+            {
+              "label": "Craftsperson",
+              "desc": "Builds for others. Harnesses, templates, and tools like Pronghorn, Nexus, and Velocity."
+            }
+          ]
+        },
+        "text": "In Level three the room holds no hierarchy beyond facilitator and participant. A deputy minister, assistant deputy ministers, directors, staff, and interns all follow the same lessons. Instead of job titles, we ask people to pick a persona. The warrior ships and lives on the leaderboard. The wizard strategizes, modernizing and re-architecting. The craftsperson builds the tools everyone else relies on. The framing is a deliberate nudge to ask which kind of work you actually want to do with these tools."
+      },
+      {
+        "id": "06",
+        "title": "A mindset, not a metric",
+        "audio_file": "public/audio/en/dt725-tldr/06.mp3",
+        "visual": "title",
+        "caption": "What the Academy is really teaching",
+        "subcaption": "Persistent, verified practice, carried back to the day job.",
+        "text": "Underneath the levels and the tools, the Academy teaches a mindset. AI agents can code about a hundred times faster, yet we aim for a twentyfold improvement overall, because the goal reaches past the app and the artifacts to engagement, comfort, and change management. We treat adoption as a discipline of persistent, verified practice rather than a target to hit. Some people will take to it and some will not, and the commitment is to keep growing along the path without expecting perfection."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "From the Maximalist program" },
+    { "n": "02", "title": "A graduated program" },
+    { "n": "03", "title": "Level 1: prompting and trust" },
+    { "n": "04", "title": "Level 2: reusable agents" },
+    { "n": "05", "title": "Level 3: building enterprise applications" },
+    { "n": "06", "title": "Warrior, wizard, craftsperson" },
+    { "n": "07", "title": "A mindset, not a metric" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "The Alberta AI Academy began with what we learned in the field. When Technology and Innovation launched the AI Maximalist program in early 2025, we selected people through a call of interest, independent of their technical skills and independent of their AI experience, on the strength of their desire to take part. Around ten percent of the workforce volunteered, and for operational reasons we were able to take roughly five percent into the first cohort. Those first sixty-five people became a foundational core, learning to apply artificial intelligence across four domains: project management, application delivery, communications, and financial analysis. What we observed watching them work became the basis for everything the Academy teaches today."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "From the Maximalist program"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "Those first four teams gave us a deep look at which technologies were effective in a government context, and at the range of responses to being placed in a learning environment with something as new as artificial intelligence. Because these people self-selected into the program, they came with an above-average willingness to engage, and they were a positive, collaborative, and open group, so gathering feedback on what was working was straightforward. The team told us plainly where they felt they needed help."
+    },
+    {
+      "type": "paragraph",
+      "text": "What stood out was that the group bifurcated, between those who were immediately comfortable with artificial intelligence and those who struggled with it. That told us an effective adoption strategy would have to serve both the early adopters and those who were more skeptical or who needed more assistance along the way. A non-technical background was no barrier to success with these tools. People who did have a technical background, though, found concepts like building a harness or thinking in structured data more familiar, which gave them an early advantage on the foundational ideas."
+    },
+    {
+      "type": "keystat",
+      "label": "The founding cohort",
+      "value": "65 / ~5%",
+      "body": "About sixty-five volunteers, roughly five percent of the workforce, formed the founding cohort of the AI Maximalist program. Close to ten percent had volunteered."
+    },
+    {
+      "type": "paragraph",
+      "text": "The clearest signal was the demand for a formal training program. The feedback made it plain that expanding the Maximalist program would require formalized training, and that the training could not be limited to prompting or a tour of the tools, because many people were already well past that on their own time. We needed a graduated program."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "A graduated program"
+    },
+    {
+      "type": "paragraph",
+      "text": "We envisioned a tiered program covering the fundamentals of prompting, the fundamentals of agents, which were becoming popular in early 2025 but had not yet taken off, and the building of applications, which remains one of our most expensive and laborious activities. In June 2025 we pitched the idea of an Alberta AI Academy to our minister, Nate Glubish, who endorsed proceeding wholeheartedly. We had proposed a September launch, which left a narrow window to develop the material. Our primary source of inspiration was the Maximalist team, who through surveys and through their own experience told us which lessons landed and where they had faced the most uncertainty and frustration."
+    },
+    {
+      "type": "paragraph",
+      "text": "On September 9, 2025, we launched the Academy with Level 1 and an initial site of curated articles, learning modules, and tools, an integrated chat agent, and cohorts of students learning together and sharing their progress. We split the material into ten days, building from foundational concepts on day one through homework to a capstone project by day ten. We ran it on a cadence of a couple of weeks on and a couple of weeks off, alternating Level 1 and Level 2 while we developed the more complex Level 3 material."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.1",
+      "title": "Three levels, one path",
+      "caption": "The Academy is graduated. Level 1 teaches prompting and the habit of verifying AI output. Level 2 introduces reusable agents for repeatable work. Level 3 teaches the building of enterprise-grade applications with a harness. People can repeat any level, and the material is available self-serve.",
+      "image": {
+        "src": "public/images/dt725/en/fig-12-1.jpg",
+        "alt": "A hand-drawn diagram of three ascending steps labelled Level 1 Prompting, Level 2 Agents, and Level 3 Applications, each step a little higher, with a small return arrow looping back from each step to show that any level can be repeated, and a self-serve label beside the staircase.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three broad steps rise from lower left to upper right. The first step is labelled LEVEL 1: PROMPTING with a small speech-bubble icon, the second LEVEL 2: AGENTS with a small gear-and-robot icon, the third LEVEL 3: APPLICATIONS with a small application-window icon. A thin rust arrow loops back from each higher step to the one before it, labelled REPEAT ANY LEVEL. A small tag to the side reads SELF-SERVE, ALWAYS AVAILABLE. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Level 3 was the hardest course to create, because even those leading the Maximalist teams did not yet know how to explain its concepts, and we were still building the tooling and the structures that let people learn effective patterns and avoid bad habits. There is no single predetermined way to apply these tools well; it is up to the individual. Most people, though, do not flourish in pure uncertainty. They want some structure and consistency, a path they can follow. Like much of IT, there is no one way to do a thing, only more and less effective ways, and plenty of opinionated ones. To build an academy we had to make some bets, finding concepts sticky enough to remember, accessible enough for a layperson, and principled enough to drive repetition. You can learn to play an instrument or to paint any number of ways, and yet the beginner still has a few principles to master before creativity has somewhere firm to stand."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Level 1: prompting and trust"
+    },
+    {
+      "type": "paragraph",
+      "text": "Level 1 focuses on prompting: how to interact with a chat-based agent, and how to build patterns of interaction that move our use of technology away from a transactional system and toward a human conversation, where each side adds something and the exchange has real give and take. We teach a prompting framework called RICECO, broken into six principles, and a second framework called TRUST. The TRUST framework explains that effective AI use depends on systems of trust, where you verify what the AI tells you before you rely on it. We sum it up in three words: verify, then trust."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.2",
+      "title": "Two frameworks: RICECO and verify-then-trust",
+      "caption": "Level 1 pairs a framework for writing a prompt with a framework for handling the response. RICECO gives six principles for a well-formed prompt. The TRUST framework holds that an AI output is checked before it is relied on, a loop we teach as 'verify, then trust'.",
+      "image": {
+        "src": "public/images/dt725/en/fig-12-2.jpg",
+        "alt": "A hand-drawn diagram with two panels. The left panel is a card titled RICECO, captioned six principles for a prompt, with six numbered but otherwise blank rule lines. The right panel is a loop between a box labelled AI Output and a box labelled Verify, with an arrow from Verify to a box labelled Trust, and a rust return arrow labelled if it does not check out sending it back to AI Output, captioned verify then trust.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a titled card: a heading reading exactly RICECO, a caption beneath reading SIX PRINCIPLES FOR A PROMPT, and six short numbered rule lines drawn as plain horizontal strokes numbered 1 through 6 with no words written on them. Do not invent, label, or write any principle names on the lines. On the right, a simple cycle: a box labelled AI OUTPUT connects by arrow to a box labelled VERIFY, which connects by arrow to a box labelled TRUST. A rust return arrow loops from VERIFY back to AI OUTPUT, labelled IF IT DOES NOT CHECK OUT. Below the cycle, a small caption reads VERIFY, THEN TRUST. The only words anywhere in the image are: RICECO, SIX PRINCIPLES FOR A PROMPT, the numerals 1 to 6, AI OUTPUT, VERIFY, TRUST, IF IT DOES NOT CHECK OUT, and VERIFY, THEN TRUST. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "We also teach a range of enterprise tools: Copilot in Microsoft 365, Gemini Enterprise, and our own platform, Albert, which offers tools, agents, prompts, and frameworks, and lets people build and deploy their own agents for unclassified workloads. Different people gravitate to different tools by temperament and experience. Some reach for the more complex agents early, while others are content to paste a prompt into Copilot to structure and coordinate their day within a wider team."
+    },
+    {
+      "type": "paragraph",
+      "text": "A good part of Level 1 is teaching people what to avoid. Used like a Google search, the tools disappoint. Trusted blindly, they mislead. Fed sensitive data on a platform that is not classified for it, they create risk. Expected to be perfect on the first try, or to understand a process they have never seen, they fall short. None of this is obvious, and none of it is advertised by the AI companies, so we teach it directly, alongside a mindset of careful use and plenty of room for people to bring their own use cases for coaching."
+    },
+    {
+      "type": "keystat",
+      "label": "Level 1 satisfaction",
+      "value": "≈ 9 / 10",
+      "body": "Average satisfaction reported across Level 1 cohorts. Level 1 has since been compressed to a single week to lower the time commitment."
+    },
+    {
+      "type": "paragraph",
+      "text": "Feedback on Level 1 is consistently high, averaging around nine out of ten. Since the start of the Academy we have compressed it to a single week to make it more accessible and to ask less of people's time, while reminding them that even a deceptively simple chat interface still takes time to master. In our experience it is somewhere between two and three months before most people use these tools well on a consistent basis. Level 1 lays a foundation, and graduates are encouraged to keep using the tools as they return to their work."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Level 2: reusable agents"
+    },
+    {
+      "type": "paragraph",
+      "text": "Level 2 builds on that foundation and introduces reusable agents. Here we use Gemini Gems, GitHub Copilot Agents, and our own AgentBuilder Console, which gives people a structured way to describe their processes and to assemble agents and tools that run repeatable workflows, in a linear or a branching pattern, ending in a range of finished documents."
+    },
+    {
+      "type": "paragraph",
+      "text": "For anyone working in a repeatable system, this is valuable, because Level 2 teaches the rule of three: if you are likely to do something more than three times in a week, take the time to build the agent and to document the workflow, so you can pass that work to the agent and share it with your peers. In a unit of people doing similar work, a shareable workflow means one person's investment of time raises the performance of the whole unit and inspires the people around them."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.3",
+      "title": "The rule of three",
+      "caption": "The Level 2 heuristic for when to build an agent. If a task recurs more than three times in a week, the time spent building and documenting the agent pays back, and a shared workflow lifts the performance of the whole unit.",
+      "image": {
+        "src": "public/images/dt725/en/fig-12-3.jpg",
+        "alt": "A hand-drawn decision diagram: a box labelled A recurring task with an arrow to a diamond reading More than three times a week?; a No branch loops back to just do it by hand; a Yes branch leads to a box labelled Build and document the agent, then to a box labelled Share with the unit, with small figures of a team benefiting.",
+        "image_prompt": "An editorial decision diagram on warm cream paper, deep navy line work with small rust accents. A box on the left labelled A RECURRING TASK leads by arrow to a diamond labelled MORE THAN THREE TIMES A WEEK? A short NO branch loops back to a small box labelled DO IT BY HAND. The YES branch leads rightward to a box labelled BUILD AND DOCUMENT THE AGENT, then to a box labelled SHARE WITH THE UNIT. Beside the final box, three small identical workflow icons suggest the whole unit reusing it. A small caption reads THE RULE OF THREE. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The agentic material is well subscribed, though we see our first fall-off here, since for many people simple prompting remains enough. People often take a break between Level 1 and Level 2 rather than running them back to back, both for operational reasons and to ease the learning curve, and they can repeat any level as often as they like, or work through the material self-serve on the Academy site whenever they want a refresher. We also bring people into a broader community of practice, where we coach specific use cases and the right tool for each. The more advanced needs surface in that community: a particular team's process or form, a dataset locked inside an IT system the AI cannot reach, questions about exporting and uploading. These are the cases where a custom solution becomes worthwhile, and they lay the groundwork for Level 3."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Level 3: building enterprise applications"
+    },
+    {
+      "type": "paragraph",
+      "text": "In Level 3 the cohort learns to work with sophisticated coding agents and with [the harness](#/paper/p7p2k): the skills, standards, guides, hooks, and templates needed to build highly effective, enterprise-grade applications. For most people this is a significant step change in complexity and technical knowledge, and even for technical participants it is demanding. In our most recent cohort we saw a meaningful drop-off, with many participants not finishing or graduating, because of the technical nature of the work."
+    },
+    {
+      "type": "paragraph",
+      "text": "There is a misapprehension that AI will replace the coder, the architect, or the client engagement team. In practice it amplifies them, letting them produce greater output at greater velocity. The topics are genuinely complex, so we break them down and make them as accessible as we can. We lead students through the three stages of the factory covered in [Pronghorn](#/paper/qthji), [Nexus](#/paper/uwpxr), and [Velocity](#/paper/k3tc3); we teach the well-built harness; and we walk through [the four approaches to government modernization](#/paper/zgym1). We coach even non-coders to understand what goes into an enterprise application, and the hundreds of controls and decisions that sit behind even the basic template they start from."
+    },
+    {
+      "type": "paragraph",
+      "text": "We then teach participants to build their own harness, tailored to the work they do in the organization, and we challenge them across a series of projects to lead and to demonstrate to the class how they are using the tools. The Velocity leaderboard comes in here, where people take on challenges and share their progress. Producing a quality output takes real rigor. It always has, and AI does not change that. Anyone looking for a shortcut, who skips the thinking that goes into a solution, soon finds the AI failing to deliver the outcome they were after, while those who do the work excel."
+    },
+    {
+      "type": "pullquote",
+      "text": "Persistence beats cleverness. Treat the AI as a servant on a platter and it will fail you; treat it as something you have to verify, and you will catch what it quietly skipped. The skill is knowing how to check.",
+      "cite": "AI Academy Level 3, Welcome Package"
+    },
+    {
+      "type": "paragraph",
+      "text": "Level 3 is challenging for most people, and teaching it has been just as instructive for us. I have taught Level 3 for more than twenty-five days over the past year, as the lead instructor across the levels and primarily on Level 3 myself. That time in the room shows us where people are understanding the material and where we need to invest more in the fundamentals and in building comfort."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Warrior, wizard, craftsperson"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Level 3 room held no hierarchy beyond facilitator and participant. The class included a deputy minister, three assistant deputy ministers, executive directors, directors, managers, employees, students, and interns. Everyone followed the same lessons and built solutions as part of the learning journey, with no organizational rank in play. Instead of titles and job descriptions, we asked people to choose a persona: warrior, wizard, or craftsperson."
+    },
+    {
+      "type": "paragraph",
+      "text": "The framing is a deliberate, lateral nudge away from job titles. We ask people to set aside 'I am a full-stack developer' or 'I am a solution architect' for two weeks, and to consider instead which kind of work they actually want to do with these tools. The ambiguity of the framing is the point, and it doubles as a filter. A game needs two willing players, and the people who decline the invitation tend to end up watching from the sidelines."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.4",
+      "title": "Three personas, three ways of working",
+      "caption": "In place of job titles, Level 3 participants choose a persona. The warrior ships, and aligns with the AI Garage and the AI Factory. The wizard strategizes and modernizes, the work that points toward Government 3.0. The craftsperson builds the infrastructure others rely on, including tools like Pronghorn, Nexus, and Velocity.",
+      "image": {
+        "src": "public/images/dt725/en/fig-12-4.jpg",
+        "alt": "A hand-drawn diagram of three labelled panels side by side. The Warrior panel shows a small shield icon and the words Ship, Speed, Leaderboard, tagged AI Factory. The Wizard panel shows a small stars icon and the words Strategize, Modernize, Architect, tagged Government 3.0. The Craftsperson panel shows a small hammer icon and the words Build for others, Harnesses, Templates, tagged Pronghorn, Nexus, Velocity.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as three equal panels side by side. Left panel titled WARRIOR with a simple shield icon, listing SHIP, SPEED, LEADERBOARD, and a small tag at its base reading AI FACTORY. Centre panel titled WIZARD with a simple stars icon, listing STRATEGIZE, MODERNIZE, ARCHITECT, with a base tag reading GOVERNMENT 3.0. Right panel titled CRAFTSPERSON with a simple hammer icon, listing BUILD FOR OTHERS, HARNESSES, TEMPLATES, with a base tag reading PRONGHORN, NEXUS, VELOCITY. The three panels are balanced and equal in weight. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Each persona aligns with a different way of working in the AI era. The warrior ships, where speed, delivery, and a green leaderboard are the measures that matter, the cadence of the AI Garage and the AI Factory. The wizard strategizes, taking on legacy modernization, architecture reviews, and the refactoring that changes a team's trajectory, the work that points toward Government 3.0 and the higher [approaches to modernization](#/paper/zgym1). The craftsperson builds infrastructure for others: harness files, shared templates, and reusable evaluation scripts, and the tools like [Pronghorn](#/paper/qthji), [Nexus](#/paper/uwpxr), and [Velocity](#/paper/k3tc3) that enable everyone else. The personas are also where the cohort's code lives. For Level 3 we took a different approach to the learning itself, building a dedicated site to tie the lessons and concepts together, and producing a large body of code, much of which is shared within this collection of white papers."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "A mindset, not a metric"
+    },
+    {
+      "type": "paragraph",
+      "text": "As these papers have shown throughout, some bad habits are emerging with the use of artificial intelligence. One is the production of long-form, unvalidated content that takes minutes to generate and days for a subject-matter expert to read and vet. Another is jumping past the architecture, the standards, the requirements, and the tools straight into a vibe-coded application that offers immediate gratification and little long-term reliability, while loading a different kind of technical debt onto the organization. The Academy works to steer people away from both."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.5",
+      "title": "Two habits to avoid, one discipline to keep",
+      "caption": "Both failure modes come from pursuing an outcome without rigor: unvalidated long-form content that is fast to generate and slow to vet, and vibe-coded applications that gratify quickly and accrue technical debt. The Academy teaches the disciplined path between them, where the work is verified before it is trusted.",
+      "image": {
+        "src": "public/images/dt725/en/fig-12-5.jpg",
+        "alt": "A hand-drawn diagram with two cautionary boxes and a clear path between them. The top box, labelled Slop content, shows pages piling up with a clock reading minutes to make, days to vet. The bottom box, labelled Vibe-coded app, shows a pretty but cracked window labelled quick gratification, technical debt. A straight central arrow between them is labelled The disciplined path: verify, then trust.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. At the top, a box labelled SLOP CONTENT shows a tall stack of pages beside a small clock, captioned MINUTES TO MAKE, DAYS TO VET. At the bottom, a box labelled VIBE-CODED APP shows a glossy application window with a small rust crack through it, captioned QUICK GRATIFICATION, TECHNICAL DEBT. Running horizontally between the two boxes, a clear straight arrow labelled THE DISCIPLINED PATH points to a small finished, checkmarked deliverable, with a caption reading VERIFY, THEN TRUST. The two cautionary boxes are lighter; the central path is the strongest line. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Both habits come from a reasonable human pull toward outcomes, which is healthy in itself, and yet pursuing outcomes without rigor leads to failure in any domain. An athlete who skips the stretching, the sleep, the food, and the rest breaks down, gets injured, and ends up further back than where they began. A public servant who does not take the time to learn how to use and trust AI will produce unreliable content, damage the organization's reputation, and erode the public's trust in the institution, and will likewise end up further back than where they started."
+    },
+    {
+      "type": "paragraph",
+      "text": "Earlier papers noted that AI agents can code roughly a hundred times faster, while we aim for a [twentyfold improvement](#/paper/eujjc) overall. The gap is deliberate. The goal reaches past producing the app, and past producing the artifacts, to engagement, conversation, comfort, change management, and awareness, all the things that come with a team of people learning to work together. So we treat AI adoption as a mindset to instill rather than a target to hit. When a measure becomes a target it stops being a good measure, and some organizations will take the time to instill the mindset properly. Some people will take to it and some will not, and the commitment is to keep growing along the path without expecting perfection."
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta's AI Academy is available at albertaaiacademy.com, and we share all of our materials openly. Level 3 is being refactored now and will be released shortly. The lesson underneath all of it is the one the Academy keeps returning to: becoming proficient at something you could not do before, by working through the frustration rather than around it, is a skill that carries a person through their whole career. That confidence is what graduates leave with, and it is what they carry back into the day job."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "ai-academy",
+        "training",
+        "personas",
+        "harness",
+        "change-management"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "p7p2k",
+    "zgym1",
+    "uwpxr",
+    "oxj36",
+    "eujjc"
+  ]
 }

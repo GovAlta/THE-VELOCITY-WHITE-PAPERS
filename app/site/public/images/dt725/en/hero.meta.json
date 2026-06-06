@@ -1,0 +1,17 @@
+{
+  "paper_id": "dt725",
+  "locale": "en",
+  "slot": "hero",
+  "out_path": "public\\images\\dt725\\en\\hero.jpg",
+  "bytes_jpg": 225327,
+  "bytes_png_source": 3064757,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T14:29:42.053Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. Three broad stone steps rise from lower left to upper right, like a graduated ascent. On the first step rests a simple speech-bubble motif; on the second, a small gear with a tiny robot token; on the third, a clean application window outline. A wide calm sky behind them. Archival, calm, and confident. Wide cover aspect. No text, no logos, no people.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. Three broad stone steps rise from lower left to upper right, like a graduated ascent. On the first step rests a simple speech-bubble motif; on the second, a small gear with a tiny robot token; on the third, a clean application window outline. A wide calm sky behind them. Archival, calm, and confident. Wide cover aspect. No text, no logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "dt725",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\dt725\\en\\fig-12-4.jpg",
+  "bytes_jpg": 208521,
+  "bytes_png_source": 2434365,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T14:33:43.496Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as three equal panels side by side. Left panel titled WARRIOR with a simple shield icon, listing SHIP, SPEED, LEADERBOARD, and a small tag at its base reading AI FACTORY. Centre panel titled WIZARD with a simple stars icon, listing STRATEGIZE, MODERNIZE, ARCHITECT, with a base tag reading GOVERNMENT 3.0. Right panel titled CRAFTSPERSON with a simple hammer icon, listing BUILD FOR OTHERS, HARNESSES, TEMPLATES, with a base tag reading PRONGHORN, NEXUS, VELOCITY. The three panels are balanced and equal in weight. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as three equal panels side by side. Left panel titled WARRIOR with a simple shield icon, listing SHIP, SPEED, LEADERBOARD, and a small tag at its base reading AI FACTORY. Centre panel titled WIZARD with a simple stars icon, listing STRATEGIZE, MODERNIZE, ARCHITECT, with a base tag reading GOVERNMENT 3.0. Right panel titled CRAFTSPERSON with a simple hammer icon, listing BUILD FOR OTHERS, HARNESSES, TEMPLATES, with a base tag reading PRONGHORN, NEXUS, VELOCITY. The three panels are balanced and equal in weight. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

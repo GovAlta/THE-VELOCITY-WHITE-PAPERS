@@ -336,18 +336,35 @@
       "sequence": "",
       "tier": "Policy & People",
       "title": "The AI Academy: Investing in People",
-      "subtitle": "Training the public service to direct AI.",
+      "subtitle": "A graduated, open-source program that trains public servants to work with artificial intelligence, from prompting through building enterprise-grade applications.",
       "track": "Human and Change Management",
       "authors": [
-        "Ministry of Technology and Innovation"
+        "Janak Alford",
+        "Deputy Minister",
+        "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 17,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "ai-academy",
+        "training",
+        "change-management",
+        "personas",
+        "harness",
+        "prompting",
+        "agents",
+        "open-source"
+      ],
       "repo": null,
-      "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
-      "related": [],
+      "abstract": "The Alberta AI Academy is a graduated training program that prepares public servants to work with artificial intelligence. It grew out of the AI Maximalist program, where a first cohort of about sixty-five volunteers revealed both the demand for structured training and the wide range of responses to a new technology. Launched in September 2025, the Academy runs in three levels: prompting and the foundations of trusted AI use, reusable agents for repeatable work, and the building of enterprise-grade applications with a harness. Cohorts range from sixty to several hundred participants and cross every level of seniority. Course materials are published openly at albertaaiacademy.com. This paper describes the program's origins, its structure across the three levels, the persona-based approach used in Level 3, and the mindset the Academy works to instill: that effective AI adoption is a discipline of persistent, verified practice rather than a metric to be optimized.",
+      "related": [
+        "p7p2k",
+        "zgym1",
+        "uwpxr",
+        "oxj36",
+        "eujjc"
+      ],
       "category": "paper"
     },
     {

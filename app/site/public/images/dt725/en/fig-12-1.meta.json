@@ -1,0 +1,17 @@
+{
+  "paper_id": "dt725",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\dt725\\en\\fig-12-1.jpg",
+  "bytes_jpg": 146769,
+  "bytes_png_source": 2457768,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T14:30:47.830Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three broad steps rise from lower left to upper right. The first step is labelled LEVEL 1: PROMPTING with a small speech-bubble icon, the second LEVEL 2: AGENTS with a small gear-and-robot icon, the third LEVEL 3: APPLICATIONS with a small application-window icon. A thin rust arrow loops back from each higher step to the one before it, labelled REPEAT ANY LEVEL. A small tag to the side reads SELF-SERVE, ALWAYS AVAILABLE. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three broad steps rise from lower left to upper right. The first step is labelled LEVEL 1: PROMPTING with a small speech-bubble icon, the second LEVEL 2: AGENTS with a small gear-and-robot icon, the third LEVEL 3: APPLICATIONS with a small application-window icon. A thin rust arrow loops back from each higher step to the one before it, labelled REPEAT ANY LEVEL. A small tag to the side reads SELF-SERVE, ALWAYS AVAILABLE. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}
