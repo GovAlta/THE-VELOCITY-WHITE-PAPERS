@@ -67,7 +67,7 @@
             "body": "Abstraction layers like Bifrost let workloads move between providers, or to our own compute."
           }
         },
-        "text": "The industry changes too quickly to put every workload with one provider. Over eighteen months we have moved between Gemini, OpenAI, and Anthropic models, and today Claude outperforms most others, though we expect that to change. An abstraction layer like the Bifrost gateway lets us move a workload from one provider to another, or from the cloud to our own compute, and it holds spending to a budget."
+        "text": "The industry changes too quickly to put every workload with one provider. Over eighteen months we have tried a range of models, floating between Gemini, OpenAI, and Anthropic, and right now Claude outperforms most others, though we expect that to change. An abstraction layer like the Bifrost gateway lets us move a workload from one provider to another, or from the cloud to our own compute, and it keeps spending within a budget."
       },
       {
         "id": "03",
@@ -142,11 +142,11 @@
     },
     {
       "type": "paragraph",
-      "text": "The industry moves quickly, and the lead changes hands every few months. Google released an image model, Nano Banana 2, that was remarkable, and some months later OpenAI shipped GPT Image 2, a step change again. We stay flexible and apply each platform where it fits. The same discipline holds for the large language models. Over the past eighteen months we have moved between Gemini, OpenAI, and Anthropic models, and at the current state we find Anthropic's Claude models outperform most others. We expect that to change, and the stack is built so it can. For the work in these white papers we have relied mainly on Claude, the Opus and Sonnet models, moving from 3.5 up to today's Opus 4.8 and the latest Sonnet, and Anthropic has been shipping additions to Claude Code and the Claude apps at a pace that is hard to keep up with."
+      "text": "The industry moves quickly, and the lead alternates every couple of months. Google releases an image model like Nano Banana 2 that is astounding, and a few months later OpenAI ships GPT Image 2, a step change again. We stay flexible and use each platform where it fits. Over the past eighteen months we have tried a range of models, floating between Gemini, OpenAI, and Anthropic, and right now we find Anthropic's Claude models outperform most others. We expect that to change, and the stack is built so it can. For the work in these white papers we have relied mainly on Claude, the Opus and Sonnet models, moving from 3.5 up to today's Opus 4.8 and the latest Sonnet, and Anthropic has been shipping additions to Claude Code and the Claude apps faster than we can keep up."
     },
     {
       "type": "paragraph",
-      "text": "Our advice to any organization is to avoid putting every workload with one provider. An abstraction layer, such as the [Bifrost](#/paper/uwpxr) gateway, lets us move a workload from one provider to another, or from the cloud to our own compute, as needs and prices shift. The same layer contains cost, holding workloads to budgets so token use does not run away."
+      "text": "An abstraction layer, like the [Bifrost](#/paper/uwpxr) gateway, lets us move a workload from one provider to another, or from the cloud to our own compute, as needs and prices change. It also keeps spending under control, with per-workload budgets so token use does not run away. We would not advise any government to put all its eggs in one basket; the industry is moving too quickly for that."
     },
     {
       "type": "section_heading",
@@ -351,7 +351,7 @@
     },
     {
       "type": "paragraph",
-      "text": "We now spend tens of thousands of dollars a month on compute tokens, and we expect that to reach hundreds of thousands a month as the [four approaches](#/paper/zgym1) are implemented and an AI agent supports every application for monitoring, cybersecurity remediation, and development. Capacity is a real constraint. A shortage of infrastructure and memory limits compute, and even our enterprise agreements, at twenty-five to fifty million tokens per minute, will likely be exceeded soon, so we are moving to a diversified, load-balanced approach to throughput."
+      "text": "We now spend tens of thousands of dollars a month on compute tokens, and we expect that to reach hundreds of thousands a month as the [four approaches](#/paper/zgym1) are implemented and an AI agent supports every application for monitoring, cybersecurity remediation, and development. Capacity is becoming a constraint: a shortage of infrastructure and memory is limiting compute, and even our enterprise agreements, at twenty-five to fifty million tokens per minute, will likely be exceeded soon, so we are moving to a diversified, load-balanced approach to throughput."
     },
     {
       "type": "keystat",
@@ -361,7 +361,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The economics are worth stating plainly. The more important effect of these tools is that they open up work we would simply not have pursued otherwise, more than they reduce the cost of work we already do. As the tools become available, both the appetite to build meaningful new services and the need to remediate technical debt grow together. Our aim is to modernize at speed and to deliver enhanced services, with hundreds of millions a year in cost avoidance, while staffing levels hold steady, and to move from vendor-locked technologies toward platforms that give us flexibility as we scale. We explore AI for the reasons set out in [The Cyber Imperative](#/paper/mwo98) and [the two-billion-dollar Ship of Theseus](#/paper/cux4h), and we are careful not to trade one problem for another."
+      "text": "These cost numbers are interesting. The bigger effect of these tools is that they open up work we would simply not have pursued otherwise, more than they reduce the cost of work we already do. As the tools become available, both the appetite to build meaningful new services and the need to remediate technical debt grow together. Our aim is to modernize at speed and to deliver enhanced services, with hundreds of millions a year in cost avoidance and staffing steady, and to move from vendor-locked technologies toward platforms that give us latitude as we scale. We explore AI for the reasons set out in [The Cyber Imperative](#/paper/mwo98) and [the two-billion-dollar Ship of Theseus](#/paper/cux4h), and we are careful not to trade one problem for another."
     },
     {
       "type": "tag_row",
