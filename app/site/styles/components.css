@@ -789,6 +789,20 @@
   border: 0;
   display: block;
 }
+.vw-yt-input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 4px 0 10px;
+  padding: 8px 10px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: var(--ink, #0B0C0F);
+  background: #fff;
+  border: 1px solid var(--rule-strong, #B8AE99);
+  border-radius: 4px;
+}
+.vw-yt-input:focus { outline: 2px solid var(--accent, #1A3A6E); outline-offset: 1px; }
 
 /* --- Data table block ------------------------------------ */
 .cd-table {

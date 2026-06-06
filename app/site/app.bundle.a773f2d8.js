@@ -1532,6 +1532,9 @@
       block:   { type: Object, default: null },
     },
     setup() { return { edit: window.VWEdit || null }; },
+    methods: {
+      touch() { if (this.edit) this.edit.markDirty(); },
+    },
     computed: {
       editing() { return !!(this.edit && this.edit.enabled); },
       src()     { return (this.block && this.block.url != null) ? this.block.url : this.url; },
@@ -1566,9 +1569,13 @@
 
         <div v-if="editing && block" class="vw-img-edit">
           <label>YouTube link (standard, short, or embed URL)</label>
-          <editable-text tag="div" cls="vw-img-field" :obj="block" field="url" />
+          <input type="url" class="vw-yt-input" v-model="block.url" @input="touch"
+                 aria-label="YouTube link"
+                 placeholder="https://www.youtube.com/watch?v=…  ·  https://youtu.be/…  ·  https://www.youtube.com/embed/…" />
           <label>Alt text (accessibility; describes the video)</label>
-          <editable-text tag="div" cls="vw-img-field" :obj="block" field="alt" />
+          <input type="text" class="vw-yt-input" v-model="block.alt" @input="touch"
+                 aria-label="Video alt text"
+                 placeholder="Describe the video for screen readers" />
           <span class="vw-gen-hint" v-if="src && !vid">That does not look like a YouTube link. Use a watch, youtu.be, or embed URL.</span>
         </div>
       </figure>
