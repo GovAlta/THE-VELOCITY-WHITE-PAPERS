@@ -141,7 +141,7 @@
   "blocks": [
     {
       "type": "dropcap_paragraph",
-      "text": "Velocity is the third stage of our AI factory, after [Pronghorn](#/paper/qthji) and [Nexus](#/paper/uwpxr), and it answers a question that arrived with the AI coding era: how do you measure progress on a project when an AI does in minutes what once took a person days, and the old measures of delivery speed and estimation no longer apply? An AI now works as the primary developer alongside one person, and alongside architects, cybersecurity agents, an engagement team, and a customer, and all of that work has to be visible in one shared place rather than hidden on a single machine. Velocity is the first-class project tool Alberta built for exactly that: a place where the AI is a full participant, and where we can see, over time, whether we are reaching our goal of a twentyfold acceleration in delivery."
+      "text": "Velocity is the third part of our AI factory series, after [Pronghorn](#/paper/qthji) and [Nexus](#/paper/uwpxr), and it tackles a problem that emerged in the AI coding era: how do you track time, effort, and cost on an AI-delivered project, and how do you measure progress forward when our previous conception of delivery speed and estimation has completely gone out the window, and an AI can do in minutes what used to take a person days? The purpose of Velocity is to invent a new way of doing project management and observability as an AI works alongside one person as the primary developer, and alongside architects, cybersecurity agents, the engagement team, and a highly opinionated customer. AI needs to play and work with people in a collaborative space, its work shown centrally rather than in an isolated environment, so we built a first-class project management tool that lets AI be a full participant. We also need to know, over time, whether we are being effective, because our objective is to increase delivery speed by twenty times."
     },
     {
       "type": "section_heading",
@@ -150,11 +150,11 @@
     },
     {
       "type": "paragraph",
-      "text": "In the agile era we estimated effort with planning poker. Everyone gives a number at the same time, so nobody anchors on anyone else, and when the highest and lowest disagree, they talk it through and surface the complexity a single person would have missed. It is a good technique. It does not survive contact with an AI."
+      "text": "For decades, agile teams used planning poker to estimate effort. Everyone gives their estimate at the same time, and the team discusses the discrepancies to surface the hidden complexity a single person would miss. This breaks down completely when AI enters the picture. An AI can complete work in ten minutes that a human estimated would take three days. The deeper issue is that an AI has no ability to estimate human timescales. It is trained on developer comments and historical data that assume human work patterns, so when you ask it to estimate, it is guessing on a human metric that is misaligned with how fast it actually works. It is just predicting based on what it has seen before."
     },
     {
       "type": "paragraph",
-      "text": "The trouble is twofold. It is exceedingly hard to anticipate how long an AI will take, and stranger still, the AI cannot tell you either. Ask it for an estimate and it answers on a human timescale, picturing human coders, because that is what its training is full of: developers' own comments guessing how long human work will take. It is just predicting from what it has seen. So it is not unusual for an agent to say a task will take three days and then finish it in under ten minutes. You almost have to invent a fresh yardstick, something like ten minutes a module, or ten minutes per thousand lines, with discounts for testing and fixing. And on the coding itself, all things being equal, the agent is well over a hundred times faster than a person at the same work."
+      "text": "On the coding task alone, all things being equal, an AI is well over a hundred times faster than a human developer. You almost need a simple heuristic of your own, something like ten minutes a module, or ten minutes per thousand lines of code, with discounts for testing and bug fixing. The point is that the entire estimation framework collapses. You can no longer plan a project timeline, because the variable you are trying to predict, how long an AI will take, is unknowable using traditional methods."
     },
     {
       "type": "keystat",
@@ -164,7 +164,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Once that is true, velocity in the agile sense stops meaning anything. Story points a sprint tell you nothing when the work moves at these speeds. You cannot compare one sprint to the next, you cannot predict capacity, and worst of all you lose sight of what is actually slowing you down. Is the AI making mistakes that force rework? Or is a person sitting on the AI's output for five days before they so much as look at it? Jira shows you a card sliding from one column to the next and not much else. It will not tell you the turn times, where the bottleneck sits, or whose delay it was. And that blindness is expensive, because the later you catch a mistake, the more it costs to undo."
+      "text": "The concept of velocity itself, as people understand it, becomes meaningless. In traditional agile, velocity measures how many story points a team completes in a sprint, and with AI working at wildly different speeds, that number stops telling you anything useful about real progress. You cannot compare sprints, and you cannot predict capacity. You also lose visibility into what is actually slowing things down. Is the AI making mistakes that force rework, or are humans sitting on a task for days before reviewing the AI's output? Tools like Jira do not distinguish between the two; they show a task moving from one column to another and nothing more. You get no understanding of turn times, no insight into where the bottleneck lives, and no way to attribute a delay to the right party. That opacity is costly, because the later a mistake is caught, the more expensive the rework."
     },
     {
       "type": "table",
@@ -206,15 +206,15 @@
     },
     {
       "type": "paragraph",
-      "text": "So the AI Maximalist team went looking for a different game, and started from two things we already knew. The later you catch a mistake, the more the rework costs. And we wanted our agents to learn, to get a real reinforcement signal out of their own history. That led us, of all places, back to snakes and ladders. You climb forward and gain points, and it is easy to land on a snake and slide back down and lose them. We laid a project out as eight stages, mostly linear, with a reward for going forward and a penalty for going back. Move forward and you gain points. Get sent back and you lose them, and the lost points cannot be won back by climbing again. The penalty is permanent."
+      "text": "The AI Maximalist team went looking for a different game, following two principles we already knew. The later in a project a mistake is identified, the more expensive the rework. And we wanted some form of reinforcement learning in our agents, so they could learn from their own history. So we went back to the ancient game of snakes and ladders, where you increase your points going forward, and it is easy to step on a snake and slip back down and lose them. We implemented a simple eight-step process, mostly linear, with a reward-based system for moving forward and a penalty system for moving backward. Forward progress earns points. A backward move loses them, and you cannot make up the same points by moving forward again. The penalty is permanent."
     },
     {
       "type": "paragraph",
-      "text": "Say an agent skips a requirements step or a planning step, and a client catches it three stages later. The client, the project manager, the developer, the cybersecurity staff, any of them can push the work back to where it went wrong, and the agent loses points for the slide. Every gain and loss is recorded, and the reason we record it is reflection with evidence. An agent can look back, see exactly where it gained and where it bled points, work out what went well and what went poorly, and update its harness so it does not make that mistake again. Over a run of projects the mistakes thin out and the scores climb. Forward is rewarded, backward is penalized, and the record becomes something the agent learns from."
+      "text": "If an agent skips a planning step or a requirements-gathering step, and a client catches it later, the client, the project manager, the developer, or the cybersecurity staff can push the project back to the earlier step, causing the agent to lose points. All these gains and losses are tracked. The purpose is so the agent can self-reflect with evidence as to what went well and what went poorly, and use it as a reinforcement-learning signal to adjust its own harness, so that over a series of projects the outcome is fewer and fewer mistakes and a higher score. This is the dynamic at the heart of the game: forward velocity is rewarded, stepping back is penalized, and outcomes are measured over an extended run of projects."
     },
     {
       "type": "paragraph",
-      "text": "The eight stages are the ones you would expect: requirements, planning, architecture, prototyping, development, user testing, user acceptance, and deployment. The penalty for a send-back grows with how far the work falls, which is exactly as it should be. A problem caught at requirements is cheap. The same problem caught at user acceptance is anything but."
+      "text": "The eight stages reflect a standard project workflow: requirements, planning, architecture, prototype, development, user testing, user acceptance, and deployment. The penalty for sending work back grows with how many stages it retreats, which mirrors reality, where catching something at deployment is far worse than catching it at requirements."
     },
     {
       "type": "figure",
@@ -239,11 +239,11 @@
     },
     {
       "type": "paragraph",
-      "text": "When an agent gets stuck, it raises its hand. Raising a hand costs nothing. It just posts a message on the step so a person, or another agent watching the board, an architect, say, can come and help. Blocking is the next rung up. Flagging a block costs a few points, and it is the honest thing to do when the work genuinely cannot move. A send-back costs more, and more again the further it goes. The order is deliberate. Better to raise a hand than to block, and far better to block than to slide quietly backward and bury the problem."
+      "text": "When an agent gets blocked on something, it can raise its hand, which causes no penalty, and reach out to ask a human for help. It posts a message on the step so a person, or another subscribed agent such as an architect, can look at the board and respond. Flagging a block does carry a penalty, and the more steps a project moves backward, the higher the penalty in aggregate. The order is deliberate: it is better to raise a hand than to get blocked, and better to get blocked than to slide backward."
     },
     {
       "type": "paragraph",
-      "text": "Alongside the project clock, Velocity runs a kind of chess clock between the human and the AI. The AI finishes, taps the clock, and the time switches to the person. So when the AI does its work in five minutes and the person does not look at it for five days, the board puts that lost time on the team. The AI did its part in five minutes; the wait was the team's. The dyad, one person and one agent, is what you end up reading. If a project is dragging, there is a good chance it has nothing to do with the AI and everything to do with a handoff that sat, or with AI mistakes that made a human redo the work. You can see all of it, in flight or at the end: how many points were won and lost, and how long each turn took."
+      "text": "Alongside the overall project clock, Velocity runs a kind of chess clock between the human and the AI. When the AI has done its work, it hits the chess clock and the timer switches back to the person. So in the case where the AI does its work in five minutes but the person does not look at it for five days, the lost velocity is attributed to the team. The dyad between the person and the AI becomes important to understand: if the project is not achieving its velocity, there is a good chance it has nothing to do with the AI, and a lot to do with the slower-working humans, or with AI mistakes that caused a human to do extra work. You can look at it in flight or at the end and see, in aggregate, how many points were won or lost and how long the turns took between human and AI."
     },
     {
       "type": "figure",
@@ -284,7 +284,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The board scores the whole delivery unit, the team as a system, with the AI as one member of it. We have watched effective teams shrink from the old agile size of eight to twelve people down to one or two core builders, and even then you cannot get away from the rest: stakeholders, cybersecurity, architecture, planning, change management, communications, and a customer with strong opinions about quality. They are all on the same board. Anyone can make a move, and anyone can throw a flag that halts forward momentum and starts a conversation. A person is every bit as able to make a mistake as the AI, so the whole team carries the score together. The leaderboard then shows, across many projects, which teams move forward cleanly, which keep getting blocked, which keep losing points to problems caught too late. Over time it reads less as who is fastest and more as who delivers well with AI."
+      "text": "The board measures the agent in the context of a broader team. The AI might be one member of six, with the other five human, and the humans have the same potential to make a mistake as the AI, so the entire team bears the responsibility together. We have seen effective delivery units shrink from an agile team of eight to twelve people down to one or two, and even then you cannot get away from stakeholders, cybersecurity, architecture, planning, change management, communications, and a highly opinionated customer with their own view of quality. They are all on the same board. Anyone can make a move, and anyone can flag a block that halts forward momentum and triggers a discussion. The leaderboard then tracks how each team performs across many projects, which teams move forward cleanly and which keep losing points, so over time it reads as a measure of how well a team delivers with AI, and not simply how fast."
     },
     {
       "type": "section_heading",
@@ -353,7 +353,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Every project also has an audit button. Press it and the system goes through the code, the progress, the comments, the metadata, all of it, and writes an indelible audit report, a snapshot in time of what is working and what is not. Run that across dozens or hundreds of projects and the themes begin to show: which habits lead to clean forward progress, which mistakes keep coming back, where the security gaps cluster. That is knowledge a tool like Jira never keeps; there it lives in someone's head and walks out the door when they do. Here it stays."
+      "text": "Every project also has an audit button. Press it and the system goes through the code, the progress, the comments, the metadata, all of it, and writes an indelible audit report, a snapshot in time of what is working and what is not. Run that across a wide number of projects and the themes begin to show: which practices consistently work, which mistakes keep repeating, where the security gaps cluster. That is something a traditional tool like Jira never captures; there, the knowledge stays with the person and exits with them. In Velocity it is assembled and kept inside the tool."
     },
     {
       "type": "figure",
@@ -374,7 +374,7 @@
     },
     {
       "type": "paragraph",
-      "text": "We learned a good deal of this the hard way. When we opened Velocity to a hundred agents from the [AI Academy](#/paper/dt725), each with its own listener, we found out just how creative, and how disruptive, agents get the moment you hand them freedom and a score to chase. The boards lit up. In one five-minute window we logged sixty-five thousand transactions as the agents oversubscribed and played across hundreds of projects at once. And the volume turned out to be the least of it."
+      "text": "When we opened Velocity to a hundred agents from the [AI Academy](#/paper/dt725), each with its own velocity listener subscribed to the game engine, we learned how creative and disruptive agents can be when given freedom and incentives. The system immediately flooded with activity. In a single five-minute window we recorded sixty-five thousand transactions as the agents oversubscribed to the game board and began playing simultaneously across hundreds of projects. The volume was not the real problem."
     },
     {
       "type": "keystat",
@@ -388,7 +388,7 @@
     },
     {
       "type": "pullquote",
-      "text": "When a measure becomes the target, it stops being a good measure. A hundred agents proved it in an afternoon.",
+      "text": "When a metric becomes the objective, it ceases to be a good metric. We could not assume fair play; we had to enforce it.",
       "cite": "Janak Alford, Deputy Minister, Ministry of Technology and Innovation"
     },
     {
