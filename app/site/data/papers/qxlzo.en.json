@@ -5,21 +5,32 @@
   "tier": "Technical",
   "category": "paper",
   "title": "The Agentic Technology Stack",
-  "subtitle": "The stack that runs the agent workforce.",
+  "subtitle": "The cloud platforms, models, gateways, and controls behind Alberta's agentic workloads, and the principles for choosing them.",
   "track": "Engineering the Solution",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 11,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "tech-stack",
+    "cloud",
+    "models",
+    "sovereign-compute",
+    "bifrost",
+    "security",
+    "governance",
+    "open-source"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+  "abstract": "In carrying out its AI strategy, Alberta has tested a wide range of agentic coding tools and generative AI platforms. This paper sets out the current technology stack and the principles behind it: the right model, in the right environment, for the right use case, with a deliberately diversified supply chain and abstraction layers that prevent provider lock-in. Alberta runs a hybrid environment across the Google, Azure, and AWS clouds, an on-premises compute cluster, and three legacy data centres, reaching models through AWS Bedrock, the Google Agent Platform, and Azure AI Studio. Information is classified from unclassified through Protected C, sensitive data is controlled in Canada, and sovereign compute is being pursued. Use is governed by Alberta's AI usage policy, its AI governance framework, and the Protection of Privacy Act. The paper also covers the security and supply-chain controls around agents, and the cost and scale of running this stack. The stack is expected to change as tools evolve.",
   "hero_image": {
     "src": "public/images/qxlzo/en/hero.jpg",
-    "alt": "Editorial image for: The Agentic Technology Stack",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The Agentic Technology Stack\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Editorial cover illustration for The Agentic Technology Stack: a clean architectural cross-section of several broad horizontal layers stacked like strata, drawn in deep Alberta navy line work with small rust accents on warm cream paper.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A clean architectural cross-section of several broad horizontal layers stacked one on another, like strata, suggesting a technology stack: a wide base layer, two middle layers, and a top layer, each a simple band carrying a few small node motifs and connecting lines. Calm, archival, and confident. Wide cover aspect. No text, no logos, no people.",
     "style_kind": "cover"
   },
   "audio": {
@@ -36,33 +47,348 @@
         "title": "The Agentic Technology Stack",
         "audio_file": "public/audio/en/qxlzo-tldr/01.mp3",
         "visual": "title",
-        "caption": "Engineering the Solution",
-        "subcaption": "",
-        "text": "The Agentic Technology Stack. Content forthcoming."
+        "caption": "Paper 11 · Engineering the Solution",
+        "subcaption": "The stack that runs the agent workforce.",
+        "text": "This paper sets out Alberta's current agentic technology stack and the principles behind it. We have tested a wide range of agentic coding tools and AI platforms, and we choose by a simple rule: the right model, in the right environment, for the right use case. We expect the stack to change as tools evolve, so it is built to change."
+      },
+      {
+        "id": "02",
+        "title": "Diversified, and built to change",
+        "audio_file": "public/audio/en/qxlzo-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "The guiding principle",
+        "visual_config": {
+          "left": {
+            "label": "One provider",
+            "body": "Fast to adopt, and it locks you in as prices and capabilities shift every few months."
+          },
+          "right": {
+            "label": "A diversified supply chain",
+            "body": "Abstraction layers like Bifrost let workloads move between providers, or to our own compute."
+          }
+        },
+        "text": "The industry changes too quickly to put every workload with one provider. Over eighteen months we have moved between Gemini, OpenAI, and Anthropic models, and today Claude outperforms most others, though we expect that to change. An abstraction layer like the Bifrost gateway lets us move a workload from one provider to another, or from the cloud to our own compute, and it holds spending to a budget."
+      },
+      {
+        "id": "03",
+        "title": "The stack, by layer",
+        "audio_file": "public/audio/en/qxlzo-tldr/03.mp3",
+        "visual": "list",
+        "caption": "A hybrid environment",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Cloud and compute",
+              "desc": "Google, Azure, and AWS, an on-prem GPU cluster, and three legacy data centres."
+            },
+            {
+              "label": "Model access",
+              "desc": "AWS Bedrock, the Google Agent Platform, and Azure AI Studio."
+            },
+            {
+              "label": "Models",
+              "desc": "Claude Opus and Sonnet primarily, with open-source models for offline work."
+            },
+            {
+              "label": "Gateways and security",
+              "desc": "Bifrost for abstraction and cost, Defender and Purview for data-loss prevention."
+            }
+          ]
+        },
+        "text": "Alberta runs a hybrid environment. We use the Google, Azure, and AWS clouds, an on-premises GPU cluster, and three legacy data centres. We reach hosted models through AWS Bedrock, the Google Agent Platform, and Azure AI Studio, and we run open-source models on our own hardware for offline work. Agentic workloads deploy into Google Cloud; traditional applications continue to run in Azure and AWS."
+      },
+      {
+        "id": "04",
+        "title": "Classified, and kept in Canada",
+        "audio_file": "public/audio/en/qxlzo-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Data residency and privacy",
+        "visual_config": {
+          "stat_value": "~99%",
+          "stat_label": "Of systems sit at Protected B or below"
+        },
+        "subcaption": "Sensitive data is controlled in Canada; Protected C runs offline on our own cluster.",
+        "text": "Information is classified from unclassified through Protected C, and the large majority of systems, likely ninety-nine percent or more, sit at Protected B at the highest. Sensitive data is controlled in Canada through our enterprise agreements, and the most sensitive workloads run offline on our own cluster. We are pursuing sovereign compute, and for health and security workloads, exclusive control of the data is non-negotiable."
+      },
+      {
+        "id": "05",
+        "title": "Careful where it counts",
+        "audio_file": "public/audio/en/qxlzo-tldr/05.mp3",
+        "visual": "title",
+        "caption": "Security, cost, and scale",
+        "subcaption": "Public-facing AI handled with care; cost contained; capacity planned.",
+        "text": "No model today fully resists prompt injection, so public-facing AI and anything touching personal information is avoided or selectively designed. We audit the harnesses we use, since a poisoned one can turn an agent against us. On cost, we now spend tens of thousands of dollars a month and expect hundreds of thousands as agents support every application. The aim is to modernize at speed and deliver enhanced services, with hundreds of millions a year in cost avoidance."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "Choosing the right tools" },
+    { "n": "02", "title": "The stack" },
+    { "n": "03", "title": "Classification and residency" },
+    { "n": "04", "title": "Governance and privacy" },
+    { "n": "05", "title": "Security and the supply chain" },
+    { "n": "06", "title": "Cost and scale" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "In carrying out Alberta's strategy, we have tested a wide range of agentic coding tools and generative AI platforms, and what follows is our current stack. We expect it to change as new tools emerge, and our choices are guided by a simple aim: the right model, in the right environment, for the right use case. We have deliberately diversified our AI supply chain, for both the capacity and the variety needed to cover a wide range of work, and we avoid placing every workload with a single provider."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Choosing the right tools"
     },
     {
       "type": "paragraph",
-      "text": "**Content forthcoming.**"
+      "text": "The industry moves quickly, and the lead changes hands every few months. Google released an image model, Nano Banana 2, that was remarkable, and some months later OpenAI shipped GPT Image 2, a step change again. We stay flexible and apply each platform where it fits. The same discipline holds for the large language models. Over the past eighteen months we have moved between Gemini, OpenAI, and Anthropic models, and at the current state we find Anthropic's Claude models outperform most others. We expect that to change, and the stack is built so it can. For the work in these white papers we have relied mainly on Claude, the Opus and Sonnet models, moving from 3.5 up to today's Opus 4.8 and the latest Sonnet, and Anthropic has been shipping additions to Claude Code and the Claude apps at a pace that is hard to keep up with."
+    },
+    {
+      "type": "paragraph",
+      "text": "Our advice to any organization is to avoid putting every workload with one provider. An abstraction layer, such as the [Bifrost](#/paper/uwpxr) gateway, lets us move a workload from one provider to another, or from the cloud to our own compute, as needs and prices shift. The same layer contains cost, holding workloads to budgets so token use does not run away."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "The stack"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta runs a hybrid environment. We use the major hyperscaler clouds, Google, Azure, and AWS, alongside a number of smaller platforms, and we still operate three large legacy data centres carrying older code, systems, and infrastructure. We run open-source models on our own GPU cluster, and we reach hosted models through AWS Bedrock, the Google Agent Platform, and Azure AI Studio. We proactively test nearly every model that comes online: open-source models on our own hardware for offline, Protected C workloads, and others on local Mac M5 devices. Our primary workloads run through AWS Bedrock and the Google Agent Platform."
+    },
+    {
+      "type": "table",
+      "title": "The stack at a glance",
+      "columns": [
+        "Layer",
+        "What we use",
+        "Role"
+      ],
+      "rows": [
+        [
+          "Cloud and compute",
+          "Google Cloud, Azure, AWS, an on-premises GPU cluster, and three legacy data centres.",
+          "A hybrid footprint, with the cluster running open-source models offline."
+        ],
+        [
+          "Model access",
+          "AWS Bedrock, the Google Agent Platform, and Azure AI Studio.",
+          "Reach the right model for the workload, with data controlled in Canada."
+        ],
+        [
+          "Models",
+          "Claude Opus and Sonnet (3.5 up to Opus 4.8 and the latest Sonnet); open-source models.",
+          "Claude is the current primary; open-source models serve offline and Protected C work."
+        ],
+        [
+          "Gateways",
+          "Bifrost and other agent gateways.",
+          "Provider abstraction, cost containment, and personal-information controls."
+        ],
+        [
+          "Deployment",
+          "Agentic workloads to Google Cloud; traditional applications to Azure and AWS.",
+          "Containerization is described in the Nexus paper."
+        ],
+        [
+          "Security and data-loss prevention",
+          "Microsoft Defender and Purview, and GitHub's integrated tooling.",
+          "Data-loss-prevention and code controls across the estate."
+        ]
+      ],
+      "caption": "The current stack, expected to change as tools evolve. Each layer is chosen so a workload can move between providers or to our own compute.",
+      "source": "Ministry of Technology and Innovation."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.1",
+      "title": "The agentic stack, by layer",
+      "caption": "The same stack drawn as layers, from the cloud and on-premises compute at the base, through model access and the models themselves, the gateway that abstracts and meters them, and the deployment targets at the top.",
+      "image": {
+        "src": "public/images/qxlzo/en/fig-11-1.jpg",
+        "alt": "A hand-drawn layered diagram with five horizontal bands: a base band Cloud and compute holding Google Cloud, Azure, AWS, on-prem GPU cluster, and legacy data centres; a Model access band holding AWS Bedrock, Google Agent Platform, and Azure AI Studio; a Models band holding Claude Opus and Sonnet and open-source models; a Gateway band holding Bifrost; and a top Deployment band holding agentic workloads to GCP and traditional apps to Azure and AWS.",
+        "image_prompt": "An editorial layered architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as horizontal bands stacked from bottom to top. Bottom band labelled CLOUD AND COMPUTE holding small boxes GOOGLE CLOUD, AZURE, AWS, ON-PREM GPU CLUSTER, LEGACY DATA CENTRES. Next band labelled MODEL ACCESS holding boxes AWS BEDROCK, GOOGLE AGENT PLATFORM, AZURE AI STUDIO. Next band labelled MODELS holding boxes CLAUDE OPUS AND SONNET and OPEN-SOURCE MODELS. Next band labelled GATEWAY holding one box BIFROST with a small caption ABSTRACTION, COST, PII. Top band labelled DEPLOYMENT holding boxes AGENTIC WORKLOADS TO GCP and TRADITIONAL APPS TO AZURE AND AWS. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Most of our cloud-based agentic workloads deploy into Google Cloud, while our traditional applications continue to run in Azure and AWS. The containerization behind this is described in the [Nexus](#/paper/uwpxr) paper. We are also looking at Red Hat OpenShift to host more workloads on our own hardware and to make fuller use of the data-centre capacity we already have."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Classification and residency"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Government of Alberta classifies information as unclassified, Protected A, Protected B, and Protected C. A few systems reach Protected C, though the large majority, likely ninety-nine percent or more, sits at Protected B at the highest. Much of the AI build work in these papers uses unclassified, government-owned legacy code and architecture, free of any personal information in production systems. This lets us reimagine how government works, with AI as the builder of future systems, while the AI never touches or observes citizen data unless it is genuinely needed."
+    },
+    {
+      "type": "table",
+      "title": "Where workloads run, by classification",
+      "columns": [
+        "Classification",
+        "What it covers",
+        "Where it runs"
+      ],
+      "rows": [
+        [
+          "Unclassified",
+          "Government-owned legacy code and architecture, free of personal information.",
+          "Cloud and on-premises; the bulk of current AI build work."
+        ],
+        [
+          "Protected A and B",
+          "Most government systems, with Protected B the ceiling for roughly 99 percent.",
+          "Controlled cloud in Canada, under enterprise agreements and platform guardrails."
+        ],
+        [
+          "Protected C",
+          "The most sensitive systems, a small minority.",
+          "Offline, on our own GPU cluster."
+        ]
+      ],
+      "caption": "Sensitivity governs where a workload runs. The most sensitive work stays offline on Alberta-owned hardware.",
+      "source": "Ministry of Technology and Innovation."
+    },
+    {
+      "type": "paragraph",
+      "text": "All data tied to these workloads is controlled in Canada through our enterprise agreements and platform guardrails. Depending on the workload, we use domestic compute or inference from the United States, which is what the cloud providers primarily offer today. We are working with every cloud provider to bring more hardware into Canada and shift ever more workloads into a sovereign environment, and we are watching the Google and Telus sovereign-compute consortiums closely. We have released a Sovereign Compute prequalification request inviting wholly Canadian companies to help with our most sensitive work, and we support the Government of Canada's objective to grow the sovereign-compute space. For health and security workloads, exclusive Government of Alberta control of the data is a non-negotiable position."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.2",
+      "title": "Data residency and sovereignty",
+      "caption": "Sensitive data is controlled in Canada through enterprise agreements and guardrails, with Protected C running offline on Alberta-owned hardware. Some workloads still use United States inference today, and sovereign compute is being grown to bring more in-country.",
+      "image": {
+        "src": "public/images/qxlzo/en/fig-11-2.jpg",
+        "alt": "A hand-drawn diagram: a large rounded boundary labelled Canada contains a box Controlled cloud, marked enterprise agreements and guardrails, and a box On-prem cluster, offline, marked Protected C, plus a small sovereign compute motif marked growing. Outside the boundary, a box US inference connects in by a dashed arrow marked some workloads today. Along the bottom, classification chips read unclassified, Protected A, Protected B, Protected C, with Protected B marked around 99 percent at most.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A large rounded boundary labelled CANADA contains two boxes: CONTROLLED CLOUD captioned ENTERPRISE AGREEMENTS, GUARDRAILS, and ON-PREM CLUSTER, OFFLINE captioned PROTECTED C. Inside the boundary, a small flag-like motif labelled SOVEREIGN COMPUTE with a caption GROWING. Outside the boundary on the right, a box labelled US INFERENCE connects into the CANADA boundary by a dashed arrow labelled SOME WORKLOADS TODAY. Along the bottom edge, a row of four small chips labelled UNCLASSIFIED, PROTECTED A, PROTECTED B, PROTECTED C, with a small bracket under PROTECTED B reading AROUND 99 PERCENT AT MOST. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Governance and privacy"
+    },
+    {
+      "type": "paragraph",
+      "text": "Our decisions are guided by Alberta's AI usage policy and our AI governance framework, which set out the considerations for the public service when adopting AI. Privacy is governed by Alberta's Protection of Privacy Act, which defines where AI can be used and when government must complete a privacy impact assessment and register it with the Office of the Information and Privacy Commissioner before proceeding."
+    },
+    {
+      "type": "keystat",
+      "label": "Prompt-injection resistance",
+      "value": "95-98%",
+      "body": "Even the best models resist hijacking only 95 to 98 percent of the time. No model today is immune, so public-facing AI and anything touching personal information is avoided or selectively designed."
+    },
+    {
+      "type": "paragraph",
+      "text": "We are deliberately careful with public-facing AI. No model today fully resists prompt injection, and even the best resist hijacking only ninety-five to ninety-eight percent of the time. There are well-known cases of platforms gamed and agents tricked into harmful work on a prompter's behalf. So public-facing AI, and anything touching personal information, is either avoided or selectively designed, and to date we have mostly used synthetic data to validate what these systems could do and to give ministry partners a clear set of considerations to weigh."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Security and the supply chain"
+    },
+    {
+      "type": "paragraph",
+      "text": "We have been cautious with open-source agent components, by practice rather than by policy. A harness, even when it is only a set of skill files, is software, and it needs auditing before use. It can carry a prompt injection, or a poisoned supply chain can make an agent behave erratically, and in the worst case the agent itself becomes the threat actor. So we are selective about what we pull down, and we evaluate it first."
+    },
+    {
+      "type": "table",
+      "title": "Security and control layers",
+      "columns": [
+        "Concern",
+        "Approach",
+        "Purpose"
+      ],
+      "rows": [
+        [
+          "Provider lock-in",
+          "Abstraction through Bifrost and other agent gateways.",
+          "Move workloads between providers, or from cloud to our own compute."
+        ],
+        [
+          "Runaway token use",
+          "Per-workload budgets and point-in-time approvals.",
+          "Contain cost on long-running jobs."
+        ],
+        [
+          "Data loss",
+          "Microsoft Defender and Purview, or equivalents.",
+          "Data-loss-prevention controls across the estate."
+        ],
+        [
+          "Supply-chain poisoning",
+          "Audit and evaluate harnesses and skill files before use.",
+          "Catch prompt injection and tampering before an agent runs them."
+        ],
+        [
+          "Public-facing prompt injection",
+          "Avoid or selectively design public AI; validate with synthetic data.",
+          "No model fully resists injection (the best reach 95 to 98 percent)."
+        ],
+        [
+          "Agent identity and observability",
+          "Engagement with industry; following agent footprints across the network.",
+          "An area still in development, and a focus of forthcoming work."
+        ]
+      ],
+      "caption": "The controls Alberta places around models and agents, from provider abstraction through supply-chain auditing to the open work on agentic identity and observability.",
+      "source": "Ministry of Technology and Innovation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Around the models we run gateways like Bifrost for provider abstraction, cost containment, and personal-information controls, and we recommend Microsoft Defender and Purview, or equivalents, as data-loss-prevention controls, alongside GitHub's integrated tooling. There is more to do. We are engaging industry on the security apparatus around agents, on agentic identity management, and on following and observing agent activity across the network, and we will invite strong companies to test tools against government workloads through the Sovereign Compute process and forthcoming requests for proposals. We are also seeking partnerships with federal, provincial, territorial, and municipal peers to keep an active community of practice and to learn from how other governments are solving the same problems."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Cost and scale"
+    },
+    {
+      "type": "paragraph",
+      "text": "We now spend tens of thousands of dollars a month on compute tokens, and we expect that to reach hundreds of thousands a month as the [four approaches](#/paper/zgym1) are implemented and an AI agent supports every application for monitoring, cybersecurity remediation, and development. Capacity is a real constraint. A shortage of infrastructure and memory limits compute, and even our enterprise agreements, at twenty-five to fifty million tokens per minute, will likely be exceeded soon, so we are moving to a diversified, load-balanced approach to throughput."
+    },
+    {
+      "type": "keystat",
+      "label": "A long-running job",
+      "value": "250 agents · 50 days",
+      "body": "Processing roughly 14 million historical images and records is scoped at up to 250 concurrent agents running for as long as 50 days, at a cost of several hundred thousand dollars, perhaps one percent of doing the same work by hand."
+    },
+    {
+      "type": "paragraph",
+      "text": "The economics are worth stating plainly. The more important effect of these tools is that they open up work we would simply not have pursued otherwise, more than they reduce the cost of work we already do. As the tools become available, both the appetite to build meaningful new services and the need to remediate technical debt grow together. Our aim is to modernize at speed and to deliver enhanced services, with hundreds of millions a year in cost avoidance, while staffing levels hold steady, and to move from vendor-locked technologies toward platforms that give us flexibility as we scale. We explore AI for the reasons set out in [The Cyber Imperative](#/paper/mwo98) and [the two-billion-dollar Ship of Theseus](#/paper/cux4h), and we are careful not to trade one problem for another."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "tech-stack",
+        "cloud",
+        "models",
+        "sovereign-compute",
+        "security"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "uwpxr",
+    "zgym1",
+    "mwo98",
+    "cux4h",
+    "p7p2k"
+  ]
 }

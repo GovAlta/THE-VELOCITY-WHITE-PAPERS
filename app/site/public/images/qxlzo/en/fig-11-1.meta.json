@@ -1,0 +1,17 @@
+{
+  "paper_id": "qxlzo",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\qxlzo\\en\\fig-11-1.jpg",
+  "bytes_jpg": 171066,
+  "bytes_png_source": 2173546,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T18:22:10.966Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial layered architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as horizontal bands stacked from bottom to top. Bottom band labelled CLOUD AND COMPUTE holding small boxes GOOGLE CLOUD, AZURE, AWS, ON-PREM GPU CLUSTER, LEGACY DATA CENTRES. Next band labelled MODEL ACCESS holding boxes AWS BEDROCK, GOOGLE AGENT PLATFORM, AZURE AI STUDIO. Next band labelled MODELS holding boxes CLAUDE OPUS AND SONNET and OPEN-SOURCE MODELS. Next band labelled GATEWAY holding one box BIFROST with a small caption ABSTRACTION, COST, PII. Top band labelled DEPLOYMENT holding boxes AGENTIC WORKLOADS TO GCP and TRADITIONAL APPS TO AZURE AND AWS. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial layered architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as horizontal bands stacked from bottom to top. Bottom band labelled CLOUD AND COMPUTE holding small boxes GOOGLE CLOUD, AZURE, AWS, ON-PREM GPU CLUSTER, LEGACY DATA CENTRES. Next band labelled MODEL ACCESS holding boxes AWS BEDROCK, GOOGLE AGENT PLATFORM, AZURE AI STUDIO. Next band labelled MODELS holding boxes CLAUDE OPUS AND SONNET and OPEN-SOURCE MODELS. Next band labelled GATEWAY holding one box BIFROST with a small caption ABSTRACTION, COST, PII. Top band labelled DEPLOYMENT holding boxes AGENTIC WORKLOADS TO GCP and TRADITIONAL APPS TO AZURE AND AWS. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

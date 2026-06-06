@@ -316,18 +316,35 @@
       "sequence": "",
       "tier": "Technical",
       "title": "The Agentic Technology Stack",
-      "subtitle": "The stack that runs the agent workforce.",
+      "subtitle": "The cloud platforms, models, gateways, and controls behind Alberta's agentic workloads, and the principles for choosing them.",
       "track": "Engineering the Solution",
       "authors": [
-        "Ministry of Technology and Innovation"
+        "Janak Alford",
+        "Deputy Minister",
+        "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 11,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "tech-stack",
+        "cloud",
+        "models",
+        "sovereign-compute",
+        "bifrost",
+        "security",
+        "governance",
+        "open-source"
+      ],
       "repo": null,
-      "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
-      "related": [],
+      "abstract": "In carrying out its AI strategy, Alberta has tested a wide range of agentic coding tools and generative AI platforms. This paper sets out the current technology stack and the principles behind it: the right model, in the right environment, for the right use case, with a deliberately diversified supply chain and abstraction layers that prevent provider lock-in. Alberta runs a hybrid environment across the Google, Azure, and AWS clouds, an on-premises compute cluster, and three legacy data centres, reaching models through AWS Bedrock, the Google Agent Platform, and Azure AI Studio. Information is classified from unclassified through Protected C, sensitive data is controlled in Canada, and sovereign compute is being pursued. Use is governed by Alberta's AI usage policy, its AI governance framework, and the Protection of Privacy Act. The paper also covers the security and supply-chain controls around agents, and the cost and scale of running this stack. The stack is expected to change as tools evolve.",
+      "related": [
+        "uwpxr",
+        "zgym1",
+        "mwo98",
+        "cux4h",
+        "p7p2k"
+      ],
       "category": "paper"
     },
     {
