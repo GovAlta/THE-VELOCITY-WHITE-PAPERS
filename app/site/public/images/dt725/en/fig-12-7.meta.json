@@ -1,0 +1,17 @@
+{
+  "paper_id": "dt725",
+  "locale": "en",
+  "slot": "fig-12-7",
+  "style_kind": "diagram",
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as a balanced exchange. On the left, a column headed THE ORGANIZATION lists four small stacked boxes: TRAINING, TOOLS, CONTENT, OPPORTUNITY, with an arrow pointing right. On the right, a column headed STAFF lists two small stacked boxes: OPEN-MINDEDNESS, COMMITMENT TO LEARN, with an arrow pointing left. The two arrows meet at a central rounded node labelled THE COMPACT. From that node, a single arrow leads downward to a wider box labelled EMPOWERED WORKFORCE. Balanced and symmetrical. Calm, architectural, legible labels. No logos, no people.",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as a balanced exchange. On the left, a column headed THE ORGANIZATION lists four small stacked boxes: TRAINING, TOOLS, CONTENT, OPPORTUNITY, with an arrow pointing right. On the right, a column headed STAFF lists two small stacked boxes: OPEN-MINDEDNESS, COMMITMENT TO LEARN, with an arrow pointing left. The two arrows meet at a central rounded node labelled THE COMPACT. From that node, a single arrow leads downward to a wider box labelled EMPOWERED WORKFORCE. Balanced and symmetrical. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-06T16:35:45.549Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 148424,
+  "bytes_png_source": 2273472,
+  "generated_by": "gen-image.mjs"
+}

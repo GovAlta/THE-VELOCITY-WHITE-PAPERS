@@ -1,0 +1,17 @@
+{
+  "paper_id": "dt725",
+  "locale": "en",
+  "slot": "fig-12-6",
+  "out_path": "public\\images\\dt725\\en\\fig-12-5.jpg",
+  "bytes_jpg": 119954,
+  "bytes_png_source": 2410477,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T14:34:56.988Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. At the top, a box labelled SLOP CONTENT shows a tall stack of pages beside a small clock, captioned MINUTES TO MAKE, DAYS TO VET. At the bottom, a box labelled VIBE-CODED APP shows a glossy application window with a small rust crack through it, captioned QUICK GRATIFICATION, TECHNICAL DEBT. Running horizontally between the two boxes, a clear straight arrow labelled THE DISCIPLINED PATH points to a small finished, checkmarked deliverable, with a caption reading VERIFY, THEN TRUST. The two cautionary boxes are lighter; the central path is the strongest line. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. At the top, a box labelled SLOP CONTENT shows a tall stack of pages beside a small clock, captioned MINUTES TO MAKE, DAYS TO VET. At the bottom, a box labelled VIBE-CODED APP shows a glossy application window with a small rust crack through it, captioned QUICK GRATIFICATION, TECHNICAL DEBT. Running horizontally between the two boxes, a clear straight arrow labelled THE DISCIPLINED PATH points to a small finished, checkmarked deliverable, with a caption reading VERIFY, THEN TRUST. The two cautionary boxes are lighter; the central path is the strongest line. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

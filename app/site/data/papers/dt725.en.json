@@ -13,7 +13,7 @@
     "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 17,
+  "reading_min": 21,
   "status": "Draft",
   "tags": [
     "ai-academy",
@@ -26,7 +26,7 @@
     "open-source"
   ],
   "repo": null,
-  "abstract": "The Alberta AI Academy is a graduated training program that prepares public servants to work with artificial intelligence. It grew out of the AI Maximalist program, where a first cohort of about sixty-five volunteers revealed both the demand for structured training and the wide range of responses to a new technology. Launched in September 2025, the Academy runs in three levels: prompting and the foundations of trusted AI use, reusable agents for repeatable work, and the building of enterprise-grade applications with a harness. Cohorts range from sixty to several hundred participants and cross every level of seniority. Course materials are published openly at albertaaiacademy.com. This paper describes the program's origins, its structure across the three levels, the persona-based approach used in Level 3, and the mindset the Academy works to instill: that effective AI adoption is a discipline of persistent, verified practice rather than a metric to be optimized.",
+  "abstract": "The Alberta AI Academy is a graduated training program that prepares public servants to work with artificial intelligence. It grew out of the AI Maximalist program, where a first cohort of about sixty-five volunteers revealed both the demand for structured training and the wide range of responses to a new technology. Launched in September 2025, the Academy runs in three levels: prompting and the foundations of trusted AI use, reusable agents for repeatable work, and the building of enterprise-grade applications with a harness. Cohorts range from sixty to several hundred participants and cross every level of seniority. Course materials are published openly at albertaaiacademy.com. This paper describes the program's origins, the human-centered principle it was designed around, its structure across the three levels, the persona-based approach used in Level 3, and the mindset the Academy works to instill: that effective AI adoption is a discipline of persistent, verified practice rather than a metric to be optimized.",
   "hero_image": {
     "src": "public/images/dt725/en/hero.jpg",
     "alt": "Editorial cover illustration for the AI Academy: three broad steps rising left to right on warm cream paper, each carrying a simple motif, a chat bubble, an agent gear, and an application window, drawn in deep Alberta navy line work with small rust accents.",
@@ -137,19 +137,21 @@
         "visual": "title",
         "caption": "What the Academy is really teaching",
         "subcaption": "Persistent, verified practice, carried back to the day job.",
-        "text": "Underneath the levels and the tools, the Academy teaches a mindset. AI agents can code about a hundred times faster, yet we aim for a twentyfold improvement overall, because the goal reaches past the app and the artifacts to engagement, comfort, and change management. We treat adoption as a discipline of persistent, verified practice rather than a target to hit. Some people will take to it and some will not, and the commitment is to keep growing along the path without expecting perfection."
+        "text": "Underneath the levels and the tools, the Academy teaches a mindset. AI agents can code about a hundred times faster, yet we aim for a twentyfold improvement overall, because the goal reaches past the app and the artifacts to engagement, comfort, and change management. We treat adoption as a discipline of persistent, verified practice rather than a target to hit. We invest in people, and in exchange we ask them to meet these tools with an open mind. Some will take to it and some will not, and the commitment is to keep growing along the path without expecting perfection."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
     { "n": "01", "title": "From the Maximalist program" },
-    { "n": "02", "title": "A graduated program" },
-    { "n": "03", "title": "Level 1: prompting and trust" },
-    { "n": "04", "title": "Level 2: reusable agents" },
-    { "n": "05", "title": "Level 3: building enterprise applications" },
-    { "n": "06", "title": "Warrior, wizard, craftsperson" },
-    { "n": "07", "title": "A mindset, not a metric" }
+    { "n": "02", "title": "Human-centered AI" },
+    { "n": "03", "title": "A graduated program" },
+    { "n": "04", "title": "Level 1: prompting and trust" },
+    { "n": "05", "title": "Level 2: reusable agents" },
+    { "n": "06", "title": "Level 3: building enterprise applications" },
+    { "n": "07", "title": "Warrior, wizard, craftsperson" },
+    { "n": "08", "title": "A mindset, not a metric" },
+    { "n": "09", "title": "Investing in people" }
   ],
   "blocks": [
     {
@@ -182,6 +184,35 @@
     {
       "type": "section_heading",
       "n": "02",
+      "title": "Human-centered AI"
+    },
+    {
+      "type": "paragraph",
+      "text": "The shape of the Academy was also informed by a conversation with a colleague, JP Lalonde, then the Head of AI at the Impact Assessment Agency of Canada. We were reflecting on how negative the public conversation around artificial intelligence had become, and how worried many of our friends, family, and peers in government were about its potential impact. Much of that worry was amplified by social and popular media, by predictions of displacement and job loss from voices with a fairly negative read on the technology. As two people who had been using these tools heavily, four to six hours a day for several years, JP and I felt the concerns were overblown, and that they misrepresented the opportunity AI creates."
+    },
+    {
+      "type": "paragraph",
+      "text": "We saw an abundant opportunity to transform government in a positive way. Drawing on his long experience in technology delivery and digital transformation, JP coined a term we have since adopted in Alberta: human-centered AI. When we sat down to design the Academy and its levels, we built them around that principle, and around a commitment that no public servant would be left behind. Everyone would get a fair chance to see and assess these tools for themselves. With so much fear in the conversation, we also wanted to show people the positive side: how AI can enable and empower staff, and how it democratizes access to technology, especially for those who have not had the chance to build a strong technical background."
+    },
+    {
+      "type": "paragraph",
+      "text": "These tools let people do far more than they could before, and we see generative AI as a real benefit for workers. Artificial intelligence will change the nature of work, and the most valuable thing we can give our peers is a solid foundation to be ready for it. Through all of these conversations I have been consistent with our teams: this is about investing in people. We carry decades, in some cases centuries, of technical debt. We have case backlogs that stretch back months and years. And we have a government set on reducing red tape, so that businesses can get on with business and Albertans can get on with their lives. AI is a way to take on that accumulated work and to reduce those systemic barriers, without weakening the policies they serve. This became the rallying idea behind the Alberta AI Academy: to empower staff to use these tools well, and to ease the anxieties and fears around them."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.1",
+      "title": "Human-centered AI",
+      "caption": "The principle the Academy was designed around. Coined with JP Lalonde, human-centered AI frames the tools as a way to clear systemic barriers, technical debt, case backlogs, and red tape, so public servants are freed for more meaningful work, with no one left behind.",
+      "image": {
+        "src": "public/images/dt725/en/fig-12-1.jpg",
+        "alt": "A hand-drawn diagram titled Human-Centered AI: a small AI robot motif lifts a stack of labelled barriers, technical debt, case backlogs, and red tape, out of the way while a simple schematic person stands on a clear path toward a signpost reading meaningful work, captioned the tools clear the barriers, the people do the work.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. In the centre, a simple schematic person token stands on a clear, open path. To the left, a stack of three labelled blocks reading TECHNICAL DEBT, CASE BACKLOGS, and RED TAPE is being lifted and carried out of the way by a small robot-and-gear motif labelled AI, clearing the path ahead of the person. Above the scene, a heading reads HUMAN-CENTERED AI. A small caption below reads THE TOOLS CLEAR THE BARRIERS; THE PEOPLE DO THE WORK. Calm, architectural, legible labels. No logos, no real people beyond a simple schematic token.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
       "title": "A graduated program"
     },
     {
@@ -194,11 +225,11 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 12.1",
+      "fno": "FIG. 12.2",
       "title": "Three levels, one path",
       "caption": "The Academy is graduated. Level 1 teaches prompting and the habit of verifying AI output. Level 2 introduces reusable agents for repeatable work. Level 3 teaches the building of enterprise-grade applications with a harness. People can repeat any level, and the material is available self-serve.",
       "image": {
-        "src": "public/images/dt725/en/fig-12-1.jpg",
+        "src": "public/images/dt725/en/fig-12-2.jpg",
         "alt": "A hand-drawn diagram of three ascending steps labelled Level 1 Prompting, Level 2 Agents, and Level 3 Applications, each step a little higher, with a small return arrow looping back from each step to show that any level can be repeated, and a self-serve label beside the staircase.",
         "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three broad steps rise from lower left to upper right. The first step is labelled LEVEL 1: PROMPTING with a small speech-bubble icon, the second LEVEL 2: AGENTS with a small gear-and-robot icon, the third LEVEL 3: APPLICATIONS with a small application-window icon. A thin rust arrow loops back from each higher step to the one before it, labelled REPEAT ANY LEVEL. A small tag to the side reads SELF-SERVE, ALWAYS AVAILABLE. Calm, architectural, legible labels. No logos, no people.",
         "style_kind": "diagram"
@@ -210,7 +241,7 @@
     },
     {
       "type": "section_heading",
-      "n": "03",
+      "n": "04",
       "title": "Level 1: prompting and trust"
     },
     {
@@ -219,11 +250,11 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 12.2",
+      "fno": "FIG. 12.3",
       "title": "Two frameworks: RICECO and verify-then-trust",
       "caption": "Level 1 pairs a framework for writing a prompt with a framework for handling the response. RICECO gives six principles for a well-formed prompt. The TRUST framework holds that an AI output is checked before it is relied on, a loop we teach as 'verify, then trust'.",
       "image": {
-        "src": "public/images/dt725/en/fig-12-2.jpg",
+        "src": "public/images/dt725/en/fig-12-3.jpg",
         "alt": "A hand-drawn diagram with two panels. The left panel is a card titled RICECO, captioned six principles for a prompt, with six numbered but otherwise blank rule lines. The right panel is a loop between a box labelled AI Output and a box labelled Verify, with an arrow from Verify to a box labelled Trust, and a rust return arrow labelled if it does not check out sending it back to AI Output, captioned verify then trust.",
         "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a titled card: a heading reading exactly RICECO, a caption beneath reading SIX PRINCIPLES FOR A PROMPT, and six short numbered rule lines drawn as plain horizontal strokes numbered 1 through 6 with no words written on them. Do not invent, label, or write any principle names on the lines. On the right, a simple cycle: a box labelled AI OUTPUT connects by arrow to a box labelled VERIFY, which connects by arrow to a box labelled TRUST. A rust return arrow loops from VERIFY back to AI OUTPUT, labelled IF IT DOES NOT CHECK OUT. Below the cycle, a small caption reads VERIFY, THEN TRUST. The only words anywhere in the image are: RICECO, SIX PRINCIPLES FOR A PROMPT, the numerals 1 to 6, AI OUTPUT, VERIFY, TRUST, IF IT DOES NOT CHECK OUT, and VERIFY, THEN TRUST. Calm, architectural, legible labels. No logos, no people.",
         "style_kind": "diagram"
@@ -249,7 +280,7 @@
     },
     {
       "type": "section_heading",
-      "n": "04",
+      "n": "05",
       "title": "Level 2: reusable agents"
     },
     {
@@ -262,11 +293,11 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 12.3",
+      "fno": "FIG. 12.4",
       "title": "The rule of three",
       "caption": "The Level 2 heuristic for when to build an agent. If a task recurs more than three times in a week, the time spent building and documenting the agent pays back, and a shared workflow lifts the performance of the whole unit.",
       "image": {
-        "src": "public/images/dt725/en/fig-12-3.jpg",
+        "src": "public/images/dt725/en/fig-12-4.jpg",
         "alt": "A hand-drawn decision diagram: a box labelled A recurring task with an arrow to a diamond reading More than three times a week?; a No branch loops back to just do it by hand; a Yes branch leads to a box labelled Build and document the agent, then to a box labelled Share with the unit, with small figures of a team benefiting.",
         "image_prompt": "An editorial decision diagram on warm cream paper, deep navy line work with small rust accents. A box on the left labelled A RECURRING TASK leads by arrow to a diamond labelled MORE THAN THREE TIMES A WEEK? A short NO branch loops back to a small box labelled DO IT BY HAND. The YES branch leads rightward to a box labelled BUILD AND DOCUMENT THE AGENT, then to a box labelled SHARE WITH THE UNIT. Beside the final box, three small identical workflow icons suggest the whole unit reusing it. A small caption reads THE RULE OF THREE. Calm, architectural, legible labels. No logos, no people.",
         "style_kind": "diagram"
@@ -278,7 +309,7 @@
     },
     {
       "type": "section_heading",
-      "n": "05",
+      "n": "06",
       "title": "Level 3: building enterprise applications"
     },
     {
@@ -304,7 +335,7 @@
     },
     {
       "type": "section_heading",
-      "n": "06",
+      "n": "07",
       "title": "Warrior, wizard, craftsperson"
     },
     {
@@ -317,11 +348,11 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 12.4",
+      "fno": "FIG. 12.5",
       "title": "Three personas, three ways of working",
       "caption": "In place of job titles, Level 3 participants choose a persona. The warrior ships, and aligns with the AI Garage and the AI Factory. The wizard strategizes and modernizes, the work that points toward Government 3.0. The craftsperson builds the infrastructure others rely on, including tools like Pronghorn, Nexus, and Velocity.",
       "image": {
-        "src": "public/images/dt725/en/fig-12-4.jpg",
+        "src": "public/images/dt725/en/fig-12-5.jpg",
         "alt": "A hand-drawn diagram of three labelled panels side by side. The Warrior panel shows a small shield icon and the words Ship, Speed, Leaderboard, tagged AI Factory. The Wizard panel shows a small stars icon and the words Strategize, Modernize, Architect, tagged Government 3.0. The Craftsperson panel shows a small hammer icon and the words Build for others, Harnesses, Templates, tagged Pronghorn, Nexus, Velocity.",
         "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as three equal panels side by side. Left panel titled WARRIOR with a simple shield icon, listing SHIP, SPEED, LEADERBOARD, and a small tag at its base reading AI FACTORY. Centre panel titled WIZARD with a simple stars icon, listing STRATEGIZE, MODERNIZE, ARCHITECT, with a base tag reading GOVERNMENT 3.0. Right panel titled CRAFTSPERSON with a simple hammer icon, listing BUILD FOR OTHERS, HARNESSES, TEMPLATES, with a base tag reading PRONGHORN, NEXUS, VELOCITY. The three panels are balanced and equal in weight. Calm, architectural, legible labels. No logos, no people.",
         "style_kind": "diagram"
@@ -333,7 +364,7 @@
     },
     {
       "type": "section_heading",
-      "n": "07",
+      "n": "08",
       "title": "A mindset, not a metric"
     },
     {
@@ -342,11 +373,11 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 12.5",
+      "fno": "FIG. 12.6",
       "title": "Two habits to avoid, one discipline to keep",
       "caption": "Both failure modes come from pursuing an outcome without rigor: unvalidated long-form content that is fast to generate and slow to vet, and vibe-coded applications that gratify quickly and accrue technical debt. The Academy teaches the disciplined path between them, where the work is verified before it is trusted.",
       "image": {
-        "src": "public/images/dt725/en/fig-12-5.jpg",
+        "src": "public/images/dt725/en/fig-12-6.jpg",
         "alt": "A hand-drawn diagram with two cautionary boxes and a clear path between them. The top box, labelled Slop content, shows pages piling up with a clock reading minutes to make, days to vet. The bottom box, labelled Vibe-coded app, shows a pretty but cracked window labelled quick gratification, technical debt. A straight central arrow between them is labelled The disciplined path: verify, then trust.",
         "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. At the top, a box labelled SLOP CONTENT shows a tall stack of pages beside a small clock, captioned MINUTES TO MAKE, DAYS TO VET. At the bottom, a box labelled VIBE-CODED APP shows a glossy application window with a small rust crack through it, captioned QUICK GRATIFICATION, TECHNICAL DEBT. Running horizontally between the two boxes, a clear straight arrow labelled THE DISCIPLINED PATH points to a small finished, checkmarked deliverable, with a caption reading VERIFY, THEN TRUST. The two cautionary boxes are lighter; the central path is the strongest line. Calm, architectural, legible labels. No logos, no people.",
         "style_kind": "diagram"
@@ -359,6 +390,40 @@
     {
       "type": "paragraph",
       "text": "Earlier papers noted that AI agents can code roughly a hundred times faster, while we aim for a [twentyfold improvement](#/paper/eujjc) overall. The gap is deliberate. The goal reaches past producing the app, and past producing the artifacts, to engagement, conversation, comfort, change management, and awareness, all the things that come with a team of people learning to work together. So we treat AI adoption as a mindset to instill rather than a target to hit. When a measure becomes a target it stops being a good measure, and some organizations will take the time to instill the mindset properly. Some people will take to it and some will not, and the commitment is to keep growing along the path without expecting perfection."
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Investing in people"
+    },
+    {
+      "type": "paragraph",
+      "text": "A great deal is made of how much power and how many resources these tools consume. I think we are judging a technology at a single point in time. The efficiency of these systems is expected to improve roughly a hundredfold over the coming years, which means close to a hundred times less power for an equivalent amount of intelligence. The tools we use today are prototypes for a future where intelligence is available on demand. My responsibility to staff in the Government of Alberta is to make sure they are ready for that future, with relevant and meaningful skills, so they meet it as the architects and builders of a world where scalable intelligence sits at everyone's fingertips."
+    },
+    {
+      "type": "paragraph",
+      "text": "To be clear, the genie is not going back in the bottle. Whether or not we build data centres, intelligence on demand has arrived, and it falls to each of us to learn to be effective and to offer meaningful value in that space. Our approach stays human-centered. We invest in people, and we make sure everyone has the opportunity to take part."
+    },
+    {
+      "type": "paragraph",
+      "text": "That investment comes with a compact. The organization does everything it can for its people, with weeks and months of training, tens of millions of dollars in tools, and the content to learn from. In exchange, staff meet us with an open mind and a commitment to learn these tools and to use them well. Being effective at work will come to require a working knowledge of artificial intelligence, in the same way it already requires the use of technology today. We ask for open-mindedness, and in exchange we offer opportunity. The result is an empowered workforce, able to reimagine how government works and how services can be delivered to Albertans in the most meaningful way possible."
+    },
+    {
+      "type": "pullquote",
+      "text": "We ask for open-mindedness. In exchange, we give opportunity.",
+      "cite": "Janak Alford, Deputy Minister, Ministry of Technology and Innovation"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.7",
+      "title": "The compact",
+      "caption": "The compact at the heart of the Academy. The organization invests in training, tools, content, and opportunity. Staff meet it with an open mind and a commitment to learn. Together they produce an empowered workforce able to reimagine how government serves Albertans.",
+      "image": {
+        "src": "public/images/dt725/en/fig-12-7.jpg",
+        "alt": "A hand-drawn exchange diagram titled The compact: a left column headed The organization lists training, tools, content, and opportunity; a right column headed Staff lists open-mindedness and commitment to learn; their arrows meet at a central node labelled The compact, which leads down to a box labelled Empowered workforce.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as a balanced exchange. On the left, a column headed THE ORGANIZATION lists four small stacked boxes: TRAINING, TOOLS, CONTENT, OPPORTUNITY, with an arrow pointing right. On the right, a column headed STAFF lists two small stacked boxes: OPEN-MINDEDNESS, COMMITMENT TO LEARN, with an arrow pointing left. The two arrows meet at a central rounded node labelled THE COMPACT. From that node, a single arrow leads downward to a wider box labelled EMPOWERED WORKFORCE. Balanced and symmetrical. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
     },
     {
       "type": "paragraph",
@@ -383,7 +448,7 @@
     "placeholder": false,
     "written_by": "human-authored",
     "author_verbatim": false,
-    "draft": "v1"
+    "draft": "v2"
   },
   "related": [
     "p7p2k",
