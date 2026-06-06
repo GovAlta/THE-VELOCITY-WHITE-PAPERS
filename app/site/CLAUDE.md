@@ -111,7 +111,7 @@ The full schema for a paper JSON lives at the top of each `data/papers/<id>.en.j
   "blocks": [
     { "type": "section_heading", "n": "01", "title": "…" },
     { "type": "paragraph", "text": "…" },
-    { "type": "pullquote", "text": "…", "cite": "…" },
+    { "type": "pullquote", "text": "…", "cite": "…" },   // visible callout only; NOT read in the long-form audio narration
     { "type": "keystat", "label": "…", "value": "…", "body": "…" },
     { "type": "figure", "fno": "…", "title": "…", "caption": "…", "chart": { "kind": "mini-chart", … }, "image": { … } },
     { "type": "sidenote", "label": "…", "value": "…" },
@@ -206,6 +206,8 @@ Each skill is a markdown file with explicit steps and validation criteria. Follo
 Every reader-visible string the agent writes (titles, subtitles, abstracts, paragraphs, slide captions, slide narration `text`, pullquote text, keystat bodies, figure captions, sidenote bodies) must follow these rules. The full rationale is in `../../style-guide/00-writing-style-guide.md`. These are the enforced rules.
 
 **Read `../../style-guide/voice-exemplar.md` first.** It is the primary positive reference for preserving the author's voice. There is no single house voice to imitate: the anchor is the prose the author provides for the paper in front of you. Sample it (sentence length and rhythm, the author's chosen person, specifics woven in, coined terms kept) and write any connective prose to match. The rules below are a **filter on prose you generate from scratch** — what not to add. They are **not** a license to rewrite the author's own sentences. When the author has written the words, those words are the source of truth: fix what is false or accidental, preserve the cadence. Chopping flowing sentences into short declaratives to satisfy the rules below produces a different kind of AI smell and is the failure these notes exist to prevent.
+
+**The register anchor, and transposing transcripts.** The two most polished papers, `data/papers/cux4h.en.json` (Ship of Theseus) and `data/papers/mwo98.en.json` (Cyber Imperative), set the register for the whole collection: institutional "we"/"Alberta"/"Technology and Innovation", almost never "I"; developed comma-joined sentences with the *occasional earned short declarative*; color from sustained metaphor and named concepts and hard numbers, never from chatty asides. Read them before drafting connective prose. When a paper is transposed from a spoken transcript (the author talking, often with an AI agent narrating a draft back that he refines live), the recurring failure is **over-editing**: re-synthesizing his words, adding earned-short-line flourishes he never wrote, and drifting into the chatty first-person register of speech. Merge the author's statements with any AI narration in the transcript, keep their wording, clean only the banned constructions, and lift "I"/"Don't forget"/"Here is the piece I like best" to institutional "we". Run a source-fidelity pass against the transcript before generating audio. The `draft-paper` skill carries the full checklist.
 
 **Read `../../style-guide/03-fidelity-and-sourcing.md` before weaving sources.** Weave every point the author gives in scope (the draft is normally longer than the notes, not shorter), read and cite every source the author names (use `scripts/extract-pdf.mjs` for PDFs, WebFetch for URLs, Read for code and files), defer detail across papers in the open with a link, and drop nothing in silence. Produce the coverage check it describes so the author can confirm nothing was lost.
 

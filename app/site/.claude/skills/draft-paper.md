@@ -7,6 +7,7 @@ This skill writes prose. The hard constraint is that **every claim it writes tra
 ## Read these first, in this order
 
 1. `../../style-guide/voice-exemplar.md` — the author's real voice. You are drafting *as* this author. Match the cadence shown there: long, flowing, comma-joined, first person plural, specifics woven in. Do not write in short-declarative trailer cadence.
+   - Then read the two most polished published papers in full, `data/papers/cux4h.en.json` (The Two-Billion-Dollar Ship of Theseus) and `data/papers/mwo98.en.json` (The Cyber Imperative). They are the **register anchor**. The register is an institutional white paper: "we" / "Alberta" / "Technology and Innovation," almost never "I"; developed comma-joined sentences with the *occasional earned short declarative*; color from sustained metaphor and named concepts (the ship, the four-headed hydra, genius amnesiacs, poisoning the well) and from hard numbers, never from chatty asides. A rhetorical question is allowed only when answered.
 2. `../../style-guide/02-substance-and-structure-guide.md` — run Pass 1 (the claims audit) before writing any prose.
 3. The `CLAUDE.md` style section — the negative filter for prose you generate (no em dashes, no banned vocabulary, no "not X but Y"). Apply it to what you write, never to phrasing the author has already supplied.
 4. `../../style-guide/source-hierarchy.md` — if the sources are mixed (prose, code, transcripts), they are not equal weight. Rank them per this file, or use the `weave-sources` skill, which applies the hierarchy for you.
@@ -44,10 +45,24 @@ This skill writes prose. The hard constraint is that **every claim it writes tra
 
 8. Run `npm run eval`. The EN side will report style-guide *warnings* — read them, but do not auto-apply them in a way that re-voices the author. The eval is advisory at the draft stage.
 
+## Transposing a transcript (read this when the source is spoken)
+
+Several papers come from a recorded discussion: the author talking, sometimes with an AI voice agent that narrates a draft back and that the author refines live. When that is the source, the failure mode is **over-editing**, not under-sourcing. Watch for it:
+
+- **The transcript is the source. Merge, do not re-synthesize.** When the author's statements and an AI agent's narration both appear in the transcript, your job is to merge those two into cohesive prose, keeping their actual wording. Do not paraphrase the whole thing into your own words. The author can tell the difference, and prefers the transcript.
+- **Do not invent flourishes.** Earned short lines ("It does not survive contact with an AI"), trailer cadence, and rhetorical asides are seductive because they read well. If the author did not say it and the agent did not narrate it, do not add it. Color comes from the author's own metaphors and the real numbers, not from lines you compose.
+- **Hold the register, do not drift to the spoken voice.** A transcript is chatty and first-person-singular; the paper is not. Strip "I", "Don't forget", "Here is the piece I like best", "Think about what that does", "a brilliant way to do it". Lift them to institutional "we"/"Alberta". This is the single most common correction the author makes; do it before he has to.
+- **Clean only the banned constructions.** Spoken sources are full of "not X, but Y" ("it's not about the app, it's about engagement") and false starts. Reframe the banned constructions positively and drop the filler, and otherwise keep his sentences. Do not re-cadence true sentences that are already in his voice.
+- **Keep the abstract to about three sentences** for a transposed paper unless the author asks otherwise. Long abstracts are a recurring complaint.
+
+Before you generate any audio, run a **source-fidelity pass**: read each body paragraph against the transcript and confirm it is the author's words or the agent's narration, merged, and not something you composed. This is cheap to fix now and expensive after three audio regenerations.
+
 ## Do not
 
 - Invent any fact, number, name, or causal claim the sources do not state. A confident sentence covering a gap is worse than an honest gap.
 - Write in short cinematic cadence. Match the voice exemplar's flowing sentences.
+- Add earned short lines, asides, or first-person-singular ("I will be honest", "Here is the piece I like best", "Don't forget") that are not in the source. The register is an institutional white paper, not a talk.
+- Re-synthesize a transcript into your own words. Merge the author's statements with any AI narration in it, keeping their wording.
 - Copy phrasing out of a style guide's "Forbidden" or "bad example" column. Those are landmines. See the poison-phrase list in `voice-exemplar.md`.
 - Rewrite prose the author supplied. Place it as given; clean it later with `refine-paper`.
 - Lift sensitive internal numbers into public strings without explicit author clearance.
@@ -62,5 +77,8 @@ node -e "JSON.parse(require('fs').readFileSync('data/papers/<id>.en.json'))"
 
 Then:
 - Re-read the claims audit against the draft. Every factual sentence in the body must map to a source line. Any that does not is either a `[DRAFT GAP]` marker or a defect to fix.
-- Read the abstract and one TL;DR narration aloud. If it sounds like a different person than the voice exemplar, it is wrong.
+- **Source-fidelity pass (for transposed transcripts).** Read each body paragraph against the transcript and confirm it is the author's words or the agent's narration, merged, not prose you composed. Flag and rework any sentence that is yours, before audio.
+- Read the abstract and one TL;DR narration aloud. If it sounds like a different person than the voice exemplar, or chattier and more first-person than `cux4h` / `mwo98`, it is wrong.
 - Confirm `status` is still `Draft` and `_meta.placeholder` is still `true`.
+
+Note on audio: pullquotes are **not** read in the long-form narration (they amplify the surrounding prose and would be redundant aloud). Write the body so it stands on its own without the pullquote; treat the pullquote as a visible callout only.
