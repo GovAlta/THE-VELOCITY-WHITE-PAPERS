@@ -1,0 +1,17 @@
+{
+  "$comment": "Project-local Claude Code settings. The PostToolUse hook runs the style-guide scanner on any English paper after it is edited, so AI tells (banned words, em dashes, abstract-subject glue like 'the discipline holds') are surfaced and fixed in the same turn rather than at review. The scanner honours author_verbatim, so the author's own prose is never flagged.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/hooks/style-tells.mjs",
+            "$comment": "Scans the just-edited data/papers/*.en.json for AI tells; exits 2 with the findings so Claude revises the prose immediately. Non-paper edits and clean files are silent."
+          }
+        ]
+      }
+    ]
+  }
+}
