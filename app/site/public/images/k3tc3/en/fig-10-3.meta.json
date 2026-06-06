@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\k3tc3\\en\\fig-10-3.jpg",
+  "bytes_jpg": 147416,
+  "bytes_png_source": 2492108,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T19:26:10.229Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board labelled VELOCITY GAME BOARD with a small human token making a move. A rust line labelled SERVER-SENT EVENTS runs to the right into a large rounded boundary labelled NEXUS, where several small robot tokens labelled AGENTS sit, each tagged LISTENS TO ITS OWN PROJECT. One agent is lit up, woken by the move, with a small arrow back to the board labelled DOES THE NEXT STEP. Off to one side, a small badge labelled CYBER AGENT points an arrow back down the board labelled SENDS WORK BACK IF A CONTROL IS MISSING. A caption reads THE BOARD IS THE PROMPT. Calm, architectural, legible labels. No logos, no people beyond simple tokens.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board labelled VELOCITY GAME BOARD with a small human token making a move. A rust line labelled SERVER-SENT EVENTS runs to the right into a large rounded boundary labelled NEXUS, where several small robot tokens labelled AGENTS sit, each tagged LISTENS TO ITS OWN PROJECT. One agent is lit up, woken by the move, with a small arrow back to the board labelled DOES THE NEXT STEP. Off to one side, a small badge labelled CYBER AGENT points an arrow back down the board labelled SENDS WORK BACK IF A CONTROL IS MISSING. A caption reads THE BOARD IS THE PROMPT. Calm, architectural, legible labels. No logos, no people beyond simple tokens.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

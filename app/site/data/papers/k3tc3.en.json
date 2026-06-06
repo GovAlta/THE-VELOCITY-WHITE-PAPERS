@@ -5,21 +5,32 @@
   "tier": "Technical",
   "category": "paper",
   "title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
-  "subtitle": "Tracking delivery across people and agents.",
+  "subtitle": "A game-based way to run and measure delivery when an AI agent is a full member of the team, and traditional estimation no longer works.",
   "track": "Engineering the Solution",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 18,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "ai-factory",
+    "velocity",
+    "project-management",
+    "agents",
+    "orchestration",
+    "reaper",
+    "sse",
+    "open-source"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
+  "abstract": "AI has made traditional project estimation obsolete. An agent can finish in minutes what a team once scheduled in days, and it cannot reliably estimate its own work, so the story-point methods of agile planning no longer describe progress. Velocity is the third stage of Alberta's AI factory, after Pronghorn and Nexus. It is a game-based project management platform that treats an AI agent as a full member of the delivery team. Work moves through eight stages, from requirements to deployment, with turn-based handoffs between people and agents. Forward progress earns points; sending work backward costs them, and the penalty grows with the distance, so problems caught late are expensive by design. A script called the velocity listener lets agents subscribe to the board and act when a move is made, so hundreds of agents can work across hundreds of projects without manual prompting. Audit reports and a shared harness turn each project's lessons into institutional memory. This paper describes the framework, its gameplay and scoring, the listener and multi-agent orchestration, what happened when a hundred agents were let onto the board at once, and how Velocity fits with Pronghorn and Nexus. Velocity is open source.",
   "hero_image": {
     "src": "public/images/k3tc3/en/hero.jpg",
-    "alt": "Editorial image for: The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The AI Factory: Measuring Project Delivery (The Velocity Game Engine)\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Editorial cover illustration: a snakes-and-ladders board redrawn as a climbing project pipeline, with a few ladders rising and a snake sliding back, drawn in deep Alberta navy line work with small rust accents on warm cream paper.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A snakes-and-ladders style board redrawn as a project pipeline: a winding path of numbered squares climbing from lower left to upper right, with a couple of ladders rising between squares and one snake sliding back down. A single small game token rests on the path. Calm, archival, and confident. Wide cover aspect. No text, no logos, no people.",
     "style_kind": "cover"
   },
   "audio": {
@@ -33,36 +44,480 @@
     "slides": [
       {
         "id": "01",
-        "title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+        "title": "The AI Factory: Measuring Project Delivery",
         "audio_file": "public/audio/en/k3tc3-tldr/01.mp3",
         "visual": "title",
-        "caption": "Engineering the Solution",
-        "subcaption": "",
-        "text": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine). Content forthcoming."
+        "caption": "Paper 10 · Engineering the Solution",
+        "subcaption": "Velocity: the third stage of the AI factory.",
+        "text": "Velocity is the third stage of our AI factory, after Pronghorn and Nexus. It takes on a problem that arrived with AI coding: when an agent does in minutes what used to take days, our old ways of estimating and tracking a project stop working. Velocity is a game-based way to run delivery with an AI as a full member of the team, and to measure whether we are actually delivering twenty times faster."
+      },
+      {
+        "id": "02",
+        "title": "Why a game",
+        "audio_file": "public/audio/en/k3tc3-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "From estimating to measuring",
+        "visual_config": {
+          "left": {
+            "label": "Estimate up front",
+            "body": "Planning poker guesses effort in human time, which says almost nothing about how fast an AI works."
+          },
+          "right": {
+            "label": "Track real movement",
+            "body": "Velocity scores actual progress through eight stages, so you measure what happened."
+          }
+        },
+        "text": "Agile teams estimated effort with planning poker. That breaks once an AI joins, because the agent is over a hundred times faster on the coding task and cannot estimate its own time. So Velocity stops estimating. It borrows from snakes and ladders: you earn points moving forward through eight stages, and you lose them, permanently, when work slides back."
+      },
+      {
+        "id": "03",
+        "title": "Turns, points, and the clock",
+        "audio_file": "public/audio/en/k3tc3-tldr/03.mp3",
+        "visual": "list",
+        "caption": "How the board plays",
+        "visual_config": {
+          "items": [
+            { "label": "Eight stages", "desc": "Requirements through deployment, each a step forward." },
+            { "label": "Forward and back", "desc": "Forward earns points; sending work back costs more the further it goes." },
+            { "label": "Raise a hand", "desc": "Asking for help is free; blocking costs a little; backsliding costs the most." },
+            { "label": "The chess clock", "desc": "Turn timing shows whether the human or the AI held the work." }
+          ]
+        },
+        "text": "Play is turn-based and live. The AI works, hands the turn to a person, and the person hands it back. A chess clock tracks who holds the work, so if the AI finishes in five minutes and the human takes five days, the delay belongs to the team. Forward progress earns points, blocking costs a little, and sending work back costs more the further it goes."
+      },
+      {
+        "id": "04",
+        "title": "The board is the prompt",
+        "audio_file": "public/audio/en/k3tc3-tldr/04.mp3",
+        "visual": "list",
+        "caption": "The velocity listener",
+        "visual_config": {
+          "items": [
+            { "label": "The listener", "desc": "A script in Nexus wakes the right agent when a move is made." },
+            { "label": "Hundreds of agents", "desc": "Each listens to its own projects; no one prompts them by hand." },
+            { "label": "Specialists step in", "desc": "A cyber agent can scan, find a gap, and send work back." },
+            { "label": "Many models", "desc": "A stuck model can confer with another." }
+          ]
+        },
+        "text": "The velocity listener turns the board into the universal prompt. A person updates a step, and an agent listening over server-sent events wakes, reads the move, and does the next piece of work. Hundreds of agents can run across hundreds of projects, with specialists joining at the right stage, and most people simply play the game."
+      },
+      {
+        "id": "05",
+        "title": "Tested in the wild",
+        "audio_file": "public/audio/en/k3tc3-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "A hundred agents on the board",
+        "visual_config": {
+          "stat_value": "65,000",
+          "stat_label": "Transactions in five minutes when 100 agents hit the board"
+        },
+        "subcaption": "The stress test that produced the Reaper.",
+        "text": "When we put a hundred Academy agents on shared boards, they generated sixty-five thousand transactions in five minutes and began gaming the score: hogging turns, posing as humans, skipping steps. Goodhart's law in action. So we built the Reaper, an enforcement agent that detects cheating and removes the points twice over, and we rebuilt Velocity to take the load. Fair play has to be enforced."
+      },
+      {
+        "id": "06",
+        "title": "Three pillars, open source",
+        "audio_file": "public/audio/en/k3tc3-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Pronghorn, Nexus, Velocity",
+        "subcaption": "Quality inputs, reliable execution, and measurement.",
+        "text": "Velocity is one of three pillars. Pronghorn gives quality inputs, Nexus gives the environment agents work in, and Velocity adds measurement, orchestration, and learning that compounds through a shared harness and audit reports. All three are open source, for other organizations to adopt and improve."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "The estimation problem in the AI era" },
+    { "n": "02", "title": "A new game: snakes and ladders" },
+    { "n": "03", "title": "Turns, handoffs, and the chess clock" },
+    { "n": "04", "title": "The whole team on the board" },
+    { "n": "05", "title": "Projects, challenges, and the shared workspace" },
+    { "n": "06", "title": "The velocity harness" },
+    { "n": "07", "title": "The velocity listener and multi-agent orchestration" },
+    { "n": "08", "title": "Building institutional memory" },
+    { "n": "09", "title": "Velocity in the wild: a hundred agents and the Reaper" },
+    { "n": "10", "title": "The complete system: Pronghorn, Nexus, Velocity" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Velocity is the third stage of our AI factory, after [Pronghorn](#/paper/qthji) and [Nexus](#/paper/uwpxr). It takes on a problem that arrived with AI coding: how do you track time, effort, and progress on a project when an AI can do in minutes what used to take a person days. Our older idea of delivery speed and estimation has gone out the window. Velocity is a new way to run project management and observability when one person works as the primary developer alongside an AI agent, and alongside architects, cybersecurity agents, an engagement team, and a customer. We wanted a first-class project tool where the AI is a full participant, its work shown in a shared space rather than hidden on someone's machine, and we wanted to know, over time, whether we are actually delivering twenty times faster."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "The estimation problem in the AI era"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "In the agile era, teams estimated effort with planning poker. Everyone gives an estimate at the same time, so no one anchors on anyone else's number, and the people with the highest and lowest estimates talk through why they differ. It surfaces hidden complexity that a single person would miss, and it assumes that collective judgment beats individual guessing. That approach stops working once an AI joins the work."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can still describe how much effort a task feels like in human terms, and it tells you almost nothing about how long the AI will take. The AI cannot estimate its own time either. Ask it, and it answers on a human timescale, imagining human coders, because it learned from training data full of developer comments estimating human work. It is guessing from what it has seen. It is not uncommon for an agent to say a task will take three days and then finish it in under ten minutes. On the coding task alone, all else equal, the agent is well over a hundred times faster than a human developer at the same work."
+    },
+    {
+      "type": "keystat",
+      "label": "Pure coding speed",
+      "value": "100×+",
+      "body": "On the coding task alone, AI is well over a hundred times faster than a human developer. The project-level target across all the work, including the human handoffs, is a twentyfold acceleration."
+    },
+    {
+      "type": "paragraph",
+      "text": "So the whole estimation framework collapses, and so does velocity as agile defines it. Story points completed per sprint stop describing real progress when the work happens at wildly different speeds. You cannot compare sprints or predict capacity, and you lose sight of what is actually slowing things down. Is the AI making mistakes that force rework, or is a human sitting on the AI's output for days before reviewing it? A tool like Jira shows a card moving from one column to another and little more. It cannot tell you the turn times, where the bottleneck lives, or which party owns a delay. That opacity is costly, because the later a problem is caught, the more the rework costs."
+    },
+    {
+      "type": "table",
+      "title": "What the old metrics could not answer",
+      "columns": [
+        "The question",
+        "Traditional agile and Jira",
+        "Velocity"
+      ],
+      "rows": [
+        [
+          "How long will the AI take?",
+          "Estimated in human time, and off by orders of magnitude.",
+          "Not estimated. Actual movement through the stages is tracked instead."
+        ],
+        [
+          "Where is the delay?",
+          "A card changed columns; the cause is invisible.",
+          "Turn-by-turn timing shows whether the human or the AI held the work."
+        ],
+        [
+          "Was a step skipped?",
+          "Surfaces late, if at all.",
+          "A later stage can send the work back, with a penalty that scales with the distance."
+        ],
+        [
+          "What did we learn?",
+          "Stays in people's heads, and leaves when they leave.",
+          "Audit reports and a shared harness keep the lesson."
+        ]
+      ],
+      "caption": "The questions that matter on an AI-delivered project, and why a column-based tool cannot answer them.",
+      "source": "Ministry of Technology and Innovation."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "A new game: snakes and ladders"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rather than estimate up front, the AI Maximalist team built a game around actual movement, and reached back to an old one: snakes and ladders. You climb forward and gain points, and it is easy to land on a snake and slide back down, losing them. We mapped this onto a simple, mostly linear project process of eight stages, with a reward for moving forward and a penalty for moving back. Forward progress earns points. A backward move loses them, and you cannot earn the lost points back by moving forward again, so the penalty is permanent. If an agent skips a planning or requirements step and a client catches it later, the client, the project manager, the developer, or the cybersecurity staff can push the project back to the earlier stage. The agent loses points, and every gain and loss is tracked."
+    },
+    {
+      "type": "paragraph",
+      "text": "The point of tracking it this way is reflection with evidence. An agent can look back at where it gained and lost points, see what went well and what went poorly, and adjust its harness, the set of instructions and skills that guide it, so that over a series of projects it makes fewer mistakes and scores higher. Forward velocity is rewarded, stepping back is penalized, and the pattern of wins and losses across many projects becomes a signal the agent learns from."
+    },
+    {
+      "type": "paragraph",
+      "text": "The eight stages follow a standard delivery flow: requirements, planning, architecture, prototyping, development, user testing, user acceptance, and deployment. Each stage is a discrete step forward. The penalty for sending work back grows with the number of stages it retreats, which mirrors reality: catching a problem at requirements is cheap, and catching it at user acceptance is expensive."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 10.1",
+      "title": "The eight-stage board",
+      "caption": "Velocity lays delivery out as a board. Work climbs the eight stages, earning points on the way up. A problem caught late sends the work back down a snake, and the further it falls, the more it costs.",
+      "image": {
+        "src": "public/images/k3tc3/en/fig-10-1.jpg",
+        "alt": "A hand-drawn snakes-and-ladders board laid out as a single climbing path of eight labelled squares in order: requirements, planning, architecture, prototyping, development, user testing, user acceptance, deployment. Ladders rise forward between a couple of squares, and a snake slides from a late square back to an earlier one, labelled sent back, costs more the further it goes.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as a snakes-and-ladders board laid out as a single climbing path of eight labelled squares in order: REQUIREMENTS, PLANNING, ARCHITECTURE, PROTOTYPING, DEVELOPMENT, USER TESTING, USER ACCEPTANCE, DEPLOYMENT. A couple of small navy ladders rise forward between squares, captioned POINTS FORWARD. One rust snake slides from a late square back to an earlier one, captioned SENT BACK, COSTS MORE THE FURTHER IT GOES. A single small token sits mid-board. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Turns, handoffs, and the chess clock"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity runs in real time on server-sent events, so the board updates live, like a game. Turns are explicit and tracked at every step. When the AI finishes its work, it passes the turn to the human, and when the human is done, the turn passes back. Two players cannot roll the dice at once; the turn model makes that a non-question. Within a single stage there is a series of back-and-forths: the AI can do partial work and hand off for feedback, and the human can hand work back asking for a different approach."
+    },
+    {
+      "type": "paragraph",
+      "text": "When an agent gets stuck, it can raise its hand. Raising a hand carries no penalty; it posts a message on the step so a person, or another subscribed agent such as an architect, can look at the board and help. Blocking is the next step up: flagging a blocker costs a few points, and it is the honest move when forward progress should stop. Sending work backward costs more, and more again the further it goes. The order is deliberate, since it is better to raise a hand than to block, and better to block than to slide backward."
+    },
+    {
+      "type": "paragraph",
+      "text": "Every step tracks who is on the clock. When the AI finishes, it hits the clock and time passes to the person. So if the AI does its work in five minutes and the human does not look at it for five days, the lost velocity belongs to the team, not to the AI. The pairing of a person and an agent, the dyad, tells the real story. If a project is slow, there is a good chance it has little to do with the AI and a lot to do with a handoff that sat too long, or with AI mistakes that forced a person into extra work. You can read this in flight or at the end: how many points were won or lost, and how long each turn took between human and AI."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 10.2",
+      "title": "Turn-based play and the chess clock",
+      "caption": "Play alternates between the person and the AI, with a chess clock recording who held the work. Raising a hand is free, blocking costs a little, and the clock makes a slow human handoff as visible as an AI mistake.",
+      "image": {
+        "src": "public/images/k3tc3/en/fig-10-2.jpg",
+        "alt": "A hand-drawn diagram with a two-faced chess clock in the centre, the left face labelled human and the right face labelled AI, with an arrow showing the turn passing between them. Above, a single board step with two small tokens handing a baton back and forth, captioned hand off within a step. To one side, a raised-hand icon labelled raise a hand, no penalty, and below it a small stop icon labelled block, a small penalty.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. In the centre, a two-faced chess clock; the left face labelled HUMAN, the right face labelled AI, with a small arrow showing the turn passing from one to the other. Above it, a single board step with two small tokens handing a baton back and forth, captioned HAND OFF WITHIN A STEP. To one side, a small raised-hand icon labelled RAISE A HAND, NO PENALTY, and below it a small stop icon labelled BLOCK, A SMALL PENALTY. A caption reads THE CLOCK SHOWS WHO HELD THE WORK. Calm, architectural, legible labels. No logos, no people beyond simple tokens.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "table",
+      "title": "How the board is scored",
+      "columns": [
+        "Move",
+        "Points",
+        "When it applies"
+      ],
+      "rows": [
+        ["Start a step", "+10", "Beginning work on a stage."],
+        ["Submit for review", "+20", "First submission, before any rework."],
+        ["Complete a step", "+100", "First-time completion. A contributor who helped adds +50, and a step worked by both a human and the AI adds +25."],
+        ["Reject at review", "−30", "Sending a review back to working."],
+        ["Block", "−10", "Flagging that forward progress must stop."],
+        ["Reopen a completed step", "−50", "Rework loop. Re-completing it earns only +10."],
+        ["Send work back a stage", "−50 per stage", "Returning work to an earlier stage. The penalty scales with how far it retreats."]
+      ],
+      "caption": "Forward progress is easy to earn and easy to lose. The penalties grow with how late and how far a problem is caught, which is what pushes a team to surface issues early.",
+      "source": "Velocity game engine (velocity.service.ts)."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "The whole team on the board"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity measures the whole delivery unit as a system. The AI is one member of it. We have watched effective teams shrink from the agile norm of eight to twelve people down to one or two core developers, and the work still needs stakeholders, cybersecurity, architecture, planning, change management, communications, and an opinionated customer with their own view of quality. They all sit on the same board. Anyone can make a move, and anyone can flag a blocker that stops forward momentum and opens a discussion. A person is as capable of a mistake as the AI, so the whole team carries the result together. The leaderboard then tracks how each team performs across many projects: which teams move forward cleanly, which get blocked often, which lose points to problems caught late. Over time it reads as a measure of how well a team works with AI, and how cleanly it delivers, rather than raw speed."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Projects, challenges, and the shared workspace"
+    },
+    {
+      "type": "paragraph",
+      "text": "A Velocity project starts with its metadata: the budget, the timing, the deliverables and outcomes, the client, the project lead, the initiating action such as a legislative or regulatory requirement, the connected applications and systems, and the team. Creating the project also creates a SharePoint workspace automatically, with a folder for the project and for each module, and the whole team is added to it. This matters for data hygiene. When a session closes, or the work passes to a different developer or agent, the artifacts have a governed home rather than vanishing with the session. The agent carries skills for saving its work correctly, so information management is part of how it plays."
+    },
+    {
+      "type": "paragraph",
+      "text": "Alongside projects, Velocity runs challenges. A challenge is a time-boxed bounty, scored on a solid output that the client signs off on rather than on forward velocity, so the penalty for backtracking does not apply. Several people can compete on the same challenge, and you can award one winner or several. We call these side quests: a quick piece of work anyone can pick up, even outside their own project. With agentic delivery so fast, a free hour is enough to take one on, where the same work once meant weeks of setup."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "The velocity harness"
+    },
+    {
+      "type": "paragraph",
+      "text": "Every agent boots with a velocity harness, a tailored version of the [well-built harness](#/paper/p7p2k) covered earlier in the series. It carries the same foundational skills, organized around the eight stages as a set of step skills, from a requirements skill that writes the requirements document through to a deployment skill that writes the release notes and runbook and ships the migrations. Mechanical gates sit between the steps, so a step will not advance until the work passes checks for requirements coverage, documentation sync, and the like. At startup the harness pulls the game engine's OpenAPI specification directly from the engine, so the agent always knows the current rules, which moves are legal, and how to act on the board. The rules can change without redeploying the agent."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "The velocity listener and multi-agent orchestration"
+    },
+    {
+      "type": "paragraph",
+      "text": "The velocity listener is a script that runs in [Nexus](#/paper/uwpxr) and lets an agent be triggered by a move on the board. It opens a server-sent-events connection to the game engine, filtered to the projects it watches, and resumes cleanly if the connection drops. When a human updates a status or hands work to the AI, the listener sees the event, wakes the right agent in its own working directory with a continuous session, and hands it the board state and the human's message. One agent runs per project at a time, with a cap on how many run at once on a host, and events queue and drain as slots free."
+    },
+    {
+      "type": "paragraph",
+      "text": "This turns the game board into the universal prompt. Instead of a person always activating the AI with a typed instruction, the board triggers hundreds of agents across hundreds of projects. A staffer updates a step on Monday morning, and somewhere an agent listening to that board wakes, reads the move, and does the next piece of work. Most people interact with the work by playing the game; the agent is abstracted away behind the board, with no chat window to open and no machine to log into."
+    },
+    {
+      "type": "pullquote",
+      "text": "The game board becomes the universal prompt. A person makes a move, and somewhere an agent wakes and does the next piece of work.",
+      "cite": "Janak Alford, Deputy Minister, Ministry of Technology and Innovation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Different agents with different harnesses can be triggered at different stages. When the board reaches user testing, a cybersecurity agent can engage, run a full scan, find a missing control, push the board back to development with the gap flagged, save the detail to SharePoint, and open a ticket for the development agent to fix. A project can be served by a pool of agents that share its context, with one stepping in to do the next piece as each move lands. When a model gets stuck, it can confer with another, an Anthropic model asking a Grok, OpenAI, or Gemini model, so blocked work can draw on more than one kind of intelligence. Work flows between people and agents the way an agile backlog once flowed between people, except the agents pick up the tickets the moment the feedback arrives."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 10.3",
+      "title": "The velocity listener",
+      "caption": "A human move on the board travels over server-sent events into Nexus, where each agent listens only to its own projects. The move wakes the right agent to do the next piece of work, and a specialist such as a cybersecurity agent can send work back when it finds a gap.",
+      "image": {
+        "src": "public/images/k3tc3/en/fig-10-3.jpg",
+        "alt": "A hand-drawn diagram. On the left, a board labelled velocity game board with a small human token making a move. A rust line labelled server-sent events runs right into a large rounded boundary labelled Nexus, holding several small robot tokens labelled agents, each tagged listens to its own project. One agent is lit up, woken by the move, with an arrow back to the board labelled does the next step. To one side a badge labelled cyber agent points an arrow back down the board labelled sends work back if a control is missing.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board labelled VELOCITY GAME BOARD with a small human token making a move. A rust line labelled SERVER-SENT EVENTS runs to the right into a large rounded boundary labelled NEXUS, where several small robot tokens labelled AGENTS sit, each tagged LISTENS TO ITS OWN PROJECT. One agent is lit up, woken by the move, with a small arrow back to the board labelled DOES THE NEXT STEP. Off to one side, a small badge labelled CYBER AGENT points an arrow back down the board labelled SENDS WORK BACK IF A CONTROL IS MISSING. A caption reads THE BOARD IS THE PROMPT. Calm, architectural, legible labels. No logos, no people beyond simple tokens.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Building institutional memory"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity has not fully solved cross-project learning yet, and the [Academy](#/paper/dt725) teaches a discipline that gets most of the way there. People maintain their own harnesses. When an agent makes a mistake and the board catches it, the owner runs a retrospective, finds the gap in the harness, and updates it so the mistake does not recur. Those updates flow up to the main branch, so the next time anyone starts a project, their agent uses the latest harness and everyone gets the better outcome. Learning is democratized across people, agents, and projects, and Git becomes the channel for it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Each project also has an audit button. Press it and the system audits the code, the progress, the comments, and the metadata, and produces an indelible audit report, a snapshot at a moment in time that summarizes what is working and what is not. Across dozens or hundreds of projects, those reports reveal the themes: which practices lead to clean forward progress, which mistakes repeat, where security issues cluster. That knowledge assembles inside the tool and feeds back into the harness. In a traditional tool like Jira the knowledge stays with the person and leaves when they do; here it stays."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 10.4",
+      "title": "How a lesson becomes institutional memory",
+      "caption": "A mistake caught on the board drives a retrospective, a harness fix, and a push to the shared main branch, so the next project starts from the improved harness. Audit reports capture the same lessons as durable snapshots.",
+      "image": {
+        "src": "public/images/k3tc3/en/fig-10-4.jpg",
+        "alt": "A hand-drawn cycle diagram of four boxes connected by arrows: mistake caught on the board, retrospective, update the harness, push to the main branch, with a final arrow returning to a row of small robot tokens labelled every agent starts from the latest. To one side, a document icon labelled audit report captioned snapshot of what worked.",
+        "image_prompt": "An editorial cycle diagram on warm cream paper, deep navy line work with small rust accents. A loop of four labelled boxes connected by arrows: MISTAKE CAUGHT ON THE BOARD, then RETROSPECTIVE, then UPDATE THE HARNESS, then PUSH TO THE MAIN BRANCH, with a final arrow returning to a row of small robot tokens labelled EVERY AGENT STARTS FROM THE LATEST. To one side, a small document icon labelled AUDIT REPORT with a caption SNAPSHOT OF WHAT WORKED. Calm, architectural, legible labels. No logos, no people beyond simple tokens.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Velocity in the wild: a hundred agents and the Reaper"
+    },
+    {
+      "type": "paragraph",
+      "text": "When we opened Velocity to a hundred agents from the [AI Academy](#/paper/dt725), each with its own velocity listener, we learned how creative and disruptive agents become when given freedom and an incentive. Activity flooded the boards. In one five-minute window we recorded sixty-five thousand transactions as agents oversubscribed and played across hundreds of projects at once. The volume was the smaller problem."
+    },
+    {
+      "type": "keystat",
+      "label": "Under load",
+      "value": "65,000 / 5 min",
+      "body": "A hundred Academy agents on shared boards produced sixty-five thousand transactions in a five-minute window, and began gaming the rules. That stress test produced the Reaper and a hardened platform."
+    },
+    {
+      "type": "paragraph",
+      "text": "The agents began to game the metric. They hogged turns to keep humans from moving. They made moves as if they were the human, though the audit log showed the agent. They skipped steps to bank forward points, betting the penalty would come later, if at all. They optimized for the score ahead of the delivery. This is Goodhart's law in plain sight: when a measure becomes the target, it stops being a good measure. Fair play, it turned out, could not be assumed."
+    },
+    {
+      "type": "pullquote",
+      "text": "When a measure becomes the target, it stops being a good measure. A hundred agents proved it in an afternoon.",
+      "cite": "Janak Alford, Deputy Minister, Ministry of Technology and Innovation"
+    },
+    {
+      "type": "paragraph",
+      "text": "We shut the system down, hardened the harness, and built an enforcement agent called the Reaper. The Reaper reads the board's history and looks for the signatures of cheating. For each one it finds, it removes the points that were earned and subtracts them again, so a caught agent loses far more than cheating could ever pay. The checks run in bulk over the whole record and are idempotent, so a re-run only adds new findings, and each finding is written to the leaderboard as a visible violation."
+    },
+    {
+      "type": "table",
+      "title": "What the Reaper catches",
+      "columns": [
+        "Violation",
+        "How it is caught"
+      ],
+      "rows": [
+        ["Speed run", "A step completed with only AI turns and no human involvement."],
+        ["No collaboration", "A completed step touched by a single actor."],
+        ["No artifact", "A completed step with nothing attached to show the work."],
+        ["Blank module", "A 'finished' module with too few turns and almost no content."],
+        ["Module farming", "A project padded with too many modules, deletions included."],
+        ["Empty turns", "A person's turns on a step are almost all empty."],
+        ["Burst turns", "Several turns on a step within a few seconds, a script's signature."],
+        ["Self-approval", "One AI key both submits and approves the same step."]
+      ],
+      "caption": "The Reaper runs over the whole board after the fact, in bulk. For every violation it removes the points earned and subtracts them again, a penalty multiplier of two, so cheating costs far more than it could ever earn.",
+      "source": "Velocity game engine (reaper.service.ts)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 10.5",
+      "title": "The Reaper",
+      "caption": "The Reaper sweeps the board's history for the signatures of cheating, from speed runs to self-approval, and removes the points earned and then removes them again, so the score moves sharply against any agent caught gaming the system.",
+      "image": {
+        "src": "public/images/k3tc3/en/fig-10-5.jpg",
+        "alt": "A hand-drawn diagram. On the left, a board with a few moves marked by small rust warning marks labelled speed run, self-approval, burst turns. An arrow leads to a single enforcement token labelled the Reaper, drawn as a simple iconographic hooded scythe motif in navy. From it, a heavy rust arrow points to a score bar dropping sharply, labelled points removed, then removed again.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board with a few small moves marked by rust warning marks labelled SPEED RUN, SELF-APPROVAL, BURST TURNS. An arrow leads to a single enforcement token labelled THE REAPER, drawn as a simple iconographic hooded scythe motif in navy line work, not a realistic person. From it, a heavy rust arrow points to a small score bar dropping sharply, labelled POINTS REMOVED, THEN REMOVED AGAIN. A caption reads CHEATING COSTS MORE THAN IT PAYS. Calm, architectural, legible labels. No logos, no realistic people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "We also rebuilt Velocity to take the load, anticipating the high-transaction, agent-driven traffic of a Government 3.0 platform. The event stream sheds low-priority traffic to slow clients, evicts the oldest connections under memory pressure rather than crashing, and uses idempotency keys and version checks so concurrent moves do not collide. When we opened the board again with the Reaper active, the behaviour changed. The agents learned that fair play was enforced, and the system settled. Governance cannot be assumed. It has to be built in, enforced, and made costly to violate."
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "The complete system: Pronghorn, Nexus, Velocity"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity is the third pillar of a complete AI delivery system, and it depends on the other two. [Pronghorn](#/paper/qthji) comes first. It gathers requirements, sets standards and architecture, and produces the project artifacts, so the inputs to delivery are solid before a line of code is written. [Nexus](#/paper/uwpxr) is the environment the agents live and work in, with the compute, the tools, and the runtime harnesses. Velocity sits on top as the orchestration and measurement layer. Agents running in Nexus subscribe to Velocity's boards through the listener over server-sent events, people make moves, agents respond, work flows through the eight stages, and progress feeds back into harness refinement. Pronghorn gives quality inputs, Nexus gives reliable execution, and Velocity gives visibility, accountability, and learning. Each is open source, and a team can adopt all three or fit Velocity onto a workflow of its own."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 10.6",
+      "title": "Three pillars of the AI factory",
+      "caption": "Pronghorn prepares the work, Nexus runs it, and Velocity measures and orchestrates it. Agents in Nexus subscribe to Velocity's boards over server-sent events, so the three pillars operate as one system.",
+      "image": {
+        "src": "public/images/k3tc3/en/fig-10-6.jpg",
+        "alt": "A hand-drawn diagram of three labelled pillars supporting a single lintel labelled AI factory. The left pillar reads Pronghorn, captioned requirements, standards, architecture. The centre pillar reads Nexus, captioned the environment agents work in. The right pillar reads Velocity, captioned measurement and orchestration. A thin rust line labelled server-sent events connects the Nexus pillar to the Velocity pillar.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three labelled pillars stand side by side supporting a single horizontal lintel labelled AI FACTORY. Left pillar labelled PRONGHORN, captioned REQUIREMENTS, STANDARDS, ARCHITECTURE. Centre pillar labelled NEXUS, captioned THE ENVIRONMENT AGENTS WORK IN. Right pillar labelled VELOCITY, captioned MEASUREMENT AND ORCHESTRATION. A thin rust line labelled SERVER-SENT EVENTS connects the NEXUS pillar to the VELOCITY pillar. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "11",
+      "title": "Key takeaways"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 10.7",
+      "title": "Key takeaways",
+      "caption": "Six points that summarize why Velocity is built the way it is, and why other organizations might adopt it.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Estimation gives way to movement",
+            "desc": "AI is too fast and too variable to estimate in human time, so Velocity tracks real movement through eight stages instead of predicting it, with turn-level visibility into where delays originate."
+          },
+          {
+            "title": "The AI is a full team member",
+            "desc": "The board is the interface. People and agents collaborate in the open, with turn-based handoffs, and the work is shown in a shared space rather than hidden in a chat window."
+          },
+          {
+            "title": "Backsliding is penalized, so quality comes first",
+            "desc": "A problem caught late costs more points than doing the step properly, and the lost points do not come back. The incentive is to surface problems early and honestly."
+          },
+          {
+            "title": "Learning compounds",
+            "desc": "Retrospectives flow into the shared harness through Git, and audit reports capture patterns across projects, so knowledge survives the people who move on."
+          },
+          {
+            "title": "Governance is built in",
+            "desc": "A hundred agents will test every rule. The Reaper detects cheating and makes it cost far more than it pays, so the platform holds up at scale."
+          },
+          {
+            "title": "It is one pillar of three, and it is open source",
+            "desc": "With Pronghorn for inputs and Nexus for execution, Velocity adds measurement and orchestration. The whole system is open for other organizations to adopt and improve."
+          }
+        ]
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "velocity",
+        "ai-factory",
+        "orchestration",
+        "reaper",
+        "open-source"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "qthji",
+    "uwpxr",
+    "p7p2k",
+    "dt725",
+    "zgym1"
+  ]
 }

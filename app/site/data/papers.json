@@ -296,18 +296,35 @@
       "sequence": "",
       "tier": "Technical",
       "title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
-      "subtitle": "Tracking delivery across people and agents.",
+      "subtitle": "A game-based way to run and measure delivery when an AI agent is a full member of the team, and traditional estimation no longer works.",
       "track": "Engineering the Solution",
       "authors": [
-        "Ministry of Technology and Innovation"
+        "Janak Alford",
+        "Deputy Minister",
+        "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 18,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "ai-factory",
+        "velocity",
+        "project-management",
+        "agents",
+        "orchestration",
+        "reaper",
+        "sse",
+        "open-source"
+      ],
       "repo": null,
-      "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
-      "related": [],
+      "abstract": "AI has made traditional project estimation obsolete. An agent can finish in minutes what a team once scheduled in days, and it cannot reliably estimate its own work, so the story-point methods of agile planning no longer describe progress. Velocity is the third stage of Alberta's AI factory, after Pronghorn and Nexus. It is a game-based project management platform that treats an AI agent as a full member of the delivery team. Work moves through eight stages, from requirements to deployment, with turn-based handoffs between people and agents. Forward progress earns points; sending work backward costs them, and the penalty grows with the distance, so problems caught late are expensive by design. A script called the velocity listener lets agents subscribe to the board and act when a move is made, so hundreds of agents can work across hundreds of projects without manual prompting. Audit reports and a shared harness turn each project's lessons into institutional memory. This paper describes the framework, its gameplay and scoring, the listener and multi-agent orchestration, what happened when a hundred agents were let onto the board at once, and how Velocity fits with Pronghorn and Nexus. Velocity is open source.",
+      "related": [
+        "qthji",
+        "uwpxr",
+        "p7p2k",
+        "dt725",
+        "zgym1"
+      ],
       "category": "paper"
     },
     {
