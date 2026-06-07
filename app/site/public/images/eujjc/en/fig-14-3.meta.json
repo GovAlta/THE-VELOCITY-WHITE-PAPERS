@@ -1,0 +1,17 @@
+{
+  "paper_id": "eujjc",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\eujjc\\en\\fig-14-3.jpg",
+  "bytes_jpg": 219030,
+  "bytes_png_source": 2899731,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-07T04:32:28.944Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a large block labelled 466M LINES OF CODE. Two channels lead rightward to a simple person token labelled DECISION-MAKER. The upper channel is a very thin pipe labelled BRIEFING NOTE, with a small tag ABOUT 40 BITS/S. The lower channel is a wide pipe labelled VISUALIZATION · INTERACTIVE MODEL · SIMULATION, drawn carrying many fine lines at once. A small caption reads WIDEN THE BANDWIDTH, NOT SIMPLIFY THE TRUTH. Calm, architectural, legible labels. No logos, no people beyond a simple token.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a large block labelled 466M LINES OF CODE. Two channels lead rightward to a simple person token labelled DECISION-MAKER. The upper channel is a very thin pipe labelled BRIEFING NOTE, with a small tag ABOUT 40 BITS/S. The lower channel is a wide pipe labelled VISUALIZATION · INTERACTIVE MODEL · SIMULATION, drawn carrying many fine lines at once. A small caption reads WIDEN THE BANDWIDTH, NOT SIMPLIFY THE TRUTH. Calm, architectural, legible labels. No logos, no people beyond a simple token.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

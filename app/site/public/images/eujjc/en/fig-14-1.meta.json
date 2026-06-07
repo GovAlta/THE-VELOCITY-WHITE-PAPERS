@@ -1,0 +1,17 @@
+{
+  "paper_id": "eujjc",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\eujjc\\en\\fig-14-1.jpg",
+  "bytes_jpg": 157160,
+  "bytes_png_source": 2631219,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-07T04:30:32.733Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A pyramid divided into horizontal layers labelled, bottom to top, FRONTLINE, MANAGER, DIRECTOR, EXECUTIVE. On the LEFT half, broad bands of fine detail at the base narrow as upward arrows pass through each layer, captioned COMPRESSION, with a small note near the apex reading ABOUT 1000:1. On the RIGHT half, a few arrows leave the apex and fan out, widening downward into a row of small task boxes at the base, captioned DECOMPRESSION, with small dashed gaps between the boxes labelled GAPS TO FILL. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. A pyramid divided into horizontal layers labelled, bottom to top, FRONTLINE, MANAGER, DIRECTOR, EXECUTIVE. On the LEFT half, broad bands of fine detail at the base narrow as upward arrows pass through each layer, captioned COMPRESSION, with a small note near the apex reading ABOUT 1000:1. On the RIGHT half, a few arrows leave the apex and fan out, widening downward into a row of small task boxes at the base, captioned DECOMPRESSION, with small dashed gaps between the boxes labelled GAPS TO FILL. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

@@ -317,7 +317,7 @@
         "open-source"
       ],
       "repo": null,
-      "abstract": "AI has made traditional project estimation obsolete. An agent can finish in minutes what a team once scheduled in days, and it cannot reliably estimate its own work, so the story-point methods of agile planning no longer describe progress. Velocity is the third stage of Alberta's AI factory, after Pronghorn and Nexus. It is a game-based project management platform that treats an AI agent as a full member of the delivery team. Work moves through eight stages, from requirements to deployment, with turn-based handoffs between people and agents. Forward progress earns points; sending work backward costs them, and the penalty grows with the distance, so problems caught late are expensive by design. A script called the velocity listener lets agents subscribe to the board and act when a move is made, so hundreds of agents can work across hundreds of projects without manual prompting. Audit reports and a shared harness turn each project's lessons into institutional memory. This paper describes the framework, its gameplay and scoring, the listener and multi-agent orchestration, what happened when a hundred agents were let onto the board at once, and how Velocity fits with Pronghorn and Nexus. Velocity is open source.",
+      "abstract": "Velocity is the third stage of Alberta's AI factory, after Pronghorn and Nexus. It is an open-source project tool, built as a game, that makes an AI agent a full member of the team and measures real delivery now that estimation no longer works. Work climbs eight stages, earning points moving forward and losing them when it slides back.",
       "related": [
         "qthji",
         "uwpxr",
@@ -427,18 +427,34 @@
       "sequence": "",
       "tier": "Policy & People",
       "title": "The Compression Problem",
-      "subtitle": "Organizational design at agentic scale. Command and control vs delegation of authority.",
+      "subtitle": "How managing information up and down a hierarchy is the defining challenge for people and for AI alike.",
       "track": "Human and Change Management",
       "authors": [
-        "Ministry of Technology and Innovation"
+        "Janak Alford",
+        "Deputy Minister",
+        "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 18,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "compression",
+        "hierarchy",
+        "organizational-design",
+        "agents",
+        "fidelity",
+        "hallucination",
+        "change-management"
+      ],
       "repo": null,
-      "abstract": "All systems face an inability to compress the granular into the strategic. The flawed human framing is to treat command-and-control vs delegation as an either/or. In the agentic space, agents operate tens to hundreds of times faster than humans. The correct answer is to create sufficiently autonomous, isolated societies and compete the different models against each other through Nexus, then empirically decide.",
-      "related": [],
+      "abstract": "Government and large enterprises face a paradox when modernizing legacy systems at scale. The transformation of the Government of Alberta's fourteen hundred systems, representing four hundred sixty-six million lines of code across four thousand repositories, requires compressing forty years of accumulated technical debt, institutional knowledge, and embedded business logic into a four-year window, at a target of twentyfold faster delivery and about a ninety-five percent reduction in cost. This white paper argues that the core challenge is informational rather than technical: how to maintain fidelity of ground truth as information moves up and down organizational hierarchies, where each layer compresses what it communicates upward and decompresses what it receives downward. This compression problem is not unique to artificial intelligence; it is the reason hierarchical organizations exist. AI introduces both a solution and a new set of risks. By enabling information fidelity across parallel agents, instant knowledge propagation, and operation at machine speed, AI can theoretically flatten organizational structures and maintain coherence across unprecedented scale. Yet this only works if we solve the compression problem: ensuring that strategic intent survives countless handoffs, that ground truth stays synchronized across thousands of concurrent agents, and that humans remain meaningfully in the loop despite operating in a system orders of magnitude faster than human cognition.",
+      "related": [
+        "cux4h",
+        "uwpxr",
+        "k3tc3",
+        "dt725",
+        "p7p2k"
+      ],
       "category": "paper"
     },
     {

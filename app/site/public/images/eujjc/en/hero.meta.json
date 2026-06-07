@@ -1,0 +1,17 @@
+{
+  "paper_id": "eujjc",
+  "locale": "en",
+  "slot": "hero",
+  "out_path": "public\\images\\eujjc\\en\\hero.jpg",
+  "bytes_jpg": 168463,
+  "bytes_png_source": 2274832,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-07T04:29:34.232Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A wide base of dense, fine lines suggesting code and documents funnels upward through a narrowing pyramid to a single point at the top, while a thin rust line runs from that point back downward and fans out into many branches at the base. The motion of compressing upward and expanding downward is the whole image. Calm, archival, abstract. Wide cover aspect. No text, no logos, no people.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A wide base of dense, fine lines suggesting code and documents funnels upward through a narrowing pyramid to a single point at the top, while a thin rust line runs from that point back downward and fans out into many branches at the base. The motion of compressing upward and expanding downward is the whole image. Calm, archival, abstract. Wide cover aspect. No text, no logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

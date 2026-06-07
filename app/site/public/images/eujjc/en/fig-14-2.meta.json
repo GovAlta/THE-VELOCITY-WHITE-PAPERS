@@ -1,0 +1,17 @@
+{
+  "paper_id": "eujjc",
+  "locale": "en",
+  "slot": "fig-02",
+  "out_path": "public\\images\\eujjc\\en\\fig-14-2.jpg",
+  "bytes_jpg": 199531,
+  "bytes_png_source": 2662857,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-07T04:31:38.415Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled HUMAN SPEED: a request arrow travels down through four stacked layers and back up, beside a clock face captioned ABOUT ONE MONTH and a small note A FEW AT A TIME. RIGHT panel labelled MACHINE SPEED: the same arrow loops straight down and back in a tight cycle beside a clock captioned ONE SECOND and a note TENS OF THOUSANDS OF ISSUES A DAY. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled HUMAN SPEED: a request arrow travels down through four stacked layers and back up, beside a clock face captioned ABOUT ONE MONTH and a small note A FEW AT A TIME. RIGHT panel labelled MACHINE SPEED: the same arrow loops straight down and back in a tight cycle beside a clock captioned ONE SECOND and a note TENS OF THOUSANDS OF ISSUES A DAY. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}
