@@ -77,10 +77,22 @@
         "caption": "How the board plays",
         "visual_config": {
           "items": [
-            { "label": "Eight stages", "desc": "Requirements through deployment, each a step forward." },
-            { "label": "Forward and back", "desc": "Forward earns points; sending work back costs more the further it goes." },
-            { "label": "Raise a hand", "desc": "Asking for help is free; blocking costs a little; backsliding costs the most." },
-            { "label": "The chess clock", "desc": "Turn timing shows whether the human or the AI held the work." }
+            {
+              "label": "Eight stages",
+              "desc": "Requirements through deployment, each a step forward."
+            },
+            {
+              "label": "Forward and back",
+              "desc": "Forward earns points; sending work back costs more the further it goes."
+            },
+            {
+              "label": "Raise a hand",
+              "desc": "Asking for help is free; blocking costs a little; backsliding costs the most."
+            },
+            {
+              "label": "The chess clock",
+              "desc": "Turn timing shows whether the human or the AI held the work."
+            }
           ]
         },
         "text": "Play is turn-based and live. The AI works, hands the turn to a person, and the person hands it back. A chess clock tracks who holds the work, so if the AI finishes in five minutes and the human takes five days, the delay belongs to the team. Forward progress earns points, blocking costs a little, and sending work back costs more the further it goes."
@@ -93,10 +105,22 @@
         "caption": "The velocity listener",
         "visual_config": {
           "items": [
-            { "label": "The listener", "desc": "A script in Nexus wakes the right agent when a move is made." },
-            { "label": "Hundreds of agents", "desc": "Each listens to its own projects; no one prompts them by hand." },
-            { "label": "Specialists step in", "desc": "A cyber agent can scan, find a gap, and send work back." },
-            { "label": "Many models", "desc": "A stuck model can confer with another." }
+            {
+              "label": "The listener",
+              "desc": "A script in Nexus wakes the right agent when a move is made."
+            },
+            {
+              "label": "Hundreds of agents",
+              "desc": "Each listens to its own projects; no one prompts them by hand."
+            },
+            {
+              "label": "Specialists step in",
+              "desc": "A cyber agent can scan, find a gap, and send work back."
+            },
+            {
+              "label": "Many models",
+              "desc": "A stuck model can confer with another."
+            }
           ]
         },
         "text": "The velocity listener turns the board into the universal prompt. A person updates a step, and an agent listening over server-sent events wakes, reads the move, and does the next piece of work. Hundreds of agents can run across hundreds of projects, with specialists joining at the right stage, and most people simply play the game."
@@ -127,16 +151,50 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "The estimation problem in the AI era" },
-    { "n": "02", "title": "A new game: snakes and ladders" },
-    { "n": "03", "title": "Turns, handoffs, and the chess clock" },
-    { "n": "04", "title": "The whole team on the board" },
-    { "n": "05", "title": "Projects, challenges, and the shared workspace" },
-    { "n": "06", "title": "The velocity harness" },
-    { "n": "07", "title": "The velocity listener and multi-agent orchestration" },
-    { "n": "08", "title": "Building institutional memory" },
-    { "n": "09", "title": "Velocity in the wild: a hundred agents and the Reaper" },
-    { "n": "10", "title": "The complete system: Pronghorn, Nexus, Velocity" }
+    {
+      "n": "01",
+      "title": "The estimation problem in the AI era"
+    },
+    {
+      "n": "02",
+      "title": "A new game: snakes and ladders"
+    },
+    {
+      "n": "03",
+      "title": "Turns, handoffs, and the chess clock"
+    },
+    {
+      "n": "04",
+      "title": "The whole team on the board"
+    },
+    {
+      "n": "05",
+      "title": "Projects, challenges, and the shared workspace"
+    },
+    {
+      "n": "06",
+      "title": "The velocity harness"
+    },
+    {
+      "n": "07",
+      "title": "The velocity listener and multi-agent orchestration"
+    },
+    {
+      "n": "08",
+      "title": "Building institutional memory"
+    },
+    {
+      "n": "09",
+      "title": "Velocity in the wild: a hundred agents and the Reaper"
+    },
+    {
+      "n": "10",
+      "title": "The complete system: Pronghorn, Nexus, Velocity"
+    },
+    {
+      "n": "11",
+      "title": "Additional materials"
+    }
   ],
   "blocks": [
     {
@@ -218,7 +276,7 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 10.1",
+      "fno": "FIG. 1",
       "title": "The eight-stage board",
       "caption": "Velocity lays delivery out as a board. Work climbs the eight stages, earning points on the way up. A problem caught late sends the work back down a snake, and the further it falls, the more it costs.",
       "image": {
@@ -247,7 +305,7 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 10.2",
+      "fno": "FIG. 2",
       "title": "Turn-based play and the chess clock",
       "caption": "Play alternates between the person and the AI, with a chess clock recording who held the work. Raising a hand is free, blocking costs a little, and the clock makes a slow human handoff as visible as an AI mistake.",
       "image": {
@@ -266,13 +324,41 @@
         "When it applies"
       ],
       "rows": [
-        ["Start a step", "+10", "Beginning work on a stage."],
-        ["Submit for review", "+20", "First submission, before any rework."],
-        ["Complete a step", "+100", "First-time completion. A contributor who helped adds +50, and a step worked by both a human and the AI adds +25."],
-        ["Reject at review", "−30", "Sending a review back to working."],
-        ["Block", "−10", "Flagging that forward progress must stop."],
-        ["Reopen a completed step", "−50", "Rework loop. Re-completing it earns only +10."],
-        ["Send work back a stage", "−50 per stage", "Returning work to an earlier stage. The penalty scales with how far it retreats."]
+        [
+          "Start a step",
+          "+10",
+          "Beginning work on a stage."
+        ],
+        [
+          "Submit for review",
+          "+20",
+          "First submission, before any rework."
+        ],
+        [
+          "Complete a step",
+          "+100",
+          "First-time completion. A contributor who helped adds +50, and a step worked by both a human and the AI adds +25."
+        ],
+        [
+          "Reject at review",
+          "−30",
+          "Sending a review back to working."
+        ],
+        [
+          "Block",
+          "−10",
+          "Flagging that forward progress must stop."
+        ],
+        [
+          "Reopen a completed step",
+          "−50",
+          "Rework loop. Re-completing it earns only +10."
+        ],
+        [
+          "Send work back a stage",
+          "−50 per stage",
+          "Returning work to an earlier stage. The penalty scales with how far it retreats."
+        ]
       ],
       "caption": "Forward progress is easy to earn and easy to lose. The penalties grow with how late and how far a problem is caught, which is what pushes a team to surface issues early.",
       "source": "Velocity game engine (velocity.service.ts)."
@@ -332,7 +418,7 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 10.3",
+      "fno": "FIG. 3",
       "title": "The velocity listener",
       "caption": "A human move on the board travels over server-sent events into Nexus, where each agent listens only to its own projects. The move wakes the right agent to do the next piece of work, and a specialist such as a cybersecurity agent can send work back when it finds a gap.",
       "image": {
@@ -357,7 +443,7 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 10.4",
+      "fno": "FIG. 4",
       "title": "How a lesson becomes institutional memory",
       "caption": "A mistake caught on the board drives a retrospective, a harness fix, and a push to the shared main branch, so the next project starts from the improved harness. Audit reports capture the same lessons as durable snapshots.",
       "image": {
@@ -403,21 +489,45 @@
         "How it is caught"
       ],
       "rows": [
-        ["Speed run", "A step completed with only AI turns and no human involvement."],
-        ["No collaboration", "A completed step touched by a single actor."],
-        ["No artifact", "A completed step with nothing attached to show the work."],
-        ["Blank module", "A 'finished' module with too few turns and almost no content."],
-        ["Module farming", "A project padded with too many modules, deletions included."],
-        ["Empty turns", "A person's turns on a step are almost all empty."],
-        ["Burst turns", "Several turns on a step within a few seconds, a script's signature."],
-        ["Self-approval", "One AI key both submits and approves the same step."]
+        [
+          "Speed run",
+          "A step completed with only AI turns and no human involvement."
+        ],
+        [
+          "No collaboration",
+          "A completed step touched by a single actor."
+        ],
+        [
+          "No artifact",
+          "A completed step with nothing attached to show the work."
+        ],
+        [
+          "Blank module",
+          "A 'finished' module with too few turns and almost no content."
+        ],
+        [
+          "Module farming",
+          "A project padded with too many modules, deletions included."
+        ],
+        [
+          "Empty turns",
+          "A person's turns on a step are almost all empty."
+        ],
+        [
+          "Burst turns",
+          "Several turns on a step within a few seconds, a script's signature."
+        ],
+        [
+          "Self-approval",
+          "One AI key both submits and approves the same step."
+        ]
       ],
       "caption": "The Reaper runs over the whole board after the fact, in bulk. For every violation it removes the points earned and subtracts them again, a penalty multiplier of two, so cheating costs far more than it could ever earn.",
       "source": "Velocity game engine (reaper.service.ts)."
     },
     {
       "type": "figure",
-      "fno": "FIG. 10.5",
+      "fno": "FIG. 5",
       "title": "The Reaper",
       "caption": "The Reaper sweeps the board's history for the signatures of cheating, from speed runs to self-approval, and removes the points earned and then removes them again, so the score moves sharply against any agent caught gaming the system.",
       "image": {
@@ -442,7 +552,7 @@
     },
     {
       "type": "figure",
-      "fno": "FIG. 10.6",
+      "fno": "FIG. 6",
       "title": "Three pillars of the AI factory",
       "caption": "Pronghorn prepares the work, Nexus runs it, and Velocity measures and orchestrates it. Agents in Nexus subscribe to Velocity's boards over server-sent events, so the three pillars operate as one system.",
       "image": {
@@ -455,11 +565,23 @@
     {
       "type": "section_heading",
       "n": "11",
-      "title": "Key takeaways"
+      "title": "Additional materials"
+    },
+    {
+      "type": "paragraph",
+      "text": "The following materials provide additional insights into the Velocity Platform. For the latest information, please follow the [Alberta AI Academy](https://albertaaiacademy.com)."
+    },
+    {
+      "type": "youtube",
+      "fno": "FIG.7",
+      "title": "",
+      "caption": "DM Janak Alford and ED Zoran Mijajlovic discuss the Velocity Game Engine and provide a walk through",
+      "url": "https://youtu.be/rwhybgIXnJ8",
+      "alt": "DM Janak Alford and ED Zoran Mijajlovic discuss the Velocity Game Engine and provide a walk through"
     },
     {
       "type": "figure",
-      "fno": "FIG. 10.7",
+      "fno": "FIG. 8",
       "title": "Key takeaways",
       "caption": "Six points that summarize why Velocity is built the way it is, and why other organizations might adopt it.",
       "chart": {
