@@ -27,11 +27,17 @@
         if (!this.paperId) return;
         this.loading = true; this.error = null;
         try {
-          this.content = await window.VWLoadPaper(this.paperId, this.store.locale);
+          const content = await window.VWLoadPaper(this.paperId, this.store.locale);
           window.VWMarkVisited(this.paperId);
-          if (window.VWVisuals && this.content) {
-            await window.VWVisuals.loadBespokeFor(this.content);
+          /* Load and register any bespoke visual components BEFORE assigning
+             content. Assigning content renders the blocks (including figures
+             whose chart.kind is a bespoke component); if the scripts have not
+             registered yet, the <component :is> resolves to nothing and does
+             not re-render when they arrive. Awaiting here closes that race. */
+          if (window.VWVisuals && content) {
+            await window.VWVisuals.loadBespokeFor(content);
           }
+          this.content = content;
           if (window.VWA11y && this.content) {
             const prefix = this.store.locale === 'fr' ? 'Livre chargé : ' : 'Paper loaded: ';
             window.VWA11y.announce(prefix + this.content.title);

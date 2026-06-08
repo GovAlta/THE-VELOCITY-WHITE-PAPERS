@@ -5,17 +5,27 @@
   "tier": "Technical",
   "category": "paper",
   "title": "Technical: The Anti-Drift Harness",
-  "subtitle": "Keeping an agent's work aligned to intent across long builds.",
+  "subtitle": "Seven ways to keep an agent's work in sync with intent across a long build, and an observer pattern that watches from outside.",
   "track": "Technical Appendix",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 16,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "anti-drift",
+    "harness",
+    "agents",
+    "hooks",
+    "evals",
+    "observability",
+    "change-management"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. The body will be written from source materials. This is one of three technical appendices that round out the collection.",
+  "abstract": "Coding agents ship excellent work on each change, but as a codebase grows through refactor after refactor, parts drift out of sync. The chain that runs from requirements through schema, code, tests, and documentation breaks one link at a time. This appendix proposes the Anti-Drift Harness: a set of Claude Code skills, hooks, and deterministic evals that catch drift inside the build loop rather than in a later audit, plus an observer pattern where harnesses watch a builder project from outside and file tickets. It presents seven approaches, each with its hook events, its memory model, and an animated view of how it works. This is a hypothetical framework, offered for review.",
   "hero_image": {
     "src": "public/images/of1cj/en/hero.jpg",
     "alt": "Editorial image for: The Anti-Drift Harness",
@@ -33,36 +43,466 @@
     "slides": [
       {
         "id": "01",
-        "title": "Technical: The Anti-Drift Harness",
+        "title": "The Anti-Drift Harness",
         "audio_file": "public/audio/en/of1cj-tldr/01.mp3",
         "visual": "title",
-        "caption": "Technical appendix",
-        "subcaption": "",
-        "text": "The Anti-Drift Harness. Content forthcoming."
+        "caption": "Technical appendix · paper 17",
+        "subcaption": "Keeping an agent's work in sync with intent across a long build.",
+        "text": "Coding agents do great work on each change. The trouble shows up later, as a codebase grows through refactor after refactor and the parts drift out of sync. This appendix proposes the Anti-Drift Harness: skills, hooks, and deterministic evals that catch drift inside the build loop, and an observer pattern that watches a project from outside and files tickets. It presents seven approaches, each with an animated view of how it works."
+      },
+      {
+        "id": "02",
+        "title": "Functional is not well structured",
+        "audio_file": "public/audio/en/of1cj-tldr/02.mp3",
+        "visual": "stat",
+        "caption": "Where the gap shows up",
+        "visual_config": {
+          "stat_value": "7–10%",
+          "stat_label": "of output is compounding rework, most of it drift along the chain of related artefacts"
+        },
+        "subcaption": "Code can be 97 to 99 percent functionally correct and still only about 90 percent well structured.",
+        "text": "Agents produce code that is almost always functionally correct, and usually well structured. The gap between those two numbers carries the cost. Most of it is drift: when the model edits one link of the chain, it touches a neighbour or two and stops, and later reads the stale neighbours as ground truth and rebuilds against them."
+      },
+      {
+        "id": "03",
+        "title": "The chain, fourteen links long",
+        "audio_file": "public/audio/en/of1cj-tldr/03.mp3",
+        "visual": "title",
+        "caption": "Requirements to training",
+        "subcaption": "Drop a field from the database and it must move through the UI, the DDL, the docs, the specs, and the change notes.",
+        "text": "A feature is a chain: requirements, schema, migrations, controllers, routers, middleware, composables, components, pages, docs, infrastructure, externals, API specs, and training. Drift spreads horizontally along one feature's chain and vertically across features. A good harness catches both, in the loop, not as a later audit."
+      },
+      {
+        "id": "04",
+        "title": "Seven approaches",
+        "audio_file": "public/audio/en/of1cj-tldr/04.mp3",
+        "visual": "list",
+        "caption": "Skills, hooks, and evals",
+        "visual_config": {
+          "items": [
+            { "label": "Chain Walker", "desc": "Traces a touched file up and down the chain and writes a bridge diff at each hop." },
+            { "label": "Fingerprint Heatmap", "desc": "Logs every file Claude touches and renders a thermal map of where work happened." },
+            { "label": "Symbiotic Evals", "desc": "Deterministic per-transition checks that live next to the code and grow with it." },
+            { "label": "Spine, manifest, sweep, board", "desc": "Commit-narrative discipline, per-file manifests, a Stop-hook sweep, and a tile board." }
+          ]
+        },
+        "text": "The seven are the chain walker, the edit fingerprint heatmap, symbiotic chain evals, the commit-narrative spine, the per-file dependency manifest, the stop-hook drift sweep, and the chain layered tile board. Detection runs deterministically where it can, with a judgement pass only where it must."
+      },
+      {
+        "id": "05",
+        "title": "Watch from outside",
+        "audio_file": "public/audio/en/of1cj-tldr/05.mp3",
+        "visual": "title",
+        "caption": "The observer topology",
+        "subcaption": "Air traffic control, not a builder.",
+        "text": "The builder agent stays focused on application code. One or more harnesses run as separate Claude Code sessions outside the project. They watch the filesystem, run their checks, and drop tickets into the project's tickets folder. The builder reads tickets at session and turn boundaries and clears them like any other work. A failure in one observer never breaks the builder, because the bus is just the filesystem."
+      },
+      {
+        "id": "06",
+        "title": "Where it sits",
+        "audio_file": "public/audio/en/of1cj-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Part of the collection",
+        "subcaption": "Under the Well-Built Harness; alongside the four review agents; against the compression pressure.",
+        "text": "This appendix sits under the Well-Built Harness and ships alongside the red, green, blue, and yellow review agents. It answers the same pressure the Compression Problem names: as scale grows, fidelity is lost at every handoff. The harness exists so the discipline runs whether or not a human remembers to run it."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "The drift problem" },
+    { "n": "02", "title": "The chain, and how it breaks" },
+    { "n": "03", "title": "The virtuous loop, made continuous" },
+    { "n": "04", "title": "Chain Walker" },
+    { "n": "05", "title": "Edit Fingerprint Heatmap" },
+    { "n": "06", "title": "Symbiotic Chain Evals" },
+    { "n": "07", "title": "Commit-Narrative Spine" },
+    { "n": "08", "title": "Per-File Dependency Manifest" },
+    { "n": "09", "title": "Stop-Hook Drift Sweep" },
+    { "n": "10", "title": "Chain Layered Tile Board" },
+    { "n": "11", "title": "The observer topology" },
+    { "n": "12", "title": "Pairings, limits, and open questions" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "With clear standards and good prompting, teams using Claude Code and other coding agents move at a remarkable pace. The catch arrives as the codebase grows through refactor after refactor. Parts of the code start to drift out of sync with each other, and the chain of relationships between requirements, schema, code, tests, and documentation begins to break. The agents are still doing their job on each individual change, but the project as a whole erodes under its own changes. This appendix is about that gap and what to do about it. It is a hypothetical framework, offered to the team for review, and it sits under the [Well-Built Harness](/paper/p7p2k)."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "The drift problem"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place; the body will be written from source materials, not auto-generated."
+      "text": "Part of working well with AI every day is pausing on a cadence, every three to five turns, to push the agent to check for drift across the README, the OpenAPI spec, the routes, the test coverage, and the evals. The check finds the drift and the human fixes it. The check works. The discipline does not scale, because it depends on the human remembering to run it. The harness exists so the loop runs whether or not anyone remembers."
+    },
+    {
+      "type": "paragraph",
+      "text": "The reason the gap is easy to miss is that functional is not the same as well structured. Code from a good agent is almost always functionally correct. It is usually, but not always, well structured. The difference between those two numbers carries the cost, and most of it shows up as drift along the chain of related artefacts rather than as an outright bug."
+    },
+    {
+      "type": "keystat",
+      "label": "Functional is not well structured",
+      "value": "7–10%",
+      "body": "Output can be 97 to 99 percent functionally correct and still only about 90 percent well structured. The remaining 7 to 10 percent is compounding rework, and most of it is drift along the chain rather than a failing test."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "The chain, and how it breaks"
+    },
+    {
+      "type": "paragraph",
+      "text": "A feature is not one file. It is a chain of fourteen links that runs from requirements, through the database schema, migrations, controllers, routers, middleware, composables, components, and pages, out to docs, infrastructure, external services, API specs, and the training and change-management notes. When the model edits one link, it usually touches the one or two direct neighbours, then stops. Later, when work resumes elsewhere, the model reads the now-stale neighbours as ground truth and rebuilds against them. The chain breaks a little further each time. Drop a field from the database, and that same field has to move through the UI, the DDL, the training docs, and the change notes. Most of the time it does not."
+    },
+    {
+      "type": "paragraph",
+      "text": "Drift spreads in two directions. It spreads horizontally along a single feature's chain, and it spreads vertically across feature chains, where a deprecated library or a renamed contract in one feature ripples into another. A useful harness catches both, and it catches them inside the build loop rather than as a post-hoc audit. The seven approaches that follow are skills, hooks, and harness configurations that do exactly that. Detection runs deterministically wherever it can, and a judgement pass runs only where it must. Every approach maps to specific Claude Code hook events and skill files; none of it is hypothetical infrastructure."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "The virtuous loop, made continuous"
+    },
+    {
+      "type": "paragraph",
+      "text": "The practice already runs on a personal cadence: pause, check, fix. It works because someone remembers to run it. The harness exists so it runs regardless. The checklist becomes deterministic evals. The pause becomes a Stop hook, a PostToolUse hook, and an external file watcher. A Builder agent writes application code; deterministic scripts run continuously and produce evidence; an Anti-Drift agent reads the evidence on its own slower cadence and decides whether to file a ticket. As the project grows, new chain links appear, new evals scaffold next to them, and the walker learns the new transitions. The personal practice becomes a property of the project, and the project carries it forward."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Chain Walker"
+    },
+    {
+      "type": "paragraph",
+      "text": "On every Edit or Write, a forked sub-agent walks the canonical chain from the touched file outward. At each hop it identifies the upstream and downstream files, computes a bridge artifact, the set of names, types, fields, and contracts that should match between the two ends, and writes a diff when the bridge fails. The walker stops at a configurable depth and produces a single drift report keyed by the touched file. It reaches every link of the chain rather than one hop out, and its bridge artifacts are diffable, so a reviewer sees exactly what fell out of sync."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.1",
+      "title": "An edit propagates one hop, then drift accumulates",
+      "caption": "The fourteen links of the chain as columns of file tiles. A builder edit lands and propagates to its immediate neighbours, then stops. The links it should have reached but did not are later exposed as drift, and the anti-drift sweep pings them and files tickets.",
+      "chart": { "kind": "of1cj:chain" }
+    },
+    {
+      "type": "table",
+      "title": "Chain Walker, at a glance",
+      "columns": ["Property", "Detail"],
+      "rows": [
+        ["Role", "Detector"],
+        ["Primary hook", "PostToolUse on Edit or Write, with a Stop-hook full sweep across the turn"],
+        ["Memory", "JSON sidecars under .ai/walker/<session>/: touched log, computed bridges, drift records"],
+        ["Cost / complexity", "Per-edit · medium"],
+        ["Strengths", "Reaches every link; diffable bridge artifacts; deterministic where rules exist; output is useful context for the next turn"],
+        ["Trade-offs", "A forked sub-agent on every edit is not free; bridge rules must be authored per transition; deep walks can flag intended-but-not-yet-propagated changes"]
+      ],
+      "source": "Anti-Drift Harness approach inventory."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Edit Fingerprint Heatmap"
+    },
+    {
+      "type": "paragraph",
+      "text": "A purely observational layer. Every Edit or Write appends a row to a session log, and a skill renders the log as a tile heatmap where each cell is a file, brightness is touch count, and a chip marks the most recent edit. The heatmap does not detect drift itself. It gives the agent and the human a fingerprint of where work happened, so the detectors can radiate out from the hotspots. It is cheap, it works without any chain rules, and it ships on day one."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.2",
+      "title": "Where the work happened",
+      "caption": "Files grouped by directory, each tile warming as it is touched. New edits flash, then settle to a hotter colour. The harness pings the hottest cells as hotspots for the detectors to examine first.",
+      "chart": { "kind": "of1cj:heatmap" }
+    },
+    {
+      "type": "table",
+      "title": "Edit Fingerprint Heatmap, at a glance",
+      "columns": ["Property", "Detail"],
+      "rows": [
+        ["Role", "Surface, observation only"],
+        ["Primary hook", "PostToolUse logging; UserPromptSubmit and Stop snapshots; render on demand"],
+        ["Memory", "JSONL touch log plus a rendered HTML snapshot under .ai/fingerprint/<session>/"],
+        ["Cost / complexity", "Per-edit logging · small"],
+        ["Strengths", "Cheap; human- and agent-readable; pairs with any detector; doubles as session documentation"],
+        ["Trade-offs", "Does not detect drift on its own; long sessions need recency decay; snapshots are session-scoped"]
+      ],
+      "source": "Anti-Drift Harness approach inventory."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Symbiotic Chain Evals"
+    },
+    {
+      "type": "paragraph",
+      "text": "A scaffolded set of deterministic JavaScript evals, one per chain transition the project actually uses. Each eval is a pure function that reads both ends of a transition, schema and migration, route and OpenAPI document, endpoint and README, and returns a structured diff. Evals are added as the project develops the relevant link, and a PostToolUse hook runs only the evals whose input files were touched. The eval scaffolding ships in the harness; the rules are project-specific. Same input, same output, and the result is structured JSON that composes with the walker and the board."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.3",
+      "title": "Per-transition evals across recent runs",
+      "caption": "Rows are chain transitions, columns are recent runs. Each run colours its cells pass, warn, or fail. When a run fails, the harness pings the cell and a ticket flies to the tray.",
+      "chart": { "kind": "of1cj:evals" }
+    },
+    {
+      "type": "table",
+      "title": "Symbiotic Chain Evals, at a glance",
+      "columns": ["Property", "Detail"],
+      "rows": [
+        ["Role", "Detector"],
+        ["Primary hook", "PostToolUse dispatch by touched file; Stop full sweep; external watcher for edits made outside Claude"],
+        ["Memory", "Eval source under .evals/, results under .ai/eval-results/; evals are versioned with the code"],
+        ["Cost / complexity", "Per-edit, fast · medium"],
+        ["Strengths", "Deterministic and fast; catches the exact patterns the project cares about; each eval is small and reviewable"],
+        ["Trade-offs", "Coverage depends on the team writing evals; evals decay as the code shape changes; authoring up front feels like overhead early"]
+      ],
+      "source": "Anti-Drift Harness approach inventory."
+    },
+    {
+      "type": "pullquote",
+      "text": "The Anti-Drift agent does not touch application code. It watches the builder across the chain, reads the deterministic evidence, validates against the code, and decides whether to file a ticket. Air traffic control, not a builder.",
+      "cite": "The Anti-Drift Harness, design note"
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Commit-Narrative Spine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Treat git commits as the authoritative narrative of what changed and which links were propagated. Each commit message follows a structured template: the chain links touched, a per-link note on what changed, and a propagation checklist of links that should have been verified. A PreToolUse hook on Bash intercepts the commit and validates the message against the template; a Stop hook drafts the message from the turn's edit log. The discipline is enforced at the commit boundary, so the record is reliable even when individual edits were not propagated immediately. It reuses a record everyone already keeps, and the log becomes a searchable history of which links were touched and verified."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.4",
+      "title": "Commits as a coverage record",
+      "caption": "Each commit names the chain links it touched. The fourteen indicators under each commit light up as it lands, and a running tally shows cumulative chain coverage across recent commits.",
+      "chart": { "kind": "of1cj:commits" }
+    },
+    {
+      "type": "table",
+      "title": "Commit-Narrative Spine, at a glance",
+      "columns": ["Property", "Detail"],
+      "rows": [
+        ["Role", "Detector and record"],
+        ["Primary hook", "PreToolUse on Bash git commit; Stop drafts the message; PostToolUse tracks links in the turn"],
+        ["Memory", "Git history, plus a Stop-time draft under .ai/commit-draft/ and a project commit template"],
+        ["Cost / complexity", "Per-commit · small"],
+        ["Strengths", "Reuses a record everyone keeps; cheap regex check; the log becomes a searchable narrative; carries detector results inline"],
+        ["Trade-offs", "Captures intent at commit time, not propagation correctness; depends on commit discipline; squash and rebase can erase detail"]
+      ],
+      "source": "Anti-Drift Harness approach inventory."
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Per-File Dependency Manifest"
+    },
+    {
+      "type": "paragraph",
+      "text": "For each tracked file, a sidecar manifest describes its upstream sources, what flows into it, and its downstream consumers, what reads from it. The manifest is regenerated on every edit, and a sub-agent runs a per-file health check that compares the manifest against the current file content. A render skill draws a tree card with the file in the middle, its upstream stack above and its downstream stack below, each tile coloured by health. Every relationship becomes a JSON record, easy to diff and query, and the walker can read the manifests rather than parsing files itself."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.5",
+      "title": "One file, its upstream and its downstream",
+      "caption": "The touched file in focus, with its upstream sources stacked above and its downstream consumers below. The harness checks each link and marks it consistent, stale, or broken, then files a ticket on the broken downstream.",
+      "chart": { "kind": "of1cj:manifest" }
+    },
+    {
+      "type": "table",
+      "title": "Per-File Dependency Manifest, at a glance",
+      "columns": ["Property", "Detail"],
+      "rows": [
+        ["Role", "Detector and surface"],
+        ["Primary hook", "PostToolUse regeneration; external watcher for outside edits; Stop chain-health roll-up"],
+        ["Memory", "Sidecar JSON per file under .ai/deps/, an index, and a per-turn health roll-up"],
+        ["Cost / complexity", "Per-edit · medium to large"],
+        ["Strengths", "Structured, diffable data; tree cards stay readable as the project grows; composes with the walker"],
+        ["Trade-offs", "Manifests drift if the extractor misses a relationship; per-file JSON adds up; renames need a migration step"]
+      ],
+      "source": "Anti-Drift Harness approach inventory."
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Stop-Hook Drift Sweep"
+    },
+    {
+      "type": "paragraph",
+      "text": "On every Stop event, a forked sub-agent runs the manual checklist automatically: README references match endpoints, the OpenAPI document lines up with route declarations, DDL fields appear in migrations, training docs reference current screens. The result is a single per-turn drift report. If failures exceed a threshold, the hook returns a block with a reason, forcing the agent to address the drift before the user types again. It aligns with the cadence already run by hand, costs one sweep per turn rather than one per edit, and can close the feedback loop by holding the next turn."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.6",
+      "title": "A health reading at every turn boundary",
+      "caption": "Fourteen link pills recolour at each turn, clean, warning, or block-worthy, with the history stacked below, latest at top. A block-worthy link is pinged by the sweep so the agent must address it before the next turn.",
+      "chart": { "kind": "of1cj:sweep" }
+    },
+    {
+      "type": "table",
+      "title": "Stop-Hook Drift Sweep, at a glance",
+      "columns": ["Property", "Detail"],
+      "rows": [
+        ["Role", "Detector"],
+        ["Primary hook", "Stop, with SubagentStop aggregation and a re-run on context reset"],
+        ["Memory", "Per-turn report under .ai/drift/<session>/ and a start-of-session baseline"],
+        ["Cost / complexity", "Per-turn · small to medium"],
+        ["Strengths", "Matches the cadence run by hand; bounded cost; can block the next turn to close the loop; orchestrates any detector"],
+        ["Trade-offs", "Catches drift after the model has moved on; block thresholds need care; the user feels the sweep latency"]
+      ],
+      "source": "Anti-Drift Harness approach inventory."
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "Chain Layered Tile Board"
+    },
+    {
+      "type": "paragraph",
+      "text": "The presentation surface for any detector. The board is drawn as a grid: rows are features, columns are the fourteen chain links, and each tile is coloured by whichever detector signal is fed in, walker bridge status, eval result, manifest health, or sweep verdict. It is a single shareable view the team can open standalone, and it stays presentation-only, so it can be swapped without touching the detectors. Figure 17.7 shows it driven live: the builder takes turns, the anti-drift harness sweeps, and tickets accumulate."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.7",
+      "title": "The board, with a builder and an anti-drift sweep",
+      "caption": "Features down the side, the fourteen chain links across the top. The builder takes several turns, each touching a cell and propagating one hop. The anti-drift harness then sweeps the board with a scan beam; the un-propagated cells light up as drift, and tickets land in .tickets/open/.",
+      "chart": { "kind": "of1cj:board" }
+    },
+    {
+      "type": "table",
+      "title": "Chain Layered Tile Board, at a glance",
+      "columns": ["Property", "Detail"],
+      "rows": [
+        ["Role", "Surface, visualization only"],
+        ["Primary hook", "Stop refresh, SubagentStop, manual board command; refreshes when .ai/ JSON changes"],
+        ["Memory", "None of its own; reads detector outputs and writes a single board.html"],
+        ["Cost / complexity", "On-demand · small"],
+        ["Strengths", "Tile-based, deterministic positions, readable at a glance; swappable; shareable single file; the team-facing dashboard"],
+        ["Trade-offs", "Needs at least one detector to be useful; wide repos make long columns; static snapshot, so refresh is up to the user"]
+      ],
+      "source": "Anti-Drift Harness approach inventory."
+    },
+    {
+      "type": "section_heading",
+      "n": "11",
+      "title": "The observer topology"
+    },
+    {
+      "type": "paragraph",
+      "text": "A single builder agent stuffed with drift, security, coverage, doc, and style skills becomes unwieldy, and its instructions grow past the point of usefulness. The observer pattern splits the concerns. The builder project keeps its own instructions focused on application development. Observer harnesses run as separate Claude Code sessions outside the project. Each watches the project's filesystem through its own external file watcher, runs its checks on changes, and drops tickets into the project's .tickets/ folder. The builder reads tickets at session start and at the top of each turn and clears them like any other work. No observer ever shares context with the builder or with another observer."
+    },
+    {
+      "type": "paragraph",
+      "text": "The bus is just the filesystem, so the observers are crash-isolated: a failure in one never breaks the builder. Each observer runs on its own cadence and at its own cost, so cheap models can handle routine checks while a stronger model judges the hard cases. Adding a new concern means adding a new observer, not editing the builder's instructions. The animated board in Figure 17.7 is this pattern in miniature: the anti-drift harness watching, sweeping, and filing tickets while the builder works."
+    },
+    {
+      "type": "table",
+      "title": "The ticket lifecycle",
+      "columns": ["State", "Folder", "Trigger"],
+      "rows": [
+        ["open", ".tickets/open/", "An observer writes a new ticket file."],
+        ["acknowledged", ".tickets/acknowledged/", "The builder's SessionStart or UserPromptSubmit hook moves the file after reading it."],
+        ["resolved", ".tickets/resolved/", "The builder writes a resolution note and moves the file."],
+        ["archived", ".tickets/archive/<yyyy-mm>/", "A weekly sweep moves resolved tickets older than seven days."]
+      ],
+      "caption": "Tickets are markdown files with frontmatter (id, observer, approach, severity, files, chain link, status) and a body that names the change, the evidence, a proposed action, and the detector that raised it.",
+      "source": "Anti-Drift Harness observer topology."
+    },
+    {
+      "type": "table",
+      "title": "Separation of duties across observers",
+      "columns": ["Duty", "Owner"],
+      "rows": [
+        ["Application code authorship", "Builder, the project itself"],
+        ["Chain drift detection", "Anti-Drift Harness"],
+        ["Security review: ASVS, secrets, dependencies", "Security Harness"],
+        ["Test coverage gaps", "Coverage Harness"],
+        ["Doc freshness: README, OpenAPI, training", "Docs Harness"],
+        ["Writing-style enforcement", "Style Harness"],
+        ["Performance budgets", "Perf Harness"],
+        ["Message bus", ".tickets/ folder in the project"],
+        ["Ticket resolution", "Builder"]
+      ],
+      "caption": "The Anti-Drift Harness is one observer among several. The four review agents it ships with, red, green, blue, and yellow, are described in the [Red, Blue, Green, and Yellow Agents paper](/paper/l199t).",
+      "source": "Anti-Drift Harness separation of duties."
+    },
+    {
+      "type": "section_heading",
+      "n": "12",
+      "title": "Pairings, limits, and open questions"
+    },
+    {
+      "type": "paragraph",
+      "text": "The approaches compose. The cheapest starting point is the edit fingerprint heatmap plus the stop-hook drift sweep: two small skills and two hooks that show what is being touched and run the existing checklist at the end of every turn. From there, a deterministic detector path adds symbiotic evals feeding the tile board, with no model in the detection loop. A coverage-first path adds the chain walker reading per-file manifests, with the board rendering the result."
+    },
+    {
+      "type": "table",
+      "title": "Recommended pairings",
+      "columns": ["Pairing", "Approaches", "Why"],
+      "rows": [
+        ["Minimum viable harness", "Fingerprint heatmap + stop-hook sweep", "Two small skills plus two hooks. The heatmap shows what is touched; the sweep runs the existing checklist at every turn."],
+        ["Deterministic detector path", "Symbiotic evals + tile board", "Evals detect deterministically; the board surfaces the results. No model in the detection loop."],
+        ["Coverage-first path", "Chain walker + per-file manifest + tile board", "Manifests give the walker a fast lookup table; the walker writes drift records; the board renders them."],
+        ["Record-first path", "Commit-narrative spine + fingerprint heatmap", "Cheapest to adopt: discipline at commit time plus a free visual log of what happened."]
+      ],
+      "source": "Anti-Drift Harness recommended pairings."
+    },
+    {
+      "type": "table",
+      "title": "Open questions",
+      "columns": ["Question", "The tension"],
+      "rows": [
+        ["Where do the chain bridge rules live?", "Per-project for fit, or per-harness for reuse."],
+        ["Walker deterministic-first or model-first?", "Cost and noise pull in different directions."],
+        ["What is the default block threshold for the sweep?", "Too low frustrates; too high lets drift through."],
+        ["Per-file manifests or one consolidated manifest?", "At what repo size does the consolidated model win?"],
+        ["Static board on each Stop, or a live local server?", "Simplicity against freshness."]
+      ],
+      "source": "Anti-Drift Harness open questions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Two design rules hold across all seven. Detection runs deterministically where possible, with a model pass only where judgement is required. And memory lives in the repo, as JSON sidecars or in a database if scale demands it, with no bespoke services. The harness is the same answer the [Compression Problem](/paper/eujjc) reaches from the other direction: as a system grows past what any single context can hold, fidelity is lost at every handoff, so the discipline that preserves it has to be built into the system rather than left to memory."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "anti-drift",
+        "harness",
+        "agents",
+        "hooks",
+        "evals",
+        "observability"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/of1cj/_common.js",
+    "components/visuals/bespoke/of1cj/ChainDrift.js",
+    "components/visuals/bespoke/of1cj/Heatmap.js",
+    "components/visuals/bespoke/of1cj/EvalMatrix.js",
+    "components/visuals/bespoke/of1cj/CommitSpine.js",
+    "components/visuals/bespoke/of1cj/DepTreeCard.js",
+    "components/visuals/bespoke/of1cj/HealthPills.js",
+    "components/visuals/bespoke/of1cj/ObserverBoard.js"
+  ],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "p7p2k",
+    "l199t",
+    "eujjc",
+    "qxlzo",
+    "cux4h"
+  ]
 }

@@ -535,18 +535,34 @@
       "sequence": "",
       "tier": "Technical",
       "title": "Technical: The Anti-Drift Harness",
-      "subtitle": "Keeping an agent's work aligned to intent across long builds.",
+      "subtitle": "Seven ways to keep an agent's work in sync with intent across a long build, and an observer pattern that watches from outside.",
       "track": "Technical Appendix",
       "authors": [
-        "Ministry of Technology and Innovation"
+        "Janak Alford",
+        "Deputy Minister",
+        "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 16,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "anti-drift",
+        "harness",
+        "agents",
+        "hooks",
+        "evals",
+        "observability",
+        "change-management"
+      ],
       "repo": null,
-      "abstract": "Forthcoming. The body will be written from source materials. This is one of three technical appendices that round out the collection.",
-      "related": [],
+      "abstract": "Coding agents ship excellent work on each change, but as a codebase grows through refactor after refactor, parts drift out of sync. The chain that runs from requirements through schema, code, tests, and documentation breaks one link at a time. This appendix proposes the Anti-Drift Harness: a set of Claude Code skills, hooks, and deterministic evals that catch drift inside the build loop rather than in a later audit, plus an observer pattern where harnesses watch a builder project from outside and file tickets. It presents seven approaches, each with its hook events, its memory model, and an animated view of how it works. This is a hypothetical framework, offered for review.",
+      "related": [
+        "p7p2k",
+        "l199t",
+        "eujjc",
+        "qxlzo",
+        "cux4h"
+      ],
       "category": "paper"
     },
     {
