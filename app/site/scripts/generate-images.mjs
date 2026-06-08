@@ -73,24 +73,11 @@ function collectImageJobs(content) {
   /* Each job is identified by `slot` (e.g. 'hero', 'fig-01', 'slide-02').
      Returns { slot, image_prompt, style_prompt (per-image override), out_relpath, style_kind }. */
   const jobs = [];
-  if (content.hero_image && content.hero_image.image_prompt) {
-    jobs.push({
-      slot: 'hero',
-      image_prompt: content.hero_image.image_prompt,
-      style_prompt: content.hero_image.style_prompt || null,
-      out_relpath: content.hero_image.src,
-      style_kind: content.hero_image.style_kind || 'cover',
-    });
-  } else if (content.hero_image && content.hero_image.prompt) {
-    /* Backward compat with old field name. */
-    jobs.push({
-      slot: 'hero',
-      image_prompt: content.hero_image.prompt,
-      style_prompt: content.hero_image.style_prompt || null,
-      out_relpath: content.hero_image.src,
-      style_kind: content.hero_image.style_kind || 'cover',
-    });
-  }
+  /* Hero images are intentionally NOT generated. They are never rendered on
+     the site; the only consumer was the article JSON-LD `image`, which now
+     reuses the per-paper social card (public/og/<id>.jpg). The hero_image
+     block is kept in the paper JSON for metadata/back-compat but is skipped
+     here so forced runs don't burn an API call on an unused image. */
   let figIdx = 0;
   for (const b of (content.blocks || [])) {
     if (b.type === 'figure' && b.image && (b.image.image_prompt || b.image.prompt)) {

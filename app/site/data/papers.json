@@ -443,7 +443,7 @@
       "sequence": "",
       "tier": "Policy & People",
       "title": "The Compression Problem",
-      "subtitle": "How managing information up and down a hierarchy is the defining challenge for people and for AI alike.",
+      "subtitle": "How hierarchy, communication, and human oversight must change in the AI age.",
       "track": "Human and Change Management",
       "authors": [
         "Janak Alford",
@@ -458,12 +458,12 @@
         "hierarchy",
         "organizational-design",
         "agents",
-        "fidelity",
-        "hallucination",
+        "context-window",
+        "human-in-the-loop",
         "change-management"
       ],
       "repo": null,
-      "abstract": "Government and large enterprises face a paradox when modernizing legacy systems at scale. The transformation of the Government of Alberta's fourteen hundred systems, representing four hundred sixty-six million lines of code across four thousand repositories, requires compressing forty years of accumulated technical debt, institutional knowledge, and embedded business logic into a four-year window, at a target of twentyfold faster delivery and about a ninety-five percent reduction in cost. This white paper argues that the core challenge is informational rather than technical: how to maintain fidelity of ground truth as information moves up and down organizational hierarchies, where each layer compresses what it communicates upward and decompresses what it receives downward. This compression problem is not unique to artificial intelligence; it is the reason hierarchical organizations exist. AI introduces both a solution and a new set of risks. By enabling information fidelity across parallel agents, instant knowledge propagation, and operation at machine speed, AI can theoretically flatten organizational structures and maintain coherence across unprecedented scale. Yet this only works if we solve the compression problem: ensuring that strategic intent survives countless handoffs, that ground truth stays synchronized across thousands of concurrent agents, and that humans remain meaningfully in the loop despite operating in a system orders of magnitude faster than human cognition.",
+      "abstract": "Hierarchical organizations exist to solve an information problem. Ground truth must flow up to senior leadership for decision-making, and along the path it is compressed and selectively disclosed. The pyramid is a pre-digital, lossy compression algorithm. AI agents work differently and remove much of the time and verbosity tax that the human hierarchy imposes, though they face their own compression limits set by finite context windows. To capture the gains, organizations must redesign the hierarchy, shift briefings away from text toward simulation and visual interaction, and move human oversight from the individual agent to the level of the system.",
       "related": [
         "cux4h",
         "uwpxr",

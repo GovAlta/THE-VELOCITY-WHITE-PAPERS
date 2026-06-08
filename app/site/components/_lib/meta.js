@@ -192,9 +192,10 @@
         url: SITE_URL_BASE + '/',
       },
       keywords: (paper.tags || []).join(', ') || undefined,
-      image: paper.hero_image && paper.hero_image.src
-        ? SITE_URL_BASE + '/' + paper.hero_image.src
-        : undefined,
+      /* The schema.org article image reuses the per-paper social card
+         (public/og/<id>.jpg). The old abstract hero was never shown on the
+         site, so we no longer generate it; the card is a better image anyway. */
+      image: card,
       about: paper.tier || undefined,
     });
   };
