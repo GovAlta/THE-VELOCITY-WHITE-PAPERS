@@ -158,11 +158,12 @@
         tag: 'meta', property: 'article:tag', content: t, 'data-i': String(i),
       });
     });
-    if (paper.hero_image && paper.hero_image.src) {
-      setProperty('og:image', SITE_URL_BASE + '/' + paper.hero_image.src);
-      setProperty('og:image:alt', paper.hero_image.alt || paper.title);
-      setMeta('twitter:image', SITE_URL_BASE + '/' + paper.hero_image.src);
-    }
+    /* Each paper has a tailored social card (its title on the collection
+       template) at public/og/<id>.jpg, used in place of the abstract hero. */
+    const card = SITE_URL_BASE + '/public/og/' + paper.id + '.jpg';
+    setProperty('og:image', card);
+    setProperty('og:image:alt', paper.title);
+    setMeta('twitter:image', card);
     setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:title', paper.title);
     setMeta('twitter:description', desc);

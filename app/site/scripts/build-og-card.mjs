@@ -25,15 +25,16 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
 
   <text x="90" y="130" font-family="${MONO}" font-size="22" letter-spacing="4" fill="${NAVY}" fill-opacity="0.75">GOVERNMENT OF ALBERTA · TECHNOLOGY AND INNOVATION</text>
 
-  <text x="86" y="278" font-family="${SANS}" font-size="92" font-weight="700" fill="${NAVY}">The <tspan font-style="italic" fill="${RUST}">Velocity</tspan></text>
+  <text x="86" y="278" font-family="${SANS}" font-size="92" font-weight="700" fill="${NAVY}">The <tspan font-style="italic">Velocity</tspan></text>
   <text x="86" y="378" font-family="${SANS}" font-size="92" font-weight="700" fill="${NAVY}">White Papers</text>
 
-  <rect x="90" y="410" width="120" height="5" fill="${RUST}"/>
+  <rect x="90" y="408" width="120" height="5" fill="${RUST}"/>
 
-  <text x="90" y="476" font-family="${SANS}" font-size="30" fill="${MUTED}">Transforming forty years of IT technical debt into a</text>
-  <text x="90" y="516" font-family="${SANS}" font-size="30" fill="${MUTED}">modern, secure government in four years.</text>
+  <text x="90" y="460" font-family="${SANS}" font-size="29" fill="${MUTED}">How the Government of Alberta is leveraging</text>
+  <text x="90" y="498" font-family="${SANS}" font-size="29" fill="${MUTED}">artificial intelligence to rapidly and securely</text>
+  <text x="90" y="536" font-family="${SANS}" font-size="29" fill="${MUTED}">transform its technical estate.</text>
 
-  <text x="90" y="582" font-family="${MONO}" font-size="24" fill="${RUST}">thevelocitywhitepapers.com</text>
+  <text x="90" y="585" font-family="${MONO}" font-size="24" fill="${RUST}">thevelocitywhitepapers.com</text>
   <text x="1110" y="582" text-anchor="end" font-family="${MONO}" font-size="20" fill="${NAVY}" fill-opacity="0.7">Open source · bilingual</text>
 </svg>`;
 

@@ -119,13 +119,13 @@ function buildPaperHTML(paper, locale, otherLocale, otherPaper) {
     '  <meta property="og:url" content="' + xmlEscape(url) + '" />\n' +
     '  <meta property="og:site_name" content="' + xmlEscape(site.i18n[locale].title) + '" />\n' +
     '  <meta property="og:locale" content="' + ogLocale + '" />\n' +
-    '  <meta property="og:image" content="' + xmlEscape(heroSrc || (BASE + '/public/og-card.jpg')) + '" />\n' +
+    '  <meta property="og:image" content="' + xmlEscape(BASE + '/public/og/' + paper.id + '.jpg') + '" />\n' +
     (paper.published ? '  <meta property="article:published_time" content="' + xmlEscape(paper.published) + '" />\n' : '') +
     (paper.tier ? '  <meta property="article:section" content="' + xmlEscape(paper.tier) + '" />\n' : '') +
     '  <meta name="twitter:card" content="summary_large_image" />\n' +
     '  <meta name="twitter:title" content="' + xmlEscape(paper.title) + '" />\n' +
     '  <meta name="twitter:description" content="' + xmlEscape(desc) + '" />\n' +
-    '  <meta name="twitter:image" content="' + xmlEscape(heroSrc || (BASE + '/public/og-card.jpg')) + '" />\n' +
+    '  <meta name="twitter:image" content="' + xmlEscape(BASE + '/public/og/' + paper.id + '.jpg') + '" />\n' +
     '  <script type="application/ld+json">' + JSON.stringify(jsonld) + '</script>\n' +
     '  <link rel="preconnect" href="https://fonts.googleapis.com">\n' +
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
