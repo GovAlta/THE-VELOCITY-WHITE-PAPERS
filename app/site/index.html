@@ -17,14 +17,17 @@
       }
     })();
   </script>
-  <!-- Google Analytics (GA4). The id is injected at deploy from the
-       GA_MEASUREMENT_ID repo variable; it stays the literal placeholder locally,
-       which the guard below treats as empty, so dev and preview never track.
-       The SPA sends page_view on each route change (see app.js). -->
+  <!-- Google Analytics (GA4), measurement id G-TXTHYTHEZB.
+       FUTURE USERS / ADOPTERS: this id belongs to the Government of Alberta.
+       Replace it with your own, or delete this whole block, to redirect or
+       disable analytics. Analytics is skipped on localhost so local dev and
+       preview never pollute the data. The SPA reports a page_view on each
+       clean-URL route change (see app.js). -->
   <script>
     (function () {
-      var id = "__GA_MEASUREMENT_ID__";
-      if (/^__.*__$/.test(id) || !id) { window.__GA_ID__ = ''; return; }   // not injected -> off
+      var id = "G-TXTHYTHEZB";
+      var h = location.hostname;
+      if (!id || h === 'localhost' || h === '127.0.0.1' || h === '') { window.__GA_ID__ = ''; return; }
       window.__GA_ID__ = id;
       var s = document.createElement('script');
       s.async = true;
@@ -33,7 +36,7 @@
       window.dataLayer = window.dataLayer || [];
       window.gtag = function () { dataLayer.push(arguments); };
       window.gtag('js', new Date());
-      window.gtag('config', id);   // sends the initial page_view; route changes are sent manually
+      window.gtag('config', id);   // initial page_view; route changes are sent from app.js
     })();
   </script>
   <title>The Velocity White Papers</title>
