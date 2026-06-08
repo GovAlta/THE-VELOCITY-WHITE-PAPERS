@@ -1,0 +1,52 @@
+{
+  "_note": "Privacy page for one locale. Adapted from the Government of Alberta privacy statement (alberta.ca/privacystatement). The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Privacy",
+    "title_lead": "Your",
+    "title_em": "privacy.",
+    "lede": "The Government of Alberta is committed to protecting the privacy of visitors to this website. This statement explains what the Velocity White Papers site collects and how it is used. It follows the Government of Alberta privacy statement, adapted to this site."
+  },
+  "sections": [
+    {
+      "heading": "Personal information",
+      "paras": [
+        "Zero personal information is collected from the use of this system. There is no login, no account, and no identifying information is preserved."
+      ]
+    },
+    {
+      "heading": "What the site collects",
+      "paras": [
+        "The site collects only anonymous usage statistics, the kind any web server records: the page requested, the date and time, a truncated network address, and the browser type and version. This is collected under the authority of the Protection of Privacy Act, is not used to identify any individual, and is not disclosed to third parties."
+      ]
+    },
+    {
+      "heading": "Cookies and analytics",
+      "paras": [
+        "This site uses Google Analytics to understand overall usage: which pages are read and how visitors move through the collection. Google Analytics sets cookies that hold a random identifier so repeat visits can be counted; they carry no name, login, or other identifying information, and you can block them in your browser without affecting how the site works.",
+        "Embedded videos use YouTube's privacy-enhanced mode, served from the no-cookie domain, so a video sets no cookies unless you choose to play it. The site also keeps a small amount of information in your browser's local storage to remember which papers you have visited and your language choice; this never leaves your device."
+      ]
+    },
+    {
+      "heading": "Security",
+      "paras": [
+        "Government systems monitor for unauthorized attempts to change or upload information. Visitors are not identified in the course of this monitoring, except as part of a law enforcement investigation."
+      ]
+    },
+    {
+      "heading": "Access to information",
+      "paras": [
+        "The Access to Information Act gives Albertans the right to request records held by public bodies. Because this site collects no personal information, there is no personal record here to access or correct."
+      ]
+    },
+    {
+      "heading": "Questions",
+      "paras": [
+        "For questions about privacy on this site, contact the Ministry of Technology and Innovation at ti.minister@gov.ab.ca. The governing statement is the Government of Alberta privacy statement at alberta.ca/privacystatement."
+      ]
+    }
+  ],
+  "governing": {
+    "label": "Government of Alberta privacy statement",
+    "href": "https://www.alberta.ca/privacystatement"
+  }
+}

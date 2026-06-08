@@ -197,6 +197,7 @@ function buildStaticRouteHTML(routeSegment, locale) {
     repos: { title: locale === 'fr' ? 'Dépôts' : 'Repositories' },
     updates: { title: locale === 'fr' ? 'Mises à jour' : 'Updates' },
     community: { title: locale === 'fr' ? 'Communauté' : 'Community' },
+    privacy: { title: locale === 'fr' ? 'Confidentialité' : 'Privacy' },
   };
   const lbl = labels[routeSegment] || { title: routeSegment };
   const title = lbl.title + ' · ' + i.title;
@@ -268,7 +269,7 @@ for (const p of inventory) {
   }
 }
 
-const STATIC = ['index', 'about', 'press', 'resources', 'gallery', 'glossary', 'repos', 'updates', 'community'];
+const STATIC = ['index', 'about', 'press', 'resources', 'gallery', 'glossary', 'repos', 'updates', 'community', 'privacy'];
 for (const r of STATIC) {
   for (const locale of ['en', 'fr']) {
     const dir = locale === 'fr'

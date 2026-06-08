@@ -74,6 +74,7 @@ const JS_FILES = [
   'pages/PressPage.js',
   'pages/ResourcesPage.js',
   'pages/GalleryPage.js',
+  'pages/PrivacyPage.js',
   'pages/GlossaryPage.js',
   'pages/ReposPage.js',
   'pages/UpdatesPage.js',

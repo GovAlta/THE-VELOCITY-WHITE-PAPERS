@@ -127,7 +127,7 @@
      and the boot script in index.html restores the clean URL before this runs.
      A trailing /fr (or /en) segment is a crawler hreflang variant; the locale
      itself is carried in localStorage, so routing ignores it. */
-  const KNOWN_PAGES = ['index', 'about', 'press', 'resources', 'gallery', 'glossary', 'repos', 'updates', 'community', 'not-found'];
+  const KNOWN_PAGES = ['index', 'about', 'press', 'resources', 'gallery', 'glossary', 'repos', 'updates', 'community', 'privacy', 'not-found'];
   function parsePath() {
     const parts = (location.pathname || '/').split('/').filter(Boolean);
     if (parts.length && (parts[parts.length - 1] === 'fr' || parts[parts.length - 1] === 'en')) parts.pop();
@@ -159,6 +159,7 @@
           case 'repos':         return 'repos-page';
           case 'updates':       return 'updates-page';
           case 'community':     return 'community-page';
+          case 'privacy':       return 'privacy-page';
           case 'not-found':     return 'not-found-page';
           case 'paper':         return 'paper-page';
           default:              return 'not-found-page';
@@ -191,6 +192,7 @@
             repos:        'Repositories',
             updates:      'Updates',
             community:    'Community',
+            privacy:      'Privacy',
             'not-found':  'Not found',
           };
           window.VWMeta.setSitePage(route.value.page, pageTitles[route.value.page]);
