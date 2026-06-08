@@ -1,50 +1,63 @@
 {
-  "_note": "Privacy page for one locale. Adapted from the Government of Alberta privacy statement (alberta.ca/privacystatement). The sibling .<other>.json holds the translation.",
+  "_note": "Privacy page for one locale. A faithful port of the Government of Alberta privacy statement (alberta.ca/privacystatement) with two changes: the Personal information section is reduced to one line because this site collects none, and the third-party cookie list is reduced to Google Analytics (the only third-party product used). The sibling .<other>.json holds the translation.",
   "page": {
     "eyebrow": "Privacy",
-    "title_lead": "Your",
-    "title_em": "privacy.",
-    "lede": "The Government of Alberta is committed to protecting the privacy of visitors to this website. This statement explains what the Velocity White Papers site collects and how it is used. It follows the Government of Alberta privacy statement, adapted to this site."
+    "title_lead": "Privacy",
+    "title_em": "statement.",
+    "lede": "The Government of Alberta is committed to ensuring your privacy while you visit this site."
   },
   "sections": [
     {
+      "heading": "Collection of information",
+      "paras": [
+        "All information is collected in compliance with Part 1, Division 1, Section 4(c) of the Protection of Privacy Act (POPA).",
+        "When you visit this site, our web server automatically collects a limited amount of standard information essential to the operation and evaluation of the site. This information is not used to identify individuals who come to the site, nor is it disclosed to other public bodies or individuals.",
+        "The information that's collected identifies the following:"
+      ],
+      "bullets": [
+        "the page from which you arrived",
+        "the date and time of your page request",
+        "the IP address your computer is using to receive information",
+        "the type and version of your browser",
+        "the name and size of the file you request"
+      ]
+    },
+    {
+      "heading": "Access to information",
+      "paras": [
+        "The Access to Information Act (ATIA) provides access to information held by public bodies which is not available by other means, and allows individuals to request correction of their own personal information that a public body holds, this is called an Access to Information (ATI) request. The ATI request form is available through the eServices page. For more information refer to the ATI Coordinator directory to locate an ATI office to determine if the ministry you are interested in has any public records are available."
+      ]
+    },
+    {
       "heading": "Personal information",
       "paras": [
-        "Zero personal information is collected from the use of this system. There is no login, no account, and no identifying information is preserved."
+        "Zero personal information is collected from the use of this system.",
+        "For more information about the policies described here, contact the Ministry of Technology and Innovation at [ti.minister@gov.ab.ca](mailto:ti.minister@gov.ab.ca)."
       ]
     },
     {
-      "heading": "What the site collects",
+      "heading": "Cookies",
       "paras": [
-        "The site collects only anonymous usage statistics, the kind any web server records: the page requested, the date and time, a truncated network address, and the browser type and version. This is collected under the authority of the Protection of Privacy Act, is not used to identify any individual, and is not disclosed to third parties."
+        "When you visit a website it may deposit a piece of data, called a web cookie, with the temporary web browser files on your computer.",
+        "If you wish, you can change the settings on your web browser to deny cookies, or to warn you when a site is about to deposit cookies on your hard drive.",
+        "Government of Alberta websites use cookies to collect anonymous statistical information such as browser type, screen size, traffic patterns and pages visited. This information helps us provide you with better service. We do not store personal information in cookies, nor do we collect personal information from you without your knowledge, as you browse the site."
       ]
     },
     {
-      "heading": "Cookies and analytics",
+      "heading": "Cookies from third-party applications",
       "paras": [
-        "This site uses Google Analytics to understand overall usage: which pages are read and how visitors move through the collection. Google Analytics sets cookies that hold a random identifier so repeat visits can be counted; they carry no name, login, or other identifying information, and you can block them in your browser without affecting how the site works.",
+        "This site uses one third-party product, Google Analytics. Read the [Google Analytics privacy statement](https://policies.google.com/privacy) to find out how it tracks and uses information.",
         "Embedded videos use YouTube's privacy-enhanced mode, served from the no-cookie domain, so a video sets no cookies unless you choose to play it. The site also keeps a small amount of information in your browser's local storage to remember which papers you have visited and your language choice; this never leaves your device."
       ]
     },
     {
       "heading": "Security",
       "paras": [
-        "Government systems monitor for unauthorized attempts to change or upload information. Visitors are not identified in the course of this monitoring, except as part of a law enforcement investigation."
-      ]
-    },
-    {
-      "heading": "Access to information",
-      "paras": [
-        "The Access to Information Act gives Albertans the right to request records held by public bodies. Because this site collects no personal information, there is no personal record here to access or correct."
-      ]
-    },
-    {
-      "heading": "Questions",
-      "paras": [
-        "For questions about privacy on this site, contact the Ministry of Technology and Innovation at ti.minister@gov.ab.ca. The governing statement is the Government of Alberta privacy statement at alberta.ca/privacystatement."
+        "The Government of Alberta's computer system uses software to monitor unauthorized attempts to upload or change information, or damage the service we provide. No attempt is made to identify users or their usage patterns except during law enforcement investigations."
       ]
     }
   ],
+  "lead_ministry": "Technology and Innovation",
   "governing": {
     "label": "Government of Alberta privacy statement",
     "href": "https://www.alberta.ca/privacystatement"
