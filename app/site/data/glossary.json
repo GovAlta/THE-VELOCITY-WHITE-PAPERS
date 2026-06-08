@@ -1,6 +1,33 @@
 {
   "terms": [
     {
+      "id": "agent",
+      "en": {
+        "term": "Agent",
+        "short": "An AI given the latitude and tools to choose its own next steps toward a goal.",
+        "long": "An agent is an AI system provided enough autonomy and tooling to pick its own actions based on its own judgment, activating tools through its outputs and evaluating the results in an ongoing loop of experimentation. The latest agents run for hours or days with little supervision, turning the model from a chat tool into a persistent collaborator. Alberta governs them by pairing this autonomy with enforced observability and an audit trail."
+      },
+      "related": []
+    },
+    {
+      "id": "agent-gateway",
+      "en": {
+        "term": "Agent Gateway",
+        "short": "A governed entry point through which an agent exercises a person's delegated permissions.",
+        "long": "The agent gateway sits behind identity and access management and is how a public servant grants an agent access to their email, calendar, Teams, the ERP, ServiceNow, SharePoint, the open web, and bespoke ministry systems. Providing the gateway and the identity controls lets a ministry build solutions on top of the government's API and data layers. It is the mechanism that makes delegated access concrete."
+      },
+      "related": []
+    },
+    {
+      "id": "agentbuilder-console",
+      "en": {
+        "term": "AgentBuilder Console",
+        "short": "Alberta's Level 2 tool for describing a process and assembling reusable agents that run repeatable workflows.",
+        "long": "The AgentBuilder Console is the in-house tool introduced in Level 2, alongside Gemini Gems and GitHub Copilot Agents, for building reusable agents. It gives people a structured way to describe their processes and to assemble agents and tools that run repeatable workflows, in a linear or branching pattern, ending in finished documents. It is how the rule of three turns a recurring task into a shareable agent."
+      },
+      "related": []
+    },
+    {
       "id": "agentic",
       "en": {
         "term": "Agentic",
@@ -12,105 +39,74 @@
         "short": "Logiciel qui agit sur un système sans approbation humaine pour chaque étape.",
         "long": "Un système agentique décide de ses prochaines actions, les exécute directement sur le système à modifier, et continue d'itérer sans approbation humaine étape par étape. Différent d'une interface conversationnelle où le modèle ne fait que proposer ; un agent agit."
       },
-      "related": ["nexus", "harness", "walker"]
+      "related": [
+        "nexus",
+        "harness",
+        "walker"
+      ]
     },
     {
-      "id": "harness",
+      "id": "ai-factory",
       "en": {
-        "term": "Harness",
-        "short": "The standards, skills, hooks, and integrations that surround an agent and keep its output coherent.",
-        "long": "A harness is the set of project-side rules and supporting machinery an AI coding agent operates within. It includes folder structure, route patterns, OpenAPI specs, migrations, evaluations, and the hook layer that intercepts agent events. The harness is what stops a coding agent from drifting away from project conventions over time."
+        "term": "AI Factory",
+        "short": "A software production line of specialist AI agents that build a new, government-owned application from scratch.",
+        "long": "The Factory is made of software, not machinery. A team of specialist agents covering architecture, code, data, testing, security, and accessibility work to one shared specification, checking and correcting each other. Everything it produces is opinionated, modular (small parts under about a thousand lines each), government-owned on open-source foundations, and free of legacy dependencies."
       },
-      "fr": {
-        "term": "Harnais",
-        "short": "Les standards, compétences, hooks et intégrations qui encadrent un agent et maintiennent la cohérence de ses productions.",
-        "long": "Un harnais est l'ensemble des règles et de la machinerie de soutien dans lequel opère un agent de programmation. Il inclut la structure des dossiers, les motifs de routes, les spécifications OpenAPI, les migrations, les évaluations et la couche de hooks qui intercepte les événements de l'agent."
-      },
-      "related": ["agentic", "skill", "hook"]
+      "related": []
     },
     {
-      "id": "skill",
+      "id": "ai-garage",
       "en": {
-        "term": "Skill",
-        "short": "A bundled set of instructions and scripts an agent can invoke for a specific task.",
-        "long": "A skill is a unit of agent capability: a markdown manifest describing what to do, often paired with executable scripts. The agent loads the skill on demand when it recognizes a matching task. Examples in this codebase: add-paper, translate-paper, regenerate-images."
+        "term": "AI Garage",
+        "short": "The lightest approach: fixing one government system at a time, the way a car goes into a garage.",
+        "long": "The Garage takes a single system, and a person clones the code, the AI makes the repair, the person checks it, and the change goes back. It does three kinds of work: repair (patch a flaw or upgrade a library), remediate (fix security exposure first, worst systems ahead), and match (rebuild on a modern stack that behaves exactly like the original). It is the lowest-risk approach, and it treats the symptoms rather than the disease."
       },
-      "fr": {
-        "term": "Compétence",
-        "short": "Un ensemble d'instructions et de scripts qu'un agent peut invoquer pour une tâche précise.",
-        "long": "Une compétence est une unité de capacité agentique : un manifeste en markdown décrivant la marche à suivre, souvent accompagné de scripts exécutables. L'agent charge la compétence à la demande. Exemples ici : add-paper, translate-paper, regenerate-images."
-      },
-      "related": ["harness", "hook"]
+      "related": []
     },
     {
-      "id": "hook",
+      "id": "ai-maximalist-program",
       "en": {
-        "term": "Hook",
-        "short": "A handler that intercepts an event in the agent's lifecycle.",
-        "long": "Hooks fire before or after agent actions: pre-edit, post-commit, on-tool-use. A hook can validate, enrich, or block what the agent is about to do. Hooks are the project's way of catching drift without requiring the agent to re-read every standard on every turn."
+        "term": "AI Maximalist Program",
+        "short": "Alberta's early initiative whose first cohort of about sixty-five volunteers became the foundation for the AI Academy.",
+        "long": "The AI Maximalist program, launched in early 2025, recruited people by interest rather than technical skill, taking roughly five percent of the workforce into a first cohort of about sixty-five volunteers. They applied AI across project management, application delivery, communications, and financial analysis, and observing them revealed both the demand for structured training and the wide range of responses to the technology. Its lessons shaped what the Academy teaches."
       },
-      "fr": {
-        "term": "Hook",
-        "short": "Un gestionnaire qui intercepte un événement du cycle de vie de l'agent.",
-        "long": "Les hooks se déclenchent avant ou après les actions de l'agent : pré-édition, après-commit, à l'usage d'outil. Un hook peut valider, enrichir ou bloquer ce que l'agent s'apprête à faire."
-      },
-      "related": ["harness", "skill"]
+      "related": []
     },
     {
-      "id": "drift",
+      "id": "ai-rationalization",
       "en": {
-        "term": "Drift",
-        "short": "The slow divergence between related parts of a codebase as the agent edits one without updating the others.",
-        "long": "When an agent changes a controller without updating the OpenAPI spec, when a renamed field stays in the training material as the old name, when test coverage stops matching the routes that exist. Drift is the chronic cost of context-limited editing at scale."
+        "term": "AI Rationalization",
+        "short": "Collapsing a whole ministry of overlapping systems into a small set of shared modern modules.",
+        "long": "Rationalization steps back from the single system and treats a ministry like a town that grew without a plan, where every application built its own login and reporting. It maps what the ministry actually does, then builds the shared parts once. It delivers the largest near-term gain of any approach but asks the most of people, since collapsing 185 applications into 16 changes long-settled working habits."
       },
-      "fr": {
-        "term": "Dérive",
-        "short": "La divergence lente entre des parties liées d'une base de code lorsque l'agent modifie l'une sans mettre à jour les autres.",
-        "long": "Un contrôleur change sans que la spécification OpenAPI ne soit mise à jour, un champ renommé reste sous son ancien nom dans la documentation, la couverture des tests cesse de correspondre aux routes existantes. La dérive est le coût chronique de l'édition à contexte limité à grande échelle."
-      },
-      "related": ["walker", "harness"]
+      "related": []
     },
     {
-      "id": "walker",
+      "id": "ai-smell",
       "en": {
-        "term": "Walker",
-        "short": "An autonomous scanner that checks whether related parts of the codebase are still in sync.",
-        "long": "The walker is the watchdog. It sweeps the codebase looking for drift between siblings: a route without a controller, a controller without a test, a migration without a model. When it finds drift, it files a ticket for the anti-drift agent."
+        "term": "AI Smell",
+        "short": "The turns of phrase that mark text as machine-written and quietly erode reader trust.",
+        "long": "AI smell is the term for the tells that betray prose as machine-generated: stock cliches, fawning openings, an em dash, or a hollow verb like ensure standing in for a real one. The Yellow agent exists to catch these, flagging each one and proposing a plain rewrite so public-facing writing reads as though a person wrote it."
       },
-      "fr": {
-        "term": "Veilleur",
-        "short": "Un scanneur autonome qui vérifie que les parties liées de la base de code restent synchronisées.",
-        "long": "Le veilleur est le chien de garde. Il parcourt la base de code à la recherche de dérive entre parties liées. Quand il en trouve, il dépose un ticket pour l'agent anti-dérive."
-      },
-      "related": ["drift", "ticket", "anti-drift"]
+      "related": []
     },
     {
-      "id": "nexus",
+      "id": "albert-platform",
       "en": {
-        "term": "Nexus",
-        "short": "The secure sandboxed environment where agents do their work.",
-        "long": "Nexus is the operating environment that allows agents to operate iteratively, make mistakes, and try different architectures without degrading production security posture. It is also where parallel models compete on the same problem."
+        "term": "Albert",
+        "short": "Alberta's own AI platform offering tools, agents, prompts, and frameworks, letting people build and deploy agents for unclassified work.",
+        "long": "Albert is the Government of Alberta's in-house AI platform taught in Level 1 alongside Copilot and Gemini Enterprise. It offers tools, agents, prompts, and frameworks, and lets people build and deploy their own agents for unclassified workloads. It is part of the enterprise toolset the Academy coaches public servants to use by temperament and need."
       },
-      "fr": {
-        "term": "Nexus",
-        "short": "L'environnement sécurisé et isolé où les agents accomplissent leur travail.",
-        "long": "Nexus est l'environnement d'exploitation qui permet aux agents d'itérer, de se tromper et d'essayer des architectures sans dégrader la posture de sécurité de production. C'est aussi le lieu où plusieurs modèles s'affrontent sur le même problème."
-      },
-      "related": ["agentic", "sandbox"]
+      "related": []
     },
     {
-      "id": "ticket",
+      "id": "ai-academy",
       "en": {
-        "term": "Ticket",
-        "short": "A unit of work filed by the walker, picked up by an agent.",
-        "long": "When the walker detects drift, it writes a ticket. Tickets carry just enough context for an agent to fix the problem: which files diverged, what's expected, what was found."
+        "term": "Alberta AI Academy",
+        "short": "Alberta's training program teaching public servants effective AI use through hands-on cohorts.",
+        "long": "The Alberta AI Academy runs on the AlbertaAIAcademy.com platform and has been used by thousands of public servants and more than ten thousand public participants to learn AI use from prompting through product delivery. Students learn in cohorts of sixty to six hundred across three levels. The most recent Level 3 cohort took a harness-based approach over six days, with senior executives sitting as students alongside staff and interns."
       },
-      "fr": {
-        "term": "Ticket",
-        "short": "Une unité de travail déposée par le veilleur et prise en charge par un agent.",
-        "long": "Lorsque le veilleur détecte une dérive, il rédige un ticket. Les tickets portent juste assez de contexte pour qu'un agent règle le problème : quels fichiers ont divergé, ce qui est attendu, ce qui a été trouvé."
-      },
-      "related": ["walker", "anti-drift"]
+      "related": []
     },
     {
       "id": "anti-drift",
@@ -124,49 +120,199 @@
         "short": "L'agent qui règle les tickets sans déranger l'agent constructeur principal.",
         "long": "Un second agent qui fonctionne en parallèle du constructeur. Le constructeur écrit du nouveau code ; l'agent anti-dérive prend les tickets du veilleur et réconcilie les divergences. La séparation des tâches garde propre le contexte de travail du constructeur."
       },
-      "related": ["walker", "ticket"]
+      "related": [
+        "walker",
+        "ticket"
+      ]
     },
     {
-      "id": "evals",
+      "id": "anti-slop-mindset",
       "en": {
-        "term": "Evals",
-        "short": "Deterministic checks that run on every change.",
-        "long": "Evaluations: deterministic, reproducible tests that pass or fail on each change. Different from unit tests in that they typically verify cross-cutting properties (bilingual parity, metadata completeness, style-guide compliance) rather than function-level correctness."
+        "term": "Anti-Slop Mindset",
+        "short": "The Academy's discipline of steering people away from unvalidated long-form content and quick vibe-coded applications.",
+        "long": "The anti-slop mindset names two emerging bad habits: producing long-form unvalidated content that takes minutes to generate and days to vet, and jumping past architecture and standards into a vibe-coded application that gratifies quickly while accruing technical debt. Both come from pursuing outcomes without rigor. The Academy teaches the disciplined path between them, where work is verified before it is trusted."
       },
-      "fr": {
-        "term": "Évaluations",
-        "short": "Vérifications déterministes exécutées à chaque changement.",
-        "long": "Évaluations : tests déterministes et reproductibles qui réussissent ou échouent à chaque changement. Vérifient typiquement des propriétés transversales (parité bilingue, complétude des métadonnées, conformité au guide de style)."
-      },
-      "related": ["harness", "hook"]
+      "related": []
     },
     {
-      "id": "vernacular",
+      "id": "architecture-canvas",
       "en": {
-        "term": "Vernacular architecture",
-        "short": "Architecture suited to its place; the opposite of a generic master plan.",
-        "long": "Borrowed from architectural theory: buildings designed for their specific climate, materials, and people, not imposed from a master plan. Applied to software, vernacular architecture means systems shaped by their context rather than forced into a one-size-fits-all template."
+        "term": "Architecture Canvas",
+        "short": "A shared visual canvas where an application's architecture is drawn as nodes and edges before code exists.",
+        "long": "Built on React Flow, the canvas lets a person and AI agents lay out the layers of an application, the cloud, firewall, front-end, server, third-party APIs, databases, and integrations, as labelled nodes joined by labelled edges, both reading and drawing on the same diagram. It is a compact description that can be versioned and handed straight to a coding agent. The canvas is itself treated as a non-functional requirement and paired with the functional requirements to form a full specification."
       },
-      "fr": {
-        "term": "Architecture vernaculaire",
-        "short": "Architecture adaptée à son milieu ; le contraire d'un plan maître générique.",
-        "long": "Emprunté à la théorie architecturale : des bâtiments conçus pour leur climat, leurs matériaux et leurs habitants, et non imposés depuis un plan maître. Appliqué au logiciel, l'architecture vernaculaire désigne des systèmes façonnés par leur contexte plutôt que forcés dans un gabarit générique."
-      },
-      "related": ["forest-lawn"]
+      "related": []
     },
     {
-      "id": "forest-lawn",
+      "id": "architecture-of-fidelity",
       "en": {
-        "term": "Forest vs lawn",
-        "short": "The metaphor for ecosystem architecture vs master-planned architecture.",
-        "long": "A forest has logic, hierarchy, and structure but is unique and specific to its context. An English lawn resists the nature of its participants and forces them into a rigid hierarchy. The metaphor argues for software ecosystems that work with the grain of their components rather than against it."
+        "term": "Architecture of Fidelity",
+        "short": "Structuring the system so strategic intent and ground truth survive thousands of agent handoffs.",
+        "long": "The architecture of fidelity is the practical discipline of keeping information intact as it flows through parallel agents with limited context windows. It treats the system like a living organism that regenerates worn modules rather than a structure of permanence, and draws resilience from a mix of deterministic and probabilistic, human and machine parts. Its purpose is to catch and absorb small failures, a deprecated library or a fresh vulnerability, before they ripple outward into larger ones."
       },
-      "fr": {
-        "term": "Forêt contre pelouse",
-        "short": "La métaphore opposant l'architecture en écosystème à l'architecture maître-planifiée.",
-        "long": "Une forêt a une logique, une hiérarchie et une structure mais reste unique à son contexte. Une pelouse anglaise résiste à la nature de ses participants et leur impose une hiérarchie rigide. La métaphore plaide pour des écosystèmes logiciels qui travaillent avec le grain de leurs composants plutôt que contre lui."
+      "related": []
+    },
+    {
+      "id": "artifact-space",
+      "en": {
+        "term": "Artifact Space",
+        "short": "Pronghorn's indexed store for project documents that an AI can read and edit with full version history.",
+        "long": "The artifact space brings in slide decks, PDFs, Word documents, images, and web pages, indexed and ready for an AI to use, on the principle that an agent is only as good as the context it is given. It supports collaborative editing through an AI editor that keeps an immutable history of every change, alongside image and PDF processing and clean file management."
       },
-      "related": ["vernacular"]
+      "related": []
+    },
+    {
+      "id": "attack-surface",
+      "en": {
+        "term": "Attack Surface",
+        "short": "The total set of systems, stacks, and dependencies an attacker could attempt to exploit.",
+        "long": "The paper describes a sprawling attack surface created by decades of different teams adopting different technologies, leaving too many operating systems, languages, and dependencies. Every stack the province runs is another perimeter to defend, and each dependency is its own set of potential vulnerabilities. Reducing this surface is a stated reason for rationalizing onto well-supported open-source platforms."
+      },
+      "related": []
+    },
+    {
+      "id": "audit-report",
+      "en": {
+        "term": "Audit Report",
+        "short": "An indelible, point-in-time snapshot of a Velocity project's code, progress, comments, and metadata.",
+        "long": "Each project has an audit button that makes the system review the code, progress, comments, and metadata and write an indelible audit report of what is working and what is not. Run across many projects, audit reports surface recurring themes: which practices work, which mistakes repeat, and where security gaps cluster. They keep institutional knowledge inside the tool rather than letting it leave with the people who hold it."
+      },
+      "related": []
+    },
+    {
+      "id": "audit-based-control-plane",
+      "en": {
+        "term": "Audit-Based Control Plane",
+        "short": "A central oversight layer with an agent on every application reading every log to catch issues early.",
+        "long": "As the center shifts from delivering software to governing it, an audit-based control plane watches the whole estate. An agent assigned to each application reads every log, surfaces issues earlier, and remediates or blocks them as they appear. The same controls are enforced on centrally built and ministry-built systems alike, so the security and privacy gap between them closes."
+      },
+      "related": []
+    },
+    {
+      "id": "automated-disposition",
+      "en": {
+        "term": "Automated Disposition",
+        "short": "Rules that index and retire files and systems by policy so creation and removal stay roughly balanced.",
+        "long": "When new applications cost almost nothing, the estate can swell and a new kind of technical debt sets in. Automated disposition has agents index files as they are written and age them out by rule, so a document, and in time the folder and site around it, is removed under policy. The paper compares this to a forest returning fallen wood to soil, with disposition rules tightened whenever growth runs ahead of cost."
+      },
+      "related": []
+    },
+    {
+      "id": "bifrost",
+      "en": {
+        "term": "Bifrost",
+        "short": "An agent gateway that abstracts AI providers, contains cost, and applies personal-information controls.",
+        "long": "Bifrost is an abstraction layer placed around the models so a workload can move from one provider to another, or from the cloud to Alberta's own compute, as needs and prices change. It keeps spending under control with per-workload budgets so token use does not run away, and it applies personal-information controls. It is the practical mechanism behind the principle of a diversified, non-locked AI supply chain."
+      },
+      "related": []
+    },
+    {
+      "id": "blue-agent",
+      "en": {
+        "term": "Blue Agent",
+        "short": "The defender agent that turns the others' evidence into a ranked, auditable security verdict.",
+        "long": "Blue runs last because it reads everything the other agents found. It builds a threat model, walks every requirement of the OWASP ASVS at Level 2 recording pass, fail, or not applicable with evidence, checks the code against Alberta's cybersecurity architecture standard, and folds in Red's reconnaissance. Its final act is an executive report with findings ranked by severity and a remediation plan pointing to exact files."
+      },
+      "related": []
+    },
+    {
+      "id": "agentic-equation",
+      "en": {
+        "term": "Both Sides of the Agentic Equation",
+        "short": "Holding both the ability to build safely with agents and the defenses against bad actors using the same tools.",
+        "long": "The phrase names a balance within readiness: the contracts, controls, and security needed to build new applications safely, set against the defenses required to withstand adversaries who now wield the same agentic tools. Mastering one side without the other leaves the organization exposed. The Cyber Imperative paper takes up this balance in full."
+      },
+      "related": []
+    },
+    {
+      "id": "buildable-spec",
+      "en": {
+        "term": "Buildable Spec (Dossier)",
+        "short": "A handover-quality record of a system, detailed enough to rebuild it from scratch.",
+        "long": "For each repository, GIM records every screen, workflow, API, data table, business rule, and integration into a dossier. Each finding cites the exact file and line it came from, so any claim can be checked against the code. The dossier is detailed enough that a module could be rebuilt anew from it, and it includes open questions the AI could not resolve and a handover-readiness rating."
+      },
+      "related": []
+    },
+    {
+      "id": "builder-culture",
+      "en": {
+        "term": "Builder Culture",
+        "short": "The deliberate enablement of non-technical domain experts to create their own governed government systems.",
+        "long": "A builder culture moves the act of building solutions out to the ministry specialists who know the work, while protective functions stay central. It extends the third level of the Alberta AI Academy by giving graduates governed tools to deploy and monitor what they build. The aim is many delivery teams in place of one central queue, with security and audit woven into the tools rather than supplied by a separate central team."
+      },
+      "related": []
+    },
+    {
+      "id": "business-capability-hierarchy",
+      "en": {
+        "term": "Business Capability Hierarchy",
+        "short": "A standard map of government functions used to categorize what each application does for citizens.",
+        "long": "Git Insights maps each application's business function into a business capability hierarchy, including twelve standard government capabilities plus any additional ones. This lets Alberta categorize systems by what they do rather than only by their technology. It also surfaces redundancy in function, which the paper targets for rationalization, with a claimed potential of a ten-to-one reduction in redundant code."
+      },
+      "related": []
+    },
+    {
+      "id": "business-capability-map",
+      "en": {
+        "term": "Business Capability Map",
+        "short": "A grouping of findings from across all repositories into the distinct things a ministry actually does for citizens.",
+        "long": "After reverse-engineering each system, GIM clusters the raw findings into the real functions a ministry performs, expressed in plain language and grounded in code. This map becomes the basis for the rebuild, since the target modules are designed to deliver each named capability once, with no gaps or overlaps. It also serves as a preservation check, confirming no capability is lost in the new design."
+      },
+      "related": []
+    },
+    {
+      "id": "challenge-side-quest",
+      "en": {
+        "term": "Challenge (Side Quest)",
+        "short": "A time-boxed bounty in Velocity scored on a finished output, exempt from the backtracking penalty.",
+        "long": "A challenge is a time-boxed bounty, scored on a finished output the client signs off on, so the backward-move penalty does not apply. Several people can take the same challenge, and one or several winners can be crowned. Called side quests, they can be picked up by anyone, even outside their own project, since fast agentic delivery makes a spare hour enough to take one on."
+      },
+      "related": []
+    },
+    {
+      "id": "chess-clock",
+      "en": {
+        "term": "Chess Clock",
+        "short": "A turn timer in Velocity that records whether the human or the AI was holding a piece of work.",
+        "long": "Alongside the overall project clock, Velocity runs a chess clock between the person and the AI. When the AI finishes its turn it hits the clock and the timer switches to the person, so a fast AI turn followed by a slow human review makes the lost time visible and attributes the delay to the team. It exposes the human-AI dyad as a unit to understand."
+      },
+      "related": []
+    },
+    {
+      "id": "claude-agent-sdk",
+      "en": {
+        "term": "Claude Agent SDK",
+        "short": "The toolkit for driving a model through many steps with a fixed set of tools.",
+        "long": "In the harness, long-horizon reasoning such as planning, architecture, and threat modelling runs on Claude Opus, which can hold a whole delivery loop in one context. The many smaller parallel jobs, the deterministic scans and reviews, run on Claude Sonnet through the Claude Agent SDK. The skills and standards themselves are model agnostic and can run on any leading frontier or open-source model."
+      },
+      "related": []
+    },
+    {
+      "id": "claude-md",
+      "en": {
+        "term": "CLAUDE.md",
+        "short": "The one-page rule file an agent reads first at the start of every session.",
+        "long": "CLAUDE.md is the short, plain file the agent reads first and treats as the authority on the project. It names what the project is, who it serves, the standards it holds to, what the agent may change, and what it must never touch. It is the one place a project's settled decisions are written down, so the agent and any person who joins start from the same page."
+      },
+      "related": []
+    },
+    {
+      "id": "claw",
+      "en": {
+        "term": "Claw",
+        "short": "A continuous learning autonomous worker that runs self-directed in a networked environment.",
+        "long": "A claw, also called a continuous learning autonomous worker, is a self-directed agent such as OpenClaw or Hermes run in a controlled government environment, seen as the likely target state for agentic use in government. Claws handle development, networking, cybersecurity, and monitoring, working collaboratively or adversarially. In a security exercise, a white-hat claw can play cat and mouse with a simulated threat actor, mimicking the persistent patterns real attackers use."
+      },
+      "related": []
+    },
+    {
+      "id": "compression-economics",
+      "en": {
+        "term": "Compression Economics",
+        "short": "The breakdown of how much AI reduces the effort of each kind of rebuild work.",
+        "long": "GIM estimates the rebuild cost by how much AI compresses each type of work: roughly 95 percent for engineering, 85 percent for testing and operations, but only 40 percent for security review and 30 percent for product validation, which stay human-led. The figure is recomputed line by line from this rubric, with contingency and program overhead added, rather than taken as a single number the AI produced."
+      },
+      "related": []
     },
     {
       "id": "compression",
@@ -180,7 +326,275 @@
         "short": "L'incapacité d'un système à réduire le détail granulaire en intuition stratégique sans perte.",
         "long": "Tous les systèmes font face à cela : mille choses arrivent au niveau tactique, les dirigeants ont besoin de thèmes. Trop comprimer et l'on perd la texture qui rend les décisions justes ; trop peu et le dirigeant ne peut agir."
       },
-      "related": ["agentic"]
+      "related": [
+        "agentic"
+      ]
+    },
+    {
+      "id": "cmdb",
+      "en": {
+        "term": "Configuration Management Database (CMDB)",
+        "short": "A hand-maintained record of applications and their relationships, held in ServiceNow with no automated feed.",
+        "long": "Alberta's CMDB lived in ServiceNow and was maintained by hand, with more than 100,000 entries covering its applications. Dependency information from GitHub did not flow into it, so it never held an accurate dependency inventory. Git Insights itemizes every dependency a system relies on, providing the exact inventory the CMDB had always lacked and can now be fed from."
+      },
+      "related": []
+    },
+    {
+      "id": "consolidation-ratio",
+      "en": {
+        "term": "Consolidation Ratio",
+        "short": "How many legacy applications collapse into how few modern modules after synthesis.",
+        "long": "The consolidation ratio is a headline figure on the GIM dashboard, expressing the redundancy designed out of a rebuild. In one Alberta ministry, 185 applications collapsed into 16 reusable modules. The redundancy the tool measured across the portfolio is the redundancy it removes in the target architecture."
+      },
+      "related": []
+    },
+    {
+      "id": "consultancy-model",
+      "en": {
+        "term": "Consultancy Model",
+        "short": "An operating model where AI implements, the center governs, and ministries supply the ideas.",
+        "long": "The paper proposes replacing a central delivery model with a consultancy one. AI does the implementing; Technology and Innovation provides the fortress, vendor management, and controls, and works alongside ministries to help design solutions and bring new models in safely. Creativity comes from the ministry partners who know the work, while the center keeps the result sound."
+      },
+      "related": []
+    },
+    {
+      "id": "context-window",
+      "en": {
+        "term": "Context Window",
+        "short": "The limited attention space an AI agent has available within a single working session.",
+        "long": "The context window is the model's finite attention space, which the harness treats as a scarce resource. Skills are written to be minimalist and avoid unnecessary prose precisely to preserve it. Skills also load by name and one-line description first, with the full playbook pulled in only when the task matches, so the window is not filled with instructions the current job does not need."
+      },
+      "related": []
+    },
+    {
+      "id": "contingent-labour",
+      "en": {
+        "term": "Contingent Labour",
+        "short": "Agile delivery teams built from individual contractor resources to stand up new solutions.",
+        "long": "Technology and Innovation has historically built agile delivery teams from individual contractor resources, termed Contingent Labour. These teams run in parallel with those handling maintenance and minor enhancements. The paper notes the structural problem that follows: once an application ships, there is rarely money left to return and remediate it."
+      },
+      "related": []
+    },
+    {
+      "id": "contributor-risk-profile",
+      "en": {
+        "term": "Contributor Risk Profile",
+        "short": "An aggregate measure of where ordinary human variance in coding habits degrades security and best practices.",
+        "long": "Git Insights profiles all 8,178 contributors across eight years, ranking and assessing their work to find where habits weaken security controls. It flags critical or high-risk contributors who repeatedly commit vulnerabilities, duplicate account activity, and changes that bypass review. The paper stresses this is aggregate posture used to target training and tooling, not a punitive or performance measure, with individual names held under restricted access."
+      },
+      "related": []
+    },
+    {
+      "id": "cyber-winter",
+      "en": {
+        "term": "Cyber Winter",
+        "short": "A projected state where attackers exploit unremediated technical debt cheaply while defenders pay heavily to remediate.",
+        "long": "The paper warns that unchecked technical debt will drive Alberta into a cyber winter. In this state, threat actors gain access for pennies while the cost to remediate runs to thousands. It is presented as the consequence of allowing vulnerabilities to outpace the capacity to fix them."
+      },
+      "related": []
+    },
+    {
+      "id": "decompression",
+      "en": {
+        "term": "Decompression",
+        "short": "Expanding a compressed directive into detailed action, filling the gaps it leaves by inference.",
+        "long": "Decompression is the downward motion of a hierarchy: a leader's broad objective must be expanded into tactical work as it descends, and the voids opened by that expansion are filled by judgment. The paper argues this is structurally identical whether a manager or an AI performs it. When the inference aligns with intent we call it leadership; when it drifts, we call it bad management in a human and a hallucination in an AI."
+      },
+      "related": []
+    },
+    {
+      "id": "defence-in-depth",
+      "en": {
+        "term": "Defence in Depth",
+        "short": "A layered cybersecurity posture in which multiple overlapping controls catch incursions before they land.",
+        "long": "Alberta describes its cyber program as running layered defence-in-depth controls with extensive monitoring. The intent is that an attacker who passes one control still meets others before reaching anything of value. The paper frames this as how the province has held the line against a rising volume of attacks over twenty-four months."
+      },
+      "related": []
+    },
+    {
+      "id": "delegated-access",
+      "en": {
+        "term": "Delegated Access",
+        "short": "Letting an agent act with the permissions a public servant already holds, without new code.",
+        "long": "Through an agent gateway governed by identity and access management, a public servant lends their own permissions to an agent across systems like email, the ERP, ServiceNow, and SharePoint. The agent can then do anything an existing application could, but only ever within the access the person already holds through Entra ID. This is one of the two capabilities the paper argues makes ministry-led building safe to offer."
+      },
+      "related": []
+    },
+    {
+      "id": "deterministic-probabilistic-tiers",
+      "en": {
+        "term": "Deterministic and Probabilistic Tiers",
+        "short": "A two-layer design where exact code does countable work and AI is asked only for judgment.",
+        "long": "Git Insights separates its work into two tiers to keep results trustworthy. The lower, deterministic tier is ordinary code that lists files and finds known-bad patterns and cannot invent a result. The upper, probabilistic tier is the AI, which weighs and judges what the lower tier surfaced and must point to the exact file and line for every problem it reports."
+      },
+      "related": []
+    },
+    {
+      "id": "deterministic-vs-probabilistic-check",
+      "en": {
+        "term": "Deterministic vs. Probabilistic Check",
+        "short": "Two ways the harness answers a question: a fixed script for single right answers, an agent for matters of judgment.",
+        "long": "Software carries two kinds of question. Some have a single right answer, such as whether the tests passed or a dependency carries a known vulnerability, and a small deterministic script can settle them every time. Others need a reader's judgment, such as whether a threat model is complete, and these get a probabilistic check done by an agent reading the work as an expert would. The harness runs both on every release."
+      },
+      "related": []
+    },
+    {
+      "id": "disposition",
+      "en": {
+        "term": "Disposition (Keep, Invest, Migrate, Retire)",
+        "short": "The recommended fate Git Insights assigns each system: keep, invest, migrate, or retire.",
+        "long": "For every repository, Git Insights recommends a disposition from four options: keep, invest, migrate, or retire. The recommendation draws on the system's health, complexity, and the kind of component it is. Together the dispositions across the estate form a breakdown leaders can act on when planning rationalization and modernization."
+      },
+      "related": []
+    },
+    {
+      "id": "do-more-for-less",
+      "en": {
+        "term": "Do More for Less",
+        "short": "The mandate that the public service stay flat or shrink against population while delivering more.",
+        "long": "Set as the minister's direction, this is the test applied to cost at the widest lens. Over three to five years, Alberta's public service should stay flat or decline relative to the population it serves while delivering more, with AI making up the difference. The paper contrasts this with the folly of simply doing the same work with fewer people, which banks a one-time saving and forfeits the larger capability."
+      },
+      "related": []
+    },
+    {
+      "id": "drift",
+      "en": {
+        "term": "Drift",
+        "short": "The slow divergence between related parts of a codebase as the agent edits one without updating the others.",
+        "long": "When an agent changes a controller without updating the OpenAPI spec, when a renamed field stays in the training material as the old name, when test coverage stops matching the routes that exist. Drift is the chronic cost of context-limited editing at scale."
+      },
+      "fr": {
+        "term": "Dérive",
+        "short": "La divergence lente entre des parties liées d'une base de code lorsque l'agent modifie l'une sans mettre à jour les autres.",
+        "long": "Un contrôleur change sans que la spécification OpenAPI ne soit mise à jour, un champ renommé reste sous son ancien nom dans la documentation, la couverture des tests cesse de correspondre aux routes existantes. La dérive est le coût chronique de l'édition à contexte limité à grande échelle."
+      },
+      "related": [
+        "walker",
+        "harness"
+      ]
+    },
+    {
+      "id": "eight-stage-board",
+      "en": {
+        "term": "Eight-Stage Board",
+        "short": "Velocity's delivery pipeline drawn as a board: requirements through deployment, with points for moving forward and penalties for sliding back.",
+        "long": "The board lays out a standard project workflow as eight stages: requirements, planning, architecture, prototype, development, user testing, user acceptance, and deployment. Forward progress earns points and a backward move loses them permanently. The penalty for sending work back grows with how many stages it retreats, which mirrors the higher cost of catching a problem late."
+      },
+      "related": []
+    },
+    {
+      "id": "ent-tools",
+      "en": {
+        "term": "Ent Tools",
+        "short": "Alberta's enterprise tool suite that extends what an agent can reach, through one gateway.",
+        "long": "Ent Tools is the enterprise gateway that gives agents access to Brave Search, ElevenLabs, the major cloud provider APIs, open-source models, a private compute cluster, and open feeds such as time, weather, news, and social media. SharePoint, ServiceNow, 1GX ERP, and Microsoft 365 integrations are being added. Users delegate their access through single sign-on, which lets ministry partners without an IT shop build tools safely and under monitoring."
+      },
+      "related": []
+    },
+    {
+      "id": "evals",
+      "en": {
+        "term": "Evals",
+        "short": "Deterministic checks that run on every change.",
+        "long": "Evaluations: deterministic, reproducible tests that pass or fail on each change. Different from unit tests in that they typically verify cross-cutting properties (bilingual parity, metadata completeness, style-guide compliance) rather than function-level correctness."
+      },
+      "fr": {
+        "term": "Évaluations",
+        "short": "Vérifications déterministes exécutées à chaque changement.",
+        "long": "Évaluations : tests déterministes et reproductibles qui réussissent ou échouent à chaque changement. Vérifient typiquement des propriétés transversales (parité bilingue, complétude des métadonnées, conformité au guide de style)."
+      },
+      "related": [
+        "harness",
+        "hook"
+      ]
+    },
+    {
+      "id": "forest-lawn",
+      "en": {
+        "term": "Forest vs lawn",
+        "short": "The metaphor for ecosystem architecture vs master-planned architecture.",
+        "long": "A forest has logic, hierarchy, and structure but is unique and specific to its context. An English lawn resists the nature of its participants and forces them into a rigid hierarchy. The metaphor argues for software ecosystems that work with the grain of their components rather than against it."
+      },
+      "fr": {
+        "term": "Forêt contre pelouse",
+        "short": "La métaphore opposant l'architecture en écosystème à l'architecture maître-planifiée.",
+        "long": "Une forêt a une logique, une hiérarchie et une structure mais reste unique à son contexte. Une pelouse anglaise résiste à la nature de ses participants et leur impose une hiérarchie rigide. La métaphore plaide pour des écosystèmes logiciels qui travaillent avec le grain de leurs composants plutôt que contre lui."
+      },
+      "related": [
+        "vernacular"
+      ]
+    },
+    {
+      "id": "fortress",
+      "en": {
+        "term": "Fortress (Protective Core)",
+        "short": "The central functions that must stay uniform to keep government safe.",
+        "long": "The fortress is the set of functions held at the center under the proposed model: cybersecurity, identity and access, networking, databases, licensing, operating systems, telephony, and end-user compute. It stays central because uniformity is what keeps government safe in its finances and against a rising cyber threat. Under the consultancy model, Technology and Innovation holds the fortress while ministries bring the ideas and AI does the implementing."
+      },
+      "related": []
+    },
+    {
+      "id": "four-headed-hydra",
+      "en": {
+        "term": "Four-Headed Hydra",
+        "short": "Alberta's framing of four simultaneous pressures: technical debt, cybersecurity, growing demand, and a deficit budget.",
+        "long": "The four-headed hydra is the paper's image for the four challenges Alberta faces at once. Each head represents a distinct pressure: forty years of technical debt, vulnerabilities surfacing faster than they can be fixed, more than forty legislative and regulatory initiatives underway, and a shrinking budget. The white paper collection is framed as the effort to confront all four together rather than one at a time."
+      },
+      "related": []
+    },
+    {
+      "id": "requirements-hierarchy",
+      "en": {
+        "term": "Four-Level Requirements Hierarchy",
+        "short": "An agile structure of epics, features, user stories, and acceptance criteria built from project material.",
+        "long": "Pronghorn reads a project's chats and artifacts and works through a structured agile hierarchy: epics at the top, the features inside them, the user stories inside each feature, and the acceptance criteria that say when each story is done. The result is a four-level map that can be built out, tracked, and handed on, grounded in the documents a project actually started from."
+      },
+      "related": []
+    },
+    {
+      "id": "four-way-test",
+      "en": {
+        "term": "Four-Way Test (Tolerate, Invest, Migrate, Eliminate)",
+        "short": "A test applied to each system to route it to the right modernization approach.",
+        "long": "The four-way test decides what happens to each system one at a time: tolerate a healthy system and lightly patch it, invest in or migrate a sound system on dying technology, rationalize a tangle of overlapping systems, or eliminate one with no remaining business need. It keeps effort pointed at the systems where it pays off, and it is what makes the four approaches a plan rather than a menu."
+      },
+      "related": []
+    },
+    {
+      "id": "gate",
+      "en": {
+        "term": "Gate",
+        "short": "A mechanical check bundled into the harness that blocks work until its condition is met.",
+        "long": "A gate is what turns a review from advice into enforcement. The harness will not call a piece of work done if a critical security finding is open, the security scan is stale or missing, a requirement has no code behind it, a database change cannot be safely re-run, or a fixed problem has no rule to stop it returning. Gates fail loudly and are fixed or formally re-planned, never bypassed."
+      },
+      "related": []
+    },
+    {
+      "id": "genius-amnesiac",
+      "en": {
+        "term": "Genius Amnesiac",
+        "short": "The paper's figure for an AI that solves hard problems yet forgets the task and the user between interactions.",
+        "long": "Alberta uses this phrase to describe the current generation of AI agents, which can answer tough problems while lacking any long-term memory. They are prone to distraction, misunderstanding, and flights of fancy, and they forget previous engagements between interactions. The trait matters because it breaks the continuous chain of thought, planning, and evaluation that sustained work requires."
+      },
+      "related": []
+    },
+    {
+      "id": "git-insights",
+      "en": {
+        "term": "Git Insights",
+        "short": "An agentic tool that recursively scans the entire GitHub estate and reports the ground truth of every repository.",
+        "long": "Git Insights is the tool Alberta built using Claude Code, the Opus and Sonnet models, and Google's agent platform. It acts as a reconnaissance scout, investigating every repository to report what is actually there, with code as the ground truth. Around fifty agents used it to read 466 million lines of code in roughly 20 hours, producing a queryable record of health, risk, and capability for the whole estate."
+      },
+      "related": []
+    },
+    {
+      "id": "git-insights-ministry",
+      "en": {
+        "term": "Git Insights Ministry (GIM)",
+        "short": "A tool that reads an entire ministry of code at once and proposes a consolidated, government-owned architecture.",
+        "long": "Where Git Insights reads one repository at a time, Git Insights Ministry pulls down a whole ministry's code, around 200 repositories, and analyzes them together. It reverse-engineers what every system does, clusters the findings into business capabilities, and designs a small set of modern modules to deliver them once each. Every conclusion traces back to the exact source file it came from."
+      },
+      "related": []
     },
     {
       "id": "goodhart",
@@ -194,7 +608,597 @@
         "short": "Quand une mesure devient une cible, elle cesse d'être une bonne mesure.",
         "long": "Dès qu'une métrique sert à évaluer un comportement, les personnes ou agents évalués optimisent pour la métrique plutôt que pour le résultat qu'elle était censée suivre. Le livre 13 en discute comme mise en garde explicite pour tout système de pointage."
       },
-      "related": ["evals"]
+      "related": [
+        "evals"
+      ]
+    },
+    {
+      "id": "government-3-0",
+      "en": {
+        "term": "Government 3.0",
+        "short": "The most radical approach, where the fixed application dissolves and agents work directly against governed data.",
+        "long": "Government 3.0 questions whether traditional applications are needed at all. Governed data sits at the centre, business rules are written once as code drawn from legislation, and AI agents assemble the interface a person needs in the moment, then dissolve it when the task is done. It is the fastest and most cost-effective model, since the most expensive thing in government software, the software itself, is mostly gone, but it depends on data being genuinely well governed and every agent action being accountable to a named person."
+      },
+      "related": []
+    },
+    {
+      "id": "green-agent",
+      "en": {
+        "term": "Green Agent",
+        "short": "A deterministic review agent that reports the plain facts of a codebase's health and hygiene.",
+        "long": "Green is the first of the four review agents and runs before the others. It inspects code for vulnerable dependencies, committed secrets, dangerous patterns, thin test coverage, and gaps in the build pipeline, working in two rounds of roughly thirty checks. Because it is deterministic, the same code always returns the same findings, which makes it the evidence base every other agent reads."
+      },
+      "related": []
+    },
+    {
+      "id": "ground-truth",
+      "en": {
+        "term": "Ground Truth",
+        "short": "How government actually works, as embedded in code and tribal knowledge, distinct from how policy says it should work.",
+        "long": "Beyond legislation and policy lies a second, often invisible layer of ground truth: the workflows, business rules, and institutional logic baked into forty years of legacy code and undocumented in people's heads. Policy documents describe how government should work, while code describes how it actually works, and the two are frequently misaligned. Modernization requires excavating this embedded ground truth and deciding what to preserve, reimagine, or discard."
+      },
+      "related": []
+    },
+    {
+      "id": "harness",
+      "en": {
+        "term": "Harness",
+        "short": "The standards, skills, hooks, and integrations that surround an agent and keep its output coherent.",
+        "long": "A harness is the set of project-side rules and supporting machinery an AI coding agent operates within. It includes folder structure, route patterns, OpenAPI specs, migrations, evaluations, and the hook layer that intercepts agent events. The harness is what stops a coding agent from drifting away from project conventions over time."
+      },
+      "fr": {
+        "term": "Harnais",
+        "short": "Les standards, compétences, hooks et intégrations qui encadrent un agent et maintiennent la cohérence de ses productions.",
+        "long": "Un harnais est l'ensemble des règles et de la machinerie de soutien dans lequel opère un agent de programmation. Il inclut la structure des dossiers, les motifs de routes, les spécifications OpenAPI, les migrations, les évaluations et la couche de hooks qui intercepte les événements de l'agent."
+      },
+      "related": [
+        "agentic",
+        "skill",
+        "hook"
+      ]
+    },
+    {
+      "id": "headless-api-layer",
+      "en": {
+        "term": "Headless API Layer",
+        "short": "A future orchestration model exposing government functions as APIs that staff point their own agents at.",
+        "long": "The headless API layer is Approach 4 in Alberta's modernization plan and a future direction for Nexus, where the functions of government are exposed and consumed entirely through APIs with no user interface. Staff trained through the AI Academy would define an agent, delegate access to it, and monitor its steps as it pursues an objective. It builds on the layered orchestration of Approach 3, where one agent runs per application under tiers of oversight and architect agents."
+      },
+      "related": []
+    },
+    {
+      "id": "health-score",
+      "en": {
+        "term": "Health Score",
+        "short": "A repository's rating out of ten against a fixed checklist covering security, quality, tests, and more.",
+        "long": "Git Insights grades every repository on a ten-point scale, with separate scores for code quality, architecture, security, tests, documentation, maintainability, and dependency health. Using the same fixed checklist means a score carries the same meaning on the thousandth repository as on the first. Across the whole estate the average health score came out to 3.2 out of 10."
+      },
+      "related": []
+    },
+    {
+      "id": "hierarchy-of-concerns",
+      "en": {
+        "term": "Hierarchy of Concerns",
+        "short": "A weighted function that decides which value wins when competing values cannot both be satisfied.",
+        "long": "For genuinely irreducible conflicts, where reasonable interpretations cannot be reconciled, the paper proposes establishing a hierarchy of concerns: a weighted function that determines which value takes precedence. It rests on the observation that real disagreements rarely sit in perfect equilibrium, like a balloon that settles on the ceiling or the floor but not in mid-air. It is the fallback for ambiguity that parallel testing cannot resolve."
+      },
+      "related": []
+    },
+    {
+      "id": "hook",
+      "en": {
+        "term": "Hook",
+        "short": "A handler that intercepts an event in the agent's lifecycle.",
+        "long": "Hooks fire before or after agent actions: pre-edit, post-commit, on-tool-use. A hook can validate, enrich, or block what the agent is about to do. Hooks are the project's way of catching drift without requiring the agent to re-read every standard on every turn."
+      },
+      "fr": {
+        "term": "Hook",
+        "short": "Un gestionnaire qui intercepte un événement du cycle de vie de l'agent.",
+        "long": "Les hooks se déclenchent avant ou après les actions de l'agent : pré-édition, après-commit, à l'usage d'outil. Un hook peut valider, enrichir ou bloquer ce que l'agent s'apprête à faire."
+      },
+      "related": [
+        "harness",
+        "skill"
+      ]
+    },
+    {
+      "id": "human-bandwidth",
+      "en": {
+        "term": "Human Bandwidth (~40 bits/s)",
+        "short": "The rough rate at which language carries meaning between people, far slower than machine processing.",
+        "long": "Language conveys meaning at roughly forty bits per second, orders of magnitude slower than AI operates. This is why even a perfect, lossless AI model of government must be compressed again to reach a human decision-maker, and why the briefing note exists. The paper's proposed remedy is to widen the channel with richer forms like visualization and interactive models rather than simplify the truth."
+      },
+      "related": []
+    },
+    {
+      "id": "human-centered-ai",
+      "en": {
+        "term": "Human-Centered AI",
+        "short": "The Academy's founding principle: AI clears systemic barriers so people are freed for more meaningful work, with no one left behind.",
+        "long": "Human-centered AI is a term coined with JP Lalonde and adopted in Alberta as the principle the Academy was designed around. It frames the tools as a way to clear technical debt, case backlogs, and red tape so public servants are freed for meaningful work, while committing that no public servant is left behind. It positions AI as an empowering and democratizing force rather than a threat of displacement."
+      },
+      "related": []
+    },
+    {
+      "id": "hybrid-environment",
+      "en": {
+        "term": "Hybrid Environment",
+        "short": "Alberta's mixed footprint across the Google, Azure, and AWS clouds, an on-premises GPU cluster, and three legacy data centres.",
+        "long": "Alberta runs a hybrid environment spanning the major hyperscaler clouds, smaller platforms, an on-premises GPU cluster, and three large legacy data centres still carrying older systems. Agentic workloads mostly deploy into Google Cloud while traditional applications continue in Azure and AWS, and the on-premises cluster runs open-source models offline. The arrangement lets workloads move between providers or onto Alberta-owned hardware."
+      },
+      "related": []
+    },
+    {
+      "id": "hydration",
+      "en": {
+        "term": "Hydration",
+        "short": "Expanding a short requirement into a full plan, a process where decompression gaps appear.",
+        "long": "Hydration is the Academy's term for an AI expanding, for instance, a five-line business requirement into a fifty-page business plan. Because the original is compressed, the model must infer details that were not specified, and gaps inevitably emerge. When those inferences do not align with the original intent, the result is a hallucination, which the paper frames as a failure of faithful decompression."
+      },
+      "related": []
+    },
+    {
+      "id": "integration-fabric",
+      "en": {
+        "term": "Integration Fabric",
+        "short": "One governed way to connect to remaining systems, in place of point-to-point tangles.",
+        "long": "Today's systems connect to one another point to point, a knot no one fully holds in their head. The integration fabric replaces that with a single governed channel through which systems connect, with shared services beneath it. The GIM dashboard's integration topology view sets today's tangle against this future fabric."
+      },
+      "related": []
+    },
+    {
+      "id": "knowledge-infrastructure",
+      "en": {
+        "term": "Knowledge Infrastructure",
+        "short": "Documented intent, decision logs, and specifications that let a successor agent resume work without losing fidelity.",
+        "long": "When an agent's context window fills and must be purged, its successor needs to inherit the system state along with why decisions were made, what constraints exist, and what dependencies matter. The paper calls this surrounding record knowledge infrastructure and compares it to medieval monks who maintained text fidelity through commentary, cross-references, and illuminated margins, not transcription alone. Across 1,400 systems, context windows overflow countless times, so this infrastructure is what holds intent across handoffs."
+      },
+      "related": []
+    },
+    {
+      "id": "known-bad-patterns",
+      "en": {
+        "term": "Known-Bad Patterns",
+        "short": "Specific code mistakes that cause real security holes, found by deterministic search rather than judgment.",
+        "long": "These are the specific, recognizable mistakes that lead to security vulnerabilities, such as turned-off security checks or unsafe database queries. Git Insights searches every file for them using ordinary code in its deterministic tier. Because the match is exact, it flags candidates reliably for the AI to then review and judge."
+      },
+      "related": []
+    },
+    {
+      "id": "lossy-compression-abstraction",
+      "en": {
+        "term": "Lossy Compression (of Abstractions)",
+        "short": "Collapsing a complex system into a simple term that strips away critical detail.",
+        "long": "At every level of communication, complex systems are compressed into simpler terms because human cognition cannot hold full complexity at once. The paper's example is calling a sprawling geospatial system a GIS module: a stakeholder agrees in principle while hundreds of functions, formulas, and edge cases are abstracted away. The receiver may believe they understand when critical detail has been lost, which surfaces later as missing functions or unhandled edge cases."
+      },
+      "related": []
+    },
+    {
+      "id": "model-access-layer",
+      "en": {
+        "term": "Model Access Layer",
+        "short": "The managed services through which Alberta reaches hosted models: AWS Bedrock, the Google Agent Platform, and Azure AI Studio.",
+        "long": "The model access layer is the set of provider services Alberta uses to reach hosted models with data controlled in Canada. AWS Bedrock and the Google Agent Platform carry the primary workloads, with Azure AI Studio also in use, while open-source models run on Alberta's own GPU cluster for offline and Protected C work. It is one band of the layered agentic stack."
+      },
+      "related": []
+    },
+    {
+      "id": "mythos",
+      "en": {
+        "term": "Mythos Model",
+        "short": "An Anthropic AI model used to discover and fix long-buried security flaws in widely used code.",
+        "long": "Mythos is the model behind Project Glasswing, able to find flaws that had sat undocumented in widely used code for years. Mozilla used it to find and ship fixes for 271 security bugs in Firefox in a single month, more than ten times its earlier methods. The paper notes that the same capability is available to attackers, so the discovery advantage it offers is temporary."
+      },
+      "related": []
+    },
+    {
+      "id": "nexus",
+      "en": {
+        "term": "Nexus",
+        "short": "The secure sandboxed environment where agents do their work.",
+        "long": "Nexus is the operating environment that allows agents to operate iteratively, make mistakes, and try different architectures without degrading production security posture. It is also where parallel models compete on the same problem."
+      },
+      "fr": {
+        "term": "Nexus",
+        "short": "L'environnement sécurisé et isolé où les agents accomplissent leur travail.",
+        "long": "Nexus est l'environnement d'exploitation qui permet aux agents d'itérer, de se tromper et d'essayer des architectures sans dégrader la posture de sécurité de production. C'est aussi le lieu où plusieurs modèles s'affrontent sur le même problème."
+      },
+      "related": [
+        "agentic",
+        "sandbox"
+      ]
+    },
+    {
+      "id": "nine-box-grid",
+      "en": {
+        "term": "Nine-Box Grid",
+        "short": "A dashboard view plotting each system by how active it is against how healthy it is.",
+        "long": "The Git Insights executive dashboard includes a nine-box grid that positions every system on two axes: its level of activity and its level of health. The placement helps leaders see at a glance which active systems are also unhealthy and therefore most in need of attention. It sits alongside health cards, contributor profiles, and the disposition breakdown, all exportable."
+      },
+      "related": []
+    },
+    {
+      "id": "non-technical-builder",
+      "en": {
+        "term": "Non-Technical Builder",
+        "short": "A domain expert who builds standards-meeting applications with AI without being a software engineer.",
+        "long": "The harness is designed so a non-technical Builder can succeed by adding the content their service needs on top of a foundation an auditor has already cleared. In one six-day Academy cohort, a hundred people, most of whom would not have called themselves engineers, built more than 560 working applications that cleared the cyber, accessibility, and look-and-feel bars on first release. The harness democratizes development by giving everyone the same skills and templates."
+      },
+      "related": []
+    },
+    {
+      "id": "observability",
+      "en": {
+        "term": "Observability",
+        "short": "Making every action an agent takes visible and auditable so its autonomy is safe to grant.",
+        "long": "Observability is the discipline that balances agent autonomy in Nexus. A developer watches the agents on their own machine, while administrators observe and audit every agent on every machine across the platform, and agents are even set to audit other agents. This auditing surfaced surprising agent behaviour during the platform's shakedown and made it more robust. It embodies the training principle to verify, then trust."
+      },
+      "related": []
+    },
+    {
+      "id": "opinionated",
+      "en": {
+        "term": "Opinionated",
+        "short": "A technical term for instructions or templates that deliberately leave little room for the AI to improvise.",
+        "long": "Skills and templates in the harness are described as opinionated, meaning they constrain the AI's choices so quality comes from the line itself rather than any one person's care. An opinionated template fixes the stack and makes the recurring decisions in advance. Opinionated skills are also kept minimalist, avoiding prose to preserve the agent's context window."
+      },
+      "related": []
+    },
+    {
+      "id": "asvs",
+      "en": {
+        "term": "OWASP Application Security Verification Standard (ASVS)",
+        "short": "An international baseline of web-application security requirements, applied here at Level 2.",
+        "long": "ASVS is the international standard the Blue agent walks through when judging an application's defensive posture. At Level 2, the baseline expected of a serious web application, Blue records each requirement as pass, fail, or not applicable with the supporting evidence. The estate is checked against roughly ninety-five security controls drawn from this and related standards on every pass."
+      },
+      "related": []
+    },
+    {
+      "id": "project-glasswing",
+      "en": {
+        "term": "Project Glasswing",
+        "short": "A consortium-driven Anthropic partnership using the Mythos model to find and patch flaws in critical systems.",
+        "long": "Project Glasswing is cited as a partnership that applies the Mythos model to discover and remediate vulnerabilities in critical software before attackers can exploit them. In its first months after limited release it surfaced more than ten thousand vulnerabilities across operating systems and browsers. The paper uses it as evidence that defenders now have AI capability of their own."
+      },
+      "related": []
+    },
+    {
+      "id": "prompt-injection",
+      "en": {
+        "term": "Prompt Injection",
+        "short": "A hijacking attack that tricks an AI into acting on a malicious instruction hidden in its inputs.",
+        "long": "Prompt injection is the manipulation of an agent through crafted input so it carries out harmful work on a prompter's behalf. No model today fully resists it, and even the best resist hijacking only ninety-five to ninety-eight percent of the time. Because of this, Alberta avoids or selectively designs public-facing AI and anything touching personal information, and validates mainly with synthetic data."
+      },
+      "related": []
+    },
+    {
+      "id": "pronghorn",
+      "en": {
+        "term": "Pronghorn",
+        "short": "Alberta's open-source design and ideation platform, the first stage of the AI factory.",
+        "long": "Project Pronghorn turns Ministry requirements into prototypes, artifacts, requirements, and an architecture canvas before any build begins. Named for the fast, far-sighted, high-endurance North American antelope native to Alberta, it lets technical and non-technical staff define a project to one common standard. It ships in two editions, Pronghorn Red (React/Supabase, now a reference architecture) and Pronghorn Blue (an enterprise refactor built with Microsoft Canada), both released under the MIT License."
+      },
+      "related": []
+    },
+    {
+      "id": "protected-classification",
+      "en": {
+        "term": "Protected A/B/C Classification",
+        "short": "Alberta's information sensitivity tiers, from unclassified through Protected A, B, and C, that govern where a workload may run.",
+        "long": "The Government of Alberta classifies information as unclassified, Protected A, Protected B, and Protected C, with sensitivity rising across the tiers. Roughly ninety-nine percent of systems sit at Protected B at the highest, while a small minority reach Protected C. The classification determines where work runs: lower tiers in controlled cloud in Canada, and Protected C offline on Alberta's own GPU cluster."
+      },
+      "related": []
+    },
+    {
+      "id": "readiness",
+      "en": {
+        "term": "Readiness",
+        "short": "Whether the organization can carry the change, judged on education, security, self-sufficiency, and governance.",
+        "long": "Readiness is the first of Alberta's three measures and asks whether the organization can absorb the transformation. It has four parts: an educated and adaptable workforce with the Academy as the vehicle, control of both sides of the agentic equation, self-sufficiency rather than growing vendor dependence, and governance that gives stakeholders genuine confidence. A program can move fast and still fail any one of the four, which is why readiness is measured on its own."
+      },
+      "related": []
+    },
+    {
+      "id": "red-agent",
+      "en": {
+        "term": "Red Agent",
+        "short": "A review agent that studies a finished application from the outside and plans how it would break in.",
+        "long": "Red acts as the attacker. It performs reconnaissance with ordinary repeatable tooling, mapping domains, ports, encryption, security headers, and technologies in use, then uses Claude to reason over the findings and propose concrete attack paths. The reconnaissance is deterministic; the attack planning is the one part that varies run to run. Red only runs against systems the government owns and has authorized for testing."
+      },
+      "related": []
+    },
+    {
+      "id": "riceco",
+      "en": {
+        "term": "RICECO",
+        "short": "A six-step formula taught in Level 1 for writing a well-formed prompt.",
+        "long": "RICECO is the Academy's prompting framework, a six-step formula running through role, instruction, context, examples, constraints, and output format. It gives a layperson a repeatable structure for composing a prompt rather than treating the AI like a search box. It is paired with the TRUST framework for handling the response."
+      },
+      "related": []
+    },
+    {
+      "id": "rule-of-three",
+      "en": {
+        "term": "Rule of Three",
+        "short": "The Level 2 heuristic: if a task recurs more than three times a week, build and document a reusable agent for it.",
+        "long": "The rule of three is the Academy's guide for when to invest in building an agent. If a task is likely to recur more than three times in a week, the time spent building and documenting the agent pays back. In a unit doing similar work, one person's shareable workflow raises the performance of the whole unit."
+      },
+      "related": []
+    },
+    {
+      "id": "self-sufficiency",
+      "en": {
+        "term": "Self-Sufficiency",
+        "short": "Growing stronger and more able to lead the work internally rather than more dependent on vendors.",
+        "long": "As AI adoption grows, self-sufficiency asks whether the organization is becoming more capable of leading the work itself or weaker and more reliant on third-party vendors, with its control and agency shrinking in proportion to its use of the technology. It is one of the four parts of readiness, and its failure mode, rising dependency, is named explicitly as a sign the program is not working."
+      },
+      "related": []
+    },
+    {
+      "id": "shared-services",
+      "en": {
+        "term": "Shared Services",
+        "short": "Common capabilities built once and drawn on by any ministry, rather than rebuilt in each.",
+        "long": "Some modules a ministry needs, such as payments, geospatial mapping, contract management, and identity, are not unique to it. Rather than rebuild them inside every ministry, they are built and secured once as shared services at the centre. This collapses the complexity and attack surface of government infrastructure by more than ninety percent."
+      },
+      "related": []
+    },
+    {
+      "id": "ship-of-theseus",
+      "en": {
+        "term": "Ship of Theseus",
+        "short": "A thought experiment about replacing every part of a ship, used as a metaphor for modernizing systems in place.",
+        "long": "Plutarch's thought experiment imagines replacing every plank, mast, and sail of a ship over time and asks whether it remains the same ship. Alberta applied this approach to government systems, substituting small pieces and patches while expecting the whole to stay functional. The paper argues this method is too slow, and that the ship must instead be rebuilt while it is still sailing."
+      },
+      "related": []
+    },
+    {
+      "id": "sigmoidal-compression-curve",
+      "en": {
+        "term": "Sigmoidal Compression Curve",
+        "short": "A way to picture each management layer discarding roughly half of incoming information as it passes upward.",
+        "long": "The paper uses a sigmoidal compression curve to visualize how middle managers act as compression gates. As information rises, roughly half is judged less relevant and abstracted away, and the rest is passed up. By the time it reaches the top, information has undergone perhaps a thousandfold lossy compression, leaving only the most critical signal."
+      },
+      "related": []
+    },
+    {
+      "id": "skill",
+      "en": {
+        "term": "Skill",
+        "short": "A bundled set of instructions and scripts an agent can invoke for a specific task.",
+        "long": "A skill is a unit of agent capability: a markdown manifest describing what to do, often paired with executable scripts. The agent loads the skill on demand when it recognizes a matching task. Examples in this codebase: add-paper, translate-paper, regenerate-images."
+      },
+      "fr": {
+        "term": "Compétence",
+        "short": "Un ensemble d'instructions et de scripts qu'un agent peut invoquer pour une tâche précise.",
+        "long": "Une compétence est une unité de capacité agentique : un manifeste en markdown décrivant la marche à suivre, souvent accompagné de scripts exécutables. L'agent charge la compétence à la demande. Exemples ici : add-paper, translate-paper, regenerate-images."
+      },
+      "related": [
+        "harness",
+        "hook"
+      ]
+    },
+    {
+      "id": "sovereign-compute",
+      "en": {
+        "term": "Sovereign Compute",
+        "short": "Compute and inference hardware under exclusive Canadian, and ideally Alberta, control for the most sensitive workloads.",
+        "long": "Sovereign compute is in-country hardware that keeps sensitive data and inference under Canadian control rather than relying on United States inference. Alberta runs its most sensitive Protected C work offline on its own cluster and has issued a Sovereign Compute prequalification request inviting wholly Canadian companies to help. For health and security workloads, exclusive Government of Alberta control of the data is treated as non-negotiable."
+      },
+      "related": []
+    },
+    {
+      "id": "supply-chain-attack",
+      "en": {
+        "term": "Supply Chain Attack",
+        "short": "Compromising a shared upstream dependency so the harm cascades to every downstream system that uses it.",
+        "long": "The paper describes attackers shifting from breaching perimeters directly to poisoning the well, compromising open-source repositories used by hundreds of millions of products. One campaign injected malicious code into more than 5,500 repositories to harvest API tokens, SSH keys, and cloud credentials. A hijacked release of the Axios JavaScript package, downloaded over 100 million times a week, carried remote-access trojans into developer machines and continuous-integration pipelines."
+      },
+      "related": []
+    },
+    {
+      "id": "system-health",
+      "en": {
+        "term": "System Health",
+        "short": "Whether the estate is getting healthier, measured by vulnerabilities, the application backlog, and total systems.",
+        "long": "System health turns the program toward the Ship of Theseus problem of an estate aging out faster than it can be repaired. Its measures are deliberately blunt: are cyber vulnerability exposures falling, is the backlog of roughly six hundred applications shrinking, is the total number of applications coming down? Reported as single numbers year over year, they leave little room for narrative and show plainly whether the program is reversing the tide."
+      },
+      "related": []
+    },
+    {
+      "id": "technical-debt",
+      "en": {
+        "term": "Technical Debt",
+        "short": "The accumulated cost of aging code, contracts, and dependencies that slows and inhibits modernization.",
+        "long": "Technical debt is the decades of application code, infrastructure, business rules, vendor dependencies, and documentation that have built up over forty years. It costs more to carry each year and acts as the greatest inhibitor to transformation, because the systems in place are rigid, complicated, and often inscrutable. Alberta names it as one of the four pressures, the four-headed hydra, that its white papers set out to address."
+      },
+      "related": []
+    },
+    {
+      "id": "technical-estate",
+      "en": {
+        "term": "Technical Estate",
+        "short": "The full body of code, infrastructure, data, contracts, and dependencies a government runs and maintains.",
+        "long": "Alberta uses this term for the entire span of software and supporting systems it oversees, accumulated over more than forty years. The estate includes application code, infrastructure, business rules, vendor dependencies, and documentation across thousands of applications. Its size, more than 466 million lines of code, is what places it beyond human capacity to manage by conventional means."
+      },
+      "related": []
+    },
+    {
+      "id": "template",
+      "en": {
+        "term": "Template (Masterpiece)",
+        "short": "A near-perfect reference application the harness is built around for the AI to emulate.",
+        "long": "The template is the masterpiece that shows the AI what good looks like, in the way arts academies learned by copying the masters. It is opinionated about the technology, shipping as a working client and server pair on a fixed open-source stack (Vue with Vite, Node with Express, Postgres, single sign-on), with more than a hundred decisions a public system must get right already made. The paper argues that a sufficiently advanced template is indistinguishable from code, and that the best harness is code."
+      },
+      "related": []
+    },
+    {
+      "id": "compression-problem",
+      "en": {
+        "term": "The Compression Problem",
+        "short": "Keeping fidelity of ground truth as information is compressed upward and decompressed downward through a hierarchy.",
+        "long": "The paper names the defining challenge of transformation as informational rather than technical: how to carry the truth of how government works up to the strategy directing a rebuild, and back down again, without losing it. Each layer strips detail going up and fills gaps by inference going down, and both motions lose fidelity. AI does not abolish this problem; it transforms it into holding fidelity across countless agent handoffs."
+      },
+      "related": []
+    },
+    {
+      "id": "reaper",
+      "en": {
+        "term": "The Reaper",
+        "short": "An enforcement agent in Velocity that detects gaming of the score and removes the cheated points twice over.",
+        "long": "The Reaper reads back over the board's history looking for the signatures of cheating, such as speed runs, self-approval, and burst turns. Where it finds a violation it takes back the points earned and subtracts them again, a penalty multiplier of two, so getting caught costs more than cheating could ever pay. It runs in bulk over the whole record, is idempotent, and posts every finding to the leaderboard as a visible violation."
+      },
+      "related": []
+    },
+    {
+      "id": "ticket",
+      "en": {
+        "term": "Ticket",
+        "short": "A unit of work filed by the walker, picked up by an agent.",
+        "long": "When the walker detects drift, it writes a ticket. Tickets carry just enough context for an agent to fix the problem: which files diverged, what's expected, what was found."
+      },
+      "fr": {
+        "term": "Ticket",
+        "short": "Une unité de travail déposée par le veilleur et prise en charge par un agent.",
+        "long": "Lorsque le veilleur détecte une dérive, il rédige un ticket. Les tickets portent juste assez de contexte pour qu'un agent règle le problème : quels fichiers ont divergé, ce qui est attendu, ce qui a été trouvé."
+      },
+      "related": [
+        "walker",
+        "anti-drift"
+      ]
+    },
+    {
+      "id": "trust-framework",
+      "en": {
+        "term": "TRUST Framework",
+        "short": "The Level 1 framework for checking an AI's output before relying on it, summed up as verify, then trust.",
+        "long": "TRUST is the Academy's companion to RICECO, focused on handling what the AI returns rather than how the prompt is written. It teaches a loop of verifying an output before relying on it, sent back if it does not check out, summed up in three words: verify, then trust. It anchors the Academy's wider discipline of not trusting AI blindly."
+      },
+      "related": []
+    },
+    {
+      "id": "two-way-door",
+      "en": {
+        "term": "Two-Way Door",
+        "short": "A reversible decision that can be pursued cheaply and undone if it proves less valuable.",
+        "long": "Borrowed from Amazon, a two-way door is a decision that can be reversed at low cost, as opposed to an irreversible one. The paper argues most decisions in a digital system are two-way doors, so when a requirement is ambiguous you can pursue both options, evaluate them over time, and dispose of the weaker. This pairs with running interpretations in parallel as A/B testing at scale."
+      },
+      "related": []
+    },
+    {
+      "id": "vectorization",
+      "en": {
+        "term": "Vectorization",
+        "short": "The process by which an AI classifies thousands of attributes for every concept, document, or pattern it sees.",
+        "long": "Vectorization is how these models build depth of understanding, assigning thousands of attributes to each word, concept, image, or pattern, where a person might name only a few dozen. The paper credits this with giving AI intuitions humans do not consciously possess, letting it see the shape of concepts and patterns in seconds. In the technical domain it is what allows rapid recognition of structure that would take a human months to prepare."
+      },
+      "related": []
+    },
+    {
+      "id": "velocity",
+      "en": {
+        "term": "Velocity",
+        "short": "A game-based project tool, the third stage of Alberta's AI factory, that measures real delivery when an AI agent is a team member.",
+        "long": "Velocity is an open-source project management and observability tool built as a game, where work climbs eight stages and earns or loses points. It replaces up-front estimation with measurement of actual movement, since an AI can do in minutes what once took days. It sits on top of Pronghorn and Nexus as the layer that orchestrates and measures delivery."
+      },
+      "related": []
+    },
+    {
+      "id": "velocity-game-engine",
+      "en": {
+        "term": "Velocity Game Engine",
+        "short": "The scoring and rules engine behind Velocity, exposing its rules to agents through an OpenAPI specification.",
+        "long": "The game engine holds the scoring rules, the eight-stage board, and the penalties for backsliding. Agents pull its OpenAPI specification at boot so they always know the current rules and what they are allowed to do, and the rules can change without anyone redeploying. The Reaper enforcement logic runs against the same engine."
+      },
+      "related": []
+    },
+    {
+      "id": "velocity-harness",
+      "en": {
+        "term": "Velocity Harness",
+        "short": "The per-agent harness, organized around the eight stages, that teaches an agent how to play the game.",
+        "long": "Every agent boots with a velocity harness, a variant of the well-built harness with the same foundational skills tailored for play. Its skills are organized one per stage, from a requirements skill that writes the requirements document to a deployment skill that ships migrations, with mechanical gates that block a step from advancing until its checks clear. At boot it pulls the game engine's OpenAPI specification so it always has the current rules."
+      },
+      "related": []
+    },
+    {
+      "id": "velocity-listener",
+      "en": {
+        "term": "Velocity Listener",
+        "short": "A script running in Nexus that wakes the right agent when a move is made on the board.",
+        "long": "The velocity listener holds an open server-sent-events connection to the game engine, filtered to the projects an agent cares about, and reconnects cleanly if the connection drops. When a person updates a step, the listener wakes the agent in its own working directory and hands it the board state and any human message. It turns the board into the universal prompt, so a single move can trigger agents across hundreds of projects without anyone prompting by hand."
+      },
+      "related": []
+    },
+    {
+      "id": "vernacular",
+      "en": {
+        "term": "Vernacular architecture",
+        "short": "Architecture suited to its place; the opposite of a generic master plan.",
+        "long": "Borrowed from architectural theory: buildings designed for their specific climate, materials, and people, not imposed from a master plan. Applied to software, vernacular architecture means systems shaped by their context rather than forced into a one-size-fits-all template."
+      },
+      "fr": {
+        "term": "Architecture vernaculaire",
+        "short": "Architecture adaptée à son milieu ; le contraire d'un plan maître générique.",
+        "long": "Emprunté à la théorie architecturale : des bâtiments conçus pour leur climat, leurs matériaux et leurs habitants, et non imposés depuis un plan maître. Appliqué au logiciel, l'architecture vernaculaire désigne des systèmes façonnés par leur contexte plutôt que forcés dans un gabarit générique."
+      },
+      "related": [
+        "forest-lawn"
+      ]
+    },
+    {
+      "id": "vibe-coding",
+      "en": {
+        "term": "Vibe-Coding",
+        "short": "Building an application straight from AI prompting without first defining requirements or architecture.",
+        "long": "Vibe-coding describes the common pattern of springing straight into the user interface and workflow on platforms like Lovable, which is fast and gratifying but pushes architectural, security, and deployment decisions to later or onto the AI. In the car analogy, you get the body but not the brakes, engine, or chassis. Pronghorn exists to counter this by settling the prototype, requirements, and architecture first."
+      },
+      "related": []
+    },
+    {
+      "id": "walker",
+      "en": {
+        "term": "Walker",
+        "short": "An autonomous scanner that checks whether related parts of the codebase are still in sync.",
+        "long": "The walker is the watchdog. It sweeps the codebase looking for drift between siblings: a route without a controller, a controller without a test, a migration without a model. When it finds drift, it files a ticket for the anti-drift agent."
+      },
+      "fr": {
+        "term": "Veilleur",
+        "short": "Un scanneur autonome qui vérifie que les parties liées de la base de code restent synchronisées.",
+        "long": "Le veilleur est le chien de garde. Il parcourt la base de code à la recherche de dérive entre parties liées. Quand il en trouve, il dépose un ticket pour l'agent anti-dérive."
+      },
+      "related": [
+        "drift",
+        "ticket",
+        "anti-drift"
+      ]
+    },
+    {
+      "id": "warrior-wizard-craftsperson",
+      "en": {
+        "term": "Warrior, Wizard, Craftsperson",
+        "short": "The three personas Level 3 participants choose instead of job titles, naming the kind of work they want to do with AI.",
+        "long": "In Level 3, participants set aside job titles and pick a persona. The warrior ships, oriented to speed, delivery, and the leaderboard, the work of the AI Factory. The wizard strategizes, taking on modernization and architecture, the work that points toward Government 3.0. The craftsperson builds infrastructure others rely on, such as harnesses, templates, and tools like Pronghorn, Nexus, and Velocity. The deliberate ambiguity also acts as a filter for willing participants."
+      },
+      "related": []
+    },
+    {
+      "id": "whole-of-government-cost",
+      "en": {
+        "term": "Whole-of-Government Cost",
+        "short": "Counting cost across all ministries and the public service, not a single IT ledger.",
+        "long": "Cost is measured through three widening lenses: the direct cost of the IT provider, where faster delivery must not simply swap a license bill for an AI bill; the program performance better systems make possible for ministries; and, widest, the size and cost of the public service against the population it serves over three to five years. The honest accounting is whole-of-government, because measuring one ledger would let cost be merely shifted rather than reduced."
+      },
+      "related": []
+    },
+    {
+      "id": "yellow-agent",
+      "en": {
+        "term": "Yellow Agent",
+        "short": "A deterministic agent that checks prose for the tells of machine-made writing.",
+        "long": "Yellow reviews all the writing in a project: documentation, interface copy, release notes, and the messages a citizen sees. It walks twelve rules across the text and flags each tell with the offending line, a plain rewrite, and a note on why it reads as machine-written. It runs in seconds and uses the same rules that govern these white papers."
+      },
+      "related": []
     }
   ]
 }
