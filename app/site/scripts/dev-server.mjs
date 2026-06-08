@@ -35,11 +35,18 @@ const server = createServer(async (req, res) => {
   try {
     let path = safePath(req.url);
     if (!path) { res.writeHead(403).end('Forbidden'); return; }
-    let info;
-    try { info = await stat(path); } catch { info = null; }
-    if (info && info.isDirectory()) { path = join(path, 'index.html'); info = await stat(path).catch(() => null); }
-    if (!info) {
-      // SPA / unknown route: fall back to index.html so the hash router can take over.
+    const urlPath = (req.url.split('?')[0] || '/');
+    const isAsset = /\.[a-z0-9]+$/i.test(urlPath);   // a request for a file (has an extension)
+    let info = null;
+    if (isAsset) {
+      // Real asset: serve it, or 404 if missing. (Never hand HTML back for a
+      // missing .js/.json/.mp3 — that only hides the real error.)
+      try { info = await stat(path); } catch { info = null; }
+      if (!info || info.isDirectory()) { res.writeHead(404).end('Not found'); return; }
+    } else {
+      // Clean app route (e.g. /paper/<id>, /about): serve the SPA shell directly
+      // so the History-API router renders it. This matches production, where a
+      // deep link resolves to the app, without the prerender redirect hop.
       path = join(ROOT, 'index.html');
       info = await stat(path).catch(() => null);
       if (!info) { res.writeHead(404).end('Not found'); return; }
