@@ -508,7 +508,7 @@
 .civic-footer {
   padding: 36px 56px 48px;
   border-top: 1px solid var(--rule);
-  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px;
 }
 .civic-footer h2 {
   font-weight: 600; font-size: 16px;
