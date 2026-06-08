@@ -1,6 +1,6 @@
 {
-  "_note": "Solution Landscape canvas dataset. Each scene is a real node-graph architecture diagram: groups (regions), nodes (typed: system/legacy/agent/review/service/data/gateway/module/stage/infra/human/future/approach), and edges (kind: flow/dep/data/ctrl, optional label, optional animated). Node x,y are top-left in a 1280x820 space; the engine fits and lets the reader drag/pan/zoom. title/blurb/narrative carry {en,fr}; node labels and detail are plain strings (mostly technical terms) and read in both locales until translated. The narrative is the accessible description and the audio script. This file is the downloadable, editable source for the canvas in paper xs7uh; scenes embed individually via canvas:scene.",
-  "version": "2",
+  "_note": "Solution Landscape canvas dataset. Each scene is a real node-graph architecture diagram: groups (regions), nodes (typed: system/legacy/agent/review/service/data/gateway/module/stage/infra/human/future/approach), and edges (kind: flow/dep/data/ctrl, optional label, optional dir 'h'|'v' to force the connection axis, optional animated for a flowing dot). Node x,y are top-left in a 1280x820 space; the engine fits and lets the reader drag/pan/zoom. title/blurb/narrative carry {en,fr}; node labels and detail are plain strings and read in both locales until translated. The narrative is the accessible description and the audio script. Downloadable, editable source for the canvas in paper xs7uh; scenes embed individually via canvas:scene.",
+  "version": "3",
   "title": { "en": "The Solution Landscape", "fr": "Le paysage de la solution" },
   "scenes": [
     {
@@ -25,10 +25,10 @@
         "edges": [
           { "from": "estate", "to": "det", "kind": "flow", "label": "clone & count", "animated": true },
           { "from": "estate", "to": "judge", "kind": "dep" },
-          { "from": "det", "to": "judge", "kind": "flow", "label": "evidence" },
-          { "from": "judge", "to": "health", "kind": "data" },
-          { "from": "judge", "to": "canvas", "kind": "data" },
-          { "from": "judge", "to": "disp", "kind": "data" }
+          { "from": "det", "to": "judge", "kind": "flow", "label": "evidence", "dir": "v", "animated": true },
+          { "from": "judge", "to": "health", "kind": "data", "animated": true },
+          { "from": "judge", "to": "canvas", "kind": "data", "animated": true },
+          { "from": "judge", "to": "disp", "kind": "data", "animated": true }
         ]
       }
     },
@@ -79,11 +79,11 @@
           { "id": "cloud", "type": "infra", "label": "Cloud & compute", "sub": "GCP · Azure · AWS · on-prem GPU · 3 data centres", "x": 360, "y": 670, "w": 560, "detail": "Google Cloud, Azure, AWS, an on-premises GPU cluster, and three legacy data centres." }
         ],
         "edges": [
-          { "from": "cloud", "to": "access", "kind": "flow" },
-          { "from": "access", "to": "models", "kind": "flow" },
-          { "from": "models", "to": "gateway", "kind": "flow", "animated": true },
-          { "from": "gateway", "to": "deploy", "kind": "flow" },
-          { "from": "deploy", "to": "security", "kind": "flow" }
+          { "from": "cloud", "to": "access", "kind": "flow", "dir": "v", "animated": true },
+          { "from": "access", "to": "models", "kind": "flow", "dir": "v", "animated": true },
+          { "from": "models", "to": "gateway", "kind": "flow", "dir": "v", "animated": true },
+          { "from": "gateway", "to": "deploy", "kind": "flow", "dir": "v", "animated": true },
+          { "from": "deploy", "to": "security", "kind": "flow", "dir": "v", "animated": true }
         ]
       }
     },
@@ -99,7 +99,7 @@
       "graph": {
         "groups": [ { "id": "hp", "label": "The harness", "x": 40, "y": 640, "w": 1160, "h": 130 } ],
         "nodes": [
-          { "id": "worker", "type": "agent", "label": "Worker agent", "sub": "writes the application code", "metric": "~95 controls", "x": 548, "y": 330, "x2": 0, "detail": "The coding agent paired with a person. Its work is gated by the four review agents and grounded by the harness parts." },
+          { "id": "worker", "type": "agent", "label": "Worker agent", "sub": "writes the application code", "metric": "~95 controls", "x": 548, "y": 330, "detail": "The coding agent paired with a person. Its work is gated by the four review agents and grounded by the harness parts." },
           { "id": "green", "type": "review", "color": "#2f7a3f", "label": "Green", "sub": "code hygiene · deterministic", "x": 250, "y": 130, "detail": "Vulnerable dependencies, committed secrets, dangerous patterns, thin coverage. ~30 deterministic checks. Runs first; the evidence base others read." },
           { "id": "yellow", "type": "review", "color": "#b8860b", "label": "Yellow", "sub": "prose audit · deterministic", "x": 846, "y": 130, "detail": "Walks 12 rules across all project prose, flagging AI tells with a plain rewrite. Deterministic, runs in parallel, cheapest." },
           { "id": "red", "type": "review", "color": "#b1331a", "label": "Red", "sub": "attacker · recon + planning", "x": 250, "y": 520, "detail": "Outside-in reconnaissance with deterministic tooling, then a Claude pass that plans concrete attack paths. Authorized targets only." },
@@ -111,15 +111,15 @@
           { "id": "evals", "type": "infra", "label": "Evals", "sub": "checks every release", "x": 980, "y": 670, "w": 150, "h": 64, "detail": "Probabilistic and deterministic checks run on every release." }
         ],
         "edges": [
-          { "from": "green", "to": "worker", "kind": "ctrl", "label": "gate" },
-          { "from": "yellow", "to": "worker", "kind": "ctrl", "label": "gate" },
-          { "from": "red", "to": "worker", "kind": "ctrl", "label": "gate", "animated": true },
-          { "from": "blue", "to": "worker", "kind": "ctrl", "label": "gate" },
-          { "from": "claude", "to": "worker", "kind": "dep" },
-          { "from": "skills", "to": "worker", "kind": "dep" },
-          { "from": "tmpl", "to": "worker", "kind": "dep" },
-          { "from": "hooks", "to": "worker", "kind": "dep" },
-          { "from": "evals", "to": "worker", "kind": "dep" }
+          { "from": "green", "to": "worker", "kind": "ctrl", "label": "gate", "dir": "v", "animated": true },
+          { "from": "yellow", "to": "worker", "kind": "ctrl", "label": "gate", "dir": "v", "animated": true },
+          { "from": "red", "to": "worker", "kind": "ctrl", "label": "gate", "dir": "v", "animated": true },
+          { "from": "blue", "to": "worker", "kind": "ctrl", "label": "gate", "dir": "v", "animated": true },
+          { "from": "claude", "to": "worker", "kind": "dep", "dir": "v" },
+          { "from": "skills", "to": "worker", "kind": "dep", "dir": "v" },
+          { "from": "tmpl", "to": "worker", "kind": "dep", "dir": "v" },
+          { "from": "hooks", "to": "worker", "kind": "dep", "dir": "v" },
+          { "from": "evals", "to": "worker", "kind": "dep", "dir": "v" }
         ]
       }
     },
@@ -150,14 +150,14 @@
           { "id": "leader", "type": "data", "label": "Leaderboard & audit", "sub": "human vs AI chess clock", "x": 995, "y": 490, "detail": "A leaderboard and audit reports; a chess clock splits human and AI time." }
         ],
         "edges": [
-          { "from": "chat", "to": "reqs", "kind": "flow" },
-          { "from": "reqs", "to": "pcanvas", "kind": "flow" },
+          { "from": "chat", "to": "reqs", "kind": "flow", "dir": "v", "animated": true },
+          { "from": "reqs", "to": "pcanvas", "kind": "flow", "dir": "v", "animated": true },
           { "from": "pcanvas", "to": "vm", "kind": "flow", "label": "handoff", "animated": true },
-          { "from": "vm", "to": "containerize", "kind": "flow" },
-          { "from": "containerize", "to": "observe", "kind": "flow" },
+          { "from": "vm", "to": "containerize", "kind": "flow", "dir": "v", "animated": true },
+          { "from": "containerize", "to": "observe", "kind": "flow", "dir": "v", "animated": true },
           { "from": "observe", "to": "board", "kind": "flow", "label": "deliver", "animated": true },
-          { "from": "board", "to": "reaper", "kind": "ctrl" },
-          { "from": "board", "to": "leader", "kind": "data" }
+          { "from": "board", "to": "reaper", "kind": "ctrl", "dir": "v" },
+          { "from": "board", "to": "leader", "kind": "data", "dir": "v" }
         ]
       }
     },
@@ -171,29 +171,29 @@
         "en": "This scene is the Velocity delivery game, a snakes-and-ladders track of eight stages: requirements, planning, architecture, prototype, development, user testing, user acceptance, and deployment. A project token moves along the track. Forward motion earns points: starting a step earns ten, submitting for review earns twenty, completing a step earns one hundred. Backsliding loses them and the loss is permanent: a rejection costs thirty, sending work back a stage costs fifty per stage, reopening a completed step costs fifty. An enforcement agent called the Reaper removes the points. The board exists because old-style estimation fails once AI codes a hundred times faster, and the program target is a twentyfold acceleration of real delivery.",
         "fr": "TODO-FR: The Velocity board: eight stages, points for forward motion, permanent loss for backsliding, enforced by the Reaper, targeting a twentyfold acceleration." },
       "graph": {
-        "groups": [],
+        "groups": [ { "id": "track", "label": "Delivery track · forward earns points", "x": 24, "y": 250, "w": 1232, "h": 150 } ],
         "nodes": [
-          { "id": "s1", "type": "stage", "label": "Requirements", "metric": "01", "x": 60, "y": 150, "w": 160, "h": 60, "detail": "Stage 1. Skills are organized one per stage; tracking is at the step level within a module." },
-          { "id": "s2", "type": "stage", "label": "Planning", "metric": "02", "x": 300, "y": 150, "w": 160, "h": 60, "detail": "Stage 2." },
-          { "id": "s3", "type": "stage", "label": "Architecture", "metric": "03", "x": 540, "y": 150, "w": 160, "h": 60, "detail": "Stage 3." },
-          { "id": "s4", "type": "stage", "label": "Prototype", "metric": "04", "x": 780, "y": 150, "w": 160, "h": 60, "detail": "Stage 4." },
-          { "id": "s5", "type": "stage", "label": "Development", "metric": "05", "x": 780, "y": 430, "w": 160, "h": 60, "detail": "Stage 5." },
-          { "id": "s6", "type": "stage", "label": "User Testing", "metric": "06", "x": 540, "y": 430, "w": 160, "h": 60, "detail": "Stage 6." },
-          { "id": "s7", "type": "stage", "label": "User Acceptance", "metric": "07", "x": 300, "y": 430, "w": 160, "h": 60, "detail": "Stage 7." },
-          { "id": "s8", "type": "stage", "label": "Deployment", "metric": "08", "x": 60, "y": 430, "w": 160, "h": 60, "detail": "Stage 8. Projects auto-create a workspace with a folder per module." },
-          { "id": "score", "type": "data", "label": "Scoring", "sub": "+100 complete · −50 back", "metric": "20×", "x": 1010, "y": 150, "detail": "Start +10, submit +20, complete +100; reject −30, send back −50 per stage, reopen −50. The program target is a 20x acceleration." },
-          { "id": "reaper", "type": "agent", "color": "#b1331a", "label": "The Reaper", "sub": "removes points, permanently", "x": 1010, "y": 430, "detail": "The enforcement agent. Removes points when work backslides, and removes them again at a 2x multiplier." }
+          { "id": "s1", "type": "stage", "label": "Requirements", "metric": "01", "x": 40, "y": 290, "w": 150, "h": 66, "detail": "Stage 1. Skills are organized one per stage; tracking is at the step level within a module. Start +10, submit +20, complete +100." },
+          { "id": "s2", "type": "stage", "label": "Planning", "metric": "02", "x": 192, "y": 290, "w": 150, "h": 66, "detail": "Stage 2." },
+          { "id": "s3", "type": "stage", "label": "Architecture", "metric": "03", "x": 344, "y": 290, "w": 150, "h": 66, "detail": "Stage 3." },
+          { "id": "s4", "type": "stage", "label": "Prototype", "metric": "04", "x": 496, "y": 290, "w": 150, "h": 66, "detail": "Stage 4." },
+          { "id": "s5", "type": "stage", "label": "Development", "metric": "05", "x": 648, "y": 290, "w": 150, "h": 66, "detail": "Stage 5." },
+          { "id": "s6", "type": "stage", "label": "User Testing", "metric": "06", "x": 800, "y": 290, "w": 150, "h": 66, "detail": "Stage 6." },
+          { "id": "s7", "type": "stage", "label": "User Acceptance", "metric": "07", "x": 952, "y": 290, "w": 150, "h": 66, "detail": "Stage 7." },
+          { "id": "s8", "type": "stage", "label": "Deployment", "metric": "08", "x": 1104, "y": 290, "w": 150, "h": 66, "detail": "Stage 8. Projects auto-create a workspace with a folder per module." },
+          { "id": "score", "type": "data", "label": "Scoring", "sub": "+10 start · +100 complete", "metric": "20×", "x": 300, "y": 560, "w": 220, "detail": "Start +10, submit +20, complete +100; reject −30, send back −50 per stage, reopen −50. The program target is a 20x acceleration of real delivery." },
+          { "id": "reaper", "type": "agent", "color": "#b1331a", "label": "The Reaper", "sub": "removes points, permanently", "x": 760, "y": 560, "w": 200, "detail": "The enforcement agent. Removes points when work backslides, and removes them again at a 2x multiplier." }
         ],
         "edges": [
           { "from": "s1", "to": "s2", "kind": "flow", "animated": true },
           { "from": "s2", "to": "s3", "kind": "flow", "animated": true },
           { "from": "s3", "to": "s4", "kind": "flow", "animated": true },
           { "from": "s4", "to": "s5", "kind": "flow", "animated": true },
-          { "from": "s5", "to": "s6", "kind": "flow" },
-          { "from": "s6", "to": "s7", "kind": "flow" },
-          { "from": "s7", "to": "s8", "kind": "flow" },
-          { "from": "s6", "to": "reaper", "kind": "ctrl", "label": "−50" },
-          { "from": "s4", "to": "score", "kind": "dep" }
+          { "from": "s5", "to": "s6", "kind": "flow", "animated": true },
+          { "from": "s6", "to": "s7", "kind": "flow", "animated": true },
+          { "from": "s7", "to": "s8", "kind": "flow", "animated": true },
+          { "from": "s6", "to": "reaper", "kind": "ctrl", "label": "send back −50", "dir": "v" },
+          { "from": "s3", "to": "score", "kind": "dep", "dir": "v" }
         ]
       }
     },
@@ -207,27 +207,27 @@
         "en": "This scene shows the inverted hierarchy from the compression problem. In a human organization there is roughly one manager for every eight staff. In an agentic hierarchy the ratio inverts: for every worker agent, you can reasonably run eight supervisor agents auditing and validating the work. The worker sits at the base, and above it sit the supervisors, each holding one concern: cybersecurity, quality assurance, change management, code review, infrastructure, communications, legal, and privacy. There can be one chef in the kitchen, surrounded by sub-agents each running its own continuous audit. The spatial picture is the point: the work of overseeing now outnumbers the work of producing, eight to one.",
         "fr": "TODO-FR: The inverted hierarchy: one worker agent, eight supervisor agents above it, each holding one concern." },
       "graph": {
-        "groups": [ { "id": "sup", "label": "Supervisors · audit & validate", "x": 40, "y": 90, "w": 1200, "h": 360 } ],
+        "groups": [ { "id": "sup", "label": "Supervisors · audit & validate", "x": 40, "y": 90, "w": 1200, "h": 380 } ],
         "nodes": [
-          { "id": "cyber", "type": "review", "label": "Cybersecurity", "x": 80, "y": 130, "w": 150, "h": 60, "detail": "Audits security continuously." },
-          { "id": "qa", "type": "review", "label": "QA", "x": 300, "y": 130, "w": 150, "h": 60, "detail": "Validates quality." },
-          { "id": "change", "type": "review", "label": "Change mgmt", "x": 520, "y": 130, "w": 150, "h": 60, "detail": "Tracks and manages change." },
-          { "id": "review", "type": "review", "label": "Code review", "x": 740, "y": 130, "w": 150, "h": 60, "detail": "Reviews the worker's code with a fresh context." },
-          { "id": "infra", "type": "review", "label": "Infrastructure", "x": 190, "y": 310, "w": 150, "h": 60, "detail": "Watches infrastructure and deployment." },
-          { "id": "comms", "type": "review", "label": "Communications", "x": 410, "y": 310, "w": 150, "h": 60, "detail": "Handles communications." },
-          { "id": "legal", "type": "review", "label": "Legal", "x": 630, "y": 310, "w": 150, "h": 60, "detail": "Checks legal constraints." },
-          { "id": "privacy", "type": "review", "label": "Privacy", "x": 850, "y": 310, "w": 150, "h": 60, "detail": "Checks privacy and PII." },
-          { "id": "worker", "type": "agent", "label": "Worker agent", "sub": "one chef in the kitchen", "metric": "1 : 8", "x": 500, "y": 640, "w": 280, "h": 76, "detail": "The single producing agent. For every worker, eight supervisors audit and validate. The ratio inverts the human one-to-eight." }
+          { "id": "cyber", "type": "review", "label": "Cybersecurity", "x": 70, "y": 140, "w": 160, "h": 60, "detail": "Audits security continuously." },
+          { "id": "qa", "type": "review", "label": "QA", "x": 290, "y": 140, "w": 160, "h": 60, "detail": "Validates quality." },
+          { "id": "change", "type": "review", "label": "Change mgmt", "x": 510, "y": 140, "w": 160, "h": 60, "detail": "Tracks and manages change." },
+          { "id": "review", "type": "review", "label": "Code review", "x": 730, "y": 140, "w": 160, "h": 60, "detail": "Reviews the worker's code with a fresh context." },
+          { "id": "infra", "type": "review", "label": "Infrastructure", "x": 180, "y": 320, "w": 160, "h": 60, "detail": "Watches infrastructure and deployment." },
+          { "id": "comms", "type": "review", "label": "Communications", "x": 400, "y": 320, "w": 160, "h": 60, "detail": "Handles communications." },
+          { "id": "legal", "type": "review", "label": "Legal", "x": 620, "y": 320, "w": 160, "h": 60, "detail": "Checks legal constraints." },
+          { "id": "privacy", "type": "review", "label": "Privacy", "x": 840, "y": 320, "w": 160, "h": 60, "detail": "Checks privacy and PII." },
+          { "id": "worker", "type": "agent", "label": "Worker agent", "sub": "one chef in the kitchen", "metric": "1 : 8", "x": 480, "y": 620, "w": 300, "h": 80, "detail": "The single producing agent. For every worker, eight supervisors audit and validate. The ratio inverts the human one-to-eight." }
         ],
         "edges": [
-          { "from": "cyber", "to": "worker", "kind": "ctrl" },
-          { "from": "qa", "to": "worker", "kind": "ctrl" },
-          { "from": "change", "to": "worker", "kind": "ctrl" },
-          { "from": "review", "to": "worker", "kind": "ctrl", "animated": true },
-          { "from": "infra", "to": "worker", "kind": "ctrl" },
-          { "from": "comms", "to": "worker", "kind": "ctrl" },
-          { "from": "legal", "to": "worker", "kind": "ctrl" },
-          { "from": "privacy", "to": "worker", "kind": "ctrl" }
+          { "from": "cyber", "to": "worker", "kind": "ctrl", "dir": "v", "animated": true },
+          { "from": "qa", "to": "worker", "kind": "ctrl", "dir": "v", "animated": true },
+          { "from": "change", "to": "worker", "kind": "ctrl", "dir": "v", "animated": true },
+          { "from": "review", "to": "worker", "kind": "ctrl", "dir": "v", "animated": true },
+          { "from": "infra", "to": "worker", "kind": "ctrl", "dir": "v", "animated": true },
+          { "from": "comms", "to": "worker", "kind": "ctrl", "dir": "v", "animated": true },
+          { "from": "legal", "to": "worker", "kind": "ctrl", "dir": "v", "animated": true },
+          { "from": "privacy", "to": "worker", "kind": "ctrl", "dir": "v", "animated": true }
         ]
       }
     },
@@ -264,11 +264,11 @@
         "edges": [
           { "from": "l1", "to": "rat", "kind": "flow", "animated": true },
           { "from": "l4", "to": "rat", "kind": "flow", "animated": true },
-          { "from": "lmore", "to": "rat", "kind": "flow" },
+          { "from": "lmore", "to": "rat", "kind": "flow", "animated": true },
           { "from": "rat", "to": "m1", "kind": "data", "animated": true },
-          { "from": "rat", "to": "m3", "kind": "data" },
-          { "from": "rat", "to": "m4", "kind": "data" },
-          { "from": "rat", "to": "m6", "kind": "data" }
+          { "from": "rat", "to": "m3", "kind": "data", "animated": true },
+          { "from": "rat", "to": "m4", "kind": "data", "animated": true },
+          { "from": "rat", "to": "m6", "kind": "data", "animated": true }
         ]
       }
     }

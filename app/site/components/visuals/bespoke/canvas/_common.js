@@ -75,20 +75,26 @@
   function center(n) { return { x: n.x + nw(n) / 2, y: n.y + nh(n) / 2 }; }
 
   /* Choose exit/entry anchor points on node borders based on relative position. */
-  function anchors(a, b) {
+  /* Anchor points on node borders. forceDir ('h'|'v') overrides the heuristic.
+     The entry point is clamped to the target's face and biased under/beside the
+     source, so several edges converging on one node land cleanly across its
+     edge rather than all at the centre or into a corner. */
+  function anchors(a, b, forceDir) {
     const ca = center(a), cb = center(b);
     const dx = cb.x - ca.x, dy = cb.y - ca.y;
-    let sx, sy, tx, ty, dir;
-    if (Math.abs(dx) >= Math.abs(dy)) {
-      dir = 'h';
+    const pad = 18;
+    const horiz = forceDir ? forceDir === 'h' : Math.abs(dx) >= Math.abs(dy);
+    let sx, sy, tx, ty;
+    if (horiz) {
       if (dx >= 0) { sx = a.x + nw(a); tx = b.x; } else { sx = a.x; tx = b.x + nw(b); }
-      sy = ca.y; ty = cb.y;
+      sy = ca.y;
+      ty = Math.max(b.y + pad, Math.min(b.y + nh(b) - pad, ca.y));
     } else {
-      dir = 'v';
       if (dy >= 0) { sy = a.y + nh(a); ty = b.y; } else { sy = a.y; ty = b.y + nh(b); }
-      sx = ca.x; tx = cb.x;
+      sx = ca.x;
+      tx = Math.max(b.x + pad, Math.min(b.x + nw(b) - pad, ca.x));
     }
-    return { sx, sy, tx, ty, dir };
+    return { sx, sy, tx, ty, dir: horiz ? 'h' : 'v' };
   }
   function edgePath(p) {
     const { sx, sy, tx, ty, dir } = p;
@@ -153,22 +159,29 @@
     return h('defs', {}, Object.keys(EDGE).map(k => h('marker', { id: 'cv-arrow-' + k, viewBox: '0 0 10 10', refX: 9, refY: 5, markerWidth: 7, markerHeight: 7, orient: 'auto-start-reverse' }, [h('path', { d: 'M0 0 L10 5 L0 10 z', fill: EDGE[k].stroke })])));
   }
 
-  /* Animate agent tokens along a list of resolved edge anchor specs. */
-  function animateAgents(svg, edgeAps, color) {
+  /* Animate a flow dot continuously along each resolved edge. Every animated
+     edge gets its own looping tween (phase-offset so they are not in lockstep),
+     so all flows move at once and the whole diagram reads as live. Returns a
+     controller with kill(). */
+  function animateAgents(svg, edgeAps) {
     if (!gsapOK() || !svg || !edgeAps.length) return null;
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.3 });
+    const tweens = [];
     edgeAps.forEach((ap, i) => {
       const tok = svg.querySelector('[data-agent="' + i + '"]');
       if (!tok) return;
+      tok.setAttribute('opacity', '1');
       const proxy = { t: 0 };
-      tl.fromTo(proxy, { t: 0 }, {
-        t: 1, duration: 1.6, ease: 'power1.inOut',
-        onStart: () => tok.setAttribute('opacity', '1'),
-        onUpdate: () => { const p = bezierPt(proxy.t, ap); tok.setAttribute('transform', 'translate(' + p.x + ',' + p.y + ')'); },
-        onComplete: () => tok.setAttribute('opacity', '0'),
-      }, i * 0.5);
+      const tw = gsap.to(proxy, {
+        t: 1, duration: 1.9, ease: 'none', repeat: -1, delay: (i % 6) * 0.28,
+        onUpdate: () => {
+          const p = bezierPt(proxy.t, ap);
+          tok.setAttribute('transform', 'translate(' + p.x + ',' + p.y + ')');
+          tok.setAttribute('opacity', String(proxy.t < 0.08 ? proxy.t / 0.08 : proxy.t > 0.92 ? (1 - proxy.t) / 0.08 : 1));
+        },
+      });
+      tweens.push(tw);
     });
-    return tl;
+    return { kill() { tweens.forEach(t => { try { t.kill(); } catch (e) {} }); } };
   }
 
   if (!document.getElementById('canvas-visual-styles')) {

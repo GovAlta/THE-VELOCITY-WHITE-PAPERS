@@ -32,7 +32,7 @@
         return (this.graph.edges || []).map(e => {
           const a = this.nodeMap[e.from], b = this.nodeMap[e.to];
           if (!a || !b) return null;
-          return { from: e.from, to: e.to, label: e.label, kind: e.kind, animated: e.animated, ap: C.anchors(a, b) };
+          return { from: e.from, to: e.to, label: e.label, kind: e.kind, animated: e.animated, ap: C.anchors(a, b, e.dir) };
         }).filter(Boolean);
       },
       animKey() { return (this.sceneObj ? this.sceneObj.id : '') + ':' + this.loc; },
