@@ -76,10 +76,22 @@
         "caption": "The taxes the hierarchy imposes",
         "visual_config": {
           "items": [
-            { "label": "The time tax", "desc": "A round trip that takes a month between leadership and ground truth can take seconds among agents." },
-            { "label": "The verbosity tax", "desc": "A large context window can absorb a thousand status reports at once and pattern-match the signal." },
-            { "label": "Shared memory", "desc": "Agents access the same ground truth at any level, so there is no slow game of telephone." },
-            { "label": "Parallelism", "desc": "Dozens or hundreds of differentiated agents work concurrently, each running its own audit." }
+            {
+              "label": "The time tax",
+              "desc": "A round trip that takes a month between leadership and ground truth can take seconds among agents."
+            },
+            {
+              "label": "The verbosity tax",
+              "desc": "A large context window can absorb a thousand status reports at once and pattern-match the signal."
+            },
+            {
+              "label": "Shared memory",
+              "desc": "Agents access the same ground truth at any level, so there is no slow game of telephone."
+            },
+            {
+              "label": "Parallelism",
+              "desc": "Dozens or hundreds of differentiated agents work concurrently, each running its own audit."
+            }
           ]
         },
         "text": "AI agents work fundamentally differently from people. They still face limits, but they overcome much of what the human hierarchy imposes: the month-long time tax of a round trip, the need to compress for verbosity, and the lossy human handoff. Agents share a common memory and run in parallel, so a request that took a month can take seconds."
@@ -123,12 +135,30 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "The compression problem" },
-    { "n": "02", "title": "How hierarchies translate in the AI age" },
-    { "n": "03", "title": "Inverting the hierarchy" },
-    { "n": "04", "title": "The limits agents still face" },
-    { "n": "05", "title": "Transforming the briefing" },
-    { "n": "06", "title": "The future organization and the human in the loop" }
+    {
+      "n": "01",
+      "title": "The compression problem"
+    },
+    {
+      "n": "02",
+      "title": "How hierarchies translate in the AI age"
+    },
+    {
+      "n": "03",
+      "title": "Inverting the hierarchy"
+    },
+    {
+      "n": "04",
+      "title": "The limits agents still face"
+    },
+    {
+      "n": "05",
+      "title": "Transforming the briefing"
+    },
+    {
+      "n": "06",
+      "title": "The future organization and the human in the loop"
+    }
   ],
   "blocks": [
     {
@@ -155,7 +185,11 @@
     },
     {
       "type": "paragraph",
-      "text": "Middle management also runs the compression in the other direction. A vision held at the top must be contextualized for each unit. If you are in finance, the vision may mean sacrificing some profitability to support the brand and to remain principled in how you deliver services. All of this requires the context of the unit, and a leader may not have the time to write a bespoke vision statement for every employee. Middle management takes a direction or strategy and, through its closer association with the units it oversees, contextualizes that vision and answers the critical question: what do we do differently on Monday morning as a result of this vision? A functional organization transforms vision into specific tactics. A dysfunctional organization leaves such statements ambiguous and leaves individual contributors uncertain how their standard operating procedures and tactics are expected to change."
+      "text": "In reverse, hierarchical organizations also serve as an information decompression algorithm. In the Alberta AI Academy we use the term hydration: a small amount of information, such as a vision statement, can be expanded and contextualized until it is relevant to each of the thousand individual contributors. Imagine a vision statement that the organization will be extremely human-centric. That statement means different things to different functions. In customer service, it may mean training people to have meaningful and empathetic conversations. In product development, it may mean building products that are highly customizable to the user's individual physiology or psychology. In marketing, it may mean telling stories that resonate with customers on a personal level. In finance, it may mean sacrificing some profitability to support the brand image and to remain principled in how you deliver your services. All of these require the context of the unit, and a leader may not have the time to write a bespoke vision statement for every employee."
+    },
+    {
+      "type": "paragraph",
+      "text": "Middle management takes a direction or strategy and, through its closer association with and knowledge of the units it oversees, contextualizes that vision and answers the critical question: what do we do differently on Monday morning as a result of this vision? A functional organization does this effectively, transforming vision into specific tactics. A dysfunctional organization leaves such statements ambiguous and leaves individual contributors confused and uncertain about how their standard operating procedures and tactics are expected to change."
     },
     {
       "type": "figure",
