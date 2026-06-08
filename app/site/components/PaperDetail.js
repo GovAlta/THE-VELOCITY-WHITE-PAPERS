@@ -193,11 +193,26 @@
                 <div class="l">{{ (store.t.ui && store.t.ui.status) || 'Status' }}</div>
                 <div class="v">{{ paper.status }}</div>
               </div>
+              <div class="field" v-if="paper._meta && paper._meta.updated">
+                <div class="l">{{ store.locale === 'fr' ? 'Mis à jour' : 'Updated' }}</div>
+                <div class="v">{{ paper._meta.updated }}</div>
+              </div>
               <div class="field" v-if="paper.repo">
                 <div class="l">{{ (store.t.ui && store.t.ui.repository) || 'Repository' }}</div>
                 <div class="v"><a :href="paper.repo">{{ paper.repo.replace('https://github.com/','') }}</a></div>
               </div>
             </div>
+            <details class="doc-changelog" v-if="paper._meta && paper._meta.changelog && paper._meta.changelog.length"
+                     style="margin-top:6px;">
+              <summary style="cursor:pointer;font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);">
+                {{ store.locale === 'fr' ? 'Quoi de neuf' : 'What changed' }} ({{ paper._meta.changelog.length }})
+              </summary>
+              <ul style="list-style:none;padding:8px 0 0;margin:0;">
+                <li v-for="(c, i) in paper._meta.changelog" :key="i" style="padding:4px 0;font-size:13px;line-height:1.5;color:var(--ink-70);">
+                  <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);">{{ c.date }}</span> · {{ c.note }}
+                </li>
+              </ul>
+            </details>
 
             <div v-if="edit && edit.enabled" class="vw-meta-edit">
               <div class="vw-meta-row">

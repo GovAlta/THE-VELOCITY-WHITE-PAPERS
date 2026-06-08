@@ -124,7 +124,9 @@ The full schema for a paper JSON lives at the top of each `data/papers/<id>.en.j
   "_meta": {
     "placeholder": true | false,
     "written_by": "…",
-    "notes": "…"
+    "notes": "…",
+    "updated": "2026-06-16",                                  // optional; shows an "Updated" date on the paper
+    "changelog": [{ "date": "2026-06-16", "note": "What changed." }]  // optional; shows an expandable "What changed" list
   }
 }
 ```
