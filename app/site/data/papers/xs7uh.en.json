@@ -24,7 +24,7 @@
     "briefing"
   ],
   "repo": null,
-  "abstract": "The Compression Problem argues that a written briefing cannot carry the fidelity of a system at scale, and that a visual, spatial, interactive representation can. This appendix is that argument made literal. It assembles the whole approach into one interactive canvas: the legacy estate, the four approaches to modernization, the agentic technology stack, the harness and its review agents, the AI factory, the delivery game, the inverted hierarchy, and the future state. Each scene is a data-driven, downloadable, bilingual diagram with animated agents and a spoken description, and each can be embedded on its own in the paper it comes from. Move through it, zoom in, and take the architecture away.",
+  "abstract": "The Compression Problem argues that a written briefing cannot carry the fidelity of a system at scale, and that a visual, spatial, interactive representation can. This appendix is that argument made literal. It assembles the whole approach into one interactive canvas: the legacy estate, the four approaches to modernization, the agentic technology stack, the harness and its review agents, cyber defense, the AI factory, the delivery game, keeping the work in sync, the inverted hierarchy, the future state, and the Government 3.0 runtime. Each scene is a data-driven, downloadable, bilingual diagram with animated agents and a spoken description, and each can be embedded on its own in the paper it comes from. Move through it, zoom in, and take the architecture away.",
   "hero_image": {
     "src": "public/images/xs7uh/en/hero.jpg",
     "alt": "Editorial image for: The Canvas",
@@ -63,7 +63,7 @@
             { "label": "Animated agents", "desc": "Agents move through each scene, so the structure is shown rather than described." }
           ]
         },
-        "text": "The canvas holds eight scenes, one per major idea in the collection, with agents animated through each. You step between them with the scene chips, zoom and pan, expand to full screen, and read or hear a description of what each scene shows."
+        "text": "The canvas holds eleven scenes, one per major idea in the collection, with agents animated through each. You step between them with the scene chips, drag nodes, zoom and pan, expand to full screen, and read or hear a description of what each scene shows."
       },
       {
         "id": "03",
@@ -112,7 +112,7 @@
       "type": "figure",
       "fno": "FIG. 18.1",
       "title": "The Solution Landscape",
-      "caption": "An interactive tour of the whole approach. Eight data-driven scenes with animated agents: the legacy estate, the four approaches, the agentic stack, the harness and its review agents, the AI factory, the delivery game, the inverted hierarchy, and the future state. Step between scenes, zoom, expand to full screen, listen to the description, or download any scene as JSON.",
+      "caption": "An interactive tour of the whole approach. Eleven data-driven scenes with animated agents: the legacy estate, the four approaches, the agentic stack, the harness and its review agents, cyber defense, the AI factory, the delivery game, keeping the work in sync, the inverted hierarchy, the future state, and the Government 3.0 runtime. Drag nodes, step between scenes, zoom, expand to full screen, listen, or download any scene as JSON.",
       "chart": { "kind": "canvas:tour" }
     },
     {
@@ -122,7 +122,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The eight scenes trace the same arc the collection does, from the ground truth of the legacy estate to the future state that replaces it. Each is also embeddable on its own in its home paper, so the diagram you meet here is the same one that paper can carry."
+      "text": "The eleven scenes trace the same arc the collection does, from the ground truth of the legacy estate to the future state that replaces it, with the cross-cutting concerns of cyber defense and keeping the work in sync alongside. Each is also embeddable on its own in its home paper, so the diagram you meet here is the same one that paper can carry."
     },
     {
       "type": "table",
@@ -136,7 +136,10 @@
         ["The AI factory", "Pronghorn ideation, Nexus orchestration, Velocity delivery, with agents flowing across.", "The AI Factory"],
         ["The delivery game", "Eight stages; points for forward motion, permanent loss for backsliding, the Reaper.", "The Velocity Game Engine"],
         ["The inverted hierarchy", "One worker agent, eight supervisors — the compression problem, solved spatially.", "The Compression Problem"],
-        ["The future state", "185 applications collapsed into 16 shared modules; complexity down more than 90%.", "Git Insights Ministry"]
+        ["The future state", "185 applications collapsed into 16 shared modules; complexity down more than 90%.", "Git Insights Ministry"],
+        ["Cyber defense", "AI defending at machine speed; ~189M attempts a day blocked; modernization cuts the attack surface.", "The Cyber Imperative"],
+        ["Keeping work in sync", "Observer harnesses watch the 14-link chain and file tickets the builder clears.", "The Anti-Drift Harness"],
+        ["Government 3.0 runtime", "No app: an agent acts on governed data through guardrails and generates the interface on demand.", "The Four Approaches"]
       ],
       "source": "The Solution Landscape canvas."
     },

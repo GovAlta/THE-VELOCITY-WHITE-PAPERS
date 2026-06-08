@@ -124,6 +124,40 @@
       }
     },
     {
+      "id": "cyber",
+      "kind": "graph",
+      "paper": "mwo98",
+      "title": { "en": "The cyber imperative", "fr": "L'impératif cybernétique" },
+      "blurb": { "en": "The siege is intensifying and the walls are aging. AI defends at machine speed, and modernization cuts the attack surface.", "fr": "Le siège s'intensifie et les murs vieillissent. L'IA défend à la vitesse de la machine." },
+      "narrative": {
+        "en": "This scene shows the cyber imperative: why modernization is a security requirement. On the left, the siege outside the wall. Cyber controls now block about one hundred eighty-nine million connection attempts a day, more than double two years ago; AI is generating exploits at machine speed; and the software supply chain has become the primary target. In the centre, the harness's review agents defend at the same speed: Red runs attacker reconnaissance and plans attack paths, Green checks the supply chain for vulnerable dependencies and secrets, and Blue, the defender, walks every OWASP control, folds Red's reconnaissance into kill chains, and writes the verdict, about ninety-five controls on every pass. On the right, the stakes and the move: an aging estate running past vendor support is the exposure, a single incident costs on the order of five million dollars a month, and modernizing into shared modules cuts the attack surface by more than ninety percent.",
+        "fr": "TODO-FR: The cyber imperative: ~189M attempts blocked a day, AI-speed exploits, the supply chain as the target; Red/Green/Blue defend; modernization cuts the attack surface." },
+      "graph": {
+        "groups": [ { "id": "siege", "label": "Outside the wall", "x": 40, "y": 120, "w": 300, "h": 560, "color": "#b1331a" } ],
+        "nodes": [
+          { "id": "attacks", "type": "legacy", "color": "#b1331a", "label": "Connection attempts", "sub": "2× in two years", "metric": "189M/day", "x": 70, "y": 170, "detail": "Cyber controls block about 189 million connection attempts a day, more than double two years ago." },
+          { "id": "exploits", "type": "legacy", "color": "#b1331a", "label": "AI-generated exploits", "sub": "at machine speed", "x": 70, "y": 330, "detail": "Attackers use AI to generate exploits at lightning speed." },
+          { "id": "supply", "type": "legacy", "color": "#b1331a", "label": "Supply-chain attacks", "sub": "the primary target", "x": 70, "y": 490, "detail": "The software supply chain has become a primary target." },
+          { "id": "red", "type": "review", "color": "#b1331a", "label": "Red — attacker sim", "sub": "recon + attack paths", "x": 470, "y": 180, "detail": "Outside-in reconnaissance, then plans concrete attack paths. Authorized targets only." },
+          { "id": "blue", "type": "review", "color": "#1f4f8f", "label": "Blue — defender", "sub": "ASVS L2 · threat model", "metric": "~95 controls", "x": 470, "y": 350, "detail": "Threat model, every OWASP ASVS Level 2 control, Red's recon folded into kill chains, then a ranked verdict." },
+          { "id": "green", "type": "review", "color": "#2f7a3f", "label": "Green — supply chain", "sub": "deps · secrets", "x": 470, "y": 520, "detail": "Vulnerable dependencies, committed secrets, dangerous patterns." },
+          { "id": "estate", "type": "legacy", "color": "#8a6d3b", "label": "Aging estate", "sub": "past vendor support", "x": 860, "y": 200, "detail": "Much of the estate runs on technology moving past vendor support. This is the exposure." },
+          { "id": "modern", "type": "future", "label": "Modernized modules", "sub": "attack surface −90%", "x": 860, "y": 460, "detail": "Modernizing into shared modules cuts complexity and attack surface by more than 90%." },
+          { "id": "cost", "type": "data", "label": "Cost of one incident", "metric": "$5M/mo", "x": 860, "y": 640, "detail": "A single government cyber incident runs on the order of $5M per month, and that is close to a best case." }
+        ],
+        "edges": [
+          { "from": "attacks", "to": "blue", "kind": "ctrl", "label": "block", "animated": true },
+          { "from": "exploits", "to": "blue", "kind": "ctrl", "animated": true },
+          { "from": "supply", "to": "green", "kind": "ctrl", "animated": true },
+          { "from": "red", "to": "blue", "kind": "dep", "label": "kill chains" },
+          { "from": "green", "to": "blue", "kind": "data", "label": "evidence" },
+          { "from": "blue", "to": "estate", "kind": "flow", "label": "defend" },
+          { "from": "estate", "to": "modern", "kind": "flow", "label": "modernize", "dir": "v", "animated": true },
+          { "from": "estate", "to": "cost", "kind": "dep", "dir": "v" }
+        ]
+      }
+    },
+    {
       "id": "factory",
       "kind": "graph",
       "paper": "qthji",
@@ -194,6 +228,37 @@
           { "from": "s7", "to": "s8", "kind": "flow", "animated": true },
           { "from": "s6", "to": "reaper", "kind": "ctrl", "label": "send back −50", "dir": "v" },
           { "from": "s3", "to": "score", "kind": "dep", "dir": "v" }
+        ]
+      }
+    },
+    {
+      "id": "antidrift",
+      "kind": "graph",
+      "paper": "of1cj",
+      "title": { "en": "Keeping the work in sync", "fr": "Garder le travail synchronisé" },
+      "blurb": { "en": "Observer harnesses watch a builder from outside, file tickets into a filesystem bus, and the builder clears them.", "fr": "Des harnais observateurs surveillent un bâtisseur de l'extérieur et déposent des billets." },
+      "narrative": {
+        "en": "This scene shows the anti-drift harness keeping a long build in sync. A builder agent writes features and edits the chain of related artifacts, the fourteen links that run from requirements through schema, code, tests, and documentation. As a codebase grows, those links drift out of sync. Observer harnesses run as separate sessions outside the project and watch the chain: the anti-drift harness for chain drift, a security harness for vulnerabilities and secrets, a docs harness for stale documentation. When an observer finds a problem it drops a ticket into a filesystem bus, the tickets folder, and the builder reads those tickets at the start of each turn and clears them like any other work. The bus is just the filesystem, so a failure in one observer never breaks the builder.",
+        "fr": "TODO-FR: Observer harnesses watch the builder's 14-link chain from outside and file tickets into a filesystem bus the builder clears each turn." },
+      "graph": {
+        "groups": [ { "id": "obs", "label": "Observer harnesses · separate sessions", "x": 420, "y": 120, "w": 300, "h": 560, "color": "#B23F15" } ],
+        "nodes": [
+          { "id": "builder", "type": "agent", "label": "Builder", "sub": "writes features", "x": 80, "y": 320, "detail": "Writes application code and edits the chain. Reads tickets at the top of each turn and clears them like any other work." },
+          { "id": "chain", "type": "data", "label": "Chain of artifacts", "sub": "14 links: reqs → … → training", "x": 60, "y": 540, "w": 320, "detail": "Requirements, schema, migrations, controllers, code, docs, specs, training — the chain that drifts out of sync as the codebase grows." },
+          { "id": "ad", "type": "agent", "color": "#B23F15", "label": "Anti-Drift harness", "sub": "chain drift", "x": 470, "y": 170, "detail": "Watches the chain across the fourteen links, reads deterministic evidence, and files a drift ticket when a link falls out of sync." },
+          { "id": "sec", "type": "review", "color": "#1f4f8f", "label": "Security harness", "sub": "ASVS · secrets", "x": 470, "y": 350, "detail": "Watches for vulnerabilities, secrets, and dependency risk on every change." },
+          { "id": "docs", "type": "review", "color": "#b8860b", "label": "Docs harness", "sub": "README · OpenAPI", "x": 470, "y": 530, "detail": "Watches the README, OpenAPI, and training docs against the code and flags stale documentation." },
+          { "id": "tickets", "type": "service", "label": "Tickets bus", "sub": ".tickets/open/", "metric": "filesystem", "x": 820, "y": 350, "detail": "A passive filesystem inbox: observers append a markdown ticket, the builder consumes it. Crash-isolated; no observer shares context with the builder." }
+        ],
+        "edges": [
+          { "from": "builder", "to": "chain", "kind": "flow", "label": "edits", "dir": "v" },
+          { "from": "chain", "to": "ad", "kind": "dep", "label": "watch", "animated": true },
+          { "from": "chain", "to": "sec", "kind": "dep", "animated": true },
+          { "from": "chain", "to": "docs", "kind": "dep", "animated": true },
+          { "from": "ad", "to": "tickets", "kind": "flow", "label": "file ticket", "animated": true },
+          { "from": "sec", "to": "tickets", "kind": "flow", "animated": true },
+          { "from": "docs", "to": "tickets", "kind": "flow", "animated": true },
+          { "from": "tickets", "to": "builder", "kind": "ctrl", "label": "read each turn", "animated": true }
         ]
       }
     },
@@ -269,6 +334,36 @@
           { "from": "rat", "to": "m3", "kind": "data", "animated": true },
           { "from": "rat", "to": "m4", "kind": "data", "animated": true },
           { "from": "rat", "to": "m6", "kind": "data", "animated": true }
+        ]
+      }
+    },
+    {
+      "id": "gov3",
+      "kind": "graph",
+      "paper": "zgym1",
+      "title": { "en": "Government 3.0, at runtime", "fr": "Gouvernement 3.0, à l'exécution" },
+      "blurb": { "en": "No application in the middle. Agents act on governed data through guardrails and generate the interface on demand.", "fr": "Aucune application au milieu. Les agents agissent sur des données gouvernées et génèrent l'interface à la demande." },
+      "narrative": {
+        "en": "This scene shows Government three point zero at runtime, the most radical of the four approaches. There is no application in the middle. A citizen or staff member asks for a service. An orchestrator agent interprets the request and works through the Bifrost guardrail layer, which enforces personal-information protection, access control, and an audit trail. It reads and writes the governed data, the single source of truth, and checks the request against policy, the legislation and regulation that govern it. Then it generates the interface the person needs in the moment, and disposes of it afterward. The application as a fixed artifact dissolves; what remains is governed data, policy, and agents that compose the experience on demand.",
+        "fr": "TODO-FR: Government 3.0 at runtime: a request to an orchestrator agent, through Bifrost guardrails, against governed data and policy, generating the interface on demand with no fixed app." },
+      "graph": {
+        "groups": [ { "id": "rt", "label": "Government 3.0 runtime", "x": 300, "y": 110, "w": 600, "h": 540 } ],
+        "nodes": [
+          { "id": "citizen", "type": "human", "color": "#9a3412", "label": "Citizen / staff", "sub": "asks for a service", "x": 60, "y": 360, "detail": "A person asks for a service in plain terms, with no app to learn." },
+          { "id": "orch", "type": "agent", "label": "Orchestrator agent", "sub": "interprets the request", "x": 360, "y": 360, "detail": "Interprets the request and composes the response from governed data and policy." },
+          { "id": "policy", "type": "service", "label": "Policy & rules", "sub": "legislation · regulation", "x": 660, "y": 160, "detail": "The legislation and regulation that govern the request; the model stays synchronized to it." },
+          { "id": "bifrost", "type": "gateway", "label": "Bifrost guardrails", "sub": "PII · access · audit", "x": 660, "y": 360, "detail": "Enforces personal-information protection, access control, and an audit trail on every action." },
+          { "id": "govdata", "type": "data", "label": "Governed data", "sub": "single source of truth", "x": 660, "y": 540, "detail": "The governed data, read and written only through the guardrail layer." },
+          { "id": "ui", "type": "future", "label": "Generated interface", "sub": "built in the moment, then disposed", "metric": "no app", "x": 1000, "y": 360, "detail": "The interface the person needs, generated on demand and disposed afterward. No fixed application as an artifact." }
+        ],
+        "edges": [
+          { "from": "citizen", "to": "orch", "kind": "flow", "label": "request", "animated": true },
+          { "from": "orch", "to": "policy", "kind": "dep" },
+          { "from": "orch", "to": "bifrost", "kind": "flow", "animated": true },
+          { "from": "bifrost", "to": "govdata", "kind": "data", "dir": "v", "animated": true },
+          { "from": "policy", "to": "ui", "kind": "dep" },
+          { "from": "govdata", "to": "ui", "kind": "data", "animated": true },
+          { "from": "bifrost", "to": "ui", "kind": "flow", "label": "generate UI", "animated": true }
         ]
       }
     }
