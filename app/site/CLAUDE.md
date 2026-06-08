@@ -111,7 +111,7 @@ The full schema for a paper JSON lives at the top of each `data/papers/<id>.en.j
   "blocks": [
     { "type": "section_heading", "n": "01", "title": "…" },
     { "type": "paragraph", "text": "…" },
-    { "type": "pullquote", "text": "…", "cite": "…" },   // visible callout only; NOT read in the long-form audio narration
+    { "type": "pullquote", "text": "…", "cite": "…" },   // visible callout; the text IS read in the long-form audio narration (the cite/attribution is not)
     { "type": "keystat", "label": "…", "value": "…", "body": "…" },
     { "type": "figure", "fno": "…", "title": "…", "caption": "…", "chart": { "kind": "mini-chart", … }, "image": { … } },
     { "type": "youtube", "fno": "…", "title": "…", "caption": "…", "url": "https://youtu.be/…", "alt": "…" },

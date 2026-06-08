@@ -1,0 +1,32 @@
+{
+  "_note": "Resources page content for one locale. The sibling .<other>.json holds the translation. Set each item's href to the official URL; an empty href renders as 'link to be added'.",
+  "page": {
+    "eyebrow": "Resources",
+    "title_lead": "Context and",
+    "title_em": "resources.",
+    "lede": "A short, curated set of links that place this work in its broader context, enough to understand where it sits without drowning out Alberta's own contribution."
+  },
+  "groups": [
+    {
+      "heading": "Government of Alberta",
+      "items": [
+        { "title": "Ministry of Technology and Innovation", "desc": "The ministry behind this collection.", "href": "" },
+        { "title": "Alberta's AI policy", "desc": "How Alberta governs the use of artificial intelligence across government.", "href": "" }
+      ]
+    },
+    {
+      "heading": "Government of Canada",
+      "items": [
+        { "title": "AI for All strategy", "desc": "Canada's national AI strategy, released June 4, 2026.", "href": "" },
+        { "title": "Buy Canadian strategy", "desc": "Federal procurement direction favouring Canadian suppliers.", "href": "" }
+      ]
+    },
+    {
+      "heading": "Sovereign capability",
+      "items": [
+        { "title": "Sovereign compute (PQR)", "desc": "Public-sector sovereign compute capacity.", "href": "" }
+      ]
+    }
+  ],
+  "pending_note": "Links are being finalized; send the exact URLs and they will be added."
+}

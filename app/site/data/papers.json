@@ -508,6 +508,66 @@
         "oxj36"
       ],
       "category": "paper"
+    },
+    {
+      "id": "l5wsi",
+      "num": "16",
+      "sequence": "",
+      "tier": "Technical",
+      "title": "Technical: Anatomy of a Template",
+      "subtitle": "What makes an AI-ready application template worth building, and how to build one well.",
+      "track": "Technical Appendix",
+      "authors": [
+        "Ministry of Technology and Innovation"
+      ],
+      "published": null,
+      "reading_min": null,
+      "status": "Draft",
+      "tags": [],
+      "repo": null,
+      "abstract": "Forthcoming. The body will be written from source materials. This is one of three technical appendices that round out the collection.",
+      "related": [],
+      "category": "paper"
+    },
+    {
+      "id": "of1cj",
+      "num": "17",
+      "sequence": "",
+      "tier": "Technical",
+      "title": "Technical: The Anti-Drift Harness",
+      "subtitle": "Keeping an agent's work aligned to intent across long builds.",
+      "track": "Technical Appendix",
+      "authors": [
+        "Ministry of Technology and Innovation"
+      ],
+      "published": null,
+      "reading_min": null,
+      "status": "Draft",
+      "tags": [],
+      "repo": null,
+      "abstract": "Forthcoming. The body will be written from source materials. This is one of three technical appendices that round out the collection.",
+      "related": [],
+      "category": "paper"
+    },
+    {
+      "id": "xs7uh",
+      "num": "18",
+      "sequence": "",
+      "tier": "Technical",
+      "title": "Technical: The Canvas",
+      "subtitle": "An interactive map of the whole system: the agents, the stack, and how the papers connect.",
+      "track": "Technical Appendix",
+      "authors": [
+        "Ministry of Technology and Innovation"
+      ],
+      "published": null,
+      "reading_min": null,
+      "status": "Draft",
+      "tags": [],
+      "repo": null,
+      "abstract": "Forthcoming. The body will be written from source materials. This is one of three technical appendices that round out the collection.",
+      "related": [],
+      "category": "paper"
     }
   ],
   "categories": [

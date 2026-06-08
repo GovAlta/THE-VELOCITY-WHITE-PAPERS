@@ -1,0 +1,68 @@
+{
+  "id": "of1cj",
+  "num": "17",
+  "sequence": "",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "Technique : Le harnais anti-dérive",
+  "subtitle": "Garder le travail d'un agent aligné sur l'intention tout au long d'un build.",
+  "track": "Technical Appendix",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "À venir. Le corps sera rédigé à partir de sources. This is one of three technical appendices that round out the collection.",
+  "hero_image": {
+    "src": "public/images/of1cj/fr/hero.jpg",
+    "alt": "Editorial image for: Le harnais anti-dérive",
+    "image_prompt": "An editorial cover image for the technical appendix titled \"Le harnais anti-dérive\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/of1cj.mp3"
+  },
+  "tldr_presentation": {
+    "id": "of1cj-tldr",
+    "title": "Le livre, en bref",
+    "locale": "fr",
+    "owner_id": "of1cj",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Technique : Le harnais anti-dérive",
+        "audio_file": "public/audio/fr/of1cj-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Annexe technique",
+        "subcaption": "",
+        "text": "Le harnais anti-dérive. Contenu à venir."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Aperçu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Aperçu"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenu à venir.</strong> La structure est en place; le corps sera rédigé à partir de sources."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub"
+  },
+  "related": []
+}

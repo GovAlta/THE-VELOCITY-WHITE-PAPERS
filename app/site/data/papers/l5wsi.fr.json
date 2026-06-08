@@ -1,0 +1,68 @@
+{
+  "id": "l5wsi",
+  "num": "16",
+  "sequence": "",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "Technique : Anatomie d’un gabarit",
+  "subtitle": "Ce qui fait un bon gabarit d'application prêt pour l'IA, et comment le construire.",
+  "track": "Technical Appendix",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "À venir. Le corps sera rédigé à partir de sources. This is one of three technical appendices that round out the collection.",
+  "hero_image": {
+    "src": "public/images/l5wsi/fr/hero.jpg",
+    "alt": "Editorial image for: Anatomie d'un gabarit",
+    "image_prompt": "An editorial cover image for the technical appendix titled \"Anatomie d'un gabarit\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/l5wsi.mp3"
+  },
+  "tldr_presentation": {
+    "id": "l5wsi-tldr",
+    "title": "Le livre, en bref",
+    "locale": "fr",
+    "owner_id": "l5wsi",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Technique : Anatomie d’un gabarit",
+        "audio_file": "public/audio/fr/l5wsi-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Annexe technique",
+        "subcaption": "",
+        "text": "Anatomie d'un gabarit. Contenu à venir."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Aperçu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Aperçu"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenu à venir.</strong> La structure est en place; le corps sera rédigé à partir de sources."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub"
+  },
+  "related": []
+}

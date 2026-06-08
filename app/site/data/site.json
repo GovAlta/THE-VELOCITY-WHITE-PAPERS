@@ -148,6 +148,23 @@
                 "href": "https://github.com/GovAlta/the-velocity-white-papers"
               }
             ]
+          },
+          {
+            "heading": "More",
+            "items": [
+              {
+                "label": "Press",
+                "href": "#/press"
+              },
+              {
+                "label": "Resources",
+                "href": "#/resources"
+              },
+              {
+                "label": "Media",
+                "href": "#/gallery"
+              }
+            ]
           }
         ],
         "smallcaps": "Government of Alberta · Technology and Innovation"
@@ -155,7 +172,7 @@
       "stats": [
         {
           "k": "Papers",
-          "v": "16",
+          "v": "18",
           "sub": "across three tiers"
         },
         {
@@ -316,6 +333,23 @@
                 "href": "https://github.com/GovAlta/the-velocity-white-papers"
               }
             ]
+          },
+          {
+            "heading": "Plus",
+            "items": [
+              {
+                "label": "Presse",
+                "href": "#/press"
+              },
+              {
+                "label": "Ressources",
+                "href": "#/resources"
+              },
+              {
+                "label": "Médias",
+                "href": "#/gallery"
+              }
+            ]
           }
         ],
         "smallcaps": "Gouvernement de l'Alberta · Technologie et innovation"
@@ -323,7 +357,7 @@
       "stats": [
         {
           "k": "Livres blancs",
-          "v": "16",
+          "v": "18",
           "sub": "sur trois niveaux"
         },
         {

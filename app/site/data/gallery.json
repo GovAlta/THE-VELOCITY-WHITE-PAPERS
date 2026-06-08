@@ -1,0 +1,597 @@
+{
+  "generated_from": "data/papers/*.en.json",
+  "videos": [
+    {
+      "paper_id": "k3tc3",
+      "num": "10",
+      "paper_title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+      "title": "",
+      "caption": "DM Janak Alford and ED Zoran Mijajlovic discuss the Velocity Game Engine and provide a walk through",
+      "url": "https://youtu.be/rwhybgIXnJ8",
+      "video_id": "rwhybgIXnJ8",
+      "thumb": "https://img.youtube.com/vi/rwhybgIXnJ8/hqdefault.jpg"
+    }
+  ],
+  "images": [
+    {
+      "paper_id": "cux4h",
+      "num": "01",
+      "paper_title": "The Two-Billion-Dollar Ship of Theseus",
+      "fno": "FIG. 1.1",
+      "title": "The vessel of government IT ",
+      "caption": "Forty years of accumulated code, contracts, and dependencies sit on the hull as cargo. The vessel still sails, but it rides lower every year.",
+      "src": "public/images/cux4h/en/fig-1-1.jpg",
+      "alt": "A heavily laden, barnacle-crusted ship riding low in the water under decades of accumulated cargo."
+    },
+    {
+      "paper_id": "cux4h",
+      "num": "01",
+      "paper_title": "The Two-Billion-Dollar Ship of Theseus",
+      "fno": "FIG. 1.2",
+      "title": "Seeing the shape of the problem",
+      "caption": "Where a person names a few dozen attributes, these models classify thousands at once, and the structure of a system appears in seconds rather than months.",
+      "src": "public/images/cux4h/en/fig-1-2.jpg",
+      "alt": "A figure perceiving hidden structure as faint geometric lines and constellations emerge from a vast wall of code and symbols."
+    },
+    {
+      "paper_id": "cux4h",
+      "num": "01",
+      "paper_title": "The Two-Billion-Dollar Ship of Theseus",
+      "fno": "FIG. 1.3",
+      "title": "One person, many agents",
+      "caption": "A person paired with a fleet of agents. The judgement stays human, and the volume of work multiplies.",
+      "src": "public/images/cux4h/en/fig-1-3.jpg",
+      "alt": "One person at a desk working alongside a large fanned-out crowd of small identical agent figures on a shared structure."
+    },
+    {
+      "paper_id": "cux4h",
+      "num": "01",
+      "paper_title": "The Two-Billion-Dollar Ship of Theseus",
+      "fno": "FIG. 1.4",
+      "title": "The four-headed hydra resisting modernization.",
+      "caption": "Four pressures at once: technical debt, cybersecurity, growing demand, and a deficit budget. The white paper collection takes on each in turn.",
+      "src": "public/images/cux4h/en/fig-1-4.jpg",
+      "alt": "A four-headed hydra rising from stormy seas, faced by a single resolute figure standing on a ship's deck holding navigational instruments."
+    },
+    {
+      "paper_id": "mwo98",
+      "num": "02",
+      "paper_title": "The Cyber Imperative",
+      "fno": "FIG. 2.1",
+      "title": "Connection attempts blocked per day",
+      "caption": "Alberta cyber controls blocked an average of 81.2 million attempts a day in 2022-23, 126.3 million in 2023-24, and 189 million in 2024-25. The annual report attributes the rise to sophisticated nation-state actors and financially motivated criminal groups. Source: Technology and Innovation 2024-2025 Annual Report, Performance Indicator 2.b.",
+      "src": "public/images/mwo98/en/fig-2-1-bars.jpg",
+      "alt": "A bar chart of daily connection attempts blocked, rising from 81.2 million in 2022-23 to 126.3 million in 2023-24 to 189 million in 2024-25."
+    },
+    {
+      "paper_id": "mwo98",
+      "num": "02",
+      "paper_title": "The Cyber Imperative",
+      "fno": "FIG. 2.2",
+      "title": "Discovery is no longer the slow part",
+      "caption": "AI now reads code at depth and surfaces flaws that sat undocumented for years. The same capability is available to defenders and to attackers, which is why the discovery advantage is temporary and the remediation backlog is what matters.",
+      "src": "public/images/mwo98/en/fig-2-1.jpg",
+      "alt": "A vast field of dense code with several previously hidden flaws lighting up as a line of light reads across it."
+    },
+    {
+      "paper_id": "mwo98",
+      "num": "02",
+      "paper_title": "The Cyber Imperative",
+      "fno": "FIG. 2.3",
+      "title": "One poisoned dependency, many victims",
+      "caption": "A single compromised open-source package reaches every system that depends on it. Attackers target the shared upstream precisely because it cascades downstream, which is why the supply chain has become the preferred route.",
+      "src": "public/images/mwo98/en/fig-2-2.jpg",
+      "alt": "A branching dependency tree where one poisoned upstream node spreads its mark down to many downstream systems."
+    },
+    {
+      "paper_id": "bbkac",
+      "num": "03",
+      "paper_title": "Git Insights",
+      "fno": "FIG. 3.2",
+      "title": "A fleet scanning the estate",
+      "caption": "Around fifty agents fan out across the estate at once. Each inspects one repository and carries a structured set of findings back to a single shared store, so thousands of separate reads become one picture.",
+      "src": "public/images/bbkac/en/fig-3-2.jpg",
+      "alt": "A fleet of agent figures spreading across a field of code repositories and carrying structured report cards back to a central collection point."
+    },
+    {
+      "paper_id": "bbkac",
+      "num": "03",
+      "paper_title": "Git Insights",
+      "fno": "FIG. 3.4",
+      "title": "Two tiers: deterministic, then probabilistic",
+      "caption": "The lower tier is deterministic: ordinary code does the exact, countable work and cannot invent a result. The upper tier is probabilistic: the AI weighs and judges what the lower tier surfaced, and must cite the exact file and line. Each does only what it is good at.",
+      "src": "public/images/bbkac/en/fig-3-4.jpg",
+      "alt": "Two stacked tiers: a row of precise mechanical inspectors below feeding a single thoughtful judging figure above."
+    },
+    {
+      "paper_id": "bbkac",
+      "num": "03",
+      "paper_title": "Git Insights",
+      "fno": "FIG. 3.5",
+      "title": "One dashboard, one source of truth",
+      "caption": "The thousands of structured findings become a single dashboard a leader can question: the health of every system at a glance, in place of a wall of disconnected trackers, tickets, and spreadsheets.",
+      "src": "public/images/bbkac/en/fig-3-5.jpg",
+      "alt": "Senior officials standing before a single clear dashboard of an estate's health, with scattered binders and spreadsheets left behind."
+    },
+    {
+      "paper_id": "p7p2k",
+      "num": "06",
+      "paper_title": "The Well-Built Harness",
+      "fno": "FIG. 6.1",
+      "title": "The rules the agent reads first",
+      "caption": "Every session opens with the CLAUDE.md: the short set of rules that says what the project is and what the agent may and may not do. It is read first, and it is the authority on the project.",
+      "src": "public/images/p7p2k/en/fig-6-1.jpg",
+      "alt": "A diagram of a single upright card labelled CLAUDE.md posted at the entrance to a small workshop, with the agent’s path beginning at the card before continuing inside."
+    },
+    {
+      "paper_id": "p7p2k",
+      "num": "06",
+      "paper_title": "The Well-Built Harness",
+      "fno": "FIG. 6.2",
+      "title": "Skills, pulled in only when the work needs them",
+      "caption": "The skills live in a folder, kept closed. The agent reads only each one’s name, then opens the single playbook the task in front of it calls for.",
+      "src": "public/images/p7p2k/en/fig-6-2.jpg",
+      "alt": "A diagram of a grid of closed labelled skill folders with one folder open and in use, the rest shut."
+    },
+    {
+      "paper_id": "p7p2k",
+      "num": "06",
+      "paper_title": "The Well-Built Harness",
+      "fno": "FIG. 6.3",
+      "title": "The template: a working client and server, decided in advance",
+      "caption": "The template ships as a connected pair, a Vue client and an Express server over a Postgres database with single sign-on, with the hundred-odd decisions a public system needs already made and set.",
+      "src": "public/images/p7p2k/en/fig-6-3.jpg",
+      "alt": "A diagram of a pre-assembled application: a client panel and a server panel joined to a database and a lock, with a row of switches already set."
+    },
+    {
+      "paper_id": "p7p2k",
+      "num": "06",
+      "paper_title": "The Well-Built Harness",
+      "fno": "FIG. 6.4",
+      "title": "Four inputs, one dependable result",
+      "caption": "Requirements, skills, standards, and the template converge on the build. Each says a different thing, what to make, how, what good looks like, and what is already settled, and together they produce a finished application.",
+      "src": "public/images/p7p2k/en/fig-6-4.jpg",
+      "alt": "A diagram of four labelled streams, requirements, skills, standards, and template, converging into one node that outputs a finished application."
+    },
+    {
+      "paper_id": "p7p2k",
+      "num": "06",
+      "paper_title": "The Well-Built Harness",
+      "fno": "FIG. 6.5",
+      "title": "Four reviewers riding alongside the build",
+      "caption": "As the application is built, four review agents, one each in green, yellow, red, and blue, check it for code quality, writing, attack resistance, and defensive soundness. They are the subject of the next paper.",
+      "src": "public/images/p7p2k/en/fig-6-5.jpg",
+      "alt": "A diagram of an application moving along a line past four small coloured review markers, green, yellow, red, and blue, each checking it as it passes."
+    },
+    {
+      "paper_id": "qthji",
+      "num": "08",
+      "paper_title": "The AI Factory: Design and Ideation (Pronghorn)",
+      "fno": "FIG.",
+      "title": "",
+      "caption": "The pronghorn: fast, far-sighted, and built for endurance over distance.",
+      "src": "public/images/qthji/en/fig-mq1i9ir3.jpg",
+      "alt": "A single pronghorn standing in profile on the open Alberta prairie, labelled fast, far-sighted, and high endurance, drawn in deep navy line work with small rust accents on warm cream paper."
+    },
+    {
+      "paper_id": "qthji",
+      "num": "08",
+      "paper_title": "The AI Factory: Design and Ideation (Pronghorn)",
+      "fno": "FIG. 8.1",
+      "title": "The three stages, and solutions, of the factory",
+      "caption": "A piece of work moves through the factory in three connected stages. Pronghorn is the first, where the idea is designed, prototyped, and specified. Nexus builds it. Velocity tracks and scores the delivery. Each stage hands the next a finished, machine-readable result.",
+      "src": "public/images/qthji/en/fig-8-1.jpg",
+      "alt": "A hand-drawn diagram of three connected stages left to right: a highlighted box labelled Pronghorn, Design; an arrow to a box labelled Nexus, Build; an arrow to a box labelled Velocity, Measure."
+    },
+    {
+      "paper_id": "qthji",
+      "num": "08",
+      "paper_title": "The AI Factory: Design and Ideation (Pronghorn)",
+      "fno": "FIG. 8.2",
+      "title": "The four-level requirements hierarchy",
+      "caption": "Pronghorn turns the chats and artifacts into a structured set of requirements: epics at the top, the features inside each epic, the user stories inside each feature, and the acceptance criteria that say when a story is done. The whole tree can be built out, mapped, and tracked.",
+      "src": "public/images/qthji/en/fig-8-2.jpg",
+      "alt": "A hand-drawn four-level tree: a single box labelled Epic at the top branching down to several Feature boxes, each branching to User Story boxes, each branching to small Acceptance Criteria tags at the bottom."
+    },
+    {
+      "paper_id": "qthji",
+      "num": "08",
+      "paper_title": "The AI Factory: Design and Ideation (Pronghorn)",
+      "fno": "FIG. 8.3",
+      "title": "The architecture canvas",
+      "caption": "On a shared canvas built with React Flow, the layers of an application are laid out as labelled nodes joined by labelled edges: the cloud, the firewall, the front-end, the server, the third-party APIs, the databases, and the integrations. A person and AI agents both read and draw on the same canvas, and the result is versioned and taken away as the architecture.",
+      "src": "public/images/qthji/en/fig-8-3.jpg",
+      "alt": "A hand-drawn node graph of an application's architecture: labelled nodes for Cloud, Firewall, Front-end, Server, Third-party API, Database, and Integration joined by labelled edges, with a small person token and a small AI agent token both connected to the canvas."
+    },
+    {
+      "paper_id": "qthji",
+      "num": "08",
+      "paper_title": "The AI Factory: Design and Ideation (Pronghorn)",
+      "fno": "FIG. 8.4",
+      "title": "Preparing the project before the build",
+      "caption": "A set of agents reads the chats, the artifacts, the requirements, and the canvas, and produces the materials a project needs to start: a business case, a charter, an RFP, a project plan, and a timeline. The finished package is handed to the build stage, so the work arrives defined rather than improvised.",
+      "src": "public/images/qthji/en/fig-8-4.jpg",
+      "alt": "A hand-drawn diagram: four inputs labelled Chat, Artifacts, Requirements, and Canvas feed a row of agent badges labelled Business Case, Charter & RFP, Project Planner, and Timeline, which produce a Project Plan document, with an arrow labelled handoff leading to a box labelled The Build."
+    },
+    {
+      "paper_id": "uwpxr",
+      "num": "09",
+      "paper_title": "The AI Factory: Orchestration and Observation (Nexus)",
+      "fno": "FIG. 9.1",
+      "title": "Inside Nexus",
+      "caption": "Each developer has their own virtual machine in Google Cloud, running any number of agents at once, with a terminal, a browser, and a file system. A security overlay surrounds the environment, and the applications agents deploy sit behind a private endpoint reachable only on the government VPN.",
+      "src": "public/images/uwpxr/en/fig-9-1.jpg",
+      "alt": "A hand-drawn diagram of a Nexus cloud environment: a large box labelled Nexus, Google Cloud, containing a Developer VM box with a terminal panel of stacked agent windows, a browser panel, and a file-system tree, with several small agent icons; a security-overlay band around the box; and a private VPN endpoint on the right gating a deployed app."
+    },
+    {
+      "paper_id": "uwpxr",
+      "num": "09",
+      "paper_title": "The AI Factory: Orchestration and Observation (Nexus)",
+      "fno": "FIG. 9.2",
+      "title": "Delegated access and one-prompt publishing",
+      "caption": "An agent deploys an application to Google Cloud from a single instruction, packaging and publishing it without a ticket. The access it uses is delegated by the user and expires every few hours, so nothing the agent is granted is permanent. It acts on the user's behalf.",
+      "src": "public/images/uwpxr/en/fig-9-2.jpg",
+      "alt": "A hand-drawn diagram: a robot agent icon with a speech bubble reading publish this app, an arrow through a Containerize box to a Google Cloud box holding a running app; above, a user token handing a key labelled delegated access down to the agent, with a clock labelled expires every few hours."
+    },
+    {
+      "paper_id": "uwpxr",
+      "num": "09",
+      "paper_title": "The AI Factory: Orchestration and Observation (Nexus)",
+      "fno": "FIG. 9.3",
+      "title": "Ent Tools, the enterprise gateway",
+      "caption": "Through a single sign-on, a user delegates their access to an agent, which then reaches a suite of enterprise tools through one gateway: search, voice, the cloud provider APIs, open models, a private compute cluster, and open feeds like time, weather, and news. SharePoint, ServiceNow, OneGX, and Microsoft 365 are being added.",
+      "src": "public/images/uwpxr/en/fig-9-3.jpg",
+      "alt": "A hand-drawn hub-and-spoke diagram: a robot agent connects through an SSO key into a central box labelled Ent Tools, enterprise gateway, with labelled spokes to Brave Search, ElevenLabs, Cloud Provider APIs, Open-source Models, Private Compute, Time Weather News, and Social Media, plus a dashed cluster labelled coming soon holding SharePoint, ServiceNow, OneGX ERP, and Microsoft 365."
+    },
+    {
+      "paper_id": "uwpxr",
+      "num": "09",
+      "paper_title": "The AI Factory: Orchestration and Observation (Nexus)",
+      "fno": "FIG. 9.4",
+      "title": "The gateways that keep it safe",
+      "caption": "Requests from developers and agents pass through a gateway that detects and removes sensitive data, holds them to daily budgets, and audits every outbound call. A request carrying personal information to an under-classified model is flagged and the user is notified. Cleared requests reach the models and tools.",
+      "src": "public/images/uwpxr/en/fig-9-4.jpg",
+      "alt": "A hand-drawn diagram: a column labelled Developers and Agents on the left, requests passing through a tall central gate labelled Bifrost AI Gateway with three stacked filter bands reading PII detection and removal, Daily budgets, and Audit and review, one request carrying a rust flag labelled PII flagged, and cleared requests reaching a row of boxes labelled Models and Tools on the right."
+    },
+    {
+      "paper_id": "uwpxr",
+      "num": "09",
+      "paper_title": "The AI Factory: Orchestration and Observation (Nexus)",
+      "fno": "FIG. 9.5",
+      "title": "Watching the work",
+      "caption": "A developer watches the agents on their own machine. An administrator observes and audits every agent on every machine across the platform. And agents are set to audit other agents, a practice that surfaced surprising behaviour during the platform's shakedown and made it more robust.",
+      "src": "public/images/uwpxr/en/fig-9-5.jpg",
+      "alt": "A hand-drawn diagram split into a Developer View panel showing one VM with a few agent dots watched by an eye, and a wider Admin View panel showing a grid of many VMs each with agent dots under one large eye labelled observe and audit all, with a small inset of one agent icon pointing an eye at another labelled agents auditing agents."
+    },
+    {
+      "paper_id": "uwpxr",
+      "num": "09",
+      "paper_title": "The AI Factory: Orchestration and Observation (Nexus)",
+      "fno": "FIG. 9.6",
+      "title": "Scaling the orchestration",
+      "caption": "Expanding Nexus layers agents over hundreds of environments. One agent per application handles health, patching, and security; oversight agents above them watch the telemetry and the agents' status; architect agents above those integrate and rebuild. A fourth approach exposes the functions of government as APIs that trained staff point their own agents at.",
+      "src": "public/images/uwpxr/en/fig-9-6.jpg",
+      "alt": "A hand-drawn pyramid of tiers: a bottom row of many App boxes each with a small agent icon labelled one agent per app, health, patching, security; a middle tier of Oversight Agents boxes labelled telemetry, uptime, status; a top tier of Architect Agents labelled integrate and rebuild; and a side panel labelled Approach 4, headless API layer showing government functions as API plugs that defined agents connect to."
+    },
+    {
+      "paper_id": "uwpxr",
+      "num": "09",
+      "paper_title": "The AI Factory: Orchestration and Observation (Nexus)",
+      "fno": "FIG. 9.7",
+      "title": "Enter the claw",
+      "caption": "A claw, a continuous learning autonomous worker, runs in a networked environment alongside others. Claws handle development, networking, cybersecurity, and monitoring, working together or, in a security exercise, against each other: a white-hat claw plays cat and mouse with a simulated threat actor, mimicking the patterns real attackers use.",
+      "src": "public/images/uwpxr/en/fig-9-7.jpg",
+      "alt": "A hand-drawn diagram of a networked environment containing four claw-agent badges labelled DevOps, NetOps, CyberOps, and Monitoring connected to each other, and to one side a rust white-hat claw token facing a dashed simulated threat actor token across a line labelled cat and mouse, captioned continuous learning autonomous workers."
+    },
+    {
+      "paper_id": "k3tc3",
+      "num": "10",
+      "paper_title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+      "fno": "FIG. 1",
+      "title": "The eight-stage board",
+      "caption": "Velocity lays delivery out as a board. Work climbs the eight stages, earning points on the way up. A problem caught late sends the work back down a snake, and the further it falls, the more it costs.",
+      "src": "public/images/k3tc3/en/fig-10-1.jpg",
+      "alt": "A hand-drawn snakes-and-ladders board laid out as a single climbing path of eight labelled squares in order: requirements, planning, architecture, prototyping, development, user testing, user acceptance, deployment. Ladders rise forward between a couple of squares, and a snake slides from a late square back to an earlier one, labelled sent back, costs more the further it goes."
+    },
+    {
+      "paper_id": "k3tc3",
+      "num": "10",
+      "paper_title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+      "fno": "FIG. 2",
+      "title": "Turn-based play and the chess clock",
+      "caption": "Play alternates between the person and the AI, with a chess clock recording who held the work. Raising a hand is free, blocking costs a little, and the clock makes a slow human handoff as visible as an AI mistake.",
+      "src": "public/images/k3tc3/en/fig-10-2.jpg",
+      "alt": "A hand-drawn diagram with a two-faced chess clock in the centre, the left face labelled human and the right face labelled AI, with an arrow showing the turn passing between them. Above, a single board step with two small tokens handing a baton back and forth, captioned hand off within a step. To one side, a raised-hand icon labelled raise a hand, no penalty, and below it a small stop icon labelled block, a small penalty."
+    },
+    {
+      "paper_id": "k3tc3",
+      "num": "10",
+      "paper_title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+      "fno": "FIG. 3",
+      "title": "The velocity listener",
+      "caption": "A human move on the board travels over server-sent events into Nexus, where each agent listens only to its own projects. The move wakes the right agent to do the next piece of work, and a specialist such as a cybersecurity agent can send work back when it finds a gap.",
+      "src": "public/images/k3tc3/en/fig-10-3.jpg",
+      "alt": "A hand-drawn diagram. On the left, a board labelled velocity game board with a small human token making a move. A rust line labelled server-sent events runs right into a large rounded boundary labelled Nexus, holding several small robot tokens labelled agents, each tagged listens to its own project. One agent is lit up, woken by the move, with an arrow back to the board labelled does the next step. To one side a badge labelled cyber agent points an arrow back down the board labelled sends work back if a control is missing."
+    },
+    {
+      "paper_id": "k3tc3",
+      "num": "10",
+      "paper_title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+      "fno": "FIG. 4",
+      "title": "How a lesson becomes institutional memory",
+      "caption": "A mistake caught on the board drives a retrospective, a harness fix, and a push to the shared main branch, so the next project starts from the improved harness. Audit reports capture the same lessons as durable snapshots.",
+      "src": "public/images/k3tc3/en/fig-10-4.jpg",
+      "alt": "A hand-drawn cycle diagram of four boxes connected by arrows: mistake caught on the board, retrospective, update the harness, push to the main branch, with a final arrow returning to a row of small robot tokens labelled every agent starts from the latest. To one side, a document icon labelled audit report captioned snapshot of what worked."
+    },
+    {
+      "paper_id": "k3tc3",
+      "num": "10",
+      "paper_title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+      "fno": "FIG. 5",
+      "title": "The Reaper",
+      "caption": "The Reaper sweeps the board's history for the signatures of cheating, from speed runs to self-approval, and removes the points earned and then removes them again, so the score moves sharply against any agent caught gaming the system.",
+      "src": "public/images/k3tc3/en/fig-10-5.jpg",
+      "alt": "A hand-drawn diagram. On the left, a board with a few moves marked by small rust warning marks labelled speed run, self-approval, burst turns. An arrow leads to a single enforcement token labelled the Reaper, drawn as a simple iconographic hooded scythe motif in navy. From it, a heavy rust arrow points to a score bar dropping sharply, labelled points removed, then removed again."
+    },
+    {
+      "paper_id": "k3tc3",
+      "num": "10",
+      "paper_title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+      "fno": "FIG. 6",
+      "title": "Three pillars of the AI factory",
+      "caption": "Pronghorn prepares the work, Nexus runs it, and Velocity measures and orchestrates it. Agents in Nexus subscribe to Velocity's boards over server-sent events, so the three pillars operate as one system.",
+      "src": "public/images/k3tc3/en/fig-10-6.jpg",
+      "alt": "A hand-drawn diagram of three labelled pillars supporting a single lintel labelled AI factory. The left pillar reads Pronghorn, captioned requirements, standards, architecture. The centre pillar reads Nexus, captioned the environment agents work in. The right pillar reads Velocity, captioned measurement and orchestration. A thin rust line labelled server-sent events connects the Nexus pillar to the Velocity pillar."
+    },
+    {
+      "paper_id": "qxlzo",
+      "num": "11",
+      "paper_title": "The Agentic Technology Stack",
+      "fno": "FIG. 11.1",
+      "title": "The agentic stack, by layer",
+      "caption": "The same stack drawn as layers, from the cloud and on-premises compute at the base, through model access and the models themselves, the gateway that abstracts and meters them, and the deployment targets at the top.",
+      "src": "public/images/qxlzo/en/fig-11-1.jpg",
+      "alt": "A hand-drawn layered diagram with five horizontal bands: a base band Cloud and compute holding Google Cloud, Azure, AWS, on-prem GPU cluster, and legacy data centres; a Model access band holding AWS Bedrock, Google Agent Platform, and Azure AI Studio; a Models band holding Claude Opus and Sonnet and open-source models; a Gateway band holding Bifrost; and a top Deployment band holding agentic workloads to GCP and traditional apps to Azure and AWS."
+    },
+    {
+      "paper_id": "qxlzo",
+      "num": "11",
+      "paper_title": "The Agentic Technology Stack",
+      "fno": "FIG. 11.2",
+      "title": "Data residency and sovereignty",
+      "caption": "Sensitive data is controlled in Canada through enterprise agreements and guardrails, with Protected C running offline on Alberta-owned hardware. Some workloads still use United States inference today, and sovereign compute is being grown to bring more in-country.",
+      "src": "public/images/qxlzo/en/fig-11-2.jpg",
+      "alt": "A hand-drawn diagram: a large rounded boundary labelled Canada contains a box Controlled cloud, marked enterprise agreements and guardrails, and a box On-prem cluster, offline, marked Protected C, plus a small sovereign compute motif marked growing. Outside the boundary, a box US inference connects in by a dashed arrow marked some workloads today. Along the bottom, classification chips read unclassified, Protected A, Protected B, Protected C, with Protected B marked around 99 percent at most."
+    },
+    {
+      "paper_id": "dt725",
+      "num": "12",
+      "paper_title": "The AI Academy: Investing in People",
+      "fno": "FIG. 12.1",
+      "title": "Human-centered AI",
+      "caption": "The principle the Academy was designed around. Coined with JP Lalonde, human-centered AI frames the tools as a way to clear systemic barriers, technical debt, case backlogs, and red tape, so public servants are freed for more meaningful work, with no one left behind.",
+      "src": "public/images/dt725/en/fig-12-1.jpg",
+      "alt": "A hand-drawn diagram titled Human-Centered AI: a small AI robot motif lifts a stack of labelled barriers, technical debt, case backlogs, and red tape, out of the way while a simple schematic person stands on a clear path toward a signpost reading meaningful work, captioned the tools clear the barriers, the people do the work."
+    },
+    {
+      "paper_id": "dt725",
+      "num": "12",
+      "paper_title": "The AI Academy: Investing in People",
+      "fno": "FIG. 12.2",
+      "title": "Three levels, one path",
+      "caption": "The Academy is graduated. Level 1 teaches prompting and the habit of verifying AI output. Level 2 introduces reusable agents for repeatable work. Level 3 teaches the building of enterprise-grade applications with a harness. People can repeat any level, and the material is available self-serve.",
+      "src": "public/images/dt725/en/fig-12-2.jpg",
+      "alt": "A hand-drawn diagram of three ascending steps labelled Level 1 Prompting, Level 2 Agents, and Level 3 Applications, each step a little higher, with a small return arrow looping back from each step to show that any level can be repeated, and a self-serve label beside the staircase."
+    },
+    {
+      "paper_id": "dt725",
+      "num": "12",
+      "paper_title": "The AI Academy: Investing in People",
+      "fno": "FIG. 12.3",
+      "title": "Two frameworks: RICECO and verify-then-trust",
+      "caption": "Level 1 pairs a framework for writing a prompt with one for handling the response. RICECO is a six-step formula: role, instruction, context, examples, constraints, and output format. The TRUST framework checks an AI output before it is relied on, a loop we teach as 'verify, then trust'.",
+      "src": "public/images/dt725/en/fig-12-3.jpg",
+      "alt": "A hand-drawn diagram with two panels. The left panel is a card titled RICECO, captioned a six-step formula for a prompt, listing six numbered rows: 1 Role, give the AI a persona; 2 Instruction, state the exact task; 3 Context, the background and audience; 4 Examples, show an ideal output; 5 Constraints, the rules and limits; 6 Output format, how to structure the answer. The right panel is a loop between a box labelled AI Output and a box labelled Verify, with an arrow from Verify to a box labelled Trust, and a rust return arrow labelled if it does not check out sending it back to AI Output, captioned verify then trust."
+    },
+    {
+      "paper_id": "dt725",
+      "num": "12",
+      "paper_title": "The AI Academy: Investing in People",
+      "fno": "FIG. 12.4",
+      "title": "The rule of three",
+      "caption": "The Level 2 heuristic for when to build an agent. If a task recurs more than three times in a week, the time spent building and documenting the agent pays back, and a shared workflow lifts the performance of the whole unit.",
+      "src": "public/images/dt725/en/fig-12-4.jpg",
+      "alt": "A hand-drawn decision diagram: a box labelled A recurring task with an arrow to a diamond reading More than three times a week?; a No branch loops back to just do it by hand; a Yes branch leads to a box labelled Build and document the agent, then to a box labelled Share with the unit, with small figures of a team benefiting."
+    },
+    {
+      "paper_id": "dt725",
+      "num": "12",
+      "paper_title": "The AI Academy: Investing in People",
+      "fno": "FIG. 12.5",
+      "title": "Three personas, three ways of working",
+      "caption": "In place of job titles, Level 3 participants choose a persona. The warrior ships, and aligns with the AI Garage and the AI Factory. The wizard strategizes and modernizes, the work that points toward Government 3.0. The craftsperson builds the infrastructure others rely on, including tools like Pronghorn, Nexus, and Velocity.",
+      "src": "public/images/dt725/en/fig-12-5.jpg",
+      "alt": "A hand-drawn diagram of three labelled panels side by side. The Warrior panel shows a small shield icon and the words Ship, Speed, Leaderboard, tagged AI Factory. The Wizard panel shows a small stars icon and the words Strategize, Modernize, Architect, tagged Government 3.0. The Craftsperson panel shows a small hammer icon and the words Build for others, Harnesses, Templates, tagged Pronghorn, Nexus, Velocity."
+    },
+    {
+      "paper_id": "dt725",
+      "num": "12",
+      "paper_title": "The AI Academy: Investing in People",
+      "fno": "FIG. 12.6",
+      "title": "Two habits to avoid, one discipline to keep",
+      "caption": "Both failure modes come from pursuing an outcome without rigor: unvalidated long-form content that is fast to generate and slow to vet, and vibe-coded applications that gratify quickly and accrue technical debt. The Academy teaches the disciplined path between them, where the work is verified before it is trusted.",
+      "src": "public/images/dt725/en/fig-12-6.jpg",
+      "alt": "A hand-drawn diagram with two cautionary boxes and a clear path between them. The top box, labelled Slop content, shows pages piling up with a clock reading minutes to make, days to vet. The bottom box, labelled Vibe-coded app, shows a pretty but cracked window labelled quick gratification, technical debt. A straight central arrow between them is labelled The disciplined path: verify, then trust."
+    },
+    {
+      "paper_id": "dt725",
+      "num": "12",
+      "paper_title": "The AI Academy: Investing in People",
+      "fno": "FIG. 12.7",
+      "title": "The compact",
+      "caption": "The compact the Academy is built on. The organization invests in training, tools, content, and opportunity. Staff meet it with an open mind and a commitment to learn. Together they produce an empowered workforce able to reimagine how government serves Albertans.",
+      "src": "public/images/dt725/en/fig-12-7.jpg",
+      "alt": "A hand-drawn exchange diagram titled The compact: a left column headed The organization lists training, tools, content, and opportunity; a right column headed Staff lists open-mindedness and commitment to learn; their arrows meet at a central node labelled The compact, which leads down to a box labelled Empowered workforce."
+    },
+    {
+      "paper_id": "oxj36",
+      "num": "13",
+      "paper_title": "Establishing a Builder Culture",
+      "fno": "FIG. 13.1",
+      "title": "The pendulum governments keep swinging",
+      "caption": "Centralization buys scale and consistency at the cost of a bottleneck; decentralization buys autonomy at the cost of duplication and risk. Governments swing from one to the other as each becomes intolerable.",
+      "src": "public/images/oxj36/en/fig-13-1.jpg",
+      "alt": "A hand-drawn pendulum hanging between two labelled posts, centralize on the left and decentralize on the right, with small notes reading economy of scale and bottleneck under one side and autonomy and duplication under the other."
+    },
+    {
+      "paper_id": "oxj36",
+      "num": "13",
+      "paper_title": "Establishing a Builder Culture",
+      "fno": "FIG. 13.2",
+      "title": "Hold the core, push out the building",
+      "caption": "The functions that must stay uniform to keep government safe remain central. The act of building moves out to the ministries, working on the platforms of the AI factory.",
+      "src": "public/images/oxj36/en/fig-13-2.jpg",
+      "alt": "A hand-drawn diagram with a central keep labelled central core listing cybersecurity, identity, network, and data, and arrows radiating out to several smaller workshop boxes labelled ministry builders, with a band beneath reading Pronghorn, Nexus, Velocity."
+    },
+    {
+      "paper_id": "oxj36",
+      "num": "13",
+      "paper_title": "Establishing a Builder Culture",
+      "fno": "FIG. 13.3",
+      "title": "What makes it safe to build",
+      "caption": "Delegated access lets an agent act within the permissions a person already holds. Anything a ministry builds passes the same automated gates that keep software out of production until it is secure.",
+      "src": "public/images/oxj36/en/fig-13-3.jpg",
+      "alt": "A hand-drawn two-panel diagram. The left panel shows an agent gateway with delegated access to email, calendar, ERP, ServiceNow, and SharePoint. The right panel shows a vibe-coded build passing through three automated checks, red and blue agents, information management, and identity, into a box labelled production."
+    },
+    {
+      "paper_id": "oxj36",
+      "num": "13",
+      "paper_title": "Establishing a Builder Culture",
+      "fno": "FIG. 13.4",
+      "title": "From central delivery to central governance",
+      "caption": "The center stops being the place all software is delivered and becomes the place all software is governed: rules and audit held centrally, building done at the edges, with the same controls enforced on both.",
+      "src": "public/images/oxj36/en/fig-13-4.jpg",
+      "alt": "A hand-drawn before-and-after diagram. On the left, labelled was central delivery, many arrows funnel through a single central box. On the right, labelled now central governance, a central box sets rules and audits while building happens in several boxes around the edge."
+    },
+    {
+      "paper_id": "oxj36",
+      "num": "13",
+      "paper_title": "Establishing a Builder Culture",
+      "fno": "FIG. 13.5",
+      "title": "The bottleneck disappears",
+      "caption": "The old model routed every build through a narrow technical gate. With governed tools in every team, many domain experts build at once, under the same central controls.",
+      "src": "public/images/oxj36/en/fig-13-5.jpg",
+      "alt": "A hand-drawn before-and-after diagram. On the left, a long queue of work items waits at a single narrow gate labelled IT. On the right, several builders each hold an AI toolkit and build directly, beneath a shared bar labelled central controls."
+    },
+    {
+      "paper_id": "oxj36",
+      "num": "13",
+      "paper_title": "Establishing a Builder Culture",
+      "fno": "FIG. 13.6",
+      "title": "Inside the fence, or shadow IT",
+      "caption": "If sanctioned building is too slow, AI becomes the fastest route to unsanctioned building. The same tools, used outside the controls, expose government, and the technology takes the blame.",
+      "src": "public/images/oxj36/en/fig-13-6.jpg",
+      "alt": "A hand-drawn diagram with a fence down the middle. Inside the fence, a path labelled sanctioned passes through controls to a safe box. Outside the fence, a path labelled shadow IT skips the controls and ends at a box marked exposed."
+    },
+    {
+      "paper_id": "oxj36",
+      "num": "13",
+      "paper_title": "Establishing a Builder Culture",
+      "fno": "FIG. 13.7",
+      "title": "Governance at the center, delivery on the spokes",
+      "caption": "A decentralized hybrid model: the center holds governance, the ministries deliver. Alberta already runs data and procurement this way, and AI lets solutioning join them.",
+      "src": "public/images/oxj36/en/fig-13-7.jpg",
+      "alt": "A hand-drawn hub-and-spoke diagram. A central hub labelled governance connects by spokes to several outer nodes labelled delivery, with three of the spokes tagged data, procurement, and solutioning."
+    },
+    {
+      "paper_id": "eujjc",
+      "num": "14",
+      "paper_title": "The Compression Problem",
+      "fno": "FIG. 14.1",
+      "title": "Compression up, decompression down",
+      "caption": "Information is compressed as it rises through the layers, so a thousandfold of detail becomes the signal one leader can absorb. Strategy is decompressed as it descends, expanding a few directives into the tactical work of many units, and the gaps opened by that expansion have to be filled.",
+      "src": "public/images/eujjc/en/fig-14-1.jpg",
+      "alt": "A hand-drawn pyramid. On the left side, wide bands of fine detail at the base narrow as arrows rise through labelled management layers to a single point at the top, marked roughly a thousand to one. On the right side, a few arrows leave the top and fan out widening downward into many small task boxes, with small gaps between them marked to be filled."
+    },
+    {
+      "paper_id": "eujjc",
+      "num": "14",
+      "paper_title": "The Compression Problem",
+      "fno": "FIG. 14.2",
+      "title": "When speed collapses the bottleneck",
+      "caption": "At human speed, a single request takes a month to travel down the layers and back up, so a leader can field only a handful at a time. At machine speed the same cycle closes in a second, and the time bottleneck that forced the compression layers no longer binds.",
+      "src": "public/images/eujjc/en/fig-14-2.jpg",
+      "alt": "A hand-drawn two-panel diagram. The left panel, labelled human speed, shows a request travelling down through four stacked layers and back up, with a clock reading about one month and a note that a leader handles only a few. The right panel, labelled machine speed, shows the request going straight down and back in a tight loop with a clock reading one second and a note reading tens of thousands of issues a day."
+    },
+    {
+      "paper_id": "eujjc",
+      "num": "14",
+      "paper_title": "The Compression Problem",
+      "fno": "FIG. 14.3",
+      "title": "Widening the bandwidth to the decision-maker",
+      "caption": "A briefing note forces the whole estate through the narrow channel of language at about forty bits a second. Richer channels, visualization, interactive models, simulation, carry far more fidelity per second to a human, so a decision-maker can gain genuine confidence without reading a thousand pages.",
+      "src": "public/images/eujjc/en/fig-14-3.jpg",
+      "alt": "A hand-drawn diagram. On the left, a large block labelled 466M lines of code. Two paths lead to a person token labelled decision-maker on the right. The top path is a very narrow pipe labelled briefing note, about 40 bits per second. The bottom path is a wide pipe labelled visualization, interactive model, simulation, carrying much more."
+    },
+    {
+      "paper_id": "eujjc",
+      "num": "14",
+      "paper_title": "The Compression Problem",
+      "fno": "FIG. 14.4",
+      "title": "Holding fidelity across the handoff",
+      "caption": "An agent works until its context window fills and must be cleared. A decision ledger and a compact architecture spec carry the intent across the boundary, so a successor agent resumes without drift, the way a master's skill passes to an apprentice.",
+      "src": "public/images/eujjc/en/fig-14-4.jpg",
+      "alt": "A hand-drawn diagram. A first robot token labelled Agent A works inside a box labelled context window that is shown filling up; an arrow crosses a dotted boundary labelled context cleared to a second robot token labelled Agent B. Between them sits a document labelled decision ledger and architecture spec, feeding into Agent B. A small caption reads resume without drift."
+    },
+    {
+      "paper_id": "yu5k9",
+      "num": "15",
+      "paper_title": "Measuring Failure and Success",
+      "fno": "FIG. 15.1",
+      "title": "Two yardsticks",
+      "caption": "Most programs are measured by the cost they remove. The more important measure is the capability they add, which is the longer ruler and the one Alberta judges itself against.",
+      "src": "public/images/yu5k9/en/fig-15-1.jpg",
+      "alt": "A hand-drawn diagram of two measuring sticks side by side. The shorter one is labelled cost saved; the much longer one is labelled capability built."
+    },
+    {
+      "paper_id": "yu5k9",
+      "num": "15",
+      "paper_title": "Measuring Failure and Success",
+      "fno": "FIG. 15.2",
+      "title": "Readiness, in four parts",
+      "caption": "Education, security on both sides of the agentic equation, self-sufficiency, and governance. A program can be quick and still be unready on any one of them.",
+      "src": "public/images/yu5k9/en/fig-15-2.jpg",
+      "alt": "A hand-drawn two-by-two grid under a header reading readiness, with the four cells labelled education, security both sides, self-sufficiency, and governance."
+    },
+    {
+      "paper_id": "yu5k9",
+      "num": "15",
+      "paper_title": "Measuring Failure and Success",
+      "fno": "FIG. 15.3",
+      "title": "Reversing the tide",
+      "caption": "Vulnerabilities and the application backlog have been rising faster than they could be cleared. System health asks whether the lines turn downward, and stay there.",
+      "src": "public/images/yu5k9/en/fig-15-3.jpg",
+      "alt": "A hand-drawn line chart where a rising line labelled backlog and vulnerabilities bends and turns downward partway across, with an arrow labelled reverse the tide pointing down."
+    },
+    {
+      "paper_id": "yu5k9",
+      "num": "15",
+      "paper_title": "Measuring Failure and Success",
+      "fno": "FIG. 15.4",
+      "title": "Do more for less",
+      "caption": "Demand for digital services keeps climbing. The measure of cost is whether the public service can meet it while its size, against the population, stays flat or falls, with AI making up the difference.",
+      "src": "public/images/yu5k9/en/fig-15-4.jpg",
+      "alt": "A hand-drawn chart with two lines over time. An upper line labelled demand rises steadily; a lower line labelled public service size stays flat. The gap between them is labelled AI makes up the difference."
+    },
+    {
+      "paper_id": "yu5k9",
+      "num": "15",
+      "paper_title": "Measuring Failure and Success",
+      "fno": "FIG. 15.5",
+      "title": "The scorecard",
+      "caption": "Three measures, read together. Each can move up or down, and a program that is working moves all three in the right direction over time.",
+      "src": "public/images/yu5k9/en/fig-15-5.jpg",
+      "alt": "A hand-drawn scorecard with three rows labelled readiness, system health, and cost, each with a simple up or down indicator beside it, under a header reading the scorecard."
+    }
+  ]
+}

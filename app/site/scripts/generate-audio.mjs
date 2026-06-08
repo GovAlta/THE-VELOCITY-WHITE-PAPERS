@@ -53,9 +53,9 @@ function extractLongform(content, locale) {
     else if (b.type === 'paragraph' || b.type === 'dropcap_paragraph') {
       out.push((b.text || '').replace(/<[^>]+>/g, ''));
     }
-    // Pullquotes are deliberately excluded from narration. They amplify a point
-    // already made in the surrounding prose, so reading them aloud is redundant.
-    // They remain in the paper as visible callouts; only the audio skips them.
+    // Pullquotes are narrated: their text is read aloud at its position in the
+    // body. The attribution (cite) is left out, only the quote body is spoken.
+    else if (b.type === 'pullquote') out.push(b.text || '');
     else if (b.type === 'keystat')   out.push((b.label || '') + ' ' + b.value + '. ' + (b.body || ''));
     else if (b.type === 'sidenote')  out.push(b.value);
   }

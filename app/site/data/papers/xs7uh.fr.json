@@ -1,0 +1,68 @@
+{
+  "id": "xs7uh",
+  "num": "18",
+  "sequence": "",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "Technique : Le canevas",
+  "subtitle": "Une carte interactive de tout le système : les agents, la pile technologique et les liens entre les livres.",
+  "track": "Technical Appendix",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "À venir. Le corps sera rédigé à partir de sources. This is one of three technical appendices that round out the collection.",
+  "hero_image": {
+    "src": "public/images/xs7uh/fr/hero.jpg",
+    "alt": "Editorial image for: Le canevas technique",
+    "image_prompt": "An editorial cover image for the technical appendix titled \"Le canevas technique\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/xs7uh.mp3"
+  },
+  "tldr_presentation": {
+    "id": "xs7uh-tldr",
+    "title": "Le livre, en bref",
+    "locale": "fr",
+    "owner_id": "xs7uh",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Technique : Le canevas",
+        "audio_file": "public/audio/fr/xs7uh-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Annexe technique",
+        "subcaption": "",
+        "text": "Le canevas technique. Contenu à venir."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Aperçu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Aperçu"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenu à venir.</strong> La structure est en place; le corps sera rédigé à partir de sources."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub"
+  },
+  "related": []
+}

@@ -20,10 +20,22 @@
     ],
     "images_caption": "Dictated on foot, edited at the desk.",
     "images": [
-      { "src": "public/images/about/en/method-1.jpg", "alt": "A dirt trail descending through birch and poplar to the North Saskatchewan River, on one of the daily walks." },
-      { "src": "public/images/about/en/method-2.jpg", "alt": "A grassy single-track trail winding up toward a forested hillside under a bright sky." },
-      { "src": "public/images/about/en/method-3.jpg", "alt": "A narrow trail through dense green woods with sunlight breaking through the canopy." },
-      { "src": "public/images/about/en/method-4.jpg", "alt": "A trail through low brush opening onto a wide river-valley view under a clear sky." }
+      {
+        "src": "public/images/about/en/method-1.jpg",
+        "alt": "A dirt trail descending through birch and poplar to the North Saskatchewan River, on one of the daily walks."
+      },
+      {
+        "src": "public/images/about/en/method-2.jpg",
+        "alt": "A grassy single-track trail winding up toward a forested hillside under a bright sky."
+      },
+      {
+        "src": "public/images/about/en/method-3.jpg",
+        "alt": "A narrow trail through dense green woods with sunlight breaking through the canopy."
+      },
+      {
+        "src": "public/images/about/en/method-4.jpg",
+        "alt": "A trail through low brush opening onto a wide river-valley view under a clear sky."
+      }
     ]
   },
   "tools": {
@@ -63,7 +75,7 @@
   },
   "also": {
     "heading": "Also on this site",
-    "meta": "four shortcuts",
+    "meta": "shortcuts across the site",
     "cards": [
       {
         "tag": "Glossary",
@@ -84,6 +96,21 @@
         "tag": "Community",
         "title": "Where to talk about the work",
         "href": "#/community"
+      },
+      {
+        "tag": "Press",
+        "title": "News release and media contacts",
+        "href": "#/press"
+      },
+      {
+        "tag": "Resources",
+        "title": "Context and related links",
+        "href": "#/resources"
+      },
+      {
+        "tag": "Media",
+        "title": "Videos and figures from the papers",
+        "href": "#/gallery"
       }
     ]
   }

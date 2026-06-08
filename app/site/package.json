@@ -27,7 +27,8 @@
     "build:dist": "node scripts/build-bundle.mjs && node scripts/build-sitemap.mjs && node scripts/prerender.mjs",
     "deploy:swap-in": "node scripts/deploy-swap.mjs --in",
     "deploy:swap-out": "node scripts/deploy-swap.mjs --out",
-    "stubs": "node scripts/build-stubs.mjs"
+    "stubs": "node scripts/build-stubs.mjs",
+    "build:gallery": "node scripts/build-gallery.mjs"
   },
   "dependencies": {
     "sharp": "^0.33.5"
