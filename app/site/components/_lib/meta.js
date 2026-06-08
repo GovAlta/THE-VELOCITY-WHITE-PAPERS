@@ -109,9 +109,14 @@
     setProperty('og:url', url);
     setProperty('og:site_name', d.title);
     setProperty('og:locale', d.locale === 'fr' ? 'fr_CA' : 'en_CA');
+    /* Non-paper routes share the site card. Setting it here also resets the
+       image after a reader navigates away from a paper (which set its hero). */
+    setProperty('og:image', SITE_URL_BASE + '/public/og-card.jpg');
+    setProperty('og:image:alt', d.title);
     setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:title', title);
     setMeta('twitter:description', desc);
+    setMeta('twitter:image', SITE_URL_BASE + '/public/og-card.jpg');
 
     setLink('canonical', url);
     clearHreflangs();

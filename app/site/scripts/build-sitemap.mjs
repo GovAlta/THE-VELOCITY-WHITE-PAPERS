@@ -29,7 +29,7 @@ if (!baseURL || !/^https?:\/\//.test(baseURL)) {
 const papers = JSON.parse(readFileSync(resolve(SITE_ROOT, 'data/papers.json'), 'utf8')).papers;
 
 /* Static routes that are always present. */
-const STATIC_ROUTES = ['', 'index', 'about', 'glossary', 'repos', 'updates', 'community'];
+const STATIC_ROUTES = ['', 'index', 'about', 'press', 'resources', 'gallery', 'glossary', 'repos', 'updates', 'community'];
 
 function urlFor(routeSegment) {
   if (!routeSegment) return baseURL + '/';

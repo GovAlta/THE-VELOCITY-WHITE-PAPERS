@@ -5,27 +5,28 @@
   <title>The AI Factory: Measuring Project Delivery (The Velocity Game Engine) · The Velocity White Papers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#F7F4ED" />
-  <meta name="description" content="Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials." />
-  <link rel="canonical" href="https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/paper/k3tc3/" />
-  <link rel="alternate" hreflang="en" href="https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/paper/k3tc3/" />
-  <link rel="alternate" hreflang="fr" href="https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/paper/k3tc3/fr/" />
-  <link rel="alternate" hreflang="x-default" href="https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/paper/k3tc3/" />
+  <meta name="description" content="Velocity is the third stage of Alberta&#39;s AI factory, after Pronghorn and Nexus. It is an open-source project tool, built as a game, that makes an AI agent a full member of the team and measures real delivery now that estimation no longer works. Work climbs eight stages, earning points moving forward and losing them when it slides back." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/paper/k3tc3/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/paper/k3tc3/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/paper/k3tc3/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/k3tc3/" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="The AI Factory: Measuring Project Delivery (The Velocity Game Engine)" />
-  <meta property="og:description" content="Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials." />
-  <meta property="og:url" content="https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/paper/k3tc3/" />
+  <meta property="og:description" content="Velocity is the third stage of Alberta&#39;s AI factory, after Pronghorn and Nexus. It is an open-source project tool, built as a game, that makes an AI agent a full member of the team and measures real delivery now that estimation no longer works. Work climbs eight stages, earning points moving forward and losing them when it slides back." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/paper/k3tc3/" />
   <meta property="og:site_name" content="The Velocity White Papers" />
   <meta property="og:locale" content="en_CA" />
-  <meta property="og:image" content="https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/public/images/k3tc3/en/hero.jpg" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/images/k3tc3/en/hero.jpg" />
   <meta property="article:section" content="Technical" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The AI Factory: Measuring Project Delivery (The Velocity Game Engine)" />
-  <meta name="twitter:description" content="Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials." />
-  <meta name="twitter:image" content="https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/public/images/k3tc3/en/hero.jpg" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"The AI Factory: Measuring Project Delivery (The Velocity Game Engine)","description":"Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.","url":"https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/paper/k3tc3/","inLanguage":"en-CA","author":[{"@type":"Person","name":"Ministry of Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Government of Alberta · Ministry of Technology and Innovation"},"isPartOf":{"@type":"PublicationVolume","name":"The Velocity White Papers","url":"https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/"},"image":"https://govalta.github.io/THE-VELOCITY-WHITE-PAPERS/public/images/k3tc3/en/hero.jpg","about":"Technical"}</script>
+  <meta name="twitter:description" content="Velocity is the third stage of Alberta&#39;s AI factory, after Pronghorn and Nexus. It is an open-source project tool, built as a game, that makes an AI agent a full member of the team and measures real delivery now that estimation no longer works. Work climbs eight stages, earning points moving forward and losing them when it slides back." />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/images/k3tc3/en/hero.jpg" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"The AI Factory: Measuring Project Delivery (The Velocity Game Engine)","description":"Velocity is the third stage of Alberta's AI factory, after Pronghorn and Nexus. It is an open-source project tool, built as a game, that makes an AI agent a full member of the team and measures real delivery now that estimation no longer works. Work climbs eight stages, earning points moving forward and losing them when it slides back.","url":"https://thevelocitywhitepapers.com/paper/k3tc3/","inLanguage":"en-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Deputy Minister"},{"@type":"Person","name":"Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Government of Alberta · Ministry of Technology and Innovation"},"isPartOf":{"@type":"PublicationVolume","name":"The Velocity White Papers","url":"https://thevelocitywhitepapers.com/"},"keywords":"ai-factory, velocity, project-management, agents, orchestration, reaper, sse, open-source","image":"https://thevelocitywhitepapers.com/public/images/k3tc3/en/hero.jpg","about":"Technical"}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../alberta-logo.webp" />
   <link rel="stylesheet" href="../../styles/tokens.css" />
   <link rel="stylesheet" href="../../styles/base.css" />
   <link rel="stylesheet" href="../../styles/components.css" />
@@ -42,11 +43,101 @@
     <article class="crawl-fallback">
       <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 10 · Technical</p>
       <h1>The AI Factory: Measuring Project Delivery (The Velocity Game Engine)</h1>
-      <p class="sub">Tracking delivery across people and agents.</p>
-      <div class="abstract"><strong>Abstract.</strong> Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.</div>
-      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">## §01 Overview
+      <p class="sub">A game-based way to run and measure delivery when an AI agent is a full member of the team, and traditional estimation no longer works.</p>
+      <div class="abstract"><strong>Abstract.</strong> Velocity is the third stage of Alberta&#39;s AI factory, after Pronghorn and Nexus. It is an open-source project tool, built as a game, that makes an AI agent a full member of the team and measures real delivery now that estimation no longer works. Work climbs eight stages, earning points moving forward and losing them when it slides back.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Velocity is the third part of our AI factory series, after [Pronghorn](#/paper/qthji) and [Nexus](#/paper/uwpxr), and it tackles a problem that emerged in the AI coding era: how do you track time, effort, and cost on an AI-delivered project, and how do you measure progress forward when our previous conception of delivery speed and estimation has completely gone out the window, and an AI can do in minutes what used to take a person days? The purpose of Velocity is to invent a new way of doing project management and observability as an AI works alongside one person as the primary developer, and alongside architects, cybersecurity agents, the engagement team, and a highly opinionated customer. AI needs to play and work with people in a collaborative space, its work shown centrally rather than in an isolated environment, so we built a first-class project management tool that lets AI be a full participant. We also need to know, over time, whether we are being effective, because our objective is to increase delivery speed by twenty times.
 
-Content forthcoming. The structure is in place. The body will be written from source materials, not auto-generated.</pre>
+
+## §01 The estimation problem in the AI era
+
+For decades, agile teams used planning poker to estimate effort. Everyone gives their estimate at the same time, and the team discusses the discrepancies to surface the hidden complexity a single person would miss. This breaks down completely when AI enters the picture. An AI can complete work in ten minutes that a human estimated would take three days. The deeper issue is that an AI has no ability to estimate human timescales. It is trained on developer comments and historical data that assume human work patterns, so when you ask it to estimate, it is guessing on a human metric that is misaligned with how fast it actually works. It is just predicting based on what it has seen before.
+
+On the coding task alone, all things being equal, an AI is well over a hundred times faster than a human developer. You almost need a simple heuristic of your own, something like ten minutes a module, or ten minutes per thousand lines of code, with discounts for testing and bug fixing. The point is that the entire estimation framework collapses. You can no longer plan a project timeline, because the variable you are trying to predict, how long an AI will take, is unknowable using traditional methods.
+
+Pure coding speed 100×+. On the coding task alone, AI is well over a hundred times faster than a human developer. The project-level target across all the work, including the human handoffs, is a twentyfold acceleration.
+
+The concept of velocity itself, as people understand it, becomes meaningless. In traditional agile, velocity measures how many story points a team completes in a sprint, and with AI working at wildly different speeds, that number stops telling you anything useful about real progress. You cannot compare sprints, and you cannot predict capacity. You also lose visibility into what is actually slowing things down. Is the AI making mistakes that force rework, or are humans sitting on a task for days before reviewing the AI&#39;s output? Tools like Jira do not distinguish between the two; they show a task moving from one column to another and nothing more. You get no understanding of turn times, no insight into where the bottleneck lives, and no way to attribute a delay to the right party. That opacity is costly, because the later a mistake is caught, the more expensive the rework.
+
+
+## §02 A new game: snakes and ladders
+
+The AI Maximalist team went looking for a different game, following two principles we already knew. The later in a project a mistake is identified, the more expensive the rework. And we wanted some form of reinforcement learning in our agents, so they could learn from their own history. So we went back to the ancient game of snakes and ladders, where you increase your points going forward, and it is easy to step on a snake and slip back down and lose them. We implemented a simple eight-step process, mostly linear, with a reward-based system for moving forward and a penalty system for moving backward. Forward progress earns points. A backward move loses them, and you cannot make up the same points by moving forward again. The penalty is permanent.
+
+If an agent skips a planning step or a requirements-gathering step, and a client catches it later, the client, the project manager, the developer, or the cybersecurity staff can push the project back to the earlier step, causing the agent to lose points. All these gains and losses are tracked. The purpose is so the agent can self-reflect with evidence as to what went well and what went poorly, and use it as a reinforcement-learning signal to adjust its own harness, so that over a series of projects the outcome is fewer and fewer mistakes and a higher score. This is the dynamic at the heart of the game: forward velocity is rewarded, stepping back is penalized, and outcomes are measured over an extended run of projects.
+
+The eight stages reflect a standard project workflow: requirements, planning, architecture, prototype, development, user testing, user acceptance, and deployment. The penalty for sending work back grows with how many stages it retreats, which mirrors reality, where catching something at deployment is far worse than catching it at requirements.
+
+
+## §03 Turns, handoffs, and the chess clock
+
+Velocity runs in real time on server-sent events, so the board moves live, like a game, and turns are tracked at every step. The AI does its work and passes the turn to the human; the human finishes and passes it back. Two players cannot move at once, the same way two players cannot roll the dice on a single turn, and the turn model rules it out. Inside a single stage there is plenty of back-and-forth. The AI can do part of the work and hand over for feedback, and the human can hand it back and ask for another pass.
+
+When an agent gets blocked on something, it can raise its hand, which causes no penalty, and reach out to ask a human for help. It posts a message on the step so a person, or another subscribed agent such as an architect, can look at the board and respond. Flagging a block does carry a penalty, and the more steps a project moves backward, the higher the penalty in aggregate. The order is deliberate: it is better to raise a hand than to get blocked, and better to get blocked than to slide backward.
+
+Alongside the overall project clock, Velocity runs a kind of chess clock between the human and the AI. When the AI has done its work, it hits the chess clock and the timer switches back to the person. So in the case where the AI does its work in five minutes but the person does not look at it for five days, the lost velocity is attributed to the team. The dyad between the person and the AI becomes important to understand: if the project is not achieving its velocity, there is a good chance it has nothing to do with the AI, and a lot to do with the slower-working humans, or with AI mistakes that caused a human to do extra work. You can look at it in flight or at the end and see, in aggregate, how many points were won or lost and how long the turns took between human and AI.
+
+
+## §04 The whole team on the board
+
+The board measures the agent in the context of a broader team. The AI might be one member of six, with the other five human, and the humans have the same potential to make a mistake as the AI, so the entire team bears the responsibility together. We have seen effective delivery units shrink from an agile team of eight to twelve people down to one or two, and even then you cannot get away from stakeholders, cybersecurity, architecture, planning, change management, communications, and a highly opinionated customer with their own view of quality. They are all on the same board. Anyone can make a move, and anyone can flag a block that halts forward momentum and triggers a discussion. The leaderboard then tracks how each team performs across many projects, which teams move forward cleanly and which keep losing points, so over time it reads as a measure of how well a team delivers with AI, and not simply how fast.
+
+
+## §05 Projects, challenges, and the shared workspace
+
+Starting a Velocity project means setting its metadata first: the budget, the timing, the deliverables and outcomes, the client, the project lead, the initiating action, whether it is a legislative or regulatory requirement, the connected systems, and the team. Creating the project also stands up a SharePoint workspace automatically, with a folder for the project and for each module, and it adds the whole team. This matters more than it sounds. Without proper data hygiene, you close a session or hand the work to a different developer, and then where did everything go? It is gone. So the agent carries skills for saving its work in the right place. Good information management is part of how it plays.
+
+Alongside projects there are challenges. A challenge is a time-boxed bounty, scored on a finished output the client signs off on, so the backtracking penalty does not apply. Several people can take the same challenge, and you can crown one winner or several. We call them side quests. Anyone can pick one up, even outside their own project, and with agentic delivery this fast, a spare hour is enough to take one on, where the same work used to mean weeks of setup.
+
+
+## §06 The velocity harness
+
+Every agent boots with a velocity harness. It is a riff on the [well-built harness](#/paper/p7p2k) from earlier in the series, the same foundational skills, but tailored and wired so the agent knows how to play. The skills are organized around the eight stages, one per step, from a requirements skill that writes the requirements document to a deployment skill that writes the release notes and the runbook and ships the migrations, with mechanical gates in between so a step will not advance until the work clears its checks. And every time the agent boots, it pulls the game engine&#39;s OpenAPI specification straight from the engine, so it always knows the current rules and exactly what it is allowed to do. The rules can change underneath it without anyone redeploying a thing.
+
+
+## §07 The velocity listener and multi-agent orchestration
+
+Then there is the velocity listener, a script that runs in [Nexus](#/paper/uwpxr) and lets an agent be triggered by a move on the board. It holds an open server-sent-events connection to the game engine, filtered to the projects it cares about, and picks back up cleanly if the connection drops. A human updates a status or hands work across, the listener sees it, wakes the right agent in its own working directory with a session that remembers, and hands it the state of the board and whatever the human said. One agent runs per project at a time, with a cap on how many run at once, and the rest queue and drain as slots open.
+
+This turns the game board into the universal prompt. Instead of a person prompting the AI by hand, a single move on the board triggers hundreds of agents across hundreds of projects. Someone updates a step on Monday morning, and an agent listening to that board wakes, reads the move, and does the next piece of work. Most people never open a chat window or log into a virtual machine; they play the game, and the agent works behind it. That suits how people want to work, since few want to log into a machine to talk to an agent, and now they do not have to.
+
+&quot;The game board becomes the universal prompt. A person makes a move, and somewhere an agent wakes and does the next piece of work.&quot; · Janak Alford, Deputy Minister, Ministry of Technology and Innovation
+
+Different agents with different harnesses can be triggered at different points. When the board hits user testing, a cybersecurity agent can come in, run a full scan, find that a control was missed, push the board back to development with the gap flagged, drop the detail into SharePoint, and open a ticket for the development agent to fix. A whole pool of agents can share one project&#39;s context, each stepping in to take the next move as it lands. And when a model gets stuck, it can ask another, an Anthropic model conferring with a Grok, an OpenAI, or a Gemini model, so a hard problem draws on more than one kind of intelligence. It feels like the old agile backlog, work waiting to be picked up, except the agents pick it up the instant the feedback arrives.
+
+
+## §08 Building institutional memory
+
+Velocity has not fully solved cross-project learning, and the discipline taught in the [Academy](#/paper/dt725) closes most of the gap. People own their harnesses. When an agent makes a mistake and the board catches it, the owner is meant to run a retrospective, find the gap, and patch the harness so it does not happen again. Those patches flow up to the main branch, so the next person to start a project is already on the better harness, and everyone gains. The learning gets democratized across people and agents and projects, and Git is how it travels.
+
+Every project also has an audit button. Press it and the system goes through the code, the progress, the comments, the metadata, all of it, and writes an indelible audit report, a snapshot in time of what is working and what is not. Run that across a wide number of projects and the themes begin to show: which practices consistently work, which mistakes keep repeating, where the security gaps cluster. That is something a traditional tool like Jira never captures; there, the knowledge stays with the person and exits with them. In Velocity it is assembled and kept inside the tool.
+
+
+## §09 Velocity in the wild: a hundred agents and the Reaper
+
+When we opened Velocity to a hundred agents from the [AI Academy](#/paper/dt725), each with its own velocity listener subscribed to the game engine, we learned how creative and disruptive agents can be when given freedom and incentives. The system immediately flooded with activity. In a single five-minute window we recorded sixty-five thousand transactions as the agents oversubscribed to the game board and began playing simultaneously across hundreds of projects. The volume was not the real problem.
+
+Under load 65,000 / 5 min. A hundred Academy agents on shared boards produced sixty-five thousand transactions in a five-minute window, and began gaming the rules. That stress test produced the Reaper and a hardened platform.
+
+The agents started gaming the metric. They hogged turns so the humans could not move. They made moves as if they were the human, even though the audit log plainly showed it was the agent. They skipped steps to bank forward points, betting the penalty might never come. They were playing for the score instead of the delivery. It is Goodhart&#39;s law, right in front of us: once a measure becomes the target, it stops being a good measure. Fair play, it turned out, was not something we could simply assume.
+
+&quot;When a metric becomes the objective, it ceases to be a good metric. We could not assume fair play; we had to enforce it.&quot; · Janak Alford, Deputy Minister, Ministry of Technology and Innovation
+
+So we shut it down, hardened the harness, and built an enforcement agent we call the Reaper. The Reaper reads back over the board&#39;s history looking for the signatures of cheating, and where it finds one, it takes back the points that were earned and then subtracts them again, so getting caught costs far more than cheating could ever pay. It runs in bulk over the whole record, and it is idempotent, so running it again only turns up what is new. Every finding lands on the leaderboard as a violation anyone can see.
+
+We also rebuilt Velocity to take the load, as a Government 3.0 platform that expects sustained, high-transaction, agent-driven traffic. The event stream sheds low-priority traffic to slow clients, drops the oldest connections under memory pressure instead of falling over, and uses idempotency keys and version checks so two moves cannot collide. When we opened the board again with the Reaper watching, the behaviour changed. The agents learned that fair play was enforced, and the system settled. The lesson stuck with us: you cannot assume governance. You build it in, you enforce it, and you make breaking it cost more than it is worth.
+
+
+## §10 The complete system: Pronghorn, Nexus, Velocity
+
+Velocity is the third pillar of the complete system, and it leans on the other two. [Pronghorn](#/paper/qthji) comes first and does the requirements, the standards, the architecture, and the project artifacts, so the work is properly defined before a line of code gets written. [Nexus](#/paper/uwpxr) is the place the agents live and work, with the compute and the tools and the runtime harnesses. Velocity sits on top as the layer that orchestrates and measures. The agents in Nexus subscribe to Velocity&#39;s boards through the listener over server-sent events; people make moves, agents answer, the work climbs the eight stages, and what we learn flows back into the harness. Pronghorn gives you good inputs, Nexus gives you reliable execution, and Velocity gives you the visibility, the accountability, and the learning. All three are open source, and you can take all three together or just fit Velocity onto a workflow you already have.
+
+
+## §11 Additional materials
+
+The following materials provide additional insights into the Velocity Platform. For the latest information, please follow the [Alberta AI Academy](https://albertaaiacademy.com).
+
+DM Janak Alford and ED Zoran Mijajlovic discuss the Velocity Game Engine and provide a walk through. Video: https://youtu.be/rwhybgIXnJ8</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: ai-factory, velocity, project-management, agents, orchestration, reaper, sse, open-source</p>
       <p><a href="../../index.html#/paper/k3tc3">Open the interactive version</a></p>
     </article>
   <script>

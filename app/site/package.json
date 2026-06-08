@@ -28,7 +28,8 @@
     "deploy:swap-in": "node scripts/deploy-swap.mjs --in",
     "deploy:swap-out": "node scripts/deploy-swap.mjs --out",
     "stubs": "node scripts/build-stubs.mjs",
-    "build:gallery": "node scripts/build-gallery.mjs"
+    "build:gallery": "node scripts/build-gallery.mjs",
+    "build:og": "node scripts/build-og-card.mjs"
   },
   "dependencies": {
     "sharp": "^0.33.5"

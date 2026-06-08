@@ -119,13 +119,13 @@ function buildPaperHTML(paper, locale, otherLocale, otherPaper) {
     '  <meta property="og:url" content="' + xmlEscape(url) + '" />\n' +
     '  <meta property="og:site_name" content="' + xmlEscape(site.i18n[locale].title) + '" />\n' +
     '  <meta property="og:locale" content="' + ogLocale + '" />\n' +
-    (heroSrc ? '  <meta property="og:image" content="' + xmlEscape(heroSrc) + '" />\n' : '') +
+    '  <meta property="og:image" content="' + xmlEscape(heroSrc || (BASE + '/public/og-card.jpg')) + '" />\n' +
     (paper.published ? '  <meta property="article:published_time" content="' + xmlEscape(paper.published) + '" />\n' : '') +
     (paper.tier ? '  <meta property="article:section" content="' + xmlEscape(paper.tier) + '" />\n' : '') +
     '  <meta name="twitter:card" content="summary_large_image" />\n' +
     '  <meta name="twitter:title" content="' + xmlEscape(paper.title) + '" />\n' +
     '  <meta name="twitter:description" content="' + xmlEscape(desc) + '" />\n' +
-    (heroSrc ? '  <meta name="twitter:image" content="' + xmlEscape(heroSrc) + '" />\n' : '') +
+    '  <meta name="twitter:image" content="' + xmlEscape(heroSrc || (BASE + '/public/og-card.jpg')) + '" />\n' +
     '  <script type="application/ld+json">' + JSON.stringify(jsonld) + '</script>\n' +
     '  <link rel="preconnect" href="https://fonts.googleapis.com">\n' +
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
@@ -189,6 +189,9 @@ function buildStaticRouteHTML(routeSegment, locale) {
   const labels = {
     index: { title: locale === 'fr' ? 'Index' : 'Index' },
     about: { title: locale === 'fr' ? 'À propos' : 'About' },
+    press: { title: locale === 'fr' ? 'Presse' : 'Press' },
+    resources: { title: locale === 'fr' ? 'Ressources' : 'Resources' },
+    gallery: { title: locale === 'fr' ? 'Médias' : 'Media' },
     glossary: { title: locale === 'fr' ? 'Glossaire' : 'Glossary' },
     repos: { title: locale === 'fr' ? 'Dépôts' : 'Repositories' },
     updates: { title: locale === 'fr' ? 'Mises à jour' : 'Updates' },
@@ -213,7 +216,11 @@ function buildStaticRouteHTML(routeSegment, locale) {
          '  <meta property="og:description" content="' + xmlEscape(desc) + '" />\n' +
          '  <meta property="og:url" content="' + xmlEscape(url) + '" />\n' +
          '  <meta property="og:locale" content="' + ogLocale + '" />\n' +
+         '  <meta property="og:image" content="' + xmlEscape(BASE + '/public/og-card.jpg') + '" />\n' +
+         '  <meta property="og:image:width" content="1200" />\n' +
+         '  <meta property="og:image:height" content="630" />\n' +
          '  <meta name="twitter:card" content="summary_large_image" />\n' +
+         '  <meta name="twitter:image" content="' + xmlEscape(BASE + '/public/og-card.jpg') + '" />\n' +
          '  <script>\n' +
          '    (function () {\n' +
          '      try { if (window.localStorage) localStorage.setItem("vw_locale", "' + locale + '"); } catch (e) {}\n' +
@@ -260,7 +267,7 @@ for (const p of inventory) {
   }
 }
 
-const STATIC = ['index', 'about', 'glossary', 'repos', 'updates', 'community'];
+const STATIC = ['index', 'about', 'press', 'resources', 'gallery', 'glossary', 'repos', 'updates', 'community'];
 for (const r of STATIC) {
   for (const locale of ['en', 'fr']) {
     const dir = locale === 'fr'
