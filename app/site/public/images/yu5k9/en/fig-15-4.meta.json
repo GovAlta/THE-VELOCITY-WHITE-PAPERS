@@ -1,0 +1,17 @@
+{
+  "paper_id": "yu5k9",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\yu5k9\\en\\fig-15-4.jpg",
+  "bytes_jpg": 103122,
+  "bytes_png_source": 2463358,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-08T01:02:59.906Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial line chart on warm cream paper, deep navy line work with small rust accents. Two lines run left to right over a time axis. The upper line, labelled DEMAND, rises steadily. The lower line, labelled PUBLIC SERVICE SIZE, stays flat. The widening gap between them is shaded lightly in rust and labelled AI MAKES UP THE DIFFERENCE. A small caption reads DO MORE FOR LESS. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial line chart on warm cream paper, deep navy line work with small rust accents. Two lines run left to right over a time axis. The upper line, labelled DEMAND, rises steadily. The lower line, labelled PUBLIC SERVICE SIZE, stays flat. The widening gap between them is shaded lightly in rust and labelled AI MAKES UP THE DIFFERENCE. A small caption reads DO MORE FOR LESS. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

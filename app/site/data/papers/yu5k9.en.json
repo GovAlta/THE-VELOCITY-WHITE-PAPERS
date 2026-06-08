@@ -1,25 +1,35 @@
 {
   "id": "yu5k9",
-  "num": "16",
+  "num": "15",
   "sequence": "",
   "tier": "Policy & People",
   "category": "paper",
   "title": "Measuring Failure and Success",
-  "subtitle": "How we judge what works and what does not.",
+  "subtitle": "Why the right measure of an AI program is capability built, not dollars saved.",
   "track": "Human and Change Management",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 13,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "measurement",
+    "success-criteria",
+    "readiness",
+    "system-health",
+    "cost",
+    "workforce",
+    "change-management"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
+  "abstract": "Most organizations adopting AI measure success in dollars saved. Alberta measures it differently. The goal is not to do the same work with fewer people, which would be folly, but to build capability and a workforce that can transform how government operates, at a moment when Canada's productivity is under strain and the normalization of AI in the workplace looks inevitable. Over eighteen months the province has been recognized among the most innovative public-sector adopters in North America. This paper sets out the three measures Alberta uses to judge whether that work is succeeding: readiness, system health, and cost, counted across the whole of government rather than one ledger.",
   "hero_image": {
     "src": "public/images/yu5k9/en/hero.jpg",
-    "alt": "Editorial image for: Measuring Failure and Success",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"Measuring Failure and Success\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Editorial cover illustration: three simple gauge dials in a row with needles leaning upward, suggesting measurement and progress, drawn in deep Alberta navy line work with small rust accents on warm cream paper.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. Three simple gauge dials sit in a row, their needles leaning upward to suggest measurement and progress, with fine tick marks around each dial. Calm, archival, abstract. Wide cover aspect. No text, no logos, no people.",
     "style_kind": "cover"
   },
   "audio": {
@@ -36,33 +46,276 @@
         "title": "Measuring Failure and Success",
         "audio_file": "public/audio/en/yu5k9-tldr/01.mp3",
         "visual": "title",
-        "caption": "Human and Change Management",
-        "subcaption": "",
-        "text": "Measuring Failure and Success. Content forthcoming."
+        "caption": "Paper 15 · Human and Change Management",
+        "subcaption": "Capability built, not dollars saved.",
+        "text": "Most organizations measure an AI program by the money it saves. Alberta measures it by capability. Doing the same work with fewer people would be folly; the aim is a workforce and a government that can do more. This paper sets out the three measures we use to tell whether that is working: readiness, system health, and cost."
+      },
+      {
+        "id": "02",
+        "title": "What we measure",
+        "audio_file": "public/audio/en/yu5k9-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Three measures",
+        "visual_config": {
+          "items": [
+            { "label": "Readiness", "desc": "Can the organization carry the change? Education, security, self-sufficiency, governance." },
+            { "label": "System health", "desc": "Is the estate getting healthier? Fewer vulnerabilities, a smaller backlog, fewer applications." },
+            { "label": "Cost", "desc": "Is value rising faster than cost, across the whole of government?" }
+          ]
+        },
+        "text": "Three measures, each chosen because it is hard to argue with. Readiness asks whether the organization can carry the change. System health asks whether the estate is getting healthier rather than sicker. Cost asks whether value is rising faster than spending, counted across the whole of government and not one ledger."
+      },
+      {
+        "id": "03",
+        "title": "Readiness",
+        "audio_file": "public/audio/en/yu5k9-tldr/03.mp3",
+        "visual": "title",
+        "caption": "Can we carry the change?",
+        "subcaption": "Education, security, self-sufficiency, governance.",
+        "text": "Readiness has four parts. An educated workforce that can adapt, with the Academy as the vehicle. Control of both sides of the agentic equation, building safely and defending against bad actors. Self-sufficiency, so we grow stronger rather than more dependent on vendors. And governance that gives stakeholders genuine confidence."
+      },
+      {
+        "id": "04",
+        "title": "System health",
+        "audio_file": "public/audio/en/yu5k9-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Reversing the tide",
+        "visual_config": {
+          "stat_value": "~600",
+          "stat_label": "Applications in the modernization backlog"
+        },
+        "subcaption": "Blunt metrics, hard to dispute.",
+        "text": "The first paper described an estate aging out faster than it can be fixed. System health asks the blunt questions: are cyber vulnerability exposures falling, is the backlog of roughly six hundred applications shrinking, is the total number of applications coming down? These leave little room for debate."
+      },
+      {
+        "id": "05",
+        "title": "Cost, properly counted",
+        "audio_file": "public/audio/en/yu5k9-tldr/05.mp3",
+        "visual": "title",
+        "caption": "Do more for less",
+        "subcaption": "The whole-of-government ledger.",
+        "text": "Cost has three lenses. Our direct cost as the IT provider, where faster delivery must not simply trade a license bill for an AI bill. The performance of ministry programs that better systems make possible. And the widest lens: over three to five years, the size and cost of the public service against the population it serves. The mandate is to do more for less."
+      },
+      {
+        "id": "06",
+        "title": "The standard",
+        "audio_file": "public/audio/en/yu5k9-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Success, and failure, made legible",
+        "subcaption": "A government capable of more.",
+        "text": "Together the three measures describe success: a capable workforce, a healthier estate, and a public service that does more for less. Failure is equally legible: rising dependency, a backlog that will not fall, costs merely shifted. Alberta will keep publishing the results so any government can adopt what works and learn from what does not."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "The wrong yardstick" },
+    { "n": "02", "title": "Readiness" },
+    { "n": "03", "title": "System health" },
+    { "n": "04", "title": "Cost, properly counted" },
+    { "n": "05", "title": "The standard, and sharing it" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Over the last eighteen months, Alberta has been recognized as among the most innovative public-sector adopters of AI in North America, through the Academy, the agentic workforce, and the AI factory described across this collection. The work has a purpose beyond efficiency. Canada's productivity has been slipping, the normalization of AI in the workplace now looks inevitable, and the province intends to keep its workers relevant and its institutions capable. Moving at that speed invites a fair question, one we are asked often: how do you know whether you have succeeded? This paper answers in three measures."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "The wrong yardstick"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "It is tempting to measure an AI program the way most organizations do, by the money it saves. That measure is too small, and on its own it misleads. Continuing to do exactly the work we do today with fewer people would be folly: it banks a one-time saving and forfeits the larger prize, a public service that can do more, and do things it could not do before. Alberta's aim is to build capability and a workforce equal to the transformation of government, and the measures that follow judge progress against that aim. They are readiness, system health, and cost, and each was chosen because it is hard to argue with."
+    },
+    {
+      "type": "table",
+      "title": "What we measure",
+      "columns": [
+        "Measure",
+        "The question it asks",
+        "What it looks at"
+      ],
+      "rows": [
+        [
+          "Readiness",
+          "Can the organization carry the change?",
+          "Staff education, security on both sides, self-sufficiency, governance."
+        ],
+        [
+          "System health",
+          "Is the estate getting healthier rather than sicker?",
+          "Cyber vulnerabilities, the application backlog, the total number of systems."
+        ],
+        [
+          "Cost",
+          "Is value rising faster than cost?",
+          "Direct IT cost, ministry program performance, public service size against population."
+        ]
+      ],
+      "caption": "Three measures, counted across the whole of government rather than a single ledger. Each is chosen to leave little room for debate.",
+      "source": "Ministry of Technology and Innovation."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.1",
+      "title": "Two yardsticks",
+      "caption": "Most programs are measured by the cost they remove. The more important measure is the capability they add, which is the longer ruler and the one Alberta judges itself against.",
+      "image": {
+        "src": "public/images/yu5k9/en/fig-15-1.jpg",
+        "alt": "A hand-drawn diagram of two measuring sticks side by side. The shorter one is labelled cost saved; the much longer one is labelled capability built.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Two measuring sticks stand side by side with tick marks. The shorter stick on the left is labelled COST SAVED. The much taller stick on the right is labelled CAPABILITY BUILT, reaching well above the first. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Readiness"
+    },
+    {
+      "type": "paragraph",
+      "text": "Readiness asks whether the organization can carry this change, and it has four parts. The first is education. A workforce that understands the fundamentals, the concepts, and the limits of these technologies can adapt to whatever comes next; one that does not will be dependent and brittle. The [AI Academy](#/paper/dt725) is the vehicle, and the measure is the organization's readiness and adaptability to change."
+    },
+    {
+      "type": "paragraph",
+      "text": "The second part is control of both sides of the agentic equation: the contracts, controls, and security to build new applications safely, and the defenses to withstand the bad actors who now wield the same tools, a balance the [Cyber Imperative](#/paper/mwo98) takes up in full. The third is self-sufficiency. As adoption grows, are we becoming stronger and more able to lead this work ourselves, or weaker and more dependent on third-party vendors, our control and agency shrinking in proportion to our use of the technology? The fourth is governance: whether the rules in place give concerned stakeholders genuine confidence in how AI is being used. A program can move fast and still fail any one of these four, which is why readiness is measured on its own."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.2",
+      "title": "Readiness, in four parts",
+      "caption": "Education, security on both sides of the agentic equation, self-sufficiency, and governance. A program can be quick and still be unready on any one of them.",
+      "image": {
+        "src": "public/images/yu5k9/en/fig-15-2.jpg",
+        "alt": "A hand-drawn two-by-two grid under a header reading readiness, with the four cells labelled education, security both sides, self-sufficiency, and governance.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A header at the top reads READINESS. Beneath it a two-by-two grid of four equal cells, each labelled clearly: EDUCATION, SECURITY BOTH SIDES, SELF-SUFFICIENCY, GOVERNANCE. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "System health"
+    },
+    {
+      "type": "paragraph",
+      "text": "System health turns the program toward the problem named in the first paper of this collection, [the Ship of Theseus](#/paper/cux4h): an estate aging out faster than it can be repaired. The measures here are blunt and hard to dispute. Are cyber vulnerability exposures going down? Is the backlog of roughly six hundred applications shrinking? Is the total number of applications falling as systems are consolidated? Are we, in short, reversing the tide rather than holding against it?"
+    },
+    {
+      "type": "paragraph",
+      "text": "These metrics matter because they leave little room for argument. They frame the elimination of technical debt in numbers that rise or fall, and a program that is working will move them in one direction over time. A program that is not will show it plainly. There is no narrative to hide behind when the backlog is a single number reported year over year."
+    },
+    {
+      "type": "keystat",
+      "label": "The backlog",
+      "value": "~600 apps",
+      "body": "Roughly six hundred applications wait in the modernization backlog. Whether that number falls, year over year, is one of the clearest signs of whether the program is working."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.3",
+      "title": "Reversing the tide",
+      "caption": "Vulnerabilities and the application backlog have been rising faster than they could be cleared. System health asks whether the lines turn downward, and stay there.",
+      "image": {
+        "src": "public/images/yu5k9/en/fig-15-3.jpg",
+        "alt": "A hand-drawn line chart where a rising line labelled backlog and vulnerabilities bends and turns downward partway across, with an arrow labelled reverse the tide pointing down.",
+        "image_prompt": "An editorial line chart on warm cream paper, deep navy line work with small rust accents. A single line rises steeply from the lower left, labelled BACKLOG + VULNERABILITIES, then bends at a marked point and turns downward toward the right. A small rust arrow near the bend is labelled REVERSE THE TIDE. Simple axes, no gridlines. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Cost, properly counted"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cost is real, and it has more than one lens. The first is our direct cost as the government's IT provider. The factory delivers faster, but if delivering the same product costs more than before, we have traded one problem for another, the way the market has moved customers from licensed software to SaaS to AI, each migration a fresh cost category. Speed that arrives with unacceptable new cost is not a win."
+    },
+    {
+      "type": "paragraph",
+      "text": "The second lens is wider. Much of a ministry's performance is shaped, for better or worse, by the IT beneath it, so the question becomes whether better systems let ministries deliver better programs. AI reaches beyond technology, into program delivery, client engagement, policy development, and benchmarking. The honest accounting is therefore whole-of-government, not one ministry's ledger."
+    },
+    {
+      "type": "paragraph",
+      "text": "The widest lens is the public service itself. Over three to five years, will its size and cost, measured against the population it serves, stay flat or fall? Growth would be hard to imagine here. The minister's direction is to do more for less, and the expectation is that Alberta's public service stays flat or declines relative to its population while delivering more, with AI making up the difference."
+    },
+    {
+      "type": "keystat",
+      "label": "The mandate",
+      "value": "Do more for less",
+      "body": "The test for cost, set by the minister: the public service should stay flat or shrink against the population it serves, while delivering more."
+    },
+    {
+      "type": "pullquote",
+      "text": "Continuing the same work we are doing, just with fewer staff, is folly.",
+      "cite": "Janak Alford, Deputy Minister, Ministry of Technology and Innovation"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.4",
+      "title": "Do more for less",
+      "caption": "Demand for digital services keeps climbing. The measure of cost is whether the public service can meet it while its size, against the population, stays flat or falls, with AI making up the difference.",
+      "image": {
+        "src": "public/images/yu5k9/en/fig-15-4.jpg",
+        "alt": "A hand-drawn chart with two lines over time. An upper line labelled demand rises steadily; a lower line labelled public service size stays flat. The gap between them is labelled AI makes up the difference.",
+        "image_prompt": "An editorial line chart on warm cream paper, deep navy line work with small rust accents. Two lines run left to right over a time axis. The upper line, labelled DEMAND, rises steadily. The lower line, labelled PUBLIC SERVICE SIZE, stays flat. The widening gap between them is shaded lightly in rust and labelled AI MAKES UP THE DIFFERENCE. A small caption reads DO MORE FOR LESS. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "The standard, and sharing it"
+    },
+    {
+      "type": "paragraph",
+      "text": "Taken together, the three measures describe what success looks like: a capable and adaptable workforce, an estate getting healthier rather than sicker, and a public service that does more for less across the whole of government. Failure is equally legible. A workforce growing more dependent, a backlog that will not fall, costs merely shifted from one category to another. Naming both matters, because a measure that cannot show failure cannot show success either."
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta will keep publishing these results as they come, in the same transparent and accessible form as the rest of this collection, so that any government can adopt what works and learn from what does not. The aim is a government capable of more, built deliberately and judged honestly against measures that can tell the difference."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.5",
+      "title": "The scorecard",
+      "caption": "Three measures, read together. Each can move up or down, and a program that is working moves all three in the right direction over time.",
+      "image": {
+        "src": "public/images/yu5k9/en/fig-15-5.jpg",
+        "alt": "A hand-drawn scorecard with three rows labelled readiness, system health, and cost, each with a simple up or down indicator beside it, under a header reading the scorecard.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A simple scorecard panel with a header reading THE SCORECARD and three stacked rows labelled READINESS, SYSTEM HEALTH, and COST. Beside each row sits a small arrow indicator pointing up or down. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "measurement",
+        "readiness",
+        "system-health",
+        "cost",
+        "workforce"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Transposed by Claude from the author's recorded stub.",
+    "author_verbatim": false,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "cux4h",
+    "dt725",
+    "mwo98",
+    "k3tc3",
+    "oxj36"
+  ]
 }

@@ -29,8 +29,12 @@ technical-reference/
 video-transcripts/
 style-guide/janak-transcripts/
 original-transcripts/
+hiking/
 _archive/
 whitepaper-raw-materials.md
+
+# Claude Code per-directory runtime state (locks, local settings) at the repo root.
+/.claude/
 
 # ============================================================
 #  Dependencies

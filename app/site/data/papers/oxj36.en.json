@@ -5,21 +5,31 @@
   "tier": "Policy & People",
   "category": "paper",
   "title": "Establishing a Builder Culture",
-  "subtitle": "Shifting from buying systems to building them.",
+  "subtitle": "How agentic AI democratizes the building of government systems, while the fortress stays central.",
   "track": "Human and Change Management",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 16,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "builder-culture",
+    "democratization",
+    "governance",
+    "agents",
+    "shadow-it",
+    "operating-model",
+    "change-management"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
+  "abstract": "Governments swing between centralized and decentralized IT delivery, trading economy of scale and consistency against autonomy and speed, and Alberta, like Canada and British Columbia, runs a centralized model today. That model has saved tens of millions of dollars, and it cannot deliver fast enough for every ministry. Agentic AI opens a third option: keep the fortress functions central, cybersecurity, identity, networking, and data, and push the building of solutions back out to the people who know the work. This paper sets out how Alberta intends to enable a builder culture, where domain experts create their own governed and audited systems, and why the alternative is ungoverned shadow IT.",
   "hero_image": {
     "src": "public/images/oxj36/en/hero.jpg",
-    "alt": "Editorial image for: Establishing a Builder Culture",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"Establishing a Builder Culture\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Editorial cover illustration: a central walled keep surrounded by many small open workshops linked by paths, drawn in deep Alberta navy line work with small rust accents on warm cream paper, suggesting a protected core with building happening all around it.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A central walled keep sits at the middle, and around it many small open workshops and benches are connected to it by light paths, suggesting a protected core with building happening freely all around. Calm, archival, abstract. Wide cover aspect. No text, no logos, no people.",
     "style_kind": "cover"
   },
   "audio": {
@@ -36,33 +46,346 @@
         "title": "Establishing a Builder Culture",
         "audio_file": "public/audio/en/oxj36-tldr/01.mp3",
         "visual": "title",
-        "caption": "Human and Change Management",
-        "subcaption": "",
-        "text": "Establishing a Builder Culture. Content forthcoming."
+        "caption": "Paper 13 · Human and Change Management",
+        "subcaption": "Shifting from buying and queuing for systems to building them.",
+        "text": "Governments swing between centralized and decentralized IT, and Alberta runs a centralized model today. It saves money and moves too slowly. Agentic AI offers a third way: hold the protective core in the center, and hand the building of solutions back to the people who know the work. This paper sets out how Alberta means to enable a builder culture."
+      },
+      {
+        "id": "02",
+        "title": "Three ways to deliver",
+        "audio_file": "public/audio/en/oxj36-tldr/02.mp3",
+        "visual": "list",
+        "caption": "The pendulum, and a third option",
+        "visual_config": {
+          "items": [
+            { "label": "Centralized", "desc": "Scale and consistency, paid for with a bottleneck." },
+            { "label": "Decentralized", "desc": "Autonomy and speed, paid for with duplication and risk." },
+            { "label": "AI-augmented hybrid", "desc": "Building at the edges, protection and rules at the center." }
+          ]
+        },
+        "text": "Centralization buys economy of scale and consistency at the cost of a bottleneck. Decentralization buys autonomy at the cost of duplication and uneven security. AI introduces a third model: keep the functions that must stay uniform in the center, and let ministries build their own solutions on governed tools."
+      },
+      {
+        "id": "03",
+        "title": "What makes it safe",
+        "audio_file": "public/audio/en/oxj36-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Delegated access, and automated gates",
+        "visual_config": {
+          "items": [
+            { "label": "Delegated access", "desc": "An agent acts only within the permissions a person already holds." },
+            { "label": "Vibe coding", "desc": "A specialist describes the system; the tools build it." },
+            { "label": "Automated checks", "desc": "Red and blue agents, information management, and identity, cleared before production." }
+          ]
+        },
+        "text": "An agent gateway lets a public servant lend their own permissions to an agent, which can then do what an application would, without new code. Anything a ministry builds passes the same automated gates that keep software out of production until it is secure: the red and blue security agents, information management, and identity and access."
+      },
+      {
+        "id": "04",
+        "title": "Centralize governance, not delivery",
+        "audio_file": "public/audio/en/oxj36-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "The shift, and the sprawl to design against",
+        "visual_config": {
+          "stat_value": "18,000",
+          "stat_label": "SharePoint sites the government already carries"
+        },
+        "subcaption": "When a new application costs almost nothing, growth is the risk.",
+        "text": "The center stops being the place all software is delivered and becomes the place all software is governed, with an agent on every application and the same controls enforced everywhere. The cost is sprawl: cheap building can swell the estate. The answer is automated disposition, so that creation and removal hold a rough balance, the way a forest returns fallen wood to soil."
+      },
+      {
+        "id": "05",
+        "title": "The builder",
+        "audio_file": "public/audio/en/oxj36-tldr/05.mp3",
+        "visual": "title",
+        "caption": "An extension of the Academy",
+        "subcaption": "Domain experts, given safe tools, build their own systems.",
+        "text": "A builder is a specialist in a domain, finance, public safety, wildfire, agriculture, who sees a problem technology could solve and is given a safe place to build it. It extends the third level of the Alberta AI Academy. A frontier model is already a stronger full-stack developer, database administrator, and security specialist in one than any single person. The task is to put the tool within reach of every team."
+      },
+      {
+        "id": "06",
+        "title": "Inside the fence, or shadow IT",
+        "audio_file": "public/audio/en/oxj36-tldr/06.mp3",
+        "visual": "title",
+        "caption": "The model is coming either way",
+        "subcaption": "A consultancy model, and an invitation.",
+        "text": "If sanctioned building is too slow, AI becomes the fastest route to unsanctioned building, and the technology takes the blame for how people misuse it. The likely shape is a consultancy model: AI implements, Technology and Innovation holds the fortress, the governance, and the controls, and ministries bring the ideas. Alberta will pilot a builder culture in 2026, and publish what it learns."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "The pendulum governments keep swinging" },
+    { "n": "02", "title": "A third model" },
+    { "n": "03", "title": "What makes it safe to build" },
+    { "n": "04", "title": "From centralizing delivery to centralizing governance" },
+    { "n": "05", "title": "The builder" },
+    { "n": "06", "title": "The inevitable model, or shadow IT" },
+    { "n": "07", "title": "A consultancy model, and an invitation" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Every few years, governments change their mind about how to deliver technology. They centralize until the bottlenecks become intolerable, then decentralize until the duplication and the risk become intolerable, and then they swing back. Alberta, the Government of Canada, and more recently British Columbia all sit at the centralized end of that swing today. Agentic AI offers a way to stop swinging: to hold the protective core in the center while handing the act of building back to the people closest to the work. We call the result a builder culture."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "The pendulum governments keep swinging"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "Centralization and decentralization each solve the other's problem. A central IT function buys economy of scale and a consistent method, and it cleans up the accumulated sins of many teams each doing things their own way; its price is the bottleneck, the queue every ministry waits in. Decentralization buys autonomy and flexibility, and its price is duplication, uneven security, and the loss of every economy of scale. Neither stays right for long, which is why governments keep trading one set of problems for the other."
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta consolidated its IT function beginning in 2016, formalized it closer to 2019, and in 2022 created the Ministry of Technology and Innovation, joining the government's central IT mandate to economic development mandates, including Alberta Innovates. Today that ministry is the IT backbone for the whole of government, healthcare IT aside, and it carries both sides of the bargain. Hard negotiation with suppliers and the scale of a single estate have saved tens of millions of dollars in recent months. The same central model is also too slow to meet what most ministries need. That is the crux: how to let ministries explore and build, while keeping the castle-and-fortress protection that government requires, in its finances and against a rising cyber threat."
+    },
+    {
+      "type": "table",
+      "title": "Three ways to deliver government technology",
+      "columns": [
+        "Model",
+        "What it buys",
+        "What it costs",
+        "Where it stands"
+      ],
+      "rows": [
+        [
+          "Centralized",
+          "Economy of scale, a consistent method, easier to secure and to clean up.",
+          "A single queue, and delivery too slow for many ministries.",
+          "Alberta's model today."
+        ],
+        [
+          "Decentralized",
+          "Autonomy, flexibility, ideas close to the work.",
+          "Duplication, uneven security, no economy of scale.",
+          "The model governments swing back to when the center stalls."
+        ],
+        [
+          "AI-augmented hybrid",
+          "Building pushed out to the ministries, protection and rules held in the center.",
+          "New sprawl, if creation outruns disposition.",
+          "Where this paper proposes Alberta goes next."
+        ]
+      ],
+      "caption": "The pendulum has only ever offered two settings. Agentic AI adds a third, which keeps the protective core central and moves the building outward.",
+      "source": "Ministry of Technology and Innovation."
+    },
+    {
+      "type": "keystat",
+      "label": "Saved by scale",
+      "value": "Tens of $M",
+      "body": "Recent savings from a single estate and hard supplier negotiation, the benefit centralization is meant to deliver, and a reason the protective core stays central."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.1",
+      "title": "The pendulum governments keep swinging",
+      "caption": "Centralization buys scale and consistency at the cost of a bottleneck; decentralization buys autonomy at the cost of duplication and risk. Governments swing from one to the other as each becomes intolerable.",
+      "image": {
+        "src": "public/images/oxj36/en/fig-13-1.jpg",
+        "alt": "A hand-drawn pendulum hanging between two labelled posts, centralize on the left and decentralize on the right, with small notes reading economy of scale and bottleneck under one side and autonomy and duplication under the other.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single pendulum hangs from a pivot and swings between two labelled posts: CENTRALIZE on the left and DECENTRALIZE on the right. Beneath CENTRALIZE, small captions read ECONOMY OF SCALE and BOTTLENECK. Beneath DECENTRALIZE, small captions read AUTONOMY and DUPLICATION. A faint arc shows the swing. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "A third model"
+    },
+    {
+      "type": "paragraph",
+      "text": "Artificial intelligence introduces a third option the old pendulum never offered. Delivery itself can be augmented by AI, which lets the work split cleanly in two. The functions that must stay uniform to keep government safe, cybersecurity, identity and access, networking, databases, licensing, operating systems, telephony, and end-user compute, remain central. The act of building, the agents and applications themselves, moves back out to the ministries. A ministry with no IT department of its own can use the platforms built for the AI factory, [Pronghorn](#/paper/qthji), [Nexus](#/paper/uwpxr), and [Velocity](#/paper/k3tc3), to design, run, and measure its own solutions safely."
+    },
+    {
+      "type": "paragraph",
+      "text": "What a ministry builds need not be an application in the old sense. It might be an agentic workflow, an autonomous agent with delegated access wired into the Microsoft 365 or Google environment, or a front-end that exists only as a temporary interface for one task and then is gone. The pattern is familiar from business intelligence, where giving non-technical staff direct access to their own data through Power BI or Tableau produced real operational insight. The agentic era reaches much further, because the tool on the other side of the interface can now do the building, where before it only drew the charts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.2",
+      "title": "Hold the core, push out the building",
+      "caption": "The functions that must stay uniform to keep government safe remain central. The act of building moves out to the ministries, working on the platforms of the AI factory.",
+      "image": {
+        "src": "public/images/oxj36/en/fig-13-2.jpg",
+        "alt": "A hand-drawn diagram with a central keep labelled central core listing cybersecurity, identity, network, and data, and arrows radiating out to several smaller workshop boxes labelled ministry builders, with a band beneath reading Pronghorn, Nexus, Velocity.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. At the center, a sturdy keep labelled CENTRAL CORE with a short stacked list inside reading CYBERSECURITY, IDENTITY, NETWORK, DATA. Arrows radiate outward to four small workshop boxes around it labelled MINISTRY BUILDERS. A band along the bottom reads PRONGHORN · NEXUS · VELOCITY. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "What makes it safe to build"
+    },
+    {
+      "type": "paragraph",
+      "text": "Two capabilities make this safe to offer. The first is delegated access. Through an agent gateway governed by identity and access management, a public servant can lend their own permissions to an agent: their email, calendar, and Teams, the OneGX ERP, ServiceNow, SharePoint, the open web, and the bespoke systems of their ministry. An agent acting on that delegation can do anything an existing application could, without a line of new code, and only ever within the access the person already holds through Entra ID. Provide the gateway and the identity controls, and a ministry can build its own solutions on top of the government's API and data layers."
+    },
+    {
+      "type": "paragraph",
+      "text": "The second is vibe coding. A non-technical specialist can describe a system they imagine, its interface, its workflows, and its controls, and have it built. Rather than reaching for an outside tool like Lovable, a ministry can use the governed tools and the [well-built harness](#/paper/p7p2k), then pass the result back to Technology and Innovation through automated checks. The gates that traditionally keep an application out of production, the [red and blue security agents](#/paper/l199t), information management, and proper identity and access management, can be cleared by a non-technical builder when the controls of the AI factory are enforced. Quality control becomes something the system verifies, not something only a central team can perform."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.3",
+      "title": "What makes it safe to build",
+      "caption": "Delegated access lets an agent act within the permissions a person already holds. Anything a ministry builds passes the same automated gates that keep software out of production until it is secure.",
+      "image": {
+        "src": "public/images/oxj36/en/fig-13-3.jpg",
+        "alt": "A hand-drawn two-panel diagram. The left panel shows an agent gateway with delegated access to email, calendar, ERP, ServiceNow, and SharePoint. The right panel shows a vibe-coded build passing through three automated checks, red and blue agents, information management, and identity, into a box labelled production.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled DELEGATED ACCESS: a box labelled AGENT GATEWAY with small input lines labelled EMAIL, CALENDAR, ERP, SERVICENOW, SHAREPOINT feeding into it, and a small note IAM beneath. RIGHT panel labelled VIBE-CODE TO PRODUCTION: a box labelled BUILD passes rightward through three gates labelled RED + BLUE, INFO MGMT, IDENTITY, into a final box labelled PRODUCTION. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "From centralizing delivery to centralizing governance"
+    },
+    {
+      "type": "paragraph",
+      "text": "This shifts the center's job. Technology and Innovation stops being the place where all software is delivered and becomes the place where all software is governed. An audit-based control plane watches the estate: an agent assigned to every application, reading every log, surfacing issues earlier and remediating or blocking them as they appear. The gap that once separated a centrally built application from a ministry-built one, in security and in privacy, closes, because the same controls are enforced on both. The risk of an agent running amok, or of a careless build reaching production, falls toward zero."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nothing is free. When the cost of a new application falls far enough, the estate can swell from 1,400 systems to fourteen thousand or a hundred and forty thousand, and a new kind of technical debt sets in. Alberta already knows the shape of this. The government carries no fewer than 18,000 SharePoint sites, most of little value and none easy to retire; when the on-premises platform reached end of life, it cost millions to migrate their contents, because cleaning them up first was harder than carrying them forward. We are poor at going back to tidy data, and poorer still at tagging it well to begin with."
+    },
+    {
+      "type": "paragraph",
+      "text": "The same automation that creates the sprawl can clear it. Picture agents that index every file as it is written and dispose of it by rule, so a document left in a folder, and in time the folder and the site around it, simply ages out under an automated policy. A forest works this way. A fallen tree would pile up forever if nothing consumed it, until the ground was nothing but trunks; instead bacteria break the fibers down over years and return them to the soil, and growth and decay hold a rough balance. An estate of systems can be built to the same balance, with disposition rules tightened by weeks or months whenever growth runs ahead of cost. The deeper fix, moving how data is classified away from rigid folders and toward metadata, belongs to a separate discussion of intelligent digital systems; here it is enough that creation and removal can be brought back into step."
+    },
+    {
+      "type": "keystat",
+      "label": "The sprawl to design against",
+      "value": "18,000",
+      "body": "SharePoint sites the government already carries, most of little value and none easy to retire. When a new application costs almost nothing to make, unmanaged growth is the failure mode to plan for."
+    },
+    {
+      "type": "pullquote",
+      "text": "Our mode shifts from centralizing IT delivery to centralizing IT governance.",
+      "cite": "Janak Alford, Deputy Minister, Ministry of Technology and Innovation"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.4",
+      "title": "From central delivery to central governance",
+      "caption": "The center stops being the place all software is delivered and becomes the place all software is governed: rules and audit held centrally, building done at the edges, with the same controls enforced on both.",
+      "image": {
+        "src": "public/images/oxj36/en/fig-13-4.jpg",
+        "alt": "A hand-drawn before-and-after diagram. On the left, labelled was central delivery, many arrows funnel through a single central box. On the right, labelled now central governance, a central box sets rules and audits while building happens in several boxes around the edge.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled WAS: CENTRAL DELIVERY, with many arrows from edge boxes funnelling through one central box. RIGHT panel labelled NOW: CENTRAL GOVERNANCE, with a central box labelled RULES + AUDIT connected by thin oversight lines to several edge boxes labelled BUILD. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "The builder"
+    },
+    {
+      "type": "paragraph",
+      "text": "A builder culture is the deliberate enablement of non-technical people to create solutions and keep them in the hands of the people who use them. It extends the third level of the [Alberta AI Academy](#/paper/dt725), where staff learn to drive Pronghorn, Nexus, and Velocity to build to an enterprise standard. Give those graduates a governed way to deploy and monitor what they build, with security and privacy woven into the tools and audited through production, and there is little reason left to forbid a non-technical specialist from building their own application. The technical bottleneck that defined the old model begins to disappear."
+    },
+    {
+      "type": "paragraph",
+      "text": "For decades, software was a kind of mystical art, too complex to approach without a degree and years of practice, and so the right to build was held by a few. It is worth asking who that served. No one benefits from a world in which only the treasury branch is allowed a spreadsheet. A current frontier model is already a stronger full-stack developer, database administrator, and security specialist in one than any single person. People in aggregate are more creative, and a named specialist still outperforms the model within their own craft, yet no individual holds all of those skills at once the way the model does. The task now is to put the tool within reach of every team."
+    },
+    {
+      "type": "paragraph",
+      "text": "The builder is a person with deep knowledge of a domain, finance, public safety, wildfire, or agriculture, who sees a problem that technology could solve and is given a safe place to try. They need no project funding and carry no measurable cost beyond the tokens they spend, and the early evidence is that good ideas pay for themselves. Trained and equipped, such people give government many delivery teams in place of one queue. This is the social contract set out in the [Academy](#/paper/dt725) paper in another form: a stronger security posture, faster delivery, and real cost containment, in exchange for handing the creative work back to the specialists who understand the problem best."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.5",
+      "title": "The bottleneck disappears",
+      "caption": "The old model routed every build through a narrow technical gate. With governed tools in every team, many domain experts build at once, under the same central controls.",
+      "image": {
+        "src": "public/images/oxj36/en/fig-13-5.jpg",
+        "alt": "A hand-drawn before-and-after diagram. On the left, a long queue of work items waits at a single narrow gate labelled IT. On the right, several builders each hold an AI toolkit and build directly, beneath a shared bar labelled central controls.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled ONE QUEUE: a long line of small work items waits at a single narrow gate labelled IT. RIGHT panel labelled MANY BUILDERS: four small workbench boxes each labelled BUILDER with a small toolkit icon, building in parallel beneath a horizontal bar labelled CENTRAL CONTROLS. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "The inevitable model, or shadow IT"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some version of this is coming whether or not it is sanctioned. If central IT cannot deliver at the speed ministries need, AI becomes the fastest available way to build, and it will be used, with none of the controls described here. Vibe-coded applications will appear outside the fence, exposing government, and they will be blamed on the technology. The danger is a misattribution: the models are highly capable, and most of the risk lies in how people use them, without the security, privacy, and data discipline that safe use requires. A backlash against AI built on that confusion would be aimed at the wrong target."
+    },
+    {
+      "type": "paragraph",
+      "text": "The cyber dimension makes the timing urgent. We have not yet seen how dangerous AI in the hands of criminals will become, and within the next year we expect serious, perhaps damaging, attacks on government systems built or guided by AI. The [Cyber Imperative](#/paper/mwo98) makes the broader case. Extending the academy into a builder culture is how Alberta means to keep velocity high and cost contained while keeping the building inside the fence, where the controls hold."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.6",
+      "title": "Inside the fence, or shadow IT",
+      "caption": "If sanctioned building is too slow, AI becomes the fastest route to unsanctioned building. The same tools, used outside the controls, expose government, and the technology takes the blame.",
+      "image": {
+        "src": "public/images/oxj36/en/fig-13-6.jpg",
+        "alt": "A hand-drawn diagram with a fence down the middle. Inside the fence, a path labelled sanctioned passes through controls to a safe box. Outside the fence, a path labelled shadow IT skips the controls and ends at a box marked exposed.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A vertical fence runs down the middle. On the inside, a path labelled SANCTIONED passes through a small gate labelled CONTROLS to a box labelled SAFE. On the outside, a path labelled SHADOW IT runs around the fence, skipping the controls, ending at a box labelled EXPOSED with a small rust warning mark. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "A consultancy model, and an invitation"
+    },
+    {
+      "type": "paragraph",
+      "text": "The likely shape of this is a consultancy model in place of a delivery one. AI does the implementing. Technology and Innovation provides the fortress, the governance of technology, the management of vendors, and the controls, and it works alongside ministries as a consultancy: helping design solutions and architectures, finding novel uses for the models, and overseeing how the newest models enter the environment safely. The creativity comes from the ministry partners who know the work; the center keeps it sound."
+    },
+    {
+      "type": "paragraph",
+      "text": "This fits the decentralized hybrid model Alberta is already adopting elsewhere, governance held at the center with delivery on the spokes, in how the province handles data and procurement, and it is reasonable to expect AI to let us run solutioning the same way. We anticipate piloting a builder culture during 2026, and we will publish what we learn. Ministry partners who want to explore it with us, and other governments weighing the same shift, are warmly invited to take part."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.7",
+      "title": "Governance at the center, delivery on the spokes",
+      "caption": "A decentralized hybrid model: the center holds governance, the ministries deliver. Alberta already runs data and procurement this way, and AI lets solutioning join them.",
+      "image": {
+        "src": "public/images/oxj36/en/fig-13-7.jpg",
+        "alt": "A hand-drawn hub-and-spoke diagram. A central hub labelled governance connects by spokes to several outer nodes labelled delivery, with three of the spokes tagged data, procurement, and solutioning.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A central hub labelled GOVERNANCE connects by straight spokes to six outer nodes labelled DELIVERY. Three of the spokes carry small tags reading DATA, PROCUREMENT, and SOLUTIONING. Calm, architectural, legible labels. No logos, no people.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "builder-culture",
+        "democratization",
+        "governance",
+        "shadow-it",
+        "operating-model"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Transposed by Claude from the author's recorded walking conversation.",
+    "author_verbatim": false,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "dt725",
+    "p7p2k",
+    "qthji",
+    "uwpxr",
+    "k3tc3"
+  ]
 }

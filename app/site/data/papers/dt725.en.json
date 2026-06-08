@@ -143,15 +143,42 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "From the Maximalist program" },
-    { "n": "02", "title": "Human-centered AI" },
-    { "n": "03", "title": "A graduated program" },
-    { "n": "04", "title": "Level 1: prompting and trust" },
-    { "n": "05", "title": "Level 2: reusable agents" },
-    { "n": "06", "title": "Level 3: building enterprise applications" },
-    { "n": "07", "title": "Warrior, wizard, craftsperson" },
-    { "n": "08", "title": "A mindset, not a metric" },
-    { "n": "09", "title": "Investing in people" }
+    {
+      "n": "01",
+      "title": "From the Maximalist program"
+    },
+    {
+      "n": "02",
+      "title": "Human-centered AI"
+    },
+    {
+      "n": "03",
+      "title": "A graduated program"
+    },
+    {
+      "n": "04",
+      "title": "Level 1: prompting and trust"
+    },
+    {
+      "n": "05",
+      "title": "Level 2: reusable agents"
+    },
+    {
+      "n": "06",
+      "title": "Level 3: building enterprise applications"
+    },
+    {
+      "n": "07",
+      "title": "Warrior, wizard, craftsperson"
+    },
+    {
+      "n": "08",
+      "title": "The anti-slop mindset"
+    },
+    {
+      "n": "09",
+      "title": "Investing in people"
+    }
   ],
   "blocks": [
     {
@@ -365,7 +392,7 @@
     {
       "type": "section_heading",
       "n": "08",
-      "title": "A mindset, not a metric"
+      "title": "The anti-slop mindset"
     },
     {
       "type": "paragraph",

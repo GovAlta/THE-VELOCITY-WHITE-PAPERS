@@ -23,7 +23,7 @@
       "nav": [
         {
           "id": "library",
-          "label": "Library"
+          "label": "Home"
         },
         {
           "id": "index",
@@ -32,17 +32,13 @@
         {
           "id": "about",
           "label": "About"
-        },
-        {
-          "id": "manual",
-          "label": "Manual"
         }
       ],
       "ui": {
         "loading_library": "Loading the library…",
         "loading_index": "Loading the index…",
         "loading_paper": "Loading",
-        "back_to_library": "Library",
+        "back_to_library": "Home",
         "abstract": "Abstract",
         "contents": "Contents",
         "read_next": "Read next",
@@ -195,7 +191,7 @@
       "nav": [
         {
           "id": "library",
-          "label": "Bibliothèque"
+          "label": "Accueil"
         },
         {
           "id": "index",
@@ -204,17 +200,13 @@
         {
           "id": "about",
           "label": "À propos"
-        },
-        {
-          "id": "manual",
-          "label": "Manuel"
         }
       ],
       "ui": {
         "loading_library": "Chargement de la bibliothèque…",
         "loading_index": "Chargement de l'index…",
         "loading_paper": "Chargement",
-        "back_to_library": "Bibliothèque",
+        "back_to_library": "Accueil",
         "abstract": "Résumé",
         "contents": "Sommaire",
         "read_next": "À lire ensuite",

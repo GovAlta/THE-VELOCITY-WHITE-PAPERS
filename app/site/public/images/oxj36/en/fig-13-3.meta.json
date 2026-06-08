@@ -1,0 +1,17 @@
+{
+  "paper_id": "oxj36",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\oxj36\\en\\fig-13-3.jpg",
+  "bytes_jpg": 114284,
+  "bytes_png_source": 2329697,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-07T23:22:50.586Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled DELEGATED ACCESS: a box labelled AGENT GATEWAY with small input lines labelled EMAIL, CALENDAR, ERP, SERVICENOW, SHAREPOINT feeding into it, and a small note IAM beneath. RIGHT panel labelled VIBE-CODE TO PRODUCTION: a box labelled BUILD passes rightward through three gates labelled RED + BLUE, INFO MGMT, IDENTITY, into a final box labelled PRODUCTION. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled DELEGATED ACCESS: a box labelled AGENT GATEWAY with small input lines labelled EMAIL, CALENDAR, ERP, SERVICENOW, SHAREPOINT feeding into it, and a small note IAM beneath. RIGHT panel labelled VIBE-CODE TO PRODUCTION: a box labelled BUILD passes rightward through three gates labelled RED + BLUE, INFO MGMT, IDENTITY, into a final box labelled PRODUCTION. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "oxj36",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\oxj36\\en\\fig-13-4.jpg",
+  "bytes_jpg": 174374,
+  "bytes_png_source": 2359023,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-07T23:23:52.779Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled WAS: CENTRAL DELIVERY, with many arrows from edge boxes funnelling through one central box. RIGHT panel labelled NOW: CENTRAL GOVERNANCE, with a central box labelled RULES + AUDIT connected by thin oversight lines to several edge boxes labelled BUILD. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled WAS: CENTRAL DELIVERY, with many arrows from edge boxes funnelling through one central box. RIGHT panel labelled NOW: CENTRAL GOVERNANCE, with a central box labelled RULES + AUDIT connected by thin oversight lines to several edge boxes labelled BUILD. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

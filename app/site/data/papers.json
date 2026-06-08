@@ -407,18 +407,34 @@
       "sequence": "",
       "tier": "Policy & People",
       "title": "Establishing a Builder Culture",
-      "subtitle": "Shifting from buying systems to building them.",
+      "subtitle": "How agentic AI democratizes the building of government systems, while the fortress stays central.",
       "track": "Human and Change Management",
       "authors": [
-        "Ministry of Technology and Innovation"
+        "Janak Alford",
+        "Deputy Minister",
+        "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 16,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "builder-culture",
+        "democratization",
+        "governance",
+        "agents",
+        "shadow-it",
+        "operating-model",
+        "change-management"
+      ],
       "repo": null,
-      "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
-      "related": [],
+      "abstract": "Governments swing between centralized and decentralized IT delivery, trading economy of scale and consistency against autonomy and speed, and Alberta, like Canada and British Columbia, runs a centralized model today. That model has saved tens of millions of dollars, and it cannot deliver fast enough for every ministry. Agentic AI opens a third option: keep the fortress functions central, cybersecurity, identity, networking, and data, and push the building of solutions back out to the people who know the work. This paper sets out how Alberta intends to enable a builder culture, where domain experts create their own governed and audited systems, and why the alternative is ungoverned shadow IT.",
+      "related": [
+        "dt725",
+        "p7p2k",
+        "qthji",
+        "uwpxr",
+        "k3tc3"
+      ],
       "category": "paper"
     },
     {
@@ -458,43 +474,39 @@
       "category": "paper"
     },
     {
-      "id": "yzuob",
+      "id": "yu5k9",
       "num": "15",
       "sequence": "",
       "tier": "Policy & People",
-      "title": "Managing Change",
-      "subtitle": "Leading the organization through the shift.",
-      "track": "Human and Change Management",
-      "authors": [
-        "Ministry of Technology and Innovation"
-      ],
-      "published": null,
-      "reading_min": null,
-      "status": "Draft",
-      "tags": [],
-      "repo": null,
-      "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
-      "related": [],
-      "category": "paper"
-    },
-    {
-      "id": "yu5k9",
-      "num": "16",
-      "sequence": "",
-      "tier": "Policy & People",
       "title": "Measuring Failure and Success",
-      "subtitle": "How we judge what works and what does not.",
+      "subtitle": "Why the right measure of an AI program is capability built, not dollars saved.",
       "track": "Human and Change Management",
       "authors": [
-        "Ministry of Technology and Innovation"
+        "Janak Alford",
+        "Deputy Minister",
+        "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 13,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "measurement",
+        "success-criteria",
+        "readiness",
+        "system-health",
+        "cost",
+        "workforce",
+        "change-management"
+      ],
       "repo": null,
-      "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
-      "related": [],
+      "abstract": "Most organizations adopting AI measure success in dollars saved. Alberta measures it differently. The goal is not to do the same work with fewer people, which would be folly, but to build capability and a workforce that can transform how government operates, at a moment when Canada's productivity is under strain and the normalization of AI in the workplace looks inevitable. Over eighteen months the province has been recognized among the most innovative public-sector adopters in North America. This paper sets out the three measures Alberta uses to judge whether that work is succeeding: readiness, system health, and cost, counted across the whole of government rather than one ledger.",
+      "related": [
+        "cux4h",
+        "dt725",
+        "mwo98",
+        "k3tc3",
+        "oxj36"
+      ],
       "category": "paper"
     }
   ],

@@ -71,7 +71,6 @@ const JS_FILES = [
   'pages/ArchitecturePage.js',
   'pages/PaperPage.js',
   'pages/AboutPage.js',
-  'pages/ManualPage.js',
   'pages/GlossaryPage.js',
   'pages/ReposPage.js',
   'pages/UpdatesPage.js',
@@ -86,7 +85,6 @@ const CSS_FILES = [
   'styles/components.css',
   'styles/player.css',
   'styles/visuals.css',
-  'styles/manual.css',
   'styles/edit.css',
 ];
 

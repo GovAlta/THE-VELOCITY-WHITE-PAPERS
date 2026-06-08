@@ -1529,3 +1529,60 @@
 .nav-drawer {
   padding-bottom: max(0px, var(--safe-bottom));
 }
+
+/* =====================================================
+   About page — method section with a photo sidebar.
+   Prose on the left, a 2x2 grid of walk photographs on the right that
+   collapses below the prose on narrow screens.
+   ===================================================== */
+.about-disclaimer {
+  max-width: 70ch;
+  margin: 14px 0 0;
+  color: var(--ink-50);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.about-method {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 40px;
+  align-items: start;
+  padding-bottom: 24px;
+}
+.about-method .about-prose {
+  max-width: 60ch;
+  color: var(--ink-70);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.about-method .about-prose p { margin: 0 0 14px; }
+.about-figs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  position: sticky;
+  top: 124px;
+  margin: 0;
+}
+.about-figs img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+}
+.about-figs-cap {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-50);
+}
+@media (max-width: 860px) {
+  .about-method { grid-template-columns: 1fr; gap: 24px; }
+  .about-figs { position: static; }
+}

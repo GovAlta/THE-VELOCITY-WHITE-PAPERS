@@ -1,21 +1,65 @@
 {
-  "_note": "About page content for one locale. The sibling .<other>.json holds the translation. The public repositories list is derived from papers.json.",
+  "_note": "About page content for one locale. The sibling .<other>.json holds the translation. Reader-visible strings here are editable in dev edit mode and saved back to this file.",
   "eyebrow": "About this collection",
   "title_lead": "Open source by",
   "title_em": "default.",
-  "lede": "The site itself is open source, published via GitHub Pages. The entire site is cloneable and adaptable. MIT license with explicit disclaimers: not responsible for decisions or costs incurred by adopters; shared in the spirit of national collaboration; users must evaluate and assess these tools in their own context.",
-  "use": {
-    "heading": "How to use this site",
-    "meta": "readme · methodology · feedback",
+  "lede": "The Velocity White Papers are an open-source resource published by the Government of Alberta. This site is published via GitHub Pages, and the whole repository is cloneable and adaptable.",
+  "disclaimer": "The content is offered under MIT License, with explicit disclaimers: we are not responsible for decisions taken, liability, or costs incurred as a result of your use of this content. The work is shared in the spirit of national collaboration and users must evaluate these tools in their own context. Always consult with your IT organization prior to making any decisions. The products and services mentioned on this site are not endorsed by the Government of Alberta.",
+  "audio": {
+    "src": "public/audio/en/about.mp3"
+  },
+  "created": {
+    "heading": "How these papers were created",
+    "meta": "method · craft · honesty",
     "paras": [
-      "Sequential reading is the recommended path. Each paper builds on what comes before. Lateral links between papers let readers jump sideways without losing context.",
-      "Every paper is downloadable as Markdown and JSON so readers can feed them into their own AI tooling. The full site is cloneable from GitHub. The site uses a small cookie to track which papers a reader has visited and surface what is new since their last visit.",
-      "No vendor or product is being advocated. For transparency, any vendors or models actually used in production will be disclosed."
+      "The ideas presented in these whitepapers were gathered over roughly eighteen months, through the creation of the AI Maximalist program and the AI Factory and many of the solutions described in these papers. Addressing technical debt is a primary preoccupation for the Ministry of Technology and Innovation. These white papers are the result of hundreds of conversations with industry, staff, senior management, and elected officials, summarizing a range of concepts and approaches being evaluated for future implementation.",
+      "Most of these papers were dictated walking in the forest in Edmonton. The primary author of the first set of papers, Janak Alford, narrated and transcribed each paper over a series of daily walks along the North Saskatchewan River. The photographs on this page are from those walks. A range of AI agents were in attendance and provided transcription and editorial discussion. Most papers were laid down across two, three, or four sessions, then edited into a coherent set of insights. Speaking freely, capturing the ideas, and shaping them later turned out to be an effective way to lay out these papers. The trees and exercise supported open-minded exploration.",
+      "AI supported the editing and integration of these transcripts. Using the project's style guides, AI agents helped narrow loose ideas, catch the places where the author had hallucinated or broken his own rules, and strip out low value content.",
+      "In some topics, AI use was counterproductive. AI-generated prose still tends toward what we call 'trendslop': text that sounds like fluent business writing but is jargon-heavy, undifferentiated, and hard to read, with none of the anecdotes, personality, or narrative color a human author brings. The Compression Problem in particular defeated the AI editors (from a variety of attempts with the leading frontier model providers), which kept producing plausible sounding prose which was utterly without meaning or value and senseless slop. The entire paper had to be written by hand from scratch. The original transcript of the human and AI conversation is included for your interest.",
+      "Even the most capable current models, Opus 4.8 among them, are strong editors, stylists, summarizers, and translators, but remain insufficient for original or creative writing. AI offers no shortcuts for developing your own ideas."
+    ],
+    "images_caption": "Dictated on foot, edited at the desk.",
+    "images": [
+      { "src": "public/images/about/en/method-1.jpg", "alt": "A dirt trail descending through birch and poplar to the North Saskatchewan River, on one of the daily walks." },
+      { "src": "public/images/about/en/method-2.jpg", "alt": "A grassy single-track trail winding up toward a forested hillside under a bright sky." },
+      { "src": "public/images/about/en/method-3.jpg", "alt": "A narrow trail through dense green woods with sunlight breaking through the canopy." },
+      { "src": "public/images/about/en/method-4.jpg", "alt": "A trail through low brush opening onto a wide river-valley view under a clear sky." }
     ]
   },
-  "repos": {
-    "heading": "Public repositories",
-    "meta": "released alongside the papers"
+  "tools": {
+    "heading": "Tools and craft",
+    "meta": "what made the artifacts",
+    "paras": [
+      "The accompanying imagery for each white paper was generated with GPT Image 2. The long-form narration and the short summaries are read by an ElevenLabs voice clone of the author. Translation was carried out primarily with Claude Opus, with partner organizations support for vetting the bilingualism, and some of it will follow after the initial release."
+    ]
+  },
+  "platform": {
+    "heading": "The platform",
+    "meta": "built with Claude, released under MIT",
+    "paras": [
+      "The site is intended to be simple, fast, and accessible, presenting the concepts and arguments herein as plainly as possible. It was built with Claude Design and ported into Claude Code. What began as plain HTML grew into a small but mighty content management system that handles translation, image generation, content creation, editorial passes, and style-guide application in one place. That system is released under the MIT license alongside the papers, for anyone to download, reuse, and build on."
+    ]
+  },
+  "use": {
+    "heading": "How to use this site",
+    "meta": "reading · media · reuse",
+    "paras": [
+      "Sequential reading is the recommended path. Each paper builds on the ones before it, and the collection is numbered so the order is clear. Lateral links between papers let readers jump sideways to a related idea without losing their place, and every paper closes with a short list of related papers to follow.",
+      "Each paper can be read, listened to, or skimmed. A long-form narration plays the whole paper aloud in the author's cloned voice, and a floating player keeps it going while you scroll or move between pages. A short TL;DR presentation pairs that narration with a handful of visual slides for a quick overview. Figures are generated images, and each one carries an inspector that reveals the exact prompt used to produce it, so nothing about how an artifact was made is hidden.",
+      "Every paper is downloadable as Markdown and JSON, so readers can feed them into their own AI tooling, and the full site is cloneable from GitHub. The site is bilingual: the language control switches the entire interface and content between English and French, and a glossary defines the vocabulary the collection uses.",
+      "The site uses a small cookie to remember which papers you have visited and to surface what is new since your last visit, and the Updates page lists what has changed over time. There is no account and no login, and the site holds no personal data.",
+      "Adopters who clone the site inherit more than the content. The content management system that produced these papers travels with it, so another organization can translate, generate imagery and narration, and apply its own style guides in the same way. No vendor or product is being advocated, and any models or services used in production are disclosed for transparency."
+    ]
+  },
+  "living": {
+    "heading": "A living document",
+    "meta": "the road ahead",
+    "paras": [
+      "These technologies will not stop evolving, and within as little as six months some of the methods and insights here may be obsolete. That is why the collection is a dynamic platform rather than a static PDF or Word document.",
+      "We recognize openly that no one has solved these problems yet. We believe the evidence supports the direction we are taking, and we offer these papers as a clear enough path to support experimentation. We would welcome collaborations with other authors, governments, private sector partners, and the public. We will keep sharing what we learn.",
+      "More is coming, including Agency 2026 Fall in Edmonton and Calgary, an industry day, and an ongoing set of procurement challenges open to a wide range of participants in the months and years ahead. Check back frequently.",
+      "Keep building."
+    ]
   },
   "also": {
     "heading": "Also on this site",

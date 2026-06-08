@@ -160,6 +160,44 @@ Skills (manifests in `.claude/skills/`):
 - `regenerate-audio` — produce narration MP3s; configurable bitrate.
 - `port-knowledge-article` — port a separate site (e.g. ADHD) as a `category: architecture` knowledge article.
 
+## Authoring and operating
+
+How this platform is built and run. The Velocity White Papers are a static, bilingual, open-source site. Vue runs from a CDN, the content is JSON, images and audio are files, and GitHub Pages serves the result. There is no backend in production. You author locally through a dev-only editor, and the published site stays read-only. This section sets out how to fill it and ship it.
+
+### Who does what
+
+The human is the architect, the author, and the reviewer. You decide the collection, the order, the argument of each paper, and the voice. You accept or reject every AI suggestion. Nothing the AI produces reaches a file without your sign-off.
+
+The AI drafts, refines, translates, and generates assets, always as proposals. It scaffolds a body from your raw material, tightens prose against the style guides, translates a paper into the other language, and produces imagery and narration. It never invents facts, and it never publishes on its own.
+
+### Start the editor
+
+From `app/site`, run `npm run edit`. This serves the site at `127.0.0.1:5173` and turns editing on. The gate is local-only, so the public site can never be edited. The server reads `.env` for the Vertex service account (Claude), the OpenAI key (images), and the ElevenLabs key (audio). Open the site and click **Edit** in the toolbar.
+
+Run `npm run dev` for a read-only preview with no editor. Run `npm run preview` to serve the site through the same server without turning editing on.
+
+### The life of a paper
+
+1. **Add it to the collection.** On the Index at `#/index` in edit mode, use **+ Add paper** and give it an id, a title, and a tier. The number and the sequence are derived from order position. Reorder with the up and down controls and the numbering follows. `data/papers.json` is generated, so you never edit it by hand.
+2. **Draft the body.** Build from scratch, or paste a rough Markdown draft and let the AI fill the paper schema: sections, paragraphs, TL;DR, and metadata. When the source is mixed, the source hierarchy applies. Your prose is the spine, the code is the technical ground truth, and transcripts are third-order and never quoted verbatim.
+3. **Refine the prose.** Use **AI** on a paragraph, **Revise §** on a section, or **Revise paper**. Pick style guides or give direction, choose Sonnet for speed or Opus for the heavier passes, then accept or reject each change. The guides apply to the prose the AI generates. They leave your own wording alone.
+4. **Generate the imagery.** On each figure or slide, write an image prompt and click **Generate** or **Regenerate**. The image is produced from the prompt and saved with a metadata sidecar, and the inspector shows the prompt that made it.
+5. **Generate the narration.** In the TL;DR slide editor, write each slide's narration and click **Generate narration**. The full-paper audio comes from the script through `npm run generate:audio`.
+6. **Translate and build the other language.** Set the canonical primary locale, then use **Translate**. It clones the structure into the target language, translates every string, and regenerates the target images and audio. The target is overwritten. A sync chip shows when a translation falls behind its source.
+7. **Publish.** Set the paper's status to Published. It then appears on the home page and counts in the sequence. Save, then commit and push.
+
+### What the editor changes
+
+In edit mode you click any heading, paragraph, abstract, title, caption, or narration to edit its source, and the Markdown renders when you click off. You reorder, insert, and delete blocks. You reorder, add, and delete TL;DR slides. You edit figure prompts and captions. You edit paper metadata such as tier, status, read time, and tags. The contents menu reorders sections by drag and renumbers them. The Guides panel lets you curate the editable style guides. Save writes back to the JSON through the local edit-server. The About page is editable the same way and saves to `data/pages/about.<locale>.json`.
+
+### Voice and substance
+
+Two disciplines govern every reader-visible string. Substance comes first. Every claim traces to a source, every number says what it measures, and nothing is invented. Voice comes second. Match the author's exemplar, which is flowing, first person, and specific. Treat the style rules as a list of things to avoid adding. Do not use them to flatten the author's own sentences. When the author wrote the words, the words stand, and the AI fixes only what is wrong.
+
+### How it is stored and shipped
+
+Each paper is two JSON files, `<id>.en.json` and `<id>.fr.json`, under `data/papers`. The inventory `data/papers.json` and the numbers are generated from `data/order.json` and the primary files, so they cannot drift. Images and audio live under `public`. You work locally, commit, and push to GitHub, and GitHub Pages serves the static result. Secrets, internal source material, and recordings stay out of the repository.
+
 ## Article classification
 
 Two categories live in `papers.json`:

@@ -128,7 +128,6 @@
     if (parts.length === 0) return { page: 'library', paperId: null };
     if (parts[0] === 'index')        return { page: 'index',        paperId: null };
     if (parts[0] === 'about')        return { page: 'about',        paperId: null };
-    if (parts[0] === 'manual')       return { page: 'manual',       paperId: null };
     if (parts[0] === 'glossary')     return { page: 'glossary',     paperId: null };
     if (parts[0] === 'repos')        return { page: 'repos',        paperId: null };
     if (parts[0] === 'updates')      return { page: 'updates',      paperId: null };
@@ -148,7 +147,6 @@
           case 'library':       return 'library-page';
           case 'index':         return 'index-page';
           case 'about':         return 'about-page';
-          case 'manual':        return 'manual-page';
           case 'glossary':      return 'glossary-page';
           case 'repos':         return 'repos-page';
           case 'updates':       return 'updates-page';
@@ -177,7 +175,6 @@
             library:      null,
             index:        'Index',
             about:        'About',
-            manual:       'Manual',
             glossary:     'Glossary',
             repos:        'Repositories',
             updates:      'Updates',
