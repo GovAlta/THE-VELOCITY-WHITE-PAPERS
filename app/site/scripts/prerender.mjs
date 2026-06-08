@@ -53,7 +53,7 @@ function blocksToText(paper) {
   for (const b of (paper.blocks || [])) {
     if (b.type === 'section_heading') lines.push('\n## §' + (b.n || '') + ' ' + (b.title || ''));
     else if (b.type === 'paragraph' || b.type === 'dropcap_paragraph') {
-      lines.push(String(b.text || '').replace(/<[^>]+>/g, ''));
+      lines.push(String(b.text || '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/<[^>]+>/g, ''));
     } else if (b.type === 'pullquote') lines.push('"' + (b.text || '') + '"' + (b.cite ? ' · ' + b.cite : ''));
     else if (b.type === 'keystat') lines.push((b.label || '') + ' ' + b.value + '. ' + (b.body || '').replace(/<[^>]+>/g, ''));
     else if (b.type === 'youtube') lines.push([b.title, b.caption, b.url ? 'Video: ' + b.url : ''].filter(Boolean).join('. '));

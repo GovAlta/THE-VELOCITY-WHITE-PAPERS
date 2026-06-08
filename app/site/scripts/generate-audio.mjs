@@ -38,9 +38,19 @@ const onlyIds    = args.filter(a => !a.startsWith('--') && a !== (localeIdx !== 
 
 /* Spoken section labels so a listener knows what part they are hearing. */
 const NARRATION_LABELS = {
-  en: { title: 'Title. ', abstract: 'Abstract. ', quote: 'Quote. ' },
-  fr: { title: 'Titre. ', abstract: 'Résumé. ', quote: 'Citation. ' },
+  en: { title: 'Title. ', abstract: 'Abstract. ', quote: 'Quote. ', quoteEnd: ' End quote.' },
+  fr: { title: 'Titre. ', abstract: 'Résumé. ', quote: 'Citation. ', quoteEnd: ' Fin de citation.' },
 };
+
+/* Make text speakable. Applied to every narrated chunk (long-form and slides):
+   - markdown links [label](href) collapse to their label, so the URL of an
+     inter-paper link is never read aloud;
+   - ratios like "1:8" or "1 : 8" are spoken as "1 to 8". */
+function narrationNormalize(text) {
+  return String(text || '')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/(\d)\s*:\s*(\d)/g, '$1 to $2');
+}
 
 function extractLongform(content, locale) {
   const L = NARRATION_LABELS[locale] || NARRATION_LABELS.en;
@@ -53,10 +63,11 @@ function extractLongform(content, locale) {
     else if (b.type === 'paragraph' || b.type === 'dropcap_paragraph') {
       out.push((b.text || '').replace(/<[^>]+>/g, ''));
     }
-    // Pullquotes are narrated: their text is read aloud at its position in the
-    // body. The attribution (cite) is left out, only the quote body is spoken.
-    else if (b.type === 'pullquote') out.push(b.text || '');
-    else if (b.type === 'keystat')   out.push((b.label || '') + ' ' + b.value + '. ' + (b.body || ''));
+    // Pullquotes are narrated and bracketed so the listener hears where the
+    // quote opens and closes. The attribution (cite) is not spoken.
+    else if (b.type === 'pullquote') out.push(L.quote + (b.text || '') + L.quoteEnd);
+    // Keystats are NOT narrated: their label/value/body reads poorly aloud
+    // (e.g. "40K-400K", "1 : 8") and they are visual callouts, not prose.
     else if (b.type === 'sidenote')  out.push(b.value);
   }
   return out.join('\n\n');
@@ -83,7 +94,7 @@ function collectSlideJobs(content) {
 async function generateMP3(text, outRelPath) {
   const outPath = resolve(SITE_ROOT, outRelPath);
   if (existsSync(outPath) && !force) return { status: 'cached' };
-  const buf = await synthesizeLong(text, {
+  const buf = await synthesizeLong(narrationNormalize(text), {
     onProgress: (i, n, chars) => {
       if (n > 1) console.log('       part ' + i + '/' + n + ' (' + chars + ' chars)');
     },
