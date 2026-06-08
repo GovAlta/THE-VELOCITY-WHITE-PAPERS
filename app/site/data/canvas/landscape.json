@@ -1,0 +1,171 @@
+{
+  "_note": "The Solution Landscape canvas dataset. Fully data-driven: each scene declares a `kind` (which generic SVG renderer draws it), bilingual user-facing text (title, blurb, narrative), the paper it ties to, and a `spec` the renderer interprets. Diagram labels are kept as plain strings (mostly product names and technical terms); title/blurb/narrative carry {en,fr}. FR text marked TODO mirrors EN until translated. This file is the downloadable, editable source of truth for the canvas in paper xs7uh; individual scenes can also be embedded in their home papers via the canvas:scene component.",
+  "version": "1",
+  "title": { "en": "The Solution Landscape", "fr": "Le paysage de la solution" },
+  "intro": {
+    "en": "One interactive canvas for the whole approach: the legacy estate, the four approaches to modernization, the agentic stack, the harness and its review agents, the AI factory, the delivery game, the inverted hierarchy, and the future state. Move between scenes, zoom, and read what each is showing.",
+    "fr": "Une toile interactive pour toute l'approche : le parc hérité, les quatre approches de modernisation, la pile agentique, le harnais et ses agents de revue, l'usine d'IA, le jeu de livraison, la hiérarchie inversée et l'état futur."
+  },
+  "scenes": [
+    {
+      "id": "estate",
+      "kind": "grid-scan",
+      "paper": "bbkac",
+      "title": { "en": "The legacy estate, scanned", "fr": "Le parc hérité, balayé" },
+      "blurb": { "en": "Agentic reconnaissance reads the whole GitHub estate, one repository at a time, and reports the ground truth.", "fr": "Une reconnaissance agentique lit tout le parc GitHub, un dépôt à la fois, et rapporte la vérité terrain." },
+      "narrative": {
+        "en": "This scene shows the Government of Alberta's legacy software estate as a field of repository tiles. Around fifty agents read it one repository at a time, in roughly twenty hours, for less than two thousand dollars. The estate is about four hundred sixty-six million lines of code across roughly three thousand four hundred repositories, with eight thousand one hundred seventy-eight contributors and nearly nine hundred fifty thousand commits over eight years. The average repository health is three point two out of ten. Tiles darken where the scan finds weak documentation, missing tests, or no continuous integration. The point of the scene is the scale of the ground truth, and that a small fleet of agents can read all of it and grade it against the source.",
+        "fr": "TODO-FR: This scene shows the Government of Alberta's legacy software estate as a field of repository tiles, read by about fifty agents in roughly twenty hours."
+      },
+      "spec": {
+        "cols": 22,
+        "rows": 12,
+        "scanners": 5,
+        "stats": [
+          { "value": "466M", "label": "lines of code" },
+          { "value": "~3,400", "label": "repositories" },
+          { "value": "948,571", "label": "commits" },
+          { "value": "3.2 / 10", "label": "avg repo health" }
+        ]
+      }
+    },
+    {
+      "id": "approaches",
+      "kind": "quadrants",
+      "paper": "zgym1",
+      "title": { "en": "Four approaches to modernization", "fr": "Quatre approches de modernisation" },
+      "blurb": { "en": "Four ways to modernize, climbing from lightest touch to the most complete rebuild. A real estate needs all four.", "fr": "Quatre façons de moderniser, de la plus légère à la reconstruction la plus complète." },
+      "narrative": {
+        "en": "This scene lays out the four approaches to modernization as four panels, climbing in ambition. Approach one, the AI Garage, fixes one system at a time in place. Approach two, the AI Factory, builds a fresh modular application from scratch with a team of specialist agents. Approach three, AI Rationalization, steps back to a whole ministry and collapses a portfolio of overlapping systems into a few shared modern modules, for example one hundred eighty-five applications into sixteen. Approach four, Government three point zero, dissolves the application itself: agents work directly against governed data and generate the interface a person needs in the moment. All four reach for about a ninety-five percent reduction in the cost and time of building and maintaining government software.",
+        "fr": "TODO-FR: Four approaches to modernization, climbing from the AI Garage to Government 3.0, all reaching for about a ninety-five percent reduction in cost and time."
+      },
+      "spec": {
+        "highlight": [3, 4],
+        "items": [
+          { "n": 1, "name": "The AI Garage", "desc": "Fix one system at a time, in place. Lowest risk, treats symptoms." },
+          { "n": 2, "name": "The AI Factory", "desc": "Build a fresh modular app from scratch with specialist agents." },
+          { "n": 3, "name": "AI Rationalization", "desc": "Collapse a ministry's overlapping systems into a few shared modules. 185 → 16." },
+          { "n": 4, "name": "Government 3.0", "desc": "Dissolve the app. Agents act on governed data and generate the interface on demand." }
+        ],
+        "footer": "≈95% reduction in cost and time"
+      }
+    },
+    {
+      "id": "stack",
+      "kind": "layers",
+      "paper": "qxlzo",
+      "title": { "en": "The agentic technology stack", "fr": "La pile technologique agentique" },
+      "blurb": { "en": "The right model, in the right environment, for the right use case, with abstraction layers that prevent lock-in.", "fr": "Le bon modèle, dans le bon environnement, pour le bon cas d'usage, avec des couches d'abstraction." },
+      "narrative": {
+        "en": "This scene stacks the agentic technology platform in layers, from the cloud up to security. At the base sit cloud and compute: Google Cloud, Azure, AWS, an on-premises GPU cluster, and three legacy data centres. Above that is model access through AWS Bedrock, the Google Agent Platform, and Azure AI Studio. Then the models themselves, Claude Opus and Sonnet, with open-source models available offline. Above the models sits the Bifrost gateway, which handles abstraction, cost control, and personal-information protection. Then deployment, sending agentic workloads to Google Cloud and traditional applications to Azure and AWS. At the top, security and data-loss prevention through Microsoft Defender and Purview. The design diversifies the supply chain on purpose so no single provider can lock the province in.",
+        "fr": "TODO-FR: The agentic stack in layers, from cloud and compute up to security, with the Bifrost gateway preventing provider lock-in."
+      },
+      "spec": {
+        "bands": [
+          { "label": "Security & data-loss prevention", "items": "Microsoft Defender · Purview · GitHub tooling" },
+          { "label": "Deployment", "items": "Agentic → Google Cloud · apps → Azure, AWS" },
+          { "label": "Gateways", "items": "Bifrost — abstraction, cost, PII control" },
+          { "label": "Models", "items": "Claude Opus & Sonnet · open-source offline" },
+          { "label": "Model access", "items": "AWS Bedrock · Google Agent Platform · Azure AI Studio" },
+          { "label": "Cloud & compute", "items": "Google Cloud · Azure · AWS · on-prem GPU · 3 data centres" }
+        ]
+      }
+    },
+    {
+      "id": "harness",
+      "kind": "ring",
+      "paper": "p7p2k",
+      "title": { "en": "The harness and its review agents", "fr": "Le harnais et ses agents de revue" },
+      "blurb": { "en": "A worker agent ringed by four review agents that gate the work: green, yellow, red, and blue.", "fr": "Un agent ouvrier entouré de quatre agents de revue : vert, jaune, rouge et bleu." },
+      "narrative": {
+        "en": "This scene shows a single worker agent at the centre, ringed by the four review agents that ship with every harness. Green checks code hygiene and the supply chain, and is deterministic. Yellow audits how the writing reads, catching AI tells, and is deterministic. Red plays the attacker, running outside-in reconnaissance and then planning concrete attack paths. Blue plays the defender, building a threat model and walking every OWASP control to write the ranked verdict. Around them sit the parts of the harness itself: the rules file, the skills, the templates, the hooks, and the evals. A piece of work is not done until it passes the gates, and about ninety-five security controls are checked on every pass.",
+        "fr": "TODO-FR: A worker agent ringed by four review agents, green, yellow, red, and blue, with the harness parts around them."
+      },
+      "spec": {
+        "center": "Worker",
+        "nodes": [
+          { "label": "Green", "role": "code hygiene · deterministic", "color": "green" },
+          { "label": "Yellow", "role": "prose audit · deterministic", "color": "yellow" },
+          { "label": "Red", "role": "attacker · recon + planning", "color": "red" },
+          { "label": "Blue", "role": "defender · ASVS verdict", "color": "blue" }
+        ],
+        "context": ["CLAUDE.md", "Skills", "Templates", "Hooks", "Evals"]
+      }
+    },
+    {
+      "id": "factory",
+      "kind": "pipeline",
+      "paper": "qthji",
+      "title": { "en": "The AI factory pipeline", "fr": "La chaîne de l'usine d'IA" },
+      "blurb": { "en": "Pronghorn ideation, then Nexus orchestration, then Velocity delivery. Agents flow across the line.", "fr": "Idéation Pronghorn, puis orchestration Nexus, puis livraison Velocity." },
+      "narrative": {
+        "en": "This scene draws the AI factory as a pipeline in three stages, with agents flowing left to right. The first stage is Pronghorn, where ideation turns a ministry's requirements into a live prototype, artifacts, a four-level requirements map, and an architecture canvas. The second stage is Nexus, where each developer gets a secure cloud sandbox running many agent instances; work is containerized and published to Google Cloud behind a private endpoint, with every action observable and audited through the Bifrost gateway. The third stage is Velocity, where delivery is measured on a game board and enforced. Agents move through the line as design agents, build agents, oversight agents, and architect agents, while a human and the agents hand off turns.",
+        "fr": "TODO-FR: The AI factory pipeline: Pronghorn ideation, Nexus orchestration, Velocity delivery, with agents flowing across."
+      },
+      "spec": {
+        "stages": [
+          { "label": "Pronghorn", "sub": "Ideation", "steps": ["Chat", "Artifacts", "Requirements", "Canvas"] },
+          { "label": "Nexus", "sub": "Orchestration", "steps": ["Developer VM", "Containerize", "Google Cloud", "Observe & audit"] },
+          { "label": "Velocity", "sub": "Delivery", "steps": ["Game board", "Reaper", "Leaderboard"] }
+        ],
+        "agents": 6
+      }
+    },
+    {
+      "id": "velocity",
+      "kind": "board",
+      "paper": "k3tc3",
+      "title": { "en": "The Velocity delivery game", "fr": "Le jeu de livraison Velocity" },
+      "blurb": { "en": "Eight stages. Forward motion earns points; backsliding loses them permanently. The Reaper enforces.", "fr": "Huit étapes. Avancer rapporte des points ; reculer en coûte." },
+      "narrative": {
+        "en": "This scene is the Velocity game board, a snakes-and-ladders track of eight delivery stages: requirements, planning, architecture, prototype, development, user testing, user acceptance, and deployment. A project token moves along the track. Forward motion earns points: starting a step earns ten, submitting for review earns twenty, completing a step earns one hundred. Backsliding loses them and the loss is permanent: a rejection costs thirty, sending work back a stage costs fifty per stage, reopening a completed step costs fifty. An enforcement agent called the Reaper removes the points. The board exists because old-style estimation fails once AI codes a hundred times faster, and the program target is a twentyfold acceleration of real delivery.",
+        "fr": "TODO-FR: The Velocity game board: eight stages, points for forward motion, permanent loss for backsliding, enforced by the Reaper, targeting a twentyfold acceleration."
+      },
+      "spec": {
+        "stages": ["Requirements", "Planning", "Architecture", "Prototype", "Development", "User Testing", "User Acceptance", "Deployment"],
+        "scoring": [
+          { "event": "Start a step", "pts": "+10" },
+          { "event": "Submit for review", "pts": "+20" },
+          { "event": "Complete a step", "pts": "+100" },
+          { "event": "Rejected", "pts": "−30" },
+          { "event": "Sent back a stage", "pts": "−50" },
+          { "event": "Reopen a completed step", "pts": "−50" }
+        ],
+        "target": "20× acceleration"
+      }
+    },
+    {
+      "id": "hierarchy",
+      "kind": "hierarchy",
+      "paper": "eujjc",
+      "title": { "en": "The inverted hierarchy", "fr": "La hiérarchie inversée" },
+      "blurb": { "en": "In an agentic hierarchy the ratio inverts: for every worker, many supervisors auditing the work.", "fr": "Dans une hiérarchie agentique, le ratio s'inverse : pour chaque ouvrier, plusieurs superviseurs." },
+      "narrative": {
+        "en": "This scene shows the inverted hierarchy from the compression problem. In a human organization there is roughly one manager for every eight staff. In an agentic hierarchy the ratio inverts: for every worker agent, you can reasonably run eight supervisor agents auditing and validating the work. The worker sits at the centre or base, and around it sit the supervisors, each holding one concern: cybersecurity, quality assurance, change management, code review, infrastructure, communications, legal, and privacy. There can be one chef in the kitchen, surrounded by sub-agents each running its own continuous audit. The spatial picture is the point: the work of overseeing now outnumbers the work of producing.",
+        "fr": "TODO-FR: The inverted hierarchy: one worker agent surrounded by eight supervisor agents, each holding one concern."
+      },
+      "spec": {
+        "worker": "Worker",
+        "ratio": "1 : 8",
+        "supervisors": ["Cybersecurity", "QA", "Change", "Code review", "Infrastructure", "Communications", "Legal", "Privacy"]
+      }
+    },
+    {
+      "id": "future",
+      "kind": "collapse",
+      "paper": "offjm",
+      "title": { "en": "Government 3.0, the future state", "fr": "Gouvernement 3.0, l'état futur" },
+      "blurb": { "en": "A ministry's overlapping systems collapse into a few shared modules, built once, with no redundancy.", "fr": "Les systèmes redondants d'un ministère se réduisent à quelques modules partagés." },
+      "narrative": {
+        "en": "This scene shows the future state, where a ministry's tangle of overlapping systems collapses into a small set of shared, government-owned modules. In one Alberta ministry, one hundred eighty-five applications reduce to sixteen reusable modules, each built once with no redundancy, and complexity and attack surface fall by more than ninety percent. The shared services that emerge include payments, geospatial mapping, contract management, identity and access, build and release and observability, and an integration fabric. On the left, many small legacy nodes; on the right, the few modern modules they fold into. This is the destination the four approaches climb toward.",
+        "fr": "TODO-FR: The future state: 185 applications collapse into 16 shared modules, complexity down more than ninety percent."
+      },
+      "spec": {
+        "fromCount": 185,
+        "toCount": 16,
+        "modules": ["Payments", "Geospatial", "Contract mgmt", "Identity & access", "Build / release / observability", "Integration fabric"],
+        "drop": "complexity & attack surface −90%"
+      }
+    }
+  ]
+}

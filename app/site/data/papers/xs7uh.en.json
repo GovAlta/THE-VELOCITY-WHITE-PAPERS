@@ -5,21 +5,30 @@
   "tier": "Technical",
   "category": "paper",
   "title": "Technical: The Canvas",
-  "subtitle": "An interactive map of the whole system: the agents, the stack, and how the papers connect.",
+  "subtitle": "One interactive solution landscape that ties the collection together, and an argument made by showing rather than telling.",
   "track": "Technical Appendix",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 10,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "canvas",
+    "visualization",
+    "simulation",
+    "architecture",
+    "interactive",
+    "briefing"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. The body will be written from source materials. This is one of three technical appendices that round out the collection.",
+  "abstract": "The Compression Problem argues that a written briefing cannot carry the fidelity of a system at scale, and that a visual, spatial, interactive representation can. This appendix is that argument made literal. It assembles the whole approach into one interactive canvas: the legacy estate, the four approaches to modernization, the agentic technology stack, the harness and its review agents, the AI factory, the delivery game, the inverted hierarchy, and the future state. Each scene is a data-driven, downloadable, bilingual diagram with animated agents and a spoken description, and each can be embedded on its own in the paper it comes from. Move through it, zoom in, and take the architecture away.",
   "hero_image": {
     "src": "public/images/xs7uh/en/hero.jpg",
-    "alt": "Editorial image for: The Technical Canvas",
-    "image_prompt": "An editorial cover image for the technical appendix titled \"The Technical Canvas\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Editorial image for: The Canvas",
+    "image_prompt": "An editorial cover image for the technical appendix titled \"The Canvas\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
     "style_kind": "cover"
   },
   "audio": {
@@ -33,36 +42,178 @@
     "slides": [
       {
         "id": "01",
-        "title": "Technical: The Canvas",
+        "title": "The Canvas",
         "audio_file": "public/audio/en/xs7uh-tldr/01.mp3",
         "visual": "title",
-        "caption": "Technical appendix",
-        "subcaption": "",
-        "text": "The Technical Canvas. Content forthcoming."
+        "caption": "Technical appendix · paper 18",
+        "subcaption": "One interactive solution landscape for the whole approach.",
+        "text": "The Compression Problem argues that a written briefing cannot carry the fidelity of a system at scale, but a visual, spatial, interactive representation can. This appendix is that argument made literal: the whole approach assembled into one interactive canvas you move through, zoom into, and take away."
+      },
+      {
+        "id": "02",
+        "title": "Eight views of one system",
+        "audio_file": "public/audio/en/xs7uh-tldr/02.mp3",
+        "visual": "list",
+        "caption": "What the canvas holds",
+        "visual_config": {
+          "items": [
+            { "label": "Estate, approaches, stack", "desc": "The legacy estate scanned, the four approaches, and the agentic technology stack." },
+            { "label": "Harness and factory", "desc": "The harness with its review agents, and the Pronghorn to Nexus to Velocity factory." },
+            { "label": "Game, hierarchy, future", "desc": "The delivery game, the inverted hierarchy, and the future-state modules." },
+            { "label": "Animated agents", "desc": "Agents move through each scene, so the structure is shown rather than described." }
+          ]
+        },
+        "text": "The canvas holds eight scenes, one per major idea in the collection, with agents animated through each. You step between them with the scene chips, zoom and pan, expand to full screen, and read or hear a description of what each scene shows."
+      },
+      {
+        "id": "03",
+        "title": "Built to be taken away",
+        "audio_file": "public/audio/en/xs7uh-tldr/03.mp3",
+        "visual": "title",
+        "caption": "Data-driven, bilingual, accessible",
+        "subcaption": "Every scene is JSON you can download.",
+        "text": "Every scene is driven by a JSON record, so it can be downloaded, edited, and carried away as a standalone architecture. Each scene is bilingual, mobile-responsive, and carries a written narrative that serves both as the accessible description and as the script for a spoken explainer. The same scene component can be embedded on its own in the paper it comes from."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "The argument, made by showing" },
+    { "n": "02", "title": "The landscape, in one canvas" },
+    { "n": "03", "title": "Eight views of one system" },
+    { "n": "04", "title": "The factory, on its own" },
+    { "n": "05", "title": "The inverted hierarchy" },
+    { "n": "06", "title": "Built to be taken away" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "The [Compression Problem](/paper/eujjc) makes a claim: a written briefing cannot carry the fidelity of a four-hundred-and-sixty-six-million-line system to a decision-maker, because language moves at roughly forty bits a second while the system does not. It argues that the way through is to change the modality, from text toward a visual, spatial, interactive representation a person can explore. This appendix is that claim made literal. Rather than describe the approach in more pages, it assembles the whole of it into a single interactive canvas you can move through, zoom into, listen to, and take away."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "The argument, made by showing"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place; the body will be written from source materials, not auto-generated."
+      "text": "Every other paper in this collection is, in the end, a document. This one is a model. It does not summarize the collection so much as render it: the legacy estate that is being modernized, the four approaches that do the modernizing, the agentic stack they run on, the harness that keeps the work safe, the factory that builds it, the game that measures it, the hierarchy that oversees it, and the future state it all converges toward. Each is a scene in one canvas, and agents move through each scene, so the structure is shown in motion rather than asserted in prose. If the compression from a system to a briefing can be done with fidelity, this is what that looks like."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "The landscape, in one canvas"
+    },
+    {
+      "type": "paragraph",
+      "text": "The canvas below holds eight scenes, one per major idea in the collection. Use the scene chips to step between them, drag to pan and scroll to zoom, and use Expand for full screen. Each scene names the paper it comes from, so the canvas doubles as a map of the collection. Describe this canvas reads out, or plays, a plain-language account of what the current scene is showing."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 18.1",
+      "title": "The Solution Landscape",
+      "caption": "An interactive tour of the whole approach. Eight data-driven scenes with animated agents: the legacy estate, the four approaches, the agentic stack, the harness and its review agents, the AI factory, the delivery game, the inverted hierarchy, and the future state. Step between scenes, zoom, expand to full screen, listen to the description, or download any scene as JSON.",
+      "chart": { "kind": "canvas:tour" }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Eight views of one system"
+    },
+    {
+      "type": "paragraph",
+      "text": "The eight scenes trace the same arc the collection does, from the ground truth of the legacy estate to the future state that replaces it. Each is also embeddable on its own in its home paper, so the diagram you meet here is the same one that paper can carry."
+    },
+    {
+      "type": "table",
+      "title": "The scenes, and where they come from",
+      "columns": ["Scene", "What it shows", "Paper"],
+      "rows": [
+        ["The legacy estate", "≈466M lines across ~3,400 repositories, scanned by ~50 agents in ~20 hours.", "Git Insights"],
+        ["Four approaches", "Garage, Factory, Rationalization, Government 3.0 — lightest touch to full rebuild.", "The Four Approaches"],
+        ["The agentic stack", "Cloud, model access, models, the Bifrost gateway, deployment, and security.", "The Agentic Technology Stack"],
+        ["The harness", "A worker agent ringed by the green, yellow, red, and blue review agents.", "The Well-Built Harness"],
+        ["The AI factory", "Pronghorn ideation, Nexus orchestration, Velocity delivery, with agents flowing across.", "The AI Factory"],
+        ["The delivery game", "Eight stages; points for forward motion, permanent loss for backsliding, the Reaper.", "The Velocity Game Engine"],
+        ["The inverted hierarchy", "One worker agent, eight supervisors — the compression problem, solved spatially.", "The Compression Problem"],
+        ["The future state", "185 applications collapsed into 16 shared modules; complexity down more than 90%.", "Git Insights Ministry"]
+      ],
+      "source": "The Solution Landscape canvas."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "The factory, on its own"
+    },
+    {
+      "type": "paragraph",
+      "text": "Because every scene is a standalone component reading the same dataset, any one of them can be dropped into the paper it belongs to. Here is the factory pipeline scene by itself, the way the [AI Factory](/paper/qthji) papers could carry it: ideation in Pronghorn, orchestration in Nexus, and delivery measured in the Velocity game, with agents moving down the line."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 18.2",
+      "title": "One scene, embedded: the AI factory pipeline",
+      "caption": "The same factory scene from the canvas, embedded on its own. Pronghorn turns requirements into a prototype and an architecture canvas; Nexus runs the build in a secure cloud sandbox and observes it; Velocity measures delivery on a game board. Agents flow left to right.",
+      "chart": { "kind": "canvas:scene", "scene": "factory" }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "The inverted hierarchy"
+    },
+    {
+      "type": "paragraph",
+      "text": "And here is the scene that closes the loop back to the argument: the inverted hierarchy from the [Compression Problem](/paper/eujjc). In a human organization there is roughly one manager for every eight staff. In an agentic hierarchy the ratio inverts, and the work of overseeing outnumbers the work of producing. The picture says it faster than the sentence does, which is the whole point."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 18.3",
+      "title": "One scene, embedded: the inverted hierarchy",
+      "caption": "One worker agent at the base, eight supervisor agents above it, each holding a single concern. The same scene appears in the canvas tour and can sit inside the Compression Problem paper.",
+      "chart": { "kind": "canvas:scene", "scene": "hierarchy" }
+    },
+    {
+      "type": "pullquote",
+      "text": "Instead of preparing a written briefing, an AI could generate a simulation, a visualization, a spatial interaction that lets the decision-maker engage with the material in a different way. This canvas is that, built.",
+      "cite": "After The Compression Problem"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Built to be taken away"
+    },
+    {
+      "type": "paragraph",
+      "text": "The canvas is built to be more than a picture on a page. Every scene is driven by a JSON record, the same record you can download with the Download button, so an architecture can be carried away, edited, and reused rather than screenshotted. Each scene is bilingual and mobile-responsive, and each carries a written narrative that serves two purposes at once: it is the accessible description for a screen reader, and it is the script for the spoken explainer behind the Listen button. The renderers are generic and driven entirely by the data, so a new scene is a new JSON entry, not new code. This is a first build, offered for review; the intent is to keep adding scenes and depth until the canvas carries enough fidelity to stand in for the briefing entirely."
+    },
+    {
+      "type": "tag_row",
+      "tags": ["canvas", "visualization", "simulation", "architecture", "interactive"]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js",
+    "components/visuals/bespoke/canvas/Tour.js"
+  ],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "eujjc",
+    "zgym1",
+    "qxlzo",
+    "p7p2k",
+    "qthji",
+    "k3tc3",
+    "bbkac",
+    "offjm"
+  ]
 }
