@@ -266,7 +266,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The Factory is the most developed of the four approaches, and it has three moving parts, each the subject of its own paper. The work is shaped and specified in a [design environment](#/paper/qthji), where a plain-language request becomes a buildable plan the agents can work to. The agents then build, test, and deploy it inside a [secure sandbox](#/paper/uwpxr) under enterprise controls. And the whole effort is [tracked and scored](#/paper/k3tc3) in a system that makes progress visible and lets competing approaches race on the same piece of work. This paper introduces the approach. Those three papers show how the Factory actually runs."
+      "text": "The Factory is the most developed of the four approaches, and it has three moving parts, each the subject of its own paper. The work is shaped and specified in a [design environment](/paper/qthji), where a plain-language request becomes a buildable plan the agents can work to. The agents then build, test, and deploy it inside a [secure sandbox](/paper/uwpxr) under enterprise controls. And the whole effort is [tracked and scored](/paper/k3tc3) in a system that makes progress visible and lets competing approaches race on the same piece of work. This paper introduces the approach. Those three papers show how the Factory actually runs."
     },
     {
       "type": "table",
@@ -327,7 +327,7 @@
     },
     {
       "type": "paragraph",
-      "text": "This is the approach that [Git Insights Ministry](#/paper/offjm) makes executable. That tool reads an entire ministry of code at once and proposes a target architecture; rationalization is the act of building it. The pattern repeats wherever it is applied: hundreds of overlapping applications inside a ministry collapse into a small set of well-factored modules, with the common parts built once and shared. In one ministry, 185 applications resolved to 16 modules. Because the AI does the heavy analysis and most of the building, a program that once ran five to eight years can run in weeks to months."
+      "text": "This is the approach that [Git Insights Ministry](/paper/offjm) makes executable. That tool reads an entire ministry of code at once and proposes a target architecture; rationalization is the act of building it. The pattern repeats wherever it is applied: hundreds of overlapping applications inside a ministry collapse into a small set of well-factored modules, with the common parts built once and shared. In one ministry, 185 applications resolved to 16 modules. Because the AI does the heavy analysis and most of the building, a program that once ran five to eight years can run in weeks to months."
     },
     {
       "type": "paragraph",
@@ -464,7 +464,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Taken together, the four approaches are how we reach that target. We now have a clear picture of how government can be rebuilt. That raises the next question. If AI is going to do this much of the work, repairing, building, consolidating, and in time operating the systems government runs on, how do we make sure it does that work well, safely, and to a standard we can defend? The answer lies in the structure we build around the AI itself. \n\n\nWe call that structure the harness, and it is the subject of the next paper: **[The Well-Built Harness](#/paper/p7p2k)**."
+      "text": "Taken together, the four approaches are how we reach that target. We now have a clear picture of how government can be rebuilt. That raises the next question. If AI is going to do this much of the work, repairing, building, consolidating, and in time operating the systems government runs on, how do we make sure it does that work well, safely, and to a standard we can defend? The answer lies in the structure we build around the AI itself. \n\n\nWe call that structure the harness, and it is the subject of the next paper: **[The Well-Built Harness](/paper/p7p2k)**."
     },
     {
       "type": "tag_row",

@@ -121,29 +121,31 @@
   window.VWMarkVisited = markVisited;
   window.VWSetLocale = applyLocale;
 
-  /* ---- Hash router ---- */
-  function parseHash() {
-    const h = (location.hash || '#/').replace(/^#/, '');
-    const parts = h.split('/').filter(Boolean);
+  /* ---- Clean-URL router (History API) ----
+     Served from GitHub Pages: real routes have a prerendered index.html at the
+     clean path; a direct hit there (or 404.html) redirects to /?redirect=<path>
+     and the boot script in index.html restores the clean URL before this runs.
+     A trailing /fr (or /en) segment is a crawler hreflang variant; the locale
+     itself is carried in localStorage, so routing ignores it. */
+  const KNOWN_PAGES = ['index', 'about', 'press', 'resources', 'gallery', 'glossary', 'repos', 'updates', 'community', 'not-found'];
+  function parsePath() {
+    const parts = (location.pathname || '/').split('/').filter(Boolean);
+    if (parts.length && (parts[parts.length - 1] === 'fr' || parts[parts.length - 1] === 'en')) parts.pop();
     if (parts.length === 0) return { page: 'library', paperId: null };
-    if (parts[0] === 'index')        return { page: 'index',        paperId: null };
-    if (parts[0] === 'about')        return { page: 'about',        paperId: null };
-    if (parts[0] === 'press')        return { page: 'press',        paperId: null };
-    if (parts[0] === 'resources')    return { page: 'resources',    paperId: null };
-    if (parts[0] === 'gallery')      return { page: 'gallery',      paperId: null };
-    if (parts[0] === 'glossary')     return { page: 'glossary',     paperId: null };
-    if (parts[0] === 'repos')        return { page: 'repos',        paperId: null };
-    if (parts[0] === 'updates')      return { page: 'updates',      paperId: null };
-    if (parts[0] === 'community')    return { page: 'community',    paperId: null };
-    if (parts[0] === 'not-found')    return { page: 'not-found',    paperId: null };
-    if (parts[0] === 'paper' && parts[1]) return { page: 'paper', paperId: parts[1] };
+    if (parts[0] === 'paper' && parts[1]) return { page: 'paper', paperId: decodeURIComponent(parts[1]) };
+    if (KNOWN_PAGES.includes(parts[0])) return { page: parts[0], paperId: null };
     return { page: 'not-found', paperId: null };
+  }
+  function pathFor(target) {
+    if (typeof target === 'string') return target === 'library' ? '/' : '/' + target;
+    if (target && target.page === 'paper') return '/paper/' + target.id;
+    return '/';
   }
 
   /* ---- Root app ---- */
   const app = createApp({
     setup() {
-      const route = ref(parseHash());
+      const route = ref(parsePath());
 
       const currentPage = computed(() => {
         switch (route.value.page) {
@@ -166,8 +168,9 @@
       const paperId = computed(() => route.value.paperId);
       const page = computed(() => route.value.page);
 
-      function onHashChange() {
-        route.value = parseHash();
+      function applyRoute() {
+        route.value = parsePath();
+        if (route.value.page === 'paper' && route.value.paperId) markVisited(route.value.paperId);
         window.scrollTo(0, 0);
         /* Move focus to <main> so screen readers re-announce the new page region. */
         const main = document.getElementById('main-content');
@@ -193,27 +196,40 @@
           window.VWMeta.setSitePage(route.value.page, pageTitles[route.value.page]);
         }
       }
-      function navigate(target) {
-        if (typeof target === 'string') {
-          if (target === 'library') location.hash = '#/';
-          else location.hash = '#/' + target;
-        } else if (target && target.page === 'paper') {
-          location.hash = '#/paper/' + target.id;
-          markVisited(target.id);
-        }
+      function go(path) {
+        if (path !== location.pathname) history.pushState({}, '', path);
+        applyRoute();
+      }
+      function navigate(target) { go(pathFor(target)); }
+      /* Intercept clicks on internal links so they route in-app (no reload)
+         and the address bar shows the clean, shareable URL. External links,
+         new-tab/modified clicks, downloads, and #fragment links pass through. */
+      function onLinkClick(e) {
+        if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        const a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        if (a.target === '_blank' || a.hasAttribute('download') || a.getAttribute('rel') === 'external') return;
+        const href = a.getAttribute('href');
+        if (!href || href[0] !== '/' || href[1] === '/') return;   // only same-origin absolute paths
+        e.preventDefault();
+        go(href);
       }
       function setLocale(code) { applyLocale(code); }
 
       onMounted(async () => {
         try { await loadCore(); }
         catch (e) { console.error('Failed to load site data:', e); }
-        window.addEventListener('hashchange', onHashChange);
+        window.addEventListener('popstate', applyRoute);
+        document.addEventListener('click', onLinkClick);
         /* Initial meta application — paper detail pages override on content load. */
         if (window.VWMeta && route.value.page !== 'paper') {
           window.VWMeta.setSitePage(route.value.page);
         }
       });
-      onUnmounted(() => window.removeEventListener('hashchange', onHashChange));
+      onUnmounted(() => {
+        window.removeEventListener('popstate', applyRoute);
+        document.removeEventListener('click', onLinkClick);
+      });
 
       return { currentPage, paperId, page, navigate, setLocale, store };
     },

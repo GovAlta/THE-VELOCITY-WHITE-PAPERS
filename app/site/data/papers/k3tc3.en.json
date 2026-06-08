@@ -199,7 +199,7 @@
   "blocks": [
     {
       "type": "dropcap_paragraph",
-      "text": "Velocity is the third part of our AI factory series, after [Pronghorn](#/paper/qthji) and [Nexus](#/paper/uwpxr), and it tackles a problem that emerged in the AI coding era: how do you track time, effort, and cost on an AI-delivered project, and how do you measure progress forward when our previous conception of delivery speed and estimation has completely gone out the window, and an AI can do in minutes what used to take a person days? The purpose of Velocity is to invent a new way of doing project management and observability as an AI works alongside one person as the primary developer, and alongside architects, cybersecurity agents, the engagement team, and a highly opinionated customer. AI needs to play and work with people in a collaborative space, its work shown centrally rather than in an isolated environment, so we built a first-class project management tool that lets AI be a full participant. We also need to know, over time, whether we are being effective, because our objective is to increase delivery speed by twenty times."
+      "text": "Velocity is the third part of our AI factory series, after [Pronghorn](/paper/qthji) and [Nexus](/paper/uwpxr), and it tackles a problem that emerged in the AI coding era: how do you track time, effort, and cost on an AI-delivered project, and how do you measure progress forward when our previous conception of delivery speed and estimation has completely gone out the window, and an AI can do in minutes what used to take a person days? The purpose of Velocity is to invent a new way of doing project management and observability as an AI works alongside one person as the primary developer, and alongside architects, cybersecurity agents, the engagement team, and a highly opinionated customer. AI needs to play and work with people in a collaborative space, its work shown centrally rather than in an isolated environment, so we built a first-class project management tool that lets AI be a full participant. We also need to know, over time, whether we are being effective, because our objective is to increase delivery speed by twenty times."
     },
     {
       "type": "section_heading",
@@ -392,7 +392,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Every agent boots with a velocity harness. It is a riff on the [well-built harness](#/paper/p7p2k) from earlier in the series, the same foundational skills, but tailored and wired so the agent knows how to play. The skills are organized around the eight stages, one per step, from a requirements skill that writes the requirements document to a deployment skill that writes the release notes and the runbook and ships the migrations, with mechanical gates in between so a step will not advance until the work clears its checks. And every time the agent boots, it pulls the game engine's OpenAPI specification straight from the engine, so it always knows the current rules and exactly what it is allowed to do. The rules can change underneath it without anyone redeploying a thing."
+      "text": "Every agent boots with a velocity harness. It is a riff on the [well-built harness](/paper/p7p2k) from earlier in the series, the same foundational skills, but tailored and wired so the agent knows how to play. The skills are organized around the eight stages, one per step, from a requirements skill that writes the requirements document to a deployment skill that writes the release notes and the runbook and ships the migrations, with mechanical gates in between so a step will not advance until the work clears its checks. And every time the agent boots, it pulls the game engine's OpenAPI specification straight from the engine, so it always knows the current rules and exactly what it is allowed to do. The rules can change underneath it without anyone redeploying a thing."
     },
     {
       "type": "section_heading",
@@ -401,7 +401,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Then there is the velocity listener, a script that runs in [Nexus](#/paper/uwpxr) and lets an agent be triggered by a move on the board. It holds an open server-sent-events connection to the game engine, filtered to the projects it cares about, and picks back up cleanly if the connection drops. A human updates a status or hands work across, the listener sees it, wakes the right agent in its own working directory with a session that remembers, and hands it the state of the board and whatever the human said. One agent runs per project at a time, with a cap on how many run at once, and the rest queue and drain as slots open."
+      "text": "Then there is the velocity listener, a script that runs in [Nexus](/paper/uwpxr) and lets an agent be triggered by a move on the board. It holds an open server-sent-events connection to the game engine, filtered to the projects it cares about, and picks back up cleanly if the connection drops. A human updates a status or hands work across, the listener sees it, wakes the right agent in its own working directory with a session that remembers, and hands it the state of the board and whatever the human said. One agent runs per project at a time, with a cap on how many run at once, and the rest queue and drain as slots open."
     },
     {
       "type": "paragraph",
@@ -435,7 +435,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Velocity has not fully solved cross-project learning, and the discipline taught in the [Academy](#/paper/dt725) closes most of the gap. People own their harnesses. When an agent makes a mistake and the board catches it, the owner is meant to run a retrospective, find the gap, and patch the harness so it does not happen again. Those patches flow up to the main branch, so the next person to start a project is already on the better harness, and everyone gains. The learning gets democratized across people and agents and projects, and Git is how it travels."
+      "text": "Velocity has not fully solved cross-project learning, and the discipline taught in the [Academy](/paper/dt725) closes most of the gap. People own their harnesses. When an agent makes a mistake and the board catches it, the owner is meant to run a retrospective, find the gap, and patch the harness so it does not happen again. Those patches flow up to the main branch, so the next person to start a project is already on the better harness, and everyone gains. The learning gets democratized across people and agents and projects, and Git is how it travels."
     },
     {
       "type": "paragraph",
@@ -460,7 +460,7 @@
     },
     {
       "type": "paragraph",
-      "text": "When we opened Velocity to a hundred agents from the [AI Academy](#/paper/dt725), each with its own velocity listener subscribed to the game engine, we learned how creative and disruptive agents can be when given freedom and incentives. The system immediately flooded with activity. In a single five-minute window we recorded sixty-five thousand transactions as the agents oversubscribed to the game board and began playing simultaneously across hundreds of projects. The volume was not the real problem."
+      "text": "When we opened Velocity to a hundred agents from the [AI Academy](/paper/dt725), each with its own velocity listener subscribed to the game engine, we learned how creative and disruptive agents can be when given freedom and incentives. The system immediately flooded with activity. In a single five-minute window we recorded sixty-five thousand transactions as the agents oversubscribed to the game board and began playing simultaneously across hundreds of projects. The volume was not the real problem."
     },
     {
       "type": "keystat",
@@ -548,7 +548,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Velocity is the third pillar of the complete system, and it leans on the other two. [Pronghorn](#/paper/qthji) comes first and does the requirements, the standards, the architecture, and the project artifacts, so the work is properly defined before a line of code gets written. [Nexus](#/paper/uwpxr) is the place the agents live and work, with the compute and the tools and the runtime harnesses. Velocity sits on top as the layer that orchestrates and measures. The agents in Nexus subscribe to Velocity's boards through the listener over server-sent events; people make moves, agents answer, the work climbs the eight stages, and what we learn flows back into the harness. Pronghorn gives you good inputs, Nexus gives you reliable execution, and Velocity gives you the visibility, the accountability, and the learning. All three are open source, and you can take all three together or just fit Velocity onto a workflow you already have."
+      "text": "Velocity is the third pillar of the complete system, and it leans on the other two. [Pronghorn](/paper/qthji) comes first and does the requirements, the standards, the architecture, and the project artifacts, so the work is properly defined before a line of code gets written. [Nexus](/paper/uwpxr) is the place the agents live and work, with the compute and the tools and the runtime harnesses. Velocity sits on top as the layer that orchestrates and measures. The agents in Nexus subscribe to Velocity's boards through the listener over server-sent events; people make moves, agents answer, the work climbs the eight stages, and what we learn flows back into the harness. Pronghorn gives you good inputs, Nexus gives you reliable execution, and Velocity gives you the visibility, the accountability, and the learning. All three are open source, and you can take all three together or just fit Velocity onto a workflow you already have."
     },
     {
       "type": "figure",

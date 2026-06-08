@@ -64,7 +64,7 @@ Using Claude Code as the coding agent, the Opus and Sonnet models for the analys
 
 Agents read in about 20 hours 466 million lines. A scan of the whole estate that no consultant engagement could match in time or cost. A third of the repositories had no documentation at all, so the agents wrote it, and every dependency was itemized.
 
-Timing was important for this scan. Alberta has seen significant increases in the number of known vulnerabilities across the estate. On our bug trackers, vulnerabilities increase with a significant inflection point which aligns with the release of Anthropic&#39;s Mythos, the latest Opus models, and OpenAI&#39;s GPT 5.4 and 5.5. The same capability that lets a tool like Git Insights read the estate at depth is what lets attackers find the flaws in it, a point taken up in detail in the [cybersecurity paper](#/paper/mwo98). Within 4 weeks of the Mythos release, Alberta engineered our own powerful tools and methods to perform this analysis.
+Timing was important for this scan. Alberta has seen significant increases in the number of known vulnerabilities across the estate. On our bug trackers, vulnerabilities increase with a significant inflection point which aligns with the release of Anthropic&#39;s Mythos, the latest Opus models, and OpenAI&#39;s GPT 5.4 and 5.5. The same capability that lets a tool like Git Insights read the estate at depth is what lets attackers find the flaws in it, a point taken up in detail in the [cybersecurity paper](/paper/mwo98). Within 4 weeks of the Mythos release, Alberta engineered our own powerful tools and methods to perform this analysis.
 
 
 ## §03 How Git Insights works
@@ -79,7 +79,7 @@ Each scan detects the old technologies hiding inside, such as COBOL, classic ASP
 
 The scans do double duty, revealing how each system works and what it does for citizens. The business function of each application was mapped into a business capability hierarchy, allowing us to categorize each application by function. The combined record of each repository goes far deeper than any inventory we had before. This also took stock of redundancies in function which we can target for rationalization. As noted in the next paper, we believe we can achieve in some areas a 10 to 1 reduction of our redundant code through AI-driven standardization of common functions.
 
-The results of this Git Insights analysis land in one database and are exposed through an executive dashboard. There is an executive view of health and risk, a nine-box grid that plots each system by how active it is against how healthy it is, code-health cards per repository, contributor profiles, and the disposition breakdown, all exportable to a document, a spreadsheet, or raw data. The deep cross-repository rollup, where hundreds of overlapping systems in a single ministry are collapsed into a smaller set of rebuilt capabilities, is its own engine and its own paper; see [Git Insights Ministry](#/paper/offjm).
+The results of this Git Insights analysis land in one database and are exposed through an executive dashboard. There is an executive view of health and risk, a nine-box grid that plots each system by how active it is against how healthy it is, code-health cards per repository, contributor profiles, and the disposition breakdown, all exportable to a document, a spreadsheet, or raw data. The deep cross-repository rollup, where hundreds of overlapping systems in a single ministry are collapsed into a smaller set of rebuilt capabilities, is its own engine and its own paper; see [Git Insights Ministry](/paper/offjm).
 
 &quot;For the first time, a Deputy Minister could ask a question about the estate and get an answer grounded in the code itself.&quot; · Paper 3 · Git Insights
 
@@ -109,7 +109,7 @@ Underneath the risk tiers, Git Insights builds a full profile of every contribut
 There is a great deal of criticism aimed at AI for the mistakes it makes. A lot of ink is spilled describing its potential for hallucination and bias. However, these stories reveal a strong recency bias in how we humans report on those failures. One wrong answer by AI is remembered, the ten thousand right ones are not. Such critiques of AI often make the more grievous mistake of failing to also consider human performance in an equivalent domain. 
 
 
-Our findings were clear: with the proper controls described in [the harness paper](#/paper/p7p2k), the latest AI coding tools make fewer mistakes than humans on equivalent coding and analysis tasks.
+Our findings were clear: with the proper controls described in [the harness paper](/paper/p7p2k), the latest AI coding tools make fewer mistakes than humans on equivalent coding and analysis tasks.
 
 Git Insights gave us the benchmark to make this statement with evidence. The metadata harvested out of GitHub produced the first-ever large scale and longitudinal study in Alberta on human technical performance. We measured the real work of more than eight thousand people over eight years: every commit, every pull request, and the state of the code they produced, across the entire estate. This process gave us a benchmark to measure our future investments in AI speed, quality, security, and process. 
 
@@ -118,16 +118,16 @@ Humans and AI both make mistakes. And we are both creative problem solvers. The 
 
 With AI providing greater assistance in coding, human efforts shift to architecture, strategy, creativity, design, and crucially supporting human interaction and change management. Human creativity remains unmatched and integral to the process. An AI did not dream up Git Insights. That was 100 percent human driven. But it did make it possible to properly analyze a vast digital estate, for nearly no cost (less than two thousand dollars), and in only hours. In a properly formed partnership between the human and the AI agent, mistakes can be identified immediately, resolved rapidly, and forward velocity increased. 
 
-The next paper takes Git Insights up a level, to the ministry scale, where hundreds of overlapping systems are read together and collapsed into a smaller set of modern, rebuilt capabilities with a costed plan attached. See [Git Insights Ministry](#/paper/offjm).</pre>
+The next paper takes Git Insights up a level, to the ministry scale, where hundreds of overlapping systems are read together and collapsed into a smaller set of modern, rebuilt capabilities with a costed plan attached. See [Git Insights Ministry](/paper/offjm).</pre>
       <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: git-insights, code-analysis, agents, technical-debt, cybersecurity</p>
-      <p><a href="../../index.html#/paper/bbkac">Open the interactive version</a></p>
+      <p><a href="/paper/bbkac">Open the interactive version</a></p>
     </article>
   <script>
     (function () {
       try {
         if (window.localStorage) localStorage.setItem("vw_locale", "en");
       } catch (e) {}
-      window.location.replace("../../index.html#/paper/bbkac");
+      window.location.replace("/?redirect=/paper/bbkac");
     })();
   </script>
 </body>

@@ -31,7 +31,7 @@
     },
     template: `
       <nav class="civic-nav" v-if="store.site" :class="{ 'drawer-open': drawerOpen }">
-        <a class="brand" href="#/"
+        <a class="brand" href="/"
            @click="onNavigate('library')"
            :aria-label="(store.locale === 'fr' ? 'Accueil, ' : 'Home, ') + store.t.title">
           <img src="assets/alberta-wordmark.png"
@@ -44,7 +44,7 @@
 
         <ul class="links" role="list">
           <li v-for="item in store.t.nav" :key="item.id">
-            <a :href="'#/' + (item.id === 'library' ? '' : item.id)"
+            <a :href="'/' + (item.id === 'library' ? '' : item.id)"
                :class="{ active: isActive(item.id) }"
                :aria-current="isActive(item.id) ? 'page' : null"
                @click="onNavigate(item.id)">{{ item.label }}</a>
@@ -85,7 +85,7 @@
              :aria-label="store.locale === 'fr' ? 'Menu principal' : 'Primary menu'">
           <a v-for="item in store.t.nav"
              :key="item.id"
-             :href="'#/' + (item.id === 'library' ? '' : item.id)"
+             :href="'/' + (item.id === 'library' ? '' : item.id)"
              :class="{ active: isActive(item.id) }"
              :aria-current="isActive(item.id) ? 'page' : null"
              @click="onNavigate(item.id)">{{ item.label }}</a>

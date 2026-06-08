@@ -146,7 +146,7 @@
     },
     {
       "type": "paragraph",
-      "text": "An abstraction layer, like the [Bifrost](#/paper/uwpxr) gateway, lets us move a workload from one provider to another, or from the cloud to our own compute, as needs and prices change. It also keeps spending under control, with per-workload budgets so token use does not run away. We would not advise any government to put all its eggs in one basket; the industry is moving too quickly for that."
+      "text": "An abstraction layer, like the [Bifrost](/paper/uwpxr) gateway, lets us move a workload from one provider to another, or from the cloud to our own compute, as needs and prices change. It also keeps spending under control, with per-workload budgets so token use does not run away. We would not advise any government to put all its eggs in one basket; the industry is moving too quickly for that."
     },
     {
       "type": "section_heading",
@@ -214,7 +214,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Most of our cloud-based agentic workloads deploy into Google Cloud, while our traditional applications continue to run in Azure and AWS. The containerization behind this is described in the [Nexus](#/paper/uwpxr) paper. We are also looking at Red Hat OpenShift to host more workloads on our own hardware and to make fuller use of the data-centre capacity we already have."
+      "text": "Most of our cloud-based agentic workloads deploy into Google Cloud, while our traditional applications continue to run in Azure and AWS. The containerization behind this is described in the [Nexus](/paper/uwpxr) paper. We are also looking at Red Hat OpenShift to host more workloads on our own hardware and to make fuller use of the data-centre capacity we already have."
     },
     {
       "type": "section_heading",
@@ -351,7 +351,7 @@
     },
     {
       "type": "paragraph",
-      "text": "We now spend tens of thousands of dollars a month on compute tokens, and we expect that to reach hundreds of thousands a month as the [four approaches](#/paper/zgym1) are implemented and an AI agent supports every application for monitoring, cybersecurity remediation, and development. Capacity is becoming a constraint: a shortage of infrastructure and memory is limiting compute, and even our enterprise agreements, at twenty-five to fifty million tokens per minute, will likely be exceeded soon, so we are moving to a diversified, load-balanced approach to throughput."
+      "text": "We now spend tens of thousands of dollars a month on compute tokens, and we expect that to reach hundreds of thousands a month as the [four approaches](/paper/zgym1) are implemented and an AI agent supports every application for monitoring, cybersecurity remediation, and development. Capacity is becoming a constraint: a shortage of infrastructure and memory is limiting compute, and even our enterprise agreements, at twenty-five to fifty million tokens per minute, will likely be exceeded soon, so we are moving to a diversified, load-balanced approach to throughput."
     },
     {
       "type": "keystat",
@@ -361,7 +361,7 @@
     },
     {
       "type": "paragraph",
-      "text": "These cost numbers are interesting. The bigger effect of these tools is that they open up work we would simply not have pursued otherwise, more than they reduce the cost of work we already do. As the tools become available, both the appetite to build meaningful new services and the need to remediate technical debt grow together. Our aim is to modernize at speed and to deliver enhanced services, with hundreds of millions a year in cost avoidance and staffing steady, and to move from vendor-locked technologies toward platforms that give us latitude as we scale. We explore AI for the reasons set out in [The Cyber Imperative](#/paper/mwo98) and [the two-billion-dollar Ship of Theseus](#/paper/cux4h), and we are careful not to trade one problem for another."
+      "text": "These cost numbers are interesting. The bigger effect of these tools is that they open up work we would simply not have pursued otherwise, more than they reduce the cost of work we already do. As the tools become available, both the appetite to build meaningful new services and the need to remediate technical debt grow together. Our aim is to modernize at speed and to deliver enhanced services, with hundreds of millions a year in cost avoidance and staffing steady, and to move from vendor-locked technologies toward platforms that give us latitude as we scale. We explore AI for the reasons set out in [The Cyber Imperative](/paper/mwo98) and [the two-billion-dollar Ship of Theseus](/paper/cux4h), and we are careful not to trade one problem for another."
     },
     {
       "type": "tag_row",

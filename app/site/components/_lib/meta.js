@@ -99,7 +99,7 @@
     const d = siteDefaults();
     const title = pageTitle ? (pageTitle + ' · ' + d.title) : d.title;
     const desc = descriptionOverride || d.description;
-    const url  = SITE_URL_BASE + '/#/' + (pageId === 'library' ? '' : pageId);
+    const url  = SITE_URL_BASE + '/' + (pageId === 'library' ? '' : pageId);
 
     document.title = title;
     setMeta('description', desc);
@@ -120,9 +120,10 @@
 
     setLink('canonical', url);
     clearHreflangs();
-    setLink('alternate', SITE_URL_BASE + '/?lang=en#/' + (pageId === 'library' ? '' : pageId), 'en');
-    setLink('alternate', SITE_URL_BASE + '/?lang=fr#/' + (pageId === 'library' ? '' : pageId), 'fr');
-    setLink('alternate', SITE_URL_BASE + '/#/' + (pageId === 'library' ? '' : pageId), 'x-default');
+    const seg = (pageId === 'library' ? '' : pageId);
+    setLink('alternate', SITE_URL_BASE + '/' + seg, 'en');
+    setLink('alternate', SITE_URL_BASE + '/' + (seg ? seg + '/fr' : 'fr'), 'fr');
+    setLink('alternate', SITE_URL_BASE + '/' + seg, 'x-default');
 
     setJSONLD({
       '@context': 'https://schema.org',
@@ -139,7 +140,7 @@
   V.setPaper = function (paper) {
     if (!paper) return V.clear();
     const d = siteDefaults();
-    const url = SITE_URL_BASE + '/#/paper/' + paper.id;
+    const url = SITE_URL_BASE + '/paper/' + paper.id;
     const title = paper.title + ' · ' + d.title;
     const desc  = paper.abstract || paper.subtitle || '';
 
@@ -170,9 +171,9 @@
 
     setLink('canonical', url);
     clearHreflangs();
-    setLink('alternate', SITE_URL_BASE + '/?lang=en#/paper/' + paper.id, 'en');
-    setLink('alternate', SITE_URL_BASE + '/?lang=fr#/paper/' + paper.id, 'fr');
-    setLink('alternate', SITE_URL_BASE + '/#/paper/' + paper.id, 'x-default');
+    setLink('alternate', SITE_URL_BASE + '/paper/' + paper.id, 'en');
+    setLink('alternate', SITE_URL_BASE + '/paper/' + paper.id + '/fr', 'fr');
+    setLink('alternate', SITE_URL_BASE + '/paper/' + paper.id, 'x-default');
 
     const authors = (paper.authors || []).map(name => ({ '@type': 'Person', name }));
     setJSONLD({

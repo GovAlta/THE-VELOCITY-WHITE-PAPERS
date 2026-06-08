@@ -25,7 +25,7 @@
       },
     },
     template: `
-      <a :href="'#/paper/' + paper.id"
+      <a :href="'/paper/' + paper.id"
          class="civic-card"
          :class="{ 'is-architecture': paper.category === 'architecture' }"
          :aria-label="paperLabel"

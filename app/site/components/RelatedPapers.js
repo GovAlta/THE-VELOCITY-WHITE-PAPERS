@@ -30,27 +30,27 @@
     },
     template: `
       <nav class="cd-pager" :aria-label="fr ? 'Navigation entre les articles' : 'Article navigation'">
-        <a v-if="prev" class="cd-pager-link prev" :href="'#/paper/' + prev.id"
+        <a v-if="prev" class="cd-pager-link prev" :href="'/paper/' + prev.id"
            @click.prevent="$emit('open', prev.id)"
            :aria-label="(fr ? 'Précédent : ' : 'Previous: ') + prev.title">
           <span class="dir" aria-hidden="true">{{ fr ? '← Précédent' : '← Previous' }}</span>
           <span class="ref" aria-hidden="true">№ {{ prev.num }} · {{ prev.tier }}</span>
           <span class="t">{{ prev.title }}</span>
         </a>
-        <a v-else class="cd-pager-link prev is-home" href="#/"
+        <a v-else class="cd-pager-link prev is-home" href="/"
            :aria-label="fr ? 'Retour à la bibliothèque' : 'Back to the library'">
           <span class="dir" aria-hidden="true">{{ fr ? '← Accueil' : '← Home' }}</span>
           <span class="t">{{ fr ? 'La bibliothèque' : 'The library' }}</span>
         </a>
 
-        <a v-if="next" class="cd-pager-link next" :href="'#/paper/' + next.id"
+        <a v-if="next" class="cd-pager-link next" :href="'/paper/' + next.id"
            @click.prevent="$emit('open', next.id)"
            :aria-label="(fr ? 'Suivant : ' : 'Next: ') + next.title">
           <span class="dir" aria-hidden="true">{{ fr ? 'Suivant →' : 'Next →' }}</span>
           <span class="ref" aria-hidden="true">№ {{ next.num }} · {{ next.tier }}</span>
           <span class="t">{{ next.title }}</span>
         </a>
-        <a v-else class="cd-pager-link next is-home" href="#/"
+        <a v-else class="cd-pager-link next is-home" href="/"
            :aria-label="fr ? 'Retour à la bibliothèque' : 'Back to the library'">
           <span class="dir" aria-hidden="true">{{ fr ? 'Accueil →' : 'Home →' }}</span>
           <span class="t">{{ fr ? 'La bibliothèque' : 'The library' }}</span>

@@ -42,7 +42,7 @@
                 </a>
                 <div style="padding:12px 14px;">
                   <div style="font-weight:600;font-size:14px;">{{ v.title || v.caption || t.videos }}</div>
-                  <a :href="'#/paper/' + v.paper_id" style="font-family:var(--font-mono);font-size:11px;color:var(--accent);text-decoration:none;">{{ t.from }} № {{ v.num }} · {{ v.paper_title }} →</a>
+                  <a :href="'/paper/' + v.paper_id" style="font-family:var(--font-mono);font-size:11px;color:var(--accent);text-decoration:none;">{{ t.from }} № {{ v.num }} · {{ v.paper_title }} →</a>
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@
           <section class="civic-section" v-if="data.images && data.images.length">
             <div class="head"><h2>{{ t.figures }}</h2><div class="meta">{{ data.images.length }}</div></div>
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;padding-bottom:24px;">
-              <a v-for="(img,i) in data.images" :key="'i'+i" :href="'#/paper/' + img.paper_id"
+              <a v-for="(img,i) in data.images" :key="'i'+i" :href="'/paper/' + img.paper_id"
                  style="text-decoration:none;border:1px solid var(--rule);border-radius:8px;overflow:hidden;display:block;">
                 <img :src="img.src" :alt="img.alt" loading="lazy" style="width:100%;display:block;aspect-ratio:3/2;object-fit:cover;" />
                 <div style="padding:8px 10px;">

@@ -45,7 +45,7 @@
       <h1>The AI Factory: Measuring Project Delivery (The Velocity Game Engine)</h1>
       <p class="sub">A game-based way to run and measure delivery when an AI agent is a full member of the team, and traditional estimation no longer works.</p>
       <div class="abstract"><strong>Abstract.</strong> Velocity is the third stage of Alberta&#39;s AI factory, after Pronghorn and Nexus. It is an open-source project tool, built as a game, that makes an AI agent a full member of the team and measures real delivery now that estimation no longer works. Work climbs eight stages, earning points moving forward and losing them when it slides back.</div>
-      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Velocity is the third part of our AI factory series, after [Pronghorn](#/paper/qthji) and [Nexus](#/paper/uwpxr), and it tackles a problem that emerged in the AI coding era: how do you track time, effort, and cost on an AI-delivered project, and how do you measure progress forward when our previous conception of delivery speed and estimation has completely gone out the window, and an AI can do in minutes what used to take a person days? The purpose of Velocity is to invent a new way of doing project management and observability as an AI works alongside one person as the primary developer, and alongside architects, cybersecurity agents, the engagement team, and a highly opinionated customer. AI needs to play and work with people in a collaborative space, its work shown centrally rather than in an isolated environment, so we built a first-class project management tool that lets AI be a full participant. We also need to know, over time, whether we are being effective, because our objective is to increase delivery speed by twenty times.
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Velocity is the third part of our AI factory series, after [Pronghorn](/paper/qthji) and [Nexus](/paper/uwpxr), and it tackles a problem that emerged in the AI coding era: how do you track time, effort, and cost on an AI-delivered project, and how do you measure progress forward when our previous conception of delivery speed and estimation has completely gone out the window, and an AI can do in minutes what used to take a person days? The purpose of Velocity is to invent a new way of doing project management and observability as an AI works alongside one person as the primary developer, and alongside architects, cybersecurity agents, the engagement team, and a highly opinionated customer. AI needs to play and work with people in a collaborative space, its work shown centrally rather than in an isolated environment, so we built a first-class project management tool that lets AI be a full participant. We also need to know, over time, whether we are being effective, because our objective is to increase delivery speed by twenty times.
 
 
 ## §01 The estimation problem in the AI era
@@ -91,12 +91,12 @@ Alongside projects there are challenges. A challenge is a time-boxed bounty, sco
 
 ## §06 The velocity harness
 
-Every agent boots with a velocity harness. It is a riff on the [well-built harness](#/paper/p7p2k) from earlier in the series, the same foundational skills, but tailored and wired so the agent knows how to play. The skills are organized around the eight stages, one per step, from a requirements skill that writes the requirements document to a deployment skill that writes the release notes and the runbook and ships the migrations, with mechanical gates in between so a step will not advance until the work clears its checks. And every time the agent boots, it pulls the game engine&#39;s OpenAPI specification straight from the engine, so it always knows the current rules and exactly what it is allowed to do. The rules can change underneath it without anyone redeploying a thing.
+Every agent boots with a velocity harness. It is a riff on the [well-built harness](/paper/p7p2k) from earlier in the series, the same foundational skills, but tailored and wired so the agent knows how to play. The skills are organized around the eight stages, one per step, from a requirements skill that writes the requirements document to a deployment skill that writes the release notes and the runbook and ships the migrations, with mechanical gates in between so a step will not advance until the work clears its checks. And every time the agent boots, it pulls the game engine&#39;s OpenAPI specification straight from the engine, so it always knows the current rules and exactly what it is allowed to do. The rules can change underneath it without anyone redeploying a thing.
 
 
 ## §07 The velocity listener and multi-agent orchestration
 
-Then there is the velocity listener, a script that runs in [Nexus](#/paper/uwpxr) and lets an agent be triggered by a move on the board. It holds an open server-sent-events connection to the game engine, filtered to the projects it cares about, and picks back up cleanly if the connection drops. A human updates a status or hands work across, the listener sees it, wakes the right agent in its own working directory with a session that remembers, and hands it the state of the board and whatever the human said. One agent runs per project at a time, with a cap on how many run at once, and the rest queue and drain as slots open.
+Then there is the velocity listener, a script that runs in [Nexus](/paper/uwpxr) and lets an agent be triggered by a move on the board. It holds an open server-sent-events connection to the game engine, filtered to the projects it cares about, and picks back up cleanly if the connection drops. A human updates a status or hands work across, the listener sees it, wakes the right agent in its own working directory with a session that remembers, and hands it the state of the board and whatever the human said. One agent runs per project at a time, with a cap on how many run at once, and the rest queue and drain as slots open.
 
 This turns the game board into the universal prompt. Instead of a person prompting the AI by hand, a single move on the board triggers hundreds of agents across hundreds of projects. Someone updates a step on Monday morning, and an agent listening to that board wakes, reads the move, and does the next piece of work. Most people never open a chat window or log into a virtual machine; they play the game, and the agent works behind it. That suits how people want to work, since few want to log into a machine to talk to an agent, and now they do not have to.
 
@@ -107,14 +107,14 @@ Different agents with different harnesses can be triggered at different points. 
 
 ## §08 Building institutional memory
 
-Velocity has not fully solved cross-project learning, and the discipline taught in the [Academy](#/paper/dt725) closes most of the gap. People own their harnesses. When an agent makes a mistake and the board catches it, the owner is meant to run a retrospective, find the gap, and patch the harness so it does not happen again. Those patches flow up to the main branch, so the next person to start a project is already on the better harness, and everyone gains. The learning gets democratized across people and agents and projects, and Git is how it travels.
+Velocity has not fully solved cross-project learning, and the discipline taught in the [Academy](/paper/dt725) closes most of the gap. People own their harnesses. When an agent makes a mistake and the board catches it, the owner is meant to run a retrospective, find the gap, and patch the harness so it does not happen again. Those patches flow up to the main branch, so the next person to start a project is already on the better harness, and everyone gains. The learning gets democratized across people and agents and projects, and Git is how it travels.
 
 Every project also has an audit button. Press it and the system goes through the code, the progress, the comments, the metadata, all of it, and writes an indelible audit report, a snapshot in time of what is working and what is not. Run that across a wide number of projects and the themes begin to show: which practices consistently work, which mistakes keep repeating, where the security gaps cluster. That is something a traditional tool like Jira never captures; there, the knowledge stays with the person and exits with them. In Velocity it is assembled and kept inside the tool.
 
 
 ## §09 Velocity in the wild: a hundred agents and the Reaper
 
-When we opened Velocity to a hundred agents from the [AI Academy](#/paper/dt725), each with its own velocity listener subscribed to the game engine, we learned how creative and disruptive agents can be when given freedom and incentives. The system immediately flooded with activity. In a single five-minute window we recorded sixty-five thousand transactions as the agents oversubscribed to the game board and began playing simultaneously across hundreds of projects. The volume was not the real problem.
+When we opened Velocity to a hundred agents from the [AI Academy](/paper/dt725), each with its own velocity listener subscribed to the game engine, we learned how creative and disruptive agents can be when given freedom and incentives. The system immediately flooded with activity. In a single five-minute window we recorded sixty-five thousand transactions as the agents oversubscribed to the game board and began playing simultaneously across hundreds of projects. The volume was not the real problem.
 
 Under load 65,000 / 5 min. A hundred Academy agents on shared boards produced sixty-five thousand transactions in a five-minute window, and began gaming the rules. That stress test produced the Reaper and a hardened platform.
 
@@ -129,7 +129,7 @@ We also rebuilt Velocity to take the load, as a Government 3.0 platform that exp
 
 ## §10 The complete system: Pronghorn, Nexus, Velocity
 
-Velocity is the third pillar of the complete system, and it leans on the other two. [Pronghorn](#/paper/qthji) comes first and does the requirements, the standards, the architecture, and the project artifacts, so the work is properly defined before a line of code gets written. [Nexus](#/paper/uwpxr) is the place the agents live and work, with the compute and the tools and the runtime harnesses. Velocity sits on top as the layer that orchestrates and measures. The agents in Nexus subscribe to Velocity&#39;s boards through the listener over server-sent events; people make moves, agents answer, the work climbs the eight stages, and what we learn flows back into the harness. Pronghorn gives you good inputs, Nexus gives you reliable execution, and Velocity gives you the visibility, the accountability, and the learning. All three are open source, and you can take all three together or just fit Velocity onto a workflow you already have.
+Velocity is the third pillar of the complete system, and it leans on the other two. [Pronghorn](/paper/qthji) comes first and does the requirements, the standards, the architecture, and the project artifacts, so the work is properly defined before a line of code gets written. [Nexus](/paper/uwpxr) is the place the agents live and work, with the compute and the tools and the runtime harnesses. Velocity sits on top as the layer that orchestrates and measures. The agents in Nexus subscribe to Velocity&#39;s boards through the listener over server-sent events; people make moves, agents answer, the work climbs the eight stages, and what we learn flows back into the harness. Pronghorn gives you good inputs, Nexus gives you reliable execution, and Velocity gives you the visibility, the accountability, and the learning. All three are open source, and you can take all three together or just fit Velocity onto a workflow you already have.
 
 
 ## §11 Additional materials
@@ -138,14 +138,14 @@ The following materials provide additional insights into the Velocity Platform. 
 
 DM Janak Alford and ED Zoran Mijajlovic discuss the Velocity Game Engine and provide a walk through. Video: https://youtu.be/rwhybgIXnJ8</pre>
       <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: ai-factory, velocity, project-management, agents, orchestration, reaper, sse, open-source</p>
-      <p><a href="../../index.html#/paper/k3tc3">Open the interactive version</a></p>
+      <p><a href="/paper/k3tc3">Open the interactive version</a></p>
     </article>
   <script>
     (function () {
       try {
         if (window.localStorage) localStorage.setItem("vw_locale", "en");
       } catch (e) {}
-      window.location.replace("../../index.html#/paper/k3tc3");
+      window.location.replace("/?redirect=/paper/k3tc3");
     })();
   </script>
 </body>

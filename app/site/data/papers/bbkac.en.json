@@ -197,7 +197,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Timing was important for this scan. Alberta has seen significant increases in the number of known vulnerabilities across the estate. On our bug trackers, vulnerabilities increase with a significant inflection point which aligns with the release of Anthropic's Mythos, the latest Opus models, and OpenAI's GPT 5.4 and 5.5. The same capability that lets a tool like Git Insights read the estate at depth is what lets attackers find the flaws in it, a point taken up in detail in the [cybersecurity paper](#/paper/mwo98). Within 4 weeks of the Mythos release, Alberta engineered our own powerful tools and methods to perform this analysis."
+      "text": "Timing was important for this scan. Alberta has seen significant increases in the number of known vulnerabilities across the estate. On our bug trackers, vulnerabilities increase with a significant inflection point which aligns with the release of Anthropic's Mythos, the latest Opus models, and OpenAI's GPT 5.4 and 5.5. The same capability that lets a tool like Git Insights read the estate at depth is what lets attackers find the flaws in it, a point taken up in detail in the [cybersecurity paper](/paper/mwo98). Within 4 weeks of the Mythos release, Alberta engineered our own powerful tools and methods to perform this analysis."
     },
     {
       "type": "section_heading",
@@ -360,7 +360,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The results of this Git Insights analysis land in one database and are exposed through an executive dashboard. There is an executive view of health and risk, a nine-box grid that plots each system by how active it is against how healthy it is, code-health cards per repository, contributor profiles, and the disposition breakdown, all exportable to a document, a spreadsheet, or raw data. The deep cross-repository rollup, where hundreds of overlapping systems in a single ministry are collapsed into a smaller set of rebuilt capabilities, is its own engine and its own paper; see [Git Insights Ministry](#/paper/offjm)."
+      "text": "The results of this Git Insights analysis land in one database and are exposed through an executive dashboard. There is an executive view of health and risk, a nine-box grid that plots each system by how active it is against how healthy it is, code-health cards per repository, contributor profiles, and the disposition breakdown, all exportable to a document, a spreadsheet, or raw data. The deep cross-repository rollup, where hundreds of overlapping systems in a single ministry are collapsed into a smaller set of rebuilt capabilities, is its own engine and its own paper; see [Git Insights Ministry](/paper/offjm)."
     },
     {
       "type": "figure",
@@ -556,7 +556,7 @@
     },
     {
       "type": "paragraph",
-      "text": "There is a great deal of criticism aimed at AI for the mistakes it makes. A lot of ink is spilled describing its potential for hallucination and bias. However, these stories reveal a strong recency bias in how we humans report on those failures. One wrong answer by AI is remembered, the ten thousand right ones are not. Such critiques of AI often make the more grievous mistake of failing to also consider human performance in an equivalent domain. \n\n\nOur findings were clear: with the proper controls described in [the harness paper](#/paper/p7p2k), the latest AI coding tools make fewer mistakes than humans on equivalent coding and analysis tasks."
+      "text": "There is a great deal of criticism aimed at AI for the mistakes it makes. A lot of ink is spilled describing its potential for hallucination and bias. However, these stories reveal a strong recency bias in how we humans report on those failures. One wrong answer by AI is remembered, the ten thousand right ones are not. Such critiques of AI often make the more grievous mistake of failing to also consider human performance in an equivalent domain. \n\n\nOur findings were clear: with the proper controls described in [the harness paper](/paper/p7p2k), the latest AI coding tools make fewer mistakes than humans on equivalent coding and analysis tasks."
     },
     {
       "type": "paragraph",
@@ -604,7 +604,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The next paper takes Git Insights up a level, to the ministry scale, where hundreds of overlapping systems are read together and collapsed into a smaller set of modern, rebuilt capabilities with a costed plan attached. See [Git Insights Ministry](#/paper/offjm)."
+      "text": "The next paper takes Git Insights up a level, to the ministry scale, where hundreds of overlapping systems are read together and collapsed into a smaller set of modern, rebuilt capabilities with a costed plan attached. See [Git Insights Ministry](/paper/offjm)."
     },
     {
       "type": "tag_row",

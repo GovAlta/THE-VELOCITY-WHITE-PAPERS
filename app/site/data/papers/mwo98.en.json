@@ -198,7 +198,7 @@
     },
     {
       "type": "paragraph",
-      "text": "In Alberta, we are applying advanced AI tools in our own defense. Two new AI-driven cyber agents, a Red and a Blue, now run against our own code as a standing part of the toolkit, and they are a recent and fast-growing part of the arsenal. The paper [Red, Blue, Green, and Yellow Agents](#/paper/l199t) covers them in detail; here it is enough to say that the defenders now have the machine on their side too."
+      "text": "In Alberta, we are applying advanced AI tools in our own defense. Two new AI-driven cyber agents, a Red and a Blue, now run against our own code as a standing part of the toolkit, and they are a recent and fast-growing part of the arsenal. The paper [Red, Blue, Green, and Yellow Agents](/paper/l199t) covers them in detail; here it is enough to say that the defenders now have the machine on their side too."
     },
     {
       "type": "section_heading",
@@ -215,7 +215,7 @@
     },
     {
       "type": "paragraph",
-      "text": "These insights have driven Technology and Innovation to become a much more 'opinionated' and standards driven organization. By setting clear standards for net new development, which will be enforced through AI-based delivery methods (see the white paper [The Well Built Harness](#/paper/p7p2k)), we are closing this attack surface and rationalizing into well-supported open-source platforms and technologies."
+      "text": "These insights have driven Technology and Innovation to become a much more 'opinionated' and standards driven organization. By setting clear standards for net new development, which will be enforced through AI-based delivery methods (see the white paper [The Well Built Harness](/paper/p7p2k)), we are closing this attack surface and rationalizing into well-supported open-source platforms and technologies."
     },
     {
       "type": "section_heading",
@@ -264,7 +264,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Defending an estate this large means first being able to see it as a whole to gain the ground truth intelligence of our workloads and processes. No one person or set of documentation had the whole picture. We needed way to harvest evidence from the code itself rather than from memory and folklore. So, that is exactly what we built. The next paper on [Git Insights](#/paper/bbkac) provides a deep dive into how we pointed AI at our entire GitHub estate, what it found, and how that evidence now informs where we defend first. "
+      "text": "Defending an estate this large means first being able to see it as a whole to gain the ground truth intelligence of our workloads and processes. No one person or set of documentation had the whole picture. We needed way to harvest evidence from the code itself rather than from memory and folklore. So, that is exactly what we built. The next paper on [Git Insights](/paper/bbkac) provides a deep dive into how we pointed AI at our entire GitHub estate, what it found, and how that evidence now informs where we defend first. "
     },
     {
       "type": "paragraph",

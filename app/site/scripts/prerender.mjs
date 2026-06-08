@@ -155,17 +155,18 @@ function buildPaperHTML(paper, locale, otherLocale, otherPaper) {
     (paper.tags && paper.tags.length
       ? '      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: ' + xmlEscape(paper.tags.join(', ')) + '</p>\n'
       : '') +
-    '      <p><a href="' + xmlEscape(upPrefix) + 'index.html#/paper/' + xmlEscape(paper.id) + '">Open the interactive version</a></p>\n' +
+    '      <p><a href="/paper/' + xmlEscape(paper.id) + (locale === 'fr' ? '/fr' : '') + '">Open the interactive version</a></p>\n' +
     '    </article>\n';
 
-  /* On JS-capable clients, hand off to the SPA at the right route. */
+  /* On JS-capable clients, hand off to the SPA: bounce to the root shell with
+     the clean path preserved, which restores it before the app boots. */
   const handoff =
     '  <script>\n' +
     '    (function () {\n' +
     '      try {\n' +
     '        if (window.localStorage) localStorage.setItem("vw_locale", "' + locale + '");\n' +
     '      } catch (e) {}\n' +
-    '      window.location.replace("' + upPrefix + 'index.html#/paper/' + paper.id + '");\n' +
+    '      window.location.replace("/?redirect=/paper/' + paper.id + (locale === 'fr' ? '/fr' : '') + '");\n' +
     '    })();\n' +
     '  </script>\n';
 
@@ -224,14 +225,14 @@ function buildStaticRouteHTML(routeSegment, locale) {
          '  <script>\n' +
          '    (function () {\n' +
          '      try { if (window.localStorage) localStorage.setItem("vw_locale", "' + locale + '"); } catch (e) {}\n' +
-         '      window.location.replace("' + upPrefix + 'index.html#/' + routeSegment + '");\n' +
+         '      window.location.replace("/?redirect=/' + routeSegment + (locale === 'fr' ? '/fr' : '') + '");\n' +
          '    })();\n' +
          '  </script>\n' +
          '</head>\n' +
          '<body>\n' +
          '  <h1>' + xmlEscape(lbl.title) + '</h1>\n' +
          '  <p>' + xmlEscape(desc) + '</p>\n' +
-         '  <p><a href="' + xmlEscape(upPrefix) + 'index.html#/' + routeSegment + '">Open the interactive version</a></p>\n' +
+         '  <p><a href="/' + routeSegment + (locale === 'fr' ? '/fr' : '') + '">Open the interactive version</a></p>\n' +
          '</body>\n' +
          '</html>\n';
 }

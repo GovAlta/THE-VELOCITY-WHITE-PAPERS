@@ -52,14 +52,14 @@
 
 The industry moves quickly, and the lead alternates every couple of months. Google releases an image model like Nano Banana 2 that is astounding, and a few months later OpenAI ships GPT Image 2, a step change again. We stay flexible and use each platform where it fits. Over the past eighteen months we have tried a range of models, floating between Gemini, OpenAI, and Anthropic, and right now we find Anthropic&#39;s Claude models outperform most others. We expect that to change, and the stack is built so it can. For the work in these white papers we have relied mainly on Claude, the Opus and Sonnet models, moving from 3.5 up to today&#39;s Opus 4.8 and the latest Sonnet, and Anthropic has been shipping additions to Claude Code and the Claude apps faster than we can keep up.
 
-An abstraction layer, like the [Bifrost](#/paper/uwpxr) gateway, lets us move a workload from one provider to another, or from the cloud to our own compute, as needs and prices change. It also keeps spending under control, with per-workload budgets so token use does not run away. We would not advise any government to put all its eggs in one basket; the industry is moving too quickly for that.
+An abstraction layer, like the [Bifrost](/paper/uwpxr) gateway, lets us move a workload from one provider to another, or from the cloud to our own compute, as needs and prices change. It also keeps spending under control, with per-workload budgets so token use does not run away. We would not advise any government to put all its eggs in one basket; the industry is moving too quickly for that.
 
 
 ## §02 The stack
 
 Alberta runs a hybrid environment. We use the major hyperscaler clouds, Google, Azure, and AWS, alongside a number of smaller platforms, and we still operate three large legacy data centres carrying older code, systems, and infrastructure. We run open-source models on our own GPU cluster, and we reach hosted models through AWS Bedrock, the Google Agent Platform, and Azure AI Studio. We proactively test nearly every model that comes online: open-source models on our own hardware for offline, Protected C workloads, and others on local Mac M5 devices. Our primary workloads run through AWS Bedrock and the Google Agent Platform.
 
-Most of our cloud-based agentic workloads deploy into Google Cloud, while our traditional applications continue to run in Azure and AWS. The containerization behind this is described in the [Nexus](#/paper/uwpxr) paper. We are also looking at Red Hat OpenShift to host more workloads on our own hardware and to make fuller use of the data-centre capacity we already have.
+Most of our cloud-based agentic workloads deploy into Google Cloud, while our traditional applications continue to run in Azure and AWS. The containerization behind this is described in the [Nexus](/paper/uwpxr) paper. We are also looking at Red Hat OpenShift to host more workloads on our own hardware and to make fuller use of the data-centre capacity we already have.
 
 
 ## §03 Classification and residency
@@ -87,20 +87,20 @@ Around the models we run gateways like Bifrost for provider abstraction, cost co
 
 ## §06 Cost and scale
 
-We now spend tens of thousands of dollars a month on compute tokens, and we expect that to reach hundreds of thousands a month as the [four approaches](#/paper/zgym1) are implemented and an AI agent supports every application for monitoring, cybersecurity remediation, and development. Capacity is becoming a constraint: a shortage of infrastructure and memory is limiting compute, and even our enterprise agreements, at twenty-five to fifty million tokens per minute, will likely be exceeded soon, so we are moving to a diversified, load-balanced approach to throughput.
+We now spend tens of thousands of dollars a month on compute tokens, and we expect that to reach hundreds of thousands a month as the [four approaches](/paper/zgym1) are implemented and an AI agent supports every application for monitoring, cybersecurity remediation, and development. Capacity is becoming a constraint: a shortage of infrastructure and memory is limiting compute, and even our enterprise agreements, at twenty-five to fifty million tokens per minute, will likely be exceeded soon, so we are moving to a diversified, load-balanced approach to throughput.
 
 A long-running job 250 agents · 50 days. Processing roughly 14 million historical images and records is scoped at up to 250 concurrent agents running for as long as 50 days, at a cost of several hundred thousand dollars, perhaps one percent of doing the same work by hand.
 
-These cost numbers are interesting. The bigger effect of these tools is that they open up work we would simply not have pursued otherwise, more than they reduce the cost of work we already do. As the tools become available, both the appetite to build meaningful new services and the need to remediate technical debt grow together. Our aim is to modernize at speed and to deliver enhanced services, with hundreds of millions a year in cost avoidance and staffing steady, and to move from vendor-locked technologies toward platforms that give us latitude as we scale. We explore AI for the reasons set out in [The Cyber Imperative](#/paper/mwo98) and [the two-billion-dollar Ship of Theseus](#/paper/cux4h), and we are careful not to trade one problem for another.</pre>
+These cost numbers are interesting. The bigger effect of these tools is that they open up work we would simply not have pursued otherwise, more than they reduce the cost of work we already do. As the tools become available, both the appetite to build meaningful new services and the need to remediate technical debt grow together. Our aim is to modernize at speed and to deliver enhanced services, with hundreds of millions a year in cost avoidance and staffing steady, and to move from vendor-locked technologies toward platforms that give us latitude as we scale. We explore AI for the reasons set out in [The Cyber Imperative](/paper/mwo98) and [the two-billion-dollar Ship of Theseus](/paper/cux4h), and we are careful not to trade one problem for another.</pre>
       <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: tech-stack, cloud, models, sovereign-compute, bifrost, security, governance, open-source</p>
-      <p><a href="../../index.html#/paper/qxlzo">Open the interactive version</a></p>
+      <p><a href="/paper/qxlzo">Open the interactive version</a></p>
     </article>
   <script>
     (function () {
       try {
         if (window.localStorage) localStorage.setItem("vw_locale", "en");
       } catch (e) {}
-      window.location.replace("../../index.html#/paper/qxlzo");
+      window.location.replace("/?redirect=/paper/qxlzo");
     })();
   </script>
 </body>

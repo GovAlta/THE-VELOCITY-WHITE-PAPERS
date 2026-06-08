@@ -35,15 +35,15 @@
             <div class="meta">{{ store.locale === 'fr' ? 'trois raccourcis' : 'three shortcuts' }}</div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-bottom:24px;">
-            <a href="#/" class="civic-card" style="text-decoration:none;cursor:pointer;">
+            <a href="/" class="civic-card" style="text-decoration:none;cursor:pointer;">
               <div class="head" aria-hidden="true"><span class="num">→</span><span>{{ store.locale === 'fr' ? 'Bibliothèque' : 'Library' }}</span></div>
               <h3>{{ paperCountLabel }}</h3>
             </a>
-            <a href="#/index" class="civic-card" style="text-decoration:none;cursor:pointer;">
+            <a href="/index" class="civic-card" style="text-decoration:none;cursor:pointer;">
               <div class="head" aria-hidden="true"><span class="num">→</span><span>{{ store.locale === 'fr' ? 'Index' : 'Index' }}</span></div>
               <h3>{{ store.locale === 'fr' ? 'Recherche dans la collection' : 'Search the collection' }}</h3>
             </a>
-            <a href="#/glossary" class="civic-card" style="text-decoration:none;cursor:pointer;">
+            <a href="/glossary" class="civic-card" style="text-decoration:none;cursor:pointer;">
               <div class="head" aria-hidden="true"><span class="num">→</span><span>{{ store.locale === 'fr' ? 'Glossaire' : 'Glossary' }}</span></div>
               <h3>{{ store.locale === 'fr' ? 'Vocabulaire de la collection' : 'Vocabulary of the collection' }}</h3>
             </a>

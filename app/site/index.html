@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <!-- All routes serve this shell; base keeps relative asset/data URLs resolving
+       from the site root no matter how deep the clean URL is. -->
+  <base href="/" />
+  <!-- Clean-URL SPA fallback: a prerendered page or 404.html redirects a deep
+       link to /?redirect=<path>; restore the clean URL before the app boots. -->
+  <script>
+    (function () {
+      var m = location.search && location.search.match(/[?&]redirect=([^&]*)/);
+      if (m) {
+        var p = decodeURIComponent(m[1]) || '/';
+        if (p.charAt(0) !== '/') p = '/' + p;
+        history.replaceState(null, '', p);
+      }
+    })();
+  </script>
   <title>The Velocity White Papers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#F7F4ED" />
@@ -120,7 +135,7 @@
   <script defer src="app.js"></script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to content</a>
+  <a href="#main-content" class="skip-link" onclick="event.preventDefault();var m=document.getElementById('main-content');if(m){m.focus();m.scrollIntoView();}">Skip to content</a>
 
   <div id="app" v-cloak>
     <app-nav :page="page" @navigate="navigate"></app-nav>

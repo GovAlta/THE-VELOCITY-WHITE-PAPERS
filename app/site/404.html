@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Not found — The Velocity White Papers</title>
-  <meta http-equiv="refresh" content="0; url=./#/not-found" />
-  <link rel="canonical" href="./" />
+  <title>The Velocity White Papers</title>
+  <meta name="robots" content="noindex" />
+  <!-- GitHub Pages serves this for any path without its own file. Bounce to the
+       root shell with the requested clean path preserved; index.html restores it
+       and the SPA renders the route (or its own not-found view). -->
+  <script>
+    (function () {
+      var p = location.pathname || '/';
+      location.replace('/?redirect=' + encodeURIComponent(p));
+    })();
+  </script>
 </head>
 <body>
-  <p>Redirecting to <a href="./#/not-found">the site</a>…</p>
+  <p>Loading… <a href="/">Open The Velocity White Papers</a></p>
 </body>
 </html>

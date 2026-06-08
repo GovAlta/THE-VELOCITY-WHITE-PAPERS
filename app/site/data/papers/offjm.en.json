@@ -187,7 +187,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Where [Git Insights](#/paper/bbkac) reads one repository at a time and reports its health, its sibling process Git Insights Ministry (GIM) reads an entire ministry of application code at once and synthesizes the findings into a plan. It looks for the patterns that only appear across a whole portfolio such as the same login component built forty times or the same report written in a dozen ways. From those patterns it proposes a modular, reusable, government-owned compute architecture to replace the sprawl."
+      "text": "Where [Git Insights](/paper/bbkac) reads one repository at a time and reports its health, its sibling process Git Insights Ministry (GIM) reads an entire ministry of application code at once and synthesizes the findings into a plan. It looks for the patterns that only appear across a whole portfolio such as the same login component built forty times or the same report written in a dozen ways. From those patterns it proposes a modular, reusable, government-owned compute architecture to replace the sprawl."
     },
     {
       "type": "keystat",
@@ -491,7 +491,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Git Insights Ministry is the bridge from knowing the estate to rebuilding it. It turns the ground truth of [Git Insights](#/paper/bbkac) into a defensible plan: a smaller, modular, government-owned architecture, with the common parts built once for everyone. The strategies for carrying out that rebuild, from patching in place to full reconstruction, are the subject of the next paper: **[The Four Approaches to AI Modernization ](#/paper/zgym1)**."
+      "text": "Git Insights Ministry is the bridge from knowing the estate to rebuilding it. It turns the ground truth of [Git Insights](/paper/bbkac) into a defensible plan: a smaller, modular, government-owned architecture, with the common parts built once for everyone. The strategies for carrying out that rebuild, from patching in place to full reconstruction, are the subject of the next paper: **[The Four Approaches to AI Modernization ](/paper/zgym1)**."
     },
     {
       "type": "tag_row",
