@@ -54,8 +54,21 @@ jobs:
           # Served from the custom domain (apex), set via the CNAME file in
           # app/site so the GitHub Actions deploy preserves it on every run.
           BASE_URL: https://thevelocitywhitepapers.com
+          # Google Analytics measurement id, kept OUT of the source. Set it as a
+          # repo variable (Settings > Secrets and variables > Actions > Variables,
+          # name GA_MEASUREMENT_ID, value G-XXXXXXXXXX). Empty -> analytics off.
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
         run: |
           node scripts/build-bundle.mjs --replace
+          # Inject the analytics id into the built shell after bundling, so the
+          # deployed index.html carries it. The placeholder stays inert otherwise.
+          if [ -n "$GA_MEASUREMENT_ID" ]; then
+            sed -i "s/__GA_MEASUREMENT_ID__/$GA_MEASUREMENT_ID/g" index.html
+            [ -f index.dist.html ] && sed -i "s/__GA_MEASUREMENT_ID__/$GA_MEASUREMENT_ID/g" index.dist.html
+            echo "Injected GA measurement id into the built site."
+          else
+            echo "GA_MEASUREMENT_ID not set; analytics stays off."
+          fi
           node scripts/build-sitemap.mjs --base "$BASE_URL"
           node scripts/prerender.mjs --base "$BASE_URL"
           # Disable Jekyll so files and folders beginning with "_"

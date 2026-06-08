@@ -195,6 +195,15 @@
           };
           window.VWMeta.setSitePage(route.value.page, pageTitles[route.value.page]);
         }
+        /* SPA page view. The initial load is counted by gtag('config'); every
+           in-app navigation reports here with the new clean path. */
+        if (window.gtag && window.__GA_ID__) {
+          window.gtag('event', 'page_view', {
+            page_path: location.pathname,
+            page_location: location.href,
+            page_title: document.title,
+          });
+        }
       }
       function go(path) {
         if (path !== location.pathname) history.pushState({}, '', path);

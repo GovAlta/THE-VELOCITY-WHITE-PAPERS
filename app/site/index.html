@@ -17,6 +17,25 @@
       }
     })();
   </script>
+  <!-- Google Analytics (GA4). The id is injected at deploy from the
+       GA_MEASUREMENT_ID repo variable; it stays the literal placeholder locally,
+       which the guard below treats as empty, so dev and preview never track.
+       The SPA sends page_view on each route change (see app.js). -->
+  <script>
+    (function () {
+      var id = "__GA_MEASUREMENT_ID__";
+      if (/^__.*__$/.test(id) || !id) { window.__GA_ID__ = ''; return; }   // not injected -> off
+      window.__GA_ID__ = id;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', id);   // sends the initial page_view; route changes are sent manually
+    })();
+  </script>
   <title>The Velocity White Papers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#F7F4ED" />
