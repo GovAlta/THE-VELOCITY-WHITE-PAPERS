@@ -145,7 +145,7 @@
   /* Inject the shared stylesheet once. Scoped under .adh-fig so nothing leaks. */
   if (!document.getElementById('of1cj-visual-styles')) {
     const css = `
-      .adh-fig { width: 100%; font-family: var(--font-mono); }
+      .adh-fig { width: 100%; font-family: var(--font-mono); position: relative; overflow: hidden; }
       .adh-frame { border: 1px solid var(--rule); background: var(--paper); border-radius: 8px; padding: 14px; position: relative; overflow: hidden; }
       .adh-frame--dark { background: #1c1712; border-color: #3a332a; }
       .adh-grid { display: grid; gap: 4px; }
