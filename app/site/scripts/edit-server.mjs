@@ -368,9 +368,12 @@ const server = createServer((req, res) => {
   // Static files.
   (async () => {
     try {
-      let pathname = decodeURIComponent((req.url || '/').split('?')[0]);
-      if (pathname === '/') pathname = '/index.html';
-      const filePath = resolve(SITE, '.' + pathname);
+      const pathname = decodeURIComponent((req.url || '/').split('?')[0]);
+      // A request for a real file has an extension (.js/.json/.mp3/...). Anything
+      // else is a clean app route (/paper/<id>, /about): serve the SPA shell so the
+      // History-API router renders it, matching production deep-link behaviour.
+      const isAsset = /\.[a-z0-9]+$/i.test(pathname);
+      const filePath = isAsset ? resolve(SITE, '.' + pathname) : resolve(SITE, 'index.html');
       if (!filePath.startsWith(SITE)) { res.writeHead(403); res.end('Forbidden'); return; }
       const buf = await readFile(filePath);
       const type = MIME[extname(filePath).toLowerCase()] || 'application/octet-stream';
