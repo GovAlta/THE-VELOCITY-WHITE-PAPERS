@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-02",
+  "out_path": "public\\images\\l5wsi\\en\\fig-02.jpg",
+  "bytes_jpg": 117729,
+  "bytes_png_source": 2223015,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:28:51.130Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Four labelled boxes: BROWSER (top left), IDENTITY PROVIDER · GOOGLE / MICROSOFT (top right), SERVER (centre), and DATABASE · refresh_token (bottom right). Arrows: BROWSER to IDENTITY PROVIDER labelled SSO SIGN-IN and back; SERVER to BROWSER labelled SETS httpOnly COOKIES: ACCESS 15 min, REFRESH 7 days; SERVER to DATABASE labelled STORES SHA-256 HASH; a dashed return arrow labelled 401 TOKEN_EXPIRED then a curved arrow POST /auth/refresh — ROTATE. Small caption NO PASSWORDS STORED. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Four labelled boxes: BROWSER (top left), IDENTITY PROVIDER · GOOGLE / MICROSOFT (top right), SERVER (centre), and DATABASE · refresh_token (bottom right). Arrows: BROWSER to IDENTITY PROVIDER labelled SSO SIGN-IN and back; SERVER to BROWSER labelled SETS httpOnly COOKIES: ACCESS 15 min, REFRESH 7 days; SERVER to DATABASE labelled STORES SHA-256 HASH; a dashed return arrow labelled 401 TOKEN_EXPIRED then a curved arrow POST /auth/refresh — ROTATE. Small caption NO PASSWORDS STORED. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

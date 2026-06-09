@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\l5wsi\\en\\fig-04.jpg",
+  "bytes_jpg": 116051,
+  "bytes_png_source": 2279390,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:30:50.704Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A vertical stack of boxes top to bottom: VALIDATE (SCHEMA) gate, then ROUTE, CONTROLLER, SERVICE, MODEL, then a database cylinder POSTGRES. From MODEL a small callout shows a query SELECT ... WHERE id = $1 labelled PARAMETERIZED. On the right, an upward arrow labelled RESPONSE { success, data } returns to the top, and a box ERROR HANDLER maps 23505 to 409 and 23503 to 400, labelled SAFE ERRORS. Small caption ONE ENVELOPE, ONE ERROR PATH. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A vertical stack of boxes top to bottom: VALIDATE (SCHEMA) gate, then ROUTE, CONTROLLER, SERVICE, MODEL, then a database cylinder POSTGRES. From MODEL a small callout shows a query SELECT ... WHERE id = $1 labelled PARAMETERIZED. On the right, an upward arrow labelled RESPONSE { success, data } returns to the top, and a box ERROR HANDLER maps 23505 to 409 and 23503 to 400, labelled SAFE ERRORS. Small caption ONE ENVELOPE, ONE ERROR PATH. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

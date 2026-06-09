@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-07",
+  "out_path": "public\\images\\l5wsi\\en\\fig-07.jpg",
+  "bytes_jpg": 116362,
+  "bytes_png_source": 2491982,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:33:44.141Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial flow diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a box NAVIGATE TO ROUTE with a tag META: requiresAuth / requiresAdmin / guestOnly / layout. It flows into a diamond labelled beforeEach GUARD. Three branches: ALLOW then RENDER LAZY-LOADED VIEW (drawn as a small separate chunk box); NOT SIGNED IN then REDIRECT TO SIGN-IN (KEEP DESTINATION); NOT ADMIN then REDIRECT HOME. A small inline filter on the redirect arrow is labelled sanitizeRedirect — RELATIVE PATHS ONLY. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial flow diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a box NAVIGATE TO ROUTE with a tag META: requiresAuth / requiresAdmin / guestOnly / layout. It flows into a diamond labelled beforeEach GUARD. Three branches: ALLOW then RENDER LAZY-LOADED VIEW (drawn as a small separate chunk box); NOT SIGNED IN then REDIRECT TO SIGN-IN (KEEP DESTINATION); NOT ADMIN then REDIRECT HOME. A small inline filter on the redirect arrow is labelled sanitizeRedirect — RELATIVE PATHS ONLY. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

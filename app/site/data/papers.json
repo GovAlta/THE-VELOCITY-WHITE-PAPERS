@@ -532,7 +532,7 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 16,
+      "reading_min": 18,
       "status": "Draft",
       "tags": [
         "template",
@@ -544,7 +544,7 @@
         "specification-driven"
       ],
       "repo": null,
-      "abstract": "The Well-Built Harness ships a working application, not an empty folder: a full-stack monorepo, a Vue 3 client and an Express server over PostgreSQL, that builds, signs users in, talks to a database, streams live updates, and passes its tests and security scanners the day it is copied. This appendix is a walkthrough of how it works, back to front, for an engineer or DBA. The premise is simple: the best specification is code. A document describes intent; the template proves it, and an AI extending a secure, standards-built baseline has far less room to introduce a flaw. It covers the server middleware chain, sign-in and tokens, CSRF and cookies, the route-to-database path, real-time events, the single API client, routing guards, composables, the interface, accessibility, and the build.",
+      "abstract": "The Well-Built Harness ships with a full-stack monorepo application template consisting of a Vue 3 frontend client and a Node.js / Express server supported by a PostgreSQL database. Providing an AI agent a template allows it to rapidly build meaningful enterprise grade solutions. This basic template contains everything you need to get started, including security, logging, and basic controls.",
       "related": [
         "p7p2k",
         "l199t",

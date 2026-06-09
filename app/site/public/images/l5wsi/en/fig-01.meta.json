@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\l5wsi\\en\\fig-01.jpg",
+  "bytes_jpg": 71113,
+  "bytes_png_source": 2070633,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:27:56.636Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep Alberta navy line work with small rust accents, legible labels. A horizontal pipeline: a token labelled REQUEST on the far left flows right through a row of labelled gate boxes in order: TRUST PROXY, HELMET HEADERS, PERMISSIONS-POLICY, COMPRESSION, CORS ALLOW-LIST, RATE LIMIT, CONTENT-TYPE, BODY PARSE, COOKIES + LOG, CSRF, then into a larger box ROUTE HANDLER. A return arrow labelled RESPONSE loops back along the bottom through a box ERROR HANDLER. A small rust caption reads CHEAP CHECKS FIRST, IDENTITY LAST. Calm, architectural, no logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep Alberta navy line work with small rust accents, legible labels. A horizontal pipeline: a token labelled REQUEST on the far left flows right through a row of labelled gate boxes in order: TRUST PROXY, HELMET HEADERS, PERMISSIONS-POLICY, COMPRESSION, CORS ALLOW-LIST, RATE LIMIT, CONTENT-TYPE, BODY PARSE, COOKIES + LOG, CSRF, then into a larger box ROUTE HANDLER. A return arrow labelled RESPONSE loops back along the bottom through a box ERROR HANDLER. A small rust caption reads CHEAP CHECKS FIRST, IDENTITY LAST. Calm, architectural, no logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

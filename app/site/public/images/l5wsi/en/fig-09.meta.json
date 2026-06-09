@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-09",
+  "out_path": "public\\images\\l5wsi\\en\\fig-09.jpg",
+  "bytes_jpg": 135853,
+  "bytes_png_source": 2317521,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:35:41.881Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels, split into two halves by a thin vertical rule. LEFT half titled INTERFACE: boxes PRIMEVUE (AURA) and TAILWIND combine into a SCREEN box, with small badges SKIP LINK, ARIA-LIVE, WCAG 2.1 AA. RIGHT half titled BUILD AND DELIVERY: a VITE box splits into four stacked chunk boxes VUE, PRIMEVUE, CHARTS, MAPS, then a SERVICE WORKER box precaches a SHELL, leading to an INSTALLABLE PWA box with a small maskable icon and a tag UPDATE ON PROMPT. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels, split into two halves by a thin vertical rule. LEFT half titled INTERFACE: boxes PRIMEVUE (AURA) and TAILWIND combine into a SCREEN box, with small badges SKIP LINK, ARIA-LIVE, WCAG 2.1 AA. RIGHT half titled BUILD AND DELIVERY: a VITE box splits into four stacked chunk boxes VUE, PRIMEVUE, CHARTS, MAPS, then a SERVICE WORKER box precaches a SHELL, leading to an INSTALLABLE PWA box with a small maskable icon and a tag UPDATE ON PROMPT. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

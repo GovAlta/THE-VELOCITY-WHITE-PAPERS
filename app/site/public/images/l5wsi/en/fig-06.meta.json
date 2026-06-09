@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-06",
+  "out_path": "public\\images\\l5wsi\\en\\fig-06.jpg",
+  "bytes_jpg": 136600,
+  "bytes_png_source": 2499952,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:32:48.482Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. On the left, four small boxes labelled SCREEN converge with arrows into one large central box labelled AXIOS CLIENT. Inside that box, a short list: ATTACH CREDENTIALS, REQUEST ID, X-CSRF-TOKEN; 401 then REFRESH AND REPLAY; 403 CSRF then REFETCH AND RETRY; 429 then WAIT AND RETRY. One arrow leaves the box to a box labelled API. A rust caption reads ONE PLACE, EVERY REQUEST. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. On the left, four small boxes labelled SCREEN converge with arrows into one large central box labelled AXIOS CLIENT. Inside that box, a short list: ATTACH CREDENTIALS, REQUEST ID, X-CSRF-TOKEN; 401 then REFRESH AND REPLAY; 403 CSRF then REFETCH AND RETRY; 429 then WAIT AND RETRY. One arrow leaves the box to a box labelled API. A rust caption reads ONE PLACE, EVERY REQUEST. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

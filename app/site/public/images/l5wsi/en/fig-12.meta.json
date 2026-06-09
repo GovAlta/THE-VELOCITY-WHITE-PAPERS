@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-12",
+  "out_path": "public\\images\\l5wsi\\en\\fig-12.jpg",
+  "bytes_jpg": 248578,
+  "bytes_png_source": 2442461,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:38:58.080Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A large, highly detailed editorial architecture placemat on warm cream paper, deep Alberta navy line work with small rust accents, many small legible labels, orderly and dense, wide aspect. THREE COLUMNS joined by arrows. LEFT column titled BROWSER · VUE 3 CLIENT with stacked boxes: ROUTER + GUARDS, VIEWS, COMPOSABLES, PINIA AUTH STORE, ONE AXIOS CLIENT, PRIMEVUE + TAILWIND UI, PWA SERVICE WORKER, plus small a11y tags SKIP LINK / ARIA-LIVE / WCAG 2.1 AA. MIDDLE column titled SERVER · EXPRESS + TYPESCRIPT: a vertical MIDDLEWARE CHAIN box (helmet, CORS, rate limit, body, CSRF), then a flow ROUTE then CONTROLLER then SERVICE then MODEL, and to the side AUTH · RS256 httpOnly COOKIES and SSE STREAM MANAGER. RIGHT column: a database cylinder POSTGRES listing tables user_account, refresh_token, audit_log, and a box IDENTITY PROVIDERS · GOOGLE / MICROSOFT. Arrows: client AXIOS CLIENT to server over HTTPS with cookies; server MODEL to POSTGRES with parameterized queries; server AUTH to IDENTITY PROVIDERS. A BORDER STRIP around the whole diagram lists KEY DECISIONS: httpOnly COOKIES, PARAMETERIZED SQL, DOUBLE-SUBMIT CSRF, OWASP ASVS L2, WCAG 2.1 AA, 773 TESTS, SIX SCANNERS, OPEN SOURCE. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A large, highly detailed editorial architecture placemat on warm cream paper, deep Alberta navy line work with small rust accents, many small legible labels, orderly and dense, wide aspect. THREE COLUMNS joined by arrows. LEFT column titled BROWSER · VUE 3 CLIENT with stacked boxes: ROUTER + GUARDS, VIEWS, COMPOSABLES, PINIA AUTH STORE, ONE AXIOS CLIENT, PRIMEVUE + TAILWIND UI, PWA SERVICE WORKER, plus small a11y tags SKIP LINK / ARIA-LIVE / WCAG 2.1 AA. MIDDLE column titled SERVER · EXPRESS + TYPESCRIPT: a vertical MIDDLEWARE CHAIN box (helmet, CORS, rate limit, body, CSRF), then a flow ROUTE then CONTROLLER then SERVICE then MODEL, and to the side AUTH · RS256 httpOnly COOKIES and SSE STREAM MANAGER. RIGHT column: a database cylinder POSTGRES listing tables user_account, refresh_token, audit_log, and a box IDENTITY PROVIDERS · GOOGLE / MICROSOFT. Arrows: client AXIOS CLIENT to server over HTTPS with cookies; server MODEL to POSTGRES with parameterized queries; server AUTH to IDENTITY PROVIDERS. A BORDER STRIP around the whole diagram lists KEY DECISIONS: httpOnly COOKIES, PARAMETERIZED SQL, DOUBLE-SUBMIT CSRF, OWASP ASVS L2, WCAG 2.1 AA, 773 TESTS, SIX SCANNERS, OPEN SOURCE. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}
