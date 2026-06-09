@@ -615,6 +615,16 @@
       }
     },
     {
+      "type": "figure",
+      "title": "Explore this as an interactive canvas",
+      "caption": "Eight stages. Forward motion earns points; backsliding loses them permanently. The Reaper enforces. Part of The Canvas (paper 18); drag the nodes, zoom, and press Listen for a spoken walkthrough.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "velocity",
+        "audio": true
+      }
+    },
+    {
       "type": "tag_row",
       "tags": [
         "velocity",
@@ -628,7 +638,11 @@
       "type": "related"
     }
   ],
-  "bespoke_scripts": [],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
   "_meta": {
     "placeholder": false,
     "written_by": "human-authored",
@@ -640,6 +654,7 @@
     "uwpxr",
     "p7p2k",
     "dt725",
-    "zgym1"
+    "zgym1",
+    "xs7uh"
   ]
 }

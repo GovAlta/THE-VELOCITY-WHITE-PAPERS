@@ -17,8 +17,9 @@
       kind: { type: String, default: '' },
       scene: { type: String, default: '' },
       config: { type: Object, default: null },
+      audio: { type: [Boolean, String], default: false },
     },
-    data() { return { dataset: null, nodes: [], tx: 0, ty: 0, z: 1, dragId: null, panning: false, selected: null, _px: 0, _py: 0, _otx: 0, _oty: 0, _onx: 0, _ony: 0, _moved: false }; },
+    data() { return { dataset: null, nodes: [], tx: 0, ty: 0, z: 1, dragId: null, panning: false, selected: null, playing: false, _px: 0, _py: 0, _otx: 0, _oty: 0, _onx: 0, _ony: 0, _moved: false }; },
     computed: {
       loc() { return (window.VWStore && window.VWStore.locale) === 'fr' ? 'fr' : 'en'; },
       sceneObj() {
@@ -37,17 +38,20 @@
       },
       animKey() { return (this.sceneObj ? this.sceneObj.id : '') + ':' + this.loc; },
       panStyle() { return 'transform: translate(' + this.tx + 'px,' + this.ty + 'px) scale(' + this.z + ');'; },
+      sceneId() { return (this.sceneObj && this.sceneObj.id) || this.scene; },
+      audioSrc() { return 'public/audio/' + this.loc + '/canvas/' + this.sceneId + '.mp3'; },
     },
     watch: { animKey() { this.rebuild(); } },
     created() { C.loadData().then(d => { this.dataset = d; this.rebuild(); }).catch(() => {}); },
     mounted() { this.rebuild(); },
-    beforeUnmount() { this.kill(); },
+    beforeUnmount() { this.kill(); this.pauseAudio(); },
     methods: {
       kill() { if (this.tl) { try { this.tl.kill(); } catch (e) {} this.tl = null; } },
       rebuild() {
         const g = this.graph;
         this.nodes = (g.nodes || []).map(n => Object.assign({}, n));
         this.selected = null;
+        this.pauseAudio();
         this.$nextTick(() => { this.fit(); this.startAgents(); });
       },
       svgEl() { return this.$el && this.$el.querySelector ? this.$el.querySelector('svg') : null; },
@@ -95,6 +99,8 @@
         if (aps.length) this.tl = C.animateAgents(svg, aps, C.PAL.rust);
       },
       tt(v) { return C.t(v, this.loc); },
+      pauseAudio() { const el = this.$refs.audioEl; if (el) { try { el.pause(); } catch (e) {} } this.playing = false; },
+      toggleAudio() { const el = this.$refs.audioEl; if (!el) return; if (this.playing) { el.pause(); this.playing = false; } else { el.play().then(() => { this.playing = true; }).catch(() => { this.playing = false; }); } },
     },
     render() {
       if (!this.dataset && !this.sceneObj) return h('div', { class: 'cv-fig' }, [h('div', { style: 'padding:28px;text-align:center;color:var(--ink-50);font-size:12px;font-family:var(--font-mono);' }, 'Loading canvas…')]);
@@ -144,7 +150,17 @@
         onDblclick: () => this.fit(),
       }, [svg].concat(overlays));
 
-      return h('div', { class: 'cv-fig' }, [stage, h('span', { class: 'cv-sr' }, narr)]);
+      const children = [stage];
+      if (this.audio) {
+        children.push(h('div', { style: 'display:flex;align-items:center;gap:10px;padding:9px 12px;border-top:1px solid var(--rule);font-family:var(--font-mono);' }, [
+          h('span', { style: 'font-family:var(--font-serif, Georgia, serif);font-style:italic;font-size:13px;color:var(--accent);' }, C.t(so.title, loc)),
+          h('span', { style: 'flex:1 1 auto;' }),
+          h('button', { class: 'cv-btn', onClick: () => this.toggleAudio() }, this.playing ? 'Pause' : 'Listen'),
+          h('audio', { ref: 'audioEl', src: this.audioSrc, onEnded: () => { this.playing = false; }, preload: 'none' }),
+        ]));
+      }
+      children.push(h('span', { class: 'cv-sr' }, narr));
+      return h('div', { class: 'cv-fig' }, children);
     },
   };
   if (window.VWVisuals) window.VWVisuals.registerBespoke('canvas', 'scene', 'canvas-scene');

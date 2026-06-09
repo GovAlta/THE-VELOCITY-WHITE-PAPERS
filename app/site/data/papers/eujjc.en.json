@@ -394,6 +394,16 @@
       "text": "A twenty-fold improvement in speed is not achievable while maintaining the exact same hierarchy we administer today. The successful organizations will be the ones willing to reinvent the hierarchy at the same time they explore AI, producing a result that is the best of both worlds: human decision-making at the ecosystem level rather than at the level of the individual agent, with AI doing what it is good at and people doing what they are good at, spatial and strategic reasoning complementing tactical, on-the-ground reasoning. There is more to say on this topic. It is the defining challenge of AI implementation and will be an ongoing priority for this government and this ministry as we work to find the savings and gains needed to reach that twenty-fold improvement."
     },
     {
+      "type": "figure",
+      "title": "Explore this as an interactive canvas",
+      "caption": "In an agentic hierarchy the ratio inverts: for every worker, many supervisors auditing the work. Part of The Canvas (paper 18); drag the nodes, zoom, and press Listen for a spoken walkthrough.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "hierarchy",
+        "audio": true
+      }
+    },
+    {
       "type": "tag_row",
       "tags": [
         "compression",
@@ -407,7 +417,11 @@
       "type": "related"
     }
   ],
-  "bespoke_scripts": [],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
   "_meta": {
     "placeholder": false,
     "written_by": "human-authored",
@@ -419,6 +433,7 @@
     "uwpxr",
     "k3tc3",
     "dt725",
-    "p7p2k"
+    "p7p2k",
+    "xs7uh"
   ]
 }

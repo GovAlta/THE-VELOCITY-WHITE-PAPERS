@@ -494,6 +494,16 @@
       "text": "Git Insights Ministry is the bridge from knowing the estate to rebuilding it. It turns the ground truth of [Git Insights](/paper/bbkac) into a defensible plan: a smaller, modular, government-owned architecture, with the common parts built once for everyone. The strategies for carrying out that rebuild, from patching in place to full reconstruction, are the subject of the next paper: **[The Four Approaches to AI Modernization ](/paper/zgym1)**."
     },
     {
+      "type": "figure",
+      "title": "Explore this as an interactive canvas",
+      "caption": "A ministry's overlapping systems collapse into a few shared modules, built once, with no redundancy. Part of The Canvas (paper 18); drag the nodes, zoom, and press Listen for a spoken walkthrough.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "future",
+        "audio": true
+      }
+    },
+    {
       "type": "tag_row",
       "tags": [
         "git-insights",
@@ -510,10 +520,16 @@
   "related": [
     "bbkac",
     "zgym1",
-    "p7p2k"
+    "p7p2k",
+    "xs7uh"
   ],
   "_meta": {
     "placeholder": true,
     "written_by": "Ministry of Technology and Innovation"
-  }
+  },
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ]
 }

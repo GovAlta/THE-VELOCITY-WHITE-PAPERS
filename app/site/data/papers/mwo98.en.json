@@ -271,6 +271,16 @@
       "text": "Sources from this white paper: [Project Glasswing, Anthropic (2026)](https://www.anthropic.com/research/glasswing-initial-update); [Hardening Firefox, Mozilla (2026)](https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/); [CISA supply-chain alert (2026)](https://www.cisa.gov/news-events/alerts/2026/05/28/supply-chain-compromises-impact-nx-console-and-github-repositories); [Zscaler supply-chain research (2026)](https://www.zscaler.com/blogs/security-research/supply-chain-attacks-surge-march-2026); [Unit 42 on npm supply-chain attacks](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/); [Technology and Innovation 2024-2025 Annual Report](https://open.alberta.ca/dataset/50f6b5a7-c870-4c87-8c6c-38735140fff9/resource/f5c86436-66ff-4d2d-85bb-b6a23633d8b6/download/ti-annual-report-2024-2025.pdf)."
     },
     {
+      "type": "figure",
+      "title": "Explore this as an interactive canvas",
+      "caption": "The siege is intensifying and the walls are aging. AI defends at machine speed, and modernization cuts the attack surface. Part of The Canvas (paper 18); drag the nodes, zoom, and press Listen for a spoken walkthrough.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "cyber",
+        "audio": true
+      }
+    },
+    {
       "type": "tag_row",
       "tags": [
         "cybersecurity",
@@ -287,10 +297,16 @@
   "related": [
     "cux4h",
     "bbkac",
-    "l199t"
+    "l199t",
+    "xs7uh"
   ],
   "_meta": {
     "placeholder": false,
     "written_by": "Ministry of Technology and Innovation"
-  }
+  },
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ]
 }

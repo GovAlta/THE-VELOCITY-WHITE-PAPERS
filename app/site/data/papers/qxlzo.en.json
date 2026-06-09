@@ -123,12 +123,30 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "Choosing the right tools" },
-    { "n": "02", "title": "The stack" },
-    { "n": "03", "title": "Classification and residency" },
-    { "n": "04", "title": "Governance and privacy" },
-    { "n": "05", "title": "Security and the supply chain" },
-    { "n": "06", "title": "Cost and scale" }
+    {
+      "n": "01",
+      "title": "Choosing the right tools"
+    },
+    {
+      "n": "02",
+      "title": "The stack"
+    },
+    {
+      "n": "03",
+      "title": "Classification and residency"
+    },
+    {
+      "n": "04",
+      "title": "Governance and privacy"
+    },
+    {
+      "n": "05",
+      "title": "Security and the supply chain"
+    },
+    {
+      "n": "06",
+      "title": "Cost and scale"
+    }
   ],
   "blocks": [
     {
@@ -364,6 +382,16 @@
       "text": "These cost numbers are interesting. The bigger effect of these tools is that they open up work we would simply not have pursued otherwise, more than they reduce the cost of work we already do. As the tools become available, both the appetite to build meaningful new services and the need to remediate technical debt grow together. Our aim is to modernize at speed and to deliver enhanced services, with hundreds of millions a year in cost avoidance and staffing steady, and to move from vendor-locked technologies toward platforms that give us latitude as we scale. We explore AI for the reasons set out in [The Cyber Imperative](/paper/mwo98) and [the two-billion-dollar Ship of Theseus](/paper/cux4h), and we are careful not to trade one problem for another."
     },
     {
+      "type": "figure",
+      "title": "Explore this as an interactive canvas",
+      "caption": "The right model, in the right environment, for the right use case, with abstraction layers that prevent lock-in. Part of The Canvas (paper 18); drag the nodes, zoom, and press Listen for a spoken walkthrough.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "stack",
+        "audio": true
+      }
+    },
+    {
       "type": "tag_row",
       "tags": [
         "tech-stack",
@@ -377,7 +405,11 @@
       "type": "related"
     }
   ],
-  "bespoke_scripts": [],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
   "_meta": {
     "placeholder": false,
     "written_by": "human-authored",
@@ -389,6 +421,7 @@
     "zgym1",
     "mwo98",
     "cux4h",
-    "p7p2k"
+    "p7p2k",
+    "xs7uh"
   ]
 }

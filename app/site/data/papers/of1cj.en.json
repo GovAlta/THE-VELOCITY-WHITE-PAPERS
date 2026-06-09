@@ -721,6 +721,16 @@
       "source": "Anti-Drift Harness open questions."
     },
     {
+      "type": "figure",
+      "title": "Explore this as an interactive canvas",
+      "caption": "Observer harnesses watch a builder from outside, file tickets into a filesystem bus, and the builder clears them. Part of The Canvas (paper 18); drag the nodes, zoom, and press Listen for a spoken walkthrough.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "antidrift",
+        "audio": true
+      }
+    },
+    {
       "type": "tag_row",
       "tags": [
         "anti-drift",
@@ -743,7 +753,9 @@
     "components/visuals/bespoke/of1cj/CommitSpine.js",
     "components/visuals/bespoke/of1cj/DepTreeCard.js",
     "components/visuals/bespoke/of1cj/HealthPills.js",
-    "components/visuals/bespoke/of1cj/ObserverBoard.js"
+    "components/visuals/bespoke/of1cj/ObserverBoard.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
   ],
   "_meta": {
     "placeholder": false,
@@ -756,6 +768,7 @@
     "l199t",
     "eujjc",
     "qxlzo",
-    "cux4h"
+    "cux4h",
+    "xs7uh"
   ]
 }
