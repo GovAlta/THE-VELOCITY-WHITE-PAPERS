@@ -104,18 +104,54 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "The server: the request lifecycle" },
-    { "n": "02", "title": "Identity: sign-in, tokens, and cookies" },
-    { "n": "03", "title": "CSRF and cross-site safety" },
-    { "n": "04", "title": "From the route to the database" },
-    { "n": "05", "title": "Real-time updates over SSE" },
-    { "n": "06", "title": "The single API client" },
-    { "n": "07", "title": "Routing and navigation guards" },
-    { "n": "08", "title": "State, composables, and forms" },
-    { "n": "09", "title": "Interface, accessibility, and the build" },
-    { "n": "10", "title": "The OWASP Top 10, addressed up front" },
-    { "n": "11", "title": "What the template solves for the agent" },
-    { "n": "12", "title": "The whole template, on one page" }
+    {
+      "n": "01",
+      "title": "The server: the request lifecycle"
+    },
+    {
+      "n": "02",
+      "title": "Identity: sign-in, tokens, and cookies"
+    },
+    {
+      "n": "03",
+      "title": "CSRF and cross-site safety"
+    },
+    {
+      "n": "04",
+      "title": "From the route to the database"
+    },
+    {
+      "n": "05",
+      "title": "Real-time updates over SSE"
+    },
+    {
+      "n": "06",
+      "title": "The single API client"
+    },
+    {
+      "n": "07",
+      "title": "Routing and navigation guards"
+    },
+    {
+      "n": "08",
+      "title": "State, composables, and forms"
+    },
+    {
+      "n": "09",
+      "title": "Interface, accessibility, and the build"
+    },
+    {
+      "n": "10",
+      "title": "The OWASP Top 10, addressed up front"
+    },
+    {
+      "n": "11",
+      "title": "What the template solves for the agent"
+    },
+    {
+      "n": "12",
+      "title": "The whole template, on one page"
+    }
   ],
   "blocks": [
     {
@@ -149,21 +185,63 @@
     {
       "type": "table",
       "title": "The middleware chain, in order",
-      "columns": ["Step", "What it does"],
+      "columns": [
+        "Step",
+        "What it does"
+      ],
       "rows": [
-        ["trust proxy", "Honours the load balancer's client IP and protocol, so rate limits and secure cookies behave correctly behind a proxy."],
-        ["Security headers (helmet)", "Content-Security-Policy without unsafe-eval, HSTS for one year, and cross-origin isolation."],
-        ["Permissions-Policy", "Switches off camera, microphone, geolocation, payment, USB, and motion sensors."],
-        ["Compression", "gzip or brotli on responses; skipped for event streams so live updates are not buffered."],
-        ["Static files", "In production, serves the built client with a one-year immutable cache, before CORS."],
-        ["CORS allow-list", "Permits only configured origins, with credentials, and a fixed set of methods and headers."],
-        ["Rate limiting", "Caps the API at 200 requests per 15 minutes, with stricter limits on sign-in and AI routes."],
-        ["Content-Type check", "Rejects unexpected media types on POST, PUT, and PATCH with a 415."],
-        ["Body parsing", "Accepts JSON and form bodies, capped at one megabyte."],
-        ["Cookies, correlation id, logging", "Parses cookies, stamps a correlation id, logs every request, and warns when one takes over a second."],
-        ["Passport", "Initialised for OAuth sign-in only; no server-side sessions are used."],
-        ["CSRF (global)", "Validates state-changing requests by default, with a short, documented exempt list."],
-        ["Routers, then the error handler", "Versioned routes under /api/v1 (with an /api alias); a final handler turns any error into a safe response."]
+        [
+          "trust proxy",
+          "Honours the load balancer's client IP and protocol, so rate limits and secure cookies behave correctly behind a proxy."
+        ],
+        [
+          "Security headers (helmet)",
+          "Content-Security-Policy without unsafe-eval, HSTS for one year, and cross-origin isolation."
+        ],
+        [
+          "Permissions-Policy",
+          "Switches off camera, microphone, geolocation, payment, USB, and motion sensors."
+        ],
+        [
+          "Compression",
+          "gzip or brotli on responses; skipped for event streams so live updates are not buffered."
+        ],
+        [
+          "Static files",
+          "In production, serves the built client with a one-year immutable cache, before CORS."
+        ],
+        [
+          "CORS allow-list",
+          "Permits only configured origins, with credentials, and a fixed set of methods and headers."
+        ],
+        [
+          "Rate limiting",
+          "Caps the API at 200 requests per 15 minutes, with stricter limits on sign-in and AI routes."
+        ],
+        [
+          "Content-Type check",
+          "Rejects unexpected media types on POST, PUT, and PATCH with a 415."
+        ],
+        [
+          "Body parsing",
+          "Accepts JSON and form bodies, capped at one megabyte."
+        ],
+        [
+          "Cookies, correlation id, logging",
+          "Parses cookies, stamps a correlation id, logs every request, and warns when one takes over a second."
+        ],
+        [
+          "Passport",
+          "Initialised for OAuth sign-in only; no server-side sessions are used."
+        ],
+        [
+          "CSRF (global)",
+          "Validates state-changing requests by default, with a short, documented exempt list."
+        ],
+        [
+          "Routers, then the error handler",
+          "Versioned routes under /api/v1 (with an /api alias); a final handler turns any error into a safe response."
+        ]
       ],
       "source": "AIDE Common Harness template, server/src/app.ts."
     },
@@ -191,12 +269,27 @@
     {
       "type": "table",
       "title": "Tokens and cookies",
-      "columns": ["Item", "How it is set"],
+      "columns": [
+        "Item",
+        "How it is set"
+      ],
       "rows": [
-        ["Access token", "RS256 JWT, 15-minute life, httpOnly and sameSite=lax cookie. Carries user id, email, and role."],
-        ["Refresh token", "RS256 JWT, 7-day life, httpOnly cookie. Stored server-side only as a hash, rotated on every use, revocable."],
-        ["Roles", "viewer, submitter, editor, manager, admin, super_admin. authorize() compares position in that order; a database CHECK constraint mirrors the same list."],
-        ["sameSite=lax", "Lax, not strict, so the cross-site OAuth redirect still carries the cookie on the way back, while cross-site POSTs do not."]
+        [
+          "Access token",
+          "RS256 JWT, 15-minute life, httpOnly and sameSite=lax cookie. Carries user id, email, and role."
+        ],
+        [
+          "Refresh token",
+          "RS256 JWT, 7-day life, httpOnly cookie. Stored server-side only as a hash, rotated on every use, revocable."
+        ],
+        [
+          "Roles",
+          "viewer, submitter, editor, manager, admin, super_admin. authorize() compares position in that order; a database CHECK constraint mirrors the same list."
+        ],
+        [
+          "sameSite=lax",
+          "Lax, not strict, so the cross-site OAuth redirect still carries the cookie on the way back, while cross-site POSTs do not."
+        ]
       ],
       "source": "AIDE Common Harness template, utils/token.ts and utils/cookie-config.ts."
     },
@@ -224,13 +317,31 @@
     {
       "type": "table",
       "title": "The double-submit check",
-      "columns": ["Element", "Detail"],
+      "columns": [
+        "Element",
+        "Detail"
+      ],
       "rows": [
-        ["csrf_token cookie", "httpOnly; the browser holds it but scripts cannot read it."],
-        ["Token in the body", "Returned once by GET /auth/csrf-token; the client keeps it in memory only."],
-        ["X-CSRF-Token header", "Sent on every write; the server compares it to the cookie with a constant-time check."],
-        ["Global mount", "On by default for every state-changing route; a new route is protected without opting in."],
-        ["Exemptions", "OAuth start, OAuth callback (state + nonce), and refresh (sameSite + rotation), each documented with a reason."]
+        [
+          "csrf_token cookie",
+          "httpOnly; the browser holds it but scripts cannot read it."
+        ],
+        [
+          "Token in the body",
+          "Returned once by GET /auth/csrf-token; the client keeps it in memory only."
+        ],
+        [
+          "X-CSRF-Token header",
+          "Sent on every write; the server compares it to the cookie with a constant-time check."
+        ],
+        [
+          "Global mount",
+          "On by default for every state-changing route; a new route is protected without opting in."
+        ],
+        [
+          "Exemptions",
+          "OAuth start, OAuth callback (state + nonce), and refresh (sameSite + rotation), each documented with a reason."
+        ]
       ],
       "source": "AIDE Common Harness template, middleware/csrf.ts."
     },
@@ -262,14 +373,35 @@
     {
       "type": "table",
       "title": "The path of a request",
-      "columns": ["Layer", "Responsibility"],
+      "columns": [
+        "Layer",
+        "Responsibility"
+      ],
       "rows": [
-        ["Route", "Declares the URL and its guards: validate against a schema, then authenticate, then authorize by role."],
-        ["Controller", "Handles the request and shapes the reply. Holds no SQL."],
-        ["Service", "Business rules and orchestration across models."],
-        ["Model", "Owns the SQL. Parameterized queries; the only place API names map to database columns."],
-        ["Postgres (pool)", "Reached through a plain connection pool. No object-relational layer."],
-        ["Error handler", "Catches every throw, maps database errors to safe HTTP codes, and hides internals in production."]
+        [
+          "Route",
+          "Declares the URL and its guards: validate against a schema, then authenticate, then authorize by role."
+        ],
+        [
+          "Controller",
+          "Handles the request and shapes the reply. Holds no SQL."
+        ],
+        [
+          "Service",
+          "Business rules and orchestration across models."
+        ],
+        [
+          "Model",
+          "Owns the SQL. Parameterized queries; the only place API names map to database columns."
+        ],
+        [
+          "Postgres (pool)",
+          "Reached through a plain connection pool. No object-relational layer."
+        ],
+        [
+          "Error handler",
+          "Catches every throw, maps database errors to safe HTTP codes, and hides internals in production."
+        ]
       ],
       "source": "AIDE Common Harness template, routes, controllers, services, models."
     },
@@ -297,14 +429,35 @@
     {
       "type": "table",
       "title": "How a live update travels",
-      "columns": ["Stage", "What happens"],
+      "columns": [
+        "Stage",
+        "What happens"
+      ],
       "rows": [
-        ["Event occurs", "An admin broadcast or a new notification is created."],
-        ["Stream manager", "Looks up the user's open streams (one per tab, capped at ten)."],
-        ["Push", "Writes a named notification event to each open EventSource connection."],
-        ["Client", "useNotificationStream listens for the named event and updates the count and list."],
-        ["Reconnect", "EventSource reconnects on its own; a short backoff follows a hard close."],
-        ["Source of truth", "The /notifications list endpoint. A dropped event is never a lost record."]
+        [
+          "Event occurs",
+          "An admin broadcast or a new notification is created."
+        ],
+        [
+          "Stream manager",
+          "Looks up the user's open streams (one per tab, capped at ten)."
+        ],
+        [
+          "Push",
+          "Writes a named notification event to each open EventSource connection."
+        ],
+        [
+          "Client",
+          "useNotificationStream listens for the named event and updates the count and list."
+        ],
+        [
+          "Reconnect",
+          "EventSource reconnects on its own; a short backoff follows a hard close."
+        ],
+        [
+          "Source of truth",
+          "The /notifications list endpoint. A dropped event is never a lost record."
+        ]
       ],
       "source": "AIDE Common Harness template, sse/notification-stream.ts and useNotificationStream.ts."
     },
@@ -332,12 +485,27 @@
     {
       "type": "table",
       "title": "What the one API client handles for every request",
-      "columns": ["When the server returns", "What the client does"],
+      "columns": [
+        "When the server returns",
+        "What the client does"
+      ],
       "rows": [
-        ["401, session expired", "Calls /auth/refresh once, queues any concurrent requests behind it, then replays them. If refresh fails, it emits an auth:expired event and reports it for audit."],
-        ["403, CSRF missing or mismatch", "Re-fetches the CSRF token and retries the request once, queuing concurrent writes behind the refresh."],
-        ["429, rate limited", "Waits the interval named in the Retry-After header, capped at ten seconds, and retries once."],
-        ["Any error, in production", "Returns a generic message chosen by status code, so server internals never reach the browser."]
+        [
+          "401, session expired",
+          "Calls /auth/refresh once, queues any concurrent requests behind it, then replays them. If refresh fails, it emits an auth:expired event and reports it for audit."
+        ],
+        [
+          "403, CSRF missing or mismatch",
+          "Re-fetches the CSRF token and retries the request once, queuing concurrent writes behind the refresh."
+        ],
+        [
+          "429, rate limited",
+          "Waits the interval named in the Retry-After header, capped at ten seconds, and retries once."
+        ],
+        [
+          "Any error, in production",
+          "Returns a generic message chosen by status code, so server internals never reach the browser."
+        ]
       ],
       "source": "AIDE Common Harness template, client/src/lib/api.ts."
     },
@@ -365,14 +533,35 @@
     {
       "type": "table",
       "title": "Route metadata and the guard",
-      "columns": ["Meta flag", "Effect at navigation"],
+      "columns": [
+        "Meta flag",
+        "Effect at navigation"
+      ],
       "rows": [
-        ["requiresAuth", "Unauthenticated users are sent to sign-in, with the destination preserved."],
-        ["requiresAdmin", "Non-admins are redirected to home."],
-        ["guestOnly", "Signed-in users are turned away from the sign-in page."],
-        ["layout", "Selects the default, admin, or blank chrome."],
-        ["lazy load", "Each view is its own bundle, downloaded only when first visited."],
-        ["sanitizeRedirect", "Rejects any redirect target that is not a plain relative path."]
+        [
+          "requiresAuth",
+          "Unauthenticated users are sent to sign-in, with the destination preserved."
+        ],
+        [
+          "requiresAdmin",
+          "Non-admins are redirected to home."
+        ],
+        [
+          "guestOnly",
+          "Signed-in users are turned away from the sign-in page."
+        ],
+        [
+          "layout",
+          "Selects the default, admin, or blank chrome."
+        ],
+        [
+          "lazy load",
+          "Each view is its own bundle, downloaded only when first visited."
+        ],
+        [
+          "sanitizeRedirect",
+          "Rejects any redirect target that is not a plain relative path."
+        ]
       ],
       "source": "AIDE Common Harness template, client/src/router/index.ts."
     },
@@ -400,13 +589,31 @@
     {
       "type": "table",
       "title": "Client building blocks",
-      "columns": ["Piece", "Role"],
+      "columns": [
+        "Piece",
+        "Role"
+      ],
       "rows": [
-        ["Pinia auth store", "The one store: the user, role helpers, a 30-minute idle logout, and a listener for auth:expired."],
-        ["useFetch(url)", "Wraps a GET and returns data, loading, error, and a refresh function."],
-        ["Feature composables", "useServices, useResources, useForms, useFiles and the rest wrap their endpoints the same way, so views bind to a uniform shape."],
-        ["FormKit", "All forms behind one themed configuration; consistent validation and styling."],
-        ["DOMPurify", "Cleans any user-supplied HTML before it is rendered."]
+        [
+          "Pinia auth store",
+          "The one store: the user, role helpers, a 30-minute idle logout, and a listener for auth:expired."
+        ],
+        [
+          "useFetch(url)",
+          "Wraps a GET and returns data, loading, error, and a refresh function."
+        ],
+        [
+          "Feature composables",
+          "useServices, useResources, useForms, useFiles and the rest wrap their endpoints the same way, so views bind to a uniform shape."
+        ],
+        [
+          "FormKit",
+          "All forms behind one themed configuration; consistent validation and styling."
+        ],
+        [
+          "DOMPurify",
+          "Cleans any user-supplied HTML before it is rendered."
+        ]
       ],
       "source": "AIDE Common Harness template, client/src/stores and composables."
     },
@@ -438,14 +645,35 @@
     {
       "type": "table",
       "title": "From components to delivery",
-      "columns": ["Concern", "How it is handled"],
+      "columns": [
+        "Concern",
+        "How it is handled"
+      ],
       "rows": [
-        ["UI library", "PrimeVue 4 on the Aura theme, auto-imported so only used components ship, over Tailwind 4 utilities."],
-        ["Accessibility", "Skip-to-content link, an aria-live route announcer, and WCAG 2.1 AA conformance."],
-        ["Bundling", "Vite splits vendor chunks (Vue, PrimeVue, charts, maps); Terser minifies and drops console in production."],
-        ["Caching", "Built assets are served with a one-year immutable cache."],
-        ["PWA", "A service worker precaches the shell, falls back to the app but never the API, and prompts to update."],
-        ["Mobile", "Responsive by default, installable to the home screen with a maskable icon."]
+        [
+          "UI library",
+          "PrimeVue 4 on the Aura theme, auto-imported so only used components ship, over Tailwind 4 utilities."
+        ],
+        [
+          "Accessibility",
+          "Skip-to-content link, an aria-live route announcer, and WCAG 2.1 AA conformance."
+        ],
+        [
+          "Bundling",
+          "Vite splits vendor chunks (Vue, PrimeVue, charts, maps); Terser minifies and drops console in production."
+        ],
+        [
+          "Caching",
+          "Built assets are served with a one-year immutable cache."
+        ],
+        [
+          "PWA",
+          "A service worker precaches the shell, falls back to the app but never the API, and prompts to update."
+        ],
+        [
+          "Mobile",
+          "Responsive by default, installable to the home screen with a maskable icon."
+        ]
       ],
       "source": "AIDE Common Harness template, main.ts and vite.config.ts."
     },
@@ -473,18 +701,51 @@
     {
       "type": "table",
       "title": "How the template addresses the OWASP Top 10 (2021)",
-      "columns": ["Risk", "How the template addresses it"],
+      "columns": [
+        "Risk",
+        "How the template addresses it"
+      ],
       "rows": [
-        ["A01 Broken access control", "Every protected route runs authenticate then authorize against the role hierarchy; inactive accounts are refused at refresh."],
-        ["A02 Cryptographic failures", "RS256-signed tokens, SHA-256-hashed refresh tokens, httpOnly and secure cookies, forced HTTPS, and optional column encryption."],
-        ["A03 Injection", "All database access is parameterized, and every request is validated against a schema before use."],
-        ["A04 Insecure design", "CSRF on by default, refresh-token rotation, tiered rate limits, and a server that refuses to start with unsafe settings."],
-        ["A05 Security misconfiguration", "Strict security headers, configuration validated at startup, and errors stripped of internal detail in production."],
-        ["A06 Vulnerable components", "Dependencies pinned, with known-bad transitive versions overridden."],
-        ["A07 Authentication failures", "Short-lived access tokens, rotating refresh tokens, rate-limited sign-in, and single-tenant enforcement."],
-        ["A08 Data integrity failures", "Token signatures and OAuth state are verified, and uploads are checked by declared type and actual content."],
-        ["A09 Logging and monitoring failures", "Structured logs with correlation ids and an audit trail of sensitive actions."],
-        ["A10 Server-side request forgery", "Not specifically hardened in the template; flagged so the application closes it deliberately."]
+        [
+          "A01 Broken access control",
+          "Every protected route runs authenticate then authorize against the role hierarchy; inactive accounts are refused at refresh."
+        ],
+        [
+          "A02 Cryptographic failures",
+          "RS256-signed tokens, SHA-256-hashed refresh tokens, httpOnly and secure cookies, forced HTTPS, and optional column encryption."
+        ],
+        [
+          "A03 Injection",
+          "All database access is parameterized, and every request is validated against a schema before use."
+        ],
+        [
+          "A04 Insecure design",
+          "CSRF on by default, refresh-token rotation, tiered rate limits, and a server that refuses to start with unsafe settings."
+        ],
+        [
+          "A05 Security misconfiguration",
+          "Strict security headers, configuration validated at startup, and errors stripped of internal detail in production."
+        ],
+        [
+          "A06 Vulnerable components",
+          "Dependencies pinned, with known-bad transitive versions overridden."
+        ],
+        [
+          "A07 Authentication failures",
+          "Short-lived access tokens, rotating refresh tokens, rate-limited sign-in, and single-tenant enforcement."
+        ],
+        [
+          "A08 Data integrity failures",
+          "Token signatures and OAuth state are verified, and uploads are checked by declared type and actual content."
+        ],
+        [
+          "A09 Logging and monitoring failures",
+          "Structured logs with correlation ids and an audit trail of sensitive actions."
+        ],
+        [
+          "A10 Server-side request forgery",
+          "Not applicable for this template. "
+        ]
       ],
       "source": "AIDE Common Harness template, mapped to OWASP Top 10 (2021)."
     },
@@ -496,7 +757,7 @@
       "image": {
         "src": "public/images/l5wsi/en/fig-10.jpg",
         "alt": "A shield containing a checklist of ten rows labelled A01 to A10, each paired with a short control tag such as RBAC, RS256 plus hashing, parameterized SQL, CSRF by default, strict headers, pinned dependencies, short tokens, verified signatures, audit logging, and SSRF flagged. The first nine are ticked; the tenth is marked flagged.",
-        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A large shield outline containing a neat checklist of ten rows: A01 ACCESS CONTROL — RBAC; A02 CRYPTO — RS256 + HASH; A03 INJECTION — PARAMETERIZED SQL; A04 INSECURE DESIGN — CSRF BY DEFAULT; A05 MISCONFIG — STRICT HEADERS; A06 COMPONENTS — PINNED DEPS; A07 AUTH — SHORT TOKENS; A08 INTEGRITY — VERIFIED SIGNATURES; A09 LOGGING — AUDIT TRAIL; A10 SSRF — FLAGGED. Rows A01 through A09 each have a small navy check mark; A10 has a small rust tag reading FLAGGED. Title above the shield reads OWASP TOP 10 · ASVS LEVEL 2. No logos, no people.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A large shield outline containing a neat checklist of ten rows: A01 ACCESS CONTROL — RBAC; A02 CRYPTO — RS256 + HASH; A03 INJECTION — PARAMETERIZED SQL; A04 INSECURE DESIGN — CSRF BY DEFAULT; A05 MISCONFIG — STRICT HEADERS; A06 COMPONENTS — PINNED DEPS; A07 AUTH — SHORT TOKENS; A08 INTEGRITY — VERIFIED SIGNATURES; A09 LOGGING — AUDIT TRAIL; A10 SSRF — FLAGGED. Rows A01 through A09 each have a small navy check mark; A10 has a small rust tag reading N/A. Title above the shield reads OWASP TOP 10 · ASVS LEVEL 2. No logos, no people.",
         "style_kind": "diagram"
       }
     },
@@ -516,15 +777,39 @@
     {
       "type": "table",
       "title": "Decided once, inherited everywhere",
-      "columns": ["Concern", "The single implementation the agent inherits"],
+      "columns": [
+        "Concern",
+        "The single implementation the agent inherits"
+      ],
       "rows": [
-        ["Identity", "SSO sign-in, RS256 tokens in httpOnly cookies, refresh rotation, role-based access."],
-        ["Cross-site safety", "Global double-submit CSRF, on by default for every write."],
-        ["Database access", "Parameterized queries, owned by the model layer."],
-        ["Responses", "One success or error envelope, with safe error mapping."],
-        ["Real-time", "Server-Sent Events, with the list endpoint as the source of truth."],
-        ["Client calls", "One axios client handling refresh, CSRF, and rate limits."],
-        ["Still open", "File malware scanning, a shared rate-limit store, and A10 SSRF: documented, not hidden."]
+        [
+          "Identity",
+          "SSO sign-in, RS256 tokens in httpOnly cookies, refresh rotation, role-based access."
+        ],
+        [
+          "Cross-site safety",
+          "Global double-submit CSRF, on by default for every write."
+        ],
+        [
+          "Database access",
+          "Parameterized queries, owned by the model layer."
+        ],
+        [
+          "Responses",
+          "One success or error envelope, with safe error mapping."
+        ],
+        [
+          "Real-time",
+          "Server-Sent Events, with the list endpoint as the source of truth."
+        ],
+        [
+          "Client calls",
+          "One axios client handling refresh, CSRF, and rate limits."
+        ],
+        [
+          "Still open",
+          "File malware scanning, a shared rate-limit store, and A10 SSRF: documented, not hidden."
+        ]
       ],
       "source": "AIDE Common Harness template."
     },
@@ -563,7 +848,13 @@
     },
     {
       "type": "tag_row",
-      "tags": ["template", "harness", "security", "owasp", "open-source"]
+      "tags": [
+        "template",
+        "harness",
+        "security",
+        "owasp",
+        "open-source"
+      ]
     },
     {
       "type": "related"
