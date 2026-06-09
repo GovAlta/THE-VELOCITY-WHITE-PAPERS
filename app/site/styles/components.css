@@ -311,6 +311,43 @@
   padding: 0 24px 12px 0;
   color: var(--ink-70); font-size: 14.5px; line-height: 1.7;
 }
+
+/* --- Glossary editor (edit mode) ------------------------ */
+.gloss-editbar {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 12px;
+  margin-bottom: 18px;
+}
+.gloss-add, .gloss-save {
+  font-family: var(--font-mono); font-size: 12px; padding: 8px 13px;
+  border-radius: 6px; cursor: pointer; border: 1px solid var(--accent);
+}
+.gloss-add { background: var(--accent); color: var(--paper); }
+.gloss-save { background: transparent; color: var(--accent); }
+.gloss-save:disabled { opacity: 0.45; cursor: default; border-color: var(--rule); color: var(--ink-50); }
+.gloss-add:hover { filter: brightness(1.08); }
+.gloss-status { font-family: var(--font-mono); font-size: 12px; color: var(--ink-50); }
+.gloss-hint { font-family: var(--font-mono); font-size: 11px; color: var(--ink-50); margin-left: auto; }
+.glossary-edit { display: flex; flex-direction: column; gap: 14px; }
+.gloss-edit-card {
+  border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 8px; background: var(--paper-alt);
+}
+.gloss-edit-head { display: flex; gap: 10px; align-items: center; }
+.gloss-in {
+  width: 100%; box-sizing: border-box; font-family: var(--font-sans);
+  border: 1px solid var(--rule); border-radius: 5px; padding: 8px 10px;
+  background: var(--paper); color: var(--ink); outline: none;
+}
+.gloss-in:focus { border-color: var(--accent); }
+.gloss-term { font-weight: 600; font-size: 16px; }
+.gloss-short { font-size: 14px; }
+.gloss-long { font-size: 14px; line-height: 1.6; resize: vertical; }
+.gloss-del {
+  flex: 0 0 auto; width: 30px; height: 30px; border-radius: 5px; cursor: pointer;
+  border: 1px solid var(--rule); background: transparent; color: var(--highlight); font-size: 13px;
+}
+.gloss-del:hover { border-color: var(--highlight); }
+.gloss-edit-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-50); }
 .term-related {
   margin-top: 12px; padding-top: 8px;
   border-top: 1px dotted var(--rule);
