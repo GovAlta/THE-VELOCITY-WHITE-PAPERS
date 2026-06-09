@@ -69,6 +69,14 @@ export function computeIndex() {
     const pf = readPaper(id, loc) || {};
     const entry = { id, num: numbering[id].num, sequence: numbering[id].seq[loc] || numbering[id].seq.en };
     for (const f of INVENTORY_FIELDS) if (pf[f] !== undefined) entry[f] = pf[f];
+    /* Bilingual display: carry the non-primary locale's title/subtitle/abstract
+       so the home grid and index table can localize without loading each paper.
+       (tier/track/tags stay single — they're grouping keys, kept in English.) */
+    const other = loc === 'en' ? 'fr' : 'en';
+    const of = readPaper(id, other);
+    if (of && !(of._meta && of._meta.placeholder)) {
+      entry.i18n = { [other]: { title: of.title || '', subtitle: of.subtitle || '', abstract: of.abstract || '' } };
+    }
     return entry;
   });
 

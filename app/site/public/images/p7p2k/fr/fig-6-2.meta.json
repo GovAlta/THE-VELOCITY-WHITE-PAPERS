@@ -1,0 +1,17 @@
+{
+  "paper_id": "p7p2k",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\p7p2k\\fr\\fig-6-2.jpg",
+  "bytes_jpg": 166485,
+  "bytes_png_source": 2132581,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T10:21:56.847Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of a grid of small labelled folders, each a closed skill, with short labels such as REQUIREMENTS, MIGRATION, SECURITY, REVIEW. One folder near the centre is pulled open and a single sheet rises from it, clearly the one in use; every other folder stays shut. A thin arrow from a small marked point selects the open folder. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of a grid of small labelled folders, each a closed skill, with short labels such as REQUIREMENTS, MIGRATION, SECURITY, REVIEW. One folder near the centre is pulled open and a single sheet rises from it, clearly the one in use; every other folder stays shut. A thin arrow from a small marked point selects the open folder. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\p7p2k\\en\\fig-6-2.source.png"
+}

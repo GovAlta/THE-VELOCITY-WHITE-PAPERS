@@ -22,12 +22,16 @@
         return this.papers.filter(p => {
           if (this.tier !== 'all' && p.tier !== this.tier) return false;
           if (!q) return true;
-          const hay = [p.title, p.subtitle, p.abstract, (p.tags || []).join(' '), p.track].join(' ').toLowerCase();
+          const i = (p.i18n && p.i18n[this.store.locale]) || {};
+          const hay = [p.title, p.subtitle, p.abstract, i.title, i.subtitle, i.abstract, (p.tags || []).join(' '), p.track].join(' ').toLowerCase();
           return hay.includes(q);
         });
       },
     },
     methods: {
+      titleOf(p) { const i = p.i18n && p.i18n[this.store.locale]; return (i && i.title) || p.title; },
+      subtitleOf(p) { const i = p.i18n && p.i18n[this.store.locale]; return (i && i.subtitle) || p.subtitle; },
+      tierLabel(t) { const m = this.store.t.ui && this.store.t.ui.tier_labels; return (m && m[t]) || t; },
       statusClass(p) {
         const s = (p.status || '').toLowerCase();
         if (s === 'published')   return 'status published';
@@ -79,7 +83,7 @@
             <button v-for="t in tiers" :key="t"
                     class="chip" :class="{ on: tier === t }"
                     :aria-pressed="tier === t ? 'true' : 'false'"
-                    @click="tier = t">{{ t === 'all' ? ((store.t.ui && store.t.ui.all) || 'All') : t }}</button>
+                    @click="tier = t">{{ t === 'all' ? ((store.t.ui && store.t.ui.all) || 'All') : tierLabel(t) }}</button>
           </div>
         </div>
         <table>
@@ -105,10 +109,10 @@
               </td>
               <td class="num" data-label="No.">№ {{ p.num }}</td>
               <td class="title" data-label="Title">
-                <h2 class="index-title">{{ p.title }}</h2>
-                <div class="sub">{{ p.subtitle }}</div>
+                <h2 class="index-title">{{ titleOf(p) }}</h2>
+                <div class="sub">{{ subtitleOf(p) }}</div>
               </td>
-              <td class="track" data-label="Tier">{{ p.tier }}</td>
+              <td class="track" data-label="Tier">{{ tierLabel(p.tier) }}</td>
               <td class="read"  data-label="Read">{{ p.reading_min ? p.reading_min + ' min' : '—' }}</td>
               <td :class="statusClass(p)" data-label="Status">{{ p.status }}</td>
             </tr>

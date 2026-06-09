@@ -1,0 +1,17 @@
+{
+  "paper_id": "p7p2k",
+  "locale": "fr",
+  "slot": "fig-04",
+  "out_path": "public\\images\\p7p2k\\fr\\fig-6-4.jpg",
+  "bytes_jpg": 96646,
+  "bytes_png_source": 2288823,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T10:26:54.793Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of four labelled streams, REQUIREMENTS, SKILLS, STANDARDS, and TEMPLATE, drawn as four lines entering from the left and converging into a single node at the centre, from which one clean line exits to the right and ends in a small finished application icon. The convergence is orderly and balanced. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of four labelled streams, REQUIREMENTS, SKILLS, STANDARDS, and TEMPLATE, drawn as four lines entering from the left and converging into a single node at the centre, from which one clean line exits to the right and ends in a small finished application icon. The convergence is orderly and balanced. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\p7p2k\\en\\fig-6-4.source.png"
+}

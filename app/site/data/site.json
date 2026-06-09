@@ -99,7 +99,12 @@
         "col_no": "No.",
         "col_title": "Title",
         "col_tier": "Tier",
-        "col_read": "Read"
+        "col_read": "Read",
+        "tier_labels": {
+          "Conceptual": "Conceptual",
+          "Technical": "Technical",
+          "Policy & People": "Policy & People"
+        }
       },
       "hero": {
         "title": "The <em>Velocity</em><br>White Papers",
@@ -288,7 +293,12 @@
         "col_no": "Nº",
         "col_title": "Titre",
         "col_tier": "Niveau",
-        "col_read": "Lecture"
+        "col_read": "Lecture",
+        "tier_labels": {
+          "Conceptual": "Conceptuel",
+          "Technical": "Technique",
+          "Policy & People": "Politiques et personnes"
+        }
       },
       "hero": {
         "title": "Les livres blancs <em>Velocity</em>",
