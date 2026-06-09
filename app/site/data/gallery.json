@@ -2,6 +2,32 @@
   "generated_from": "data/papers/*.{en,fr}.json",
   "videos": [
     {
+      "paper_id": "qthji",
+      "num": "08",
+      "paper_title": "The AI Factory: Design and Ideation (Pronghorn)",
+      "paper_title_fr": "L'usine d'IA : conception et idéation (Pronghorn)",
+      "title": "",
+      "title_fr": "",
+      "caption": "DM Janak Alford introduces Pronghorn",
+      "caption_fr": "DM Janak Alford introduces Pronghorn",
+      "url": "https://youtu.be/KGfDzqwuVMk",
+      "video_id": "KGfDzqwuVMk",
+      "thumb": "https://img.youtube.com/vi/KGfDzqwuVMk/hqdefault.jpg"
+    },
+    {
+      "paper_id": "uwpxr",
+      "num": "09",
+      "paper_title": "The AI Factory: Orchestration and Observation (Nexus)",
+      "paper_title_fr": "L'usine d'IA : orchestration et observation (Nexus)",
+      "title": "",
+      "title_fr": "",
+      "caption": "New caption. Describe what the video shows.DM Janak Alford and ED Zoran Mijajlovic walk through the Nexus platform.",
+      "caption_fr": "New caption. Describe what the video shows.DM Janak Alford and ED Zoran Mijajlovic walk through the Nexus platform.",
+      "url": "https://youtu.be/3PIEPoLiwG8",
+      "video_id": "3PIEPoLiwG8",
+      "thumb": "https://img.youtube.com/vi/3PIEPoLiwG8/hqdefault.jpg"
+    },
+    {
       "paper_id": "k3tc3",
       "num": "10",
       "paper_title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
@@ -13,6 +39,19 @@
       "url": "https://youtu.be/rwhybgIXnJ8",
       "video_id": "rwhybgIXnJ8",
       "thumb": "https://img.youtube.com/vi/rwhybgIXnJ8/hqdefault.jpg"
+    },
+    {
+      "paper_id": "dt725",
+      "num": "12",
+      "paper_title": "The AI Academy: Investing in People",
+      "paper_title_fr": "L'Académie de l'IA : investir dans les personnes",
+      "title": "",
+      "title_fr": "",
+      "caption": "DM Janak Alford introduces the Level 3 Academy cohort",
+      "caption_fr": "DM Janak Alford introduces the Level 3 Academy cohort",
+      "url": "https://youtu.be/tH09fiayhdU",
+      "video_id": "tH09fiayhdU",
+      "thumb": "https://img.youtube.com/vi/tH09fiayhdU/hqdefault.jpg"
     }
   ],
   "images": [
@@ -788,13 +827,13 @@
       "paper_title_fr": "L'Académie de l'IA : investir dans les personnes",
       "fno": "FIG. 12.5",
       "title": "Three personas, three ways of working",
-      "title_fr": "Trois personas, trois façons de travailler",
+      "title_fr": "Three personas, three ways of working",
       "caption": "In place of job titles, Level 3 participants choose a persona. The warrior ships, and aligns with the AI Garage and the AI Factory. The wizard strategizes and modernizes, the work that points toward Government 3.0. The craftsperson builds the infrastructure others rely on, including tools like Pronghorn, Nexus, and Velocity.",
-      "caption_fr": "À la place des titres d'emploi, les participants du niveau 3 choisissent un persona. Le guerrier livre, et s'aligne sur le Garage d'IA et l'usine d'IA. Le magicien élabore la stratégie et modernise, le travail qui pointe vers Gouvernement 3.0. L'artisan construit l'infrastructure sur laquelle les autres s'appuient, y compris des outils comme Pronghorn, Nexus et Velocity.",
+      "caption_fr": "In place of job titles, Level 3 participants choose a persona. The warrior ships, and aligns with the AI Garage and the AI Factory. The wizard strategizes and modernizes, the work that points toward Government 3.0. The craftsperson builds the infrastructure others rely on, including tools like Pronghorn, Nexus, and Velocity.",
       "src": "public/images/dt725/en/fig-12-5.jpg",
       "src_fr": "public/images/dt725/fr/fig-12-5.jpg",
       "alt": "A hand-drawn diagram of three labelled panels side by side. The Warrior panel shows a small shield icon and the words Ship, Speed, Leaderboard, tagged AI Factory. The Wizard panel shows a small stars icon and the words Strategize, Modernize, Architect, tagged Government 3.0. The Craftsperson panel shows a small hammer icon and the words Build for others, Harnesses, Templates, tagged Pronghorn, Nexus, Velocity.",
-      "alt_fr": "Un diagramme dessiné à la main de trois panneaux étiquetés côte à côte. Le panneau Guerrier montre une petite icône de bouclier et les mots Livrer, Vitesse, Tableau de classement, marqué Usine d'IA. Le panneau Magicien montre une petite icône d'étoiles et les mots Élaborer la stratégie, Moderniser, Architecturer, marqué Gouvernement 3.0. Le panneau Artisan montre une petite icône de marteau et les mots Construire pour les autres, Harnais, Gabarits, marqué Pronghorn, Nexus, Velocity."
+      "alt_fr": "A hand-drawn diagram of three labelled panels side by side. The Warrior panel shows a small shield icon and the words Ship, Speed, Leaderboard, tagged AI Factory. The Wizard panel shows a small stars icon and the words Strategize, Modernize, Architect, tagged Government 3.0. The Craftsperson panel shows a small hammer icon and the words Build for others, Harnesses, Templates, tagged Pronghorn, Nexus, Velocity."
     },
     {
       "paper_id": "dt725",
@@ -803,13 +842,13 @@
       "paper_title_fr": "L'Académie de l'IA : investir dans les personnes",
       "fno": "FIG. 12.6",
       "title": "Two habits to avoid, one discipline to keep",
-      "title_fr": "Deux habitudes à éviter, une discipline à garder",
+      "title_fr": "Two habits to avoid, one discipline to keep",
       "caption": "Both failure modes come from pursuing an outcome without rigor: unvalidated long-form content that is fast to generate and slow to vet, and vibe-coded applications that gratify quickly and accrue technical debt. The Academy teaches the disciplined path between them, where the work is verified before it is trusted.",
-      "caption_fr": "Les deux modes d'échec viennent de la poursuite d'un résultat sans rigueur : du contenu long non validé, rapide à générer et lent à valider, et des applications codées à l'instinct qui gratifient vite et accumulent de la dette technique. L'Académie enseigne le chemin discipliné entre les deux, où le travail est vérifié avant qu'on s'y fie.",
+      "caption_fr": "Both failure modes come from pursuing an outcome without rigor: unvalidated long-form content that is fast to generate and slow to vet, and vibe-coded applications that gratify quickly and accrue technical debt. The Academy teaches the disciplined path between them, where the work is verified before it is trusted.",
       "src": "public/images/dt725/en/fig-12-6.jpg",
       "src_fr": "public/images/dt725/fr/fig-12-6.jpg",
       "alt": "A hand-drawn diagram with two cautionary boxes and a clear path between them. The top box, labelled Slop content, shows pages piling up with a clock reading minutes to make, days to vet. The bottom box, labelled Vibe-coded app, shows a pretty but cracked window labelled quick gratification, technical debt. A straight central arrow between them is labelled The disciplined path: verify, then trust.",
-      "alt_fr": "Un diagramme dessiné à la main avec deux cases d'avertissement et un chemin dégagé entre elles. La case du haut, étiquetée Contenu camelote, montre des pages qui s'empilent avec une horloge indiquant des minutes à faire, des jours à valider. La case du bas, étiquetée Application codée à l'instinct, montre une fenêtre jolie mais fissurée étiquetée gratification rapide, dette technique. Une flèche centrale droite entre elles est étiquetée Le chemin discipliné : vérifier, puis faire confiance."
+      "alt_fr": "A hand-drawn diagram with two cautionary boxes and a clear path between them. The top box, labelled Slop content, shows pages piling up with a clock reading minutes to make, days to vet. The bottom box, labelled Vibe-coded app, shows a pretty but cracked window labelled quick gratification, technical debt. A straight central arrow between them is labelled The disciplined path: verify, then trust."
     },
     {
       "paper_id": "dt725",
@@ -818,13 +857,13 @@
       "paper_title_fr": "L'Académie de l'IA : investir dans les personnes",
       "fno": "FIG. 12.7",
       "title": "The compact",
-      "title_fr": "Le pacte",
+      "title_fr": "The compact",
       "caption": "The compact the Academy is built on. The organization invests in training, tools, content, and opportunity. Staff meet it with an open mind and a commitment to learn. Together they produce an empowered workforce able to reimagine how government serves Albertans.",
-      "caption_fr": "Le pacte sur lequel l'Académie est bâtie. L'organisation investit dans la formation, les outils, le contenu et l'occasion. Le personnel l'aborde avec un esprit ouvert et un engagement à apprendre. Ensemble, ils produisent un effectif autonomisé, capable de réimaginer la façon dont le gouvernement sert les Albertains.",
+      "caption_fr": "The compact the Academy is built on. The organization invests in training, tools, content, and opportunity. Staff meet it with an open mind and a commitment to learn. Together they produce an empowered workforce able to reimagine how government serves Albertans.",
       "src": "public/images/dt725/en/fig-12-7.jpg",
       "src_fr": "public/images/dt725/fr/fig-12-7.jpg",
       "alt": "A hand-drawn exchange diagram titled The compact: a left column headed The organization lists training, tools, content, and opportunity; a right column headed Staff lists open-mindedness and commitment to learn; their arrows meet at a central node labelled The compact, which leads down to a box labelled Empowered workforce.",
-      "alt_fr": "Un diagramme d'échange dessiné à la main intitulé Le pacte : une colonne de gauche intitulée L'organisation énumère formation, outils, contenu et occasion ; une colonne de droite intitulée Le personnel énumère ouverture d'esprit et engagement à apprendre ; leurs flèches se rejoignent à un nœud central étiqueté Le pacte, qui mène vers le bas à une case étiquetée Effectif autonomisé."
+      "alt_fr": "A hand-drawn exchange diagram titled The compact: a left column headed The organization lists training, tools, content, and opportunity; a right column headed Staff lists open-mindedness and commitment to learn; their arrows meet at a central node labelled The compact, which leads down to a box labelled Empowered workforce."
     },
     {
       "paper_id": "oxj36",

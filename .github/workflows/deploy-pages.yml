@@ -59,6 +59,13 @@ jobs:
           # name GA_MEASUREMENT_ID, value G-XXXXXXXXXX). Empty -> analytics off.
           GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
         run: |
+          # Regenerate the derived data artifacts from the source papers so the
+          # deploy always reflects current content: the inventory/numbering
+          # (papers.json) and the media gallery (gallery.json, which pulls every
+          # paper's youtube + figure blocks). Adding a video or figure to a paper
+          # therefore surfaces in Media on the next deploy with no manual step.
+          node scripts/build-index.mjs
+          node scripts/build-gallery.mjs
           node scripts/build-bundle.mjs --replace
           # Inject the analytics id into the built shell after bundling, so the
           # deployed index.html carries it. The placeholder stays inert otherwise.
