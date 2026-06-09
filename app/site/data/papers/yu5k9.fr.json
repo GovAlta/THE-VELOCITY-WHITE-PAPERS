@@ -4,23 +4,32 @@
   "sequence": "",
   "tier": "Policy & People",
   "category": "paper",
-  "title": "Measuring Failure and Success",
-  "subtitle": "How we judge what works and what does not.",
+  "title": "Mesurer l'échec et la réussite",
+  "subtitle": "Pourquoi la bonne mesure d'un programme d'IA est la capacité bâtie, et non les dollars économisés.",
   "track": "Human and Change Management",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 13,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "measurement",
+    "success-criteria",
+    "readiness",
+    "system-health",
+    "cost",
+    "workforce",
+    "change-management"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
-  "translation_status": "untranslated",
+  "abstract": "La plupart des organisations qui adoptent l'IA mesurent leur réussite en dollars économisés. L'Alberta la mesure autrement. L'objectif n'est pas d'accomplir le même travail avec moins de personnes, ce qui serait une folie, mais de bâtir une capacité et un effectif aptes à transformer la façon dont le gouvernement fonctionne, à un moment où la productivité du Canada est mise à rude épreuve et où la normalisation de l'IA en milieu de travail paraît inévitable. Au cours des dix-huit derniers mois, la province a été reconnue parmi les adoptants les plus innovants du secteur public en Amérique du Nord. Ce document présente les trois mesures que l'Alberta utilise pour juger si ce travail réussit : l'état de préparation, la santé des systèmes et le coût, comptabilisés à l'échelle de l'ensemble du gouvernement plutôt que d'un seul registre.",
   "hero_image": {
     "src": "public/images/yu5k9/fr/hero.jpg",
-    "alt": "Editorial image for: Measuring Failure and Success",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"Measuring Failure and Success\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Illustration de couverture éditoriale : trois cadrans de jauge simples alignés, leurs aiguilles inclinées vers le haut, évoquant la mesure et le progrès, dessinés au trait en bleu marine profond de l'Alberta avec de petits accents rouille sur un papier crème chaud.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. Three simple gauge dials sit in a row, their needles leaning upward to suggest measurement and progress, with fine tick marks around each dial. Calm, archival, abstract. Wide cover aspect. No text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -28,42 +37,289 @@
   },
   "tldr_presentation": {
     "id": "yu5k9-tldr",
-    "title": "The paper, in brief",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "yu5k9",
     "slides": [
       {
         "id": "01",
-        "title": "Measuring Failure and Success",
+        "title": "Mesurer l'échec et la réussite",
         "audio_file": "public/audio/fr/yu5k9-tldr/01.mp3",
         "visual": "title",
-        "caption": "Human and Change Management",
-        "subcaption": "",
-        "text": "Measuring Failure and Success. Content forthcoming."
+        "caption": "Document 15 · Gestion des personnes et du changement",
+        "subcaption": "La capacité bâtie, et non les dollars économisés.",
+        "text": "La plupart des organisations jugent un programme d'IA à l'argent qu'il économise. L'Alberta le juge à la capacité qu'il bâtit. Accomplir le même travail avec moins de personnes serait une folie; le but est un effectif et un gouvernement capables d'en faire davantage. Ce document présente les trois mesures que nous utilisons pour savoir si cela fonctionne : l'état de préparation, la santé des systèmes et le coût."
+      },
+      {
+        "id": "02",
+        "title": "Ce que nous mesurons",
+        "audio_file": "public/audio/fr/yu5k9-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Trois mesures",
+        "visual_config": {
+          "items": [
+            { "label": "État de préparation", "desc": "L'organisation peut-elle porter le changement? Éducation, sécurité, autosuffisance, gouvernance." },
+            { "label": "Santé des systèmes", "desc": "Le parc devient-il plus sain? Moins de vulnérabilités, un arriéré réduit, moins d'applications." },
+            { "label": "Coût", "desc": "La valeur croît-elle plus vite que le coût, à l'échelle de l'ensemble du gouvernement?" }
+          ]
+        },
+        "text": "Trois mesures, chacune choisie parce qu'il est difficile de la contester. L'état de préparation demande si l'organisation peut porter le changement. La santé des systèmes demande si le parc devient plus sain plutôt que plus malade. Le coût demande si la valeur croît plus vite que les dépenses, comptabilisée à l'échelle de l'ensemble du gouvernement et non d'un seul registre."
+      },
+      {
+        "id": "03",
+        "title": "État de préparation",
+        "audio_file": "public/audio/fr/yu5k9-tldr/03.mp3",
+        "visual": "title",
+        "caption": "Pouvons-nous porter le changement?",
+        "subcaption": "Éducation, sécurité, autosuffisance, gouvernance.",
+        "text": "L'état de préparation comporte quatre volets. Un effectif éduqué capable de s'adapter, avec l'Académie comme véhicule. La maîtrise des deux côtés de l'équation agentique, bâtir en toute sécurité et se défendre contre les acteurs malveillants. L'autosuffisance, pour que nous devenions plus forts plutôt que plus dépendants des fournisseurs. Et une gouvernance qui donne aux parties prenantes une confiance véritable."
+      },
+      {
+        "id": "04",
+        "title": "Santé des systèmes",
+        "audio_file": "public/audio/fr/yu5k9-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Renverser la tendance",
+        "visual_config": {
+          "stat_value": "~600",
+          "stat_label": "Applications dans l'arriéré de modernisation"
+        },
+        "subcaption": "Des indicateurs francs, difficiles à contester.",
+        "text": "Le premier document décrivait un parc qui vieillit plus vite qu'on ne peut le réparer. La santé des systèmes pose les questions franches : les expositions aux cybervulnérabilités diminuent-elles, l'arriéré d'environ six cents applications rétrécit-il, le nombre total d'applications baisse-t-il? Ces questions laissent peu de place au débat."
+      },
+      {
+        "id": "05",
+        "title": "Le coût, bien comptabilisé",
+        "audio_file": "public/audio/fr/yu5k9-tldr/05.mp3",
+        "visual": "title",
+        "caption": "Faire plus avec moins",
+        "subcaption": "Le registre à l'échelle de l'ensemble du gouvernement.",
+        "text": "Le coût se voit à travers trois lentilles. Notre coût direct en tant que fournisseur de TI, où une livraison plus rapide ne doit pas simplement troquer une facture de licences contre une facture d'IA. La performance des programmes ministériels que de meilleurs systèmes rendent possibles. Et la lentille la plus large : sur trois à cinq ans, la taille et le coût de la fonction publique par rapport à la population qu'elle sert. Le mandat est de faire plus avec moins."
+      },
+      {
+        "id": "06",
+        "title": "La norme",
+        "audio_file": "public/audio/fr/yu5k9-tldr/06.mp3",
+        "visual": "title",
+        "caption": "La réussite, et l'échec, rendus lisibles",
+        "subcaption": "Un gouvernement capable d'en faire davantage.",
+        "text": "Ensemble, les trois mesures décrivent la réussite : un effectif compétent, un parc plus sain et une fonction publique qui fait plus avec moins. L'échec est tout aussi lisible : une dépendance croissante, un arriéré qui ne veut pas baisser, des coûts simplement déplacés. L'Alberta continuera de publier les résultats afin que tout gouvernement puisse adopter ce qui fonctionne et tirer des leçons de ce qui ne fonctionne pas."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "Le mauvais étalon" },
+    { "n": "02", "title": "État de préparation" },
+    { "n": "03", "title": "Santé des systèmes" },
+    { "n": "04", "title": "Le coût, bien comptabilisé" },
+    { "n": "05", "title": "La norme, et son partage" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Au cours des dix-huit derniers mois, l'Alberta a été reconnue parmi les adoptants les plus innovants de l'IA dans le secteur public en Amérique du Nord, grâce à l'Académie, à l'effectif agentique et à l'usine d'IA décrits tout au long de cette collection. Ce travail a un but qui dépasse l'efficience. La productivité du Canada est en recul, la normalisation de l'IA en milieu de travail paraît désormais inévitable, et la province entend garder ses travailleurs pertinents et ses institutions capables. Avancer à cette vitesse soulève une question légitime, qu'on nous pose souvent : comment savez-vous si vous avez réussi? Ce document répond en trois mesures."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Le mauvais étalon"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "Il est tentant de mesurer un programme d'IA comme le font la plupart des organisations, par l'argent qu'il économise. Cette mesure est trop étroite, et à elle seule, elle induit en erreur. Continuer d'accomplir exactement le travail que nous faisons aujourd'hui avec moins de personnes serait une folie : cela engrange une économie ponctuelle et sacrifie le gain le plus important, soit une fonction publique capable d'en faire davantage et d'accomplir des choses qu'elle ne pouvait pas faire auparavant. L'objectif de l'Alberta est de bâtir une capacité et un effectif à la hauteur de la transformation du gouvernement, et les mesures qui suivent jugent les progrès au regard de cet objectif. Ce sont l'état de préparation, la santé des systèmes et le coût, et chacune a été choisie parce qu'il est difficile de la contester."
+    },
+    {
+      "type": "table",
+      "title": "Ce que nous mesurons",
+      "columns": [
+        "Mesure",
+        "La question qu'elle pose",
+        "Ce qu'elle examine"
+      ],
+      "rows": [
+        [
+          "État de préparation",
+          "L'organisation peut-elle porter le changement?",
+          "L'éducation du personnel, la sécurité des deux côtés, l'autosuffisance, la gouvernance."
+        ],
+        [
+          "Santé des systèmes",
+          "Le parc devient-il plus sain plutôt que plus malade?",
+          "Les cybervulnérabilités, l'arriéré d'applications, le nombre total de systèmes."
+        ],
+        [
+          "Coût",
+          "La valeur croît-elle plus vite que le coût?",
+          "Le coût direct de la TI, la performance des programmes ministériels, la taille de la fonction publique par rapport à la population."
+        ]
+      ],
+      "caption": "Trois mesures, comptabilisées à l'échelle de l'ensemble du gouvernement plutôt que d'un seul registre. Chacune est choisie pour laisser peu de place au débat.",
+      "source": "Ministère de la Technologie et de l'Innovation."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.1",
+      "title": "Deux étalons",
+      "caption": "La plupart des programmes sont mesurés par le coût qu'ils retranchent. La mesure la plus importante est la capacité qu'ils ajoutent, soit la règle la plus longue et celle au regard de laquelle l'Alberta se juge.",
+      "image": {
+        "src": "public/images/yu5k9/fr/fig-15-1.jpg",
+        "alt": "Un schéma dessiné à la main de deux règles de mesure côte à côte. La plus courte porte l'étiquette « coût économisé »; la beaucoup plus longue porte l'étiquette « capacité bâtie ».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Two measuring sticks stand side by side with tick marks. The shorter stick on the left is labelled \"COÛT ÉCONOMISÉ\". The much taller stick on the right is labelled \"CAPACITÉ BÂTIE\", reaching well above the first. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "État de préparation"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'état de préparation demande si l'organisation peut porter ce changement, et il comporte quatre volets. Le premier est l'éducation. Un effectif qui comprend les fondements, les concepts et les limites de ces technologies peut s'adapter à tout ce qui viendra ensuite; celui qui ne les comprend pas sera dépendant et fragile. L'[Académie d'IA](/paper/dt725) en est le véhicule, et la mesure est l'état de préparation et la capacité d'adaptation de l'organisation au changement."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le deuxième volet est la maîtrise des deux côtés de l'équation agentique : les contrats, les contrôles et la sécurité pour bâtir de nouvelles applications en toute sûreté, et les défenses pour résister aux acteurs malveillants qui manient désormais les mêmes outils, un équilibre que l'[Impératif cybernétique](/paper/mwo98) aborde en détail. Le troisième est l'autosuffisance. À mesure que l'adoption croît, devenons-nous plus forts et plus aptes à mener nous-mêmes ce travail, ou plus faibles et plus dépendants de fournisseurs tiers, notre maîtrise et notre marge d'action rétrécissant à mesure que nous utilisons la technologie? Le quatrième est la gouvernance : à savoir si les règles en place donnent aux parties prenantes préoccupées une confiance véritable dans la façon dont l'IA est utilisée. Un programme peut avancer vite et tout de même échouer à l'un de ces quatre volets, c'est pourquoi l'état de préparation se mesure à part."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.2",
+      "title": "L'état de préparation, en quatre volets",
+      "caption": "Éducation, sécurité des deux côtés de l'équation agentique, autosuffisance et gouvernance. Un programme peut être rapide et tout de même ne pas être prêt sur l'un d'entre eux.",
+      "image": {
+        "src": "public/images/yu5k9/fr/fig-15-2.jpg",
+        "alt": "Une grille de deux par deux dessinée à la main sous un en-tête indiquant « état de préparation », les quatre cellules portant les étiquettes éducation, sécurité des deux côtés, autosuffisance et gouvernance.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A header at the top reads \"ÉTAT DE PRÉPARATION\". Beneath it a two-by-two grid of four equal cells, each labelled clearly: \"ÉDUCATION\", \"SÉCURITÉ DES DEUX CÔTÉS\", \"AUTOSUFFISANCE\", \"GOUVERNANCE\". Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Santé des systèmes"
+    },
+    {
+      "type": "paragraph",
+      "text": "La santé des systèmes tourne le programme vers le problème nommé dans le premier document de cette collection, [Le navire de Thésée](/paper/cux4h) : un parc qui vieillit plus vite qu'on ne peut le réparer. Les mesures sont ici franches et difficiles à contester. Les expositions aux cybervulnérabilités diminuent-elles? L'arriéré d'environ six cents applications rétrécit-il? Le nombre total d'applications baisse-t-il à mesure que les systèmes sont consolidés? Bref, renversons-nous la tendance plutôt que de simplement la contenir?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces indicateurs comptent parce qu'ils laissent peu de place à la discussion. Ils traduisent l'élimination de la dette technique en chiffres qui montent ou descendent, et un programme qui fonctionne les fera évoluer dans une seule direction au fil du temps. Un programme qui ne fonctionne pas le montrera clairement. Il n'y a aucun récit derrière lequel se cacher lorsque l'arriéré est un chiffre unique déclaré d'une année à l'autre."
+    },
+    {
+      "type": "keystat",
+      "label": "L'arriéré",
+      "value": "~600 applications",
+      "body": "Environ six cents applications attendent dans l'arriéré de modernisation. Que ce chiffre baisse ou non, d'une année à l'autre, est l'un des signes les plus clairs de la réussite ou non du programme."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.3",
+      "title": "Renverser la tendance",
+      "caption": "Les vulnérabilités et l'arriéré d'applications ont augmenté plus vite qu'on ne pouvait les résorber. La santé des systèmes demande si les courbes s'infléchissent vers le bas, et y restent.",
+      "image": {
+        "src": "public/images/yu5k9/fr/fig-15-3.jpg",
+        "alt": "Un graphique linéaire dessiné à la main où une courbe ascendante portant l'étiquette « arriéré et vulnérabilités » s'infléchit et bascule vers le bas à mi-parcours, avec une flèche étiquetée « renverser la tendance » pointant vers le bas.",
+        "image_prompt": "An editorial line chart on warm cream paper, deep navy line work with small rust accents. A single line rises steeply from the lower left, labelled \"ARRIÉRÉ + VULNÉRABILITÉS\", then bends at a marked point and turns downward toward the right. A small rust arrow near the bend is labelled \"RENVERSER LA TENDANCE\". Simple axes, no gridlines. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Le coût, bien comptabilisé"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le coût est réel, et il se voit à travers plus d'une lentille. La première est notre coût direct en tant que fournisseur de TI du gouvernement. L'usine livre plus vite, mais si livrer le même produit coûte plus cher qu'avant, nous avons troqué un problème contre un autre, à la manière dont le marché a fait passer ses clients du logiciel sous licence au SaaS puis à l'IA, chaque migration étant une nouvelle catégorie de coût. Une vitesse qui s'accompagne d'un nouveau coût inacceptable n'est pas une victoire."
+    },
+    {
+      "type": "paragraph",
+      "text": "La deuxième lentille est plus large. Une grande partie de la performance d'un ministère est façonnée, pour le meilleur ou pour le pire, par la TI qui la sous-tend; la question devient donc de savoir si de meilleurs systèmes permettent aux ministères d'offrir de meilleurs programmes. L'IA dépasse la technologie pour atteindre la prestation des programmes, la mobilisation de la clientèle, l'élaboration des politiques et l'étalonnage. La comptabilité honnête est par conséquent à l'échelle de l'ensemble du gouvernement, et non du registre d'un seul ministère."
+    },
+    {
+      "type": "paragraph",
+      "text": "La lentille la plus large est la fonction publique elle-même. Sur trois à cinq ans, sa taille et son coût, mesurés par rapport à la population qu'elle sert, resteront-ils stables ou baisseront-ils? Une croissance serait difficile à imaginer ici. La consigne du ministre est de faire plus avec moins, et l'attente est que la fonction publique de l'Alberta reste stable ou diminue par rapport à sa population tout en offrant davantage, l'IA comblant la différence."
+    },
+    {
+      "type": "keystat",
+      "label": "Le mandat",
+      "value": "Faire plus avec moins",
+      "body": "Le critère du coût, fixé par le ministre : la fonction publique devrait rester stable ou rétrécir par rapport à la population qu'elle sert, tout en offrant davantage."
+    },
+    {
+      "type": "pullquote",
+      "text": "Poursuivre le même travail que nous faisons, simplement avec moins de personnel, est une folie.",
+      "cite": "Janak Alford, sous-ministre, ministère de la Technologie et de l'Innovation"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.4",
+      "title": "Faire plus avec moins",
+      "caption": "La demande de services numériques ne cesse de grimper. La mesure du coût est de savoir si la fonction publique peut y répondre tandis que sa taille, par rapport à la population, reste stable ou baisse, l'IA comblant la différence.",
+      "image": {
+        "src": "public/images/yu5k9/fr/fig-15-4.jpg",
+        "alt": "Un graphique dessiné à la main avec deux courbes dans le temps. Une courbe supérieure étiquetée « demande » monte régulièrement; une courbe inférieure étiquetée « taille de la fonction publique » reste stable. L'écart entre les deux porte l'étiquette « l'IA comble la différence ».",
+        "image_prompt": "An editorial line chart on warm cream paper, deep navy line work with small rust accents. Two lines run left to right over a time axis. The upper line, labelled \"DEMANDE\", rises steadily. The lower line, labelled \"TAILLE DE LA FONCTION PUBLIQUE\", stays flat. The widening gap between them is shaded lightly in rust and labelled \"L'IA COMBLE LA DIFFÉRENCE\". A small caption reads \"FAIRE PLUS AVEC MOINS\". Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "La norme, et son partage"
+    },
+    {
+      "type": "paragraph",
+      "text": "Prises ensemble, les trois mesures décrivent à quoi ressemble la réussite : un effectif compétent et adaptable, un parc qui devient plus sain plutôt que plus malade, et une fonction publique qui fait plus avec moins à l'échelle de l'ensemble du gouvernement. L'échec est tout aussi lisible. Un effectif de plus en plus dépendant, un arriéré qui ne veut pas baisser, des coûts simplement déplacés d'une catégorie à une autre. Nommer les deux importe, car une mesure qui ne peut pas montrer l'échec ne peut pas non plus montrer la réussite."
+    },
+    {
+      "type": "paragraph",
+      "text": "L'Alberta continuera de publier ces résultats au fil de leur arrivée, sous la même forme transparente et accessible que le reste de cette collection, afin que tout gouvernement puisse adopter ce qui fonctionne et tirer des leçons de ce qui ne fonctionne pas. L'objectif est un gouvernement capable d'en faire davantage, bâti délibérément et jugé honnêtement au regard de mesures capables de faire la différence."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.5",
+      "title": "Le tableau de bord",
+      "caption": "Trois mesures, lues ensemble. Chacune peut monter ou descendre, et un programme qui fonctionne fait évoluer les trois dans la bonne direction au fil du temps.",
+      "image": {
+        "src": "public/images/yu5k9/fr/fig-15-5.jpg",
+        "alt": "Un tableau de bord dessiné à la main avec trois rangées étiquetées état de préparation, santé des systèmes et coût, chacune accompagnée d'un simple indicateur vers le haut ou vers le bas, sous un en-tête indiquant « le tableau de bord ».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A simple scorecard panel with a header reading \"LE TABLEAU DE BORD\" and three stacked rows labelled \"ÉTAT DE PRÉPARATION\", \"SANTÉ DES SYSTÈMES\", and \"COÛT\". Beside each row sits a small arrow indicator pointing up or down. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "measurement",
+        "readiness",
+        "system-health",
+        "cost",
+        "workforce"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
   },
-  "related": []
+  "related": [
+    "cux4h",
+    "dt725",
+    "mwo98",
+    "k3tc3",
+    "oxj36"
+  ],
+  "translation_status": "draft"
 }

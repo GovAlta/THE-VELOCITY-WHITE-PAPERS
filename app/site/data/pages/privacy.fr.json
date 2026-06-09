@@ -1,0 +1,65 @@
+{
+  "_note": "Privacy page for one locale. A faithful port of the Government of Alberta privacy statement (alberta.ca/privacystatement) with two changes: the Personal information section is reduced to one line because this site collects none, and the third-party cookie list is reduced to Google Analytics (the only third-party product used). The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Confidentialité",
+    "title_lead": "Déclaration de",
+    "title_em": "confidentialité.",
+    "lede": "Le gouvernement de l'Alberta s'engage à protéger votre vie privée lorsque vous visitez ce site."
+  },
+  "sections": [
+    {
+      "heading": "Collecte de renseignements",
+      "paras": [
+        "Tous les renseignements sont recueillis conformément à la partie 1, section 1, article 4(c) de la [Protection of Privacy Act](https://open.alberta.ca/publications/p28p5) (POPA).",
+        "Lorsque vous visitez ce site, notre serveur Web recueille automatiquement une quantité limitée de renseignements standard, essentiels à l'exploitation et à l'évaluation du site. Ces renseignements ne servent pas à identifier les personnes qui consultent le site et ne sont divulgués à aucun autre organisme public ni à aucun particulier.",
+        "Les renseignements recueillis permettent de déterminer ce qui suit :"
+      ],
+      "bullets": [
+        "la page à partir de laquelle vous êtes arrivé",
+        "la date et l'heure de votre demande de page",
+        "l'adresse IP que votre ordinateur utilise pour recevoir des renseignements",
+        "le type et la version de votre navigateur",
+        "le nom et la taille du fichier que vous demandez"
+      ]
+    },
+    {
+      "heading": "Accès à l'information",
+      "paras": [
+        "L'[Access to Information Act](https://open.alberta.ca/publications/a01p4) (ATIA) donne accès aux renseignements détenus par les organismes publics qui ne sont pas accessibles par d'autres moyens et permet aux personnes de demander la correction de leurs propres renseignements personnels détenus par un organisme public; on parle alors d'une demande d'accès à l'information (ATI). Le formulaire de demande d'ATI est disponible dans la [page des services en ligne (eServices)](https://eservices.alberta.ca/ati-request.html). Pour en savoir plus, consultez le [répertoire des coordonnateurs de l'ATI](https://www.alberta.ca/lookup/find-an-ati-coordinator.aspx) afin de trouver un bureau de l'ATI et de déterminer si le ministère qui vous intéresse a des documents publics disponibles."
+      ]
+    },
+    {
+      "heading": "Renseignements personnels",
+      "paras": [
+        "Aucun renseignement personnel n'est recueilli par l'utilisation de ce système.",
+        "Pour en savoir plus sur les politiques décrites ici, communiquez avec le ministère de la Technologie et de l'Innovation à [ti.minister@gov.ab.ca](mailto:ti.minister@gov.ab.ca)."
+      ]
+    },
+    {
+      "heading": "Témoins",
+      "paras": [
+        "Lorsque vous visitez un site Web, celui-ci peut déposer un élément de données, appelé témoin (cookie), avec les fichiers temporaires de votre navigateur sur votre ordinateur.",
+        "Si vous le souhaitez, vous pouvez modifier les paramètres de votre navigateur pour refuser les témoins ou pour vous avertir lorsqu'un site est sur le point de déposer des témoins sur votre disque dur.",
+        "Les sites Web du gouvernement de l'Alberta utilisent des témoins pour recueillir des renseignements statistiques anonymes, comme le type de navigateur, la taille de l'écran, les habitudes de circulation et les pages visitées. Ces renseignements nous aident à vous offrir un meilleur service. Nous ne stockons pas de renseignements personnels dans les témoins et nous ne recueillons pas de renseignements personnels à votre insu pendant que vous naviguez sur le site."
+      ]
+    },
+    {
+      "heading": "Témoins d'applications tierces",
+      "paras": [
+        "Ce site utilise un seul produit tiers, Google Analytics. Consultez la [déclaration de confidentialité de Google Analytics](https://policies.google.com/privacy) pour savoir comment il suit et utilise les renseignements.",
+        "Les vidéos intégrées utilisent le mode de confidentialité avancée de YouTube, servi à partir du domaine sans témoins, de sorte qu'une vidéo ne dépose aucun témoin à moins que vous choisissiez de la lire. Le site conserve aussi une petite quantité de renseignements dans le stockage local de votre navigateur pour se souvenir des livres que vous avez consultés et de votre choix de langue; ces renseignements ne quittent jamais votre appareil."
+      ]
+    },
+    {
+      "heading": "Sécurité",
+      "paras": [
+        "Le système informatique du gouvernement de l'Alberta utilise un logiciel pour surveiller les tentatives non autorisées de téléverser ou de modifier des renseignements, ou d'endommager le service que nous offrons. Aucune tentative n'est faite pour identifier les utilisateurs ou leurs habitudes d'utilisation, sauf dans le cadre d'enquêtes policières."
+      ]
+    }
+  ],
+  "lead_ministry": "Technologie et Innovation",
+  "governing": {
+    "label": "Déclaration de confidentialité du gouvernement de l'Alberta",
+    "href": "https://www.alberta.ca/privacystatement"
+  }
+}

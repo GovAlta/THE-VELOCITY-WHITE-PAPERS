@@ -4,23 +4,33 @@
   "sequence": "",
   "tier": "Technical",
   "category": "paper",
-  "title": "The Agentic Technology Stack",
-  "subtitle": "The stack that runs the agent workforce.",
+  "title": "La pile technologique agentique",
+  "subtitle": "Les plateformes infonuagiques, les modèles, les passerelles et les contrôles qui sous-tendent les charges de travail agentiques de l'Alberta, et les principes pour les choisir.",
   "track": "Engineering the Solution",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 11,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "tech-stack",
+    "cloud",
+    "models",
+    "sovereign-compute",
+    "bifrost",
+    "security",
+    "governance",
+    "open-source"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
-  "translation_status": "untranslated",
+  "abstract": "Dans la mise en œuvre de sa stratégie en matière d'IA, l'Alberta a mis à l'essai une vaste gamme d'outils de codage agentique et de plateformes d'IA générative. Le présent document expose la pile technologique actuelle et les principes qui la sous-tendent : le bon modèle, dans le bon environnement, pour le bon cas d'usage, avec une chaîne d'approvisionnement délibérément diversifiée et des couches d'abstraction qui préviennent la dépendance à un fournisseur. L'Alberta exploite un environnement hybride réparti sur les nuages de Google, d'Azure et d'AWS, une grappe de calcul sur place et trois centres de données hérités, en accédant aux modèles par l'entremise d'AWS Bedrock, de la Google Agent Platform et d'Azure AI Studio. L'information est classifiée d'« non classifié » jusqu'à « Protégé C », les données sensibles sont contrôlées au Canada et le calcul souverain est en cours de développement. L'usage est encadré par la politique d'utilisation de l'IA de l'Alberta, son cadre de gouvernance de l'IA et la Protection of Privacy Act. Le document aborde également les contrôles de sécurité et de chaîne d'approvisionnement entourant les agents, ainsi que le coût et l'échelle de l'exploitation de cette pile. La pile devrait évoluer au fil des outils.",
   "hero_image": {
     "src": "public/images/qxlzo/fr/hero.jpg",
-    "alt": "Editorial image for: The Agentic Technology Stack",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The Agentic Technology Stack\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Illustration de couverture éditoriale pour La pile technologique agentique : une coupe architecturale épurée de plusieurs larges couches horizontales empilées comme des strates, dessinée au trait dans un bleu marine albertain profond avec de petits accents rouille sur un papier crème chaud.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A clean architectural cross-section of several broad horizontal layers stacked one on another, like strata, suggesting a technology stack: a wide base layer, two middle layers, and a top layer, each a simple band carrying a few small node motifs and connecting lines. Calm, archival, and confident. Wide cover aspect. No text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -28,18 +38,86 @@
   },
   "tldr_presentation": {
     "id": "qxlzo-tldr",
-    "title": "The paper, in brief",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "qxlzo",
     "slides": [
       {
         "id": "01",
-        "title": "The Agentic Technology Stack",
+        "title": "La pile technologique agentique",
         "audio_file": "public/audio/fr/qxlzo-tldr/01.mp3",
         "visual": "title",
-        "caption": "Engineering the Solution",
-        "subcaption": "",
-        "text": "The Agentic Technology Stack. Content forthcoming."
+        "caption": "Document 11 · Engineering the Solution",
+        "subcaption": "La pile qui fait fonctionner l'effectif d'agents.",
+        "text": "Le présent document expose la pile technologique agentique actuelle de l'Alberta et les principes qui la sous-tendent. Nous avons mis à l'essai une vaste gamme d'outils de codage agentique et de plateformes d'IA, et nous choisissons selon une règle simple : le bon modèle, dans le bon environnement, pour le bon cas d'usage. Nous nous attendons à ce que la pile évolue au fil des outils; elle est donc conçue pour changer."
+      },
+      {
+        "id": "02",
+        "title": "Diversifiée, et conçue pour changer",
+        "audio_file": "public/audio/fr/qxlzo-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "Le principe directeur",
+        "visual_config": {
+          "left": {
+            "label": "Un seul fournisseur",
+            "body": "Rapide à adopter, mais cela vous enferme alors que les prix et les capacités changent tous les quelques mois."
+          },
+          "right": {
+            "label": "Une chaîne d'approvisionnement diversifiée",
+            "body": "Des couches d'abstraction comme Bifrost permettent aux charges de travail de migrer d'un fournisseur à l'autre, ou vers notre propre calcul."
+          }
+        },
+        "text": "L'industrie évolue trop rapidement pour confier toutes les charges de travail à un seul fournisseur. Sur dix-huit mois, nous avons essayé une gamme de modèles, en naviguant entre Gemini, OpenAI et Anthropic, et en ce moment Claude surpasse la plupart des autres, même si nous nous attendons à ce que cela change. Une couche d'abstraction comme la passerelle Bifrost nous permet de déplacer une charge de travail d'un fournisseur à un autre, ou du nuage vers notre propre calcul, et elle maintient les dépenses dans les limites d'un budget."
+      },
+      {
+        "id": "03",
+        "title": "La pile, par couche",
+        "audio_file": "public/audio/fr/qxlzo-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Un environnement hybride",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Nuage et calcul",
+              "desc": "Google, Azure et AWS, une grappe de GPU sur place et trois centres de données hérités."
+            },
+            {
+              "label": "Accès aux modèles",
+              "desc": "AWS Bedrock, la Google Agent Platform et Azure AI Studio."
+            },
+            {
+              "label": "Modèles",
+              "desc": "Claude Opus et Sonnet principalement, avec des modèles à code source ouvert pour le travail hors ligne."
+            },
+            {
+              "label": "Passerelles et sécurité",
+              "desc": "Bifrost pour l'abstraction et le coût, Defender et Purview pour la prévention des pertes de données."
+            }
+          ]
+        },
+        "text": "L'Alberta exploite un environnement hybride. Nous utilisons les nuages de Google, d'Azure et d'AWS, une grappe de GPU sur place et trois centres de données hérités. Nous accédons aux modèles hébergés par l'entremise d'AWS Bedrock, de la Google Agent Platform et d'Azure AI Studio, et nous exécutons des modèles à code source ouvert sur notre propre matériel pour le travail hors ligne. Les charges de travail agentiques sont déployées dans Google Cloud; les applications traditionnelles continuent de s'exécuter dans Azure et AWS."
+      },
+      {
+        "id": "04",
+        "title": "Classifiées, et conservées au Canada",
+        "audio_file": "public/audio/fr/qxlzo-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Résidence des données et protection de la vie privée",
+        "visual_config": {
+          "stat_value": "~99 %",
+          "stat_label": "Des systèmes se situent au niveau Protégé B ou en deçà"
+        },
+        "subcaption": "Les données sensibles sont contrôlées au Canada; le niveau Protégé C s'exécute hors ligne sur notre propre grappe.",
+        "text": "L'information est classifiée d'« non classifié » jusqu'à « Protégé C », et la grande majorité des systèmes, probablement quatre-vingt-dix-neuf pour cent ou plus, se situent au niveau Protégé B au plus haut. Les données sensibles sont contrôlées au Canada grâce à nos ententes d'entreprise, et les charges de travail les plus sensibles s'exécutent hors ligne sur notre propre grappe. Nous poursuivons le développement du calcul souverain, et pour les charges de travail liées à la santé et à la sécurité, le contrôle exclusif des données est non négociable."
+      },
+      {
+        "id": "05",
+        "title": "Prudents là où cela compte",
+        "audio_file": "public/audio/fr/qxlzo-tldr/05.mp3",
+        "visual": "title",
+        "caption": "Sécurité, coût et échelle",
+        "subcaption": "L'IA destinée au public est traitée avec soin; le coût est maîtrisé; la capacité est planifiée.",
+        "text": "Aucun modèle aujourd'hui ne résiste entièrement à l'injection d'invites; l'IA destinée au public et tout ce qui touche aux renseignements personnels est donc évité ou conçu de façon sélective. Nous vérifions les harnais que nous utilisons, car un harnais corrompu peut retourner un agent contre nous. Sur le plan des coûts, nous dépensons maintenant des dizaines de milliers de dollars par mois et nous en prévoyons des centaines de milliers à mesure que des agents soutiendront chaque application. L'objectif est de moderniser à un rythme rapide et d'offrir des services bonifiés, avec des centaines de millions par année en coûts évités."
       }
     ]
   },
@@ -47,23 +125,307 @@
   "sections": [
     {
       "n": "01",
-      "title": "Overview"
+      "title": "Choisir les bons outils"
+    },
+    {
+      "n": "02",
+      "title": "La pile"
+    },
+    {
+      "n": "03",
+      "title": "Classification et résidence"
+    },
+    {
+      "n": "04",
+      "title": "Gouvernance et protection de la vie privée"
+    },
+    {
+      "n": "05",
+      "title": "Sécurité et chaîne d'approvisionnement"
+    },
+    {
+      "n": "06",
+      "title": "Coût et échelle"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Dans la mise en œuvre de la stratégie de l'Alberta, nous avons mis à l'essai une vaste gamme d'outils de codage agentique et de plateformes d'IA générative, et ce qui suit constitue notre pile actuelle. Nous nous attendons à ce qu'elle évolue à mesure que de nouveaux outils émergent, et nos choix sont guidés par un objectif simple : le bon modèle, dans le bon environnement, pour le bon cas d'usage. Nous avons délibérément diversifié notre chaîne d'approvisionnement en IA, tant pour la capacité que pour la variété nécessaires à couvrir un large éventail de travaux, et nous évitons de confier toutes les charges de travail à un seul fournisseur."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Choisir les bons outils"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "L'industrie évolue rapidement, et l'avance change de mains tous les deux mois environ. Google lance un modèle d'images comme Nano Banana 2 qui est stupéfiant, et quelques mois plus tard OpenAI livre GPT Image 2, un nouveau saut qualitatif. Nous demeurons flexibles et utilisons chaque plateforme là où elle convient. Au cours des dix-huit derniers mois, nous avons essayé une gamme de modèles, en naviguant entre Gemini, OpenAI et Anthropic, et en ce moment nous constatons que les modèles Claude d'Anthropic surpassent la plupart des autres. Nous nous attendons à ce que cela change, et la pile est conçue pour le permettre. Pour les travaux présentés dans ces documents de réflexion, nous nous sommes appuyés principalement sur Claude, les modèles Opus et Sonnet, passant de la version 3.5 jusqu'à l'Opus 4.8 d'aujourd'hui et au plus récent Sonnet, et Anthropic a livré des ajouts à Claude Code et aux applications Claude plus vite que nous ne pouvons suivre."
+    },
+    {
+      "type": "paragraph",
+      "text": "Une couche d'abstraction, comme la passerelle [Bifrost](/paper/uwpxr), nous permet de déplacer une charge de travail d'un fournisseur à un autre, ou du nuage vers notre propre calcul, à mesure que les besoins et les prix changent. Elle maintient aussi les dépenses sous contrôle, avec des budgets par charge de travail afin que l'utilisation des jetons ne dérape pas. Nous ne conseillerions à aucun gouvernement de mettre tous ses œufs dans le même panier; l'industrie évolue trop rapidement pour cela."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "La pile"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'Alberta exploite un environnement hybride. Nous utilisons les principaux nuages des hyperscalers, Google, Azure et AWS, aux côtés de plusieurs plateformes plus petites, et nous exploitons encore trois grands centres de données hérités qui portent du code, des systèmes et de l'infrastructure plus anciens. Nous exécutons des modèles à code source ouvert sur notre propre grappe de GPU, et nous accédons aux modèles hébergés par l'entremise d'AWS Bedrock, de la Google Agent Platform et d'Azure AI Studio. Nous mettons à l'essai de manière proactive presque tous les modèles qui paraissent : des modèles à code source ouvert sur notre propre matériel pour les charges de travail hors ligne et de niveau Protégé C, et d'autres sur des appareils Mac M5 locaux. Nos principales charges de travail passent par AWS Bedrock et la Google Agent Platform."
+    },
+    {
+      "type": "table",
+      "title": "La pile en un coup d'œil",
+      "columns": [
+        "Couche",
+        "Ce que nous utilisons",
+        "Rôle"
+      ],
+      "rows": [
+        [
+          "Nuage et calcul",
+          "Google Cloud, Azure, AWS, une grappe de GPU sur place et trois centres de données hérités.",
+          "Une empreinte hybride, la grappe exécutant des modèles à code source ouvert hors ligne."
+        ],
+        [
+          "Accès aux modèles",
+          "AWS Bedrock, la Google Agent Platform et Azure AI Studio.",
+          "Accéder au bon modèle pour la charge de travail, avec des données contrôlées au Canada."
+        ],
+        [
+          "Modèles",
+          "Claude Opus et Sonnet (de la version 3.5 jusqu'à l'Opus 4.8 et au plus récent Sonnet); modèles à code source ouvert.",
+          "Claude est le modèle principal actuel; les modèles à code source ouvert servent au travail hors ligne et de niveau Protégé C."
+        ],
+        [
+          "Passerelles",
+          "Bifrost et d'autres passerelles d'agents.",
+          "Abstraction des fournisseurs, maîtrise des coûts et contrôles des renseignements personnels."
+        ],
+        [
+          "Déploiement",
+          "Charges de travail agentiques vers Google Cloud; applications traditionnelles vers Azure et AWS.",
+          "La conteneurisation est décrite dans le document Nexus."
+        ],
+        [
+          "Sécurité et prévention des pertes de données",
+          "Microsoft Defender et Purview, et l'outillage intégré de GitHub.",
+          "Contrôles de prévention des pertes de données et du code dans l'ensemble du parc."
+        ]
+      ],
+      "caption": "La pile actuelle, appelée à évoluer au fil des outils. Chaque couche est choisie de manière qu'une charge de travail puisse migrer d'un fournisseur à l'autre ou vers notre propre calcul.",
+      "source": "Ministère de la Technologie et de l'Innovation."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.1",
+      "title": "La pile agentique, par couche",
+      "caption": "La même pile dessinée en couches, du nuage et du calcul sur place à la base, en passant par l'accès aux modèles et les modèles eux-mêmes, la passerelle qui les abstrait et les mesure, jusqu'aux cibles de déploiement au sommet.",
+      "image": {
+        "src": "public/images/qxlzo/fr/fig-11-1.jpg",
+        "alt": "Un diagramme en couches dessiné à la main avec cinq bandes horizontales : une bande de base « Nuage et calcul » contenant Google Cloud, Azure, AWS, une grappe de GPU sur place et des centres de données hérités; une bande « Accès aux modèles » contenant AWS Bedrock, la Google Agent Platform et Azure AI Studio; une bande « Modèles » contenant Claude Opus et Sonnet et des modèles à code source ouvert; une bande « Passerelle » contenant Bifrost; et une bande supérieure « Déploiement » contenant les charges de travail agentiques vers GCP et les applications traditionnelles vers Azure et AWS.",
+        "image_prompt": "An editorial layered architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as horizontal bands stacked from bottom to top. Bottom band labelled NUAGE ET CALCUL holding small boxes GOOGLE CLOUD, AZURE, AWS, GRAPPE DE GPU SUR PLACE, CENTRES DE DONNÉES HÉRITÉS. Next band labelled ACCÈS AUX MODÈLES holding boxes AWS BEDROCK, GOOGLE AGENT PLATFORM, AZURE AI STUDIO. Next band labelled MODÈLES holding boxes CLAUDE OPUS ET SONNET and MODÈLES À CODE SOURCE OUVERT. Next band labelled PASSERELLE holding one box BIFROST with a small caption ABSTRACTION, COÛT, RP. Top band labelled DÉPLOIEMENT holding boxes CHARGES DE TRAVAIL AGENTIQUES VERS GCP and APPLICATIONS TRADITIONNELLES VERS AZURE ET AWS. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "La plupart de nos charges de travail agentiques infonuagiques sont déployées dans Google Cloud, tandis que nos applications traditionnelles continuent de s'exécuter dans Azure et AWS. La conteneurisation qui sous-tend cela est décrite dans le document [Nexus](/paper/uwpxr). Nous examinons également Red Hat OpenShift pour héberger davantage de charges de travail sur notre propre matériel et pour tirer pleinement parti de la capacité des centres de données dont nous disposons déjà."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Classification et résidence"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le gouvernement de l'Alberta classifie l'information comme non classifiée, Protégé A, Protégé B et Protégé C. Quelques systèmes atteignent le niveau Protégé C, bien que la grande majorité, probablement quatre-vingt-dix-neuf pour cent ou plus, se situe au niveau Protégé B au plus haut. Une grande partie du travail de construction en IA présenté dans ces documents utilise du code et de l'architecture hérités, non classifiés et appartenant au gouvernement, exempts de tout renseignement personnel dans les systèmes de production. Cela nous permet de repenser le fonctionnement du gouvernement, avec l'IA comme bâtisseuse des systèmes de demain, sans que l'IA ne touche ni n'observe jamais les données des citoyens, à moins que cela ne soit véritablement nécessaire."
+    },
+    {
+      "type": "table",
+      "title": "Où s'exécutent les charges de travail, par classification",
+      "columns": [
+        "Classification",
+        "Ce qu'elle couvre",
+        "Où elle s'exécute"
+      ],
+      "rows": [
+        [
+          "Non classifié",
+          "Code et architecture hérités appartenant au gouvernement, exempts de renseignements personnels.",
+          "Nuage et sur place; l'essentiel du travail de construction en IA actuel."
+        ],
+        [
+          "Protégé A et B",
+          "La plupart des systèmes gouvernementaux, le niveau Protégé B étant le plafond pour environ 99 pour cent.",
+          "Nuage contrôlé au Canada, sous ententes d'entreprise et garde-fous de plateforme."
+        ],
+        [
+          "Protégé C",
+          "Les systèmes les plus sensibles, une petite minorité.",
+          "Hors ligne, sur notre propre grappe de GPU."
+        ]
+      ],
+      "caption": "La sensibilité détermine l'endroit où s'exécute une charge de travail. Les travaux les plus sensibles demeurent hors ligne sur du matériel appartenant à l'Alberta.",
+      "source": "Ministère de la Technologie et de l'Innovation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Toutes les données liées à ces charges de travail sont contrôlées au Canada grâce à nos ententes d'entreprise et à nos garde-fous de plateforme. Selon la charge de travail, nous utilisons du calcul national ou de l'inférence depuis les États-Unis, ce qui est ce qu'offrent principalement les fournisseurs infonuagiques aujourd'hui. Nous travaillons avec chaque fournisseur infonuagique pour amener davantage de matériel au Canada et déplacer toujours plus de charges de travail dans un environnement souverain, et nous suivons de près les consortiums de calcul souverain de Google et de Telus. Nous avons publié une demande de préqualification en calcul souverain invitant des entreprises entièrement canadiennes à contribuer à nos travaux les plus sensibles, et nous appuyons l'objectif du gouvernement du Canada de faire croître l'espace du calcul souverain. Pour les charges de travail liées à la santé et à la sécurité, le contrôle exclusif des données par le gouvernement de l'Alberta est une position non négociable."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.2",
+      "title": "Résidence des données et souveraineté",
+      "caption": "Les données sensibles sont contrôlées au Canada grâce à des ententes d'entreprise et à des garde-fous, le niveau Protégé C s'exécutant hors ligne sur du matériel appartenant à l'Alberta. Certaines charges de travail utilisent encore l'inférence aux États-Unis aujourd'hui, et le calcul souverain est en cours de développement pour en rapatrier davantage au pays.",
+      "image": {
+        "src": "public/images/qxlzo/fr/fig-11-2.jpg",
+        "alt": "Un diagramme dessiné à la main : une grande frontière arrondie étiquetée « Canada » contient une boîte « Nuage contrôlé », marquée ententes d'entreprise et garde-fous, et une boîte « Grappe sur place, hors ligne », marquée Protégé C, ainsi qu'un petit motif de calcul souverain marqué « en croissance ». À l'extérieur de la frontière, une boîte « Inférence aux É.-U. » s'y rattache par une flèche en pointillé marquée « certaines charges de travail aujourd'hui ». Le long du bas, des pastilles de classification indiquent non classifié, Protégé A, Protégé B, Protégé C, le niveau Protégé B étant marqué « environ 99 pour cent au plus ».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A large rounded boundary labelled CANADA contains two boxes: NUAGE CONTRÔLÉ captioned ENTENTES D'ENTREPRISE, GARDE-FOUS, and GRAPPE SUR PLACE, HORS LIGNE captioned PROTÉGÉ C. Inside the boundary, a small flag-like motif labelled CALCUL SOUVERAIN with a caption EN CROISSANCE. Outside the boundary on the right, a box labelled INFÉRENCE AUX É.-U. connects into the CANADA boundary by a dashed arrow labelled CERTAINES CHARGES DE TRAVAIL AUJOURD'HUI. Along the bottom edge, a row of four small chips labelled NON CLASSIFIÉ, PROTÉGÉ A, PROTÉGÉ B, PROTÉGÉ C, with a small bracket under PROTÉGÉ B reading ENVIRON 99 POUR CENT AU PLUS. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Gouvernance et protection de la vie privée"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nos décisions sont guidées par la politique d'utilisation de l'IA de l'Alberta et par notre cadre de gouvernance de l'IA, qui énoncent les considérations à l'intention de la fonction publique au moment d'adopter l'IA. La protection de la vie privée est encadrée par la Protection of Privacy Act de l'Alberta, qui définit où l'IA peut être utilisée et quand le gouvernement doit réaliser une évaluation des facteurs relatifs à la vie privée et l'enregistrer auprès du Commissariat à l'information et à la protection de la vie privée avant d'aller de l'avant."
+    },
+    {
+      "type": "keystat",
+      "label": "Résistance à l'injection d'invites",
+      "value": "95-98 %",
+      "body": "Même les meilleurs modèles ne résistent au détournement que 95 à 98 pour cent du temps. Aucun modèle aujourd'hui n'est immunisé; l'IA destinée au public et tout ce qui touche aux renseignements personnels est donc évité ou conçu de façon sélective."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous sommes délibérément prudents avec l'IA destinée au public. Aucun modèle aujourd'hui ne résiste entièrement à l'injection d'invites, et même les meilleurs ne résistent au détournement que quatre-vingt-quinze à quatre-vingt-dix-huit pour cent du temps. Il existe des cas bien connus de plateformes manipulées et d'agents trompés pour accomplir un travail nuisible au profit d'un instigateur. Ainsi, l'IA destinée au public, et tout ce qui touche aux renseignements personnels, est soit évité, soit conçu de façon sélective, et à ce jour nous avons surtout utilisé des données synthétiques pour valider ce que ces systèmes pouvaient faire et pour donner aux partenaires ministériels un ensemble clair de considérations à soupeser."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Sécurité et chaîne d'approvisionnement"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous avons fait preuve de prudence à l'égard des composants d'agents à code source ouvert, par pratique plutôt que par politique. Un harnais, même lorsqu'il ne s'agit que d'un ensemble de fichiers de compétences, est un logiciel, et il doit être vérifié avant utilisation. Il peut véhiculer une injection d'invites, ou une chaîne d'approvisionnement corrompue peut faire en sorte qu'un agent se comporte de façon erratique, et dans le pire des cas l'agent lui-même devient l'auteur de la menace. Nous sommes donc sélectifs quant à ce que nous téléchargeons, et nous l'évaluons au préalable."
+    },
+    {
+      "type": "table",
+      "title": "Couches de sécurité et de contrôle",
+      "columns": [
+        "Préoccupation",
+        "Approche",
+        "Objectif"
+      ],
+      "rows": [
+        [
+          "Dépendance à un fournisseur",
+          "Abstraction au moyen de Bifrost et d'autres passerelles d'agents.",
+          "Déplacer les charges de travail d'un fournisseur à l'autre, ou du nuage vers notre propre calcul."
+        ],
+        [
+          "Utilisation incontrôlée des jetons",
+          "Budgets par charge de travail et approbations ponctuelles.",
+          "Maîtriser le coût des tâches de longue durée."
+        ],
+        [
+          "Perte de données",
+          "Microsoft Defender et Purview, ou équivalents.",
+          "Contrôles de prévention des pertes de données dans l'ensemble du parc."
+        ],
+        [
+          "Corruption de la chaîne d'approvisionnement",
+          "Vérifier et évaluer les harnais et les fichiers de compétences avant utilisation.",
+          "Repérer l'injection d'invites et la falsification avant qu'un agent ne les exécute."
+        ],
+        [
+          "Injection d'invites destinée au public",
+          "Éviter l'IA publique ou la concevoir de façon sélective; valider avec des données synthétiques.",
+          "Aucun modèle ne résiste entièrement à l'injection (les meilleurs atteignent 95 à 98 pour cent)."
+        ],
+        [
+          "Identité et observabilité des agents",
+          "Collaboration avec l'industrie; suivi des empreintes des agents dans le réseau.",
+          "Un domaine encore en développement, et un axe des travaux à venir."
+        ]
+      ],
+      "caption": "Les contrôles que l'Alberta place autour des modèles et des agents, de l'abstraction des fournisseurs à la vérification de la chaîne d'approvisionnement, jusqu'aux travaux ouverts sur l'identité et l'observabilité agentiques.",
+      "source": "Ministère de la Technologie et de l'Innovation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Autour des modèles, nous exploitons des passerelles comme Bifrost pour l'abstraction des fournisseurs, la maîtrise des coûts et les contrôles des renseignements personnels, et nous recommandons Microsoft Defender et Purview, ou des équivalents, comme contrôles de prévention des pertes de données, aux côtés de l'outillage intégré de GitHub. Il reste du travail à faire. Nous collaborons avec l'industrie sur l'appareil de sécurité entourant les agents, sur la gestion de l'identité agentique, et sur le suivi et l'observation de l'activité des agents dans le réseau, et nous inviterons des entreprises solides à mettre des outils à l'épreuve des charges de travail gouvernementales par l'entremise du processus de calcul souverain et de futures demandes de propositions. Nous cherchons également des partenariats avec des pairs fédéraux, provinciaux, territoriaux et municipaux afin de maintenir une communauté de pratique active et d'apprendre de la façon dont d'autres gouvernements résolvent les mêmes problèmes."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Coût et échelle"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous dépensons maintenant des dizaines de milliers de dollars par mois en jetons de calcul, et nous prévoyons que cela atteindra des centaines de milliers par mois à mesure que les [quatre approches](/paper/zgym1) seront mises en œuvre et qu'un agent d'IA soutiendra chaque application pour la surveillance, la correction en cybersécurité et le développement. La capacité devient une contrainte : une pénurie d'infrastructure et de mémoire limite le calcul, et même nos ententes d'entreprise, à vingt-cinq à cinquante millions de jetons par minute, seront vraisemblablement dépassées bientôt; nous adoptons donc une approche diversifiée et à charge équilibrée pour le débit."
+    },
+    {
+      "type": "keystat",
+      "label": "Une tâche de longue durée",
+      "value": "250 agents · 50 jours",
+      "body": "Le traitement d'environ 14 millions d'images et de dossiers historiques est évalué à un maximum de 250 agents simultanés s'exécutant pendant jusqu'à 50 jours, à un coût de plusieurs centaines de milliers de dollars, soit peut-être un pour cent du coût du même travail fait à la main."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces chiffres de coûts sont intéressants. L'effet le plus marquant de ces outils est qu'ils ouvrent la porte à des travaux que nous n'aurions tout simplement pas entrepris autrement, plus qu'ils ne réduisent le coût des travaux que nous faisons déjà. À mesure que les outils deviennent disponibles, l'appétit pour la création de nouveaux services utiles et le besoin de résorber la dette technique croissent de pair. Notre objectif est de moderniser à un rythme rapide et d'offrir des services bonifiés, avec des centaines de millions par année en coûts évités et un effectif stable, et de passer de technologies verrouillées par les fournisseurs vers des plateformes qui nous donnent de la latitude à mesure que nous prenons de l'ampleur. Nous explorons l'IA pour les raisons exposées dans [L'impératif de la cybersécurité](/paper/mwo98) et [le navire de Thésée à deux milliards de dollars](/paper/cux4h), et nous prenons soin de ne pas échanger un problème contre un autre."
+    },
+    {
+      "type": "figure",
+      "title": "Explorez cela sous forme de canevas interactif",
+      "caption": "Le bon modèle, dans le bon environnement, pour le bon cas d'usage, avec des couches d'abstraction qui préviennent la dépendance. Tiré de Le canevas (document 18); faites glisser les nœuds, zoomez et appuyez sur Écouter pour une visite guidée parlée.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "stack",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "tech-stack",
+        "cloud",
+        "models",
+        "sovereign-compute",
+        "security"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
   },
-  "related": []
+  "translation_status": "draft",
+  "related": [
+    "uwpxr",
+    "zgym1",
+    "mwo98",
+    "cux4h",
+    "p7p2k",
+    "xs7uh"
+  ]
 }

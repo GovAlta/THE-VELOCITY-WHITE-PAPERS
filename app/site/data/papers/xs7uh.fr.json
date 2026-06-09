@@ -5,21 +5,30 @@
   "tier": "Technical",
   "category": "paper",
   "title": "Technique : Le canevas",
-  "subtitle": "Une carte interactive de tout le système : les agents, la pile technologique et les liens entre les livres.",
+  "subtitle": "Un paysage de solutions interactif présentant les concepts clés du livre blanc.",
   "track": "Technical Appendix",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 10,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "canvas",
+    "visualization",
+    "simulation",
+    "architecture",
+    "interactive",
+    "briefing"
+  ],
   "repo": null,
-  "abstract": "À venir. Le corps sera rédigé à partir de sources. This is one of three technical appendices that round out the collection.",
+  "abstract": "Ce document réunit les différentes approches du livre blanc en une série de canevas interactifs. Chaque scène est un diagramme bilingue, téléchargeable et piloté par les données, doté d'agents animés et d'une description orale, et chacune peut être intégrée seule dans le document dont elle provient. Parcourez-le, zoomez et emportez l'architecture pour vos propres développements.",
   "hero_image": {
     "src": "public/images/xs7uh/fr/hero.jpg",
-    "alt": "Editorial image for: Le canevas technique",
-    "image_prompt": "An editorial cover image for the technical appendix titled \"Le canevas technique\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Image éditoriale pour : Le canevas",
+    "image_prompt": "An editorial cover image for the technical appendix titled \"The Canvas\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -27,18 +36,55 @@
   },
   "tldr_presentation": {
     "id": "xs7uh-tldr",
-    "title": "Le livre, en bref",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "xs7uh",
     "slides": [
       {
         "id": "01",
-        "title": "Technique : Le canevas",
+        "title": "Le canevas",
         "audio_file": "public/audio/fr/xs7uh-tldr/01.mp3",
         "visual": "title",
-        "caption": "Annexe technique",
-        "subcaption": "",
-        "text": "Le canevas technique. Contenu à venir."
+        "caption": "Annexe technique · document 18",
+        "subcaption": "Un seul paysage de solutions interactif pour l'ensemble de l'approche.",
+        "text": "Le problème de la compression soutient qu'un compte rendu écrit ne peut pas porter la fidélité d'un système à grande échelle, mais qu'une représentation visuelle, spatiale et interactive le peut. Cette annexe est cet argument rendu littéral : l'ensemble de l'approche réuni en un seul canevas interactif que vous parcourez, dans lequel vous zoomez et que vous emportez."
+      },
+      {
+        "id": "02",
+        "title": "Onze vues d'un même système",
+        "audio_file": "public/audio/fr/xs7uh-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Ce que renferme le canevas",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Parc, approches, pile",
+              "desc": "Le parc hérité analysé, les quatre approches et la pile technologique agentique."
+            },
+            {
+              "label": "Harnais et fabrique",
+              "desc": "Le harnais avec ses agents de révision, et la fabrique allant de Pronghorn à Nexus à Vélocité."
+            },
+            {
+              "label": "Jeu, hiérarchie, avenir",
+              "desc": "Le jeu de la livraison, la hiérarchie inversée et les modules de l'état futur."
+            },
+            {
+              "label": "Agents animés",
+              "desc": "Des agents se déplacent dans chaque scène, de sorte que la structure est montrée plutôt que décrite."
+            }
+          ]
+        },
+        "text": "Le canevas renferme onze scènes, une par grande idée de la collection, avec des agents animés dans chacune. Vous passez de l'une à l'autre à l'aide des pastilles de scène, vous faites glisser les nœuds, vous zoomez et vous balayez, vous passez en plein écran et vous lisez ou écoutez une description de ce que montre chaque scène."
+      },
+      {
+        "id": "03",
+        "title": "Conçu pour être emporté",
+        "audio_file": "public/audio/fr/xs7uh-tldr/03.mp3",
+        "visual": "title",
+        "caption": "Piloté par les données, bilingue, accessible",
+        "subcaption": "Chaque scène est un fichier JSON que vous pouvez télécharger.",
+        "text": "Chaque scène est pilotée par un enregistrement JSON, de sorte qu'elle peut être téléchargée, modifiée et emportée comme une architecture autonome. Chaque scène est bilingue, adaptée aux appareils mobiles et accompagnée d'un récit écrit qui sert à la fois de description accessible et de scénario pour une explication orale. Le même composant de scène peut être intégré seul dans le document dont il provient."
       }
     ]
   },
@@ -46,23 +92,142 @@
   "sections": [
     {
       "n": "01",
-      "title": "Aperçu"
+      "title": "Conçu pour être emporté"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Comme l'affirme le document [Le problème de la compression](/paper/eujjc), les descriptions écrites peuvent se révéler insuffisantes par rapport aux simulations visuelles pour expliquer des concepts complexes. Ce document réunit les principaux concepts qui y figurent en un seul canevas interactif, avec un onglet par grande idée. Passez d'une grande idée à l'autre, faites glisser pour balayer et défilez pour zoomer, et utilisez Agrandir pour le plein écran. Chaque scène nomme le document dont elle provient, de sorte que le canevas fait aussi office de carte de la collection. Décrire ce canevas lit à voix haute, ou joue, un compte rendu en langage clair de ce que montre la scène en cours.\n\n"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 18.1",
+      "title": "Le paysage de solutions",
+      "caption": "Une visite interactive de l'ensemble de l'approche. Onze scènes pilotées par les données et dotées d'agents animés : le parc hérité, les quatre approches, la pile agentique, le harnais et ses agents de révision, la cyberdéfense, la fabrique d'IA, le jeu de la livraison, le maintien de la synchronisation du travail, la hiérarchie inversée, l'état futur et le moteur d'exécution Gouvernement 3.0. Faites glisser les nœuds, passez d'une scène à l'autre, zoomez, passez en plein écran, écoutez ou téléchargez n'importe quelle scène en JSON.",
+      "chart": {
+        "kind": "canvas:tour"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Les scènes, et d'où elles proviennent",
+      "columns": [
+        "Scène",
+        "Ce qu'elle montre",
+        "Document"
+      ],
+      "rows": [
+        [
+          "Le parc hérité",
+          "≈466 M de lignes réparties dans ~3 400 dépôts, analysées par ~50 agents en ~20 heures.",
+          "Constats Git"
+        ],
+        [
+          "Quatre approches",
+          "Garage, Fabrique, Rationalisation, Gouvernement 3.0 — de la touche la plus légère à la reconstruction complète.",
+          "Les quatre approches"
+        ],
+        [
+          "La pile agentique",
+          "L'infonuagique, l'accès aux modèles, les modèles, la passerelle Bifrost, le déploiement et la sécurité.",
+          "La pile technologique agentique"
+        ],
+        [
+          "Le harnais",
+          "Un agent travailleur entouré des agents de révision vert, jaune, rouge et bleu.",
+          "Le harnais bien conçu"
+        ],
+        [
+          "La fabrique d'IA",
+          "L'idéation Pronghorn, l'orchestration Nexus, la livraison Vélocité, avec des agents qui circulent de l'une à l'autre.",
+          "La fabrique d'IA"
+        ],
+        [
+          "Le jeu de la livraison",
+          "Huit étapes; des points pour l'avancée, une perte permanente en cas de recul, le Faucheur.",
+          "Le moteur de jeu Vélocité"
+        ],
+        [
+          "La hiérarchie inversée",
+          "Un agent travailleur, huit superviseurs — le problème de la compression, résolu spatialement.",
+          "Le problème de la compression"
+        ],
+        [
+          "L'état futur",
+          "185 applications regroupées en 16 modules partagés; complexité réduite de plus de 90 %.",
+          "Constats Git du ministère"
+        ],
+        [
+          "La cyberdéfense",
+          "L'IA qui défend à la vitesse de la machine; ~189 M de tentatives par jour bloquées; la modernisation réduit la surface d'attaque.",
+          "L'impératif cybernétique"
+        ],
+        [
+          "Maintenir le travail en synchronisation",
+          "Des harnais observateurs surveillent la chaîne à 14 maillons et ouvrent des billets que le constructeur règle.",
+          "Le harnais anti-dérive"
+        ],
+        [
+          "Moteur d'exécution Gouvernement 3.0",
+          "Aucune application : un agent agit sur des données gouvernées par l'entremise de garde-fous et génère l'interface à la demande.",
+          "Les quatre approches"
+        ]
+      ],
+      "source": "Le canevas du paysage de solutions."
+    },
+    {
+      "type": "pullquote",
+      "text": "Au lieu de préparer un compte rendu écrit, une IA pourrait générer une simulation, une visualisation, une interaction spatiale qui permet au décideur de s'engager avec la matière d'une autre façon. ",
+      "cite": "D'après Le problème de la compression"
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Aperçu"
+      "title": "Conçu pour être emporté"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Contenu à venir.</strong> La structure est en place; le corps sera rédigé à partir de sources."
+      "text": "Chaque architecture est pilotée par un enregistrement JSON téléchargeable, de sorte qu'une architecture peut être emportée, modifiée et réutilisée. Chaque scène est bilingue et adaptée aux appareils mobiles, et chacune est accompagnée d'un récit écrit qui remplit deux fonctions à la fois : il est la description accessible pour un lecteur d'écran, et il est le scénario de l'explication orale derrière le bouton Écouter. \n\nEmportez les données sources et ces commandes d'organigramme, et construisez vos propres visualisations."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "canvas",
+        "visualization",
+        "simulation",
+        "architecture",
+        "interactive"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js",
+    "components/visuals/bespoke/canvas/Tour.js"
+  ],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
   },
-  "related": []
+  "related": [
+    "eujjc",
+    "zgym1",
+    "qxlzo",
+    "p7p2k",
+    "qthji",
+    "k3tc3",
+    "bbkac",
+    "offjm"
+  ],
+  "translation_status": "draft"
 }

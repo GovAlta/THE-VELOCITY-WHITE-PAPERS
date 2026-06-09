@@ -4,23 +4,32 @@
   "sequence": "",
   "tier": "Policy & People",
   "category": "paper",
-  "title": "Establishing a Builder Culture",
-  "subtitle": "Shifting from buying systems to building them.",
+  "title": "Instaurer une culture de bâtisseurs",
+  "subtitle": "Comment l'IA agentique démocratise la construction des systèmes gouvernementaux, pendant que la forteresse demeure au centre.",
   "track": "Human and Change Management",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 16,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "builder-culture",
+    "democratization",
+    "governance",
+    "agents",
+    "shadow-it",
+    "operating-model",
+    "change-management"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
-  "translation_status": "untranslated",
+  "abstract": "Les gouvernements oscillent entre une prestation des TI centralisée et décentralisée, échangeant l'économie d'échelle et la cohérence contre l'autonomie et la rapidité; l'Alberta, à l'instar du Canada et de la Colombie-Britannique, exploite aujourd'hui un modèle centralisé. Ce modèle a permis d'économiser des dizaines de millions de dollars, et il ne peut livrer assez vite pour chaque ministère. L'IA agentique ouvre une troisième option : garder au centre les fonctions de la forteresse, soit la cybersécurité, l'identité, le réseau et les données, et renvoyer la construction des solutions aux personnes qui connaissent le travail. Ce document expose comment l'Alberta entend permettre une culture de bâtisseurs, où les experts de domaine créent leurs propres systèmes encadrés et vérifiés, et pourquoi l'autre option est une informatique fantôme non encadrée.",
   "hero_image": {
     "src": "public/images/oxj36/fr/hero.jpg",
-    "alt": "Editorial image for: Establishing a Builder Culture",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"Establishing a Builder Culture\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Illustration de couverture éditoriale : un donjon central fortifié entouré de nombreux petits ateliers ouverts reliés par des sentiers, dessiné au trait bleu marine profond de l'Alberta avec de petits accents rouille sur un papier crème chaud, évoquant un noyau protégé autour duquel la construction se déploie.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A central walled keep sits at the middle, and around it many small open workshops and benches are connected to it by light paths, suggesting a protected core with building happening freely all around. Calm, archival, abstract. Wide cover aspect. No text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -28,42 +37,359 @@
   },
   "tldr_presentation": {
     "id": "oxj36-tldr",
-    "title": "The paper, in brief",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "oxj36",
     "slides": [
       {
         "id": "01",
-        "title": "Establishing a Builder Culture",
+        "title": "Instaurer une culture de bâtisseurs",
         "audio_file": "public/audio/fr/oxj36-tldr/01.mp3",
         "visual": "title",
-        "caption": "Human and Change Management",
-        "subcaption": "",
-        "text": "Establishing a Builder Culture. Content forthcoming."
+        "caption": "Document 13 · Gestion humaine et du changement",
+        "subcaption": "Passer de l'achat et de l'attente des systèmes à leur construction.",
+        "text": "Les gouvernements oscillent entre des TI centralisées et décentralisées, et l'Alberta exploite aujourd'hui un modèle centralisé. Il fait économiser de l'argent et avance trop lentement. L'IA agentique offre une troisième voie : garder le noyau protecteur au centre et renvoyer la construction des solutions aux personnes qui connaissent le travail. Ce document expose comment l'Alberta entend permettre une culture de bâtisseurs."
+      },
+      {
+        "id": "02",
+        "title": "Trois façons de livrer",
+        "audio_file": "public/audio/fr/oxj36-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Le balancier, et une troisième option",
+        "visual_config": {
+          "items": [
+            { "label": "Centralisé", "desc": "Échelle et cohérence, payées par un goulot d'étranglement." },
+            { "label": "Décentralisé", "desc": "Autonomie et rapidité, payées par la duplication et le risque." },
+            { "label": "Hybride augmenté par l'IA", "desc": "Construction aux extrémités, protection et règles au centre." }
+          ]
+        },
+        "text": "La centralisation achète l'économie d'échelle et la cohérence au prix d'un goulot d'étranglement. La décentralisation achète l'autonomie au prix de la duplication et d'une sécurité inégale. L'IA introduit un troisième modèle : garder au centre les fonctions qui doivent rester uniformes, et laisser les ministères construire leurs propres solutions sur des outils encadrés."
+      },
+      {
+        "id": "03",
+        "title": "Ce qui le rend sûr",
+        "audio_file": "public/audio/fr/oxj36-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Accès délégué, et barrières automatisées",
+        "visual_config": {
+          "items": [
+            { "label": "Accès délégué", "desc": "Un agent n'agit que dans les limites des permissions qu'une personne détient déjà." },
+            { "label": "Codage au feeling", "desc": "Un spécialiste décrit le système; les outils le construisent." },
+            { "label": "Vérifications automatisées", "desc": "Agents rouges et bleus, gestion de l'information et identité, validés avant la production." }
+          ]
+        },
+        "text": "Une passerelle d'agents permet à un fonctionnaire de prêter ses propres permissions à un agent, qui peut alors faire ce que ferait une application, sans nouveau code. Tout ce qu'un ministère construit franchit les mêmes barrières automatisées qui empêchent un logiciel d'atteindre la production avant qu'il soit sécurisé : les agents de sécurité rouge et bleu, la gestion de l'information, ainsi que l'identité et l'accès."
+      },
+      {
+        "id": "04",
+        "title": "Centraliser la gouvernance, pas la prestation",
+        "audio_file": "public/audio/fr/oxj36-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Le changement, et la prolifération à anticiper",
+        "visual_config": {
+          "stat_value": "18 000",
+          "stat_label": "sites SharePoint que le gouvernement porte déjà"
+        },
+        "subcaption": "Quand une nouvelle application ne coûte presque rien, la croissance est le risque.",
+        "text": "Le centre cesse d'être l'endroit où tous les logiciels sont livrés et devient l'endroit où tous les logiciels sont encadrés, avec un agent sur chaque application et les mêmes contrôles appliqués partout. Le coût est la prolifération : une construction bon marché peut faire enfler le parc. La réponse est la disposition automatisée, de sorte que création et retrait gardent un équilibre approximatif, à la manière d'une forêt qui rend au sol le bois tombé."
+      },
+      {
+        "id": "05",
+        "title": "Le bâtisseur",
+        "audio_file": "public/audio/fr/oxj36-tldr/05.mp3",
+        "visual": "title",
+        "caption": "Un prolongement de l'Académie",
+        "subcaption": "Des experts de domaine, dotés d'outils sûrs, construisent leurs propres systèmes.",
+        "text": "Un bâtisseur est un spécialiste d'un domaine, finances, sécurité publique, feux de forêt, agriculture, qui voit un problème que la technologie pourrait résoudre et reçoit un endroit sûr pour le construire. Cela prolonge le troisième niveau de l'Académie d'IA de l'Alberta. Un modèle de pointe est déjà à lui seul un meilleur développeur intégral, administrateur de bases de données et spécialiste de la sécurité que n'importe quelle personne. La tâche consiste à mettre l'outil à la portée de chaque équipe."
+      },
+      {
+        "id": "06",
+        "title": "À l'intérieur de la clôture, ou informatique fantôme",
+        "audio_file": "public/audio/fr/oxj36-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Le modèle s'en vient de toute façon",
+        "subcaption": "Un modèle de conseil, et une invitation.",
+        "text": "Si la construction autorisée est trop lente, l'IA devient le chemin le plus rapide vers la construction non autorisée, et la technologie porte le blâme de la façon dont les gens en abusent. La forme probable est un modèle de conseil : l'IA met en œuvre, Technologie et Innovation tient la forteresse, la gouvernance et les contrôles, et les ministères apportent les idées. L'Alberta mettra à l'essai une culture de bâtisseurs en 2026 et publiera ce qu'elle en apprendra."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "Le balancier que les gouvernements ne cessent de faire osciller" },
+    { "n": "02", "title": "Un troisième modèle" },
+    { "n": "03", "title": "Ce qui rend la construction sûre" },
+    { "n": "04", "title": "De la centralisation de la prestation à la centralisation de la gouvernance" },
+    { "n": "05", "title": "Le bâtisseur" },
+    { "n": "06", "title": "Le modèle inévitable, ou l'informatique fantôme" },
+    { "n": "07", "title": "Un modèle de conseil, et une invitation" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Tous les quelques années, les gouvernements changent d'avis sur la façon de livrer la technologie. Ils centralisent jusqu'à ce que les goulots d'étranglement deviennent intolérables, puis décentralisent jusqu'à ce que la duplication et le risque deviennent intolérables, et ils repartent dans l'autre sens. L'Alberta, le gouvernement du Canada et, plus récemment, la Colombie-Britannique se situent aujourd'hui tous à l'extrémité centralisée de cette oscillation. L'IA agentique offre un moyen de cesser d'osciller : garder le noyau protecteur au centre tout en renvoyant l'acte de construire aux personnes les plus proches du travail. Nous appelons le résultat une culture de bâtisseurs."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Le balancier que les gouvernements ne cessent de faire osciller"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "La centralisation et la décentralisation résolvent chacune le problème de l'autre. Une fonction TI centrale achète l'économie d'échelle et une méthode cohérente, et elle répare les péchés accumulés de nombreuses équipes faisant chacune les choses à sa manière; son prix est le goulot d'étranglement, la file d'attente dans laquelle patiente chaque ministère. La décentralisation achète l'autonomie et la souplesse, et son prix est la duplication, une sécurité inégale et la perte de toute économie d'échelle. Ni l'une ni l'autre ne reste appropriée longtemps, ce qui explique pourquoi les gouvernements échangent sans cesse un ensemble de problèmes contre l'autre."
+    },
+    {
+      "type": "paragraph",
+      "text": "L'Alberta a consolidé sa fonction TI à compter de 2016, l'a formalisée vers 2019 et, en 2022, a créé le ministère de la Technologie et de l'Innovation, joignant le mandat central des TI du gouvernement aux mandats de développement économique, y compris Alberta Innovates. Aujourd'hui, ce ministère constitue l'épine dorsale des TI pour l'ensemble du gouvernement, les TI de la santé mises à part, et il porte les deux côtés du marché. Une négociation serrée avec les fournisseurs et l'échelle d'un parc unique ont permis d'économiser des dizaines de millions de dollars ces derniers mois. Ce même modèle central est aussi trop lent pour répondre à ce dont la plupart des ministères ont besoin. C'est là le nœud : comment laisser les ministères explorer et construire, tout en conservant la protection de type château et forteresse que le gouvernement exige, dans ses finances et face à une cybermenace croissante."
+    },
+    {
+      "type": "table",
+      "title": "Trois façons de livrer la technologie gouvernementale",
+      "columns": [
+        "Modèle",
+        "Ce qu'il achète",
+        "Ce qu'il coûte",
+        "Où il en est"
+      ],
+      "rows": [
+        [
+          "Centralisé",
+          "Économie d'échelle, méthode cohérente, plus facile à sécuriser et à nettoyer.",
+          "Une seule file d'attente, et une prestation trop lente pour bien des ministères.",
+          "Le modèle actuel de l'Alberta."
+        ],
+        [
+          "Décentralisé",
+          "Autonomie, souplesse, idées proches du travail.",
+          "Duplication, sécurité inégale, pas d'économie d'échelle.",
+          "Le modèle vers lequel les gouvernements reviennent quand le centre cale."
+        ],
+        [
+          "Hybride augmenté par l'IA",
+          "Construction renvoyée aux ministères, protection et règles tenues au centre.",
+          "Nouvelle prolifération, si la création dépasse la disposition.",
+          "Là où ce document propose que l'Alberta aille ensuite."
+        ]
+      ],
+      "caption": "Le balancier n'a jamais offert que deux réglages. L'IA agentique en ajoute un troisième, qui garde le noyau protecteur au centre et déplace la construction vers l'extérieur.",
+      "source": "Ministère de la Technologie et de l'Innovation."
+    },
+    {
+      "type": "keystat",
+      "label": "Économisé par l'échelle",
+      "value": "Dizaines de M$",
+      "body": "Économies récentes tirées d'un parc unique et d'une négociation serrée avec les fournisseurs, l'avantage que la centralisation est censée livrer, et une raison pour laquelle le noyau protecteur demeure central."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.1",
+      "title": "Le balancier que les gouvernements ne cessent de faire osciller",
+      "caption": "La centralisation achète l'échelle et la cohérence au prix d'un goulot d'étranglement; la décentralisation achète l'autonomie au prix de la duplication et du risque. Les gouvernements oscillent de l'une à l'autre à mesure que chacune devient intolérable.",
+      "image": {
+        "src": "public/images/oxj36/fr/fig-13-1.jpg",
+        "alt": "Un balancier dessiné à la main suspendu entre deux poteaux étiquetés, centraliser à gauche et décentraliser à droite, avec de petites notes indiquant économie d'échelle et goulot d'étranglement sous un côté et autonomie et duplication sous l'autre.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single pendulum hangs from a pivot and swings between two labelled posts: « CENTRALISER » on the left and « DÉCENTRALISER » on the right. Beneath « CENTRALISER », small captions read « ÉCONOMIE D'ÉCHELLE » and « GOULOT D'ÉTRANGLEMENT ». Beneath « DÉCENTRALISER », small captions read « AUTONOMIE » and « DUPLICATION ». A faint arc shows the swing. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Un troisième modèle"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'intelligence artificielle introduit une troisième option que l'ancien balancier n'a jamais offerte. La prestation elle-même peut être augmentée par l'IA, ce qui permet de scinder le travail nettement en deux. Les fonctions qui doivent rester uniformes pour garder le gouvernement en sécurité, la cybersécurité, l'identité et l'accès, le réseau, les bases de données, les licences, les systèmes d'exploitation, la téléphonie et l'informatique des utilisateurs finaux, demeurent centrales. L'acte de construire, les agents et les applications eux-mêmes, est renvoyé aux ministères. Un ministère sans service de TI propre peut utiliser les plateformes bâties pour l'usine d'IA, [Pronghorn](/paper/qthji), [Nexus](/paper/uwpxr) et [Vélocité](/paper/k3tc3), pour concevoir, exploiter et mesurer ses propres solutions en toute sécurité."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce qu'un ministère construit n'a pas à être une application au sens ancien. Cela pourrait être un flux de travail agentique, un agent autonome doté d'un accès délégué et branché à l'environnement Microsoft 365 ou Google, ou une interface qui n'existe que comme interface temporaire pour une seule tâche, puis disparaît. Le modèle est familier en informatique décisionnelle, où donner au personnel non technique un accès direct à ses propres données au moyen de Power BI ou Tableau a produit un véritable éclairage opérationnel. L'ère agentique va beaucoup plus loin, parce que l'outil de l'autre côté de l'interface peut désormais faire la construction, là où auparavant il ne dessinait que les graphiques."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.2",
+      "title": "Garder le noyau, déployer la construction vers l'extérieur",
+      "caption": "Les fonctions qui doivent rester uniformes pour garder le gouvernement en sécurité demeurent centrales. L'acte de construire se déplace vers les ministères, qui travaillent sur les plateformes de l'usine d'IA.",
+      "image": {
+        "src": "public/images/oxj36/fr/fig-13-2.jpg",
+        "alt": "Un diagramme dessiné à la main avec un donjon central étiqueté noyau central énumérant cybersécurité, identité, réseau et données, et des flèches rayonnant vers plusieurs petites boîtes d'atelier étiquetées bâtisseurs ministériels, avec un bandeau en dessous indiquant Pronghorn, Nexus, Vélocité.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. At the center, a sturdy keep labelled « NOYAU CENTRAL » with a short stacked list inside reading « CYBERSÉCURITÉ », « IDENTITÉ », « RÉSEAU », « DONNÉES ». Arrows radiate outward to four small workshop boxes around it labelled « BÂTISSEURS MINISTÉRIELS ». A band along the bottom reads PRONGHORN · NEXUS · VÉLOCITÉ. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Ce qui rend la construction sûre"
+    },
+    {
+      "type": "paragraph",
+      "text": "Deux capacités rendent cela sûr à offrir. La première est l'accès délégué. Au moyen d'une passerelle d'agents encadrée par la gestion de l'identité et de l'accès, un fonctionnaire peut prêter ses propres permissions à un agent : son courriel, son calendrier et Teams, le PGI OneGX, ServiceNow, SharePoint, le Web ouvert et les systèmes sur mesure de son ministère. Un agent agissant sur cette délégation peut faire tout ce qu'une application existante pourrait faire, sans une seule ligne de code nouveau, et toujours uniquement dans les limites de l'accès que la personne détient déjà au moyen d'Entra ID. Fournissez la passerelle et les contrôles d'identité, et un ministère peut construire ses propres solutions par-dessus les couches d'API et de données du gouvernement."
+    },
+    {
+      "type": "paragraph",
+      "text": "La seconde est le codage au feeling. Un spécialiste non technique peut décrire un système qu'il imagine, son interface, ses flux de travail et ses contrôles, et le faire construire. Plutôt que de recourir à un outil externe comme Lovable, un ministère peut utiliser les outils encadrés et le [harnais bien conçu](/paper/p7p2k), puis renvoyer le résultat à Technologie et Innovation au moyen de vérifications automatisées. Les barrières qui empêchent traditionnellement une application d'atteindre la production, les [agents de sécurité rouge et bleu](/paper/l199t), la gestion de l'information et une gestion adéquate de l'identité et de l'accès, peuvent être franchies par un bâtisseur non technique lorsque les contrôles de l'usine d'IA sont appliqués. Le contrôle de la qualité devient quelque chose que le système vérifie, et non quelque chose que seule une équipe centrale peut réaliser."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.3",
+      "title": "Ce qui rend la construction sûre",
+      "caption": "L'accès délégué permet à un agent d'agir dans les limites des permissions qu'une personne détient déjà. Tout ce qu'un ministère construit franchit les mêmes barrières automatisées qui empêchent un logiciel d'atteindre la production avant qu'il soit sécurisé.",
+      "image": {
+        "src": "public/images/oxj36/fr/fig-13-3.jpg",
+        "alt": "Un diagramme à deux panneaux dessiné à la main. Le panneau de gauche montre une passerelle d'agents avec un accès délégué au courriel, au calendrier, au PGI, à ServiceNow et à SharePoint. Le panneau de droite montre une construction codée au feeling franchissant trois vérifications automatisées, agents rouges et bleus, gestion de l'information et identité, vers une boîte étiquetée production.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled « ACCÈS DÉLÉGUÉ »: a box labelled « PASSERELLE D'AGENTS » with small input lines labelled « COURRIEL », « CALENDRIER », « PGI », SERVICENOW, SHAREPOINT feeding into it, and a small note « GIA » beneath. RIGHT panel labelled « DU CODAGE AU FEELING À LA PRODUCTION »: a box labelled « CONSTRUCTION » passes rightward through three gates labelled « ROUGE + BLEU », « GESTION INFO », « IDENTITÉ », into a final box labelled « PRODUCTION ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "De la centralisation de la prestation à la centralisation de la gouvernance"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cela déplace le travail du centre. Technologie et Innovation cesse d'être l'endroit où tous les logiciels sont livrés et devient l'endroit où tous les logiciels sont encadrés. Un plan de contrôle fondé sur la vérification surveille le parc : un agent affecté à chaque application, lisant chaque journal, faisant remonter les problèmes plus tôt et les corrigeant ou les bloquant à mesure qu'ils apparaissent. L'écart qui séparait jadis une application bâtie au centre d'une application bâtie par un ministère, en matière de sécurité et de protection de la vie privée, se referme, parce que les mêmes contrôles sont appliqués aux deux. Le risque qu'un agent s'emballe, ou qu'une construction négligée atteigne la production, tend vers zéro."
+    },
+    {
+      "type": "paragraph",
+      "text": "Rien n'est gratuit. Lorsque le coût d'une nouvelle application baisse suffisamment, le parc peut passer de 1 400 systèmes à quatorze mille ou cent quarante mille, et un nouveau type de dette technique s'installe. L'Alberta connaît déjà la forme de ce phénomène. Le gouvernement porte pas moins de 18 000 sites SharePoint, la plupart de peu de valeur et aucun facile à retirer; lorsque la plateforme sur place a atteint sa fin de vie, il en a coûté des millions pour migrer leur contenu, parce que les nettoyer d'abord était plus difficile que de les reporter. Nous sommes mauvais pour revenir mettre de l'ordre dans les données, et encore plus mauvais pour bien les étiqueter dès le départ."
+    },
+    {
+      "type": "paragraph",
+      "text": "La même automatisation qui crée la prolifération peut l'éliminer. Imaginez des agents qui indexent chaque fichier à mesure qu'il est écrit et s'en disposent selon des règles, de sorte qu'un document laissé dans un dossier, et avec le temps le dossier et le site qui l'entoure, s'efface simplement sous une politique automatisée. Une forêt fonctionne ainsi. Un arbre tombé s'empilerait à jamais si rien ne le consommait, jusqu'à ce que le sol ne soit plus que troncs; à la place, les bactéries décomposent les fibres au fil des années et les rendent au sol, et la croissance et la décomposition gardent un équilibre approximatif. Un parc de systèmes peut être bâti selon le même équilibre, en resserrant les règles de disposition de quelques semaines ou mois chaque fois que la croissance devance le coût. Le correctif plus profond, faire passer la classification des données de dossiers rigides vers les métadonnées, relève d'une discussion distincte sur les systèmes numériques intelligents; ici, il suffit que la création et le retrait puissent être ramenés au pas."
+    },
+    {
+      "type": "keystat",
+      "label": "La prolifération à anticiper",
+      "value": "18 000",
+      "body": "Sites SharePoint que le gouvernement porte déjà, la plupart de peu de valeur et aucun facile à retirer. Quand une nouvelle application ne coûte presque rien à créer, la croissance non gérée est le mode de défaillance à prévoir."
+    },
+    {
+      "type": "pullquote",
+      "text": "Notre mode passe de la centralisation de la prestation des TI à la centralisation de la gouvernance des TI.",
+      "cite": "Janak Alford, sous-ministre, ministère de la Technologie et de l'Innovation"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.4",
+      "title": "De la prestation centrale à la gouvernance centrale",
+      "caption": "Le centre cesse d'être l'endroit où tous les logiciels sont livrés et devient l'endroit où tous les logiciels sont encadrés : règles et vérification tenues au centre, construction faite aux extrémités, avec les mêmes contrôles appliqués aux deux.",
+      "image": {
+        "src": "public/images/oxj36/fr/fig-13-4.jpg",
+        "alt": "Un diagramme avant-après dessiné à la main. À gauche, étiqueté c'était la prestation centrale, de nombreuses flèches convergent vers une seule boîte centrale. À droite, étiqueté maintenant la gouvernance centrale, une boîte centrale fixe les règles et vérifie pendant que la construction se fait dans plusieurs boîtes en périphérie.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled « AVANT : PRESTATION CENTRALE », with many arrows from edge boxes funnelling through one central box. RIGHT panel labelled « MAINTENANT : GOUVERNANCE CENTRALE », with a central box labelled « RÈGLES + VÉRIFICATION » connected by thin oversight lines to several edge boxes labelled « CONSTRUCTION ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Le bâtisseur"
+    },
+    {
+      "type": "paragraph",
+      "text": "Une culture de bâtisseurs est l'habilitation délibérée de personnes non techniques à créer des solutions et à les garder entre les mains des personnes qui les utilisent. Elle prolonge le troisième niveau de l'[Académie d'IA de l'Alberta](/paper/dt725), où le personnel apprend à piloter Pronghorn, Nexus et Vélocité pour construire selon une norme d'entreprise. Donnez à ces diplômés un moyen encadré de déployer et de surveiller ce qu'ils construisent, avec la sécurité et la protection de la vie privée tissées dans les outils et vérifiées jusqu'à la production, et il reste peu de raisons d'interdire à un spécialiste non technique de construire sa propre application. Le goulot d'étranglement technique qui définissait l'ancien modèle commence à disparaître."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pendant des décennies, le logiciel a été une sorte d'art mystique, trop complexe pour s'en approcher sans un diplôme et des années de pratique, de sorte que le droit de construire était détenu par quelques-uns. Il vaut la peine de se demander qui cela servait. Personne ne profite d'un monde où seule la direction du trésor a droit à un chiffrier. Un modèle de pointe actuel est déjà à lui seul un meilleur développeur intégral, administrateur de bases de données et spécialiste de la sécurité que n'importe quelle personne. Les gens, dans l'ensemble, sont plus créatifs, et un spécialiste désigné surpasse encore le modèle dans son propre métier, pourtant aucun individu ne détient toutes ces compétences à la fois comme le fait le modèle. La tâche, maintenant, consiste à mettre l'outil à la portée de chaque équipe."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le bâtisseur est une personne dotée d'une connaissance approfondie d'un domaine, finances, sécurité publique, feux de forêt ou agriculture, qui voit un problème que la technologie pourrait résoudre et reçoit un endroit sûr pour essayer. Elle n'a besoin d'aucun financement de projet et n'entraîne aucun coût mesurable au-delà des jetons qu'elle dépense, et les premières données indiquent que les bonnes idées se paient d'elles-mêmes. Formées et équipées, de telles personnes donnent au gouvernement de nombreuses équipes de prestation au lieu d'une seule file d'attente. C'est le contrat social exposé dans le document de l'[Académie](/paper/dt725) sous une autre forme : une posture de sécurité renforcée, une prestation plus rapide et une réelle maîtrise des coûts, en échange du renvoi du travail créatif aux spécialistes qui comprennent le mieux le problème."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.5",
+      "title": "Le goulot d'étranglement disparaît",
+      "caption": "L'ancien modèle acheminait chaque construction par une étroite porte technique. Avec des outils encadrés dans chaque équipe, de nombreux experts de domaine construisent à la fois, sous les mêmes contrôles centraux.",
+      "image": {
+        "src": "public/images/oxj36/fr/fig-13-5.jpg",
+        "alt": "Un diagramme avant-après dessiné à la main. À gauche, une longue file d'éléments de travail attend à une seule porte étroite étiquetée TI. À droite, plusieurs bâtisseurs tiennent chacun une trousse d'outils d'IA et construisent directement, sous une barre commune étiquetée contrôles centraux.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled « UNE SEULE FILE »: a long line of small work items waits at a single narrow gate labelled « TI ». RIGHT panel labelled « DE NOMBREUX BÂTISSEURS »: four small workbench boxes each labelled « BÂTISSEUR » with a small toolkit icon, building in parallel beneath a horizontal bar labelled « CONTRÔLES CENTRAUX ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Le modèle inévitable, ou l'informatique fantôme"
+    },
+    {
+      "type": "paragraph",
+      "text": "Une version de cela s'en vient, qu'elle soit autorisée ou non. Si les TI centrales ne peuvent livrer à la vitesse dont les ministères ont besoin, l'IA devient le moyen le plus rapide de construire, et elle sera utilisée, sans aucun des contrôles décrits ici. Des applications codées au feeling apparaîtront à l'extérieur de la clôture, exposant le gouvernement, et on en blâmera la technologie. Le danger est une attribution erronée : les modèles sont hautement performants, et l'essentiel du risque réside dans la façon dont les gens les utilisent, sans la discipline de sécurité, de protection de la vie privée et de données qu'exige un usage sûr. Une réaction négative contre l'IA fondée sur cette confusion viserait la mauvaise cible."
+    },
+    {
+      "type": "paragraph",
+      "text": "La dimension cybernétique rend le moment urgent. Nous n'avons pas encore vu à quel point l'IA entre les mains de criminels deviendra dangereuse, et au cours de la prochaine année, nous nous attendons à des attaques sérieuses, peut-être dommageables, contre les systèmes gouvernementaux, bâties ou guidées par l'IA. L'[Impératif cybernétique](/paper/mwo98) en fait l'argument plus large. Prolonger l'académie en une culture de bâtisseurs, c'est ainsi que l'Alberta entend maintenir une vélocité élevée et un coût maîtrisé tout en gardant la construction à l'intérieur de la clôture, là où les contrôles tiennent."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.6",
+      "title": "À l'intérieur de la clôture, ou l'informatique fantôme",
+      "caption": "Si la construction autorisée est trop lente, l'IA devient le chemin le plus rapide vers la construction non autorisée. Les mêmes outils, utilisés hors des contrôles, exposent le gouvernement, et la technologie porte le blâme.",
+      "image": {
+        "src": "public/images/oxj36/fr/fig-13-6.jpg",
+        "alt": "Un diagramme dessiné à la main avec une clôture au milieu. À l'intérieur de la clôture, un sentier étiqueté autorisé traverse des contrôles vers une boîte sûre. À l'extérieur de la clôture, un sentier étiqueté informatique fantôme contourne les contrôles et se termine à une boîte marquée exposé.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A vertical fence runs down the middle. On the inside, a path labelled « AUTORISÉ » passes through a small gate labelled « CONTRÔLES » to a box labelled « SÛR ». On the outside, a path labelled « INFORMATIQUE FANTÔME » runs around the fence, skipping the controls, ending at a box labelled « EXPOSÉ » with a small rust warning mark. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Un modèle de conseil, et une invitation"
+    },
+    {
+      "type": "paragraph",
+      "text": "La forme probable de cela est un modèle de conseil à la place d'un modèle de prestation. L'IA fait la mise en œuvre. Technologie et Innovation fournit la forteresse, la gouvernance de la technologie, la gestion des fournisseurs et les contrôles, et elle travaille aux côtés des ministères à titre de conseil : aidant à concevoir des solutions et des architectures, trouvant des usages inédits des modèles et supervisant la façon dont les modèles les plus récents entrent dans l'environnement en toute sécurité. La créativité vient des ministères partenaires qui connaissent le travail; le centre la garde solide."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cela cadre avec le modèle hybride décentralisé que l'Alberta adopte déjà ailleurs, gouvernance tenue au centre avec prestation sur les rayons, dans la façon dont la province gère les données et l'approvisionnement, et il est raisonnable de s'attendre à ce que l'IA nous permette de mener l'élaboration de solutions de la même manière. Nous prévoyons mettre à l'essai une culture de bâtisseurs au cours de 2026, et nous publierons ce que nous en apprendrons. Les ministères partenaires qui souhaitent l'explorer avec nous, et les autres gouvernements qui pèsent le même virage, sont chaleureusement invités à y prendre part."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 13.7",
+      "title": "Gouvernance au centre, prestation sur les rayons",
+      "caption": "Un modèle hybride décentralisé : le centre tient la gouvernance, les ministères livrent. L'Alberta mène déjà les données et l'approvisionnement de cette façon, et l'IA permet à l'élaboration de solutions de les rejoindre.",
+      "image": {
+        "src": "public/images/oxj36/fr/fig-13-7.jpg",
+        "alt": "Un diagramme en étoile dessiné à la main. Un moyeu central étiqueté gouvernance se relie par des rayons à plusieurs nœuds extérieurs étiquetés prestation, trois des rayons portant les étiquettes données, approvisionnement et élaboration de solutions.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A central hub labelled « GOUVERNANCE » connects by straight spokes to six outer nodes labelled « PRESTATION ». Three of the spokes carry small tags reading « DONNÉES », « APPROVISIONNEMENT », and « ÉLABORATION DE SOLUTIONS ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "builder-culture",
+        "democratization",
+        "governance",
+        "shadow-it",
+        "operating-model"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
   },
-  "related": []
+  "translation_status": "draft",
+  "related": [
+    "dt725",
+    "p7p2k",
+    "qthji",
+    "uwpxr",
+    "k3tc3"
+  ]
 }

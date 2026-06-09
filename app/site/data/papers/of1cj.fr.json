@@ -5,21 +5,30 @@
   "tier": "Technical",
   "category": "paper",
   "title": "Technique : Le harnais anti-dérive",
-  "subtitle": "Garder le travail d'un agent aligné sur l'intention tout au long d'un build.",
+  "subtitle": "Comment un ensemble d'aides automatisées garde toutes les parties d'une base de code en croissance en accord les unes avec les autres pendant qu'une IA la construit, expliqué pièce par pièce.",
   "track": "Technical Appendix",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 14,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "anti-drift",
+    "harness",
+    "agents",
+    "quality",
+    "observability",
+    "change-management"
+  ],
   "repo": null,
-  "abstract": "À venir. Le corps sera rédigé à partir de sources. This is one of three technical appendices that round out the collection.",
+  "abstract": "À mesure que les applications gagnent en complexité, des modifications apportées à une partie du code peuvent provoquer des bris ailleurs. Des changements à une fonctionnalité de l'interface peuvent se désynchroniser de l'API, des contrôleurs, de la base de données, du modèle de sécurité et de la documentation technique. Les agents d'IA ne sont pas, à eux seuls, assez rigoureux pour comprendre ou prévenir ces bris. Lorsque ces artéfacts se désynchronisent, on peut dire qu'il y a « dérive ». Ce document conceptuel explique le « harnais anti-dérive », un ensemble d'aides automatisées qui surveillent la dérive et signalent les problèmes à l'agent constructeur en temps réel.",
   "hero_image": {
     "src": "public/images/of1cj/fr/hero.jpg",
-    "alt": "Editorial image for: Le harnais anti-dérive",
-    "image_prompt": "An editorial cover image for the technical appendix titled \"Le harnais anti-dérive\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Image éditoriale pour : Le harnais anti-dérive",
+    "image_prompt": "An editorial cover image for the technical appendix titled \"Le harnais anti-dérive\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -27,18 +36,86 @@
   },
   "tldr_presentation": {
     "id": "of1cj-tldr",
-    "title": "Le livre, en bref",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "of1cj",
     "slides": [
       {
         "id": "01",
-        "title": "Technique : Le harnais anti-dérive",
+        "title": "Le harnais anti-dérive",
         "audio_file": "public/audio/fr/of1cj-tldr/01.mp3",
         "visual": "title",
-        "caption": "Annexe technique",
-        "subcaption": "",
-        "text": "Le harnais anti-dérive. Contenu à venir."
+        "caption": "Annexe technique · document 17",
+        "subcaption": "Garder toutes les parties d'une base de code en croissance en accord pendant qu'une IA la construit.",
+        "text": "Un assistant de codage par IA fait du bon travail à chaque modification. Le problème est plus discret et plus lent : à mesure qu'un projet grandit, les nombreuses pièces d'une fonctionnalité, l'exigence, la base de données, les écrans, les textes d'aide, cessent de s'accorder les unes avec les autres. C'est ce qu'on appelle la dérive. Le harnais anti-dérive est un ensemble d'aides automatisées qui la surveillent pendant que le travail se fait et la signalent, plutôt que de laisser une personne la détecter plus tard."
+      },
+      {
+        "id": "02",
+        "title": "Ça fonctionne, mais est-ce bien construit?",
+        "audio_file": "public/audio/fr/of1cj-tldr/02.mp3",
+        "visual": "stat",
+        "caption": "Là où se cache le coût caché",
+        "visual_config": {
+          "stat_value": "7–10 %",
+          "stat_label": "du travail se transforme en reprises qui s'accumulent avec le temps, surtout de la dérive entre pièces liées"
+        },
+        "subcaption": "Le code d'une IA peut être correct à 98 ou 100 pour cent et fonctionner, tout en n'étant bien construit en dessous qu'à environ 90 pour cent.",
+        "text": "Le code d'une IA fonctionne presque toujours. En dessous, il est habituellement, mais pas toujours, bien construit. Cet écart est le coût caché, et il s'agit surtout de dérive entre pièces liées plutôt que d'un bogue pur et simple. Quand l'IA modifie une pièce, elle met à jour une voisine ou deux et passe à autre chose; les autres se périment silencieusement."
+      },
+      {
+        "id": "03",
+        "title": "Une fonctionnalité est une chaîne",
+        "audio_file": "public/audio/fr/of1cj-tldr/03.mp3",
+        "visual": "title",
+        "caption": "De la demande à la formation",
+        "subcaption": "Changez une pièce et le reste doit changer pour s'y accorder.",
+        "text": "Une fonctionnalité est une chaîne de pièces reliées, depuis ce qui a été demandé, en passant par la base de données et le code, jusqu'aux écrans, à la documentation et à la formation du personnel. Changez-en une et le reste doit changer pour s'y accorder. La dérive, c'est ce qui arrive quand ce n'est pas le cas, et elle se propage à la fois le long d'une fonctionnalité et entre les fonctionnalités qui partagent des pièces."
+      },
+      {
+        "id": "04",
+        "title": "Sept façons de la détecter",
+        "audio_file": "public/audio/fr/of1cj-tldr/04.mp3",
+        "visual": "list",
+        "caption": "Des vérifications simples, surtout automatiques",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Suivre le changement",
+              "desc": "Tracer une modification vers l'extérieur et signaler où les pièces ne concordent plus (l'arpenteur de chaîne)."
+            },
+            {
+              "label": "Cartographier l'activité",
+              "desc": "Une carte de chaleur des fichiers qui changent, pour que les vérifications sachent où regarder (l'empreinte)."
+            },
+            {
+              "label": "Petits tests automatiques",
+              "desc": "Des vérifications rapides qu'une paire de pièces s'accorde encore, qui grandissent avec le projet (les évals)."
+            },
+            {
+              "label": "Notes, fiches, balayages, un tableau",
+              "desc": "Des notes de sauvegarde structurées, des fiches par fichier, une liste de contrôle de fin d'étape et un tableau de bord partagé."
+            }
+          ]
+        },
+        "text": "Sept approches, depuis le suivi d'un seul changement vers l'extérieur jusqu'à un tableau de bord partagé de l'ensemble du projet. La majeure partie de la vérification se fait au moyen d'une logique fixe et répétable; on demande à l'IA de juger uniquement là où le jugement est véritablement nécessaire."
+      },
+      {
+        "id": "05",
+        "title": "Des surveillants en marge",
+        "audio_file": "public/audio/fr/of1cj-tldr/05.mp3",
+        "visual": "title",
+        "caption": "Pas un second constructeur",
+        "subcaption": "Ils observent et laissent des notes que le constructeur récupère.",
+        "text": "Les surveillants s'exécutent à côté du projet, et non à l'intérieur du constructeur. Chacun observe les fichiers, lance ses vérifications quand quelque chose change et laisse une note dans un dossier partagé. Le constructeur lit les notes au début de son étape suivante et les traite comme n'importe quelle autre tâche. Comme les notes ne sont que des fichiers, un surveillant en difficulté ne perturbe jamais le constructeur."
+      },
+      {
+        "id": "06",
+        "title": "Où il se situe",
+        "audio_file": "public/audio/fr/of1cj-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Une partie de la collection",
+        "subcaption": "Sous le harnais du « bien construit »; aux côtés des quatre agents de revue.",
+        "text": "Ceci se situe sous le harnais du « bien construit » et fonctionne aux côtés des agents de revue rouge, vert, bleu et jaune. Il répond à la même pression que décrit le problème de la compression : à mesure que l'échelle grandit, du détail se perd à chaque transfert. Le harnais existe pour que la vérification s'exécute d'elle-même, qu'une personne s'en souvienne ou non."
       }
     ]
   },
@@ -46,23 +123,656 @@
   "sections": [
     {
       "n": "01",
-      "title": "Aperçu"
+      "title": "Le problème de la dérive"
+    },
+    {
+      "n": "02",
+      "title": "Une fonctionnalité est une chaîne"
+    },
+    {
+      "n": "03",
+      "title": "Contrôle 1 : Suivre le changement (l'arpenteur de chaîne)"
+    },
+    {
+      "n": "04",
+      "title": "Contrôle 2 : Cartographier l'activité (la carte de chaleur des empreintes)"
+    },
+    {
+      "n": "05",
+      "title": "Contrôle 3 : Petits tests automatiques (les évals de chaîne)"
+    },
+    {
+      "n": "06",
+      "title": "Contrôle 4 : Faire compter la note de sauvegarde (l'épine des commits)"
+    },
+    {
+      "n": "07",
+      "title": "Contrôle 5 : Une fiche par fichier (le manifeste des dépendances)"
+    },
+    {
+      "n": "08",
+      "title": "Contrôle 6 : Une liste de contrôle de fin d'étape (le balayage de dérive)"
+    },
+    {
+      "n": "09",
+      "title": "Contrôle 7 : Le tableau de bord partagé (le tableau de tuiles)"
+    },
+    {
+      "n": "10",
+      "title": "Des surveillants en marge"
+    },
+    {
+      "n": "11",
+      "title": "Comment les combiner, et ce qui reste à trancher"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Les applications logicielles modulaires modernes se composent de fonctionnalités qui sont souvent constituées de dizaines de fichiers. Ces composants fonctionnent fréquemment comme des « chaînes » de pièces reliées, couvrant l'exigence écrite, la conception de la base de données, la logique du programme, les interfaces utilisateur, la documentation et les ressources de formation. Quand une IA modifie une pièce, ce composant peut facilement se désynchroniser du reste de la base de code. Même si chaque modification est correcte, l'intégrité de l'application commence à s'éroder à chaque changement subséquent. Pour résoudre ce problème, nous construisons un harnais qui contient plusieurs aides automatisées distinctes afin que les applications demeurent intactes au fil d'une variété de modifications."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Aperçu"
+      "title": "Le problème de la dérive"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Contenu à venir.</strong> La structure est en place; le corps sera rédigé à partir de sources."
+      "text": "Lorsqu'on demande à une IA d'implémenter un changement dans un secteur, comme l'ajout d'un nouveau champ à un formulaire, l'agent accomplira ce travail rapidement. Cependant, il pourrait ne pas vérifier le reste du code pour voir ce que ce changement a touché par ailleurs. Par exemple, si vous ajoutez un champ « Deuxième prénom » à un formulaire, cette information doit se refléter dans la base de données, la logique d'affaires, la validation du formulaire, la documentation, et même dans les captures d'écran utilisées pour la formation. Parce qu'il est focalisé au laser sur la tâche que vous lui confiez, l'agent d'IA omet souvent d'effectuer les vérifications nécessaires pour s'assurer que le code dans son ensemble est intact."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un utilisateur d'IA expérimenté fera une pause toutes les quelques étapes et invitera l'agent à tout vérifier, ce que l'agent fera, constatant souvent que des incohérences ont été introduites. Ces incohérences sont connues sous le nom de « régressions » ou de « dérive » dans le domaine de l'IA. Bien que l'agent puisse détecter cette dérive lorsqu'on l'y invite, cela exige de la rigueur de la part de l'utilisateur, qui doit penser à le demander. Mais compter sur l'utilisateur pour s'en souvenir, ou sur l'IA pour faire les vérifications de la même manière chaque fois, est risqué. C'est pourquoi nous introduisons un ensemble commun de procédures pour détecter la dérive et la signaler à l'agent de façon proactive, que quelqu'un s'en souvienne ou non."
+    },
+    {
+      "type": "paragraph",
+      "text": "La dérive est facile à manquer. Souvent, le code modifié peut toujours fonctionner. Mais ce qui est invisible, c'est le bris dans la cohérence et la fidélité de l'application. Et de plus, cette dérive ouvre la porte à une incohérence qui s'aggrave avec le temps. Si cette même interface utilisateur comporte un champ « Deuxième prénom », mais que la base de données ne l'a pas, ce bogue pourrait ne pas être détecté immédiatement. Pire encore, l'agent d'IA réexaminera ce code plus tard et pourra trouver l'incohérence, mais il n'y aura aucune réponse faisant autorité quant au fichier qui est correct. Les problèmes commencent à s'accumuler, et l'IA pourrait même annuler un changement parce qu'elle trouve le bogue et fait la mauvaise attribution. Le code est son propre type de documentation, et lorsqu'il y a des désaccords, la dérive s'aggrave de façon invisible. "
+    },
+    {
+      "type": "pullquote",
+      "text": "Le code produit par une IA est généralement correct du point de vue fonctionnel à 98 ou 100 pour cent, en ce sens qu'il se compile et s'exécute. Mais ses pratiques font croître la dérive de façon invisible avec le temps, et la base de code se fragmente à chaque révision.",
+      "cite": ""
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Une fonctionnalité est une chaîne"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le code des applications modernes cherche à être « modulaire », c'est-à-dire que les composants sont construits une seule fois et réutilisés à plusieurs reprises au besoin, et « DRY », un acronyme anglais signifiant « Don't Repeat Yourself » (ne vous répétez pas). Ces pratiques font en sorte que vous créez le code une seule fois et que vos applications sont faciles à entretenir. Mais cela signifie aussi que les fonctionnalités sont souvent découpées en petites pièces interconnectées. Quand un fichier en requiert un autre, on parle d'une dépendance. Les fonctionnalités peuvent alors être constituées de « chaînes » de dépendances. Quand l'IA modifie un maillon de cette chaîne, elle met souvent à jour de façon fiable le maillon ou les deux maillons juste à côté, parce que les dépendances sont claires, puis elle s'arrête. Plus tard, lorsque le travail reprend ailleurs, l'IA peut lire une autre partie de la chaîne, désormais périmée, et bâtir par-dessus. La chaîne se brise un peu plus à chaque fois. Retirez un champ de la base de données, par exemple, et ce changement doit se répercuter jusqu'à l'écran, à la documentation et aux notes de formation. La plupart du temps, ce n'est pas le cas."
+    },
+    {
+      "type": "paragraph",
+      "text": "La dérive d'une application voyage fréquemment de deux façons. Elle voyage le long de la chaîne d'une fonctionnalité, maillon par maillon. Et elle voyage entre les fonctionnalités, quand quelque chose de partagé, un composant renommé ou une bibliothèque périmée, change à un endroit et brise discrètement un autre. Un bon harnais détecte les deux, et il les détecte pendant que le travail se fait, et non lors d'un nettoyage des mois plus tard. Les sept contrôles anti-dérive qui suivent offrent des stratégies pour repérer et maintenir l'intégrité. Chacun est bâti à partir de petites pièces réutilisables : de courts fichiers d'instructions que l'IA suit (appelés compétences, ou « skills »), des déclencheurs automatiques qui se déclenchent à des moments fixés (appelés crochets, ou « hooks »), et des vérifications automatiques rapides (appelées évals). Ces méthodes s'installent aux côtés de l'agent constructeur et appuient l'audit du processus de développement."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Contrôle 1 : Suivre le changement (l'arpenteur de chaîne)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette première fonctionnalité suit le changement vers l'extérieur le long de la chaîne des dépendances de la fonctionnalité. Dès que l'IA modifie un fichier, l'arpenteur part de ce fichier et passe à ses voisins dans les deux directions : les pièces qui l'alimentent et les pièces qui en dépendent. À chaque étape, il compare les deux extrémités. Les noms, les champs, les promesses concordent-ils toujours? Là où ce n'est pas le cas, il consigne exactement ce qui s'est désaligné. Il continue d'arpenter jusqu'à une distance fixée et produit un rapport bien rangé de ce qui a dérivé. Son avantage est la portée : il vérifie toute la chaîne plutôt que le maillon ou les deux maillons à côté du changement, et ses constats sont assez précis pour qu'un réviseur puisse voir exactement ce qui ne s'accorde plus."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.1",
+      "title": "Un changement se propage d'un pas, puis la dérive s'accumule",
+      "caption": "Les quatorze maillons d'une fonctionnalité présentés en colonnes. Un changement survient et se propage à ses voisins immédiats, puis s'arrête. Les maillons qu'il aurait dû atteindre mais n'a pas atteints sont plus tard signalés comme de la dérive, et le surveillant les marque et laisse des notes.",
+      "chart": {
+        "kind": "of1cj:chain"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Suivre le changement, en termes simples",
+      "columns": [
+        "Aspect",
+        "En termes simples"
+      ],
+      "rows": [
+        [
+          "Ce qu'il fait",
+          "Suit un changement vers l'extérieur le long de la chaîne et signale où les pièces ne concordent plus."
+        ],
+        [
+          "Quand il s'exécute",
+          "Dès que l'IA enregistre un changement dans un fichier, et une fois de plus à la fin de chaque étape."
+        ],
+        [
+          "Ce qu'il laisse derrière",
+          "Un court rapport enregistré à côté du code, listant exactement ce qui a dérivé."
+        ],
+        [
+          "Idéal pour",
+          "Détecter la dérive partout le long de la chaîne, avec des constats précis et vérifiables."
+        ],
+        [
+          "À surveiller",
+          "Il fait un vrai travail à chaque modification, il a donc un coût; et quelqu'un doit définir ce que « concorder » signifie pour chaque type de maillon."
+        ]
+      ],
+      "source": "Inventaire des approches du harnais anti-dérive."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Contrôle 2 : Cartographier l'activité (la carte de chaleur des empreintes)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette méthode tient un registre de l'endroit où le travail se fait. Chaque fois que l'IA touche un fichier, elle ajoute une marque. Une simple carte de chaleur montre alors le projet sous forme de grille de tuiles, où les fichiers les plus actifs brillent le plus fort et où le changement le plus récent est marqué. À elle seule, elle ne détecte aucune dérive. Ce qu'elle vous donne, c'est une empreinte de l'endroit où l'action s'est déroulée, pour que les autres vérifications, plus intelligentes, sachent où regarder en premier. Elle est peu coûteuse, ne nécessite aucune configuration et est utile dès le premier jour."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.2",
+      "title": "Là où le travail s'est déroulé",
+      "caption": "Les fichiers regroupés par dossier; chaque tuile brille d'autant plus qu'elle est modifiée. Les nouvelles modifications clignotent, puis se stabilisent. Les fichiers les plus actifs sont marqués comme des points chauds que les autres vérifications examineront en premier.",
+      "chart": {
+        "kind": "of1cj:heatmap"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Cartographier l'activité, en termes simples",
+      "columns": [
+        "Aspect",
+        "En termes simples"
+      ],
+      "rows": [
+        [
+          "Ce qu'elle fait",
+          "Tient un décompte courant des fichiers qui sont modifiés et l'affiche sous forme de carte de chaleur."
+        ],
+        [
+          "Quand elle s'exécute",
+          "Discrètement, à chaque modification; l'image est dessinée chaque fois que vous la demandez."
+        ],
+        [
+          "Ce qu'elle laisse derrière",
+          "Un journal simple et une image partageable de l'endroit où le travail s'est déroulé."
+        ],
+        [
+          "Idéal pour",
+          "Voir les points chauds d'un coup d'œil et y diriger les autres vérifications. Fonctionne dès le premier jour."
+        ],
+        [
+          "À surveiller",
+          "Elle ne montre que l'activité; elle ne détecte pas la dérive à elle seule, alors jumelez-la avec une qui le fait."
+        ]
+      ],
+      "source": "Inventaire des approches du harnais anti-dérive."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Contrôle 3 : Petits tests automatiques (les évals de chaîne)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce contrôle effectue un petit test automatique pour un type précis de discordance. La conception de la base de données correspond-elle au script qui la construit? L'interface publiée correspond-elle à sa documentation? Chaque test lit les deux extrémités et signale toute différence. Les tests résident juste à côté du code et grandissent avec le projet : quand un nouveau type de maillon apparaît, vous ajoutez un test pour lui. Chaque fois que l'IA modifie un fichier, seuls les tests qui touchent ce fichier s'exécutent. Ils sont rapides, donnent la même réponse chaque fois, et parce que l'équipe les écrit, ils détectent exactement les erreurs que ce projet a tendance à commettre."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.3",
+      "title": "De petites vérifications, exécution après exécution",
+      "caption": "Chaque rangée est une paire de pièces qui devraient s'accorder; chaque colonne est une exécution récente. Vert = réussi, ambre = avertissement, rouge = échec. Une vérification échouée laisse une note.",
+      "chart": {
+        "kind": "of1cj:evals"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Petits tests automatiques, en termes simples",
+      "columns": [
+        "Aspect",
+        "En termes simples"
+      ],
+      "rows": [
+        [
+          "Ce qu'ils font",
+          "Exécutent de petits tests automatiques, chacun vérifiant qu'une paire précise de pièces s'accorde toujours."
+        ],
+        [
+          "Quand ils s'exécutent",
+          "Instantanément, chaque fois qu'un fichier qui intéresse ces tests est modifié."
+        ],
+        [
+          "Ce qu'ils laissent derrière",
+          "Un résultat clair de réussite ou d'échec pour chaque vérification, enregistré avec le code."
+        ],
+        [
+          "Idéal pour",
+          "Des vérifications rapides et répétables, accordées aux erreurs courantes propres au projet."
+        ],
+        [
+          "À surveiller",
+          "Quelqu'un doit écrire les tests et les tenir à jour à mesure que le code change de forme."
+        ]
+      ],
+      "source": "Inventaire des approches du harnais anti-dérive."
+    },
+    {
+      "type": "pullquote",
+      "text": "Le surveillant anti-dérive n'écrit jamais l'application lui-même. Il surveille le constructeur, lit les preuves que produisent les vérifications automatiques, les confirme par rapport au code, et décide si quelque chose mérite d'être signalé. Du contrôle de la circulation aérienne, pas un pilote.",
+      "cite": "Le harnais anti-dérive, note de conception"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Contrôle 4 : Faire compter la note de sauvegarde (l'épine des commits)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les développeurs enregistrent déjà leur travail par lots, chacun accompagné d'une courte note qui le décrit (un commit). Cette approche fait jouer un double rôle à cette note. La note suit un modèle fixé qui liste les pièces touchées par le changement et les pièces liées qui ont été vérifiées. Quand le développeur dépose le lot, une vérification automatique s'assure que la note est complète avant de la laisser passer, et l'IA rédige la note à partir de ce qu'elle a réellement changé. Parce que cela se produit au moment où le travail est classé, le registre est digne de confiance, et avec le temps l'historique du projet devient un compte rendu interrogeable de ce qui a changé et de ce qui a été tenu en phase."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.4",
+      "title": "Chaque sauvegarde, comme un registre de ce qui a été tenu en phase",
+      "caption": "Chaque lot de travail enregistré liste les pièces qu'il a touchées. Les marqueurs s'allument à mesure que chaque lot atterrit, et un décompte montre quelle proportion de la chaîne a été tenue en phase.",
+      "chart": {
+        "kind": "of1cj:commits"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Faire compter la note de sauvegarde, en termes simples",
+      "columns": [
+        "Aspect",
+        "En termes simples"
+      ],
+      "rows": [
+        [
+          "Ce qu'elle fait",
+          "Transforme chaque lot de travail enregistré en une note structurée de ce qui a changé et de ce qui a été vérifié."
+        ],
+        [
+          "Quand elle s'exécute",
+          "Au moment où un développeur dépose un lot de travail (un commit)."
+        ],
+        [
+          "Ce qu'elle laisse derrière",
+          "L'historique ordinaire du projet, désormais un registre interrogeable de ce qui est resté synchronisé."
+        ],
+        [
+          "Idéal pour",
+          "Presque gratuit à adopter; il réutilise un registre que les équipes tiennent déjà."
+        ],
+        [
+          "À surveiller",
+          "Il consigne ce qui était prévu au moment du dépôt, et non si chaque pièce a réellement été mise à jour."
+        ]
+      ],
+      "source": "Inventaire des approches du harnais anti-dérive."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Contrôle 5 : Une fiche par fichier (le manifeste des dépendances)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette méthode attribue à chaque fichier important une petite fiche listant ce qui l'alimente et ce qui en dépend. La fiche est reconstruite chaque fois que le fichier change, et une vérification rapide compare la fiche au contenu réel du fichier pour repérer toute incohérence. Un petit diagramme montre ensuite le fichier au centre, avec ce qui entre empilé au-dessus et ce qui sort en dessous, chaque élément marqué sain, périmé ou brisé. Parce que chaque relation est écrite clairement, les autres vérifications peuvent lire les fiches au lieu de relire tout le code."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.5",
+      "title": "Un fichier, ce qui l'alimente et ce qui en dépend",
+      "caption": "Le fichier modifié se trouve au centre, avec ce qui l'alimente au-dessus et ce qui en dépend en dessous. Chaque connexion est marquée saine, périmée ou brisée; celle qui est brisée reçoit une note.",
+      "chart": {
+        "kind": "of1cj:manifest"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Une fiche par fichier, en termes simples",
+      "columns": [
+        "Aspect",
+        "En termes simples"
+      ],
+      "rows": [
+        [
+          "Ce qu'elle fait",
+          "Donne à chaque fichier une fiche de ce dont il dépend et de ce qui dépend de lui, et vérifie que la fiche reste exacte."
+        ],
+        [
+          "Quand elle s'exécute",
+          "Chaque fois qu'un fichier est modifié."
+        ],
+        [
+          "Ce qu'elle laisse derrière",
+          "Une petite fiche lisible par fichier, plus un bilan de santé."
+        ],
+        [
+          "Idéal pour",
+          "Une image claire, fichier par fichier, de la manière dont les choses se connectent, qui reste lisible à mesure que le projet grandit."
+        ],
+        [
+          "À surveiller",
+          "Les fiches peuvent prendre du retard sur la réalité si une relation est manquée; beaucoup de fichiers signifie beaucoup de fiches."
+        ]
+      ],
+      "source": "Inventaire des approches du harnais anti-dérive."
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Contrôle 6 : Une liste de contrôle de fin d'étape (le balayage de dérive)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ceci exécute automatiquement la liste de contrôle de fin d'étape de la personne, à la fin de chaque étape. Il vérifie les choses évidentes : la documentation correspond-elle à l'interface en service, les champs de la base de données apparaissent-ils là où ils le devraient, les notes de formation décrivent-elles les écrans actuels? Il produit un court rapport par étape. Si trop de dérive est survenue, il peut arrêter l'IA et exiger que la dérive soit corrigée avant que le travail ne se poursuive. Il s'exécute une fois par étape plutôt qu'à chaque modification, de sorte que son coût est prévisible, et il peut tenir la ligne en refusant d'avancer tant que les choses ne sont pas revenues en accord."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.6",
+      "title": "Une lecture de santé à la fin de chaque étape",
+      "caption": "Après chaque étape, les quatorze maillons sont marqués propres, en avertissement ou dignes d'un arrêt, avec l'historique empilé en dessous. Un maillon digne d'un arrêt doit être corrigé avant l'étape suivante.",
+      "chart": {
+        "kind": "of1cj:sweep"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Une liste de contrôle de fin d'étape, en termes simples",
+      "columns": [
+        "Aspect",
+        "En termes simples"
+      ],
+      "rows": [
+        [
+          "Ce qu'il fait",
+          "Exécute automatiquement la liste de contrôle de fin d'étape et peut suspendre le travail jusqu'à ce que la dérive soit corrigée."
+        ],
+        [
+          "Quand il s'exécute",
+          "Une fois à la fin de chaque étape (quand l'IA s'arrête)."
+        ],
+        [
+          "Ce qu'il laisse derrière",
+          "Un court rapport de santé pour chaque étape."
+        ],
+        [
+          "Idéal pour",
+          "Épouser le rythme que les gens utilisent déjà, à un coût prévisible, et pouvoir arrêter la ligne."
+        ],
+        [
+          "À surveiller",
+          "Il détecte la dérive une fois l'étape terminée, et un mauvais seuil soit harcèle, soit laisse les choses glisser."
+        ]
+      ],
+      "source": "Inventaire des approches du harnais anti-dérive."
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Contrôle 7 : Le tableau de bord partagé (le tableau de tuiles)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Voici le tableau de bord pour l'humain et l'IA. Il dessine le projet sous forme de grille, les fonctionnalités d'un côté et les quatorze maillons en haut, et colore chaque case en fonction de ce que les autres vérifications ont trouvé. C'est une page unique que l'équipe peut ouvrir pour voir, d'un coup d'œil, où tout se situe, et il peut afficher les résultats de n'importe laquelle des autres approches sans les modifier. La figure 17.7 le montre en marche en direct : le constructeur travaille, le surveillant anti-dérive balaie l'ensemble, et les notes signalées s'accumulent."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.7",
+      "title": "Le tableau de bord partagé, avec un constructeur et un balayage",
+      "caption": "Les fonctionnalités sur le côté, les quatorze maillons en haut. Le constructeur progresse à travers plusieurs étapes; le surveillant balaie ensuite l'ensemble, les cases périmées s'allument, et les notes s'accumulent dans le dossier partagé.",
+      "chart": {
+        "kind": "of1cj:board"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Le tableau de bord partagé, en termes simples",
+      "columns": [
+        "Aspect",
+        "En termes simples"
+      ],
+      "rows": [
+        [
+          "Ce qu'il fait",
+          "Montre l'ensemble du projet sous forme de grille codée par couleur, alimentée par ce que trouvent les autres vérifications."
+        ],
+        [
+          "Quand il s'exécute",
+          "Se rafraîchit à la fin de chaque étape, ou chaque fois que vous l'ouvrez."
+        ],
+        [
+          "Ce qu'il laisse derrière",
+          "Une page de tableau de bord unique et partageable."
+        ],
+        [
+          "Idéal pour",
+          "Voir l'état de tout d'un coup d'œil; c'est la vue partagée de l'équipe."
+        ],
+        [
+          "À surveiller",
+          "Il ne fait qu'afficher; il lui faut au moins une des autres vérifications derrière lui pour être utile."
+        ]
+      ],
+      "source": "Inventaire des approches du harnais anti-dérive."
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "Des surveillants en marge"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces contrôles se greffent à l'agent constructeur. Un seul agent d'IA, surchargé de toutes les préoccupations à la fois, dérive, sécurité, tests, documentation, style d'écriture, devient débordé, et ses instructions enflent jusqu'à ce qu'elles cessent d'aider. Le harnais anti-dérive applique une approche de surveillant ou de superviseur. Le constructeur garde son attention sur la construction. Les surveillants s'exécutent séparément, à côté du projet, comme leurs propres agents parallèles. Chacun observe les fichiers du projet, lance ses propres vérifications quand quelque chose change, et laisse une note, un billet, dans un dossier partagé à l'intention du constructeur. L'agent constructeur lit ces billets au début de son étape suivante et les traite comme n'importe quelle autre tâche."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque surveillant peut s'exécuter selon son propre horaire, et même sur une IA moins coûteuse pour les vérifications de routine, réservant le modèle le plus puissant pour les décisions difficiles. Ajouter une nouvelle préoccupation signifie ajouter un nouveau surveillant, et non en empiler davantage sur le constructeur. La figure 17.7 est cette idée en miniature : le surveillant anti-dérive qui observe, balaie et laisse des notes pendant que le constructeur travaille."
+    },
+    {
+      "type": "table",
+      "title": "Comment voyage une note",
+      "columns": [
+        "Étape",
+        "Où elle réside",
+        "Ce qui la fait avancer"
+      ],
+      "rows": [
+        [
+          "Nouvelle",
+          "le dossier « ouvert »",
+          "Un surveillant remarque quelque chose et écrit une note."
+        ],
+        [
+          "Vue",
+          "le dossier « pris en compte »",
+          "Le constructeur la lit au début d'une étape et la marque en cours."
+        ],
+        [
+          "Corrigée",
+          "le dossier « résolu »",
+          "Le constructeur la corrige, écrit comment, et la classe."
+        ],
+        [
+          "Classée",
+          "une archive datée",
+          "Un rangement hebdomadaire déplace les anciennes notes résolues hors du chemin."
+        ]
+      ],
+      "caption": "Chaque note est un petit fichier consignant ce qui a changé, les preuves à l'appui, une correction suggérée, et quel surveillant l'a soulevée.",
+      "source": "Patron observateur du harnais anti-dérive."
+    },
+    {
+      "type": "table",
+      "title": "Qui fait quoi",
+      "columns": [
+        "Tâche",
+        "Qui la fait"
+      ],
+      "rows": [
+        [
+          "Écrire l'application",
+          "Le constructeur"
+        ],
+        [
+          "Surveiller la dérive entre les pièces",
+          "Le surveillant anti-dérive"
+        ],
+        [
+          "Revue de sécurité",
+          "Le surveillant de sécurité"
+        ],
+        [
+          "Repérer les tests manquants",
+          "Le surveillant de couverture"
+        ],
+        [
+          "Tenir la documentation à jour",
+          "Le surveillant de documentation"
+        ],
+        [
+          "Faire respecter le style d'écriture",
+          "Le surveillant de style"
+        ],
+        [
+          "Surveiller la performance",
+          "Le surveillant de performance"
+        ],
+        [
+          "Transporter les notes entre eux",
+          "Un dossier partagé dans le projet"
+        ],
+        [
+          "Agir sur les notes",
+          "Le constructeur"
+        ]
+      ],
+      "caption": "Le surveillant anti-dérive est l'un de plusieurs. Les quatre agents de revue qu'il accompagne, rouge, vert, bleu et jaune, sont décrits dans le [document sur les agents rouge, bleu, vert et jaune](/paper/l199t).",
+      "source": "Harnais anti-dérive, séparation des tâches."
+    },
+    {
+      "type": "section_heading",
+      "n": "11",
+      "title": "Comment les combiner, et ce qui reste à trancher"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces méthodes sont additives, et vous pourriez ne pas avoir besoin des sept. Le jumelage utile le plus simple est la carte de chaleur plus le balayage de fin d'étape : l'une montre où le travail se fait, l'autre exécute la liste de contrôle à chaque étape. Ajoutez de meilleures évals pour appuyer votre développement, et expérimentez en élargissant la couverture avec une variété de contrôles de surveillance différents."
+    },
+    {
+      "type": "table",
+      "title": "Combinaisons sensées",
+      "columns": [
+        "Objectif",
+        "À utiliser ensemble",
+        "Pourquoi"
+      ],
+      "rows": [
+        [
+          "Le plus facile pour commencer",
+          "Carte de chaleur + balayage de fin d'étape",
+          "L'une montre où le travail s'est déroulé; l'autre exécute la liste de contrôle à la fin de chaque étape."
+        ],
+        [
+          "Le plus répétable",
+          "Petits tests automatiques + tableau de bord",
+          "Les tests font la vérification de la même manière chaque fois; le tableau de bord montre les résultats, sans jugement de l'IA dans la boucle."
+        ],
+        [
+          "La couverture la plus large",
+          "Arpenteur + fiches par fichier + tableau de bord",
+          "Les fiches donnent à l'arpenteur une carte rapide; l'arpenteur consigne ce qui a dérivé; le tableau de bord l'affiche."
+        ],
+        [
+          "Le moins coûteux à adopter",
+          "Notes de sauvegarde + carte de chaleur",
+          "De la discipline au moment du dépôt, plus un journal visuel gratuit de ce qui s'est passé."
+        ]
+      ],
+      "source": "Combinaisons recommandées du harnais anti-dérive."
+    },
+    {
+      "type": "table",
+      "title": "Encore ouvert à la discussion",
+      "columns": [
+        "Question",
+        "Le compromis"
+      ],
+      "rows": [
+        [
+          "Où devraient résider les règles de concordance?",
+          "Adaptées à chaque projet, ou partagées entre tous?"
+        ],
+        [
+          "L'arpenteur devrait-il s'appuyer d'abord sur des règles fixes ou sur le jugement de l'IA?",
+          "Les règles fixes sont moins coûteuses et plus discrètes; le jugement est plus souple."
+        ],
+        [
+          "Quelle quantité de dérive devrait arrêter la ligne?",
+          "Trop sensible et il harcèle; trop lâche et les choses passent au travers."
+        ],
+        [
+          "Une fiche par fichier, ou une grande carte unique?",
+          "À quelle taille de projet une carte unique l'emporte-t-elle?"
+        ],
+        [
+          "Un tableau de bord neuf à chaque étape, ou un tableau en direct?",
+          "La simplicité contre le fait d'être toujours à jour."
+        ]
+      ],
+      "source": "Questions ouvertes du harnais anti-dérive."
+    },
+    {
+      "type": "figure",
+      "title": "Explorez ceci comme un canevas interactif",
+      "caption": "Les harnais observateurs surveillent un constructeur depuis l'extérieur, déposent des billets dans un bus de système de fichiers, et le constructeur les écoule. Fait partie du Canevas (document 18); faites glisser les nœuds, zoomez, et appuyez sur Écouter pour une présentation orale.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "antidrift",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "anti-drift",
+        "harness",
+        "agents",
+        "quality",
+        "observability"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/of1cj/_common.js",
+    "components/visuals/bespoke/of1cj/ChainDrift.js",
+    "components/visuals/bespoke/of1cj/Heatmap.js",
+    "components/visuals/bespoke/of1cj/EvalMatrix.js",
+    "components/visuals/bespoke/of1cj/CommitSpine.js",
+    "components/visuals/bespoke/of1cj/DepTreeCard.js",
+    "components/visuals/bespoke/of1cj/HealthPills.js",
+    "components/visuals/bespoke/of1cj/ObserverBoard.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "translation_status": "draft",
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
   },
-  "related": []
+  "related": [
+    "p7p2k",
+    "l199t",
+    "eujjc",
+    "qxlzo",
+    "cux4h",
+    "xs7uh"
+  ]
 }

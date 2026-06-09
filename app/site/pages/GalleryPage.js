@@ -17,6 +17,7 @@
       } catch (e) { this.error = 'Gallery is not built yet. Run npm run build:gallery. (' + e.message + ')'; }
     },
     computed: {
+      fr() { return this.store.locale === 'fr'; },
       t() {
         const fr = (this.store.locale === 'fr');
         return fr
@@ -38,11 +39,11 @@
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;padding-bottom:24px;">
               <div v-for="(v,i) in data.videos" :key="'v'+i" style="border:1px solid var(--rule);border-radius:10px;overflow:hidden;">
                 <a :href="v.url" target="_blank" rel="noopener" style="display:block;position:relative;">
-                  <img v-if="v.thumb" :src="v.thumb" :alt="v.title || v.paper_title" loading="lazy" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;" />
+                  <img v-if="v.thumb" :src="v.thumb" :alt="(fr ? v.title_fr : v.title) || (fr ? v.paper_title_fr : v.paper_title)" loading="lazy" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;" />
                 </a>
                 <div style="padding:12px 14px;">
-                  <div style="font-weight:600;font-size:14px;">{{ v.title || v.caption || t.videos }}</div>
-                  <a :href="'/paper/' + v.paper_id" style="font-family:var(--font-mono);font-size:11px;color:var(--accent);text-decoration:none;">{{ t.from }} № {{ v.num }} · {{ v.paper_title }} →</a>
+                  <div style="font-weight:600;font-size:14px;">{{ (fr ? v.title_fr : v.title) || (fr ? v.caption_fr : v.caption) || t.videos }}</div>
+                  <a :href="'/paper/' + v.paper_id" style="font-family:var(--font-mono);font-size:11px;color:var(--accent);text-decoration:none;">{{ t.from }} № {{ v.num }} · {{ fr ? v.paper_title_fr : v.paper_title }} →</a>
                 </div>
               </div>
             </div>
@@ -53,10 +54,10 @@
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;padding-bottom:24px;">
               <a v-for="(img,i) in data.images" :key="'i'+i" :href="'/paper/' + img.paper_id"
                  style="text-decoration:none;border:1px solid var(--rule);border-radius:8px;overflow:hidden;display:block;">
-                <img :src="img.src" :alt="img.alt" loading="lazy" style="width:100%;display:block;aspect-ratio:3/2;object-fit:cover;" />
+                <img :src="fr ? img.src_fr : img.src" :alt="fr ? img.alt_fr : img.alt" loading="lazy" style="width:100%;display:block;aspect-ratio:3/2;object-fit:cover;" />
                 <div style="padding:8px 10px;">
                   <div style="font-family:var(--font-mono);font-size:10px;color:var(--highlight);text-transform:uppercase;">{{ img.fno }}</div>
-                  <div style="font-size:12px;color:var(--ink-70);line-height:1.4;">{{ img.title }}</div>
+                  <div style="font-size:12px;color:var(--ink-70);line-height:1.4;">{{ fr ? img.title_fr : img.title }}</div>
                   <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-50);margin-top:2px;">{{ t.from }} № {{ img.num }}</div>
                 </div>
               </a>

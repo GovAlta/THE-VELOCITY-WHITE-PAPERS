@@ -32,7 +32,7 @@
   },
   "tldr_presentation": {
     "id": "cux4h-tldr",
-    "title": "The thesis in six minutes",
+    "title": "La thèse en six minutes",
     "locale": "fr",
     "slides": [
       {
@@ -51,8 +51,8 @@
         "visual": "stat",
         "caption": "Un problème générationnel",
         "visual_config": {
-          "stat_value": "$2B+",
-          "stat_label": "Estimated cost to modernize the estate"
+          "stat_value": "2 G$+",
+          "stat_label": "Coût estimé de modernisation du parc"
         },
         "subcaption": "Face à un budget de modernisation de 80 M$ à 120 M$ par année, l'arithmétique ne tient pas.",
         "text": "Le chiffre. À l'automne 2024, la haute direction a estimé le coût de modernisation de ces systèmes à environ deux milliards de dollars, et le chiffre réel est probablement plus élevé. Face à un budget de modernisation de quatre-vingts à cent vingt millions de dollars par année, l'arithmétique ne tient pas."
@@ -64,8 +64,8 @@
         "visual": "stat",
         "caption": "Au rythme de livraison actuel",
         "visual_config": {
-          "stat_value": "130 years",
-          "stat_label": "To lifecycle the estate at the 2024 rate"
+          "stat_value": "130 ans",
+          "stat_label": "Pour renouveler le cycle de vie du parc au rythme de 2024"
         },
         "subcaption": "Aucun gouvernement, aucune population, aucune industrie ne peut tolérer des projets qui s'étalent sur des siècles.",
         "text": "Le rythme. Lorsque nous avons évalué notre livraison en 2024, nous avons estimé qu'il faudrait environ cent trente ans pour renouveler le cycle de vie de ces systèmes au rythme actuel. Aucun gouvernement, aucune population, aucune industrie ne peut tolérer des projets qui s'étendent sur des siècles. Il fallait travailler autrement."
@@ -76,8 +76,8 @@
         "audio_file": "public/audio/fr/cux4h-tldr/04.mp3",
         "visual": "quote",
         "visual_config": {
-          "text": "We must rebuild this ship as it is sailing, and sometimes that means a lot of bailing out of water as we fix a breach in the hull.",
-          "cite": "Paper 1 · The Two-Billion-Dollar Ship of Theseus"
+          "text": "Nous devons reconstruire ce navire pendant qu'il navigue, et cela signifie parfois beaucoup d'écopage pendant que l'on colmate une brèche dans la coque.",
+          "cite": "Livre blanc 1 · Le navire de Thésée à deux milliards de dollars"
         },
         "text": "Le recadrage. Les gouvernements ne peuvent pas s'arrêter, et les services ne peuvent pas être suspendus, pendant que nous reconstruisons. Nous devons reconstruire ce navire pendant qu'il navigue, et cela suppose parfois beaucoup d'écopage pendant que nous colmatons une brèche dans la coque."
       },
@@ -89,12 +89,12 @@
         "caption": "Un ordre différent de vitesse et d'échelle",
         "visual_config": {
           "left": {
-            "label": "A person",
-            "body": "Reads 100 to 400 words a minute. Holds a few dozen attributes of a system in mind."
+            "label": "Une personne",
+            "body": "Lit de 100 à 400 mots par minute. Garde en tête quelques dizaines d'attributs d'un système."
           },
           "right": {
-            "label": "An AI agent",
-            "body": "Reads millions of words in the same time. Classifies thousands of attributes at once. Reads 466M lines of code in under a day."
+            "label": "Un agent d'IA",
+            "body": "Lit des millions de mots dans le même temps. Classe des milliers d'attributs à la fois. Lit 466 M de lignes de code en moins d'une journée."
           }
         },
         "text": "Pourquoi l'IA. Une personne lit quelques centaines de mots à la minute et peut garder en tête quelques dizaines d'attributs d'un système. Ces modèles lisent des millions de mots dans le même laps de temps et classent des milliers d'attributs à la fois. Ils peuvent lire l'ensemble de notre patrimoine, soit plus de quatre cent soixante-six millions de lignes de code, en moins d'une journée."
@@ -108,20 +108,20 @@
         "visual_config": {
           "items": [
             {
-              "label": "Technical debt",
-              "desc": "Forty years of code, contracts, and dependencies."
+              "label": "Dette technique",
+              "desc": "Quarante ans de code, de contrats et de dépendances."
             },
             {
-              "label": "Cybersecurity",
-              "desc": "Vulnerabilities surfacing faster than they can be remediated."
+              "label": "Cybersécurité",
+              "desc": "Des vulnérabilités qui apparaissent plus vite qu'on ne peut les corriger."
             },
             {
-              "label": "Growing demand",
-              "desc": "More than forty legislative and regulatory initiatives underway."
+              "label": "Demande croissante",
+              "desc": "Plus de quarante initiatives législatives et réglementaires en cours."
             },
             {
-              "label": "Deficit budget",
-              "desc": "Less money to do more work, every year."
+              "label": "Budget déficitaire",
+              "desc": "Moins d'argent pour plus de travail, chaque année."
             }
           ]
         },
@@ -184,7 +184,7 @@
       "type": "keystat",
       "label": "Pour moderniser au rythme actuel",
       "value": "130 ans",
-      "body": "At the current speed of remediation, the runway to clear the existing technical debt runs to roughly 130 years. No government, population, or industry can tolerate projects that span into the centuries."
+      "body": "Au rythme de correction actuel, l'horizon pour éliminer la dette technique existante atteint environ 130 ans. Aucun gouvernement, aucune population ni aucune industrie ne peut tolérer des projets qui s'étendent sur des siècles."
     },
     {
       "type": "figure",
@@ -319,7 +319,7 @@
       "type": "keystat",
       "label": "Le chiffre que vise l'Alberta",
       "value": "95 %",
-      "body": "With the right engineering, training, and strategies, Alberta believes it can reduce the cost and time of implementing these remediations by roughly ninety five percent."
+      "body": "Avec la bonne ingénierie, la bonne formation et les bonnes stratégies, l'Alberta croit pouvoir réduire le coût et le temps de mise en œuvre de ces correctifs d'environ quatre-vingt-quinze pour cent."
     },
     {
       "type": "paragraph",

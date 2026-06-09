@@ -1,0 +1,32 @@
+{
+  "_note": "Resources page content for one locale. The sibling .<other>.json holds the translation. Set each item's href to the official URL; an empty href renders as 'link to be added'.",
+  "page": {
+    "eyebrow": "Ressources",
+    "title_lead": "Contexte et",
+    "title_em": "ressources.",
+    "lede": "Un petit ensemble de liens sélectionnés qui situent ce travail dans son contexte plus large, juste assez pour comprendre où il se place sans éclipser la contribution propre de l'Alberta."
+  },
+  "groups": [
+    {
+      "heading": "Gouvernement de l'Alberta",
+      "items": [
+        { "title": "Ministère de la Technologie et de l'Innovation", "desc": "Le ministère à l'origine de cette collection.", "href": "" },
+        { "title": "Politique d'IA de l'Alberta", "desc": "Comment l'Alberta encadre l'utilisation de l'intelligence artificielle dans l'ensemble du gouvernement.", "href": "" }
+      ]
+    },
+    {
+      "heading": "Gouvernement du Canada",
+      "items": [
+        { "title": "Stratégie « L'IA pour tous »", "desc": "La stratégie nationale d'IA du Canada, publiée le 4 juin 2026.", "href": "" },
+        { "title": "Stratégie « Achetons canadien »", "desc": "Orientation fédérale en matière d'approvisionnement favorisant les fournisseurs canadiens.", "href": "" }
+      ]
+    },
+    {
+      "heading": "Capacité souveraine",
+      "items": [
+        { "title": "Calcul souverain (PQR)", "desc": "Capacité de calcul souverain du secteur public.", "href": "" }
+      ]
+    }
+  ],
+  "pending_note": "Les liens sont en cours de finalisation; transmettez les URL exactes et elles seront ajoutées."
+}

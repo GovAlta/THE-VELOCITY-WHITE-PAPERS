@@ -1,25 +1,81 @@
 {
-  "_note": "About page content for one locale. The sibling .<other>.json holds the translation. The public repositories list is derived from papers.json.",
+  "_note": "About page content for one locale. The sibling .<other>.json holds the translation. Reader-visible strings here are editable in dev edit mode and saved back to this file.",
   "eyebrow": "À propos de cette collection",
   "title_lead": "Libre par",
   "title_em": "défaut.",
-  "lede": "Le site lui-même est libre, publié via GitHub Pages. Tout le site est clonable et adaptable. Licence MIT avec des avertissements explicites : aucune responsabilité pour les décisions ou les coûts engagés par ceux qui l'adoptent ; partagé dans l'esprit d'une collaboration nationale ; chacun doit évaluer ces outils dans son propre contexte.",
-  "use": {
-    "heading": "Comment utiliser ce site",
-    "meta": "lisez-moi · méthodologie · rétroaction",
+  "lede": "Les Livres blancs Velocity sont une ressource libre publiée par le gouvernement de l'Alberta. Ce site est publié via GitHub Pages, et l'ensemble du dépôt est clonable et adaptable.",
+  "disclaimer": "Le contenu est offert sous licence MIT, assorti d'avertissements explicites : nous ne sommes pas responsables des décisions prises, de la responsabilité encourue ni des coûts engagés du fait de votre utilisation de ce contenu. Le travail est partagé dans l'esprit d'une collaboration nationale et les utilisateurs doivent évaluer ces outils dans leur propre contexte. Consultez toujours votre organisation des TI avant de prendre quelque décision que ce soit. Les produits et services mentionnés sur ce site ne sont pas approuvés par le gouvernement de l'Alberta.",
+  "audio": {
+    "src": "public/audio/fr/about.mp3"
+  },
+  "created": {
+    "heading": "Comment ces livres ont été créés",
+    "meta": "méthode · métier · honnêteté",
     "paras": [
-      "La lecture séquentielle est le parcours recommandé. Chaque livre s'appuie sur ce qui précède. Les liens latéraux entre les livres permettent au lecteur de se déplacer de côté sans perdre le fil.",
-      "Chaque livre se télécharge en Markdown et en JSON, de sorte que le lecteur peut l'alimenter dans ses propres outils d'IA. Tout le site se clone depuis GitHub. Le site utilise un petit témoin pour suivre les livres déjà consultés et signaler ce qui est nouveau depuis la dernière visite.",
-      "Aucun fournisseur ni produit n'est promu. Par souci de transparence, tout fournisseur ou modèle réellement utilisé en production sera divulgué."
+      "Les idées présentées dans ces livres blancs ont été recueillies sur une période d'environ dix-huit mois, par la création du programme AI Maximalist et de l'AI Factory ainsi que de bon nombre des solutions décrites dans ces livres. La réduction de la dette technique est une préoccupation centrale du ministère de la Technologie et de l'Innovation. Ces livres blancs sont le fruit de centaines de conversations avec l'industrie, le personnel, la haute direction et les élus, et résument un éventail de concepts et d'approches évalués en vue d'une mise en œuvre future.",
+      "La plupart de ces livres ont été dictés en marchant dans la forêt à Edmonton. L'auteur principal du premier ensemble de livres, Janak Alford, a narré et transcrit chaque livre au fil de marches quotidiennes le long de la rivière Saskatchewan Nord. Les photographies de cette page proviennent de ces marches. Divers agents d'IA étaient présents et ont assuré la transcription ainsi que la discussion éditoriale. La plupart des livres ont été posés en deux, trois ou quatre séances, puis édités en un ensemble cohérent d'idées. Parler librement, capter les idées et les façonner ensuite s'est révélé une façon efficace de rédiger ces livres. Les arbres et l'exercice ont favorisé une exploration à l'esprit ouvert.",
+      "L'IA a soutenu l'édition et l'intégration de ces transcriptions. À l'aide des guides de style du projet, des agents d'IA ont aidé à resserrer les idées floues, à repérer les passages où l'auteur avait halluciné ou enfreint ses propres règles, et à éliminer le contenu de faible valeur.",
+      "Pour certains sujets, l'usage de l'IA s'est révélé contre-productif. La prose générée par l'IA tend encore vers ce que nous appelons le « trendslop » : un texte qui sonne comme une rédaction d'affaires fluide, mais qui est truffé de jargon, indifférencié et difficile à lire, dépourvu des anecdotes, de la personnalité et de la couleur narrative qu'apporte un auteur humain. Le Problème de la compression en particulier a tenu en échec les éditeurs d'IA (au fil de plusieurs tentatives avec les principaux fournisseurs de modèles de pointe), qui continuaient de produire une prose d'apparence plausible mais totalement vide de sens et de valeur, du pur remplissage. Le livre entier a dû être rédigé à la main à partir de zéro. La transcription originale de la conversation entre l'humain et l'IA est incluse pour votre intérêt.",
+      "Même les modèles actuels les plus performants, Opus 4.8 parmi eux, sont d'excellents éditeurs, stylistes, rédacteurs de synthèses et traducteurs, mais demeurent insuffisants pour l'écriture originale ou créative. L'IA n'offre aucun raccourci pour développer vos propres idées."
+    ],
+    "images_caption": "Dictés à pied, édités au bureau.",
+    "images": [
+      {
+        "src": "public/images/about/fr/method-1.jpg",
+        "alt": "Un sentier de terre descendant à travers bouleaux et peupliers vers la rivière Saskatchewan Nord, lors d'une des marches quotidiennes."
+      },
+      {
+        "src": "public/images/about/fr/method-2.jpg",
+        "alt": "Un sentier herbeux à voie unique serpentant vers un coteau boisé sous un ciel lumineux."
+      },
+      {
+        "src": "public/images/about/fr/method-3.jpg",
+        "alt": "Un sentier étroit à travers des bois verts et denses, le soleil perçant la canopée."
+      },
+      {
+        "src": "public/images/about/fr/method-4.jpg",
+        "alt": "Un sentier à travers les broussailles basses débouchant sur une vaste vue de la vallée fluviale sous un ciel dégagé."
+      }
     ]
   },
-  "repos": {
-    "heading": "Dépôts publics",
-    "meta": "publiés en parallèle des livres"
+  "tools": {
+    "heading": "Outils et métier",
+    "meta": "ce qui a produit les artefacts",
+    "paras": [
+      "L'imagerie accompagnant chaque livre blanc a été générée avec GPT Image 2. La narration longue et les courts résumés sont lus par un clone vocal ElevenLabs de l'auteur. La traduction a été réalisée principalement avec Claude Opus, avec le soutien d'organisations partenaires pour la vérification du bilinguisme; une partie suivra après la publication initiale."
+    ]
+  },
+  "platform": {
+    "heading": "La plateforme",
+    "meta": "bâtie avec Claude, publiée sous MIT",
+    "paras": [
+      "Le site se veut simple, rapide et accessible, présentant les concepts et les arguments le plus clairement possible. Il a été bâti avec Claude Design puis porté dans Claude Code. Ce qui a commencé comme du HTML brut est devenu un petit système de gestion de contenu, modeste mais puissant, qui gère la traduction, la génération d'images, la création de contenu, les passes éditoriales et l'application des guides de style en un seul endroit. Ce système est publié sous licence MIT aux côtés des livres, pour que quiconque puisse le télécharger, le réutiliser et le faire évoluer."
+    ]
+  },
+  "use": {
+    "heading": "Comment utiliser ce site",
+    "meta": "lecture · médias · réutilisation",
+    "paras": [
+      "La lecture séquentielle est le parcours recommandé. Chaque livre s'appuie sur ceux qui le précèdent, et la collection est numérotée pour que l'ordre soit clair. Les liens latéraux entre les livres permettent au lecteur de se déplacer de côté vers une idée connexe sans perdre le fil, et chaque livre se termine par une courte liste de livres connexes à consulter.",
+      "Chaque livre peut être lu, écouté ou parcouru. Une narration longue lit le livre entier à voix haute dans la voix clonée de l'auteur, et un lecteur flottant la poursuit pendant que vous faites défiler la page ou passez d'une page à l'autre. Une courte présentation TL;DR associe cette narration à quelques diapositives visuelles pour un survol rapide. Les figures sont des images générées, et chacune comporte un inspecteur qui révèle l'invite exacte utilisée pour la produire, de sorte que rien sur la fabrication d'un artefact n'est caché.",
+      "Chaque livre est téléchargeable en Markdown et en JSON, de sorte que le lecteur peut l'alimenter dans ses propres outils d'IA, et l'ensemble du site se clone depuis GitHub. Le site est bilingue : la commande de langue bascule toute l'interface et le contenu entre le français et l'anglais, et un glossaire définit le vocabulaire employé par la collection.",
+      "Le site utilise un petit témoin pour se souvenir des livres que vous avez consultés et faire ressortir ce qui est nouveau depuis votre dernière visite, et la page Mises à jour énumère ce qui a changé au fil du temps. Il utilise aussi Google Analytics pour nous aider à comprendre l'usage global du site, quelles pages sont lues et comment les gens circulent dans la collection. Il n'y a aucune connexion, et aucun renseignement identifiant n'est conservé.",
+      "Les adoptants qui clonent le site héritent de plus que du contenu. Le système de gestion de contenu qui a produit ces livres l'accompagne, de sorte qu'une autre organisation peut traduire, générer images et narration, et appliquer ses propres guides de style de la même manière. Aucun fournisseur ni produit n'est promu, et tout modèle ou service utilisé en production est divulgué par souci de transparence."
+    ]
+  },
+  "living": {
+    "heading": "Un document vivant",
+    "meta": "la route à venir",
+    "paras": [
+      "Ces technologies ne cesseront pas d'évoluer, et d'ici six mois à peine, certaines des méthodes et idées présentées ici pourraient être obsolètes. C'est pourquoi la collection est une plateforme dynamique plutôt qu'un PDF ou un document Word statique.",
+      "Nous reconnaissons ouvertement que personne n'a encore résolu ces problèmes. Nous croyons que les données probantes appuient l'orientation que nous prenons, et nous offrons ces livres comme une voie suffisamment claire pour soutenir l'expérimentation. Nous accueillerions volontiers des collaborations avec d'autres auteurs, gouvernements, partenaires du secteur privé et le public. Nous continuerons de partager ce que nous apprenons.",
+      "D'autres choses s'en viennent, dont Agency 2026 Fall à Edmonton et à Calgary, une journée de l'industrie et une série continue de défis d'approvisionnement ouverts à un large éventail de participants dans les mois et les années à venir. Revenez nous voir souvent.",
+      "Continuez de bâtir."
+    ]
   },
   "also": {
     "heading": "Aussi sur ce site",
-    "meta": "quatre raccourcis",
+    "meta": "raccourcis vers le reste du site",
     "cards": [
       {
         "tag": "Glossaire",
@@ -28,7 +84,7 @@
       },
       {
         "tag": "Dépôts",
-        "title": "Les dépôts publics qui accompagnent les livres",
+        "title": "Dépôts publics qui accompagnent les livres",
         "href": "/repos"
       },
       {
@@ -40,6 +96,21 @@
         "tag": "Communauté",
         "title": "Où parler du travail",
         "href": "/community"
+      },
+      {
+        "tag": "Presse",
+        "title": "Communiqué de presse et personnes-ressources des médias",
+        "href": "/press"
+      },
+      {
+        "tag": "Ressources",
+        "title": "Contexte et liens connexes",
+        "href": "/resources"
+      },
+      {
+        "tag": "Médias",
+        "title": "Vidéos et figures tirées des livres",
+        "href": "/gallery"
       }
     ]
   }

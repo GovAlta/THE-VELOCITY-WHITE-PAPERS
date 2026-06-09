@@ -4,23 +4,28 @@
   "sequence": "7 sur 8",
   "tier": "Technical",
   "category": "paper",
-  "title": "Red, Blue, Green, and Yellow Agents",
-  "subtitle": "The agent roles that build, test, secure, and remediate.",
+  "title": "Les agents rouge, bleu, vert et jaune",
+  "subtitle": "Quatre agents de révision, intégrés au harnais, qui vérifient chaque application sur le plan de la qualité, de la cohérence et de la sécurité avant sa mise en service.",
   "track": "Engineering the Solution",
   "authors": [
     "Ministry of Technology and Innovation"
   ],
-  "published": null,
-  "reading_min": null,
+  "published": "2026-06-16",
+  "reading_min": 10,
   "status": "Published",
-  "tags": [],
+  "tags": [
+    "security",
+    "agents",
+    "harness",
+    "red-team",
+    "quality"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
-  "translation_status": "untranslated",
+  "abstract": "Si l'IA écrit et répare le code, il faut bien que quelque chose vérifie l'IA. Quatre agents de révision se trouvent à l'intérieur du harnais, chacun surnommé d'après une couleur. Le vert vérifie la qualité et l'hygiène du code. Le jaune vérifie la façon dont les textes se lisent. Le rouge attaque l'application comme le ferait une personne de l'extérieur. Le bleu la défend, évalue le code par rapport à une norme de sécurité internationale et transforme les éléments de preuve en un verdict sur lequel un décideur peut s'appuyer. Ces agents sont intégrés au harnais à titre de freins et contrepoids : un travail ne peut être considéré comme terminé tant qu'il n'a pas réussi. La sécurité et la qualité cessent d'être quelque chose que l'on poursuit après coup pour devenir des préoccupations de premier plan.",
   "hero_image": {
     "src": "public/images/l199t/fr/hero.jpg",
-    "alt": "Editorial image for: Red, Blue, Green, and Yellow Agents",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"Red, Blue, Green, and Yellow Agents\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Une application au centre, entourée de quatre agents de révision de couleur verte, jaune, rouge et bleue, formant un sceau protecteur équilibré.",
+    "image_prompt": "An editorial cover illustration of a single application or building at the centre, surrounded by four distinct review agents arranged in balance around it, one tinted green, one yellow, one red, one blue, together forming a protective seal or set of checks and balances. A sense of four disciplines guarding one piece of work in concert. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -28,18 +33,124 @@
   },
   "tldr_presentation": {
     "id": "l199t-tldr",
-    "title": "The paper, in brief",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "l199t",
     "slides": [
       {
         "id": "01",
-        "title": "Red, Blue, Green, and Yellow Agents",
+        "title": "Les agents rouge, bleu, vert et jaune",
         "audio_file": "public/audio/fr/l199t-tldr/01.mp3",
         "visual": "title",
-        "caption": "Engineering the Solution",
-        "subcaption": "",
-        "text": "Red, Blue, Green, and Yellow Agents. Content forthcoming."
+        "caption": "Document 7 · Engineering the Solution",
+        "subcaption": "Quatre agents de révision qui gardent chaque construction honnête.",
+        "text": "Les agents rouge, bleu, vert et jaune. Si l'IA écrit et répare le code, il faut bien que quelque chose vérifie l'IA. Ce quelque chose est encore de l'IA, d'un type particulier, tournée vers le travail. Quatre agents de révision se trouvent à l'intérieur du harnais, chacun nommé d'après une couleur, et ils inspectent chaque application sur le plan de la qualité, de la cohérence et de la sécurité avant sa mise en service."
+      },
+      {
+        "id": "02",
+        "title": "Vert : qualité et hygiène",
+        "audio_file": "public/audio/fr/l199t-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Vert · qualité et hygiène",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Dépendances",
+              "desc": "Signale les bibliothèques comportant des vulnérabilités connues."
+            },
+            {
+              "label": "Secrets",
+              "desc": "Détecte tout mot de passe ou clé intégré dans le code."
+            },
+            {
+              "label": "Couverture",
+              "desc": "Repère le code que les tests n'effleurent jamais."
+            },
+            {
+              "label": "Le pipeline",
+              "desc": "Vérifie que la construction comporte les portes qu'elle devrait avoir."
+            }
+          ]
+        },
+        "text": "Le vert est le fondement, et il s'exécute en premier. Il rapporte les faits bruts sur l'état de santé du code : dépendances vulnérables, secrets laissés dans la source, couverture de tests insuffisante, lacunes dans le pipeline de construction. Il est déterministe, donc le même code retourne toujours les mêmes constats. Il ne devine pas; il compte. C'est ce qui en fait la base de données probantes que lit chacun des autres agents."
+      },
+      {
+        "id": "03",
+        "title": "Jaune : la façon dont les textes se lisent",
+        "audio_file": "public/audio/fr/l199t-tldr/03.mp3",
+        "visual": "stat",
+        "caption": "Jaune · la façon dont les textes se lisent",
+        "visual_config": {
+          "stat_value": "12 règles",
+          "stat_label": "Appliquées à chaque texte du projet"
+        },
+        "subcaption": "Si le public doit le lire, cela devrait se lire comme si une personne l'avait écrit.",
+        "text": "Le jaune lit les textes : la documentation, le contenu de l'interface, les messages qu'un citoyen voit. Quand l'IA rédige de la prose, elle laisse des indices, et le jaune applique douze règles à l'ensemble de ces textes, signalant chaque indice avec une réécriture simple. Ce sont les mêmes règles qui régissent les documents que vous lisez. Il s'exécute en quelques secondes, et il fait en sorte que tout le parc sonne comme si une personne l'avait écrit."
+      },
+      {
+        "id": "04",
+        "title": "Rouge : l'attaquant",
+        "audio_file": "public/audio/fr/l199t-tldr/04.mp3",
+        "visual": "list",
+        "caption": "Rouge · l'attaquant",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Reconnaissance",
+              "desc": "Cartographie le domaine, les ports, le chiffrement et la surface exposée."
+            },
+            {
+              "label": "Planification de l'attaque",
+              "desc": "Claude propose des voies d'entrée concrètes, à partir des éléments de preuve."
+            },
+            {
+              "label": "Autorisé seulement",
+              "desc": "S'exécute contre des systèmes que nous possédons et que nous avons autorisés aux fins de test."
+            }
+          ]
+        },
+        "text": "Le rouge est l'attaquant. Il étudie une application terminée de l'extérieur, comme le ferait un adversaire, et cartographie sa surface exposée. Puis Claude raisonne sur ce qu'il a trouvé et planifie comment il s'introduirait, en proposant des chemins d'attaque concrets. La reconnaissance repose sur des outils reproductibles; le plan d'attaque relève du jugement. Le rouge trouve la faille avant que quelqu'un d'autre ne le fasse."
+      },
+      {
+        "id": "05",
+        "title": "Bleu : le défenseur",
+        "audio_file": "public/audio/fr/l199t-tldr/05.mp3",
+        "visual": "list",
+        "caption": "Bleu · le défenseur",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Modèle de menaces",
+              "desc": "Cartographie l'application et les menaces qui pèsent sur chaque partie."
+            },
+            {
+              "label": "ASVS niveau 2",
+              "desc": "Parcourt chaque exigence : réussite, échec ou sans objet."
+            },
+            {
+              "label": "Chaînes d'attaque",
+              "desc": "Intègre la reconnaissance du rouge dans la façon dont une attaque se déroulerait."
+            },
+            {
+              "label": "Le verdict",
+              "desc": "Un rapport classé et étayé de preuves sur lequel la direction peut s'appuyer."
+            }
+          ]
+        },
+        "text": "Le bleu est le défenseur, et il s'exécute en dernier parce qu'il lit tout ce que les autres ont trouvé. Il bâtit un modèle de menaces, parcourt chaque exigence de la norme de sécurité internationale au niveau 2 avec les éléments de preuve derrière chaque décision, intègre la reconnaissance du rouge et rédige le rapport sur lequel un décideur peut s'appuyer. Là où le vert compte et le rouge sonde, le bleu juge."
+      },
+      {
+        "id": "06",
+        "title": "Freins et contrepoids",
+        "audio_file": "public/audio/fr/l199t-tldr/06.mp3",
+        "visual": "stat",
+        "caption": "Freins et contrepoids",
+        "visual_config": {
+          "stat_value": "~95",
+          "stat_label": "Contrôles de sécurité par rapport auxquels chaque application est vérifiée, à chaque passage"
+        },
+        "subcaption": "Intégrés au harnais à titre de portes. Un travail ne réussit que lorsqu'il les franchit toutes.",
+        "text": "Pris séparément, chaque agent est utile. Ensemble, ils forment des freins et contrepoids, intégrés au harnais à titre de portes. Le harnais ne considérera pas un travail comme terminé si l'analyse de sécurité révèle un constat critique, si l'analyse est périmée ou si la révision n'a jamais été exécutée. Les portes sont mécaniques, et non aspirationnelles. C'est ainsi que l'on répond au problème de la cybersécurité sans corriger éternellement, et que les méthodes de construction restent sécuritaires à grande vitesse. La sécurité et la qualité deviennent une propriété de la façon dont le code est fabriqué."
       }
     ]
   },
@@ -47,23 +158,322 @@
   "sections": [
     {
       "n": "01",
-      "title": "Overview"
+      "title": "Qui vérifie l'IA"
+    },
+    {
+      "n": "02",
+      "title": "Vert : qualité et hygiène"
+    },
+    {
+      "n": "03",
+      "title": "Jaune : la façon dont le contenu se lit"
+    },
+    {
+      "n": "04",
+      "title": "Rouge : l'attaquant"
+    },
+    {
+      "n": "05",
+      "title": "Bleu : le défenseur"
+    },
+    {
+      "n": "06",
+      "title": "Quatre agents, un seul système de freins et contrepoids"
+    },
+    {
+      "n": "07",
+      "title": "Sur quoi cela fonctionne : Claude, l'Agent SDK et Vertex"
+    },
+    {
+      "n": "08",
+      "title": "Ce que cela apporte aux bâtisseurs"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Les documents précédents ont exposé deux moitiés d'un même problème. Nous pouvons maintenant repérer ce qui ne va pas dans l'ensemble du parc, de la [pression cybernétique croissante](/paper/mwo98) à l'état de santé de chaque dépôt, et nous disposons de [quatre façons de le reconstruire](/paper/zgym1). Les deux moitiés s'appuient sur l'IA pour faire le travail. Cela soulève la question évidente. Si une IA écrit ou répare le code, qui vérifie l'IA? Quatre agents de révision, chacun nommé d'après une couleur, se trouvent à l'intérieur [du harnais](/paper/p7p2k) et inspectent chaque application sur le plan de la qualité, de la cohérence et de la sécurité. Ils sont les freins et contrepoids de tout ce que les bâtisseurs produisent."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Qui vérifie l'IA"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "Les couleurs proviennent de la pratique de la sécurité, où le rouge est l'attaquant et le bleu est le défenseur. Nous en avons ajouté deux autres. Le vert couvre la qualité et l'hygiène du code. Le jaune couvre la façon dont le contenu se lit. Chaque couleur est un agent distinct et examine le travail sous un angle que les autres n'ont pas. Un développeur exécute chaque agent tout au long du cycle de développement et à chaque jalon du projet."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les quatre sont répartis à dessein entre le travail mécanique et le travail de jugement. Le vert et le jaune sont entièrement déterministes : donnez-leur le même code et ils retournent les mêmes constats chaque fois. La reconnaissance du rouge est déterministe elle aussi, avec une étape qui utilise Claude pour planifier le déroulement d'une attaque. Le bleu relève surtout du jugement, celui qu'apporte un réviseur chevronné. C'est le déterminisme qui permet à un agent d'agir comme une porte qui ne dérive jamais. C'est le jugement qui détecte le problème qu'une liste de vérification manquerait. Le harnais utilise chacun là où il convient."
+    },
+    {
+      "type": "table",
+      "title": "Les quatre agents de révision en un coup d'œil",
+      "columns": [
+        "Agent",
+        "Ce qu'il révise",
+        "Comment il fonctionne",
+        "Quand il s'exécute"
+      ],
+      "rows": [
+        [
+          "Vert",
+          "Qualité du code, dépendances, secrets intégrés, couverture de tests, pipeline de construction.",
+          "Déterministe, environ 30 vérifications en deux passes.",
+          "En premier. La base de données probantes que lisent les autres."
+        ],
+        [
+          "Jaune",
+          "Chaque texte du projet, à la recherche des indices d'une prose produite par une machine.",
+          "Déterministe, 12 règles.",
+          "En parallèle, avant toute publication."
+        ],
+        [
+          "Rouge",
+          "L'application terminée, du point de vue d'un attaquant externe.",
+          "Reconnaissance par des outils ordinaires; planification de l'attaque par Claude.",
+          "Après la mise en place des fonctionnalités essentielles."
+        ],
+        [
+          "Bleu",
+          "La posture défensive, par rapport à une norme de sécurité internationale.",
+          "Surtout du jugement, fondé sur les preuves des autres.",
+          "En dernier. Il lit le vert et le rouge et rédige le verdict."
+        ]
+      ],
+      "caption": "Quatre disciplines, quatre agents, un seul travail. Trois sont assez déterministes pour agir comme des portes; le bleu apporte la lecture experte.",
+      "source": "AIDE common harness, four-team review framework."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Vert : qualité et hygiène"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le vert est le fondement, et il s'exécute en premier. Il lit le code et rapporte les faits bruts sur son état de santé. Quelles dépendances comportent des vulnérabilités connues. Si un mot de passe ou une clé a été intégré dans la source. Si des motifs dangereux sont présents. Quelle proportion du code les tests couvrent réellement. Il travaille en deux passes : la première lit le code sans l'exécuter, la seconde exécute les tests existants et observe ce qui se produit, y compris quelles parties du code les tests n'effleurent jamais."
+    },
+    {
+      "type": "paragraph",
+      "text": "Parce que le vert est déterministe, le même code produit toujours les mêmes constats. C'est ce qui en fait la base de données probantes sur laquelle chacun des autres agents s'appuie. Il ne devine pas; il compte. Lorsqu'il signale un fichier presque dépourvu de couverture de tests, ou un secret laissé dans la source, ce constat est un fait plutôt qu'une opinion, et il peut être vérifié deux fois de la même manière."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.1",
+      "title": "Vert : les faits bruts sur l'état de santé du code",
+      "caption": "Le vert inspecte le code lui-même : dépendances vulnérables, secrets intégrés, motifs dangereux, couverture de tests insuffisante et lacunes dans le pipeline de construction. Déterministe par conception, de sorte que le même code retourne les mêmes constats chaque fois.",
+      "image": {
+        "src": "public/images/l199t/fr/fig-7-1.jpg",
+        "alt": "Un inspecteur teinté de vert vérifiant méthodiquement les pièces d'une machine par rapport à une liste de vérification, trouvant un composant desserré.",
+        "image_prompt": "An editorial illustration, green-accented, of a meticulous inspector going part by part over the inner workings of a machine or engine, ticking items on a clipboard checklist and pulling out one faulty bolt and one exposed key. A sense of patient, exact, repeatable code hygiene. Muted Alberta cream base with a clear green accent, archival print quality, no text. This must be related to software development, the engine an analogy to the software. No legend. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Jaune : la façon dont le contenu se lit"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le jaune lit le contenu de l'application. Les logiciels gouvernementaux comportent beaucoup de prose : la documentation, le contenu de l'interface, les notes de version, les messages qu'un citoyen voit réellement. Quand l'IA rédige cette prose, elle laisse des indices, ces tournures de phrase qui marquent un texte comme produit par une machine et érodent discrètement la confiance. On appelle souvent ces indices une « odeur d'IA ». Le jaune applique douze règles à chaque texte du projet et signale chaque indice avec la ligne fautive, une réécriture simple et une courte note expliquant pourquoi cela se lit comme si une machine l'avait écrit."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce sont les mêmes règles qui régissent les documents que vous lisez en ce moment. Un tiret cadratin, un cliché tout fait, une ouverture flagorneuse, un « ensure » tenant lieu d'un vrai verbe : chacun est détecté et nommé. Le principe est simple. Si le public doit le lire, cela devrait se lire comme si une personne l'avait écrit. Le jaune est le moins coûteux des quatre à exécuter, une affaire de secondes, et il fait en sorte que tout le parc sonne humain."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.2",
+      "title": "Jaune : un texte qui se lit comme si une personne l'avait écrit",
+      "caption": "Le jaune applique douze règles à toute la prose d'un projet, signalant les indices d'un texte produit par une machine et proposant une réécriture simple pour chacun. Les mêmes règles qui régissent ces documents.",
+      "image": {
+        "src": "public/images/l199t/fr/fig-7-2.jpg",
+        "alt": "Une révision teintée de jaune sur une page de texte, encerclant des phrases révélatrices et écrivant une ligne plus claire dans la marge.",
+        "image_prompt": "An editorial illustration, amber-yellow accented, of a careful editor passing over a page of text, circling a few tell-tale phrases and writing a cleaner, plainer line in the margin. A sense of prose being made to sound human again. Muted Alberta cream base with a clear amber-yellow accent, archival print quality, no text. Write the most cliche em dash filled AI cliche and show someone crossing this stuff off with a red pen. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Rouge : l'attaquant"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le rouge est l'attaquant. Il regarde une application terminée comme le ferait une personne de l'extérieur animée de mauvaises intentions, de l'extérieur vers l'intérieur. Il cartographie le domaine et ses sous-domaines, recherche les ports ouverts, vérifie le chiffrement et les en-têtes de sécurité, et détermine quelles technologies sont utilisées. Cette reconnaissance repose sur des outils ordinaires et reproductibles, et elle s'exécute sur n'importe quelle machine sans configuration particulière."
+    },
+    {
+      "type": "paragraph",
+      "text": "Puis le rouge fait la partie qui exigeait autrefois un spécialiste. Il raisonne sur tout ce qu'il a trouvé et planifie comment il s'introduirait, en proposant des chemins d'attaque concrets : contourner une connexion, enchaîner un exploit à distance, faire sortir des données par une porte dérobée. Dans cette étape de planification, c'est Claude qui réfléchit, et c'est la seule partie du rouge qui varie d'une exécution à l'autre. Le rouge ne s'exécute jamais que contre des systèmes que le gouvernement possède et a autorisés aux fins de test. Son travail consiste à trouver la faille avant que quelqu'un d'autre ne le fasse, et à remettre à l'agent suivant une carte de la façon dont une attaque se déroulerait réellement. C'est l'adversaire qui aide à mettre à mal votre application bien avant qu'elle ne soit lancée dans le monde."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.3",
+      "title": "Rouge : penser comme un adversaire",
+      "caption": "Le rouge étudie une application terminée de l'extérieur, cartographie sa surface exposée, puis planifie des chemins d'attaque concrets à partir de ce qu'il trouve. La reconnaissance repose sur des outils reproductibles; le plan d'attaque est là où Claude raisonne.",
+      "image": {
+        "src": "public/images/l199t/fr/fig-7-3.jpg",
+        "alt": "Un analyste de sécurité aux accents rouges étudiant une application stylisée dessinée comme une forteresse et un diagramme de réseau, traçant des sondes de test contre son mur extérieur et marquant les points d'entrée exposés.",
+        "image_prompt": "An editorial illustration, rust-red accented, of a security analyst at a desk in daylight studying a stylized application drawn as a small fortress and network diagram, tracing authorized test-probe lines against its outer wall and marking the exposed entry points on a chart. A professional scene conveying authorized offensive security testing, mapping where a system is weak so it can be strengthened. Muted Alberta cream base with a clear rust-red accent, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Bleu : le défenseur"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le bleu est le défenseur, et il s'exécute en dernier parce qu'il lit tout ce que les autres ont trouvé. Il bâtit une carte de l'application, classe le degré de sensibilité de chaque partie et rédige un modèle de menaces. Puis il parcourt chaque exigence de la norme OWASP Application Security Verification Standard au niveau 2, le référentiel international pour une application Web sérieuse, et consigne chacune comme réussie, en échec ou sans objet, avec les éléments de preuve derrière la décision. Il vérifie le même code par rapport à la norme d'architecture de cybersécurité de l'Alberta, intègre la reconnaissance du rouge dans une image étape par étape de la façon dont une attaque se déroulerait, et rédige des tests de sécurité qui prouvent que chaque correctif tient."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le dernier geste du bleu est de rédiger le rapport sur lequel un décideur peut s'appuyer. Un sommaire exécutif. Les constats classés par gravité. Les normes respectées et manquées. Un plan de correction qui pointe vers les fichiers exacts. Là où le vert compte et le rouge sonde, le bleu juge, à la manière d'un architecte de sécurité chevronné, et transforme une montagne d'éléments de preuve en un verdict défendable qu'un vérificateur peut suivre."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.4",
+      "title": "Bleu : transformer les preuves en un verdict",
+      "caption": "Le bleu lit les éléments de preuve déterministes et la carte d'attaque, vérifie le code par rapport à une norme internationale et à la norme d'architecture de l'Alberta, et rédige le rapport classé et étayé de preuves sur lequel la direction et les vérificateurs s'appuient.",
+      "image": {
+        "src": "public/images/l199t/fr/fig-7-4.jpg",
+        "alt": "Un architecte teinté de bleu, à l'intérieur, assemblant les constats en une carte défensive et un rapport clair, levant un bouclier au-dessus du bâtiment.",
+        "image_prompt": "A wise security mentor, consolidating the findings from the yellow, green, red agents, and the full blue agent analysis, assembling them into one clear defensive map. These reports tie together 95 different key insights which form the security analysis report, kill chain analysis, and remediation plan. A sense of evidence being turned into a calm, authoritative verdict. Muted Alberta cream base with a clear navy-blue accent, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Quatre agents, un seul système de freins et contrepoids"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pris séparément, chaque agent est utile. Ensemble, ils forment un système de freins et contrepoids. Le vert et le jaune s'exécutent en premier et rapidement, côte à côte. Le rouge attaque de l'extérieur. Le bleu prend les éléments de preuve déterministes du vert et l'image d'attaque du rouge et rend le jugement. Les agents déterministes fournissent des portes qui ne régressent jamais; le bleu fournit la lecture experte qu'une liste de vérification seule manquerait. Aucun agent à lui seul ne pourrait faire tous les travaux, alors le travail est divisé en quatre et recombiné à la fin."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce qui transforme ces révisions de conseils en application obligatoire, c'est qu'elles sont intégrées au harnais à titre de portes. Le harnais ne laissera pas un travail être considéré comme terminé si l'analyse de sécurité révèle un constat critique, si l'analyse est périmée ou si la révision n'a jamais été exécutée. Chaque « à faire absolument » est appuyé par une vérification qui échoue bruyamment lorsqu'elle est ignorée. Les portes sont mécaniques, et non aspirationnelles."
+    },
+    {
+      "type": "table",
+      "title": "Ce que les portes appliquent réellement",
+      "columns": [
+        "Le harnais bloque le travail lorsque…",
+        "Détecté par"
+      ],
+      "rows": [
+        [
+          "Un constat de sécurité critique est encore ouvert.",
+          "la porte de sécurité, vérifiée avant qu'une session puisse se terminer"
+        ],
+        [
+          "L'analyse de sécurité est absente ou date de plus d'une journée.",
+          "la porte de sécurité"
+        ],
+        [
+          "Une exigence indispensable n'a aucun code réel derrière elle.",
+          "la porte de développement"
+        ],
+        [
+          "Une modification de base de données ne peut être réexécutée en toute sécurité.",
+          "la porte de migration"
+        ],
+        [
+          "Un problème corrigé n'a aucune nouvelle règle pour l'empêcher de revenir.",
+          "la porte de codification des constats"
+        ]
+      ],
+      "caption": "Chaque porte est une vérification qui échoue bruyamment lorsque sa condition n'est pas remplie, de sorte qu'une révision ne peut être contournée par de belles paroles. Une porte bloquée est corrigée ou formellement replanifiée, jamais contournée.",
+      "source": "AIDE common harness, mechanical gate scripts."
+    },
+    {
+      "type": "paragraph",
+      "text": "Réparties sur seize catégories, de l'authentification et de la gestion des sessions à la protection contre les requêtes intersites, la validation des entrées et l'hygiène de la chaîne d'approvisionnement. Le parc devient un peu plus sécuritaire à chaque passage, et la leçon est conservée plutôt que réapprise."
+    },
+    {
+      "type": "keystat",
+      "label": "Contrôles de sécurité intégrés au gabarit par rapport auquel les agents vérifient",
+      "value": "~95",
+      "body": "Les quatre agents vérifient chaque application par rapport à ce référentiel à chaque passage."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.5",
+      "title": "Les quatre agissant de concert",
+      "caption": "Le vert et le jaune vérifient le travail, le rouge l'attaque, le bleu le défend et juge. Intégrés au harnais à titre de portes, les quatre parviennent à un seul verdict, et l'application ne réussit que lorsqu'elle les franchit toutes.",
+      "image": {
+        "src": "public/images/l199t/fr/fig-7-5.jpg",
+        "alt": "Quatre agents de révision de couleur verte, jaune, rouge et bleue agissant de concert autour d'une application alors qu'elle franchit une porte de point de contrôle.",
+        "image_prompt": "An editorial illustration of four review agents, one green, one amber-yellow, one rust-red, one navy-blue, working in concert and in balance around a single application as it passes through a checkpoint or gate. Each agent contributes its own check and the four combine into one verdict. A sense of harmonious checks and balances guarding one piece of work. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "La sécurité et la qualité cessent d'être quelque chose que l'on poursuit après coup pour devenir une propriété de la façon dont le code est fabriqué.",
+      "cite": "Document 7 · Les agents rouge, bleu, vert et jaune"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les applications produites en collaboration avec ces quatre agents répondent aux défis critiques soulevés dans [L'impératif cybernétique](/paper/mwo98). Les méthodes de construction de [Les quatre approches](/paper/zgym1) peuvent être exécutées en toute sécurité à grande vitesse. Les bâtisseurs obtiennent leur vitesse, et le public obtient un code qui a été attaqué, défendu et relu avant même de lui parvenir."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Sur quoi cela fonctionne : Claude, l'Agent SDK et Vertex"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tout cela fonctionne sur la plateforme Claude d'Anthropic. Les agents déterministes, le vert, le jaune et la reconnaissance du rouge, sont du code ordinaire qui n'a besoin d'aucun modèle. Les parties qui exigent du jugement, le planificateur d'attaque du rouge et l'ensemble de l'évaluation du bleu, sont bâties avec le Claude Agent SDK, la trousse d'outils permettant de faire fonctionner un modèle à travers de nombreuses étapes avec un ensemble fixe d'outils et un budget de tours. Le harnais fixe quel modèle fait quel travail et jusqu'où il est autorisé à aller, de sorte qu'une révision est reproductible et que son coût est connu avant qu'elle ne commence."
+    },
+    {
+      "type": "paragraph",
+      "text": "L'Alberta fait fonctionner ces modèles au moyen de Claude sur Google Vertex AI, désormais la Google Agent Platform. Cela maintient le travail à l'intérieur d'un nuage canadien encadré, le fournisseur du modèle étant tenu derrière une frontière nette afin qu'il puisse être changé à mesure que le domaine évolue. Cette même frontière permet de tester un modèle local ou ouvert par rapport au modèle commercial sur un travail identique, ce qui importe à mesure que l'économie change. Les agents ne se soucient pas du modèle qui répond, seulement que la réponse satisfait à la norme."
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Ce que cela apporte aux bâtisseurs"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les quatre agents sont la façon dont l'Alberta fait de « l'IA l'a construit » une phrase à laquelle un réviseur de sécurité peut se fier. Ils détectent ce qu'une personne fatiguée manquerait, ils ne sautent jamais une étape, et ils transforment la qualité et la sécurité d'un espoir en une porte que le code doit franchir. Les bâtisseurs avancent plus vite parce que le filet de sécurité est automatique et toujours actif, et parce qu'un problème détecté devient une règle permanente plutôt qu'une surprise récurrente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Avec le harnais et ses agents de révision en place, la question se tourne vers l'usine qui les met au travail sur chaque construction. Les prochains documents ouvrent cette usine : là où les applications sont [conçues et spécifiées](/paper/qthji), là où les agents les construisent et les testent sous ces mêmes contrôles, et là où le travail est suivi et mesuré."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "security",
+        "agents",
+        "harness",
+        "red-team"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "related": [
+    "mwo98",
+    "zgym1",
+    "p7p2k",
+    "qthji"
+  ],
+  "translation_status": "draft",
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
-  },
-  "related": []
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
+  }
 }

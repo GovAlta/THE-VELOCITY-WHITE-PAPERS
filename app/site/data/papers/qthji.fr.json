@@ -4,23 +4,31 @@
   "sequence": "",
   "tier": "Technical",
   "category": "paper",
-  "title": "The AI Factory: Design and Ideation (Pronghorn)",
-  "subtitle": "Turning a requirement into a working design.",
+  "title": "L'usine d'IA : conception et idéation (Pronghorn)",
+  "subtitle": "Le projet Pronghorn constitue la première des trois étapes de l'usine. Les outils d'IA traduisent les exigences ministérielles en prototypes, en artéfacts, en canevas visuels et en livrables de projet avant le début du processus de construction.",
   "track": "Engineering the Solution",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Ministère de la Technologie et de l'Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 17,
   "status": "Draft",
-  "tags": [],
-  "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
-  "translation_status": "untranslated",
+  "tags": [
+    "ai-factory",
+    "pronghorn",
+    "design",
+    "requirements",
+    "canvas",
+    "architecture",
+    "open-source"
+  ],
+  "repo": "https://github.com/pronghorn-red/pronghorn",
+  "abstract": "Une application de qualité bâtie par l'IA exige la présence d'exigences, de normes et d'architectures clairement définies. Ces artéfacts essentiels sont souvent escamotés dans le processus de développement assisté par l'IA, car le personnel passe fréquemment tout de suite à la création des composantes d'expérience utilisateur d'une application, laissant à l'IA des décisions importantes en matière de sécurité et de technique. Sans orientation claire, les agents d'IA omettent fréquemment des fonctions et des contrôles essentiels. L'Alberta a conçu le projet Pronghorn pour permettre au personnel technique et non technique de collaborer afin de définir des hypothèses claires, des prototypes fonctionnels, des exigences d'affaires et un canevas interactif de conception d'architecture. Ces artéfacts permettent à la livraison fondée sur l'IA de partir du bon pied et assurent la cohérence d'un bout à l'autre, tout en fournissant un point de référence pour évaluer le produit final.",
   "hero_image": {
     "src": "public/images/qthji/fr/hero.jpg",
-    "alt": "Editorial image for: The AI Factory: Design and Ideation (Pronghorn)",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The AI Factory: Design and Ideation (Pronghorn)\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Illustration de couverture éditoriale d'une antilope pronghorn en plein élan, de profil, dessinée au trait dans un bleu marine profond de l'Alberta avec de petits accents rouille sur un papier crème chaud.",
+    "image_prompt": "An editorial cover illustration of a single pronghorn antelope mid-stride in profile, drawn in deep Alberta navy line work with small rust-coloured accents on warm cream paper. A sense of speed and endurance, a calm wide eye, a few sparse lines suggesting open grassland behind it. Archival print quality, calm and confident. Wide cover aspect. No text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -28,18 +36,115 @@
   },
   "tldr_presentation": {
     "id": "qthji-tldr",
-    "title": "The paper, in brief",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "qthji",
     "slides": [
       {
         "id": "01",
-        "title": "The AI Factory: Design and Ideation (Pronghorn)",
+        "title": "L'usine d'IA : conception et idéation",
         "audio_file": "public/audio/fr/qthji-tldr/01.mp3",
         "visual": "title",
-        "caption": "Engineering the Solution",
-        "subcaption": "",
-        "text": "The AI Factory: Design and Ideation (Pronghorn). Content forthcoming."
+        "caption": "Document 8 · Engineering the Solution",
+        "subcaption": "Pronghorn, la première des trois étapes de l'usine.",
+        "text": "Conception et idéation, la première étape de l'usine d'IA. Après avoir bâti des centaines de prototypes avec des outils comme Lovable et Cursor, nous avons constaté que la limite de la qualité tenait rarement au modèle d'IA. Elle tenait à l'absence d'une définition claire de ce que nous étions en train de construire. Pronghorn est l'endroit où le personnel technique et non technique définit un projet ensemble, selon une seule norme, avant qu'on en construise quoi que ce soit."
+      },
+      {
+        "id": "02",
+        "title": "Définir d'abord la cible",
+        "audio_file": "public/audio/fr/qthji-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "Pourquoi la définition vient en premier",
+        "visual_config": {
+          "left": {
+            "label": "Se lancer directement dans la construction",
+            "body": "Rapide et satisfaisant, et cela mène à une architecture mal alignée avec la pile technologique."
+          },
+          "right": {
+            "label": "La définir dans Pronghorn",
+            "body": "S'entendre sur le prototype, les exigences et l'architecture, puis remettre un dossier clair à l'étape de construction."
+          }
+        },
+        "text": "On ne peut pas atteindre une cible qu'on n'a pas définie. La tentation, dans le développement agentique, est de commencer tout de suite à construire, ce qui est satisfaisant et rapide, et qui vous laisse une architecture mal alignée avec la pile que vous devez utiliser. Pronghorn est l'endroit où l'on s'entend d'abord sur le prototype, les normes, les exigences et l'architecture."
+      },
+      {
+        "id": "03",
+        "title": "Construit selon une norme",
+        "audio_file": "public/audio/fr/qthji-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Comme une voiture en sortie de chaîne",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Façonné aujourd'hui",
+              "desc": "Une ou deux personnes fixent l'apparence et l'expérience; la cohérence est difficile à obtenir."
+            },
+            {
+              "label": "Assemblé demain",
+              "desc": "Accessible, bien fait et hautement reproductible, selon une seule norme commune."
+            },
+            {
+              "label": "Pourquoi c'est important",
+              "desc": "À travers des milliers de services publics, c'est par une expérience cohérente que les gens trouvent de l'aide."
+            }
+          ]
+        },
+        "text": "Une voiture peut être belle et confortable tout en étant presque identique à la suivante en sortie de chaîne. Les applications gouvernementales devraient fonctionner de la même façon. Aujourd'hui, elles sont davantage façonnées qu'assemblées, chacune étant marquée par le goût d'une ou deux personnes. À travers des milliers de services publics, ce dont les gens ont besoin, c'est d'une expérience cohérente et accessible; Pronghorn pousse donc vers une seule norme commune."
+      },
+      {
+        "id": "04",
+        "title": "D'une idée à une spécification",
+        "audio_file": "public/audio/fr/qthji-tldr/04.mp3",
+        "visual": "list",
+        "caption": "Clavardage, artéfacts, exigences, canevas",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Clavardage",
+              "desc": "Construit un prototype HTML en direct dans le navigateur pour le partager avec un client."
+            },
+            {
+              "label": "Artéfacts",
+              "desc": "Intègre des présentations, des PDF et des images que l'IA peut utiliser; contrôle de version complet."
+            },
+            {
+              "label": "Exigences",
+              "desc": "Épopées, fonctionnalités, récits utilisateurs et critères d'acceptation, dans une carte à quatre niveaux."
+            },
+            {
+              "label": "Canevas",
+              "desc": "L'architecture dessinée sous forme de nœuds et d'arêtes, avant l'existence du moindre code."
+            }
+          ]
+        },
+        "text": "Pronghorn transforme une idée en spécification. Un clavardage construit un prototype en direct dans le navigateur. L'espace des artéfacts intègre des présentations, des PDF et des images, et conserve un historique de versions. La section des exigences construit une carte à quatre niveaux d'épopées, de fonctionnalités, de récits utilisateurs et de critères d'acceptation. Et un canevas visuel contient l'architecture elle-même, dessinée sous forme de nœuds et d'arêtes avant qu'aucun code ne soit écrit."
+      },
+      {
+        "id": "05",
+        "title": "Une spécification qu'une machine peut lire",
+        "audio_file": "public/audio/fr/qthji-tldr/05.mp3",
+        "visual": "compare",
+        "caption": "Fonctionnel et architectural",
+        "visual_config": {
+          "left": {
+            "label": "Exigences fonctionnelles",
+            "body": "Ce que l'application doit faire, établi à partir des clavardages et des artéfacts."
+          },
+          "right": {
+            "label": "Le canevas d'architecture",
+            "body": "Comment elle est structurée, dessinée sous forme de nœuds et d'arêtes qu'un agent de codage peut lire."
+          }
+        },
+        "text": "Jumelez les exigences fonctionnelles de la section des exigences à l'architecture du canevas, et vous obtenez une spécification complète qui indique clairement comment l'application devrait fonctionner. Une série d'agents de préparation rédige l'analyse de rentabilisation, la charte et le plan d'adhésion du client. Le dossier complet se détache proprement et est remis à un agent de codage pour la construction."
+      },
+      {
+        "id": "06",
+        "title": "La première des trois étapes",
+        "audio_file": "public/audio/fr/qthji-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Ne sautez pas cette étape",
+        "subcaption": "Définissez-la ici, puis construisez-la dans Nexus.",
+        "text": "Pronghorn est la première phase critique : idéation, architecture et exigences, ancrées dans les propres documents du client. Un agent peut tout lire de façon native et établir des liens dans les deux sens au moyen d'une API. Ne sautez pas cette étape, sinon vous livrerez des applications qui ont l'air correctes, mais qui se comportent comme une expérience irrégulière en dessous. Le prochain document montre où ces spécifications sont mises en œuvre, dans l'environnement Nexus."
       }
     ]
   },
@@ -47,23 +152,260 @@
   "sections": [
     {
       "n": "01",
-      "title": "Overview"
+      "title": "Voici le pronghorn"
+    },
+    {
+      "n": "02",
+      "title": "L'usine d'IA en trois étapes"
+    },
+    {
+      "n": "03",
+      "title": "L'usine automobile comme analogie utile"
+    },
+    {
+      "n": "04",
+      "title": "Automatisation contre fabrication artisanale"
+    },
+    {
+      "n": "05",
+      "title": "Voici Pronghorn"
+    },
+    {
+      "n": "06",
+      "title": "D'une idée à une spécification"
+    },
+    {
+      "n": "07",
+      "title": "Le canevas d'architecture"
+    },
+    {
+      "n": "08",
+      "title": "Des agents qui préparent le projet"
+    },
+    {
+      "n": "09",
+      "title": "Le premier tiers de l'usine"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "À la fin de 2025, l'équipe des maximalistes de l'IA de Technologie et Innovation avait « vibe-codé » plusieurs centaines d'applications prototypes sur des plateformes comme [Lovable](https://lovable.dev). À mesure que les modèles gagnaient en capacité et que le personnel acquérait de l'expérience, le développement et le prototypage d'applications s'accéléraient. Cependant, les agents d'IA se concentraient généralement sur l'expérience utilisateur et prenaient des décisions architecturales non documentées qui nuisaient à la sécurité, au déploiement et à la convenance pour les charges de travail gouvernementales. Ces plateformes imposaient aussi des choix technologiques précis (comme l'utilisation de [Supabase](https://supabase.com) et d'autres plateformes de logiciel-service) qui ne faisaient pas partie de notre norme et qui, lorsqu'ils étaient mal mis en œuvre, pouvaient facilement introduire de nouveaux risques de sécurité. \n\nSoyons clairs : ces lacunes n'ont rien à voir avec les capacités des modèles eux-mêmes, mais avec la façon dont ils sont utilisés. Le personnel ne semble pas mettre en place des contrôles de sécurité robustes dès le départ, et la livraison des solutions dorsales était non planifiée, incohérente et improvisée dans sa mise en œuvre. Il était clair que l'Alberta avait besoin d'outils faciles à utiliser pour tous et assez puissants pour créer une image intégrée de ce qui était construit **avant** le début du développement. De nouveaux processus sont nécessaires pour formaliser ces étapes afin de garantir qu'elles ne soient pas escamotées. En novembre 2025, l'équipe des maximalistes de l'IA a commencé à concevoir une solution pour relever ces défis, qui est devenue le projet Pronghorn."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Voici le pronghorn"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "Le pronghorn était la bonne mascotte pour cette initiative. Le pronghorn est le deuxième animal terrestre le plus rapide au monde et le plus rapide d'Amérique du Nord, originaire de l'Alberta, doté d'un large champ de vision et de l'endurance nécessaire pour courir pendant des heures. Nous voulions un outil aux mêmes qualités : rapide, capable de voir loin et de maintenir une grande vélocité sur une longue distance. Notre ambition initiale était que Pronghorn devienne une solution unique et complète qui résolve l'ensemble de la construction de bout en bout, des exigences et du prototypage jusqu'à l'architecture, la base de données et le déploiement. La version initiale y est parvenue de façon modérément efficace, permettant notre première construction de bout en bout au sein d'une plateforme commune. Cependant, à mesure que la technologie évoluait et que les plateformes de codage agentique comme Claude Code, GitHub Copilot et Perplexity Computer évoluaient, nous avons resserré la portée de Pronghorn pour nous concentrer plus précisément sur la transformation des idées et des exigences en prototypes, en architectures et en artéfacts nécessaires au lancement d'un projet. C'était, et cela demeure, une étape mal servie et négligée du processus de développement. Nous avons donc pivoté et sommes restés agiles (comme un pronghorn), et la plateforme s'est davantage concentrée sur la première des trois étapes de ce que nous appelons une usine d'IA."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG.",
+      "title": "",
+      "caption": "Le pronghorn : rapide, capable de voir loin et bâti pour l'endurance sur la distance.",
+      "image": {
+        "src": "public/images/qthji/fr/fig-mq1i9ir3.jpg",
+        "alt": "Un seul pronghorn debout de profil dans la prairie ouverte de l'Alberta, étiqueté rapide, voit loin et grande endurance, dessiné au trait dans un bleu marine profond avec de petits accents rouille sur un papier crème chaud.",
+        "image_prompt": "A fine-art editorial illustration: a single pronghorn antelope standing in profile on the open Alberta prairie, deep navy pen-and-ink line work with small rust-coloured accents on warm cream paper, rolling foothills and tufts of prairie grass around it, like a hand-drawn book plate. Exactly three short hand-lettered labels appear in the open sky around the animal, in clean navy sans-serif, each joined to it by a thin rust leader line, reading word-for-word: « Rapide », « Voit loin », « Grande endurance ». Those three labels are the only writing anywhere in the image. Do not add any other words, sentences, facts, statistics, numbers, captions, headings, legends, boxes, or arrows. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover",
+        "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. Wide cover aspect. The only text permitted in the entire image is three short hand-lettered label words; render no other writing of any kind. No logos."
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "L'usine d'IA en trois étapes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le concept de l'usine d'IA consiste à tirer le maximum de l'IA agentique pour piloter le développement des applications, de l'idéation à la livraison. L'objectif de l'Alberta est de tirer le maximum de l'IA pour accroître la qualité et la vitesse tout en réduisant les coûts. Pour y parvenir efficacement, nous avons imaginé le processus divisé en trois étapes distinctes. \n\n\nLa première étape rassemble la matière première, comme les exigences, les dépendances, les transcriptions, ainsi que les processus et flux de travail actuels. L'IA appuie cette étape en transformant ces artéfacts en prototypes, en conceptions, en exigences, en spécifications clairs et en livrables de projet comme des analyses de rentabilisation, des chartes ainsi que des conceptions d'architecture claires et bien documentées. La deuxième construit. La troisième mesure. \n\n\nPronghorn sert cette première étape, où l'on règle les parties communes, les composantes, les spécifications et l'architecture, et où l'on décide de ce qu'on essaie réellement de construire."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.1",
+      "title": "Les trois étapes, et solutions, de l'usine",
+      "caption": "Un travail traverse l'usine en trois étapes reliées. Pronghorn est la première, où l'idée est conçue, prototypée et spécifiée. Nexus la construit. Velocity suit et évalue la livraison. Chaque étape remet à la suivante un résultat fini et lisible par la machine.",
+      "image": {
+        "src": "public/images/qthji/fr/fig-8-1.jpg",
+        "alt": "Un diagramme dessiné à la main de trois étapes reliées, de gauche à droite : une case mise en évidence intitulée Pronghorn, Conception; une flèche vers une case intitulée Nexus, Construction; une flèche vers une case intitulée Velocity, Mesure.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three rounded boxes in a row, left to right, joined by curved arrows. The first box, drawn with a rust outline to emphasise it, is labelled PRONGHORN with a smaller word « CONCEPTION » beneath. The second box is labelled NEXUS with « CONSTRUCTION » beneath. The third box is labelled VELOCITY with « MESURE » beneath. A small caption under the row reads « TROIS ÉTAPES, UNE SEULE CHAÎNE DE MONTAGE ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "L'usine automobile comme analogie utile"
+    },
+    {
+      "type": "paragraph",
+      "text": "Une usine automobile est une analogie utile pour comprendre le processus de conception des applications à l'ère de l'IA. \n\n\nBeaucoup de conceptions automobiles commencent par un bloc d'argile, façonné par un artiste qui a un sens du style et un ensemble de contraintes strictes : la forme doit être aérodynamique, attrayante, sécuritaire sur la route et conforme aux limites de garde au sol, de hauteur, de fenêtres et de portières. L'argile n'est que l'apparence, et cela suffit comme point de départ. Une fois sculptée, elle est numérisée, convertie en modèle 3D et raffinée par logiciel en quelque chose de plus solide. Viennent ensuite les spécifications. Au Canada, Transports Canada établit ce qu'une voiture doit respecter pour être légale sur la route, un ensemble exhaustif de normes de sécurité. Et puis les compétences : une conception est convertie en des dizaines de milliers de pièces distinctes, chacune préfabriquée et cataloguée avec sa propre conception, ses matériaux et sa fiche technique, toutes assemblées d'abord à l'intérieur d'un ordinateur. Un logiciel de validation garantit que rien n'entre en collision et que chaque pièce peut être installée et retirée en séquence avec des outils ordinaires. \n\n\nLe développement logiciel traditionnel (pré-IA) suit des processus de développement semblables à la conception automobile. Des prototypes visuels et des maquettes filaires sont créés pour valider les hypothèses fondamentales. L'image de marque et les styles sont intégrés. Les décisions architecturales sont prises, et les normes d'entreprise sont superposées aux plans. Les exigences fonctionnelles (ce que l'utilisateur voit et fait) et non fonctionnelles (comment l'application fonctionne et est protégée) sont définies et approuvées pour validation par un éventail de parties prenantes. Les coûts sont ventilés par composantes et fonctionnalités distinctes, et un échéancier et un coût sont fixés et approuvés. \n\n\nLe développement d'applications fondé sur l'IA escamote bon nombre, voire la plupart, de ces étapes par défaut, en se lançant directement dans l'interface utilisateur et le flux de travail. Cela procure une gratification visuelle immédiate, mais reporte ces décisions à plus tard. Pour prolonger l'analogie, vous voyez la carrosserie de la voiture, mais les freins, le moteur, les essieux et le châssis sont absents. Visuellement attrayante, mais ni prête ni sécuritaire à conduire."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Automatisation contre fabrication artisanale"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'usine indique où nous voulons aller en matière de normalisation. \n\nLes humains aussi peinent à assurer la cohérence d'une application à l'autre. Sans une norme clairement définie, deux développeurs humains différents prendront un éventail de décisions qui façonnent l'expérience. Pour un produit logiciel distinct, cette singularité peut être un atout. Au gouvernement, c'est surtout un handicap. Le gouvernement accorde une grande valeur à une expérience utilisateur positive et à la créativité qui résout un problème inédit, et pourtant la reproductibilité, la sécurité, la convivialité et l'accessibilité comptent bien plus qu'un caractère distinct et sur mesure. À travers des milliers de services destinés au public, un écart par rapport à l'apparence commune est déroutant plutôt que charmant."
+    },
+    {
+      "type": "paragraph",
+      "text": "Au fil de décennies de développement et au gré des ministères, l'expérience utilisateur a dérivé. Les applications individuelles visent la cohérence au sein de la base de code, mais à l'échelle du parc technologique, il existe une diversité importante qui devient déroutante pour les utilisateurs. Pour une personne qui cherche des services sociaux et qui utilise un lecteur d'écran ou une autre technologie d'assistance, cette incohérence fait la différence entre obtenir de l'aide et abandonner. La norme doit rejoindre le public là où il se trouve. \n\n\nLa livraison assistée par l'IA peut aggraver le problème, car chaque prototype vibe-codé tend à être différent à moins qu'une norme claire ne soit introduite dès la toute première étape. Cependant, l'IA peut aussi résoudre efficacement ce problème en définissant des normes universelles que chaque agent d'IA suit. Cela exige un dépôt central, lisible par la machine, de normes, de gabarits et d'exemples de code (comme une bibliothèque de composantes communes et réutilisables) qui sont définis et appliqués tout au long du processus de construction. Le [Well Built Harness](/paper/p7p2k) est un exemple de la façon dont ces normes peuvent être appliquées."
+    },
+    {
+      "type": "paragraph",
+      "text": "L'Alberta cherche à éliminer cette complexité au moyen d'une mise en œuvre pilotée par l'IA. À l'aide de notre approche axée sur les normes, nous rationalisons cette complexité en un ensemble clair et commun de normes lisibles par l'IA. Cela garantit une grande convivialité, assure l'accessibilité et rend l'expérience cohérente sur chaque interface qu'une personne doit utiliser. En mettant en œuvre [Les quatre approches de la modernisation par l'IA](/paper/zgym1), nous harmonisons cette expérience selon les approches qui y sont présentées. Ces normes et ces approches sont appliquées dès la première étape de l'usine, par l'entremise de la plateforme Pronghorn."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Voici Pronghorn"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'Alberta a conçu la première version de Pronghorn (connue sous le nom de Pronghorn Red) comme une application React / Supabase à code source ouvert. Elle reposait initialement sur Lovable et était intégrée à Render.com et à des fournisseurs infonuagiques tiers pour l'intégration de bases de données. Elle prend en charge un éventail de modèles différents de Google, d'Anthropic et de SpaceXAI, et offre une suite d'outils assistés par l'IA qui soutiennent le cycle de vie du développement des applications. \n\n\nPlus récemment, l'Alberta a collaboré avec Microsoft Canada pour transposer Pronghorn Blue en une version remaniée, mieux alignée avec les environnements d'entreprise. Elle introduit la prise en charge des modèles d'OpenAI et tire parti de composantes de pile natives d'Azure, comme les bases de données et les déploiements conteneurisés. Pronghorn Blue est maintenu dans le cadre d'un partenariat entre Microsoft et le gouvernement de l'Alberta, et sera développé et maintenu tout au long de l'année à venir pour y ajouter des fonctionnalités supplémentaires. Red demeure une bonne architecture de référence, mais n'est plus en développement actif. Les deux versions sont destinées à être déployées par n'importe quelle organisation dans son propre environnement infonuagique privé ou public. Les deux sont publiées sous la licence ouverte MIT pour une utilisation sans entrave. "
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "D'une idée à une spécification"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un projet dans Pronghorn commence par un peu de métadonnées et un choix de modèles, et passe rapidement à un clavardage avec la plus récente IA. Le clavardage est familier, mais introduit une capacité de prototypage rapide. Les applications décrites apparaissent immédiatement dans le corps du clavardage, de sorte que les idées peuvent être élaborées plus rapidement. Une personne sans bagage technique, et sans endroit où héberger une application, peut décrire ce qu'elle veut et voir apparaître une maquette fonctionnelle en direct, prête à être partagée avec un client pour recueillir ses réactions. Vous pouvez conserver un nombre illimité de conversations en fil, cloner des conversations, et télécharger l'ensemble du clavardage. Soit dit en passant, nous répétons couramment que toute plateforme qui ne vous laisse pas emporter le contenu de votre clavardage est fondamentalement défaillante. Le contenu est votre propriété intellectuelle, et vous devez pouvoir le conserver, le sélectionner et le transmettre à un agent. Pronghorn permet cela."
+    },
+    {
+      "type": "paragraph",
+      "text": "Vient ensuite l'espace des artéfacts, où Pronghorn offre une fonctionnalité approfondie, car un agent ne vaut que par le contexte qu'on lui fournit. Les projets sont généralement amorcés avec un éventail d'artéfacts variés, comme des jeux de diapositives, des PDF, des documents Word et des pages Web, et l'espace des artéfacts intègre tout cela, indexé et prêt à être utilisé par l'IA. Pronghorn vous permet de générer et d'analyser des images, de sorte qu'une maquette d'interface utilisateur peut être créée avec un modèle d'image et raffinée sur place. Vous pouvez modifier n'importe quel artéfact en collaboration avec un éditeur d'IA qui conserve un historique immuable de chaque changement, de sorte qu'un document de tout type peut être rédigé et révisé rapidement, avec un véritable contrôle de version, un traitement des images et des PDF, et une gestion de fichiers soignée."
+    },
+    {
+      "type": "paragraph",
+      "text": "À partir de vos clavardages et des artéfacts, Pronghorn construit les exigences d'affaires. Pointez-le vers le matériel, et il parcourt une hiérarchie agile et structurée : les épopées au sommet, puis les fonctionnalités qu'elles contiennent, puis les récits utilisateurs, et les critères d'acceptation qui indiquent quand chaque récit est terminé. Le résultat est une carte à quatre niveaux que vous pouvez développer, suivre et transmettre, ancrée dans les documents à partir desquels le projet a réellement commencé plutôt que dans le souvenir qu'une personne a d'une réunion."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.2",
+      "title": "La hiérarchie des exigences à quatre niveaux",
+      "caption": "Pronghorn transforme les clavardages et les artéfacts en un ensemble structuré d'exigences : les épopées au sommet, les fonctionnalités à l'intérieur de chaque épopée, les récits utilisateurs à l'intérieur de chaque fonctionnalité, et les critères d'acceptation qui indiquent quand un récit est terminé. L'arbre entier peut être développé, cartographié et suivi.",
+      "image": {
+        "src": "public/images/qthji/fr/fig-8-2.jpg",
+        "alt": "Un arbre dessiné à la main à quatre niveaux : une seule case intitulée Épopée au sommet, se ramifiant vers plusieurs cases Fonctionnalité, chacune se ramifiant vers des cases Récit utilisateur, chacune se ramifiant vers de petites étiquettes Critères d'acceptation au bas.",
+        "image_prompt": "An editorial tree diagram on warm cream paper, deep navy line work with small rust accents, branching top to bottom in four clear tiers. At the top, one box labelled « ÉPOPÉE ». Lines down to a row of three boxes labelled « FONCTIONNALITÉ ». From each feature, lines to smaller boxes labelled « RÉCIT UTILISATEUR ». From each user story, lines to small tags labelled « CRITÈRES D'ACCEPTATION ». The four tiers are clearly separated and labelled at the left edge « ÉPOPÉES », « FONCTIONNALITÉS », « RÉCITS UTILISATEURS », « CRITÈRES D'ACCEPTATION ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Le canevas d'architecture"
+    },
+    {
+      "type": "paragraph",
+      "text": "La fonctionnalité qui nous enthousiasme le plus à long terme est un canevas visuel partagé, bâti sur React Flow, où vous glissez-déposez les parties de l'architecture d'une application et travaillez dessus aux côtés d'agents d'IA qui peuvent à la fois lire le canevas et y dessiner. Une application moderne comporte de nombreuses couches : le nuage où elle s'exécute, le pare-feu, le frontal, le serveur, les API tierces, les bases de données et les intégrations internes. Tracées sous forme d'architecture fonctionnelle, cela représente des dizaines ou des centaines de composantes reliées en un seul diagramme. Dans Pronghorn, vous pouvez générer une architecture théorique au départ, vous y arrêter, et conserver des copies versionnées qui décrivent l'ensemble de l'application avant qu'aucun code n'existe."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cela importe parce que c'est une autre façon d'empêcher qu'une interface ne soit vibe-codée jusqu'à l'existence. À la place de la production longue et verbeuse d'un modèle de langage, le canevas est une description compacte et resserrée : une hiérarchie claire de nœuds reliés par des arêtes étiquetées, avec des métadonnées sur chacun indiquant ce qu'il fait et comment il se connecte. C'est le bon point de départ pour la construction, et il peut être téléchargé et remis directement à un agent de codage. La forme d'une application d'entreprise est une décision à prendre délibérément, dès le départ, plutôt qu'une décision à laisser aux choix qu'un modèle imprévisible fait au fur et à mesure. Le canevas est l'architecture fonctionnelle, qui est elle-même une exigence, une exigence non fonctionnelle. Jumelez les exigences fonctionnelles de la section des exigences à l'architecture du canevas, et vous obtenez une spécification complète qui indique clairement comment l'application devrait fonctionner."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.3",
+      "title": "Le canevas d'architecture",
+      "caption": "Sur un canevas partagé bâti avec React Flow, les couches d'une application sont disposées sous forme de nœuds étiquetés reliés par des arêtes étiquetées : le nuage, le pare-feu, le frontal, le serveur, les API tierces, les bases de données et les intégrations. Une personne et des agents d'IA lisent et dessinent tous deux sur le même canevas, et le résultat est versionné et emporté comme architecture.",
+      "image": {
+        "src": "public/images/qthji/fr/fig-8-3.jpg",
+        "alt": "Un graphe de nœuds dessiné à la main de l'architecture d'une application : des nœuds étiquetés Nuage, Pare-feu, Frontal, Serveur, API tierce, Base de données et Intégration reliés par des arêtes étiquetées, avec un petit jeton de personne et un petit jeton d'agent d'IA tous deux connectés au canevas.",
+        "image_prompt": "An editorial architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as a node graph. Labelled rounded nodes joined by curved labelled edges: « NUAGE », « PARE-FEU », « FRONTAL », « SERVEUR », « API TIERCE », « BASE DE DONNÉES » and « INTÉGRATION », arranged in a connected layout. At the edge of the canvas, a small person token labelled « HUMAIN » and a small robot token labelled « AGENT », each with a thin line reaching onto the canvas to show they both author it. A small corner tag reads « VERSIONNÉ, À EMPORTER ». Calm, architectural, legible labels. No logos, no people beyond the small schematic tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Des agents qui préparent le projet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pronghorn est livré avec un ensemble d'agents qui préparent un projet en vue de son approbation et de sa construction. Un rédacteur d'analyse de rentabilisation, un rédacteur de charte et de demande de propositions, un planificateur de projet et un constructeur d'échéancier lisent vos clavardages, vos artéfacts et vos canevas, et produisent un plan de projet prêt à être présenté à un client pour obtenir son adhésion. Vous pouvez modifier ces agents, créer les vôtres et les organiser en un flux de travail qui transforme une idée embryonnaire en l'ensemble complet d'artéfacts dont un projet a besoin pour démarrer."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.4",
+      "title": "Préparer le projet avant la construction",
+      "caption": "Un ensemble d'agents lit les clavardages, les artéfacts, les exigences et le canevas, et produit le matériel dont un projet a besoin pour démarrer : une analyse de rentabilisation, une charte, une demande de propositions, un plan de projet et un échéancier. Le dossier fini est remis à l'étape de construction, de sorte que le travail arrive défini plutôt qu'improvisé.",
+      "image": {
+        "src": "public/images/qthji/fr/fig-8-4.jpg",
+        "alt": "Un diagramme dessiné à la main : quatre entrées intitulées Clavardage, Artéfacts, Exigences et Canevas alimentent une rangée d'insignes d'agents intitulés Analyse de rentabilisation, Charte et demande de propositions, Planificateur de projet et Échéancier, qui produisent un document Plan de projet, avec une flèche intitulée transfert menant à une case intitulée La construction.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, flowing left to right. On the left, four small labelled inputs stacked: « CLAVARDAGE », « ARTÉFACTS », « EXIGENCES », « CANEVAS ». They feed into a central row of four rounded agent badges labelled « ANALYSE DE RENTABILISATION », « CHARTE ET DEMANDE DE PROPOSITIONS », « PLANIFICATEUR DE PROJET », and « ÉCHÉANCIER », shown working together with small connecting lines. To the right, they produce a document labelled « PLAN DE PROJET », and a curved arrow labelled « TRANSFERT » leads from there to a box labelled « LA CONSTRUCTION ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Pronghorn comprend aussi des agents de codage et un agent de base de données, des moyens rapides de faire passer une idée à l'échelle : importer des données déjà en JSON ou en CSV, se connecter à un éventail de bases de données, et travailler avec une base de données Postgres hébergée sur Azure, Render, AWS ou ailleurs, avec un déploiement pratique dans Azure et render.com dans l'édition Red. Ces fonctionnalités de construction et de déploiement résident désormais plus pleinement dans l'étape suivante de l'usine, [Nexus](/paper/uwpxr), qui ajoute les contrôles de sécurité et l'observabilité des agents que Pronghorn n'a jamais été conçu pour porter."
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Le premier tiers de l'usine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pronghorn est la première phase critique : recherche et idéation, développement de l'architecture et cartographie des exigences. Placé aux côtés des propres exigences, documents et transcriptions de réunions du client, il ancre une application d'entreprise dans un ensemble clair d'artéfacts qu'un agent de codage agentique peut lire nativement. Pronghorn expose ces connexions dans les deux sens. Un écouteur dans Claude Code peut surveiller les changements dans un projet Pronghorn, et une API permet à n'importe quelle plateforme de codage agentique d'y réécrire, de sorte qu'un agent peut être un contributeur de premier ordre, ajoutant à l'architecture, aux exigences et aux artéfacts. À partir de [Nexus](/paper/uwpxr), les deux se relient dans les deux sens, et le développement est piloté à partir de là."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un mot à nos constructeurs. La tentation, dans le développement agentique, est de commencer tout de suite à construire l'application. C'est satisfaisant, cela vous permet de tester une idée rapidement, et c'est aussi ainsi qu'on se retrouve avec une architecture mal alignée avec la pile technologique que vous devez utiliser. Pronghorn est l'endroit où le personnel technique et non technique s'entend sur la portée, les plans et les exigences avant que cela ne se produise. Rien n'y est verrouillé; les artéfacts se détachent proprement et passent directement à la construction. Sautez cette étape à vos risques et périls, sinon vous livrerez des applications qui ont l'air correctes, qui suivent les normes communes, et qui se comportent quand même comme une expérience irrégulière et inégale en dessous, surtout à la couche API, où la prestation des services dans le modèle Gouvernement 3.0 décrit dans [les quatre approches](/paper/zgym1) se gagne ou se perd. Le prochain document montre où ces spécifications se rejoignent et sont mises en œuvre, dans l'environnement [Nexus](/paper/uwpxr), par les agents qui font la construction."
+    },
+    {
+      "type": "figure",
+      "title": "Explorez ceci sous forme de canevas interactif",
+      "caption": "Idéation Pronghorn, puis orchestration Nexus, puis livraison Velocity. Les agents circulent d'un bout à l'autre de la chaîne. Fait partie du Canevas (document 18); glissez les nœuds, faites un zoom, et appuyez sur Écouter pour une visite guidée parlée.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "factory",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "pronghorn",
+        "design",
+        "requirements",
+        "canvas",
+        "open-source"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "translation_status": "draft",
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
   },
-  "related": []
+  "related": [
+    "uwpxr",
+    "k3tc3",
+    "zgym1",
+    "p7p2k",
+    "xs7uh"
+  ]
 }

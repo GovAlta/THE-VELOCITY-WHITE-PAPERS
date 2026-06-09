@@ -3,114 +3,316 @@
   "num": "02",
   "sequence": "2 sur 8",
   "tier": "Conceptual",
-  "title": "L'impératif cyber",
-  "subtitle": "Remparts et marées montantes. Le moteur cybersécurité, traité à part entière.",
+  "title": "L'impératif cybernétique",
+  "subtitle": "Alors que les menaces externes croissent chaque jour, la modernisation pilotée par l'IA permettra une défense en cybersécurité plus solide.",
   "track": "Defining the Problem",
   "authors": [
+    "Janak Alford",
     "Ministère de la Technologie et de l'Innovation"
   ],
-  "published": null,
-  "reading_min": null,
+  "published": "2026-06-16",
+  "reading_min": 8,
   "status": "Published",
-  "tags": [],
+  "tags": [
+    "cybersecurity",
+    "supply-chain",
+    "technical-debt",
+    "drivers",
+    "ai-agents"
+  ],
   "repo": null,
-  "abstract": "À mesure que les systèmes hérités vieillissent et perdent leur soutien, les remparts cèdent pendant que la sophistication de l'adversaire augmente. Une seule planche manquante peut couler le navire. Le sujet de la modernisation passe d'« un jour » à « maintenant ».",
+  "abstract": "L'Alberta exploite l'un des programmes de cybersécurité les plus solides au Canada, et au cours des 24 derniers mois, elle a tenu la ligne face à une montée constante des attaques. Le siège à l'extérieur s'intensifie : les contrôles cybernétiques bloquent désormais 189 millions de tentatives de connexion par jour, soit plus du double d'il y a deux ans, et l'IA génère des exploits à une vitesse fulgurante. Les murailles elles-mêmes vieillissent : une grande partie du parc fonctionne sur des technologies qui sortent du soutien des fournisseurs. La chaîne d'approvisionnement logicielle est devenue une cible de premier plan, et un seul incident peut entraîner un lourd coût financier et opérationnel. Ce document démontre que la modernisation pilotée par l'IA constitue une exigence de sécurité.",
   "hero_image": {
     "src": "public/images/mwo98/fr/hero.jpg",
-    "alt": "Image éditoriale pour : L'impératif cyber",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The Cyber Imperative\". Fortress walls and rising tides. The cybersecurity driver, given its own dedicated treatment. Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "De vieilles murailles de pierre d'une forteresse à demi submergées par une mer qui monte rapidement, les défenseurs tenant encore les remparts supérieurs.",
+    "image_prompt": "An editorial illustration of old stone fortress walls standing against a fast-rising sea, water already lapping over the lower ramparts while defenders hold the line above. A sense of strong defenses meeting a tide that keeps climbing. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/fr/mwo98.mp3",
-    "duration_sec": null
+    "src": "public/audio/fr/mwo98.mp3"
   },
   "tldr_presentation": {
     "id": "mwo98-tldr",
-    "title": "Le livre blanc en bref",
+    "title": "Le document, en bref",
     "locale": "fr",
+    "owner_id": "mwo98",
     "slides": [
       {
         "id": "01",
-        "title": "L'impératif cyber",
+        "title": "L'impératif cybernétique",
         "audio_file": "public/audio/fr/mwo98-tldr/01.mp3",
         "visual": "title",
-        "caption": "Livre 2 · Cybersécurité",
-        "subcaption": "Remparts et marées montantes. Le moteur cybersécurité, traité à part entière.",
-        "text": "L'impératif cyber. Remparts et marées montantes. Le moteur cybersécurité, traité à part entière."
+        "caption": "Document 2 · Cybersécurité",
+        "subcaption": "Les murailles vieillissent de l'intérieur pendant que la marée monte de l'extérieur.",
+        "text": "L'impératif cybernétique. L'Alberta exploite l'un des programmes de cybersécurité les plus solides au Canada, et depuis dix-huit mois, elle a tenu la ligne. La tenir devient plus difficile pour deux raisons à la fois. La marée à l'extérieur des murailles monte, et les murailles elles-mêmes vieillissent. Ce document démontre que la modernisation et la sécurité ne forment désormais qu'une seule et même cause."
       },
       {
         "id": "02",
-        "title": "Le résumé",
+        "title": "189 millions par jour",
         "audio_file": "public/audio/fr/mwo98-tldr/02.mp3",
-        "visual": "quote",
+        "visual": "stat",
+        "caption": "La marée qui monte",
         "visual_config": {
-          "text": "À mesure que les systèmes hérités vieillissent et perdent leur soutien, les remparts cèdent pendant que la sophistication de l'adversaire augmente. Une seule planche manquante peut couler le navire. Le sujet de la modernisation passe d'« un jour » à « maintenant ».",
-          "cite": "Livre 02 · L'impératif cyber"
+          "stat_value": "189 M / jour",
+          "stat_label": "Tentatives de connexion bloquées, 2024-2025"
         },
-        "text": "À mesure que les systèmes hérités vieillissent et perdent leur soutien, les remparts cèdent pendant que la sophistication de l'adversaire augmente. Une seule planche manquante peut couler le navire. Le sujet de la modernisation passe d'« un jour » à « maintenant »."
+        "subcaption": "En hausse par rapport à 126,3 millions l'année précédente, et à 81,2 millions l'année d'avant.",
+        "text": "La marée. En 2024-2025, les contrôles cybernétiques de l'Alberta ont bloqué en moyenne cent quatre-vingt-neuf millions de tentatives de connexion au réseau gouvernemental chaque jour. L'année précédente, c'était cent vingt-six millions, et l'année d'avant, quatre-vingt-un millions. La province attribue cette montée à des acteurs étatiques sophistiqués et à des groupes criminels à motivation financière."
       },
       {
         "id": "03",
-        "title": "Plan du livre blanc",
+        "title": "Ce qui a changé : la vitesse",
         "audio_file": "public/audio/fr/mwo98-tldr/03.mp3",
+        "visual": "compare",
+        "caption": "La découverte n'est plus l'étape lente",
+        "visual_config": {
+          "left": {
+            "label": "Avant",
+            "body": "Trouver une faille était l'étape lente. Bâtir un exploit prenait des semaines."
+          },
+          "right": {
+            "label": "Maintenant",
+            "body": "De la preuve de concept à l'exploitation active en quelques heures, souvent avant le correctif du fournisseur. L'IA fait surgir des failles enfouies depuis des années."
+          }
+        },
+        "text": "Ce qui a le plus changé, c'est la vitesse. Nous avons essuyé des attaques orchestrées par l'IA où un exploit passe de la preuve de concept à l'exploitation active en quelques heures, souvent avant l'arrivée du correctif du fournisseur. Les mêmes modèles trouvent maintenant des failles restées non documentées pendant des années. Le projet Glasswing a fait surgir plus de dix mille vulnérabilités au cours de son premier mois, et Mozilla en a corrigé deux cent soixante et onze dans Firefox à l'aide du modèle Claude Mythos. Cette capacité se trouve des deux côtés de la muraille."
+      },
+      {
+        "id": "04",
+        "title": "On ne peut corriger ce que le fournisseur ne livre plus",
+        "audio_file": "public/audio/fr/mwo98-tldr/04.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "On ne peut corriger ce que le fournisseur ne livre plus.",
+          "cite": "Document 2 · L'impératif cybernétique"
+        },
+        "text": "Maintenant, les murailles. Nous maintenons environ mille deux cent quatre-vingts applications, dont bon nombre vieillissent. Une part importante fonctionne sur des technologies dépassant de plus d'une décennie le soutien des fournisseurs, où pour certaines il ne reste plus aucun correctif à appliquer. On ne peut corriger ce que le fournisseur ne livre plus. Voilà pourquoi la correction à elle seule ne peut répondre au problème, et pourquoi la cause cybernétique et la cause de la modernisation ne font qu'une."
+      },
+      {
+        "id": "05",
+        "title": "Une surface d'attaque tentaculaire",
+        "audio_file": "public/audio/fr/mwo98-tldr/05.mp3",
         "visual": "list",
-        "caption": "Sections",
+        "caption": "Vaste, et qui s'élargit",
         "visual_config": {
           "items": [
             {
-              "label": "§01",
-              "desc": "La métaphore des remparts"
+              "label": "Trop de piles technologiques",
+              "desc": "Plus de systèmes d'exploitation, de langages et de dépendances que quiconque ne peut corriger."
             },
             {
-              "label": "§02",
-              "desc": "Obsolescence des fournisseurs et plateformes non prises en charge"
+              "label": "Secrets versés au code",
+              "desc": "Des clés et des jetons dans le code source, repérés par l'IA en 2025 et éliminés."
             },
             {
-              "label": "§03",
-              "desc": "Sophistication des menaces, en graphique"
+              "label": "Chaîne d'approvisionnement",
+              "desc": "Megalodon a touché plus de 5 500 dépôts; une version détournée d'Axios a atteint 100 M de téléchargements par semaine."
             },
             {
-              "label": "§04",
-              "desc": "Pourquoi ce moteur a son propre livre blanc"
-            },
-            {
-              "label": "§05",
-              "desc": "D'« un jour » à « maintenant »"
+              "label": "Contributions étrangères",
+              "desc": "Retracées dans les historiques de commits et retirées."
             }
           ]
         },
-        "text": "Plan en 5 sections. La métaphore des remparts. Obsolescence des fournisseurs et plateformes non prises en charge. Sophistication des menaces, en graphique. Pourquoi ce moteur a son propre livre blanc. D'« un jour » à « maintenant »."
+        "text": "La surface est vaste. Trop de systèmes d'exploitation, de langages et de dépendances. Des secrets versés au code source, repérés par l'IA et éliminés. Des contributions provenant de pays étrangers, retracées et retirées. Et le front qui croît le plus vite, la chaîne d'approvisionnement : la campagne Megalodon a atteint plus de cinq mille cinq cents dépôts, et une version détournée d'Axios, téléchargée plus de cent millions de fois par semaine, a introduit des chevaux de Troie dans les pipelines des développeurs."
+      },
+      {
+        "id": "06",
+        "title": "Le coût, et la réponse",
+        "audio_file": "public/audio/fr/mwo98-tldr/06.mp3",
+        "visual": "stat",
+        "caption": "La modernisation est la stratégie de sécurité",
+        "visual_config": {
+          "stat_value": "5 M$ / mois",
+          "stat_label": "Coût approximatif d'un incident cybernétique gouvernemental"
+        },
+        "subcaption": "L'Alberta a dépensé 47 M$ en 2024-2025 pour la seule correction et sécurité.",
+        "text": "Et le coût est réel. Un seul incident cybernétique gouvernemental représente environ cinq millions de dollars par mois, et une atteinte ou un rançongiciel, bien davantage. L'Alberta a dépensé quarante-sept millions de dollars l'an dernier pour la seule correction et sécurité. La lutte ne s'arrête jamais, et rester immobile revient à reculer. La réponse consiste à moderniser le parc, et le prochain document montre comment nous le voyons dans son ensemble."
       }
-    ],
-    "owner_id": "mwo98"
+    ]
   },
   "embedded_presentations": [],
   "sections": [
     {
       "n": "01",
-      "title": "La métaphore des remparts"
+      "title": "Une menace grandissante"
+    },
+    {
+      "n": "02",
+      "title": "Une surface d'attaque tentaculaire"
+    },
+    {
+      "n": "03",
+      "title": "L'évolution du paysage des menaces"
+    },
+    {
+      "n": "04",
+      "title": "Le coût de l'exposition cybernétique"
+    },
+    {
+      "n": "05",
+      "title": "Évaluer l'entreprise"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "L'Alberta exploite l'un des programmes de cybersécurité les plus solides au Canada, et au cours des 24 derniers mois, elle a tenu la ligne face à une série constante d'attaques, ses contrôles de défense en profondeur à plusieurs couches et sa surveillance étendue interceptant les incursions avant qu'elles n'aboutissent. Tenir cette ligne devient plus difficile, et pour deux raisons à la fois. Les vagues d'attaques à l'extérieur des murailles augmentent à la fois en volume et en sophistication, et les murailles elles-mêmes vieillissent, car une grande partie du parc a été bâtie il y a des décennies sur des technologies qui glissent maintenant hors du soutien des fournisseurs. Voilà l'impératif cybernétique, exprimé clairement : la modernisation pilotée par l'IA n'est plus dissociable de la sécurité."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "La métaphore des remparts"
+      "title": "Une menace grandissante"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Contenu à venir.</strong> Le contenu intégral de ce livre blanc est à venir. La structure est en place. Les sections, le résumé et les métadonnées sont alignés avec la fiche d'inventaire et la présentation TL;DR. Le corps sera rédigé à partir des transcriptions et des documents de référence, et non généré automatiquement."
+      "text": "En 2024-2025, les contrôles cybernétiques de l'Alberta ont bloqué en moyenne 189 millions de tentatives de connexion au réseau gouvernemental chaque jour. L'année précédente, c'était 126,3 millions, et l'année d'avant, 81,2 millions, de sorte que le volume quotidien a plus que doublé en deux ans. Le rapport annuel 2024 de Technologie et Innovation attribue cette montée à des acteurs étatiques sophistiqués et à des groupes criminels à motivation financière. Voilà la pression de fond dans laquelle nos équipes travaillent chaque jour, et la courbe continue de grimper."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 2.1",
+      "title": "Tentatives de connexion bloquées par jour",
+      "caption": "Les contrôles cybernétiques de l'Alberta ont bloqué en moyenne 81,2 millions de tentatives par jour en 2022-2023, 126,3 millions en 2023-2024 et 189 millions en 2024-2025. Le rapport annuel attribue cette hausse à des acteurs étatiques sophistiqués et à des groupes criminels à motivation financière. Source : Rapport annuel 2024-2025 de Technologie et Innovation, indicateur de rendement 2.b.",
+      "image": {
+        "src": "public/images/mwo98/fr/fig-2-1-bars.jpg",
+        "alt": "Un diagramme à barres des tentatives de connexion bloquées par jour, passant de 81,2 millions en 2022-2023 à 126,3 millions en 2023-2024 puis à 189 millions en 2024-2025.",
+        "image_prompt": "A clean editorial bar chart with exactly three vertical bars rising steeply from left to right on a warm cream background. The bottom axis labels, left to right, read 2022-23, then 2023-24, then 2024-25. The first bar is short, the second is roughly half again as tall, and the third is the tallest by a clear margin. A value label sits above each bar reading 81.2, then 126.3, then 189. A short title across the top reads: « Tentatives de connexion bloquées par jour, en millions ». Deep navy bars with a thin rust accent baseline, crisp legible sans-serif labels, generous whitespace, no clutter. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce qui a le plus changé, c'est la vitesse des cybercriminels. Nous avons maintenant essuyé des attaques orchestrées par l'IA où un exploit passe de la preuve de concept à l'exploitation active en quelques heures, souvent des jours avant le correctif du fournisseur. L'IA permet aux acteurs malveillants d'intensifier leurs campagnes contre notre infrastructure tout en réduisant les compétences, le temps et le coût requis pour le faire. \n\nNos professionnels de la cybersécurité ne restent pas les bras croisés. En Alberta, nous mettons à profit les mêmes modèles de fondation pour répondre en nature, en trouvant et en corrigeant des failles restées non documentées pendant des années dans du code largement utilisé, le genre que seul un attaquant doté de connaissances approfondies aurait pu découvrir auparavant. \n\nEt de nouveaux outils et modèles entrent en service chaque jour pour appuyer ce combat. Le [projet Glasswing](https://www.anthropic.com/research/glasswing-initial-update) d'Anthropic est un partenariat mené par un consortium qui utilise le modèle Mythos pour trouver et corriger des failles dans les systèmes critiques avant que les attaquants puissent les exploiter. Au cours des deux premiers mois suivant sa diffusion restreinte, Mythos a fait surgir plus de 10 000 vulnérabilités dans des suites logicielles critiques comme les systèmes d'exploitation et les navigateurs. Ces bogues étaient là depuis toujours, mais étaient passés inaperçus par toutes les méthodes et équipes antérieures. À l'aide du modèle Mythos, Mozilla a trouvé et livré des correctifs pour [271 bogues de sécurité dans Firefox](https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/) en un mois, soit plus de dix fois ce que ses méthodes antérieures avaient jamais fait surgir. Ce sont autant de portes qui se ferment sur d'éventuels exploits futurs avant même qu'ils puissent être connus. "
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 2.2",
+      "title": "La découverte n'est plus l'étape lente",
+      "caption": "L'IA lit désormais le code en profondeur et fait surgir des failles restées non documentées pendant des années. La même capacité est offerte aux défenseurs comme aux attaquants, c'est pourquoi l'avantage de la découverte est temporaire et c'est l'arriéré de correction qui compte.",
+      "image": {
+        "src": "public/images/mwo98/fr/fig-2-1.jpg",
+        "alt": "Un vaste champ de code dense où plusieurs failles jusque-là cachées s'illuminent au passage d'une ligne de lumière qui le balaie.",
+        "image_prompt": "An editorial illustration of a vast field of dense code with several previously hidden cracks or flaws suddenly lit up, as a sweeping army of bots, with light beams downward, reads across the whole field at once. A sense of long-buried weaknesses becoming visible in seconds. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "En Alberta, nous appliquons des outils d'IA avancés à notre propre défense. Deux nouveaux cyberagents pilotés par l'IA, un Rouge et un Bleu, s'exécutent maintenant contre notre propre code comme composante permanente de la boîte à outils, et ils constituent un élément récent et en pleine croissance de l'arsenal. Le document [Agents rouge, bleu, vert et jaune](/paper/l199t) en traite en détail; ici, il suffit de dire que les défenseurs ont désormais la machine de leur côté eux aussi."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Une surface d'attaque tentaculaire"
+    },
+    {
+      "type": "paragraph",
+      "text": "La forme du parc élargit la cible. Au fil des décennies, différentes équipes de prestation ministérielles ont adopté un éventail de technologies changeantes, et le résultat est trop de systèmes d'exploitation, trop de langages et trop de dépendances, chacun représentant son propre ensemble de vulnérabilités potentielles. Chaque pile technologique que nous exploitons est un autre périmètre à protéger. Pour défendre ce vaste domaine, il nous fallait en voir la forme."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous avons déployé des agents d'IA pour analyser l'historique des commits GitHub, retracé des contributions de code source ouvert provenant de pays étrangers, et fermé les systèmes et dépendances qui leur étaient liés. Nos agents d'IA ont aussi fait surgir des cas où du personnel avait par erreur versé des secrets dans les dépôts de code. L'IA les a fait surgir en 2025, et nous avons mis en place des contrôles qui ont supprimé, fait pivoter ou invalidé chacun d'eux, clôturant la question en Alberta. Non atténués, de tels secrets représenteraient de graves expositions pour les gouvernements et les organisations partout dans le monde. L'IA a trouvé les problèmes, et les équipes humaines les ont clos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces constats ont amené Technologie et Innovation à devenir une organisation beaucoup plus « affirmée » et axée sur les normes. En établissant des normes claires pour les nouveaux développements, qui seront appliquées au moyen de méthodes de prestation fondées sur l'IA (voir le livre blanc [Le harnais bien conçu](/paper/p7p2k)), nous fermons cette surface d'attaque et rationalisons vers des plateformes et technologies ouvertes bien soutenues."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "L'évolution du paysage des menaces"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aussi vite que nous fermons des problèmes, de nouveaux défis émergent. Tout au long de 2026, les attaquants sont passés de la percée directe du périmètre à l'empoisonnement de la source. En compromettant des dépôts à code source ouvert utilisés par des centaines de millions de produits, les acteurs malveillants peuvent percer des milliers d'organisations à la fois. Une récente campagne a injecté du code malveillant dans plus de cinq mille cinq cents dépôts à code source ouvert, ce qui a permis aux auteurs de menace de récolter d'énormes quantités de jetons d'API, de clés SSH et d'identifiants infonuagiques. L'une de ces attaques a détourné une version d'Axios, un paquet JavaScript populaire téléchargé plus de 100 millions de fois par semaine, et a propulsé des chevaux de Troie d'accès à distance directement sur les machines des développeurs et dans les pipelines d'intégration continue. L'IA habilite les acteurs malveillants, alors nos défenses doivent évoluer elles aussi."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 2.3",
+      "title": "Une seule dépendance empoisonnée, de nombreuses victimes",
+      "caption": "Un seul paquet à code source ouvert compromis atteint chaque système qui en dépend. Les attaquants visent la source partagée en amont précisément parce qu'elle se répercute en aval, c'est pourquoi la chaîne d'approvisionnement est devenue la voie privilégiée.",
+      "image": {
+        "src": "public/images/mwo98/fr/fig-2-2.jpg",
+        "alt": "Un arbre de dépendances ramifié où un nœud empoisonné en amont propage sa marque vers de nombreux systèmes en aval.",
+        "image_prompt": "An editorial illustration of a branching tree of software dependencies, where a single node near the top glows with a poison mark and thin lines carry that mark down to dozens of systems below it. A sense of one compromise cascading to many. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Le coût de l'exposition cybernétique"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'identification des vulnérabilités devient beaucoup plus facile grâce à l'IA. Le difficile, c'est de trouver la marge pour les corriger. Lorsqu'un changement législatif comporte une échéance ferme, il n'y a aucune souplesse sur la livraison. Historiquement, Technologie et Innovation a constitué des équipes de prestation agiles à partir de ressources contractuelles individuelles, connues sous le nom de « main-d'œuvre d'appoint », pour mettre sur pied de nouvelles solutions. Ces équipes travaillent en parallèle avec celles qui réalisent la maintenance et les améliorations mineures. En TI, il est difficile de revenir à une application une fois qu'elle a été livrée. Les éléments sont triés de manière réactive, et il reste souvent peu ou pas d'argent après l'achèvement d'un projet pour financer la correction, sauf dans les cas les plus extrêmes, où le danger est clair et présent."
+    },
+    {
+      "type": "keystat",
+      "label": "LE COÛT APPROXIMATIF D'UN SEUL INCIDENT CYBERNÉTIQUE GOUVERNEMENTAL EST DE",
+      "value": "5 M$ par mois",
+      "body": "Et cela se rapproche d'un meilleur scénario. Une atteinte importante aux données ou un événement de rançongiciel coûte bien plus cher. L'Alberta maintient une position ferme de ne jamais payer de rançon, mais les dommages opérationnels et de réputation peuvent être importants et durables."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour garder une longueur d'avance, l'Alberta investit de façon proactive dans le maintien de son parc numérique. En 2024-2025, nous avons dépensé 47 millions de dollars pour maintenir les applications au moyen de mises à niveau et de correctifs de sécurité afin de réduire les vulnérabilités et de gruger la dette technique. Notre programme de cybersécurité dédié est passé à 14,5 millions de dollars, contre 12,3 millions l'année précédente. Parmi les 115 applications classées comme critiques, 97 pour cent disposent maintenant de plans de reprise après sinistre éprouvés, contre 91 pour cent. La dépense est réelle, elle augmente, et c'est le prix à payer pour tenir une ligne qui ne tient pas en place. La lutte entre professionnels de la cybersécurité et cybercriminels ne s'arrête jamais, et rester immobile revient à reculer.\n\nLes plus récents constats dans ce domaine sont accessibles par l'intermédiaire de notre plateforme [CyberAlberta](https://cyberalberta.ca), un chef de file de l'industrie. \n\n\nL'IA fait baisser le coût de la protection du domaine. Nous pouvons maintenant analyser les applications à la recherche de lacunes de cybersécurité et souvent corriger les vulnérabilités pour un à deux dollars. Cela n'est possible que grâce à l'utilisation d'agents d'IA capables de mettre en œuvre des tests avec diligence, de lire les journaux et de corriger les solutions. Mais d'abord, nous devons savoir ce que nous corrigeons. "
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Évaluer l'entreprise"
+    },
+    {
+      "type": "paragraph",
+      "text": "Défendre un parc de cette ampleur signifie d'abord être capable de le voir dans son ensemble afin d'obtenir le renseignement terrain sur nos charges de travail et nos processus. Aucune personne ni aucun ensemble de documentation n'avait le portrait complet. Il nous fallait un moyen de récolter des preuves à partir du code lui-même plutôt que de la mémoire et du folklore. C'est donc exactement ce que nous avons bâti. Le prochain document sur les [constats Git](/paper/bbkac) propose une plongée en profondeur sur la façon dont nous avons pointé l'IA vers l'ensemble de notre parc GitHub, ce qu'elle y a trouvé, et comment ces preuves orientent désormais nos priorités de défense. "
+    },
+    {
+      "type": "paragraph",
+      "text": "Sources de ce livre blanc : [Projet Glasswing, Anthropic (2026)](https://www.anthropic.com/research/glasswing-initial-update); [Renforcement de Firefox, Mozilla (2026)](https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/); [Alerte de la CISA sur la chaîne d'approvisionnement (2026)](https://www.cisa.gov/news-events/alerts/2026/05/28/supply-chain-compromises-impact-nx-console-and-github-repositories); [Recherche de Zscaler sur la chaîne d'approvisionnement (2026)](https://www.zscaler.com/blogs/security-research/supply-chain-attacks-surge-march-2026); [Unit 42 sur les attaques de la chaîne d'approvisionnement npm](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/); [Rapport annuel 2024-2025 de Technologie et Innovation](https://open.alberta.ca/dataset/50f6b5a7-c870-4c87-8c6c-38735140fff9/resource/f5c86436-66ff-4d2d-85bb-b6a23633d8b6/download/ti-annual-report-2024-2025.pdf)."
+    },
+    {
+      "type": "figure",
+      "title": "Explorez ce contenu sous forme de canevas interactif",
+      "caption": "Le siège s'intensifie et les murailles vieillissent. L'IA défend à la vitesse de la machine, et la modernisation réduit la surface d'attaque. Fait partie du Canevas (document 18); déplacez les nœuds, zoomez et appuyez sur Écouter pour une visite guidée parlée.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "cyber",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "cybersecurity",
+        "supply-chain",
+        "technical-debt",
+        "drivers"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
-  "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
-  },
-  "translation_status": "untranslated",
   "category": "paper",
   "related": [
     "cux4h",
-    "p7p2k"
+    "bbkac",
+    "l199t",
+    "xs7uh"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
+  },
+  "translation_status": "draft",
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
   ]
 }

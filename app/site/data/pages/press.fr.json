@@ -1,0 +1,50 @@
+{
+  "_note": "Press page content for one locale. The sibling .<other>.json holds the translation. The release body mirrors public/press/velocity-white-papers-press-release.md.",
+  "page": {
+    "eyebrow": "Presse",
+    "title_lead": "Pour la",
+    "title_em": "presse.",
+    "lede": "Contexte, communiqué de presse et personnes-ressources des médias pour les Livres blancs Velocity, la collection ouverte du gouvernement de l'Alberta sur la transformation des technologies gouvernementales grâce à l'IA."
+  },
+  "release": {
+    "heading": "Communiqué de presse",
+    "meta": "Edmonton · le 16 juin 2026",
+    "draft_note": "Ébauche aux fins de révision par les communications. Ne pas diffuser avant approbation.",
+    "paras": [
+      "Le ministère de la Technologie et de l'Innovation publie une série de livres blancs techniques qui expliquent les efforts récents de l'Alberta pour moderniser ses technologies gouvernementales au moyen de l'intelligence artificielle et assurer la cybersécurité de ses systèmes. Cette collection, intitulée Les Livres blancs Velocity, est accessible à thevelocitywhitepapers.com et est offerte comme ressource ouverte afin de soutenir le personnel du gouvernement de l'Alberta, les organismes publics et les municipalités; elle est également partagée ouvertement avec les provinces, les territoires et les gouvernements de partout au Canada et dans le monde.",
+      "L'Alberta est déjà reconnue comme un chef de file en intelligence artificielle. Ces livres présentent un plan directeur que d'autres pourront suivre pour reproduire nos réussites."
+    ],
+    "quote": {
+      "by": "Nate Glubish, ministre de la Technologie et de l'Innovation",
+      "text": "Il est essentiel que les gouvernements de partout au Canada tirent parti de ces technologies pour se moderniser et garder leurs services sécurisés. Nous faisons face à un niveau de risque sans précédent en matière de cybersécurité, et ces outils contribuent à offrir des services gouvernementaux sûrs et efficaces qui protègent la vie privée tout en générant de réelles économies. L'Alberta a déjà économisé plus de cinquante millions de dollars au cours de la dernière année grâce à ces technologies, et nous prévoyons des économies encore plus importantes dans les mois à venir."
+    },
+    "closing": [
+      "Les Livres blancs Velocity enrichissent l'information ouverte de l'Alberta sur l'adoption de l'IA, en s'appuyant sur l'Académie d'IA de l'Alberta, qui a formé des milliers de fonctionnaires à l'utilisation sûre et efficace de l'intelligence artificielle. Plus de dix mille Albertains et Canadiens ont eu accès à l'Académie afin d'aider les organismes publics à mieux tirer parti des technologies d'IA et à mieux les comprendre.",
+      "Pour en savoir plus, visitez thevelocitywhitepapers.com ou suivez le Substack du ministre Glubish."
+    ],
+    "pdf": {
+      "label": "Télécharger le communiqué de presse (PDF)",
+      "href": "public/press/velocity-white-papers-press-release.pdf",
+      "pending_note": "Le PDF officiel sera lié ici dès que les communications le fourniront."
+    }
+  },
+  "contacts": {
+    "heading": "Demandes des médias",
+    "items": [
+      {
+        "name": "Jonathan Gauthier",
+        "role": "Attaché de presse, Cabinet du ministre de la Technologie et de l'Innovation",
+        "email": "jonathan.gauthier@gov.ab.ca"
+      },
+      {
+        "name": "Cabinet du ministre de la Technologie et de l'Innovation",
+        "role": "Demandes ministérielles générales",
+        "email": "ti.minister@gov.ab.ca"
+      }
+    ],
+    "substack": {
+      "label": "Suivre le ministre Glubish sur Substack",
+      "href": "https://nateglubish.substack.com/"
+    }
+  }
+}

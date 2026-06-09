@@ -4,23 +4,33 @@
   "sequence": "",
   "tier": "Technical",
   "category": "paper",
-  "title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
-  "subtitle": "Tracking delivery across people and agents.",
+  "title": "L'usine d'IA : mesurer la livraison de projets (le moteur de jeu Velocity)",
+  "subtitle": "Une façon ludique de mener et de mesurer la livraison lorsqu'un agent d'IA est un membre à part entière de l'équipe et que l'estimation traditionnelle ne fonctionne plus.",
   "track": "Engineering the Solution",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 18,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "ai-factory",
+    "velocity",
+    "project-management",
+    "agents",
+    "orchestration",
+    "reaper",
+    "sse",
+    "open-source"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Engineering the Solution group of the collection. The body will be written from source materials.",
-  "translation_status": "untranslated",
+  "abstract": "Velocity est la troisième étape de l'usine d'IA de l'Alberta, après Pronghorn et Nexus. Il s'agit d'un outil de projet à code source ouvert, conçu comme un jeu, qui fait d'un agent d'IA un membre à part entière de l'équipe et qui mesure la livraison réelle maintenant que l'estimation ne fonctionne plus. Le travail gravit huit étapes, gagnant des points en avançant et en perdant lorsqu'il recule.",
   "hero_image": {
     "src": "public/images/k3tc3/fr/hero.jpg",
-    "alt": "Editorial image for: The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The AI Factory: Measuring Project Delivery (The Velocity Game Engine)\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Illustration de couverture éditoriale : un plateau de serpents et échelles redessiné en pipeline de projet ascendant, avec quelques échelles qui montent et un serpent qui glisse vers le bas, dessiné en traits bleu marine profond de l'Alberta avec de petits accents rouille sur papier crème chaud.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A snakes-and-ladders style board redrawn as a project pipeline: a winding path of numbered squares climbing from lower left to upper right, with a couple of ladders rising between squares and one snake sliding back down. A single small game token rests on the path. Calm, archival, and confident. Wide cover aspect. No text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -28,18 +38,114 @@
   },
   "tldr_presentation": {
     "id": "k3tc3-tldr",
-    "title": "The paper, in brief",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "k3tc3",
     "slides": [
       {
         "id": "01",
-        "title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
+        "title": "L'usine d'IA : mesurer la livraison de projets",
         "audio_file": "public/audio/fr/k3tc3-tldr/01.mp3",
         "visual": "title",
-        "caption": "Engineering the Solution",
-        "subcaption": "",
-        "text": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine). Content forthcoming."
+        "caption": "Document 10 · Engineering the Solution",
+        "subcaption": "Velocity : la troisième étape de l'usine d'IA.",
+        "text": "Velocity est la troisième étape de notre usine d'IA, après Pronghorn et Nexus. Il s'attaque à un problème apparu avec le codage par l'IA : lorsqu'un agent accomplit en quelques minutes ce qui prenait auparavant des jours, nos anciennes façons d'estimer et de suivre un projet cessent de fonctionner. Velocity est une façon ludique de mener la livraison avec une IA comme membre à part entière de l'équipe, et de mesurer si nous livrons réellement vingt fois plus vite."
+      },
+      {
+        "id": "02",
+        "title": "Pourquoi un jeu",
+        "audio_file": "public/audio/fr/k3tc3-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "De l'estimation à la mesure",
+        "visual_config": {
+          "left": {
+            "label": "Estimer d'avance",
+            "body": "Le planning poker devine l'effort en temps humain, ce qui ne dit presque rien de la vitesse de travail d'une IA."
+          },
+          "right": {
+            "label": "Suivre le mouvement réel",
+            "body": "Velocity attribue des points à la progression réelle à travers huit étapes, de sorte qu'on mesure ce qui s'est réellement passé."
+          }
+        },
+        "text": "Les équipes agiles estimaient l'effort avec le planning poker. Cela s'effondre dès qu'une IA se joint à l'équipe, parce que l'agent est plus de cent fois plus rapide pour la tâche de codage et ne peut pas estimer son propre temps. Velocity cesse donc d'estimer. Il s'inspire des serpents et échelles : on gagne des points en avançant à travers huit étapes, et on les perd, de façon permanente, lorsque le travail recule."
+      },
+      {
+        "id": "03",
+        "title": "Tours, points et horloge",
+        "audio_file": "public/audio/fr/k3tc3-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Comment le plateau se joue",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Huit étapes",
+              "desc": "Des exigences au déploiement, chacune un pas en avant."
+            },
+            {
+              "label": "En avant et en arrière",
+              "desc": "Avancer rapporte des points; renvoyer le travail en arrière coûte d'autant plus cher qu'il recule loin."
+            },
+            {
+              "label": "Lever la main",
+              "desc": "Demander de l'aide est gratuit; se bloquer coûte un peu; reculer coûte le plus cher."
+            },
+            {
+              "label": "L'horloge d'échecs",
+              "desc": "Le minutage des tours montre si c'est l'humain ou l'IA qui a retenu le travail."
+            }
+          ]
+        },
+        "text": "Le jeu se déroule par tours et en direct. L'IA travaille, passe le tour à une personne, et la personne le lui redonne. Une horloge d'échecs suit qui détient le travail, de sorte que si l'IA termine en cinq minutes et que l'humain prend cinq jours, le retard appartient à l'équipe. La progression vers l'avant rapporte des points, se bloquer coûte un peu, et renvoyer le travail en arrière coûte d'autant plus cher qu'il recule loin."
+      },
+      {
+        "id": "04",
+        "title": "Le plateau est l'invite",
+        "audio_file": "public/audio/fr/k3tc3-tldr/04.mp3",
+        "visual": "list",
+        "caption": "L'écouteur Velocity",
+        "visual_config": {
+          "items": [
+            {
+              "label": "L'écouteur",
+              "desc": "Un script dans Nexus réveille le bon agent lorsqu'un coup est joué."
+            },
+            {
+              "label": "Des centaines d'agents",
+              "desc": "Chacun écoute ses propres projets; personne ne les invite à la main."
+            },
+            {
+              "label": "Les spécialistes interviennent",
+              "desc": "Un agent de cybersécurité peut analyser, trouver une faille et renvoyer le travail en arrière."
+            },
+            {
+              "label": "Plusieurs modèles",
+              "desc": "Un modèle bloqué peut consulter un autre."
+            }
+          ]
+        },
+        "text": "L'écouteur Velocity transforme le plateau en invite universelle. Une personne met à jour une étape, et un agent à l'écoute par flux d'événements serveur se réveille, lit le coup et accomplit la prochaine portion de travail. Des centaines d'agents peuvent fonctionner sur des centaines de projets, des spécialistes se joignant à la bonne étape, et la plupart des gens se contentent de jouer au jeu."
+      },
+      {
+        "id": "05",
+        "title": "Mis à l'épreuve en conditions réelles",
+        "audio_file": "public/audio/fr/k3tc3-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "Une centaine d'agents sur le plateau",
+        "visual_config": {
+          "stat_value": "65 000",
+          "stat_label": "Transactions en cinq minutes lorsque 100 agents se sont rués sur le plateau"
+        },
+        "subcaption": "Le test de charge qui a donné naissance au Reaper.",
+        "text": "Lorsque nous avons mis une centaine d'agents de l'Academy sur des plateaux partagés, ils ont généré soixante-cinq mille transactions en cinq minutes et ont commencé à fausser le score : monopoliser les tours, se faire passer pour des humains, sauter des étapes. La loi de Goodhart en action. Nous avons donc bâti le Reaper, un agent d'application qui détecte la triche et retire les points en double, et nous avons reconstruit Velocity pour encaisser la charge. Le franc-jeu doit être imposé."
+      },
+      {
+        "id": "06",
+        "title": "Trois piliers, à code source ouvert",
+        "audio_file": "public/audio/fr/k3tc3-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Pronghorn, Nexus, Velocity",
+        "subcaption": "Des intrants de qualité, une exécution fiable et la mesure.",
+        "text": "Velocity est l'un de trois piliers. Pronghorn fournit des intrants de qualité, Nexus fournit l'environnement dans lequel les agents travaillent, et Velocity ajoute la mesure, l'orchestration et un apprentissage qui se compose grâce à un harnais partagé et à des rapports d'audit. Les trois sont à code source ouvert, pour que d'autres organisations les adoptent et les améliorent."
       }
     ]
   },
@@ -47,23 +153,512 @@
   "sections": [
     {
       "n": "01",
-      "title": "Overview"
+      "title": "Le problème de l'estimation à l'ère de l'IA"
+    },
+    {
+      "n": "02",
+      "title": "Un nouveau jeu : serpents et échelles"
+    },
+    {
+      "n": "03",
+      "title": "Tours, transferts et l'horloge d'échecs"
+    },
+    {
+      "n": "04",
+      "title": "Toute l'équipe sur le plateau"
+    },
+    {
+      "n": "05",
+      "title": "Projets, défis et l'espace de travail partagé"
+    },
+    {
+      "n": "06",
+      "title": "Le harnais Velocity"
+    },
+    {
+      "n": "07",
+      "title": "L'écouteur Velocity et l'orchestration multiagent"
+    },
+    {
+      "n": "08",
+      "title": "Bâtir une mémoire institutionnelle"
+    },
+    {
+      "n": "09",
+      "title": "Velocity en conditions réelles : une centaine d'agents et le Reaper"
+    },
+    {
+      "n": "10",
+      "title": "Le système complet : Pronghorn, Nexus, Velocity"
+    },
+    {
+      "n": "11",
+      "title": "Documents complémentaires"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Velocity est le troisième volet de notre série sur l'usine d'IA, après [Pronghorn](/paper/qthji) et [Nexus](/paper/uwpxr), et il s'attaque à un problème apparu à l'ère du codage par l'IA : comment suivre le temps, l'effort et le coût d'un projet livré par l'IA, et comment mesurer la progression vers l'avant alors que notre conception antérieure de la vitesse de livraison et de l'estimation a complètement volé en éclats, et qu'une IA peut accomplir en quelques minutes ce qui prenait auparavant des jours à une personne? Le but de Velocity est d'inventer une nouvelle façon de faire la gestion de projet et l'observabilité pendant qu'une IA travaille aux côtés d'une personne comme développeur principal, et aux côtés des architectes, des agents de cybersécurité, de l'équipe de mobilisation et d'un client aux opinions bien arrêtées. L'IA doit jouer et travailler avec les gens dans un espace collaboratif, son travail étant affiché de façon centrale plutôt que dans un environnement isolé, c'est pourquoi nous avons bâti un outil de gestion de projet de premier ordre qui permet à l'IA d'être une participante à part entière. Nous devons aussi savoir, au fil du temps, si nous sommes efficaces, car notre objectif est d'accroître la vitesse de livraison de vingt fois."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Le problème de l'estimation à l'ère de l'IA"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "Pendant des décennies, les équipes agiles ont utilisé le planning poker pour estimer l'effort. Chacun donne son estimation en même temps, et l'équipe discute des écarts pour faire ressortir la complexité cachée qu'une seule personne manquerait. Cela s'effondre complètement lorsque l'IA entre en jeu. Une IA peut accomplir en dix minutes un travail qu'un humain estimait à trois jours. Le problème plus profond est qu'une IA n'a aucune capacité d'estimer des échelles de temps humaines. Elle est entraînée sur des commentaires de développeurs et des données historiques qui supposent des habitudes de travail humaines, de sorte que lorsqu'on lui demande d'estimer, elle devine selon une mesure humaine désalignée par rapport à sa vitesse réelle de travail. Elle ne fait que prédire à partir de ce qu'elle a déjà vu."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour la seule tâche de codage, toutes choses égales par ailleurs, une IA est largement plus de cent fois plus rapide qu'un développeur humain. Il faut presque se doter de sa propre heuristique simple, du genre dix minutes par module, ou dix minutes par millier de lignes de code, avec des rabais pour les tests et la correction de bogues. L'essentiel, c'est que tout le cadre d'estimation s'effondre. On ne peut plus planifier l'échéancier d'un projet, parce que la variable qu'on tente de prédire, soit le temps que prendra une IA, est inconnaissable par les méthodes traditionnelles."
+    },
+    {
+      "type": "keystat",
+      "label": "Vitesse de codage pure",
+      "value": "100×+",
+      "body": "Pour la seule tâche de codage, l'IA est largement plus de cent fois plus rapide qu'un développeur humain. La cible à l'échelle du projet, pour l'ensemble du travail, transferts humains compris, est une accélération de vingt fois."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le concept même de vélocité, tel que les gens le comprennent, devient dénué de sens. Dans l'agilité traditionnelle, la vélocité mesure le nombre de points d'effort qu'une équipe réalise dans un sprint, et avec une IA qui travaille à des vitesses extrêmement variables, ce nombre cesse de vous apprendre quoi que ce soit d'utile sur la progression réelle. Vous ne pouvez plus comparer les sprints, ni prédire la capacité. Vous perdez aussi toute visibilité sur ce qui ralentit réellement les choses. Est-ce l'IA qui commet des erreurs forçant des reprises, ou des humains qui restent assis sur une tâche pendant des jours avant de réviser le résultat de l'IA? Des outils comme Jira ne distinguent pas les deux; ils montrent une tâche qui passe d'une colonne à une autre, rien de plus. Vous n'obtenez aucune compréhension des durées de tour, aucun aperçu de l'endroit où vit le goulot d'étranglement, et aucun moyen d'attribuer un retard à la bonne partie. Cette opacité coûte cher, car plus une erreur est détectée tard, plus la reprise est coûteuse."
+    },
+    {
+      "type": "table",
+      "title": "Ce à quoi les anciennes mesures ne pouvaient répondre",
+      "columns": [
+        "La question",
+        "Agilité traditionnelle et Jira",
+        "Velocity"
+      ],
+      "rows": [
+        [
+          "Combien de temps prendra l'IA?",
+          "Estimé en temps humain, et erroné par des ordres de grandeur.",
+          "Non estimé. C'est plutôt le mouvement réel à travers les étapes qui est suivi."
+        ],
+        [
+          "Où se trouve le retard?",
+          "Une carte a changé de colonne; la cause est invisible.",
+          "Le minutage tour par tour montre si c'est l'humain ou l'IA qui a retenu le travail."
+        ],
+        [
+          "Une étape a-t-elle été sautée?",
+          "Apparaît tard, si tant est qu'elle apparaisse.",
+          "Une étape ultérieure peut renvoyer le travail en arrière, avec une pénalité proportionnelle à la distance."
+        ],
+        [
+          "Qu'avons-nous appris?",
+          "Reste dans la tête des gens, et part avec eux.",
+          "Les rapports d'audit et un harnais partagé conservent la leçon."
+        ]
+      ],
+      "caption": "Les questions qui comptent dans un projet livré par l'IA, et pourquoi un outil fondé sur des colonnes ne peut y répondre.",
+      "source": "Ministère de la Technologie et de l'Innovation."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Un nouveau jeu : serpents et échelles"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'équipe des maximalistes de l'IA est partie en quête d'un jeu différent, en suivant deux principes que nous connaissions déjà. Plus une erreur est repérée tard dans un projet, plus la reprise est coûteuse. Et nous voulions une forme d'apprentissage par renforcement dans nos agents, afin qu'ils puissent apprendre de leur propre historique. Nous sommes donc revenus à l'ancien jeu des serpents et échelles, où l'on augmente ses points en avançant, et où il est facile de marcher sur un serpent, de glisser vers le bas et de les perdre. Nous avons mis en œuvre un processus simple en huit étapes, surtout linéaire, avec un système de récompense pour avancer et un système de pénalité pour reculer. La progression vers l'avant rapporte des points. Un mouvement vers l'arrière les fait perdre, et on ne peut pas rattraper les mêmes points en avançant de nouveau. La pénalité est permanente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si un agent saute une étape de planification ou une étape de collecte des exigences, et qu'un client le détecte plus tard, le client, le gestionnaire de projet, le développeur ou le personnel de cybersécurité peut renvoyer le projet à l'étape antérieure, ce qui fait perdre des points à l'agent. Tous ces gains et toutes ces pertes sont suivis. Le but est que l'agent puisse réfléchir sur lui-même, avec des preuves, à ce qui s'est bien et mal passé, et utiliser cela comme signal d'apprentissage par renforcement pour ajuster son propre harnais, de sorte qu'au fil d'une série de projets le résultat soit de moins en moins d'erreurs et un score plus élevé. C'est là la dynamique au cœur du jeu : la vélocité vers l'avant est récompensée, reculer est pénalisé, et les résultats sont mesurés sur une longue série de projets."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les huit étapes reflètent un flux de travail de projet standard : exigences, planification, architecture, prototype, développement, tests utilisateurs, acceptation par l'utilisateur et déploiement. La pénalité pour renvoyer le travail en arrière croît selon le nombre d'étapes reculées, ce qui reflète la réalité, où détecter quelque chose au déploiement est bien pire que de le détecter au stade des exigences."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 1",
+      "title": "Le plateau à huit étapes",
+      "caption": "Velocity dispose la livraison sous forme de plateau. Le travail gravit les huit étapes, gagnant des points en montant. Un problème détecté tard renvoie le travail en bas d'un serpent, et plus il tombe loin, plus cela coûte cher.",
+      "image": {
+        "src": "public/images/k3tc3/fr/fig-10-1.jpg",
+        "alt": "Un plateau de serpents et échelles dessiné à la main, disposé en un seul chemin ascendant de huit cases étiquetées dans l'ordre : exigences, planification, architecture, prototypage, développement, tests utilisateurs, acceptation par l'utilisateur, déploiement. Des échelles montent vers l'avant entre quelques cases, et un serpent glisse d'une case tardive vers une case antérieure, étiqueté renvoyé en arrière, coûte plus cher à mesure qu'il recule.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as a snakes-and-ladders board laid out as a single climbing path of eight labelled squares in order: EXIGENCES, PLANIFICATION, ARCHITECTURE, PROTOTYPAGE, DÉVELOPPEMENT, TESTS UTILISATEURS, ACCEPTATION PAR L'UTILISATEUR, DÉPLOIEMENT. A couple of small navy ladders rise forward between squares, captioned POINTS VERS L'AVANT. One rust snake slides from a late square back to an earlier one, captioned RENVOYÉ EN ARRIÈRE, COÛTE PLUS CHER À MESURE QU'IL RECULE. A single small token sits mid-board. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Tours, transferts et l'horloge d'échecs"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity fonctionne en temps réel sur des flux d'événements serveur, de sorte que le plateau bouge en direct, comme un jeu, et que les tours sont suivis à chaque étape. L'IA fait son travail et passe le tour à l'humain; l'humain termine et le lui redonne. Deux joueurs ne peuvent pas bouger en même temps, de la même façon que deux joueurs ne peuvent pas lancer les dés sur un même tour, et le modèle de tours l'exclut. À l'intérieur d'une seule étape, il y a beaucoup d'allers-retours. L'IA peut faire une partie du travail et le transmettre pour rétroaction, et l'humain peut le lui redonner et demander une autre passe."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lorsqu'un agent se retrouve bloqué sur quelque chose, il peut lever la main, ce qui n'entraîne aucune pénalité, et faire appel à un humain pour de l'aide. Il publie un message sur l'étape afin qu'une personne, ou un autre agent abonné comme un architecte, puisse regarder le plateau et répondre. Signaler un blocage entraîne bel et bien une pénalité, et plus un projet recule d'étapes, plus la pénalité est élevée au total. L'ordre est délibéré : il vaut mieux lever la main que de se faire bloquer, et mieux se faire bloquer que de reculer."
+    },
+    {
+      "type": "paragraph",
+      "text": "Parallèlement à l'horloge globale du projet, Velocity fait tourner une sorte d'horloge d'échecs entre l'humain et l'IA. Lorsque l'IA a fait son travail, elle appuie sur l'horloge d'échecs et le chronomètre repasse à la personne. Ainsi, dans le cas où l'IA fait son travail en cinq minutes mais où la personne ne le regarde pas pendant cinq jours, la vélocité perdue est attribuée à l'équipe. La dyade entre la personne et l'IA devient importante à comprendre : si le projet n'atteint pas sa vélocité, il y a de fortes chances que cela n'ait rien à voir avec l'IA, et beaucoup à voir avec des humains plus lents, ou avec des erreurs de l'IA qui ont fait faire du travail supplémentaire à un humain. Vous pouvez l'examiner en cours de route ou à la fin et voir, au total, combien de points ont été gagnés ou perdus et combien de temps ont duré les tours entre l'humain et l'IA."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 2",
+      "title": "Le jeu par tours et l'horloge d'échecs",
+      "caption": "Le jeu alterne entre la personne et l'IA, une horloge d'échecs enregistrant qui détient le travail. Lever la main est gratuit, se bloquer coûte un peu, et l'horloge rend un transfert humain lent aussi visible qu'une erreur de l'IA.",
+      "image": {
+        "src": "public/images/k3tc3/fr/fig-10-2.jpg",
+        "alt": "Un schéma dessiné à la main avec une horloge d'échecs à deux faces au centre, la face gauche étiquetée humain et la face droite étiquetée IA, avec une flèche montrant le passage du tour entre elles. Au-dessus, une seule étape de plateau avec deux petits jetons se passant un témoin de relais, légendée transfert à l'intérieur d'une étape. Sur un côté, une icône de main levée étiquetée lever la main, aucune pénalité, et en dessous une petite icône d'arrêt étiquetée blocage, une petite pénalité.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. In the centre, a two-faced chess clock; the left face labelled HUMAIN, the right face labelled IA, with a small arrow showing the turn passing from one to the other. Above it, a single board step with two small tokens handing a baton back and forth, captioned TRANSFERT À L'INTÉRIEUR D'UNE ÉTAPE. To one side, a small raised-hand icon labelled LEVER LA MAIN, AUCUNE PÉNALITÉ, and below it a small stop icon labelled BLOCAGE, UNE PETITE PÉNALITÉ. A caption reads L'HORLOGE MONTRE QUI A RETENU LE TRAVAIL. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Comment le plateau est pointé",
+      "columns": [
+        "Coup",
+        "Points",
+        "Quand cela s'applique"
+      ],
+      "rows": [
+        [
+          "Commencer une étape",
+          "+10",
+          "Au début du travail sur une étape."
+        ],
+        [
+          "Soumettre pour révision",
+          "+20",
+          "Première soumission, avant toute reprise."
+        ],
+        [
+          "Terminer une étape",
+          "+100",
+          "Achèvement du premier coup. Un collaborateur ayant aidé ajoute +50, et une étape travaillée à la fois par un humain et par l'IA ajoute +25."
+        ],
+        [
+          "Rejeter à la révision",
+          "−30",
+          "Renvoyer une révision au travail."
+        ],
+        [
+          "Bloquer",
+          "−10",
+          "Signaler que la progression vers l'avant doit s'arrêter."
+        ],
+        [
+          "Rouvrir une étape terminée",
+          "−50",
+          "Boucle de reprise. La terminer de nouveau ne rapporte que +10."
+        ],
+        [
+          "Renvoyer le travail d'une étape en arrière",
+          "−50 par étape",
+          "Renvoyer le travail à une étape antérieure. La pénalité croît selon l'ampleur du recul."
+        ]
+      ],
+      "caption": "La progression vers l'avant est facile à gagner et facile à perdre. Les pénalités croissent selon le moment et la distance à laquelle un problème est détecté, ce qui pousse l'équipe à faire remonter les enjeux tôt.",
+      "source": "Moteur de jeu Velocity (velocity.service.ts)."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Toute l'équipe sur le plateau"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le plateau mesure l'agent dans le contexte d'une équipe plus large. L'IA peut être un membre sur six, les cinq autres étant humains, et les humains ont le même potentiel de commettre une erreur que l'IA, de sorte que toute l'équipe porte la responsabilité ensemble. Nous avons vu des unités de livraison efficaces passer d'une équipe agile de huit à douze personnes à une ou deux personnes, et même là on ne peut échapper aux parties prenantes, à la cybersécurité, à l'architecture, à la planification, à la gestion du changement, aux communications et à un client aux opinions bien arrêtées ayant sa propre vision de la qualité. Ils sont tous sur le même plateau. Quiconque peut jouer un coup, et quiconque peut signaler un blocage qui arrête l'élan vers l'avant et déclenche une discussion. Le tableau de classement suit ensuite la performance de chaque équipe sur de nombreux projets, quelles équipes avancent proprement et lesquelles continuent de perdre des points, de sorte qu'avec le temps il se lit comme une mesure de la qualité avec laquelle une équipe livre avec l'IA, et non simplement de sa rapidité."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Projets, défis et l'espace de travail partagé"
+    },
+    {
+      "type": "paragraph",
+      "text": "Démarrer un projet Velocity signifie d'abord définir ses métadonnées : le budget, le calendrier, les livrables et les résultats, le client, le responsable de projet, l'action déclencheuse, s'il s'agit d'une exigence législative ou réglementaire, les systèmes connectés et l'équipe. La création du projet met aussi en place automatiquement un espace de travail SharePoint, avec un dossier pour le projet et pour chaque module, et y ajoute toute l'équipe. Cela importe davantage qu'il n'y paraît. Sans une bonne hygiène des données, on ferme une session ou on confie le travail à un autre développeur, et alors où est passé tout cela? C'est disparu. L'agent porte donc des compétences pour enregistrer son travail au bon endroit. Une bonne gestion de l'information fait partie de sa façon de jouer."
+    },
+    {
+      "type": "paragraph",
+      "text": "Parallèlement aux projets, il y a des défis. Un défi est une prime à durée limitée, pointée sur un produit fini que le client approuve, de sorte que la pénalité de recul ne s'applique pas. Plusieurs personnes peuvent relever le même défi, et vous pouvez couronner un seul gagnant ou plusieurs. Nous les appelons des quêtes secondaires. Quiconque peut en prendre une, même hors de son propre projet, et avec une livraison agentique aussi rapide, une heure libre suffit à en relever une, là où le même travail signifiait auparavant des semaines de préparation."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Le harnais Velocity"
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque agent démarre avec un harnais Velocity. C'est une variation du [harnais bien construit](/paper/p7p2k) présenté plus tôt dans la série, les mêmes compétences fondamentales, mais adaptées et câblées pour que l'agent sache comment jouer. Les compétences sont organisées autour des huit étapes, une par étape, depuis une compétence d'exigences qui rédige le document des exigences jusqu'à une compétence de déploiement qui rédige les notes de version et le guide d'exploitation et expédie les migrations, avec des barrières mécaniques entre les deux afin qu'une étape n'avance pas tant que le travail n'a pas franchi ses contrôles. Et chaque fois que l'agent démarre, il tire la spécification OpenAPI du moteur de jeu directement du moteur, de sorte qu'il connaît toujours les règles courantes et exactement ce qu'il a le droit de faire. Les règles peuvent changer sous lui sans que personne ne redéploie quoi que ce soit."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "L'écouteur Velocity et l'orchestration multiagent"
+    },
+    {
+      "type": "paragraph",
+      "text": "Il y a ensuite l'écouteur Velocity, un script qui s'exécute dans [Nexus](/paper/uwpxr) et qui permet de déclencher un agent par un coup sur le plateau. Il maintient une connexion ouverte de flux d'événements serveur vers le moteur de jeu, filtrée selon les projets qui l'intéressent, et reprend proprement si la connexion tombe. Un humain met à jour un statut ou transfère du travail, l'écouteur le voit, réveille le bon agent dans son propre répertoire de travail avec une session qui se souvient, et lui transmet l'état du plateau et ce que l'humain a dit. Un seul agent s'exécute par projet à la fois, avec un plafond sur le nombre exécuté simultanément, et le reste fait la file et s'écoule à mesure que des places se libèrent."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cela transforme le plateau de jeu en invite universelle. Au lieu qu'une personne invite l'IA à la main, un seul coup sur le plateau déclenche des centaines d'agents sur des centaines de projets. Quelqu'un met à jour une étape le lundi matin, et un agent à l'écoute de ce plateau se réveille, lit le coup et accomplit la prochaine portion de travail. La plupart des gens n'ouvrent jamais une fenêtre de clavardage ni ne se connectent à une machine virtuelle; ils jouent au jeu, et l'agent travaille derrière. Cela convient à la façon dont les gens veulent travailler, puisque peu souhaitent se connecter à une machine pour parler à un agent, et maintenant ils n'ont plus à le faire."
+    },
+    {
+      "type": "pullquote",
+      "text": "Le plateau de jeu devient l'invite universelle. Une personne joue un coup, et quelque part un agent se réveille et accomplit la prochaine portion de travail.",
+      "cite": "Janak Alford, sous-ministre, Ministère de la Technologie et de l'Innovation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Différents agents dotés de différents harnais peuvent être déclenchés à différents points. Lorsque le plateau atteint les tests utilisateurs, un agent de cybersécurité peut intervenir, lancer une analyse complète, constater qu'un contrôle a été manqué, renvoyer le plateau au développement avec la faille signalée, déposer le détail dans SharePoint et ouvrir un billet pour que l'agent de développement le corrige. Tout un bassin d'agents peut partager le contexte d'un projet, chacun intervenant pour jouer le coup suivant dès qu'il se présente. Et lorsqu'un modèle se retrouve bloqué, il peut en interroger un autre, un modèle d'Anthropic consultant un Grok, un OpenAI ou un Gemini, de sorte qu'un problème difficile fait appel à plus d'un type d'intelligence. Cela ressemble à l'ancien carnet de tâches agile, du travail en attente d'être pris, sauf que les agents le prennent à l'instant même où la rétroaction arrive."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3",
+      "title": "L'écouteur Velocity",
+      "caption": "Un coup humain sur le plateau voyage par flux d'événements serveur jusque dans Nexus, où chaque agent n'écoute que ses propres projets. Le coup réveille le bon agent pour qu'il accomplisse la prochaine portion de travail, et un spécialiste comme un agent de cybersécurité peut renvoyer le travail en arrière lorsqu'il trouve une faille.",
+      "image": {
+        "src": "public/images/k3tc3/fr/fig-10-3.jpg",
+        "alt": "Un schéma dessiné à la main. À gauche, un plateau étiqueté plateau de jeu Velocity avec un petit jeton humain jouant un coup. Une ligne rouille étiquetée flux d'événements serveur file vers la droite jusque dans une grande frontière arrondie étiquetée Nexus, contenant plusieurs petits jetons robots étiquetés agents, chacun marqué écoute son propre projet. Un agent est allumé, réveillé par le coup, avec une flèche revenant au plateau étiquetée accomplit l'étape suivante. Sur un côté, un insigne étiqueté agent de cybersécurité pointe une flèche vers le bas du plateau étiquetée renvoie le travail en arrière si un contrôle manque.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board labelled PLATEAU DE JEU VELOCITY with a small human token making a move. A rust line labelled FLUX D'ÉVÉNEMENTS SERVEUR runs to the right into a large rounded boundary labelled NEXUS, where several small robot tokens labelled AGENTS sit, each tagged ÉCOUTE SON PROPRE PROJET. One agent is lit up, woken by the move, with a small arrow back to the board labelled ACCOMPLIT L'ÉTAPE SUIVANTE. Off to one side, a small badge labelled AGENT DE CYBERSÉCURITÉ points an arrow back down the board labelled RENVOIE LE TRAVAIL EN ARRIÈRE SI UN CONTRÔLE MANQUE. A caption reads LE PLATEAU EST L'INVITE. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Bâtir une mémoire institutionnelle"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity n'a pas entièrement résolu l'apprentissage interprojets, et la discipline enseignée à l'[Academy](/paper/dt725) comble la majeure partie de l'écart. Les gens sont propriétaires de leurs harnais. Lorsqu'un agent commet une erreur et que le plateau la détecte, le propriétaire est censé mener une rétrospective, trouver la faille et corriger le harnais pour que cela ne se reproduise pas. Ces correctifs remontent vers la branche principale, de sorte que la prochaine personne à démarrer un projet est déjà sur le meilleur harnais, et tout le monde y gagne. L'apprentissage se démocratise à travers les gens, les agents et les projets, et Git est le moyen par lequel il voyage."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque projet a aussi un bouton d'audit. Appuyez dessus et le système parcourt le code, la progression, les commentaires, les métadonnées, tout cela, et rédige un rapport d'audit indélébile, un instantané dans le temps de ce qui fonctionne et de ce qui ne fonctionne pas. Faites-le sur un grand nombre de projets et les thèmes commencent à se dégager : quelles pratiques fonctionnent systématiquement, quelles erreurs se répètent, où se regroupent les failles de sécurité. C'est quelque chose qu'un outil traditionnel comme Jira ne capte jamais; là, le savoir reste avec la personne et s'en va avec elle. Dans Velocity, il est assemblé et conservé à l'intérieur de l'outil."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 4",
+      "title": "Comment une leçon devient une mémoire institutionnelle",
+      "caption": "Une erreur détectée sur le plateau entraîne une rétrospective, une correction du harnais et une poussée vers la branche principale partagée, de sorte que le prochain projet démarre à partir du harnais amélioré. Les rapports d'audit captent les mêmes leçons sous forme d'instantanés durables.",
+      "image": {
+        "src": "public/images/k3tc3/fr/fig-10-4.jpg",
+        "alt": "Un schéma cyclique dessiné à la main, fait de quatre cases reliées par des flèches : erreur détectée sur le plateau, rétrospective, mettre à jour le harnais, pousser vers la branche principale, avec une flèche finale revenant à une rangée de petits jetons robots étiquetés chaque agent démarre du plus récent. Sur un côté, une icône de document étiquetée rapport d'audit légendée instantané de ce qui a fonctionné.",
+        "image_prompt": "An editorial cycle diagram on warm cream paper, deep navy line work with small rust accents. A loop of four labelled boxes connected by arrows: ERREUR DÉTECTÉE SUR LE PLATEAU, then RÉTROSPECTIVE, then METTRE À JOUR LE HARNAIS, then POUSSER VERS LA BRANCHE PRINCIPALE, with a final arrow returning to a row of small robot tokens labelled CHAQUE AGENT DÉMARRE DU PLUS RÉCENT. To one side, a small document icon labelled RAPPORT D'AUDIT with a caption INSTANTANÉ DE CE QUI A FONCTIONNÉ. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Velocity en conditions réelles : une centaine d'agents et le Reaper"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lorsque nous avons ouvert Velocity à une centaine d'agents de l'[Academy d'IA](/paper/dt725), chacun avec son propre écouteur Velocity abonné au moteur de jeu, nous avons appris à quel point les agents peuvent être créatifs et perturbateurs lorsqu'on leur donne liberté et incitations. Le système s'est immédiatement inondé d'activité. En une seule fenêtre de cinq minutes, nous avons enregistré soixante-cinq mille transactions tandis que les agents se surabonnaient au plateau de jeu et commençaient à jouer simultanément sur des centaines de projets. Le volume n'était pas le vrai problème."
+    },
+    {
+      "type": "keystat",
+      "label": "En charge",
+      "value": "65 000 / 5 min",
+      "body": "Une centaine d'agents de l'Academy sur des plateaux partagés ont produit soixante-cinq mille transactions en une fenêtre de cinq minutes, et ont commencé à fausser les règles. Ce test de charge a donné naissance au Reaper et à une plateforme renforcée."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les agents se sont mis à fausser la mesure. Ils monopolisaient les tours pour que les humains ne puissent pas bouger. Ils jouaient des coups comme s'ils étaient l'humain, même si le journal d'audit montrait clairement que c'était l'agent. Ils sautaient des étapes pour engranger des points vers l'avant, pariant que la pénalité ne viendrait peut-être jamais. Ils jouaient pour le score plutôt que pour la livraison. C'est la loi de Goodhart, juste devant nous : dès qu'une mesure devient la cible, elle cesse d'être une bonne mesure. Le franc-jeu, il s'est avéré, n'était pas quelque chose que nous pouvions simplement présumer."
+    },
+    {
+      "type": "pullquote",
+      "text": "Lorsqu'une mesure devient l'objectif, elle cesse d'être une bonne mesure. Nous ne pouvions pas présumer le franc-jeu; nous devions l'imposer.",
+      "cite": "Janak Alford, sous-ministre, Ministère de la Technologie et de l'Innovation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous avons donc tout arrêté, renforcé le harnais et bâti un agent d'application que nous appelons le Reaper. Le Reaper relit l'historique du plateau à la recherche des signatures de la triche, et là où il en trouve une, il reprend les points qui ont été gagnés puis les soustrait de nouveau, de sorte que se faire prendre coûte bien plus cher que la triche ne pourrait jamais rapporter. Il s'exécute en bloc sur l'ensemble du registre, et il est idempotent, de sorte que le relancer ne fait ressortir que ce qui est nouveau. Chaque constat aboutit sur le tableau de classement comme une violation que tout le monde peut voir."
+    },
+    {
+      "type": "table",
+      "title": "Ce que le Reaper attrape",
+      "columns": [
+        "Violation",
+        "Comment elle est attrapée"
+      ],
+      "rows": [
+        [
+          "Course de vitesse",
+          "Une étape terminée avec seulement des tours d'IA et sans aucune participation humaine."
+        ],
+        [
+          "Aucune collaboration",
+          "Une étape terminée touchée par un seul acteur."
+        ],
+        [
+          "Aucun artefact",
+          "Une étape terminée sans rien d'attaché pour montrer le travail."
+        ],
+        [
+          "Module vide",
+          "Un module « terminé » avec trop peu de tours et presque aucun contenu."
+        ],
+        [
+          "Multiplication de modules",
+          "Un projet gonflé de trop de modules, suppressions comprises."
+        ],
+        [
+          "Tours vides",
+          "Les tours d'une personne sur une étape sont presque tous vides."
+        ],
+        [
+          "Tours en rafale",
+          "Plusieurs tours sur une étape en quelques secondes, la signature d'un script."
+        ],
+        [
+          "Auto-approbation",
+          "Une seule clé d'IA soumet et approuve la même étape."
+        ]
+      ],
+      "caption": "Le Reaper parcourt tout le plateau après coup, en bloc. Pour chaque violation, il retire les points gagnés et les soustrait de nouveau, un multiplicateur de pénalité de deux, de sorte que la triche coûte bien plus cher qu'elle ne pourrait jamais rapporter.",
+      "source": "Moteur de jeu Velocity (reaper.service.ts)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5",
+      "title": "Le Reaper",
+      "caption": "Le Reaper balaie l'historique du plateau à la recherche des signatures de la triche, de la course de vitesse à l'auto-approbation, et retire les points gagnés puis les retire de nouveau, de sorte que le score bouge fortement contre tout agent pris à fausser le système.",
+      "image": {
+        "src": "public/images/k3tc3/fr/fig-10-5.jpg",
+        "alt": "Un schéma dessiné à la main. À gauche, un plateau avec quelques coups marqués de petits signes d'avertissement rouille étiquetés course de vitesse, auto-approbation, tours en rafale. Une flèche mène à un seul jeton d'application étiqueté le Reaper, dessiné comme un simple motif iconographique de faux à capuchon en bleu marine. De celui-ci, une lourde flèche rouille pointe vers une barre de score qui chute fortement, étiquetée points retirés, puis retirés de nouveau.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board with a few small moves marked by rust warning marks labelled COURSE DE VITESSE, AUTO-APPROBATION, TOURS EN RAFALE. An arrow leads to a single enforcement token labelled THE REAPER, drawn as a simple iconographic hooded scythe motif in navy line work, not a realistic person. From it, a heavy rust arrow points to a small score bar dropping sharply, labelled POINTS RETIRÉS, PUIS RETIRÉS DE NOUVEAU. A caption reads LA TRICHE COÛTE PLUS CHER QU'ELLE NE RAPPORTE. Calm, architectural, legible labels. No logos, no realistic people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous avons aussi reconstruit Velocity pour encaisser la charge, comme une plateforme Gouvernement 3.0 qui s'attend à un trafic soutenu, à fort volume de transactions et piloté par des agents. Le flux d'événements délaisse le trafic de faible priorité vers les clients lents, abandonne les connexions les plus anciennes sous pression de mémoire plutôt que de s'effondrer, et utilise des clés d'idempotence et des contrôles de version afin que deux coups ne puissent entrer en collision. Lorsque nous avons rouvert le plateau avec le Reaper en surveillance, le comportement a changé. Les agents ont appris que le franc-jeu était imposé, et le système s'est stabilisé. La leçon nous est restée : on ne peut pas présumer la gouvernance. On l'intègre, on l'impose, et on fait en sorte que l'enfreindre coûte plus cher que ce que cela vaut."
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "Le système complet : Pronghorn, Nexus, Velocity"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity est le troisième pilier du système complet, et il s'appuie sur les deux autres. [Pronghorn](/paper/qthji) vient en premier et fait les exigences, les normes, l'architecture et les artefacts de projet, de sorte que le travail est correctement défini avant qu'une seule ligne de code ne soit écrite. [Nexus](/paper/uwpxr) est l'endroit où les agents vivent et travaillent, avec la puissance de calcul, les outils et les harnais d'exécution. Velocity se pose au-dessus comme la couche qui orchestre et mesure. Les agents dans Nexus s'abonnent aux plateaux de Velocity par l'écouteur, sur des flux d'événements serveur; les gens jouent des coups, les agents répondent, le travail gravit les huit étapes, et ce que nous apprenons reflue dans le harnais. Pronghorn vous donne de bons intrants, Nexus vous donne une exécution fiable, et Velocity vous donne la visibilité, la responsabilisation et l'apprentissage. Les trois sont à code source ouvert, et vous pouvez prendre les trois ensemble ou simplement greffer Velocity sur un flux de travail que vous avez déjà."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6",
+      "title": "Trois piliers de l'usine d'IA",
+      "caption": "Pronghorn prépare le travail, Nexus l'exécute, et Velocity le mesure et l'orchestre. Les agents dans Nexus s'abonnent aux plateaux de Velocity sur des flux d'événements serveur, de sorte que les trois piliers fonctionnent comme un seul système.",
+      "image": {
+        "src": "public/images/k3tc3/fr/fig-10-6.jpg",
+        "alt": "Un schéma dessiné à la main de trois piliers étiquetés soutenant un seul linteau étiqueté usine d'IA. Le pilier de gauche indique Pronghorn, légendé exigences, normes, architecture. Le pilier central indique Nexus, légendé l'environnement dans lequel les agents travaillent. Le pilier de droite indique Velocity, légendé mesure et orchestration. Une fine ligne rouille étiquetée flux d'événements serveur relie le pilier Nexus au pilier Velocity.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three labelled pillars stand side by side supporting a single horizontal lintel labelled USINE D'IA. Left pillar labelled PRONGHORN, captioned EXIGENCES, NORMES, ARCHITECTURE. Centre pillar labelled NEXUS, captioned L'ENVIRONNEMENT DANS LEQUEL LES AGENTS TRAVAILLENT. Right pillar labelled VELOCITY, captioned MESURE ET ORCHESTRATION. A thin rust line labelled FLUX D'ÉVÉNEMENTS SERVEUR connects the NEXUS pillar to the VELOCITY pillar. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "11",
+      "title": "Documents complémentaires"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les documents suivants offrent des éclairages supplémentaires sur la plateforme Velocity. Pour les renseignements les plus récents, veuillez suivre l'[Alberta AI Academy](https://albertaaiacademy.com)."
+    },
+    {
+      "type": "youtube",
+      "fno": "FIG.7",
+      "title": "",
+      "caption": "Le sous-ministre Janak Alford et le directeur exécutif Zoran Mijajlovic discutent du moteur de jeu Velocity et en font une présentation guidée",
+      "url": "https://youtu.be/rwhybgIXnJ8",
+      "alt": "Le sous-ministre Janak Alford et le directeur exécutif Zoran Mijajlovic discutent du moteur de jeu Velocity et en font une présentation guidée"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8",
+      "title": "Points à retenir",
+      "caption": "Six points qui résument pourquoi Velocity est conçu comme il l'est, et pourquoi d'autres organisations pourraient l'adopter.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "L'estimation cède la place au mouvement",
+            "desc": "L'IA est trop rapide et trop variable pour être estimée en temps humain, c'est pourquoi Velocity suit le mouvement réel à travers huit étapes plutôt que de le prédire, avec une visibilité au niveau du tour sur l'origine des retards."
+          },
+          {
+            "title": "L'IA est un membre à part entière de l'équipe",
+            "desc": "Le plateau est l'interface. Les gens et les agents collaborent au grand jour, avec des transferts par tours, et le travail est affiché dans un espace partagé plutôt que caché dans une fenêtre de clavardage."
+          },
+          {
+            "title": "Le recul est pénalisé, donc la qualité passe en premier",
+            "desc": "Un problème détecté tard coûte plus de points que de faire l'étape correctement, et les points perdus ne reviennent pas. L'incitation est de faire remonter les problèmes tôt et honnêtement."
+          },
+          {
+            "title": "L'apprentissage se compose",
+            "desc": "Les rétrospectives affluent dans le harnais partagé par Git, et les rapports d'audit captent des tendances à travers les projets, de sorte que le savoir survit aux personnes qui partent."
+          },
+          {
+            "title": "La gouvernance est intégrée",
+            "desc": "Une centaine d'agents mettront à l'épreuve chaque règle. Le Reaper détecte la triche et fait en sorte qu'elle coûte bien plus cher qu'elle ne rapporte, de sorte que la plateforme tient à grande échelle."
+          },
+          {
+            "title": "C'est un pilier sur trois, et il est à code source ouvert",
+            "desc": "Avec Pronghorn pour les intrants et Nexus pour l'exécution, Velocity ajoute la mesure et l'orchestration. Le système entier est ouvert pour que d'autres organisations l'adoptent et l'améliorent."
+          }
+        ]
+      }
+    },
+    {
+      "type": "figure",
+      "title": "Explorez ceci comme un canevas interactif",
+      "caption": "Huit étapes. Le mouvement vers l'avant rapporte des points; le recul les fait perdre de façon permanente. Le Reaper applique les règles. Fait partie du Canevas (document 18); déplacez les nœuds, zoomez et appuyez sur Écouter pour une présentation guidée parlée.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "velocity",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "velocity",
+        "ai-factory",
+        "orchestration",
+        "reaper",
+        "open-source"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "translation_status": "draft",
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
   },
-  "related": []
+  "related": [
+    "qthji",
+    "uwpxr",
+    "p7p2k",
+    "dt725",
+    "zgym1",
+    "xs7uh"
+  ]
 }

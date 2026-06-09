@@ -499,7 +499,12 @@
   ],
   "_meta": {
     "placeholder": false,
-    "written_by": "human-authored"
+    "written_by": "human-authored",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "human-reviewed",
+      "translated_at": "2026-05-31T00:00:00.000Z"
+    }
   },
   "translation_status": "reviewed",
   "category": "paper",

@@ -4,23 +4,33 @@
   "sequence": "",
   "tier": "Policy & People",
   "category": "paper",
-  "title": "The AI Academy: Investing in People",
-  "subtitle": "Training the public service to direct AI.",
+  "title": "L'Académie de l'IA : investir dans les personnes",
+  "subtitle": "Un programme gradué et à code source ouvert qui forme les fonctionnaires à travailler avec l'intelligence artificielle, du dialogue par requêtes jusqu'à la création d'applications de calibre entreprise.",
   "track": "Human and Change Management",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 21,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "ai-academy",
+    "training",
+    "change-management",
+    "personas",
+    "harness",
+    "prompting",
+    "agents",
+    "open-source"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Human and Change Management group of the collection. The body will be written from source materials.",
-  "translation_status": "untranslated",
+  "abstract": "L'Académie de l'IA de l'Alberta est un programme de formation gradué qui prépare les fonctionnaires à travailler avec l'intelligence artificielle. Il est né du programme AI Maximalist, où une première cohorte d'environ soixante-cinq personnes bénévoles a révélé à la fois la demande pour une formation structurée et le large éventail de réactions devant une technologie nouvelle. Lancée en septembre 2025, l'Académie se déroule en trois niveaux : le dialogue par requêtes et les fondements d'un usage fiable de l'IA, les agents réutilisables pour le travail répétitif, et la création d'applications de calibre entreprise au moyen d'un harnais. Les cohortes comptent de soixante à plusieurs centaines de participants et traversent tous les échelons hiérarchiques. Le matériel de cours est publié ouvertement à albertaaiacademy.com. Ce document décrit les origines du programme, le principe centré sur l'humain autour duquel il a été conçu, sa structure à travers les trois niveaux, l'approche fondée sur les personas utilisée au niveau 3, et l'état d'esprit que l'Académie cherche à inculquer : qu'une adoption efficace de l'IA est une discipline de pratique persistante et vérifiée, plutôt qu'une mesure à optimiser.",
   "hero_image": {
     "src": "public/images/dt725/fr/hero.jpg",
-    "alt": "Editorial image for: The AI Academy: Investing in People",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The AI Academy: Investing in People\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Illustration de couverture éditoriale pour l'Académie de l'IA : trois larges marches s'élevant de gauche à droite sur un papier crème chaud, portant chacune un motif simple, une bulle de dialogue, un engrenage d'agent et une fenêtre d'application, dessinées au trait bleu marine profond de l'Alberta avec de petits accents rouille.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. Three broad stone steps rise from lower left to upper right, like a graduated ascent. On the first step rests a simple speech-bubble motif; on the second, a small gear with a tiny robot token; on the third, a clean application window outline. A wide calm sky behind them. Archival, calm, and confident. Wide cover aspect. No text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -28,18 +38,106 @@
   },
   "tldr_presentation": {
     "id": "dt725-tldr",
-    "title": "The paper, in brief",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "dt725",
     "slides": [
       {
         "id": "01",
-        "title": "The AI Academy: Investing in People",
+        "title": "L'Académie de l'IA : investir dans les personnes",
         "audio_file": "public/audio/fr/dt725-tldr/01.mp3",
         "visual": "title",
-        "caption": "Human and Change Management",
-        "subcaption": "",
-        "text": "The AI Academy: Investing in People. Content forthcoming."
+        "caption": "Document 12 · Gestion des personnes et du changement",
+        "subcaption": "Former la fonction publique à travailler avec l'IA.",
+        "text": "L'Académie de l'IA de l'Alberta est notre façon d'investir dans les personnes derrière la technologie. Elle est née du programme AI Maximalist, où une première cohorte d'environ soixante-cinq personnes bénévoles nous a montré à la fois l'appétit pour la formation et à quel point les gens réagissent différemment devant une chose aussi nouvelle que l'intelligence artificielle. Lancée en septembre 2025, l'Académie enseigne aujourd'hui à des milliers de fonctionnaires à travailler avec ces outils, et tout son matériel est ouvert."
+      },
+      {
+        "id": "02",
+        "title": "Trois niveaux, un seul parcours",
+        "audio_file": "public/audio/fr/dt725-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Comment le programme est bâti",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Niveau 1 : le dialogue par requêtes",
+              "desc": "Comment tenir une véritable conversation avec un agent conversationnel, et comment vérifier avant de faire confiance."
+            },
+            {
+              "label": "Niveau 2 : les agents",
+              "desc": "Des agents réutilisables pour le travail répétitif, créés une fois et partagés au sein d'une unité."
+            },
+            {
+              "label": "Niveau 3 : les applications",
+              "desc": "Créer des logiciels de calibre entreprise avec un harnais, l'usine et les quatre approches."
+            }
+          ]
+        },
+        "text": "L'Académie est graduée, et elle se déroule en trois niveaux. Le niveau un, c'est le dialogue par requêtes : comment interagir avec un agent conversationnel comme une véritable conversation plutôt que comme une boîte de recherche. Le niveau deux, ce sont les agents réutilisables, pour le travail répétitif que vous faites plus de trois fois par semaine. Le niveau trois, c'est la création d'applications de calibre entreprise avec un harnais. Chaque niveau s'appuie sur le précédent, et les gens peuvent reprendre n'importe quel niveau aussi souvent qu'ils en ont besoin."
+      },
+      {
+        "id": "03",
+        "title": "Vérifier, puis faire confiance",
+        "audio_file": "public/audio/fr/dt725-tldr/03.mp3",
+        "visual": "compare",
+        "caption": "L'état d'esprit du niveau 1",
+        "visual_config": {
+          "left": {
+            "label": "Ce que nous enseignons à faire",
+            "body": "La traiter comme une conversation. Apporter vos propres cas d'usage. Prendre l'habitude de vérifier le travail."
+          },
+          "right": {
+            "label": "Ce que nous enseignons à éviter",
+            "body": "L'utiliser comme une boîte de recherche, lui faire aveuglément confiance, ou charger des données sensibles dans le mauvais outil."
+          }
+        },
+        "text": "Le niveau un enseigne deux cadres. RICECO, pour rédiger une bonne requête, et TRUST, pour gérer ce qui en revient. La règle que nous répétons est : vérifier, puis faire confiance. Une bonne part de l'apprentissage initial porte sur ce qu'il faut éviter : ne pas la traiter comme une boîte de recherche, ne pas lui faire aveuglément confiance, ne pas charger de données sensibles dans un outil qui n'est pas classifié pour cela, et ne pas s'attendre à ce qu'elle soit parfaite du premier coup. Rien de tout cela n'est évident, alors nous l'enseignons directement."
+      },
+      {
+        "id": "04",
+        "title": "La portée",
+        "audio_file": "public/audio/fr/dt725-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Qui l'Académie a rejoint",
+        "visual_config": {
+          "stat_value": "10 000+",
+          "stat_label": "Participants du public sur la plateforme AlbertaAIAcademy.com"
+        },
+        "subcaption": "Aux côtés de milliers de fonctionnaires qui apprennent à travers les trois niveaux.",
+        "text": "Plus de dix mille participants du public ont utilisé la plateforme de l'Académie de l'IA de l'Alberta, aux côtés de milliers de fonctionnaires. La satisfaction au niveau un se situe en moyenne autour de neuf sur dix. Nous avons comprimé le niveau un à une seule semaine pour réduire l'engagement en temps, tout en rappelant aux gens que même une simple interface conversationnelle prend deux à trois mois à bien maîtriser de façon constante."
+      },
+      {
+        "id": "05",
+        "title": "Guerrier, magicien, artisan",
+        "audio_file": "public/audio/fr/dt725-tldr/05.mp3",
+        "visual": "list",
+        "caption": "Les personas du niveau 3",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Le guerrier",
+              "desc": "Livre. La vitesse, la livraison et le tableau de classement : le travail de l'usine d'IA."
+            },
+            {
+              "label": "Le magicien",
+              "desc": "Élabore la stratégie. La modernisation et l'architecture : le travail de Gouvernement 3.0."
+            },
+            {
+              "label": "L'artisan",
+              "desc": "Construit pour les autres. Des harnais, des gabarits et des outils comme Pronghorn, Nexus et Velocity."
+            }
+          ]
+        },
+        "text": "Au niveau trois, la salle ne connaît aucune hiérarchie au-delà de l'animateur et du participant. Une sous-ministre, des sous-ministres adjoints, des directeurs, des employés et des stagiaires suivent tous les mêmes leçons. Au lieu des titres d'emploi, nous demandons aux gens de choisir un persona. Le guerrier livre et vit sur le tableau de classement. Le magicien élabore la stratégie, modernisant et réarchitecturant. L'artisan construit les outils sur lesquels tous les autres s'appuient. Ce cadrage est un coup de pouce délibéré pour se demander quel genre de travail vous voulez réellement faire avec ces outils."
+      },
+      {
+        "id": "06",
+        "title": "Un état d'esprit, non une mesure",
+        "audio_file": "public/audio/fr/dt725-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Ce que l'Académie enseigne vraiment",
+        "subcaption": "Une pratique persistante et vérifiée, ramenée dans le travail quotidien.",
+        "text": "Sous les niveaux et les outils, l'Académie enseigne un état d'esprit. Les agents d'IA peuvent coder environ cent fois plus vite, et pourtant nous visons une amélioration d'ensemble d'un facteur vingt, parce que l'objectif dépasse l'application et les artéfacts pour atteindre l'engagement, l'aisance et la gestion du changement. Nous traitons l'adoption comme une discipline de pratique persistante et vérifiée, plutôt que comme une cible à atteindre. Nous investissons dans les personnes, et en échange nous leur demandons d'aborder ces outils avec un esprit ouvert. Certains y prendront goût et d'autres non, et l'engagement consiste à continuer de progresser sur le parcours sans s'attendre à la perfection."
       }
     ]
   },
@@ -47,23 +145,347 @@
   "sections": [
     {
       "n": "01",
-      "title": "Overview"
+      "title": "Du programme Maximalist"
+    },
+    {
+      "n": "02",
+      "title": "Une IA centrée sur l'humain"
+    },
+    {
+      "n": "03",
+      "title": "Un programme gradué"
+    },
+    {
+      "n": "04",
+      "title": "Niveau 1 : le dialogue par requêtes et la confiance"
+    },
+    {
+      "n": "05",
+      "title": "Niveau 2 : les agents réutilisables"
+    },
+    {
+      "n": "06",
+      "title": "Niveau 3 : créer des applications d'entreprise"
+    },
+    {
+      "n": "07",
+      "title": "Guerrier, magicien, artisan"
+    },
+    {
+      "n": "08",
+      "title": "L'état d'esprit anti-camelote"
+    },
+    {
+      "n": "09",
+      "title": "Investir dans les personnes"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "L'Académie de l'IA de l'Alberta a commencé par ce que nous avons appris sur le terrain. Lorsque Technologie et Innovation a lancé le programme AI Maximalist au début de 2025, nous avons sélectionné les gens par un appel d'intérêt, indépendamment de leurs compétences techniques et de leur expérience de l'IA, sur la force de leur désir de participer. Environ dix pour cent de l'effectif s'est porté volontaire, et pour des raisons opérationnelles nous avons pu accueillir à peu près cinq pour cent dans la première cohorte. Ces soixante-cinq premières personnes sont devenues un noyau fondateur, apprenant à appliquer l'intelligence artificielle dans quatre domaines : la gestion de projet, la livraison d'applications, les communications et l'analyse financière. Ce que nous avons observé en les regardant travailler est devenu le fondement de tout ce que l'Académie enseigne aujourd'hui."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Du programme Maximalist"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "Ces quatre premières équipes nous ont donné un aperçu approfondi des technologies qui étaient efficaces dans un contexte gouvernemental, et de l'éventail des réactions au fait d'être placé dans un environnement d'apprentissage avec une chose aussi nouvelle que l'intelligence artificielle. Comme ces personnes s'étaient elles-mêmes inscrites au programme, elles arrivaient avec une volonté de s'engager supérieure à la moyenne, et elles formaient un groupe positif, collaboratif et ouvert, de sorte que recueillir leurs commentaires sur ce qui fonctionnait était simple. L'équipe nous a dit sans détour où elle estimait avoir besoin d'aide."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce qui ressortait, c'est que le groupe se scindait en deux, entre celles et ceux qui étaient immédiatement à l'aise avec l'intelligence artificielle et celles et ceux qui éprouvaient des difficultés. Cela nous a indiqué qu'une stratégie d'adoption efficace devrait servir à la fois les premiers adoptants et celles et ceux qui étaient plus sceptiques ou qui avaient besoin de plus d'accompagnement en cours de route. Un parcours non technique n'était pas un obstacle au succès avec ces outils. Les gens qui possédaient un parcours technique trouvaient toutefois des concepts comme la construction d'un harnais ou la pensée en données structurées plus familiers, ce qui leur donnait un avantage initial sur les idées fondamentales."
+    },
+    {
+      "type": "keystat",
+      "label": "La cohorte fondatrice",
+      "value": "65 / ~5 %",
+      "body": "Environ soixante-cinq personnes bénévoles, à peu près cinq pour cent de l'effectif, ont formé la cohorte fondatrice du programme AI Maximalist. Près de dix pour cent s'étaient portés volontaires."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le signal le plus clair était la demande pour un programme de formation officiel. Les commentaires rendaient évident qu'élargir le programme Maximalist exigerait une formation formalisée, et que la formation ne pouvait se limiter au dialogue par requêtes ou à un survol des outils, parce que bien des gens en étaient déjà bien au-delà sur leur propre temps. Il nous fallait un programme gradué."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Une IA centrée sur l'humain"
+    },
+    {
+      "type": "paragraph",
+      "text": "La forme de l'Académie a aussi été nourrie par une conversation avec un collègue, JP Lalonde, alors chef de l'IA à l'Agence d'évaluation d'impact du Canada. Nous réfléchissions à quel point la conversation publique autour de l'intelligence artificielle était devenue négative, et à quel point beaucoup de nos amis, de notre famille et de nos pairs au gouvernement s'inquiétaient de son incidence potentielle. Une grande partie de cette inquiétude était amplifiée par les médias sociaux et populaires, par des prédictions de déplacement et de pertes d'emploi venant de voix au regard plutôt négatif sur la technologie. En tant que deux personnes qui utilisaient ces outils de façon intensive, de quatre à six heures par jour depuis plusieurs années, JP et moi estimions que les craintes étaient exagérées, et qu'elles déformaient l'occasion que l'IA crée."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous voyions une occasion abondante de transformer le gouvernement de façon positive. S'appuyant sur sa longue expérience en livraison technologique et en transformation numérique, JP a forgé une expression que nous avons depuis adoptée en Alberta : l'IA centrée sur l'humain. Lorsque nous nous sommes assis pour concevoir l'Académie et ses niveaux, nous les avons bâtis autour de ce principe, et autour d'un engagement à ne laisser aucun fonctionnaire derrière. Tout le monde aurait une chance équitable de voir et d'évaluer ces outils par soi-même. Devant tant de crainte dans la conversation, nous voulions aussi montrer aux gens le côté positif : comment l'IA peut habiliter et autonomiser le personnel, et comment elle démocratise l'accès à la technologie, particulièrement pour celles et ceux qui n'ont pas eu la chance de bâtir un solide parcours technique."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces outils permettent aux gens d'en faire bien plus qu'auparavant, et nous voyons l'IA générative comme un véritable avantage pour les travailleurs. L'intelligence artificielle changera la nature du travail, et la chose la plus précieuse que nous puissions offrir à nos pairs est une base solide pour s'y préparer. Tout au long de ces conversations, je suis resté constant avec nos équipes : il s'agit d'investir dans les personnes. Nous portons des décennies, dans certains cas des siècles, de dette technique. Nous avons des arriérés de dossiers qui remontent à des mois et à des années. Et nous avons un gouvernement déterminé à réduire la paperasserie, afin que les entreprises puissent faire des affaires et que les Albertains puissent vaquer à leur vie. L'IA est une façon de prendre en charge ce travail accumulé et de réduire ces obstacles systémiques, sans affaiblir les politiques qu'ils servent. C'est devenu l'idée rassembleuse derrière l'Académie de l'IA de l'Alberta : habiliter le personnel à bien utiliser ces outils, et apaiser les angoisses et les peurs qui les entourent."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.1",
+      "title": "Une IA centrée sur l'humain",
+      "caption": "Le principe autour duquel l'Académie a été conçue. Forgée avec JP Lalonde, l'IA centrée sur l'humain présente les outils comme une façon de dégager les obstacles systémiques, la dette technique, les arriérés de dossiers et la paperasserie, afin de libérer les fonctionnaires pour un travail plus significatif, sans laisser personne derrière.",
+      "image": {
+        "src": "public/images/dt725/fr/fig-12-1.jpg",
+        "alt": "Un diagramme dessiné à la main intitulé IA centrée sur l'humain : un petit motif de robot d'IA soulève une pile d'obstacles étiquetés, dette technique, arriérés de dossiers et paperasserie, pour les écarter pendant qu'une personne schématique simple se tient sur un chemin dégagé vers un panneau indiquant travail significatif, avec la légende les outils dégagent les obstacles, les personnes font le travail.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. In the centre, a simple schematic person token stands on a clear, open path. To the left, a stack of three labelled blocks reading TECHNICAL DEBT, CASE BACKLOGS, and RED TAPE is being lifted and carried out of the way by a small robot-and-gear motif labelled AI, clearing the path ahead of the person. Above the scene, a heading reads HUMAN-CENTERED AI. A small caption below reads THE TOOLS CLEAR THE BARRIERS; THE PEOPLE DO THE WORK. Calm, architectural, legible labels. No logos, no real people beyond a simple schematic token. On-image labels in Canadian French read: 'DETTE TECHNIQUE', 'ARRIÉRÉS DE DOSSIERS', 'PAPERASSERIE', 'IA', heading 'IA CENTRÉE SUR L'HUMAIN', caption 'LES OUTILS DÉGAGENT LES OBSTACLES; LES PERSONNES FONT LE TRAVAIL'. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Un programme gradué"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous avons imaginé un programme à paliers couvrant les fondements du dialogue par requêtes, les fondements des agents, qui devenaient populaires au début de 2025 mais n'avaient pas encore décollé, et la création d'applications, qui demeure l'une de nos activités les plus coûteuses et laborieuses. En juin 2025, nous avons présenté l'idée d'une Académie de l'IA de l'Alberta à notre ministre, Nate Glubish, qui a appuyé sans réserve l'idée d'aller de l'avant. Nous avions proposé un lancement en septembre, ce qui laissait une fenêtre étroite pour élaborer le matériel. Notre principale source d'inspiration était l'équipe Maximalist, qui, par des sondages et par sa propre expérience, nous a dit quelles leçons portaient et où elle avait fait face au plus d'incertitude et de frustration."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le 9 septembre 2025, nous avons lancé l'Académie avec le niveau 1 et un site initial d'articles sélectionnés, de modules d'apprentissage et d'outils, un agent conversationnel intégré, et des cohortes d'étudiants apprenant ensemble et partageant leurs progrès. Nous avons réparti le matériel sur dix jours, en bâtissant à partir de concepts fondamentaux le premier jour, en passant par des devoirs, jusqu'à un projet de synthèse au dixième jour. Nous l'avons mené à une cadence de quelques semaines de cours et de quelques semaines de pause, en alternant le niveau 1 et le niveau 2 pendant que nous développions le matériel plus complexe du niveau 3."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.2",
+      "title": "Trois niveaux, un seul parcours",
+      "caption": "L'Académie est graduée. Le niveau 1 enseigne le dialogue par requêtes et l'habitude de vérifier la sortie de l'IA. Le niveau 2 présente des agents réutilisables pour le travail répétitif. Le niveau 3 enseigne la création d'applications de calibre entreprise au moyen d'un harnais. Les gens peuvent reprendre n'importe quel niveau, et le matériel est offert en libre-service.",
+      "image": {
+        "src": "public/images/dt725/fr/fig-12-2.jpg",
+        "alt": "Un diagramme dessiné à la main de trois marches ascendantes étiquetées Niveau 1 Dialogue par requêtes, Niveau 2 Agents et Niveau 3 Applications, chaque marche un peu plus haute, avec une petite flèche de retour qui boucle depuis chaque marche pour montrer que n'importe quel niveau peut être repris, et une étiquette libre-service à côté de l'escalier.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three broad steps rise from lower left to upper right. The first step is labelled LEVEL 1: PROMPTING with a small speech-bubble icon, the second LEVEL 2: AGENTS with a small gear-and-robot icon, the third LEVEL 3: APPLICATIONS with a small application-window icon. A thin rust arrow loops back from each higher step to the one before it, labelled REPEAT ANY LEVEL. A small tag to the side reads SELF-SERVE, ALWAYS AVAILABLE. Calm, architectural, legible labels. No logos, no people. On-image labels in Canadian French read: 'NIVEAU 1 : DIALOGUE PAR REQUÊTES', 'NIVEAU 2 : AGENTS', 'NIVEAU 3 : APPLICATIONS', 'REPRENDRE N'IMPORTE QUEL NIVEAU', 'LIBRE-SERVICE, TOUJOURS OFFERT'. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Le niveau 3 a été le cours le plus difficile à créer, parce que même celles et ceux qui dirigeaient les équipes Maximalist ne savaient pas encore comment en expliquer les concepts, et que nous étions encore en train de bâtir l'outillage et les structures qui permettent aux gens d'apprendre des modèles efficaces et d'éviter les mauvaises habitudes. Il n'existe pas une seule façon prédéterminée de bien appliquer ces outils ; cela revient à chacun. La plupart des gens, toutefois, ne s'épanouissent pas dans l'incertitude pure. Ils veulent une certaine structure et une certaine constance, un chemin qu'ils peuvent suivre. Comme une bonne partie des TI, il n'y a pas une seule façon de faire une chose, seulement des façons plus ou moins efficaces, et bien des façons tranchées. Pour bâtir une académie, nous avons dû faire certains paris, en trouvant des concepts assez accrocheurs pour qu'on s'en souvienne, assez accessibles pour un profane, et assez fondés sur des principes pour stimuler la répétition. On peut apprendre à jouer d'un instrument ou à peindre d'un nombre incalculable de façons, et pourtant le débutant a encore quelques principes à maîtriser avant que la créativité ait un terrain ferme où se poser."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Niveau 1 : le dialogue par requêtes et la confiance"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le niveau 1 met l'accent sur le dialogue par requêtes : comment interagir avec un agent conversationnel, et comment bâtir des modèles d'interaction qui éloignent notre usage de la technologie d'un système transactionnel pour la rapprocher d'une conversation humaine, où chaque côté ajoute quelque chose et où l'échange comporte un véritable donnant-donnant. Nous enseignons un cadre de requêtes appelé RICECO, une formule en six étapes pour une requête bien formée qui va du rôle que vous donnez à l'IA jusqu'au format de sortie que vous demandez, avec l'instruction, le contexte, les exemples et les contraintes entre les deux. Nous l'associons à un second cadre appelé TRUST : vérifier ce que l'IA vous dit avant de vous y fier. Nous le résumons en trois mots : vérifier, puis faire confiance."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.3",
+      "title": "Deux cadres : RICECO et vérifier-puis-faire-confiance",
+      "caption": "Le niveau 1 associe un cadre pour rédiger une requête à un cadre pour gérer la réponse. RICECO est une formule en six étapes : rôle, instruction, contexte, exemples, contraintes et format de sortie. Le cadre TRUST vérifie une sortie de l'IA avant qu'on s'y fie, une boucle que nous enseignons comme « vérifier, puis faire confiance ».",
+      "image": {
+        "src": "public/images/dt725/fr/fig-12-3.jpg",
+        "alt": "Un diagramme dessiné à la main avec deux panneaux. Le panneau de gauche est une carte intitulée RICECO, sous-titrée une formule en six étapes pour une requête, énumérant six rangées numérotées : 1 Rôle, donnez un persona à l'IA ; 2 Instruction, énoncez la tâche exacte ; 3 Contexte, le contexte et l'auditoire ; 4 Exemples, montrez une sortie idéale ; 5 Contraintes, les règles et limites ; 6 Format de sortie, comment structurer la réponse. Le panneau de droite est une boucle entre une case étiquetée Sortie de l'IA et une case étiquetée Vérifier, avec une flèche de Vérifier vers une case étiquetée Faire confiance, et une flèche de retour rouille étiquetée si ça ne tient pas la renvoyant vers Sortie de l'IA, avec la légende vérifier puis faire confiance.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a titled card headed RICECO with a caption beneath reading A SIX-STEP FORMULA FOR A PROMPT, listing six numbered rows, each a short navy bold label followed by a few rust-or-navy words: '1 ROLE — give the AI a persona', '2 INSTRUCTION — state the exact task', '3 CONTEXT — the background and audience', '4 EXAMPLES — show an ideal output', '5 CONSTRAINTS — the rules and limits', '6 OUTPUT FORMAT — how to structure the answer'. On the right, a simple cycle: a box labelled AI OUTPUT connects by arrow to a box labelled VERIFY, which connects by arrow to a box labelled TRUST. A rust return arrow loops from VERIFY back to AI OUTPUT, labelled IF IT DOES NOT CHECK OUT. Below the cycle, a small caption reads VERIFY, THEN TRUST. Calm, architectural, legible labels, spelled exactly as given. No logos, no people. On-image labels in Canadian French read: card caption 'UNE FORMULE EN SIX ÉTAPES POUR UNE REQUÊTE'; rows '1 RÔLE — donnez un persona à l'IA', '2 INSTRUCTION — énoncez la tâche exacte', '3 CONTEXTE — le contexte et l'auditoire', '4 EXEMPLES — montrez une sortie idéale', '5 CONTRAINTES — les règles et limites', '6 FORMAT DE SORTIE — comment structurer la réponse'; boxes 'SORTIE DE L'IA', 'VÉRIFIER', 'FAIRE CONFIANCE'; arrow label 'SI ÇA NE TIENT PAS'; caption 'VÉRIFIER, PUIS FAIRE CONFIANCE' (keep RICECO and TRUST as-is). All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous enseignons aussi une gamme d'outils d'entreprise : Copilot dans Microsoft 365, Gemini Enterprise, et notre propre plateforme, Albert, qui offre des outils, des agents, des requêtes et des cadres, et qui permet aux gens de créer et de déployer leurs propres agents pour des charges de travail non classifiées. Différentes personnes gravitent vers différents outils selon le tempérament et l'expérience. Certaines se tournent tôt vers les agents plus complexes, tandis que d'autres se contentent de coller une requête dans Copilot pour structurer et coordonner leur journée au sein d'une équipe plus large."
+    },
+    {
+      "type": "paragraph",
+      "text": "Une bonne partie du niveau 1 consiste à enseigner aux gens ce qu'il faut éviter. Utilisés comme une recherche Google, les outils déçoivent. Crus aveuglément, ils induisent en erreur. Alimentés en données sensibles sur une plateforme qui n'est pas classifiée pour cela, ils créent un risque. Attendus parfaits du premier coup, ou censés comprendre un processus qu'ils n'ont jamais vu, ils restent en deçà. Rien de cela n'est évident, et rien de cela n'est annoncé par les entreprises d'IA, alors nous l'enseignons directement, aux côtés d'un état d'esprit d'usage prudent et d'une large place pour que les gens apportent leurs propres cas d'usage à coacher."
+    },
+    {
+      "type": "keystat",
+      "label": "Satisfaction au niveau 1",
+      "value": "≈ 9 / 10",
+      "body": "Satisfaction moyenne déclarée à travers les cohortes du niveau 1. Le niveau 1 a depuis été comprimé à une seule semaine pour réduire l'engagement en temps."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les commentaires sur le niveau 1 sont constamment élevés, autour de neuf sur dix en moyenne. Depuis le début de l'Académie, nous l'avons comprimé à une seule semaine pour le rendre plus accessible et exiger moins du temps des gens, tout en leur rappelant que même une interface conversationnelle d'une simplicité trompeuse prend du temps à maîtriser. D'après notre expérience, il faut quelque part entre deux et trois mois avant que la plupart des gens utilisent bien ces outils de façon constante. Le niveau 1 pose une base, et les diplômés sont encouragés à continuer d'utiliser les outils à leur retour au travail."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Niveau 2 : les agents réutilisables"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le niveau 2 s'appuie sur cette base et introduit les agents réutilisables. Ici, nous utilisons les Gemini Gems, les GitHub Copilot Agents, et notre propre AgentBuilder Console, qui donne aux gens une façon structurée de décrire leurs processus et d'assembler des agents et des outils qui exécutent des flux de travail répétitifs, selon un modèle linéaire ou ramifié, se terminant par une gamme de documents finis."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour quiconque travaille dans un système répétitif, c'est précieux, parce que le niveau 2 enseigne la règle de trois : si vous êtes susceptible de faire une chose plus de trois fois dans une semaine, prenez le temps de construire l'agent et de documenter le flux de travail, afin de pouvoir confier ce travail à l'agent et de le partager avec vos pairs. Dans une unité de personnes qui font un travail similaire, un flux de travail partageable signifie que l'investissement en temps d'une personne rehausse la performance de toute l'unité et inspire les gens autour d'elle."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.4",
+      "title": "La règle de trois",
+      "caption": "L'heuristique du niveau 2 pour savoir quand construire un agent. Si une tâche revient plus de trois fois dans une semaine, le temps consacré à construire et à documenter l'agent est rentabilisé, et un flux de travail partagé rehausse la performance de toute l'unité.",
+      "image": {
+        "src": "public/images/dt725/fr/fig-12-4.jpg",
+        "alt": "Un diagramme de décision dessiné à la main : une case étiquetée Une tâche récurrente avec une flèche vers un losange indiquant Plus de trois fois par semaine ?; une branche Non boucle vers le simple fait de le faire à la main ; une branche Oui mène à une case étiquetée Construire et documenter l'agent, puis à une case étiquetée Partager avec l'unité, avec de petites figures d'une équipe qui en profite.",
+        "image_prompt": "An editorial decision diagram on warm cream paper, deep navy line work with small rust accents. A box on the left labelled A RECURRING TASK leads by arrow to a diamond labelled MORE THAN THREE TIMES A WEEK? A short NO branch loops back to a small box labelled DO IT BY HAND. The YES branch leads rightward to a box labelled BUILD AND DOCUMENT THE AGENT, then to a box labelled SHARE WITH THE UNIT. Beside the final box, three small identical workflow icons suggest the whole unit reusing it. A small caption reads THE RULE OF THREE. Calm, architectural, legible labels. No logos, no people. On-image labels in Canadian French read: 'UNE TÂCHE RÉCURRENTE', 'PLUS DE TROIS FOIS PAR SEMAINE?', 'NON', 'LE FAIRE À LA MAIN', 'OUI', 'CONSTRUIRE ET DOCUMENTER L'AGENT', 'PARTAGER AVEC L'UNITÉ', caption 'LA RÈGLE DE TROIS'. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Le matériel agentique est bien suivi, bien que nous observions ici notre première baisse, puisque pour bien des gens le simple dialogue par requêtes demeure suffisant. Les gens prennent souvent une pause entre le niveau 1 et le niveau 2 plutôt que de les enchaîner, à la fois pour des raisons opérationnelles et pour adoucir la courbe d'apprentissage, et ils peuvent reprendre n'importe quel niveau aussi souvent qu'ils le veulent, ou parcourir le matériel en libre-service sur le site de l'Académie chaque fois qu'ils veulent un rappel. Nous amenons aussi les gens dans une communauté de pratique plus large, où nous coachons des cas d'usage précis et le bon outil pour chacun. Les besoins plus avancés émergent dans cette communauté : le processus ou le formulaire d'une équipe particulière, un jeu de données verrouillé dans un système de TI que l'IA ne peut atteindre, des questions sur l'exportation et le téléversement. Ce sont les cas où une solution sur mesure devient utile, et ils posent les bases du niveau 3."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Niveau 3 : créer des applications d'entreprise"
+    },
+    {
+      "type": "paragraph",
+      "text": "Au niveau 3, la cohorte apprend à travailler avec des agents de codage sophistiqués et avec [le harnais](/paper/p7p2k) : les compétences, les normes, les guides, les crochets et les gabarits nécessaires pour créer des applications hautement efficaces, de calibre entreprise. Pour la plupart des gens, il s'agit d'un changement d'échelle important dans la complexité et la connaissance technique, et même pour les participants techniques, c'est exigeant. Dans notre cohorte la plus récente, nous avons observé un abandon notable, beaucoup de participants ne terminant pas ou n'obtenant pas leur diplôme, en raison de la nature technique du travail."
+    },
+    {
+      "type": "paragraph",
+      "text": "Il existe une idée fausse selon laquelle l'IA remplacera le codeur, l'architecte ou l'équipe de mobilisation des clients. En pratique, elle les amplifie, leur permettant de produire un plus grand rendement à une plus grande vélocité. Les sujets sont réellement complexes, alors nous les décomposons et les rendons aussi accessibles que possible. Nous guidons les étudiants à travers les trois étapes de l'usine couvertes dans [Pronghorn](/paper/qthji), [Nexus](/paper/uwpxr) et [Velocity](/paper/k3tc3) ; nous enseignons le harnais bien construit ; et nous parcourons [les quatre approches de la modernisation gouvernementale](/paper/zgym1). Nous coachons même les non-codeurs pour qu'ils comprennent ce qui entre dans une application d'entreprise, et les centaines de contrôles et de décisions qui se cachent derrière même le gabarit de base dont ils partent."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous enseignons ensuite aux participants à construire leur propre harnais, adapté au travail qu'ils font dans l'organisation, et nous les mettons au défi à travers une série de projets de mener et de démontrer à la classe comment ils utilisent les outils. Le tableau de classement de Velocity entre ici en jeu, où les gens relèvent des défis et partagent leurs progrès. Produire un résultat de qualité exige une véritable rigueur. Cela a toujours été le cas, et l'IA n'y change rien. Quiconque cherche un raccourci, qui saute la réflexion qui entre dans une solution, constate vite que l'IA n'arrive pas à livrer le résultat escompté, tandis que celles et ceux qui font le travail excellent."
+    },
+    {
+      "type": "pullquote",
+      "text": "La persistance l'emporte sur l'astuce. Traitez l'IA comme un serviteur sur un plateau et elle vous fera défaut ; traitez-la comme quelque chose que vous devez vérifier, et vous attraperez ce qu'elle a discrètement omis. Le talent, c'est de savoir comment vérifier.",
+      "cite": "Académie de l'IA, niveau 3, trousse d'accueil"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le niveau 3 est exigeant pour la plupart des gens, et l'enseigner a été tout aussi instructif pour nous. J'ai enseigné le niveau 3 pendant plus de vingt-cinq jours au cours de la dernière année, en tant qu'instructeur principal à travers les niveaux et principalement au niveau 3 moi-même. Ce temps dans la salle nous montre où les gens comprennent le matériel et où nous devons investir davantage dans les fondamentaux et dans l'aisance à bâtir."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Guerrier, magicien, artisan"
+    },
+    {
+      "type": "paragraph",
+      "text": "La salle du niveau 3 ne connaissait aucune hiérarchie au-delà de l'animateur et du participant. La classe comprenait une sous-ministre, trois sous-ministres adjoints, des directeurs généraux, des directeurs, des gestionnaires, des employés, des étudiants et des stagiaires. Tout le monde suivait les mêmes leçons et construisait des solutions dans le cadre du parcours d'apprentissage, sans aucun rang organisationnel en jeu. Au lieu des titres et des descriptions d'emploi, nous avons demandé aux gens de choisir un persona : guerrier, magicien ou artisan."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce cadrage est un coup de pouce délibéré et latéral pour s'éloigner des titres d'emploi. Nous demandons aux gens de mettre de côté « je suis développeur full-stack » ou « je suis architecte de solutions » pendant deux semaines, et de considérer plutôt quel genre de travail ils veulent réellement faire avec ces outils. L'ambiguïté du cadrage est le but, et elle fait aussi office de filtre. Un jeu a besoin de deux joueurs consentants, et les gens qui déclinent l'invitation finissent souvent par regarder depuis les lignes de touche."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.5",
+      "title": "Trois personas, trois façons de travailler",
+      "caption": "À la place des titres d'emploi, les participants du niveau 3 choisissent un persona. Le guerrier livre, et s'aligne sur le Garage d'IA et l'usine d'IA. Le magicien élabore la stratégie et modernise, le travail qui pointe vers Gouvernement 3.0. L'artisan construit l'infrastructure sur laquelle les autres s'appuient, y compris des outils comme Pronghorn, Nexus et Velocity.",
+      "image": {
+        "src": "public/images/dt725/fr/fig-12-5.jpg",
+        "alt": "Un diagramme dessiné à la main de trois panneaux étiquetés côte à côte. Le panneau Guerrier montre une petite icône de bouclier et les mots Livrer, Vitesse, Tableau de classement, marqué Usine d'IA. Le panneau Magicien montre une petite icône d'étoiles et les mots Élaborer la stratégie, Moderniser, Architecturer, marqué Gouvernement 3.0. Le panneau Artisan montre une petite icône de marteau et les mots Construire pour les autres, Harnais, Gabarits, marqué Pronghorn, Nexus, Velocity.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as three equal panels side by side. Left panel titled WARRIOR with a simple shield icon, listing SHIP, SPEED, LEADERBOARD, and a small tag at its base reading AI FACTORY. Centre panel titled WIZARD with a simple stars icon, listing STRATEGIZE, MODERNIZE, ARCHITECT, with a base tag reading GOVERNMENT 3.0. Right panel titled CRAFTSPERSON with a simple hammer icon, listing BUILD FOR OTHERS, HARNESSES, TEMPLATES, with a base tag reading PRONGHORN, NEXUS, VELOCITY. The three panels are balanced and equal in weight. Calm, architectural, legible labels. No logos, no people. On-image labels in Canadian French read: panel 'GUERRIER' (LIVRER, VITESSE, TABLEAU DE CLASSEMENT, tag 'USINE D'IA'); panel 'MAGICIEN' (ÉLABORER LA STRATÉGIE, MODERNISER, ARCHITECTURER, tag 'GOUVERNEMENT 3.0'); panel 'ARTISAN' (CONSTRUIRE POUR LES AUTRES, HARNAIS, GABARITS, tag 'PRONGHORN, NEXUS, VELOCITY'). All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque persona s'aligne sur une façon différente de travailler à l'ère de l'IA. Le guerrier livre, là où la vitesse, la livraison et un tableau de classement au vert sont les mesures qui comptent, la cadence du Garage d'IA et de l'usine d'IA. Le magicien élabore la stratégie, prenant en charge la modernisation du legs, les revues d'architecture et la refonte qui change la trajectoire d'une équipe, le travail qui pointe vers Gouvernement 3.0 et les [approches supérieures de la modernisation](/paper/zgym1). L'artisan construit l'infrastructure pour les autres : des fichiers de harnais, des gabarits partagés et des scripts d'évaluation réutilisables, et les outils comme [Pronghorn](/paper/qthji), [Nexus](/paper/uwpxr) et [Velocity](/paper/k3tc3) qui habilitent tous les autres. Les personas sont aussi là où vit le code de la cohorte. Pour le niveau 3, nous avons adopté une approche différente de l'apprentissage lui-même, bâtissant un site dédié pour lier les leçons et les concepts, et produisant un vaste corpus de code, dont une grande partie est partagée au sein de cette collection de documents blancs."
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "L'état d'esprit anti-camelote"
+    },
+    {
+      "type": "paragraph",
+      "text": "Comme ces documents l'ont montré tout au long, de mauvaises habitudes émergent avec l'usage de l'intelligence artificielle. L'une est la production de contenu long et non validé qui prend des minutes à générer et des jours à un expert du domaine à lire et à valider. Une autre est de sauter par-dessus l'architecture, les normes, les exigences et les outils pour aller droit vers une application codée à l'instinct qui offre une gratification immédiate et peu de fiabilité à long terme, tout en chargeant un autre genre de dette technique sur l'organisation. L'Académie s'efforce d'éloigner les gens des deux."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.6",
+      "title": "Deux habitudes à éviter, une discipline à garder",
+      "caption": "Les deux modes d'échec viennent de la poursuite d'un résultat sans rigueur : du contenu long non validé, rapide à générer et lent à valider, et des applications codées à l'instinct qui gratifient vite et accumulent de la dette technique. L'Académie enseigne le chemin discipliné entre les deux, où le travail est vérifié avant qu'on s'y fie.",
+      "image": {
+        "src": "public/images/dt725/fr/fig-12-6.jpg",
+        "alt": "Un diagramme dessiné à la main avec deux cases d'avertissement et un chemin dégagé entre elles. La case du haut, étiquetée Contenu camelote, montre des pages qui s'empilent avec une horloge indiquant des minutes à faire, des jours à valider. La case du bas, étiquetée Application codée à l'instinct, montre une fenêtre jolie mais fissurée étiquetée gratification rapide, dette technique. Une flèche centrale droite entre elles est étiquetée Le chemin discipliné : vérifier, puis faire confiance.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. At the top, a box labelled SLOP CONTENT shows a tall stack of pages beside a small clock, captioned MINUTES TO MAKE, DAYS TO VET. At the bottom, a box labelled VIBE-CODED APP shows a glossy application window with a small rust crack through it, captioned QUICK GRATIFICATION, TECHNICAL DEBT. Running horizontally between the two boxes, a clear straight arrow labelled THE DISCIPLINED PATH points to a small finished, checkmarked deliverable, with a caption reading VERIFY, THEN TRUST. The two cautionary boxes are lighter; the central path is the strongest line. Calm, architectural, legible labels. No logos, no people. On-image labels in Canadian French read: box 'CONTENU CAMELOTE' captioned 'DES MINUTES À FAIRE, DES JOURS À VALIDER'; box 'APPLICATION CODÉE À L'INSTINCT' captioned 'GRATIFICATION RAPIDE, DETTE TECHNIQUE'; arrow 'LE CHEMIN DISCIPLINÉ'; caption 'VÉRIFIER, PUIS FAIRE CONFIANCE'. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Les deux habitudes viennent d'une attirance humaine raisonnable vers les résultats, ce qui est sain en soi, et pourtant poursuivre des résultats sans rigueur mène à l'échec dans tout domaine. Un athlète qui saute les étirements, le sommeil, l'alimentation et le repos s'effondre, se blesse et finit plus loin en arrière qu'à son point de départ. Un fonctionnaire qui ne prend pas le temps d'apprendre à utiliser l'IA et à lui faire confiance produira du contenu peu fiable, nuira à la réputation de l'organisation et érodera la confiance du public envers l'institution, et finira de même plus loin en arrière qu'à son point de départ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Des documents antérieurs ont noté que les agents d'IA peuvent coder à peu près cent fois plus vite, alors que nous visons une [amélioration d'un facteur vingt](/paper/eujjc) dans l'ensemble. L'écart est délibéré. L'objectif dépasse la production de l'application, et la production des artéfacts, pour atteindre l'engagement, la conversation, l'aisance, la gestion du changement et la sensibilisation, toutes les choses qui accompagnent une équipe de personnes qui apprennent à travailler ensemble. Nous traitons donc l'adoption de l'IA comme un état d'esprit à inculquer plutôt que comme une cible à atteindre. Lorsqu'une mesure devient une cible, elle cesse d'être une bonne mesure, et certaines organisations prendront le temps d'inculquer l'état d'esprit correctement. Certains y prendront goût et d'autres non, et l'engagement consiste à continuer de progresser sur le parcours sans s'attendre à la perfection."
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Investir dans les personnes"
+    },
+    {
+      "type": "paragraph",
+      "text": "On fait grand cas de la quantité d'énergie et de ressources que consomment ces outils. Je pense que nous jugeons une technologie à un seul moment dans le temps. On s'attend à ce que l'efficacité de ces systèmes s'améliore d'environ un facteur cent au cours des prochaines années, ce qui signifie près de cent fois moins d'énergie pour une quantité équivalente d'intelligence. Les outils que nous utilisons aujourd'hui sont des prototypes d'un avenir où l'intelligence est offerte sur demande. Ma responsabilité envers le personnel du gouvernement de l'Alberta est de m'assurer qu'il est prêt pour cet avenir, avec des compétences pertinentes et significatives, afin qu'il l'aborde en tant qu'architecte et bâtisseur d'un monde où l'intelligence à grande échelle se trouve au bout des doigts de tous."
+    },
+    {
+      "type": "paragraph",
+      "text": "Soyons clairs : le génie ne retournera pas dans la bouteille. Que nous construisions ou non des centres de données, l'intelligence sur demande est arrivée, et il revient à chacun de nous d'apprendre à être efficace et à offrir une valeur significative dans cet espace. Notre approche reste centrée sur l'humain. Nous investissons dans les personnes, et nous nous assurons que tout le monde a la possibilité de participer."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cet investissement vient avec un pacte. L'organisation fait tout ce qu'elle peut pour son personnel, avec des semaines et des mois de formation, des dizaines de millions de dollars en outils, et le contenu pour apprendre. En échange, le personnel nous aborde avec un esprit ouvert et un engagement à apprendre ces outils et à bien les utiliser. Être efficace au travail en viendra à exiger une connaissance pratique de l'intelligence artificielle, de la même manière qu'il exige déjà l'utilisation de la technologie aujourd'hui. Nous demandons l'ouverture d'esprit, et en échange nous offrons l'occasion. Le résultat est un effectif autonomisé, capable de réimaginer le fonctionnement du gouvernement et la façon dont les services peuvent être livrés aux Albertains de la manière la plus significative possible."
+    },
+    {
+      "type": "pullquote",
+      "text": "Nous demandons l'ouverture d'esprit. En échange, nous offrons l'occasion.",
+      "cite": "Janak Alford, sous-ministre, ministère de la Technologie et de l'Innovation"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 12.7",
+      "title": "Le pacte",
+      "caption": "Le pacte sur lequel l'Académie est bâtie. L'organisation investit dans la formation, les outils, le contenu et l'occasion. Le personnel l'aborde avec un esprit ouvert et un engagement à apprendre. Ensemble, ils produisent un effectif autonomisé, capable de réimaginer la façon dont le gouvernement sert les Albertains.",
+      "image": {
+        "src": "public/images/dt725/fr/fig-12-7.jpg",
+        "alt": "Un diagramme d'échange dessiné à la main intitulé Le pacte : une colonne de gauche intitulée L'organisation énumère formation, outils, contenu et occasion ; une colonne de droite intitulée Le personnel énumère ouverture d'esprit et engagement à apprendre ; leurs flèches se rejoignent à un nœud central étiqueté Le pacte, qui mène vers le bas à une case étiquetée Effectif autonomisé.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as a balanced exchange. On the left, a column headed THE ORGANIZATION lists four small stacked boxes: TRAINING, TOOLS, CONTENT, OPPORTUNITY, with an arrow pointing right. On the right, a column headed STAFF lists two small stacked boxes: OPEN-MINDEDNESS, COMMITMENT TO LEARN, with an arrow pointing left. The two arrows meet at a central rounded node labelled THE COMPACT. From that node, a single arrow leads downward to a wider box labelled EMPOWERED WORKFORCE. Balanced and symmetrical. Calm, architectural, legible labels. No logos, no people. On-image labels in Canadian French read: column heading 'L'ORGANISATION' (FORMATION, OUTILS, CONTENU, OCCASION); column heading 'LE PERSONNEL' (OUVERTURE D'ESPRIT, ENGAGEMENT À APPRENDRE); central node 'LE PACTE'; box 'EFFECTIF AUTONOMISÉ'. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "L'Académie de l'IA de l'Alberta est offerte à albertaaiacademy.com, et nous partageons tout notre matériel ouvertement. Le niveau 3 est en cours de refonte et sera publié sous peu. La leçon, au bout du compte, est simple : traverser la frustration pour devenir compétent dans quelque chose qu'on ne pouvait pas faire auparavant est le talent qui mène les gens à travers la vie. C'est cette confiance que les diplômés emportent avec eux, et c'est ce qu'ils ramènent dans leur travail quotidien."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "ai-academy",
+        "training",
+        "personas",
+        "harness",
+        "change-management"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "bespoke_scripts": [],
+  "translation_status": "draft",
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
   },
-  "related": []
+  "related": [
+    "p7p2k",
+    "zgym1",
+    "uwpxr",
+    "oxj36",
+    "eujjc"
+  ]
 }

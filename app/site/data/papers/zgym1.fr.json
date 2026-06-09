@@ -4,23 +4,29 @@
   "sequence": "5 sur 8",
   "tier": "Conceptual",
   "category": "paper",
-  "title": "The Four Approaches to AI Modernization at Scale (Gov 3.0)",
-  "subtitle": "Four routes to modernization, from patching to full rebuild.",
+  "title": "Les quatre approches de la modernisation par l'IA",
+  "subtitle": "De la réparation d'un système à la fois à la dissolution complète de l'application : les quatre voies par lesquelles un gouvernement se reconstruit à grande vitesse.",
   "track": "Defining the Problem",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Ministère de la Technologie et de l'Innovation"
   ],
-  "published": null,
-  "reading_min": null,
+  "published": "2026-06-16",
+  "reading_min": 12,
   "status": "Published",
-  "tags": [],
+  "tags": [
+    "modernization",
+    "architecture",
+    "ai-factory",
+    "government-3-0",
+    "strategy"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. This paper sits in the Defining the Problem group of the collection. The body will be written from source materials.",
-  "translation_status": "untranslated",
+  "abstract": "Nous connaissons le parc, et nous savons qu'il ne peut pas être réparé à l'ancienne. La question à laquelle ce document répond est : comment. Il existe quatre façons de moderniser un système gouvernemental au moyen de l'IA, et elles gagnent en ambition. Le Garage IA répare et remplace les systèmes un à la fois. L'Usine IA construit des applications entièrement neuves que le gouvernement possède pleinement. La rationalisation regroupe tout un ministère de systèmes qui se chevauchent en un petit ensemble de modules modernes. Et le Gouvernement 3.0 dissout l'application elle-même, laissant des agents d'IA travailler directement sur des données encadrées et générer l'interface dont une personne a besoin sur le moment. Aucune approche à elle seule ne couvre tout; nous avons donc besoin des quatre. Ensemble, elles permettent à un gouvernement d'atteindre une réduction d'environ quatre-vingt-quinze pour cent du coût et du temps de ses logiciels, à l'intérieur d'un seul mandat plutôt que sur la plus grande partie d'un siècle.",
   "hero_image": {
     "src": "public/images/zgym1/fr/hero.jpg",
-    "alt": "Editorial image for: The Four Approaches to AI Modernization at Scale (Gov 3.0)",
-    "image_prompt": "An editorial cover image for the whitepaper titled \"The Four Approaches to AI Modernization at Scale (Gov 3.0)\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos.",
+    "alt": "Quatre voies divergentes qui s'élèvent depuis un seul bâtiment réparé jusqu'à un champ d'agents autonomes travaillant autour d'un noyau de données propre.",
+    "image_prompt": "An editorial cover illustration of four diverging paths or routes that climb in ambition: the first leading to a single building being repaired, the second to a clean factory producing modular buildings, the third to many buildings collapsing into a few, and the fourth to a field of small autonomous agents working around a glowing data core with no buildings at all. A sense of an escalating ladder of transformation. Muted Alberta cream palette, navy and rust accents, archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
     "style_kind": "cover"
   },
   "audio": {
@@ -28,18 +34,114 @@
   },
   "tldr_presentation": {
     "id": "zgym1-tldr",
-    "title": "The paper, in brief",
+    "title": "Le document, en bref",
     "locale": "fr",
     "owner_id": "zgym1",
     "slides": [
       {
         "id": "01",
-        "title": "The Four Approaches to AI Modernization at Scale (Gov 3.0)",
+        "title": "Les quatre approches de la modernisation par l'IA",
         "audio_file": "public/audio/fr/zgym1-tldr/01.mp3",
         "visual": "title",
-        "caption": "Defining the Problem",
-        "subcaption": "",
-        "text": "The Four Approaches to AI Modernization at Scale (Gov 3.0). Content forthcoming."
+        "caption": "Document 5 · Définir le problème",
+        "subcaption": "Quatre voies de modernisation, gagnant en ambition.",
+        "text": "Les quatre approches de la modernisation par l'IA. Nous connaissons le parc, et nous savons qu'il ne peut pas être réparé à l'ancienne. Il existe quatre façons de moderniser un système gouvernemental au moyen de l'IA. Elles gagnent en ambition, du geste le plus léger à la reconstruction la plus complète, et aucune à elle seule ne couvre tout. Nous avons besoin des quatre."
+      },
+      {
+        "id": "02",
+        "title": "Le Garage IA",
+        "audio_file": "public/audio/fr/zgym1-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Approche un · Le Garage IA",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Réparer",
+              "desc": "Corriger un défaut, mettre à niveau une bibliothèque vieillissante, ajouter un test manquant."
+            },
+            {
+              "label": "Remédier",
+              "desc": "Corriger d'abord l'exposition à la sécurité, les systèmes les plus exposés avant les autres."
+            },
+            {
+              "label": "Reproduire",
+              "desc": "Reconstruire sur une pile moderne qui se comporte exactement comme l'original."
+            }
+          ]
+        },
+        "text": "D'abord, le plus léger. Le Garage IA répare un système à la fois, comme on amène une voiture au garage. Il répare un défaut, il remédie à une exposition à la sécurité, ou il reproduit l'ancien système au moyen d'une reconstruction moderne qui fonctionne exactement de la même façon. C'est l'approche au risque le plus faible, et elle traite les symptômes plutôt que la maladie."
+      },
+      {
+        "id": "03",
+        "title": "L'Usine IA",
+        "audio_file": "public/audio/fr/zgym1-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Approche deux · L'Usine IA",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Une équipe d'agents",
+              "desc": "Architecte, développeur, testeur et sécurité, travaillant à une seule spécification partagée."
+            },
+            {
+              "label": "Modulaire",
+              "desc": "De petites pièces, chacune sous environ un millier de lignes, chacune vérifiable séparément."
+            },
+            {
+              "label": "Propriété du gouvernement",
+              "desc": "Des fondations à code source ouvert, sans aucun fournisseur que nous ne puissions quitter."
+            },
+            {
+              "label": "Sans héritage",
+              "desc": "Construite à neuf, sans aucune des dépendances mortes de l'ancien système."
+            }
+          ]
+        },
+        "text": "Ensuite, construire à neuf. L'Usine IA est une chaîne de production de logiciels, une équipe d'agents spécialisés qui conçoivent, construisent, testent et sécurisent ensemble une application neuve. Tout ce qu'elle produit est modulaire, propriété du gouvernement et exempt d'anciennes dépendances. Le fonctionnement de l'Usine fait l'objet des trois prochains documents."
+      },
+      {
+        "id": "04",
+        "title": "185 applications réduites à 16 modules",
+        "audio_file": "public/audio/fr/zgym1-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Approche trois · La rationalisation",
+        "visual_config": {
+          "stat_value": "185 → 16",
+          "stat_label": "Applications regroupées en modules partagés, dans un seul ministère"
+        },
+        "subcaption": "Une ville qui a grandi sans plan, enfin dotée d'une infrastructure partagée.",
+        "text": "Troisième, la rationalisation. Elle considère tout un ministère d'un seul coup, comme une ville qui a grandi sans plan, où chaque application a construit sa propre ouverture de session et ses propres rapports. Elle cartographie ce que le ministère fait réellement et construit les parties partagées une seule fois. Dans un ministère, cent quatre-vingt-cinq applications ont été regroupées en seize modules, en quelques semaines ou mois plutôt qu'en quelques années."
+      },
+      {
+        "id": "05",
+        "title": "Gouvernement 3.0",
+        "audio_file": "public/audio/fr/zgym1-tldr/05.mp3",
+        "visual": "compare",
+        "caption": "Approche quatre · Gouvernement 3.0",
+        "visual_config": {
+          "left": {
+            "label": "Aujourd'hui",
+            "body": "Des milliers d'applications figées, chacune maintenue, corrigée et sécurisée séparément."
+          },
+          "right": {
+            "label": "Gouvernement 3.0",
+            "body": "Des données encadrées, des règles écrites une seule fois sous forme de code, et des interfaces qu'un agent construit sur demande."
+          }
+        },
+        "text": "Quatrième, et la plus radicale, le Gouvernement 3.0. Ici, l'application elle-même disparaît en grande partie. Les données sont encadrées, et les règles sont écrites une seule fois sous forme de code, tirées directement de la législation. Des agents d'IA travaillent sur ces données et construisent l'interface dont une personne a besoin sur le moment. C'est le modèle le plus rapide et le plus économique, et c'est la direction que prend le travail."
+      },
+      {
+        "id": "06",
+        "title": "Les quatre, et la suite",
+        "audio_file": "public/audio/fr/zgym1-tldr/06.mp3",
+        "visual": "stat",
+        "caption": "Les quatre, et la suite",
+        "visual_config": {
+          "stat_value": "~95 %",
+          "stat_label": "Réduction visée du coût et du temps des logiciels gouvernementaux"
+        },
+        "subcaption": "Chaque système orienté vers l'approche qui lui convient : tolérer, investir, migrer ou éliminer.",
+        "text": "Nous n'en choisissons pas une seule. Chaque système est orienté vers l'approche qui lui convient. Ensemble, les quatre visent une réduction d'environ quatre-vingt-quinze pour cent du coût et du temps des logiciels gouvernementaux, à l'intérieur d'un seul mandat. Cela soulève la question suivante. Si l'IA accomplit une telle part du travail, comment nous assurons-nous qu'elle le fait bien et en toute sécurité? C'est le harnais, et le sujet du prochain document."
       }
     ]
   },
@@ -47,23 +149,376 @@
   "sections": [
     {
       "n": "01",
-      "title": "Overview"
+      "title": "Quatre voies à suivre"
+    },
+    {
+      "n": "02",
+      "title": "Le Garage IA"
+    },
+    {
+      "n": "03",
+      "title": "L'Usine IA"
+    },
+    {
+      "n": "04",
+      "title": "La rationalisation par l'IA"
+    },
+    {
+      "n": "05",
+      "title": "Gouvernement 3.0"
+    },
+    {
+      "n": "06",
+      "title": "Les quatre, et la suite"
     }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "Les documents précédents de cette collection ont mesuré le parc et montré pourquoi il ne peut pas être réparé à l'ancienne. Nous savons ce que nous exploitons, nous connaissons son état de santé, et nous savons qu'au rythme où le gouvernement a toujours travaillé, la facture des réparations se compte en décennies. Ce document porte sur ce que nous faisons de ce savoir. Il existe quatre façons de moderniser un système gouvernemental au moyen de l'IA. Elles gagnent en ambition, du geste le plus léger à la reconstruction la plus complète, et aucune d'entre elles ne couvre tout à elle seule. Un véritable parc gouvernemental a besoin des quatre."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Quatre voies à suivre"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place. The body will be written from source materials, not auto-generated."
+      "text": "Les quatre approches sont le **Garage IA**, l'**Usine IA**, la **rationalisation par l'IA** et le **Gouvernement 3.0**. Le Garage répare un système sur place. L'Usine en construit un nouveau pour le remplacer. La rationalisation regroupe tout un portefeuille de systèmes qui se chevauchent en quelques modules modernes. Le Gouvernement 3.0 dissout entièrement l'application et laisse des agents d'IA travailler directement sur des données encadrées. Chacune convient à un type de système différent, et chacune exige davantage de l'organisation que la précédente."
+    },
+    {
+      "type": "paragraph",
+      "text": "L'approche qu'un système reçoit dépend de son état. Le Ministère décide au moyen d'un simple test à quatre voies, appliqué à un système à la fois : le tolérer, y investir, le migrer ou l'éliminer. Un système en bonne santé peut être toléré et légèrement corrigé. Un système solide reposant sur une technologie en fin de vie devrait être migré vers une nouvelle construction. Un enchevêtrement de systèmes qui se chevauchent est candidat à la rationalisation. Un système sans besoin d'affaires résiduel est éliminé. Le test est ce qui maintient l'effort orienté vers les systèmes où il rapporte, et c'est ce qui fait des quatre approches un plan plutôt qu'un menu."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Le Garage IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "La première approche est la plus légère. Nous prenons un système à la fois, comme on amène une voiture au garage, et nous réparons ce qui ne va pas. Une personne clone le code, l'IA le lit et effectue la réparation, la personne vérifie le résultat, et le changement est réintégré. Nous l'appelons le Garage. C'est l'approche au risque le plus faible et la plus proche de la façon dont les équipes travaillent déjà, ce qui explique pourquoi c'est la première que nous avons mise en production."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le Garage accomplit trois types de travail, et le bon dépend du système devant lui. Il répare : l'IA corrige un défaut connu, met à niveau une bibliothèque périmée, écrit un test manquant. Il remédie : lorsqu'un système comporte une exposition à la sécurité, celle-ci est corrigée en premier, et nous traitons le portefeuille par ordre de risque, les systèmes ouverts au public avant l'arrière-guichet. Et il reproduit : lorsque la technologie sous-jacente à un système est arrivée en fin de vie mais que la façon dont le système fonctionne demeure solide, l'IA le reconstruit sur une fondation moderne qui se comporte exactement comme l'original. Les écrans et les données se retrouvent là où l'utilisateur s'attend à les trouver. Seule la technologie vieillissante sous-jacente est remplacée, de sorte qu'un système autrefois accessible par un contournement Citrix devient une application ordinaire dans un navigateur moderne, de retour dans un cycle de vie pris en charge."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le Garage a une limite délibérée. Il traite les symptômes plutôt que la maladie. Un système réparé reste le même vieux système, et une reconstruction par reproduction reste le même flux de travail sur des pièces plus neuves. Pour bien des systèmes, c'est exactement ce qu'il faut, parce qu'ils fonctionnent, que les gens en dépendent, et que tout ce dont ils ont besoin, c'est d'être rendus sûrs et pris en charge. Pour d'autres, ce n'est pas suffisant, parce que c'est la chose devant nous qui est le problème. Les trois approches suivantes vont plus loin."
+    },
+    {
+      "type": "table",
+      "title": "Les trois modes du Garage",
+      "columns": [
+        "Mode",
+        "Ce que fait l'IA",
+        "Convient le mieux à"
+      ],
+      "rows": [
+        [
+          "Réparer",
+          "Corrige les défauts, met à niveau les bibliothèques vieillissantes, écrit les tests et la documentation manquants.",
+          "Un système fonctionnel présentant des défauts précis et corrigeables."
+        ],
+        [
+          "Remédier",
+          "Corrige d'abord l'exposition à la sécurité, les systèmes les plus exposés et les plus à risque avant les autres.",
+          "Les systèmes comportant des vulnérabilités connues; ceux ouverts au public en premier."
+        ],
+        [
+          "Reproduire",
+          "Reconstruit le système sur une pile moderne qui se comporte exactement comme l'original.",
+          "Des flux de travail solides bloqués sur une technologie en fin de vie."
+        ]
+      ],
+      "caption": "Un système à la fois, au risque le plus faible, au plus proche de la façon dont les équipes travaillent déjà. Le Garage rend un système sûr et pris en charge sans changer ce qu'il fait.",
+      "source": "Ministère de la Technologie et de l'Innovation."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.1",
+      "title": "Un système à la fois",
+      "caption": "Le Garage reçoit un seul système vieillissant, le répare ou le réaménage, et le remet en service. Le travail est familier et à faible risque, et c'est la seule réponse immédiate réalisable pour bien des systèmes.",
+      "image": {
+        "src": "public/images/zgym1/fr/fig-5-1.jpg",
+        "alt": "Une seule application vieillissante, dessinée comme un vieux véhicule, soulevée sur un pont élévateur dans un garage de réparation propre pendant qu'un moteur moderne y est installé.",
+        "image_prompt": "An editorial illustration of a single aging application drawn as an old vehicle raised on a lift inside a clean, orderly repair garage, with a modern engine and new parts being fitted while the body stays the same. A sense of one-at-a-time careful repair. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "L'Usine IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "La deuxième approche construit à neuf. Au lieu de réparer un ancien système, nous en construisons un neuf à partir de zéro, conçu comme nous le concevrions aujourd'hui. Nous le construisons dans ce que nous appelons l'Usine IA. L'usine est faite de logiciels, et non de machines. À l'intérieur, une équipe d'agents d'IA spécialisés travaille comme le fait une équipe de livraison performante. Un agent conçoit l'architecture. Un autre écrit le code. D'autres prennent en charge la base de données, les tests, la revue de sécurité, l'accessibilité, la documentation. Ils travaillent ensemble à partir d'une seule spécification partagée, se vérifiant et se corrigeant mutuellement jusqu'à ce que l'application soit terminée."
+    },
+    {
+      "type": "paragraph",
+      "text": "L'Usine a des partis pris assumés. Chaque application qu'elle produit est construite de la même façon moderne, sur la même fondation, de sorte que la qualité provient de la chaîne elle-même plutôt que du soin d'une seule personne. La spécification est le contrat. Les agents construisent en fonction d'elle, le travail est vérifié par rapport à elle, et une personne reste dans la boucle pour accepter ou rejeter ce que les agents produisent. Deux choses distinguent ensuite une application construite par l'Usine de celle qu'elle remplace. Elle est modulaire, assemblée à partir de petites pièces, dont aucune ne dépasse beaucoup un millier de lignes de code, chacune assez petite pour être lue et vérifiée séparément. Et le gouvernement en possède la totalité, construite sur des fondations à code source ouvert, sans licence dont nous ne puissions sortir et sans fournisseur que nous ne puissions quitter."
+    },
+    {
+      "type": "paragraph",
+      "text": "Construire à neuf nous permet aussi de partir propre, sans les dépendances mortes et les hypothèses vieilles de plusieurs décennies du système qu'elle remplace. C'est l'approche pour un système dont la technologie est irrécupérable, et pour un service tout neuf qui n'a aucun héritage, l'une des nombreuses nouvelles demandes qui continuent d'arriver pendant que les travaux plus anciens sont encore en cours."
+    },
+    {
+      "type": "paragraph",
+      "text": "L'Usine est la plus développée des quatre approches, et elle comporte trois rouages, chacun faisant l'objet de son propre document. Le travail est façonné et spécifié dans un [environnement de conception](/paper/qthji), où une demande en langage courant devient un plan constructible que les agents peuvent suivre. Les agents le construisent, le testent et le déploient ensuite à l'intérieur d'un [bac à sable sécurisé](/paper/uwpxr) sous contrôles d'entreprise. Et l'ensemble de l'effort est [suivi et évalué](/paper/k3tc3) dans un système qui rend les progrès visibles et permet à des approches concurrentes de s'affronter sur le même travail. Ce document présente l'approche. Ces trois documents montrent comment l'Usine fonctionne réellement."
+    },
+    {
+      "type": "table",
+      "title": "Ce qu'est une application construite par l'Usine",
+      "columns": [
+        "Propriété",
+        "Ce que cela signifie"
+      ],
+      "rows": [
+        [
+          "À partis pris assumés",
+          "Construite de la même façon moderne chaque fois, sur une seule fondation standard."
+        ],
+        [
+          "Modulaire",
+          "Assemblée à partir de petites pièces, dont aucune ne dépasse beaucoup un millier de lignes, chacune vérifiable séparément."
+        ],
+        [
+          "Propriété du gouvernement",
+          "Le code est le nôtre, sur des fondations à code source ouvert, sans aucun fournisseur que nous ne puissions quitter."
+        ],
+        [
+          "Moderne par défaut",
+          "Une interface Web actuelle, un arrière-plan pris en charge, des données encadrées, une identité standard."
+        ],
+        [
+          "Sans héritage",
+          "Aucune des dépendances mortes ou des bibliothèques non prises en charge du système qu'elle remplace."
+        ],
+        [
+          "Conforme par défaut",
+          "Des normes de sécurité et d'architecture intégrées dès la première ligne, et non greffées au moment de l'audit."
+        ]
+      ],
+      "caption": "L'Usine construit des remplacements et de nouveaux services à partir de zéro, selon une seule norme moderne que le gouvernement possède de bout en bout.",
+      "source": "Ministère de la Technologie et de l'Innovation."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.2",
+      "title": "Une équipe de livraison, faite d'agents",
+      "caption": "L'Usine est une chaîne de production de logiciels. Une équipe d'agents d'IA spécialisés, couvrant la conception, la construction, les tests et la sécurité, travaille ensemble à une seule spécification et produit une application moderne et achevée que le gouvernement possède.",
+      "image": {
+        "src": "public/images/zgym1/fr/fig-5-2.jpg",
+        "alt": "Une équipe d'agents d'IA spécialisés distincts collaborant autour d'un espace de travail partagé où une application moderne prend forme à l'écran.",
+        "image_prompt": "An editorial illustration of a software factory shown as a coordinated team of distinct specialist figures working around one large shared board or screen on which a clean modern application is taking shape. The specialists read as an architect with a blueprint, a builder, a tester, a security reviewer, and a data specialist, drawn as stylized agents rather than literal people, with lines of collaboration linking them to the shared board. A sense of an entire delivery team working in concert, made of software rather than a physical assembly line. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "La rationalisation par l'IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "La troisième approche prend du recul par rapport au système unique et considère tout un ministère d'un seul coup. Imaginez une ville qui a grandi sans plan. Chaque bâtiment a creusé son propre puits, fait tourner sa propre génératrice et pavé sa propre route jusqu'à sa porte. Les logiciels gouvernementaux ont grandi de la même façon. Presque chaque application a construit sa propre ouverture de session, son propre téléversement de fichiers, ses propres rapports, encore et encore, sans que deux soient tout à fait pareilles. La rationalisation est le travail de cartographier ce que le ministère fait réellement, puis de poser l'infrastructure partagée une seule fois, de sorte que chaque besoin commun soit construit une seule fois et utilisé par tous."
+    },
+    {
+      "type": "paragraph",
+      "text": "C'est l'approche que [Git Insights Ministry](/paper/offjm) rend exécutable. Cet outil lit tout le code d'un ministère d'un seul coup et propose une architecture cible; la rationalisation est l'acte de la construire. Le schéma se répète partout où il est appliqué : des centaines d'applications qui se chevauchent à l'intérieur d'un ministère se regroupent en un petit ensemble de modules bien factorisés, les parties communes étant construites une seule fois et partagées. Dans un ministère, 185 applications se sont résolues en 16 modules. Parce que l'IA fait l'essentiel de l'analyse et la majeure partie de la construction, un programme qui durait autrefois de cinq à huit ans peut se réaliser en quelques semaines ou mois."
+    },
+    {
+      "type": "paragraph",
+      "text": "La rationalisation procure le plus grand gain à court terme de toutes les approches en matière de coût, de rapidité et de qualité, et c'est aussi celle qui exige le plus des gens. Regrouper 185 applications en 16 est un véritable changement pour le personnel qui a bâti ses habitudes de travail autour des anciens outils, et ce changement doit être planifié avec autant de soin que la reconstruction elle-même. La technologie est la moitié la plus facile du problème. La moitié la plus difficile est d'amener les gens à suivre."
+    },
+    {
+      "type": "pullquote",
+      "text": "La même ouverture de session, reconstruite dans des dizaines d'applications, devient une seule authentification partagée. La rationalisation repère chacune de ces redondances et la construit une seule fois, pour tous.",
+      "cite": "Document 5 · Les quatre approches de la modernisation par l'IA"
+    },
+    {
+      "type": "table",
+      "title": "Ce que la rationalisation regroupe, dans un seul ministère",
+      "columns": [
+        "Avant : éparpillement hérité",
+        "Après : rationalisé"
+      ],
+      "rows": [
+        [
+          "185 applications distinctes",
+          "16 modules modernes"
+        ],
+        [
+          "Une ouverture de session intégrée à presque chaque application",
+          "Une seule authentification partagée pour toutes"
+        ],
+        [
+          "Téléversement de fichiers, rapports et vérification reconstruits maintes fois",
+          "Chaque partie commune construite une seule fois et partagée"
+        ],
+        [
+          "La même capacité dupliquée d'un ministère à l'autre",
+          "Des services partagés auxquels tout ministère peut recourir"
+        ],
+        [
+          "Un programme de remplacement de cinq à huit ans",
+          "Une reconstruction mesurée en semaines ou en mois"
+        ]
+      ],
+      "caption": "La rationalisation travaille sur tout un portefeuille d'un seul coup. La redondance que l'analyse mesure est la redondance que la reconstruction élimine.",
+      "source": "Architecture cible de Git Insights Ministry."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.3",
+      "title": "Construire l'infrastructure partagée une seule fois",
+      "caption": "La rationalisation traite un ministère comme une ville qui a grandi sans plan. Au lieu que chaque application fasse tourner sa propre ouverture de session, son propre téléversement et ses propres rapports, les besoins communs sont cartographiés et construits une seule fois, puis partagés dans tout le portefeuille.",
+      "image": {
+        "src": "public/images/zgym1/fr/fig-5-3.jpg",
+        "alt": "Une ville isométrique : à gauche, chaque bâtiment a son propre puits, sa propre génératrice et son propre sentier de terre redondants; à droite, les mêmes bâtiments partagent un seul château d'eau, une seule centrale électrique et un réseau de routes propre.",
+        "image_prompt": "An editorial isometric illustration of a small town, split into a before and after. On the left, scattered buildings each with its own small redundant well, its own generator, and its own dirt path, a picture of duplicated private infrastructure. On the right, the same buildings connected to a single shared water tower, one shared power station, and a clean shared network of roads. A sense of redundant per-building infrastructure replaced by shared infrastructure built once and used by all. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Gouvernement 3.0"
+    },
+    {
+      "type": "paragraph",
+      "text": "La quatrième approche est la plus radicale, et elle remet en question le besoin même d'applications traditionnelles. Dans ce modèle, les données restent là où elles sont, mais elles sont correctement encadrées et exposées au moyen d'une interface propre et bien documentée qu'un agent d'IA peut lire. Au-dessus de ces données encadrées se trouve une couche d'agents. Il n'y a aucune application figée au milieu. Lorsqu'une personne doit faire quelque chose, l'agent assemble l'interface pour cette tâche, cette personne et ce moment, puis la retire une fois le travail terminé."
+    },
+    {
+      "type": "paragraph",
+      "text": "Deux idées font fonctionner cela. Premièrement, les règles d'affaires sont écrites une seule fois, sous forme de code, tirées directement de la législation, de la réglementation et des politiques. À mesure que la loi change, les règles changent, et chaque interaction suit la nouvelle règle le jour même. Deuxièmement, l'IA devient le client des données. Au lieu d'un millier d'écrans accédant chacun à la base de données à sa propre façon, les agents lisent et écrivent au moyen d'une seule interface encadrée et auditée. Les milliers d'interfaces utilisateur distinctes que le gouvernement maintient aujourd'hui, chacune construite, corrigée et sécurisée séparément, disparaissent en grande partie, et avec elles la majeure partie du code qu'il faut garder en vie."
+    },
+    {
+      "type": "paragraph",
+      "text": "C'est le modèle le plus économique et le plus rapide des quatre, parce que la chose la plus coûteuse dans les logiciels gouvernementaux, le logiciel lui-même, a en grande partie disparu. C'est aussi le plus exigeant. Il dépend du fait que les données soient véritablement bien encadrées, que les règles soient fidèlement codifiées, et que chaque action d'un agent soit observable et redevable envers une personne nommée. Nous n'en sommes pas encore là. Mais c'est la direction que prend le travail, et les choix que nous faisons maintenant sont censés être compatibles avec elle. C'est, comme on dit, là où la rondelle s'en va."
+    },
+    {
+      "type": "paragraph",
+      "text": "Il est utile de voir la trajectoire. Le Gouvernement 1.0, c'était le papier et les comptoirs. Le Gouvernement 2.0, c'était les formulaires numériques et les sites Web, plus rapides que le papier mais encore lents. Le Gouvernement 3.0, c'est la fonction publique travaillant avec des agents d'IA comme des travailleurs à part entière, redevables à chaque étape, où une demande qui prenait autrefois des jours reçoit réponse en quelques minutes."
+    },
+    {
+      "type": "table",
+      "title": "D'aujourd'hui au Gouvernement 3.0",
+      "columns": [
+        "Aujourd'hui",
+        "Gouvernement 3.0"
+      ],
+      "rows": [
+        [
+          "Des milliers d'applications figées, chacune maintenue séparément",
+          "Des interfaces générées juste à temps, pour la tâche et la personne"
+        ],
+        [
+          "Des règles d'affaires enfouies dans le code de chaque système",
+          "Des règles écrites une seule fois sous forme de code, tirées de la législation et des politiques"
+        ],
+        [
+          "Chaque application accède aux données à sa propre façon",
+          "Les agents lisent et écrivent au moyen d'une seule interface encadrée et auditée"
+        ],
+        [
+          "Les gens exploitent le logiciel",
+          "Les agents font le travail, redevables envers une personne nommée"
+        ],
+        [
+          "Un changement de loi signifie des mois de reprise",
+          "La règle change et chaque interaction la suit aussitôt"
+        ]
+      ],
+      "caption": "Le Gouvernement 3.0 dissout l'application. Les données encadrées et les règles codifiées demeurent; les écrans statiques cèdent la place à des interfaces qu'un agent construit sur demande.",
+      "source": "Cadre du Gouvernement 3.0."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.4",
+      "title": "L'application se dissout",
+      "caption": "Dans le modèle agentique, des données encadrées se trouvent au centre et les agents travaillent directement sur elles. L'interface n'est plus un logiciel permanent; elle est assemblée pour la personne sur le moment et dissoute une fois la tâche terminée.",
+      "image": {
+        "src": "public/images/zgym1/fr/fig-5-4.jpg",
+        "alt": "Un noyau de données propre et bien organisé au centre, entouré de petits agents d'IA, avec une interface légère qui s'assemble devant une personne et se dissout de nouveau.",
+        "image_prompt": "An editorial illustration of a single clean, well-organized data core glowing at the centre, surrounded by small AI agents working around it, with a lightweight interface assembling itself on demand in front of a single person and partly dissolving back into light. A sense of software giving way to agents working against governed data. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Les quatre, et la suite"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces quatre approches sont compatibles au sein d'une même organisation. Nous n'avons pas à n'en choisir qu'une seule. Un parc gouvernemental est trop varié pour cela. Certains systèmes sont tolérés et légèrement corrigés dans le Garage. Certains sont reconstruits à neuf dans l'Usine. Certains sont intégrés à une consolidation plus vaste par la rationalisation. Et au fil du temps, une part de plus en plus grande du travail évolue vers le modèle agentique du Gouvernement 3.0. Le test à quatre voies, tolérer, investir, migrer ou éliminer, oriente chaque système vers l'approche qui lui convient, de sorte que l'effort aboutit là où il produit le plus de valeur. Les quatre sont nécessaires pour moderniser un gouvernement à grande vitesse."
+    },
+    {
+      "type": "keystat",
+      "label": "La cible que visent les quatre approches",
+      "value": "~95 %",
+      "body": "Une réduction d'environ quatre-vingt-quinze pour cent du coût et du temps de construction et de maintenance des logiciels gouvernementaux. C'est la différence entre reconstruire le parc à l'intérieur d'un seul mandat de gouvernement et y consacrer la plus grande partie d'un siècle au rythme conventionnel."
+    },
+    {
+      "type": "paragraph",
+      "text": "Prises ensemble, les quatre approches sont la façon dont nous atteignons cette cible. Nous avons maintenant une image claire de la manière dont le gouvernement peut être reconstruit. Cela soulève la question suivante. Si l'IA doit accomplir une telle part du travail, réparer, construire, consolider et, avec le temps, exploiter les systèmes sur lesquels le gouvernement repose, comment nous assurons-nous qu'elle accomplit ce travail bien, en toute sécurité et selon une norme que nous pouvons défendre? La réponse réside dans la structure que nous bâtissons autour de l'IA elle-même. \n\n\nNous appelons cette structure le harnais, et c'est le sujet du prochain document : **[Le harnais bien construit](/paper/p7p2k)**."
+    },
+    {
+      "type": "figure",
+      "title": "Explorez cela comme un canevas interactif",
+      "caption": "Quatre façons de moderniser, gagnant en ambition du geste le plus léger à la reconstruction la plus complète. Un véritable parc a besoin des quatre. Fait partie du Canevas (document 18); déplacez les nœuds, zoomez, et appuyez sur Écouter pour une visite guidée parlée.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "approaches",
+        "audio": true
+      }
+    },
+    {
+      "type": "figure",
+      "title": "Explorez cela comme un canevas interactif",
+      "caption": "Aucune application au milieu. Les agents agissent sur des données encadrées au travers de garde-fous et génèrent l'interface sur demande. Fait partie du Canevas (document 18); déplacez les nœuds, zoomez, et appuyez sur Écouter pour une visite guidée parlée.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "gov3",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "modernization",
+        "ai-factory",
+        "government-3-0",
+        "strategy"
+      ]
+    },
+    {
+      "type": "related"
     }
   ],
+  "related": [
+    "offjm",
+    "p7p2k",
+    "qthji",
+    "bbkac",
+    "xs7uh"
+  ],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    }
   },
-  "related": []
+  "translation_status": "draft",
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ]
 }
