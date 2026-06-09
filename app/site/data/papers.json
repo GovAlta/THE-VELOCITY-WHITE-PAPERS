@@ -535,7 +535,7 @@
       "sequence": "",
       "tier": "Technical",
       "title": "Technical: The Anti-Drift Harness",
-      "subtitle": "Seven ways to keep an agent's work in sync with intent across a long build, and an observer pattern that watches from outside.",
+      "subtitle": "How a set of automated helpers keeps every part of a growing codebase in agreement as an AI builds it, explained piece by piece.",
       "track": "Technical Appendix",
       "authors": [
         "Janak Alford",
@@ -543,19 +543,18 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 16,
+      "reading_min": 14,
       "status": "Draft",
       "tags": [
         "anti-drift",
         "harness",
         "agents",
-        "hooks",
-        "evals",
+        "quality",
         "observability",
         "change-management"
       ],
       "repo": null,
-      "abstract": "Coding agents ship excellent work on each change, but as a codebase grows through refactor after refactor, parts drift out of sync. The chain that runs from requirements through schema, code, tests, and documentation breaks one link at a time. This appendix proposes the Anti-Drift Harness: a set of Claude Code skills, hooks, and deterministic evals that catch drift inside the build loop rather than in a later audit, plus an observer pattern where harnesses watch a builder project from outside and file tickets. It presents seven approaches, each with its hook events, its memory model, and an animated view of how it works. This is a hypothetical framework, offered for review.",
+      "abstract": "As applications grow in complexity, changes to one part of the code can result in breakages elsewhere. Changes to a frontend feature may fall out of sync with the API, the controllers, the database, the security model, and the technical documentation. AI agents are not diligent enough on their own to understand or prevent these breakages. When these artifacts fall out of sync, we can say that 'drift' occurs. This concept paper explains the 'Anti-Drift Harness', a set of automated helpers that watch for drift and flag issues for the builder agent in real-time.",
       "related": [
         "p7p2k",
         "l199t",
@@ -590,7 +589,7 @@
         "briefing"
       ],
       "repo": null,
-      "abstract": "The Compression Problem argues that a written briefing cannot carry the fidelity of a system at scale, and that a visual, spatial, interactive representation can. This appendix is that argument made literal. It assembles the whole approach into one interactive canvas: the legacy estate, the four approaches to modernization, the agentic technology stack, the harness and its review agents, the AI factory, the delivery game, the inverted hierarchy, and the future state. Each scene is a data-driven, downloadable, bilingual diagram with animated agents and a spoken description, and each can be embedded on its own in the paper it comes from. Move through it, zoom in, and take the architecture away.",
+      "abstract": "The Compression Problem argues that a written briefing cannot carry the fidelity of a system at scale, and that a visual, spatial, interactive representation can. This appendix is that argument made literal. It assembles the whole approach into one interactive canvas: the legacy estate, the four approaches to modernization, the agentic technology stack, the harness and its review agents, cyber defense, the AI factory, the delivery game, keeping the work in sync, the inverted hierarchy, the future state, and the Government 3.0 runtime. Each scene is a data-driven, downloadable, bilingual diagram with animated agents and a spoken description, and each can be embedded on its own in the paper it comes from. Move through it, zoom in, and take the architecture away.",
       "related": [
         "eujjc",
         "zgym1",
