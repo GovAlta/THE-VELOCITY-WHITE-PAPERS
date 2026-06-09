@@ -5,7 +5,7 @@
   "tier": "Technical",
   "category": "paper",
   "title": "Technical: The Canvas",
-  "subtitle": "One interactive solution landscape that ties the collection together, and an argument made by showing rather than telling.",
+  "subtitle": "An interactive solution landscape of the key white paper concepts.",
   "track": "Technical Appendix",
   "authors": [
     "Janak Alford",
@@ -24,7 +24,7 @@
     "briefing"
   ],
   "repo": null,
-  "abstract": "The Compression Problem argues that a written briefing cannot carry the fidelity of a system at scale, and that a visual, spatial, interactive representation can. This appendix is that argument made literal. It assembles the whole approach into one interactive canvas: the legacy estate, the four approaches to modernization, the agentic technology stack, the harness and its review agents, cyber defense, the AI factory, the delivery game, keeping the work in sync, the inverted hierarchy, the future state, and the Government 3.0 runtime. Each scene is a data-driven, downloadable, bilingual diagram with animated agents and a spoken description, and each can be embedded on its own in the paper it comes from. Move through it, zoom in, and take the architecture away.",
+  "abstract": "This paper assembles the various approaches in the white paper into a series of interactive canvases. Each scene is a data-driven, downloadable, bilingual diagram with animated agents and a spoken description, and each can be embedded on its own in the paper it comes from. Move through it, zoom in, and take the architecture away for your own development.",
   "hero_image": {
     "src": "public/images/xs7uh/en/hero.jpg",
     "alt": "Editorial image for: The Canvas",
