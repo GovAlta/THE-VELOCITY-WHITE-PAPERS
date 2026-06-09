@@ -51,16 +51,28 @@
       },
       {
         "id": "02",
-        "title": "Eight views of one system",
+        "title": "Eleven views of one system",
         "audio_file": "public/audio/en/xs7uh-tldr/02.mp3",
         "visual": "list",
         "caption": "What the canvas holds",
         "visual_config": {
           "items": [
-            { "label": "Estate, approaches, stack", "desc": "The legacy estate scanned, the four approaches, and the agentic technology stack." },
-            { "label": "Harness and factory", "desc": "The harness with its review agents, and the Pronghorn to Nexus to Velocity factory." },
-            { "label": "Game, hierarchy, future", "desc": "The delivery game, the inverted hierarchy, and the future-state modules." },
-            { "label": "Animated agents", "desc": "Agents move through each scene, so the structure is shown rather than described." }
+            {
+              "label": "Estate, approaches, stack",
+              "desc": "The legacy estate scanned, the four approaches, and the agentic technology stack."
+            },
+            {
+              "label": "Harness and factory",
+              "desc": "The harness with its review agents, and the Pronghorn to Nexus to Velocity factory."
+            },
+            {
+              "label": "Game, hierarchy, future",
+              "desc": "The delivery game, the inverted hierarchy, and the future-state modules."
+            },
+            {
+              "label": "Animated agents",
+              "desc": "Agents move through each scene, so the structure is shown rather than described."
+            }
           ]
         },
         "text": "The canvas holds eleven scenes, one per major idea in the collection, with agents animated through each. You step between them with the scene chips, drag nodes, zoom and pan, expand to full screen, and read or hear a description of what each scene shows."
@@ -78,12 +90,30 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "The argument, made by showing" },
-    { "n": "02", "title": "The landscape, in one canvas" },
-    { "n": "03", "title": "Eight views of one system" },
-    { "n": "04", "title": "The factory, on its own" },
-    { "n": "05", "title": "The inverted hierarchy" },
-    { "n": "06", "title": "Built to be taken away" }
+    {
+      "n": "01",
+      "title": "The argument, made by showing"
+    },
+    {
+      "n": "02",
+      "title": "The landscape, in one canvas"
+    },
+    {
+      "n": "03",
+      "title": "Eleven views of one system"
+    },
+    {
+      "n": "04",
+      "title": "The factory, on its own"
+    },
+    {
+      "n": "05",
+      "title": "The inverted hierarchy"
+    },
+    {
+      "n": "06",
+      "title": "Built to be taken away"
+    }
   ],
   "blocks": [
     {
@@ -106,19 +136,21 @@
     },
     {
       "type": "paragraph",
-      "text": "The canvas below holds eight scenes, one per major idea in the collection. Use the scene chips to step between them, drag to pan and scroll to zoom, and use Expand for full screen. Each scene names the paper it comes from, so the canvas doubles as a map of the collection. Describe this canvas reads out, or plays, a plain-language account of what the current scene is showing."
+      "text": "The canvas below holds eleven scenes, one per major idea in the collection. Use the scene chips to step between them, drag to pan and scroll to zoom, and use Expand for full screen. Each scene names the paper it comes from, so the canvas doubles as a map of the collection. Describe this canvas reads out, or plays, a plain-language account of what the current scene is showing."
     },
     {
       "type": "figure",
       "fno": "FIG. 18.1",
       "title": "The Solution Landscape",
       "caption": "An interactive tour of the whole approach. Eleven data-driven scenes with animated agents: the legacy estate, the four approaches, the agentic stack, the harness and its review agents, cyber defense, the AI factory, the delivery game, keeping the work in sync, the inverted hierarchy, the future state, and the Government 3.0 runtime. Drag nodes, step between scenes, zoom, expand to full screen, listen, or download any scene as JSON.",
-      "chart": { "kind": "canvas:tour" }
+      "chart": {
+        "kind": "canvas:tour"
+      }
     },
     {
       "type": "section_heading",
       "n": "03",
-      "title": "Eight views of one system"
+      "title": "Eleven views of one system"
     },
     {
       "type": "paragraph",
@@ -127,19 +159,67 @@
     {
       "type": "table",
       "title": "The scenes, and where they come from",
-      "columns": ["Scene", "What it shows", "Paper"],
+      "columns": [
+        "Scene",
+        "What it shows",
+        "Paper"
+      ],
       "rows": [
-        ["The legacy estate", "≈466M lines across ~3,400 repositories, scanned by ~50 agents in ~20 hours.", "Git Insights"],
-        ["Four approaches", "Garage, Factory, Rationalization, Government 3.0 — lightest touch to full rebuild.", "The Four Approaches"],
-        ["The agentic stack", "Cloud, model access, models, the Bifrost gateway, deployment, and security.", "The Agentic Technology Stack"],
-        ["The harness", "A worker agent ringed by the green, yellow, red, and blue review agents.", "The Well-Built Harness"],
-        ["The AI factory", "Pronghorn ideation, Nexus orchestration, Velocity delivery, with agents flowing across.", "The AI Factory"],
-        ["The delivery game", "Eight stages; points for forward motion, permanent loss for backsliding, the Reaper.", "The Velocity Game Engine"],
-        ["The inverted hierarchy", "One worker agent, eight supervisors — the compression problem, solved spatially.", "The Compression Problem"],
-        ["The future state", "185 applications collapsed into 16 shared modules; complexity down more than 90%.", "Git Insights Ministry"],
-        ["Cyber defense", "AI defending at machine speed; ~189M attempts a day blocked; modernization cuts the attack surface.", "The Cyber Imperative"],
-        ["Keeping work in sync", "Observer harnesses watch the 14-link chain and file tickets the builder clears.", "The Anti-Drift Harness"],
-        ["Government 3.0 runtime", "No app: an agent acts on governed data through guardrails and generates the interface on demand.", "The Four Approaches"]
+        [
+          "The legacy estate",
+          "≈466M lines across ~3,400 repositories, scanned by ~50 agents in ~20 hours.",
+          "Git Insights"
+        ],
+        [
+          "Four approaches",
+          "Garage, Factory, Rationalization, Government 3.0 — lightest touch to full rebuild.",
+          "The Four Approaches"
+        ],
+        [
+          "The agentic stack",
+          "Cloud, model access, models, the Bifrost gateway, deployment, and security.",
+          "The Agentic Technology Stack"
+        ],
+        [
+          "The harness",
+          "A worker agent ringed by the green, yellow, red, and blue review agents.",
+          "The Well-Built Harness"
+        ],
+        [
+          "The AI factory",
+          "Pronghorn ideation, Nexus orchestration, Velocity delivery, with agents flowing across.",
+          "The AI Factory"
+        ],
+        [
+          "The delivery game",
+          "Eight stages; points for forward motion, permanent loss for backsliding, the Reaper.",
+          "The Velocity Game Engine"
+        ],
+        [
+          "The inverted hierarchy",
+          "One worker agent, eight supervisors — the compression problem, solved spatially.",
+          "The Compression Problem"
+        ],
+        [
+          "The future state",
+          "185 applications collapsed into 16 shared modules; complexity down more than 90%.",
+          "Git Insights Ministry"
+        ],
+        [
+          "Cyber defense",
+          "AI defending at machine speed; ~189M attempts a day blocked; modernization cuts the attack surface.",
+          "The Cyber Imperative"
+        ],
+        [
+          "Keeping work in sync",
+          "Observer harnesses watch the 14-link chain and file tickets the builder clears.",
+          "The Anti-Drift Harness"
+        ],
+        [
+          "Government 3.0 runtime",
+          "No app: an agent acts on governed data through guardrails and generates the interface on demand.",
+          "The Four Approaches"
+        ]
       ],
       "source": "The Solution Landscape canvas."
     },
@@ -157,7 +237,10 @@
       "fno": "FIG. 18.2",
       "title": "One scene, embedded: the AI factory pipeline",
       "caption": "The same factory scene from the canvas, embedded on its own. Pronghorn turns requirements into a prototype and an architecture canvas; Nexus runs the build in a secure cloud sandbox and observes it; Velocity measures delivery on a game board. Agents flow left to right.",
-      "chart": { "kind": "canvas:scene", "scene": "factory" }
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "factory"
+      }
     },
     {
       "type": "section_heading",
@@ -173,11 +256,14 @@
       "fno": "FIG. 18.3",
       "title": "One scene, embedded: the inverted hierarchy",
       "caption": "One worker agent at the base, eight supervisor agents above it, each holding a single concern. The same scene appears in the canvas tour and can sit inside the Compression Problem paper.",
-      "chart": { "kind": "canvas:scene", "scene": "hierarchy" }
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "hierarchy"
+      }
     },
     {
       "type": "pullquote",
-      "text": "Instead of preparing a written briefing, an AI could generate a simulation, a visualization, a spatial interaction that lets the decision-maker engage with the material in a different way. This canvas is that, built.",
+      "text": "Instead of preparing a written briefing, an AI could generate a simulation, a visualization, a spatial interaction that lets the decision-maker engage with the material in a different way. ",
       "cite": "After The Compression Problem"
     },
     {
@@ -187,11 +273,17 @@
     },
     {
       "type": "paragraph",
-      "text": "The canvas is built to be more than a picture on a page. Every scene is driven by a JSON record, the same record you can download with the Download button, so an architecture can be carried away, edited, and reused rather than screenshotted. Each scene is bilingual and mobile-responsive, and each carries a written narrative that serves two purposes at once: it is the accessible description for a screen reader, and it is the script for the spoken explainer behind the Listen button. The renderers are generic and driven entirely by the data, so a new scene is a new JSON entry, not new code. This is a first build, offered for review; the intent is to keep adding scenes and depth until the canvas carries enough fidelity to stand in for the briefing entirely."
+      "text": "The canvas is built to be more than a picture on a page. Every scene is driven by a JSON record, the same record you can download with the Download button, so an architecture can be carried away, edited, and reused rather than screenshotted. Each scene is bilingual and mobile-responsive, and each carries a written narrative that serves two purposes at once: it is the accessible description for a screen reader, and it is the script for the spoken explainer behind the Listen button. The renderers are generic and driven entirely by the data, so a new scene is a new JSON entry, not new code. This is a first build, offered for review; the intent is to keep adding scenes and depth until the canvas carries enough fidelity to stand in for the briefing entirely.\n\n\nTake away the source data and these flowchart controls and build your own visualizations."
     },
     {
       "type": "tag_row",
-      "tags": ["canvas", "visualization", "simulation", "architecture", "interactive"]
+      "tags": [
+        "canvas",
+        "visualization",
+        "simulation",
+        "architecture",
+        "interactive"
+      ]
     },
     {
       "type": "related"

@@ -213,7 +213,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The Chain Walker follows a change outward along the chain. The moment the AI edits a file, the walker starts at that file and steps to its neighbours in both directions: the pieces that feed into it and the pieces that depend on it. At each step it compares the two ends. Do the names, the fields, the promises still match? Where they do not, it records exactly what fell out of line. It keeps walking to a set distance and produces one tidy report of what drifted. Its advantage is reach: it checks the whole chain rather than the one or two links beside the change, and its findings are specific enough that a reviewer can see precisely what no longer agrees."
+      "text": "This first feature follows change outward along the chain of feature dependencies. The moment the AI edits a file, the walker starts at that file and steps to its neighbours in both directions: the pieces that feed into it and the pieces that depend on it. At each step it compares the two ends. Do the names, the fields, the promises still match? Where they do not, it records exactly what fell out of line. It keeps walking to a set distance and produces one tidy report of what drifted. Its advantage is reach: it checks the whole chain rather than the one or two links beside the change, and its findings are specific enough that a reviewer can see precisely what no longer agrees."
     },
     {
       "type": "figure",
