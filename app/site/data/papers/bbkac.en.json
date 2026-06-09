@@ -96,14 +96,10 @@
             {
               "label": "39.2% had no documentation",
               "desc": "The 1,280 missing READMEs were then written by the agents."
-            },
-            {
-              "label": "3.2 / 10 average health",
-              "desc": "Across the whole estate, on the ten-point scale."
             }
           ]
         },
-        "text": "What it found. Nearly three quarters of repositories had no automated build pipeline, half had no tests, and a third had no documentation at all, which the agents then wrote. Across the whole estate, the average health score was three point two out of ten."
+        "text": "What it found. Nearly three quarters of repositories had no automated build pipeline, half had no tests, and a third had no documentation at all, which the agents then wrote."
       },
       {
         "id": "05",
@@ -460,13 +456,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Every repository was scored out of ten on its overall health. Across the whole estate, the average came out low."
-    },
-    {
-      "type": "keystat",
-      "label": "Average repository health across the estate",
-      "value": "3.2 out of 10",
-      "body": "On the ten-point health scale Git Insights applies to every repository. The missing tests, pipelines, and documentation above are most of the reason why."
+      "text": "Every repository was scored out of ten on its overall health across code quality, security, tests, and documentation. Across the whole estate the average came out low, held down by the missing tests, pipelines, and documentation noted above."
     },
     {
       "type": "section_heading",

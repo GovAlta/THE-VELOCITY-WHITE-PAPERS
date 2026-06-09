@@ -671,7 +671,7 @@
       "en": {
         "term": "Health Score",
         "short": "A repository's rating out of ten against a fixed checklist covering security, quality, tests, and more.",
-        "long": "Git Insights grades every repository on a ten-point scale, with separate scores for code quality, architecture, security, tests, documentation, maintainability, and dependency health. Using the same fixed checklist means a score carries the same meaning on the thousandth repository as on the first. Across the whole estate the average health score came out to 3.2 out of 10."
+        "long": "Git Insights grades every repository on a ten-point scale, with separate scores for code quality, architecture, security, tests, documentation, maintainability, and dependency health. Using the same fixed checklist means a score carries the same meaning on the thousandth repository as on the first."
       },
       "related": []
     },
