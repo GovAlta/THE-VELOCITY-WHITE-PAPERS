@@ -524,18 +524,34 @@
       "sequence": "",
       "tier": "Technical",
       "title": "Technical: Anatomy of a Template",
-      "subtitle": "What makes an AI-ready application template worth building, and how to build one well.",
+      "subtitle": "The open-source application template that ships with the Well-Built Harness, and why a secure, standards-driven starting point is the real specification.",
       "track": "Technical Appendix",
       "authors": [
-        "Ministry of Technology and Innovation"
+        "Janak Alford",
+        "Deputy Minister",
+        "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": null,
+      "reading_min": 14,
       "status": "Draft",
-      "tags": [],
+      "tags": [
+        "template",
+        "harness",
+        "security",
+        "owasp",
+        "open-source",
+        "authentication",
+        "specification-driven"
+      ],
       "repo": null,
-      "abstract": "Forthcoming. The body will be written from source materials. This is one of three technical appendices that round out the collection.",
-      "related": [],
+      "abstract": "The Well-Built Harness ships with a working application, not an empty folder: a full-stack Vue 3, Express, and Postgres template that already builds, signs users in, talks to a database, and passes its own security tests the day it is copied. This appendix specifies what is in it and argues a simple point. The best specification is code. A secure, standards-driven, accessible starting point gives an AI far less room to make a mistake, and makes the application compliant before the AI writes a line. It walks through the client, the server, the security stack, and the OWASP Top 10, all addressed up front.",
+      "related": [
+        "p7p2k",
+        "l199t",
+        "of1cj",
+        "qxlzo",
+        "eujjc"
+      ],
       "category": "paper"
     },
     {

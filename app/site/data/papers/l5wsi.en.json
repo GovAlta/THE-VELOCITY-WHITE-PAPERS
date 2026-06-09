@@ -5,17 +5,27 @@
   "tier": "Technical",
   "category": "paper",
   "title": "Technical: Anatomy of a Template",
-  "subtitle": "What makes an AI-ready application template worth building, and how to build one well.",
+  "subtitle": "The open-source application template that ships with the Well-Built Harness, and why a secure, standards-driven starting point is the real specification.",
   "track": "Technical Appendix",
   "authors": [
-    "Ministry of Technology and Innovation"
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": null,
+  "reading_min": 14,
   "status": "Draft",
-  "tags": [],
+  "tags": [
+    "template",
+    "harness",
+    "security",
+    "owasp",
+    "open-source",
+    "authentication",
+    "specification-driven"
+  ],
   "repo": null,
-  "abstract": "Forthcoming. The body will be written from source materials. This is one of three technical appendices that round out the collection.",
+  "abstract": "The Well-Built Harness ships with a working application, not an empty folder: a full-stack Vue 3, Express, and Postgres template that already builds, signs users in, talks to a database, and passes its own security tests the day it is copied. This appendix specifies what is in it and argues a simple point. The best specification is code. A secure, standards-driven, accessible starting point gives an AI far less room to make a mistake, and makes the application compliant before the AI writes a line. It walks through the client, the server, the security stack, and the OWASP Top 10, all addressed up front.",
   "hero_image": {
     "src": "public/images/l5wsi/en/hero.jpg",
     "alt": "Editorial image for: Anatomy of a Template",
@@ -33,36 +43,252 @@
     "slides": [
       {
         "id": "01",
-        "title": "Technical: Anatomy of a Template",
+        "title": "Anatomy of a Template",
         "audio_file": "public/audio/en/l5wsi-tldr/01.mp3",
         "visual": "title",
-        "caption": "Technical appendix",
-        "subcaption": "",
-        "text": "Anatomy of a Template. Content forthcoming."
+        "caption": "Technical appendix · paper 16",
+        "subcaption": "The application that ships with the Well-Built Harness.",
+        "text": "The Well-Built Harness ships with a working application, not an empty folder. That application is the template: a full-stack Vue 3, Express, and Postgres project that already builds, signs users in, talks to a database, and passes its own security tests on the day it is copied. This appendix specifies what is in it, and why it matters."
+      },
+      {
+        "id": "02",
+        "title": "The best specification is code",
+        "audio_file": "public/audio/en/l5wsi-tldr/02.mp3",
+        "visual": "title",
+        "caption": "The argument",
+        "subcaption": "Working code proves what a system does; a document only describes it.",
+        "text": "A written spec describes what a system should do. Code proves what it does, because it either compiles, runs, and passes its tests, or it does not. If the starting point is already secure, standards-driven, and accessible, the AI has far less room to get it wrong, and the application is compliant before the AI writes its first line."
+      },
+      {
+        "id": "03",
+        "title": "What ships in the box",
+        "audio_file": "public/audio/en/l5wsi-tldr/03.mp3",
+        "visual": "list",
+        "caption": "A full-stack, open-source app",
+        "visual_config": {
+          "items": [
+            { "label": "Client", "desc": "Vue 3, Vite, TypeScript, PrimeVue, Tailwind, FormKit, Pinia, one axios client." },
+            { "label": "Server", "desc": "Express and TypeScript over PostgreSQL, with parameterized queries and no ORM." },
+            { "label": "Auth", "desc": "Sign-in delegated to Google and Microsoft; signed, httpOnly cookies; role-based access." },
+            { "label": "Proof", "desc": "773 passing tests, six security scanners, and thirteen working feature areas." }
+          ]
+        },
+        "text": "The template is one open-source monorepo: a Vue 3 client and an Express server over Postgres, packaged in a single container. Thirteen feature areas are already built and working, from authentication to an audit log, so a new project starts with real examples to follow rather than a blank canvas."
+      },
+      {
+        "id": "04",
+        "title": "Locked down before the build",
+        "audio_file": "public/audio/en/l5wsi-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "The OWASP Top 10, answered up front",
+        "visual_config": {
+          "stat_value": "773 / 0",
+          "stat_label": "tests passing and failing the day the template is copied, plus six automated security scanners"
+        },
+        "subcaption": "Built to the OWASP ASVS Level 2 and WCAG 2.1 AA standards the harness enforces.",
+        "text": "Every request passes through one ordered chain of checks: strict security headers, an allow-list for who can call the API, rate limiting, input validation, authentication, role checks, and a CSRF check, before it reaches application code. Each of the OWASP Top 10 risks is addressed in code, so a new application inherits the defence."
+      },
+      {
+        "id": "05",
+        "title": "One path in, one path to the data",
+        "audio_file": "public/audio/en/l5wsi-tldr/05.mp3",
+        "visual": "title",
+        "caption": "Single, audited paths",
+        "subcaption": "One axios client, one database layer, one place to get auth right.",
+        "text": "Every call to the server goes through one configured client that handles credentials, CSRF, retries, and errors in a single place, so no screen can get it wrong. Every database call uses a parameterized query, the single most effective defence against injection. Authentication is built and tested once, so the AI works within it rather than inventing it."
+      },
+      {
+        "id": "06",
+        "title": "The floor, not a nicety",
+        "audio_file": "public/audio/en/l5wsi-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Table stakes for enterprise software",
+        "subcaption": "Build it once, open source, reused everywhere.",
+        "text": "Integrated authentication, one audited path to the database, a full set of security headers, and OWASP coverage are the baseline a public-facing application must meet before it ships. Building them once in a maintained, open-source template makes the baseline cheap, uniform, and inspectable, and turns it into the executable specification the AI extends."
       }
     ]
   },
   "embedded_presentations": [],
   "sections": [
-    {
-      "n": "01",
-      "title": "Overview"
-    }
+    { "n": "01", "title": "Why the template is the specification" },
+    { "n": "02", "title": "What ships in the box" },
+    { "n": "03", "title": "The client" },
+    { "n": "04", "title": "The server, and its security stack" },
+    { "n": "05", "title": "The OWASP Top 10, answered before the build" },
+    { "n": "06", "title": "Why this is the floor, not a nicety" }
   ],
   "blocks": [
     {
+      "type": "dropcap_paragraph",
+      "text": "The Well-Built Harness ships with a working application, not an empty folder. That application is the template: a full-stack Vue 3, Express, and Postgres project that already builds, runs, signs users in, talks to a database, and passes its own security tests on the day it is copied. The argument of this appendix is simple. The best specification is code. A written specification describes what a system should do; working code proves what it does. If the starting point is already secure, standards-driven, and accessible, the AI has far less room to get it wrong, and the application is compliant before the AI writes its first line. This is the template at the centre of the [Well-Built Harness](/paper/p7p2k), examined in detail."
+    },
+    {
       "type": "section_heading",
       "n": "01",
-      "title": "Overview"
+      "title": "Why the template is the specification"
     },
     {
       "type": "paragraph",
-      "text": "<strong>Content forthcoming.</strong> The structure is in place; the body will be written from source materials, not auto-generated."
+      "text": "A prompt is an imprecise instruction. Ask an AI to add authentication and it has to invent a hundred decisions: which token format, how long tokens live, where they are stored, how they are refreshed, how roles are checked. Each invented decision is a chance to be wrong, and security mistakes are the most expensive kind to make. The template removes the guesswork. Authentication, input validation, security headers, error handling, and database access are already built, already tested, and already correct. The AI does not design them; it works within them."
+    },
+    {
+      "type": "paragraph",
+      "text": "Code is the most precise specification we have, because it is executable. It either compiles, runs, and passes its tests, or it does not, and a document cannot make that promise. This matters most for the things that are easy to get subtly wrong and serious to get wrong at all: how tokens are handled, how user input reaches the database, what rules the browser is told to enforce. The template answers each of these once, in code, to a known standard, and every application built from it inherits that answer. The harness then refuses to let the AI scaffold a project by hand. The only sanctioned way to start is to copy the template, so the baseline is not a suggestion. It is the floor."
+    },
+    {
+      "type": "keystat",
+      "label": "Starts green, not from zero",
+      "value": "773 / 0",
+      "body": "The template ships with 773 passing tests and zero failures, plus six automated security scanners. An application built from it inherits a working, tested, standards-compliant baseline on its first day."
+    },
+    {
+      "type": "pullquote",
+      "text": "The best specification is code. Give the AI a secure, standards-driven, accessible platform from the beginning, and it is far less likely to make a mistake. The solution is compliant before the AI even begins to build.",
+      "cite": "Janak Alford, Deputy Minister, Ministry of Technology and Innovation"
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "What ships in the box"
+    },
+    {
+      "type": "paragraph",
+      "text": "The template is one open-source monorepo: a Vue 3 client and an Express server over a PostgreSQL database, sharing a single container build. Thirteen feature areas are already implemented and working: a health check, authentication, a resources section, a service catalogue, service locations, dynamic forms, file uploads, notifications with live updates, an AI chat, an admin area, a public landing site, an audit log, and a pass of accessibility and security hardening. A new project does not begin on a blank canvas; it begins with real, working examples to pattern-match against. The stack is chosen for being mainstream, well-maintained, and open source, with no proprietary lock-in."
+    },
+    {
+      "type": "table",
+      "title": "The stack, and why each piece is there",
+      "columns": ["Layer", "Choice", "Why it is chosen"],
+      "rows": [
+        ["Front-end", "Vue 3, Vite, TypeScript", "A mainstream, typed, well-supported way to build a modern web client."],
+        ["UI and styling", "PrimeVue 4, Tailwind CSS 4", "A complete component library plus utility styling, so screens are consistent without bespoke CSS."],
+        ["Forms", "FormKit", "One way to build, validate, and theme every form, instead of hand-rolling each one."],
+        ["State and routing", "Pinia, Vue Router", "A single sign-in store, and pages loaded on demand behind guards that check sign-in and role."],
+        ["API calls", "axios, one configured client", "Every request goes through one place that handles credentials, CSRF, retries, and errors."],
+        ["Back-end", "Express, TypeScript", "A small, ubiquitous server framework, typed from end to end."],
+        ["Database", "PostgreSQL via the pg driver", "Direct, parameterized SQL, with no hidden query layer to misread."],
+        ["Sign-in", "Google and Microsoft identity", "Authentication delegated to the providers the enterprise already runs."],
+        ["Packaging", "Docker, optional PWA", "One container to deploy, and an optional installable progressive web app."]
+      ],
+      "source": "AIDE Common Harness template, package manifests."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "The client"
+    },
+    {
+      "type": "paragraph",
+      "text": "Every call from the browser to the server goes through a single configured axios client. It sends credentials as httpOnly cookies rather than tokens held in JavaScript, attaches a request identifier and a CSRF token to anything that changes data, and handles three common failures on its own: a 401 triggers one silent token refresh and replays the request; a CSRF mismatch re-fetches the token and retries; a rate-limit response waits the interval the server names and tries once more. In production it returns generic error messages, so the server's internals never leak to the browser. Because this logic lives in one file, no screen has to reimplement it, and no screen can get it wrong."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pages load only when visited, and a single navigation guard decides who may see what, checking sign-in and role before a route renders and rejecting tampered redirect targets. Sign-in is delegated entirely to Google or Microsoft, so the template holds no passwords. A six-level role hierarchy, from viewer up to super administrator, decides what each user can do, and an idle session signs out on its own. Any user-supplied HTML is cleaned with DOMPurify before it is shown. Accessibility is built in rather than bolted on: a skip-to-content link, a live region that announces page changes to screen readers, and conformance to the WCAG 2.1 AA standard the harness enforces."
+    },
+    {
+      "type": "paragraph",
+      "text": "A dedicated security test suite checks the things that matter and would otherwise be assumed: that cross-site scripting is stripped, that the session clears on logout with no personal data left behind, that error messages do not leak internals, that open redirects are blocked, and that roles hold their boundaries. These tests run with the rest, so a change that weakens any of them fails the build."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "The server, and its security stack"
+    },
+    {
+      "type": "paragraph",
+      "text": "The server is a small Express application written in TypeScript. It talks to Postgres directly with parameterized queries, the single most effective defence against injection, and uses no object-relational layer that could hide what a query actually does. Before any request reaches application code, it passes through the same ordered chain of checks."
+    },
+    {
+      "type": "table",
+      "title": "Every request passes through this chain, in order",
+      "columns": ["Step", "What it does"],
+      "rows": [
+        ["Security headers", "Sets a strict content-security policy, forces HTTPS for a year, and limits what the browser may do."],
+        ["Permissions policy", "Turns off device features the app does not use, such as camera, microphone, and location."],
+        ["CORS allow-list", "Lets only approved sites call the API."],
+        ["Rate limiting", "Caps requests per window (200 per 15 minutes by default, stricter on sign-in) to blunt abuse and brute force."],
+        ["Content-type and size checks", "Rejects unexpected payload types and request bodies over one megabyte."],
+        ["Input validation", "Checks every request body against a schema before it is used."],
+        ["Authentication", "Reads and verifies the signed token from the cookie."],
+        ["Authorization", "Confirms the user's role is high enough for the route."],
+        ["CSRF check", "Confirms a state-changing request came from the real application."],
+        ["Audit logging and safe errors", "Records who did what, and returns errors that never expose stack traces or SQL."]
+      ],
+      "source": "AIDE Common Harness template, server/src/app.ts middleware order."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sign-in is delegated to Google and Microsoft, so there are no passwords to store or leak. A short-lived access token, good for fifteen minutes, and a longer refresh token, good for seven days, are issued as signed, httpOnly cookies, so scripts in the browser cannot read or steal them. Refresh tokens are stored only as hashes, are rotated on every use, and can be revoked, so a leaked token has a short and closable life. The signing uses an asymmetric key pair, which lets the server verify a token without holding anything that could forge one."
+    },
+    {
+      "type": "keystat",
+      "label": "Token lifetimes",
+      "value": "15 min / 7 days",
+      "body": "A fifteen-minute access token and a seven-day refresh token, both signed and stored in httpOnly cookies. Refresh tokens are hashed, rotated on every use, and revocable, so the window of a stolen token is small and can be closed."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "The OWASP Top 10, answered before the build"
+    },
+    {
+      "type": "paragraph",
+      "text": "The OWASP Top 10 is the security industry's list of the ten most serious classes of web vulnerability. The template addresses each one in code, built to the OWASP Application Security Verification Standard at Level 2, the standard the harness holds the work to. A new application inherits the defence rather than rediscovering it."
+    },
+    {
+      "type": "table",
+      "title": "How the template addresses the OWASP Top 10 (2021)",
+      "columns": ["Risk", "How the template addresses it"],
+      "rows": [
+        ["A01 Broken access control", "Every route checks sign-in and role through one shared guard; inactive accounts are refused at refresh."],
+        ["A02 Cryptographic failures", "Signed tokens with an asymmetric key, hashed refresh tokens, httpOnly and secure cookies, forced HTTPS, and optional column-level encryption."],
+        ["A03 Injection", "All database access uses parameterized queries, and every input is checked against a schema before use."],
+        ["A04 Insecure design", "CSRF protection on by default, token rotation, tiered rate limits, and a server that refuses to start with unsafe settings."],
+        ["A05 Security misconfiguration", "Strict security headers, configuration validated at startup, and errors stripped of internal detail in production."],
+        ["A06 Vulnerable components", "Dependencies pinned, with known-bad transitive versions overridden."],
+        ["A07 Authentication failures", "Short-lived access tokens, rotating refresh tokens, rate-limited sign-in, and single-tenant enforcement."],
+        ["A08 Data integrity failures", "Token signatures and sign-in state are verified, and uploads are checked by declared type and actual content."],
+        ["A09 Logging and monitoring failures", "Structured logs with correlation identifiers, and an audit trail of sensitive actions."],
+        ["A10 Server-side request forgery", "Not specifically hardened in the template; flagged so the application closes it deliberately."]
+      ],
+      "source": "AIDE Common Harness template, mapped to OWASP Top 10 (2021)."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Why this is the floor, not a nicety"
+    },
+    {
+      "type": "paragraph",
+      "text": "None of this is optional for enterprise software. Integrated authentication, a single audited path to the database, a full set of security headers, and coverage of the OWASP Top 10 are the baseline a public-facing government application must meet before it ships. Building them by hand, once per project, is slow and inconsistent, and every hand-built variation is a fresh place for a mistake to hide. Building them once, in an open-source template that is well maintained and reused everywhere, makes the baseline cheap, uniform, and open to inspection."
+    },
+    {
+      "type": "paragraph",
+      "text": "The stack is deliberately open source and mainstream, Vue, Express, Postgres and their well-supported libraries, with a large community keeping them patched and no vendor able to lock the work in. It is modular, so an application keeps what it needs and deletes what it does not, and turning off an unused feature is free risk reduction. And it is the natural unit of specification-driven development. Instead of describing a secure application in prose and hoping the AI honours it, we hand the AI a secure application and ask it to extend it. The specification is executable, and the harness checks it mechanically on every change, the same discipline the [Anti-Drift Harness](/paper/of1cj) applies as the work grows."
+    },
+    {
+      "type": "paragraph",
+      "text": "The template is a starting point, and it is honest about its edges. Malware scanning of uploaded files is left as a switch to wire to a real scanner. Rate limiting runs in memory until a shared store is configured for more than one instance. These are documented, not hidden, which is the point: the template makes its assumptions explicit so the application can close them on purpose rather than discover them by accident. A good foundation does not pretend to be finished. It states plainly where it ends and the building begins."
+    },
+    {
+      "type": "tag_row",
+      "tags": ["template", "harness", "security", "owasp", "open-source"]
+    },
+    {
+      "type": "related"
     }
   ],
   "_meta": {
-    "placeholder": true,
-    "written_by": "structural-stub"
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v1"
   },
-  "related": []
+  "related": [
+    "p7p2k",
+    "l199t",
+    "of1cj",
+    "qxlzo",
+    "eujjc"
+  ]
 }
