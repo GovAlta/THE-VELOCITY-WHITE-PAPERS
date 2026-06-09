@@ -1,7 +1,7 @@
 {
   "id": "bbkac",
   "num": "03",
-  "sequence": "3 of 8",
+  "sequence": "3 of 18",
   "tier": "Technical",
   "title": "Git Insights",
   "subtitle": "We pointed AI at the whole of Alberta's code estate to get the ground truth. Here is how it works and what it found.",
@@ -11,7 +11,7 @@
     "Ministry of Technology and Innovation"
   ],
   "published": "2026-06-16",
-  "reading_min": 14,
+  "reading_min": 13,
   "status": "Published",
   "tags": [
     "git-insights",
@@ -29,7 +29,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/bbkac.mp3"
+    "src": "public/audio/en/bbkac.mp3",
+    "duration_sec": 779
   },
   "tldr_presentation": {
     "id": "bbkac-tldr",

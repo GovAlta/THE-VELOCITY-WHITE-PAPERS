@@ -1,7 +1,7 @@
 {
   "id": "uwpxr",
   "num": "09",
-  "sequence": "8 of 8",
+  "sequence": "9 of 18",
   "tier": "Technical",
   "category": "paper",
   "title": "The AI Factory: Orchestration and Observation (Nexus)",
@@ -32,7 +32,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/uwpxr.mp3"
+    "src": "public/audio/en/uwpxr.mp3",
+    "duration_sec": 911
   },
   "tldr_presentation": {
     "id": "uwpxr-tldr",

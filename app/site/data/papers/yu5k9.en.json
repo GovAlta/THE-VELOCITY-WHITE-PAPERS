@@ -1,7 +1,7 @@
 {
   "id": "yu5k9",
   "num": "15",
-  "sequence": "",
+  "sequence": "15 of 18",
   "tier": "Policy & People",
   "category": "paper",
   "title": "Measuring Failure and Success",
@@ -13,8 +13,8 @@
     "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 13,
-  "status": "Draft",
+  "reading_min": 7,
+  "status": "Published",
   "tags": [
     "measurement",
     "success-criteria",
@@ -33,7 +33,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/yu5k9.mp3"
+    "src": "public/audio/en/yu5k9.mp3",
+    "duration_sec": 419
   },
   "tldr_presentation": {
     "id": "yu5k9-tldr",
@@ -58,9 +59,18 @@
         "caption": "Three measures",
         "visual_config": {
           "items": [
-            { "label": "Readiness", "desc": "Can the organization carry the change? Education, security, self-sufficiency, governance." },
-            { "label": "System health", "desc": "Is the estate getting healthier? Fewer vulnerabilities, a smaller backlog, fewer applications." },
-            { "label": "Cost", "desc": "Is value rising faster than cost, across the whole of government?" }
+            {
+              "label": "Readiness",
+              "desc": "Can the organization carry the change? Education, security, self-sufficiency, governance."
+            },
+            {
+              "label": "System health",
+              "desc": "Is the estate getting healthier? Fewer vulnerabilities, a smaller backlog, fewer applications."
+            },
+            {
+              "label": "Cost",
+              "desc": "Is value rising faster than cost, across the whole of government?"
+            }
           ]
         },
         "text": "Three measures, each chosen because it is hard to argue with. Readiness asks whether the organization can carry the change. System health asks whether the estate is getting healthier rather than sicker. Cost asks whether value is rising faster than spending, counted across the whole of government and not one ledger."
@@ -109,11 +119,26 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "The wrong yardstick" },
-    { "n": "02", "title": "Readiness" },
-    { "n": "03", "title": "System health" },
-    { "n": "04", "title": "Cost, properly counted" },
-    { "n": "05", "title": "The standard, and sharing it" }
+    {
+      "n": "01",
+      "title": "The wrong yardstick"
+    },
+    {
+      "n": "02",
+      "title": "Readiness"
+    },
+    {
+      "n": "03",
+      "title": "System health"
+    },
+    {
+      "n": "04",
+      "title": "Cost, properly counted"
+    },
+    {
+      "n": "05",
+      "title": "The standard, and sharing it"
+    }
   ],
   "blocks": [
     {

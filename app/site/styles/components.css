@@ -106,7 +106,7 @@
 
 /* --- Stat rail ------------------------------------------ */
 .civic-rail {
-  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   border-bottom: 1px solid var(--rule);
   min-height: 102px;          /* reserves space; prevents CLS when stats render */
 }

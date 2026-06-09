@@ -1,7 +1,7 @@
 {
   "id": "oxj36",
   "num": "13",
-  "sequence": "",
+  "sequence": "13 of 18",
   "tier": "Policy & People",
   "category": "paper",
   "title": "Establishing a Builder Culture",
@@ -13,8 +13,8 @@
     "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 16,
-  "status": "Draft",
+  "reading_min": 13,
+  "status": "Published",
   "tags": [
     "builder-culture",
     "democratization",
@@ -33,7 +33,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/oxj36.mp3"
+    "src": "public/audio/en/oxj36.mp3",
+    "duration_sec": 771
   },
   "tldr_presentation": {
     "id": "oxj36-tldr",
@@ -58,9 +59,18 @@
         "caption": "The pendulum, and a third option",
         "visual_config": {
           "items": [
-            { "label": "Centralized", "desc": "Scale and consistency, paid for with a bottleneck." },
-            { "label": "Decentralized", "desc": "Autonomy and speed, paid for with duplication and risk." },
-            { "label": "AI-augmented hybrid", "desc": "Building at the edges, protection and rules at the center." }
+            {
+              "label": "Centralized",
+              "desc": "Scale and consistency, paid for with a bottleneck."
+            },
+            {
+              "label": "Decentralized",
+              "desc": "Autonomy and speed, paid for with duplication and risk."
+            },
+            {
+              "label": "AI-augmented hybrid",
+              "desc": "Building at the edges, protection and rules at the center."
+            }
           ]
         },
         "text": "Centralization buys economy of scale and consistency at the cost of a bottleneck. Decentralization buys autonomy at the cost of duplication and uneven security. AI introduces a third model: keep the functions that must stay uniform in the center, and let ministries build their own solutions on governed tools."
@@ -73,9 +83,18 @@
         "caption": "Delegated access, and automated gates",
         "visual_config": {
           "items": [
-            { "label": "Delegated access", "desc": "An agent acts only within the permissions a person already holds." },
-            { "label": "Vibe coding", "desc": "A specialist describes the system; the tools build it." },
-            { "label": "Automated checks", "desc": "Red and blue agents, information management, and identity, cleared before production." }
+            {
+              "label": "Delegated access",
+              "desc": "An agent acts only within the permissions a person already holds."
+            },
+            {
+              "label": "Vibe coding",
+              "desc": "A specialist describes the system; the tools build it."
+            },
+            {
+              "label": "Automated checks",
+              "desc": "Red and blue agents, information management, and identity, cleared before production."
+            }
           ]
         },
         "text": "An agent gateway lets a public servant lend their own permissions to an agent, which can then do what an application would, without new code. Anything a ministry builds passes the same automated gates that keep software out of production until it is secure: the red and blue security agents, information management, and identity and access."
@@ -115,13 +134,34 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "The pendulum governments keep swinging" },
-    { "n": "02", "title": "A third model" },
-    { "n": "03", "title": "What makes it safe to build" },
-    { "n": "04", "title": "From centralizing delivery to centralizing governance" },
-    { "n": "05", "title": "The builder" },
-    { "n": "06", "title": "The inevitable model, or shadow IT" },
-    { "n": "07", "title": "A consultancy model, and an invitation" }
+    {
+      "n": "01",
+      "title": "The pendulum governments keep swinging"
+    },
+    {
+      "n": "02",
+      "title": "A third model"
+    },
+    {
+      "n": "03",
+      "title": "What makes it safe to build"
+    },
+    {
+      "n": "04",
+      "title": "From centralizing delivery to centralizing governance"
+    },
+    {
+      "n": "05",
+      "title": "The builder"
+    },
+    {
+      "n": "06",
+      "title": "The inevitable model, or shadow IT"
+    },
+    {
+      "n": "07",
+      "title": "A consultancy model, and an invitation"
+    }
   ],
   "blocks": [
     {

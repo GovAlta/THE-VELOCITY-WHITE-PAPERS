@@ -1,7 +1,7 @@
 {
   "id": "eujjc",
   "num": "14",
-  "sequence": "",
+  "sequence": "14 of 18",
   "tier": "Policy & People",
   "category": "paper",
   "title": "The Compression Problem",
@@ -13,8 +13,8 @@
     "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 18,
-  "status": "Draft",
+  "reading_min": 25,
+  "status": "Published",
   "tags": [
     "compression",
     "hierarchy",
@@ -33,7 +33,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/eujjc.mp3"
+    "src": "public/audio/en/eujjc.mp3",
+    "duration_sec": 1505
   },
   "tldr_presentation": {
     "id": "eujjc-tldr",

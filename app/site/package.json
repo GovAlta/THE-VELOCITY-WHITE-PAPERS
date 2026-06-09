@@ -14,6 +14,7 @@
     "generate:audio": "node scripts/generate-audio.mjs",
     "generate:images": "node scripts/generate-images.mjs",
     "generate:all": "node scripts/generate-audio.mjs && node scripts/generate-images.mjs",
+    "measure:audio": "node scripts/measure-audio.mjs",
     "gen:image": "node scripts/gen-image.mjs",
     "gen:audio": "node scripts/gen-audio.mjs",
     "eval": "node scripts/evals/index.mjs",

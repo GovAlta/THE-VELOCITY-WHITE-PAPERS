@@ -36,6 +36,18 @@
           const numbered = this.papers.filter(p => /^\d+$/.test(String(p.num))).length;
           base[0] = { ...base[0], v: String(numbered) };
         }
+        /* Listening-time cards, computed live from the measured narration
+           durations (data/papers.json listen_sec, written by measure-audio). */
+        const narrated = this.published.filter(p => p.listen_sec);
+        const totalSec = narrated.reduce((a, p) => a + (p.listen_sec || 0), 0);
+        if (totalSec) {
+          const fr = this.store.locale === 'fr';
+          const hrs = Math.floor(totalSec / 3600), mins = Math.round((totalSec % 3600) / 60);
+          const total = hrs ? (hrs + ' h ' + mins + ' min') : (mins + ' min');
+          const avg = Math.max(1, Math.round(totalSec / 60 / narrated.length));
+          base.push({ k: fr ? "Temps d'écoute" : 'Listening time', v: total, sub: fr ? 'de narration' : 'of narration' });
+          base.push({ k: fr ? 'Par livre' : 'Per paper', v: avg + ' min', sub: fr ? 'en moyenne' : 'on average' });
+        }
         return base;
       },
     },

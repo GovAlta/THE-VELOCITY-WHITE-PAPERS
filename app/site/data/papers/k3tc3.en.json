@@ -1,7 +1,7 @@
 {
   "id": "k3tc3",
   "num": "10",
-  "sequence": "",
+  "sequence": "10 of 18",
   "tier": "Technical",
   "category": "paper",
   "title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
@@ -14,7 +14,7 @@
   ],
   "published": null,
   "reading_min": 18,
-  "status": "Draft",
+  "status": "Published",
   "tags": [
     "ai-factory",
     "velocity",
@@ -34,7 +34,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/k3tc3.mp3"
+    "src": "public/audio/en/k3tc3.mp3",
+    "duration_sec": 1079
   },
   "tldr_presentation": {
     "id": "k3tc3-tldr",

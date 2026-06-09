@@ -1,7 +1,7 @@
 {
   "id": "oxj36",
   "num": "13",
-  "sequence": "",
+  "sequence": "13 sur 18",
   "tier": "Policy & People",
   "category": "paper",
   "title": "Instaurer une culture de bâtisseurs",
@@ -13,8 +13,8 @@
     "Technologie et Innovation"
   ],
   "published": null,
-  "reading_min": 16,
-  "status": "Draft",
+  "reading_min": 13,
+  "status": "Published",
   "tags": [
     "builder-culture",
     "democratization",
@@ -58,9 +58,18 @@
         "caption": "Le balancier, et une troisième option",
         "visual_config": {
           "items": [
-            { "label": "Centralisé", "desc": "Échelle et cohérence, payées par un goulot d'étranglement." },
-            { "label": "Décentralisé", "desc": "Autonomie et rapidité, payées par la duplication et le risque." },
-            { "label": "Hybride augmenté par l'IA", "desc": "Construction aux extrémités, protection et règles au centre." }
+            {
+              "label": "Centralisé",
+              "desc": "Échelle et cohérence, payées par un goulot d'étranglement."
+            },
+            {
+              "label": "Décentralisé",
+              "desc": "Autonomie et rapidité, payées par la duplication et le risque."
+            },
+            {
+              "label": "Hybride augmenté par l'IA",
+              "desc": "Construction aux extrémités, protection et règles au centre."
+            }
           ]
         },
         "text": "La centralisation achète l'économie d'échelle et la cohérence au prix d'un goulot d'étranglement. La décentralisation achète l'autonomie au prix de la duplication et d'une sécurité inégale. L'IA introduit un troisième modèle : garder au centre les fonctions qui doivent rester uniformes, et laisser les ministères construire leurs propres solutions sur des outils encadrés."
@@ -73,9 +82,18 @@
         "caption": "Accès délégué, et barrières automatisées",
         "visual_config": {
           "items": [
-            { "label": "Accès délégué", "desc": "Un agent n'agit que dans les limites des permissions qu'une personne détient déjà." },
-            { "label": "Codage au feeling", "desc": "Un spécialiste décrit le système; les outils le construisent." },
-            { "label": "Vérifications automatisées", "desc": "Agents rouges et bleus, gestion de l'information et identité, validés avant la production." }
+            {
+              "label": "Accès délégué",
+              "desc": "Un agent n'agit que dans les limites des permissions qu'une personne détient déjà."
+            },
+            {
+              "label": "Codage au feeling",
+              "desc": "Un spécialiste décrit le système; les outils le construisent."
+            },
+            {
+              "label": "Vérifications automatisées",
+              "desc": "Agents rouges et bleus, gestion de l'information et identité, validés avant la production."
+            }
           ]
         },
         "text": "Une passerelle d'agents permet à un fonctionnaire de prêter ses propres permissions à un agent, qui peut alors faire ce que ferait une application, sans nouveau code. Tout ce qu'un ministère construit franchit les mêmes barrières automatisées qui empêchent un logiciel d'atteindre la production avant qu'il soit sécurisé : les agents de sécurité rouge et bleu, la gestion de l'information, ainsi que l'identité et l'accès."
@@ -115,13 +133,34 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "Le balancier que les gouvernements ne cessent de faire osciller" },
-    { "n": "02", "title": "Un troisième modèle" },
-    { "n": "03", "title": "Ce qui rend la construction sûre" },
-    { "n": "04", "title": "De la centralisation de la prestation à la centralisation de la gouvernance" },
-    { "n": "05", "title": "Le bâtisseur" },
-    { "n": "06", "title": "Le modèle inévitable, ou l'informatique fantôme" },
-    { "n": "07", "title": "Un modèle de conseil, et une invitation" }
+    {
+      "n": "01",
+      "title": "Le balancier que les gouvernements ne cessent de faire osciller"
+    },
+    {
+      "n": "02",
+      "title": "Un troisième modèle"
+    },
+    {
+      "n": "03",
+      "title": "Ce qui rend la construction sûre"
+    },
+    {
+      "n": "04",
+      "title": "De la centralisation de la prestation à la centralisation de la gouvernance"
+    },
+    {
+      "n": "05",
+      "title": "Le bâtisseur"
+    },
+    {
+      "n": "06",
+      "title": "Le modèle inévitable, ou l'informatique fantôme"
+    },
+    {
+      "n": "07",
+      "title": "Un modèle de conseil, et une invitation"
+    }
   ],
   "blocks": [
     {

@@ -1,7 +1,7 @@
 {
   "id": "yu5k9",
   "num": "15",
-  "sequence": "",
+  "sequence": "15 sur 18",
   "tier": "Policy & People",
   "category": "paper",
   "title": "Mesurer l'échec et la réussite",
@@ -13,8 +13,8 @@
     "Technologie et Innovation"
   ],
   "published": null,
-  "reading_min": 13,
-  "status": "Draft",
+  "reading_min": 7,
+  "status": "Published",
   "tags": [
     "measurement",
     "success-criteria",
@@ -58,9 +58,18 @@
         "caption": "Trois mesures",
         "visual_config": {
           "items": [
-            { "label": "État de préparation", "desc": "L'organisation peut-elle porter le changement? Éducation, sécurité, autosuffisance, gouvernance." },
-            { "label": "Santé des systèmes", "desc": "Le parc devient-il plus sain? Moins de vulnérabilités, un arriéré réduit, moins d'applications." },
-            { "label": "Coût", "desc": "La valeur croît-elle plus vite que le coût, à l'échelle de l'ensemble du gouvernement?" }
+            {
+              "label": "État de préparation",
+              "desc": "L'organisation peut-elle porter le changement? Éducation, sécurité, autosuffisance, gouvernance."
+            },
+            {
+              "label": "Santé des systèmes",
+              "desc": "Le parc devient-il plus sain? Moins de vulnérabilités, un arriéré réduit, moins d'applications."
+            },
+            {
+              "label": "Coût",
+              "desc": "La valeur croît-elle plus vite que le coût, à l'échelle de l'ensemble du gouvernement?"
+            }
           ]
         },
         "text": "Trois mesures, chacune choisie parce qu'il est difficile de la contester. L'état de préparation demande si l'organisation peut porter le changement. La santé des systèmes demande si le parc devient plus sain plutôt que plus malade. Le coût demande si la valeur croît plus vite que les dépenses, comptabilisée à l'échelle de l'ensemble du gouvernement et non d'un seul registre."
@@ -109,11 +118,26 @@
   },
   "embedded_presentations": [],
   "sections": [
-    { "n": "01", "title": "Le mauvais étalon" },
-    { "n": "02", "title": "État de préparation" },
-    { "n": "03", "title": "Santé des systèmes" },
-    { "n": "04", "title": "Le coût, bien comptabilisé" },
-    { "n": "05", "title": "La norme, et son partage" }
+    {
+      "n": "01",
+      "title": "Le mauvais étalon"
+    },
+    {
+      "n": "02",
+      "title": "État de préparation"
+    },
+    {
+      "n": "03",
+      "title": "Santé des systèmes"
+    },
+    {
+      "n": "04",
+      "title": "Le coût, bien comptabilisé"
+    },
+    {
+      "n": "05",
+      "title": "La norme, et son partage"
+    }
   ],
   "blocks": [
     {

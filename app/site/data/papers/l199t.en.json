@@ -1,7 +1,7 @@
 {
   "id": "l199t",
   "num": "07",
-  "sequence": "7 of 8",
+  "sequence": "7 of 18",
   "tier": "Technical",
   "category": "paper",
   "title": "Red, Blue, Green, and Yellow Agents",
@@ -29,7 +29,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/l199t.mp3"
+    "src": "public/audio/en/l199t.mp3",
+    "duration_sec": 624
   },
   "tldr_presentation": {
     "id": "l199t-tldr",

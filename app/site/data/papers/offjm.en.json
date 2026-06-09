@@ -1,7 +1,7 @@
 {
   "id": "offjm",
   "num": "04",
-  "sequence": "4 of 8",
+  "sequence": "4 of 18",
   "tier": "Technical",
   "title": "Git Insights Ministry",
   "subtitle": "From knowing the estate to rebuilding it: synthesizing thousands of findings into one modular, government-owned architecture.",
@@ -29,7 +29,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/offjm.mp3"
+    "src": "public/audio/en/offjm.mp3",
+    "duration_sec": 422
   },
   "tldr_presentation": {
     "id": "offjm-tldr",

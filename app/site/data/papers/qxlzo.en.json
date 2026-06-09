@@ -1,7 +1,7 @@
 {
   "id": "qxlzo",
   "num": "11",
-  "sequence": "",
+  "sequence": "11 of 18",
   "tier": "Technical",
   "category": "paper",
   "title": "The Agentic Technology Stack",
@@ -13,8 +13,8 @@
     "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 11,
-  "status": "Draft",
+  "reading_min": 10,
+  "status": "Published",
   "tags": [
     "tech-stack",
     "cloud",
@@ -34,7 +34,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/qxlzo.mp3"
+    "src": "public/audio/en/qxlzo.mp3",
+    "duration_sec": 596
   },
   "tldr_presentation": {
     "id": "qxlzo-tldr",

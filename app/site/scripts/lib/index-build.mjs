@@ -77,6 +77,10 @@ export function computeIndex() {
     if (of && !(of._meta && of._meta.placeholder)) {
       entry.i18n = { [other]: { title: of.title || '', subtitle: of.subtitle || '', abstract: of.abstract || '' } };
     }
+    /* Narration length (seconds) from the primary-locale longform audio, so the
+       home page can total the collection's listening time. */
+    const dur = pf.audio && pf.audio.duration_sec;
+    if (dur) entry.listen_sec = dur;
     return entry;
   });
 

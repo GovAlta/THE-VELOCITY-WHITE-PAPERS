@@ -1,7 +1,7 @@
 {
   "id": "mwo98",
   "num": "02",
-  "sequence": "2 of 8",
+  "sequence": "2 of 18",
   "tier": "Conceptual",
   "title": "The Cyber Imperative",
   "subtitle": "As external threats grow daily, AI-driven modernization will enable a stronger cybersecurity defense.",
@@ -11,7 +11,7 @@
     "Ministry of Technology and Innovation"
   ],
   "published": "2026-06-16",
-  "reading_min": 8,
+  "reading_min": 10,
   "status": "Published",
   "tags": [
     "cybersecurity",
@@ -29,7 +29,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/mwo98.mp3"
+    "src": "public/audio/en/mwo98.mp3",
+    "duration_sec": 573
   },
   "tldr_presentation": {
     "id": "mwo98-tldr",

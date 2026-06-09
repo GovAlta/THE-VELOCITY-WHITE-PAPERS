@@ -1,7 +1,7 @@
 {
   "id": "l5wsi",
   "num": "16",
-  "sequence": "",
+  "sequence": "16 of 18",
   "tier": "Technical",
   "category": "paper",
   "title": "Technical: Anatomy of a Template",
@@ -13,8 +13,8 @@
     "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 18,
-  "status": "Draft",
+  "reading_min": 13,
+  "status": "Published",
   "tags": [
     "template",
     "harness",
@@ -33,7 +33,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/l5wsi.mp3"
+    "src": "public/audio/en/l5wsi.mp3",
+    "duration_sec": 771
   },
   "tldr_presentation": {
     "id": "l5wsi-tldr",

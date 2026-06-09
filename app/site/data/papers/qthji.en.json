@@ -1,7 +1,7 @@
 {
   "id": "qthji",
   "num": "08",
-  "sequence": "",
+  "sequence": "8 of 18",
   "tier": "Technical",
   "category": "paper",
   "title": "The AI Factory: Design and Ideation (Pronghorn)",
@@ -13,7 +13,7 @@
   ],
   "published": null,
   "reading_min": 17,
-  "status": "Draft",
+  "status": "Published",
   "tags": [
     "ai-factory",
     "pronghorn",
@@ -32,7 +32,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/qthji.mp3"
+    "src": "public/audio/en/qthji.mp3",
+    "duration_sec": 1029
   },
   "tldr_presentation": {
     "id": "qthji-tldr",

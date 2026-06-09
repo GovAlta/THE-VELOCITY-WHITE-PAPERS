@@ -1,7 +1,7 @@
 {
   "id": "of1cj",
   "num": "17",
-  "sequence": "",
+  "sequence": "17 of 18",
   "tier": "Technical",
   "category": "paper",
   "title": "Technical: The Anti-Drift Harness",
@@ -13,8 +13,8 @@
     "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 14,
-  "status": "Draft",
+  "reading_min": 12,
+  "status": "Published",
   "tags": [
     "anti-drift",
     "harness",
@@ -32,7 +32,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/of1cj.mp3"
+    "src": "public/audio/en/of1cj.mp3",
+    "duration_sec": 712
   },
   "tldr_presentation": {
     "id": "of1cj-tldr",

@@ -1,7 +1,7 @@
 {
   "id": "dt725",
   "num": "12",
-  "sequence": "",
+  "sequence": "12 of 18",
   "tier": "Policy & People",
   "category": "paper",
   "title": "The AI Academy: Investing in People",
@@ -14,7 +14,7 @@
   ],
   "published": null,
   "reading_min": 21,
-  "status": "Draft",
+  "status": "Published",
   "tags": [
     "ai-academy",
     "training",
@@ -34,7 +34,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/dt725.mp3"
+    "src": "public/audio/en/dt725.mp3",
+    "duration_sec": 1288
   },
   "tldr_presentation": {
     "id": "dt725-tldr",

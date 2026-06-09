@@ -1,7 +1,7 @@
 {
   "id": "cux4h",
   "num": "01",
-  "sequence": "1 of 8",
+  "sequence": "1 of 18",
   "tier": "Conceptual",
   "title": "The Two-Billion-Dollar Ship of Theseus",
   "subtitle": "Alberta's technical estate has outgrown the human capacity to manage it. AI provides a meaningful path forward to modernization at speed.",
@@ -29,7 +29,8 @@
     "style_kind": "cover"
   },
   "audio": {
-    "src": "public/audio/en/cux4h.mp3"
+    "src": "public/audio/en/cux4h.mp3",
+    "duration_sec": 857
   },
   "tldr_presentation": {
     "id": "cux4h-tldr",

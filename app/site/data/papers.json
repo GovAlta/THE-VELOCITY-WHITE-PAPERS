@@ -3,7 +3,7 @@
     {
       "id": "cux4h",
       "num": "01",
-      "sequence": "1 of 8",
+      "sequence": "1 of 18",
       "tier": "Conceptual",
       "title": "The Two-Billion-Dollar Ship of Theseus",
       "subtitle": "Alberta's technical estate has outgrown the human capacity to manage it. AI provides a meaningful path forward to modernization at speed.",
@@ -36,12 +36,13 @@
           "subtitle": "Le parc technologique a dépassé la capacité humaine de le gérer, et le reconstruire signifie le reconstruire pendant qu'il reste en mer.",
           "abstract": "Le parc technologique que supervise le gouvernement de l'Alberta a dépassé le point où l'effort humain seul peut le maintenir à jour. Quarante ans de code, d'infrastructure, de règles d'affaires et de dépendances aux fournisseurs coûtent plus cher à porter chaque année, et les vulnérabilités connues augmentent plus vite qu'elles ne peuvent être corrigées. Moderniser le parc au moyen de projets conventionnels prendrait des générations. Ce document explique pourquoi ce calcul ne tient pas, pourquoi un effectif jumelant humains et IA constitue la voie à suivre, et ce que le reste de la collection démontrera."
         }
-      }
+      },
+      "listen_sec": 857
     },
     {
       "id": "mwo98",
       "num": "02",
-      "sequence": "2 of 8",
+      "sequence": "2 of 18",
       "tier": "Conceptual",
       "title": "The Cyber Imperative",
       "subtitle": "As external threats grow daily, AI-driven modernization will enable a stronger cybersecurity defense.",
@@ -51,7 +52,7 @@
         "Ministry of Technology and Innovation"
       ],
       "published": "2026-06-16",
-      "reading_min": 8,
+      "reading_min": 10,
       "status": "Published",
       "tags": [
         "cybersecurity",
@@ -75,12 +76,13 @@
           "subtitle": "Alors que les menaces externes croissent chaque jour, la modernisation pilotée par l'IA permettra une défense en cybersécurité plus solide.",
           "abstract": "L'Alberta exploite l'un des programmes de cybersécurité les plus solides au Canada, et au cours des 24 derniers mois, elle a tenu la ligne face à une montée constante des attaques. Le siège à l'extérieur s'intensifie : les contrôles cybernétiques bloquent désormais 189 millions de tentatives de connexion par jour, soit plus du double d'il y a deux ans, et l'IA génère des exploits à une vitesse fulgurante. Les murailles elles-mêmes vieillissent : une grande partie du parc fonctionne sur des technologies qui sortent du soutien des fournisseurs. La chaîne d'approvisionnement logicielle est devenue une cible de premier plan, et un seul incident peut entraîner un lourd coût financier et opérationnel. Ce document démontre que la modernisation pilotée par l'IA constitue une exigence de sécurité."
         }
-      }
+      },
+      "listen_sec": 573
     },
     {
       "id": "bbkac",
       "num": "03",
-      "sequence": "3 of 8",
+      "sequence": "3 of 18",
       "tier": "Technical",
       "title": "Git Insights",
       "subtitle": "We pointed AI at the whole of Alberta's code estate to get the ground truth. Here is how it works and what it found.",
@@ -90,7 +92,7 @@
         "Ministry of Technology and Innovation"
       ],
       "published": "2026-06-16",
-      "reading_min": 14,
+      "reading_min": 13,
       "status": "Published",
       "tags": [
         "git-insights",
@@ -114,12 +116,13 @@
           "subtitle": "Nous avons braqué l'IA sur l'ensemble du parc de code de l'Alberta afin d'en établir la vérité de terrain. Voici comment cela fonctionne et ce que nous y avons découvert.",
           "abstract": "L'Alberta conserve ses actifs de code dans GitHub Enterprise, mais le parc avait dégénéré en un bourbier où les prototypes côtoyaient la production sans qu'aucun jeu de données ne soit relié au suivant. La haute direction ne pouvait obtenir de réponse définitive sur ce que nous exploitons ni sur son état de santé. Nous avons donc bâti Git Insights, un outil agentique qui balaie récursivement l'ensemble du parc et rend compte de la vérité de terrain de chaque dépôt. Cinquante agents ont lu 466 millions de lignes de code en une vingtaine d'heures, cartographiant le paysage numérique et les capacités du gouvernement. Ce document explique le problème, montre en détail le fonctionnement de l'outil et révèle ce que les balayages ont mis au jour. L'analyse a fait ressortir les langages et les cadriciels que nous n'avions jamais dénombrés, les dépôts dépourvus de tests ou de documentation, les habitudes des contributeurs qui dégradent discrètement la sécurité, et le tout premier point de référence réel comparant l'IA aux humains sur notre propre code."
         }
-      }
+      },
+      "listen_sec": 779
     },
     {
       "id": "offjm",
       "num": "04",
-      "sequence": "4 of 8",
+      "sequence": "4 of 18",
       "tier": "Technical",
       "title": "Git Insights Ministry",
       "subtitle": "From knowing the estate to rebuilding it: synthesizing thousands of findings into one modular, government-owned architecture.",
@@ -153,12 +156,13 @@
           "subtitle": "De la connaissance du parc à sa reconstruction : synthétiser des milliers de constats en une seule architecture modulaire, propriété du gouvernement.",
           "abstract": "Git Insights nous a dit la vérité sur chaque dépôt, un à la fois. Mais savoir ce qui ne va pas n'équivaut pas à savoir comment reconstruire. Git Insights Ministry est la deuxième lentille. Il lit tout un ministère de code à la fois, soit environ 200 dépôts, et détermine tout ce que ces systèmes font réellement. L'IA propose ensuite une façon de reconstruire ces capacités sous forme de modules modernes, propriété du gouvernement, chacun construit une seule fois, sans rien dupliquer. Dans un ministère de l'Alberta, 185 applications peuvent être ramenées à 16 modules réutilisables. Ce document montre comment l'outil fonctionne, ce qu'il offre à un décideur, et comment l'architecture partagée du gouvernement est reconstruite."
         }
-      }
+      },
+      "listen_sec": 422
     },
     {
       "id": "zgym1",
       "num": "05",
-      "sequence": "5 of 8",
+      "sequence": "5 of 18",
       "tier": "Conceptual",
       "title": "The Four Approaches to AI Modernization",
       "subtitle": "From repairing one system at a time to dissolving the application altogether: the four routes by which a government rebuilds itself at speed.",
@@ -168,7 +172,7 @@
         "Ministry of Technology and Innovation"
       ],
       "published": "2026-06-16",
-      "reading_min": 12,
+      "reading_min": 13,
       "status": "Published",
       "tags": [
         "modernization",
@@ -193,12 +197,13 @@
           "subtitle": "De la réparation d'un système à la fois à la dissolution complète de l'application : les quatre voies par lesquelles un gouvernement se reconstruit à grande vitesse.",
           "abstract": "Nous connaissons le parc, et nous savons qu'il ne peut pas être réparé à l'ancienne. La question à laquelle ce document répond est : comment. Il existe quatre façons de moderniser un système gouvernemental au moyen de l'IA, et elles gagnent en ambition. Le Garage IA répare et remplace les systèmes un à la fois. L'Usine IA construit des applications entièrement neuves que le gouvernement possède pleinement. La rationalisation regroupe tout un ministère de systèmes qui se chevauchent en un petit ensemble de modules modernes. Et le Gouvernement 3.0 dissout l'application elle-même, laissant des agents d'IA travailler directement sur des données encadrées et générer l'interface dont une personne a besoin sur le moment. Aucune approche à elle seule ne couvre tout; nous avons donc besoin des quatre. Ensemble, elles permettent à un gouvernement d'atteindre une réduction d'environ quatre-vingt-quinze pour cent du coût et du temps de ses logiciels, à l'intérieur d'un seul mandat plutôt que sur la plus grande partie d'un siècle."
         }
-      }
+      },
+      "listen_sec": 763
     },
     {
       "id": "p7p2k",
       "num": "06",
-      "sequence": "6 of 8",
+      "sequence": "6 of 18",
       "tier": "Technical",
       "title": "The Well-Built Harness",
       "subtitle": "How the public service can build and ship enterprise-grade software at speed, without lowering the bar.",
@@ -236,12 +241,13 @@
           "subtitle": "Comment la fonction publique peut concevoir et livrer des logiciels de qualité entreprise à grande vitesse, sans abaisser ses exigences.",
           "abstract": "Les outils de codage comme Cursor, Lovable et Claude Code produisent des applications qui, souvent, ne comportent pas les contrôles qu'exige une fonction publique. Les agents d'IA sont fréquemment des témoins peu fiables de leur propre rendement. Des instructions claires, des tests et des modèles aident à surmonter ces défis. L'Alberta a élaboré et publié une collection de fichiers appelée « harnais », qui définit clairement vos attentes envers l'IA et permet d'obtenir des résultats de qualité entreprise à la vitesse d'une application « codée à l'instinct »."
         }
-      }
+      },
+      "listen_sec": 944
     },
     {
       "id": "l199t",
       "num": "07",
-      "sequence": "7 of 8",
+      "sequence": "7 of 18",
       "tier": "Technical",
       "title": "Red, Blue, Green, and Yellow Agents",
       "subtitle": "Four review agents, bundled into the harness, that check every application for quality, consistency, and security before it ships.",
@@ -274,12 +280,13 @@
           "subtitle": "Quatre agents de révision, intégrés au harnais, qui vérifient chaque application sur le plan de la qualité, de la cohérence et de la sécurité avant sa mise en service.",
           "abstract": "Si l'IA écrit et répare le code, il faut bien que quelque chose vérifie l'IA. Quatre agents de révision se trouvent à l'intérieur du harnais, chacun surnommé d'après une couleur. Le vert vérifie la qualité et l'hygiène du code. Le jaune vérifie la façon dont les textes se lisent. Le rouge attaque l'application comme le ferait une personne de l'extérieur. Le bleu la défend, évalue le code par rapport à une norme de sécurité internationale et transforme les éléments de preuve en un verdict sur lequel un décideur peut s'appuyer. Ces agents sont intégrés au harnais à titre de freins et contrepoids : un travail ne peut être considéré comme terminé tant qu'il n'a pas réussi. La sécurité et la qualité cessent d'être quelque chose que l'on poursuit après coup pour devenir des préoccupations de premier plan."
         }
-      }
+      },
+      "listen_sec": 624
     },
     {
       "id": "qthji",
       "num": "08",
-      "sequence": "",
+      "sequence": "8 of 18",
       "tier": "Technical",
       "title": "The AI Factory: Design and Ideation (Pronghorn)",
       "subtitle": "Project Pronghorn is the first of the factory's three stages. AI tools translate Ministry requirements into prototypes, artifacts, visual canvases, and project artifacts before the build process begins.",
@@ -290,7 +297,7 @@
       ],
       "published": null,
       "reading_min": 17,
-      "status": "Draft",
+      "status": "Published",
       "tags": [
         "ai-factory",
         "pronghorn",
@@ -316,12 +323,13 @@
           "subtitle": "Le projet Pronghorn constitue la première des trois étapes de l'usine. Les outils d'IA traduisent les exigences ministérielles en prototypes, en artéfacts, en canevas visuels et en livrables de projet avant le début du processus de construction.",
           "abstract": "Une application de qualité bâtie par l'IA exige la présence d'exigences, de normes et d'architectures clairement définies. Ces artéfacts essentiels sont souvent escamotés dans le processus de développement assisté par l'IA, car le personnel passe fréquemment tout de suite à la création des composantes d'expérience utilisateur d'une application, laissant à l'IA des décisions importantes en matière de sécurité et de technique. Sans orientation claire, les agents d'IA omettent fréquemment des fonctions et des contrôles essentiels. L'Alberta a conçu le projet Pronghorn pour permettre au personnel technique et non technique de collaborer afin de définir des hypothèses claires, des prototypes fonctionnels, des exigences d'affaires et un canevas interactif de conception d'architecture. Ces artéfacts permettent à la livraison fondée sur l'IA de partir du bon pied et assurent la cohérence d'un bout à l'autre, tout en fournissant un point de référence pour évaluer le produit final."
         }
-      }
+      },
+      "listen_sec": 1029
     },
     {
       "id": "uwpxr",
       "num": "09",
-      "sequence": "8 of 8",
+      "sequence": "9 of 18",
       "tier": "Technical",
       "title": "The AI Factory: Orchestration and Observation (Nexus)",
       "subtitle": "A secure cloud sandbox where agents work with autonomy, and every action stays observable and auditable as they go.",
@@ -357,12 +365,13 @@
           "subtitle": "Un bac à sable infonuagique sécurisé où les agents travaillent en autonomie, et où chaque action demeure observable et vérifiable à mesure qu'ils progressent.",
           "abstract": "Accorder de l'autonomie aux agents leur permet de résoudre des problèmes de manière nouvelle et créative. Pour le faire de façon sécuritaire dans un environnement gouvernemental, l'Alberta a conçu un outil sur mesure appelé Nexus qui rend les actions des agents observables pendant qu'ils travaillent. Nexus offre un bac à sable sécurisé où les agents travaillent de façon indépendante ou en groupe sur des problèmes difficiles qui n'ont pas de solution claire à l'avance. Comme chaque action posée par un agent dans cet espace technique demeure visible et vérifiable, l'autonomie peut être accordée en toute sécurité. Une application de calibre entreprise peut désormais être déployée de façon sécurisée dans Nexus en quelques minutes. Faire évoluer la plateforme pour soutenir une orchestration plus poussée permettra de réaliser les quatre stratégies de modernisation fondées sur l'IA et ouvrira de nouvelles portes pour les opérations d'agents autonomes."
         }
-      }
+      },
+      "listen_sec": 911
     },
     {
       "id": "k3tc3",
       "num": "10",
-      "sequence": "",
+      "sequence": "10 of 18",
       "tier": "Technical",
       "title": "The AI Factory: Measuring Project Delivery (The Velocity Game Engine)",
       "subtitle": "A game-based way to run and measure delivery when an AI agent is a full member of the team, and traditional estimation no longer works.",
@@ -374,7 +383,7 @@
       ],
       "published": null,
       "reading_min": 18,
-      "status": "Draft",
+      "status": "Published",
       "tags": [
         "ai-factory",
         "velocity",
@@ -402,12 +411,13 @@
           "subtitle": "Une façon ludique de mener et de mesurer la livraison lorsqu'un agent d'IA est un membre à part entière de l'équipe et que l'estimation traditionnelle ne fonctionne plus.",
           "abstract": "Velocity est la troisième étape de l'usine d'IA de l'Alberta, après Pronghorn et Nexus. Il s'agit d'un outil de projet à code source ouvert, conçu comme un jeu, qui fait d'un agent d'IA un membre à part entière de l'équipe et qui mesure la livraison réelle maintenant que l'estimation ne fonctionne plus. Le travail gravit huit étapes, gagnant des points en avançant et en perdant lorsqu'il recule."
         }
-      }
+      },
+      "listen_sec": 1079
     },
     {
       "id": "qxlzo",
       "num": "11",
-      "sequence": "",
+      "sequence": "11 of 18",
       "tier": "Technical",
       "title": "The Agentic Technology Stack",
       "subtitle": "The cloud platforms, models, gateways, and controls behind Alberta's agentic workloads, and the principles for choosing them.",
@@ -418,8 +428,8 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 11,
-      "status": "Draft",
+      "reading_min": 10,
+      "status": "Published",
       "tags": [
         "tech-stack",
         "cloud",
@@ -447,12 +457,13 @@
           "subtitle": "Les plateformes infonuagiques, les modèles, les passerelles et les contrôles qui sous-tendent les charges de travail agentiques de l'Alberta, et les principes pour les choisir.",
           "abstract": "Dans la mise en œuvre de sa stratégie en matière d'IA, l'Alberta a mis à l'essai une vaste gamme d'outils de codage agentique et de plateformes d'IA générative. Le présent document expose la pile technologique actuelle et les principes qui la sous-tendent : le bon modèle, dans le bon environnement, pour le bon cas d'usage, avec une chaîne d'approvisionnement délibérément diversifiée et des couches d'abstraction qui préviennent la dépendance à un fournisseur. L'Alberta exploite un environnement hybride réparti sur les nuages de Google, d'Azure et d'AWS, une grappe de calcul sur place et trois centres de données hérités, en accédant aux modèles par l'entremise d'AWS Bedrock, de la Google Agent Platform et d'Azure AI Studio. L'information est classifiée d'« non classifié » jusqu'à « Protégé C », les données sensibles sont contrôlées au Canada et le calcul souverain est en cours de développement. L'usage est encadré par la politique d'utilisation de l'IA de l'Alberta, son cadre de gouvernance de l'IA et la Protection of Privacy Act. Le document aborde également les contrôles de sécurité et de chaîne d'approvisionnement entourant les agents, ainsi que le coût et l'échelle de l'exploitation de cette pile. La pile devrait évoluer au fil des outils."
         }
-      }
+      },
+      "listen_sec": 596
     },
     {
       "id": "dt725",
       "num": "12",
-      "sequence": "",
+      "sequence": "12 of 18",
       "tier": "Policy & People",
       "title": "The AI Academy: Investing in People",
       "subtitle": "A graduated, open-source program that trains public servants to work with artificial intelligence, from prompting through building enterprise-grade applications.",
@@ -464,7 +475,7 @@
       ],
       "published": null,
       "reading_min": 21,
-      "status": "Draft",
+      "status": "Published",
       "tags": [
         "ai-academy",
         "training",
@@ -491,12 +502,13 @@
           "subtitle": "Un programme gradué et à code source ouvert qui forme les fonctionnaires à travailler avec l'intelligence artificielle, du dialogue par requêtes jusqu'à la création d'applications de calibre entreprise.",
           "abstract": "L'Académie de l'IA de l'Alberta est un programme de formation gradué qui prépare les fonctionnaires à travailler avec l'intelligence artificielle. Il est né du programme AI Maximalist, où une première cohorte d'environ soixante-cinq personnes bénévoles a révélé à la fois la demande pour une formation structurée et le large éventail de réactions devant une technologie nouvelle. Lancée en septembre 2025, l'Académie se déroule en trois niveaux : le dialogue par requêtes et les fondements d'un usage fiable de l'IA, les agents réutilisables pour le travail répétitif, et la création d'applications de calibre entreprise au moyen d'un harnais. Les cohortes comptent de soixante à plusieurs centaines de participants et traversent tous les échelons hiérarchiques. Le matériel de cours est publié ouvertement à albertaaiacademy.com. Ce document décrit les origines du programme, le principe centré sur l'humain autour duquel il a été conçu, sa structure à travers les trois niveaux, l'approche fondée sur les personas utilisée au niveau 3, et l'état d'esprit que l'Académie cherche à inculquer : qu'une adoption efficace de l'IA est une discipline de pratique persistante et vérifiée, plutôt qu'une mesure à optimiser."
         }
-      }
+      },
+      "listen_sec": 1288
     },
     {
       "id": "oxj36",
       "num": "13",
-      "sequence": "",
+      "sequence": "13 of 18",
       "tier": "Policy & People",
       "title": "Establishing a Builder Culture",
       "subtitle": "How agentic AI democratizes the building of government systems, while the fortress stays central.",
@@ -507,8 +519,8 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 16,
-      "status": "Draft",
+      "reading_min": 13,
+      "status": "Published",
       "tags": [
         "builder-culture",
         "democratization",
@@ -534,12 +546,13 @@
           "subtitle": "Comment l'IA agentique démocratise la construction des systèmes gouvernementaux, pendant que la forteresse demeure au centre.",
           "abstract": "Les gouvernements oscillent entre une prestation des TI centralisée et décentralisée, échangeant l'économie d'échelle et la cohérence contre l'autonomie et la rapidité; l'Alberta, à l'instar du Canada et de la Colombie-Britannique, exploite aujourd'hui un modèle centralisé. Ce modèle a permis d'économiser des dizaines de millions de dollars, et il ne peut livrer assez vite pour chaque ministère. L'IA agentique ouvre une troisième option : garder au centre les fonctions de la forteresse, soit la cybersécurité, l'identité, le réseau et les données, et renvoyer la construction des solutions aux personnes qui connaissent le travail. Ce document expose comment l'Alberta entend permettre une culture de bâtisseurs, où les experts de domaine créent leurs propres systèmes encadrés et vérifiés, et pourquoi l'autre option est une informatique fantôme non encadrée."
         }
-      }
+      },
+      "listen_sec": 771
     },
     {
       "id": "eujjc",
       "num": "14",
-      "sequence": "",
+      "sequence": "14 of 18",
       "tier": "Policy & People",
       "title": "The Compression Problem",
       "subtitle": "How hierarchy, communication, and human oversight must change in the AI age.",
@@ -550,8 +563,8 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 18,
-      "status": "Draft",
+      "reading_min": 25,
+      "status": "Published",
       "tags": [
         "compression",
         "hierarchy",
@@ -578,12 +591,13 @@
           "subtitle": "Comment la hiérarchie, la communication et la supervision humaine doivent changer à l'ère de l'IA.",
           "abstract": "Les organisations hiérarchiques existent pour résoudre un problème d'information. La réalité du terrain doit remonter jusqu'à la haute direction pour éclairer la prise de décision, et en chemin elle est compressée et divulguée de façon sélective. La pyramide est un algorithme de compression avec perte, antérieur au numérique. Les agents d'IA fonctionnent différemment et éliminent une grande partie de la taxe de temps et de verbosité qu'impose la hiérarchie humaine, bien qu'ils se heurtent à leurs propres limites de compression, fixées par des fenêtres de contexte finies. Pour capter ces gains, les organisations doivent reconcevoir la hiérarchie, faire évoluer les séances d'information du texte vers la simulation et l'interaction visuelle, et déplacer la supervision humaine de l'agent individuel vers le niveau du système."
         }
-      }
+      },
+      "listen_sec": 1505
     },
     {
       "id": "yu5k9",
       "num": "15",
-      "sequence": "",
+      "sequence": "15 of 18",
       "tier": "Policy & People",
       "title": "Measuring Failure and Success",
       "subtitle": "Why the right measure of an AI program is capability built, not dollars saved.",
@@ -594,8 +608,8 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 13,
-      "status": "Draft",
+      "reading_min": 7,
+      "status": "Published",
       "tags": [
         "measurement",
         "success-criteria",
@@ -621,12 +635,13 @@
           "subtitle": "Pourquoi la bonne mesure d'un programme d'IA est la capacité bâtie, et non les dollars économisés.",
           "abstract": "La plupart des organisations qui adoptent l'IA mesurent leur réussite en dollars économisés. L'Alberta la mesure autrement. L'objectif n'est pas d'accomplir le même travail avec moins de personnes, ce qui serait une folie, mais de bâtir une capacité et un effectif aptes à transformer la façon dont le gouvernement fonctionne, à un moment où la productivité du Canada est mise à rude épreuve et où la normalisation de l'IA en milieu de travail paraît inévitable. Au cours des dix-huit derniers mois, la province a été reconnue parmi les adoptants les plus innovants du secteur public en Amérique du Nord. Ce document présente les trois mesures que l'Alberta utilise pour juger si ce travail réussit : l'état de préparation, la santé des systèmes et le coût, comptabilisés à l'échelle de l'ensemble du gouvernement plutôt que d'un seul registre."
         }
-      }
+      },
+      "listen_sec": 419
     },
     {
       "id": "l5wsi",
       "num": "16",
-      "sequence": "",
+      "sequence": "16 of 18",
       "tier": "Technical",
       "title": "Technical: Anatomy of a Template",
       "subtitle": "A back-to-front walkthrough of the open-source application template that ships with the Well-Built Harness, and why the best specification is working code.",
@@ -637,8 +652,8 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 18,
-      "status": "Draft",
+      "reading_min": 13,
+      "status": "Published",
       "tags": [
         "template",
         "harness",
@@ -664,12 +679,13 @@
           "subtitle": "Une visite de bout en bout du gabarit d'application à code source ouvert livré avec le harnais bien construit, et pourquoi la meilleure spécification est du code qui fonctionne.",
           "abstract": "Le harnais bien construit est livré avec un gabarit d'application monodépôt pleine pile, composé d'un client frontal Vue 3 et d'un serveur Node.js / Express appuyé par une base de données PostgreSQL. Fournir un gabarit à un agent d'IA lui permet de bâtir rapidement des solutions valables de calibre entreprise. Ce gabarit de base contient tout ce dont vous avez besoin pour démarrer, y compris la sécurité, la journalisation et des contrôles de base."
         }
-      }
+      },
+      "listen_sec": 771
     },
     {
       "id": "of1cj",
       "num": "17",
-      "sequence": "",
+      "sequence": "17 of 18",
       "tier": "Technical",
       "title": "Technical: The Anti-Drift Harness",
       "subtitle": "How a set of automated helpers keeps every part of a growing codebase in agreement as an AI builds it, explained piece by piece.",
@@ -680,8 +696,8 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 14,
-      "status": "Draft",
+      "reading_min": 12,
+      "status": "Published",
       "tags": [
         "anti-drift",
         "harness",
@@ -707,12 +723,13 @@
           "subtitle": "Comment un ensemble d'aides automatisées garde toutes les parties d'une base de code en croissance en accord les unes avec les autres pendant qu'une IA la construit, expliqué pièce par pièce.",
           "abstract": "À mesure que les applications gagnent en complexité, des modifications apportées à une partie du code peuvent provoquer des bris ailleurs. Des changements à une fonctionnalité de l'interface peuvent se désynchroniser de l'API, des contrôleurs, de la base de données, du modèle de sécurité et de la documentation technique. Les agents d'IA ne sont pas, à eux seuls, assez rigoureux pour comprendre ou prévenir ces bris. Lorsque ces artéfacts se désynchronisent, on peut dire qu'il y a « dérive ». Ce document conceptuel explique le « harnais anti-dérive », un ensemble d'aides automatisées qui surveillent la dérive et signalent les problèmes à l'agent constructeur en temps réel."
         }
-      }
+      },
+      "listen_sec": 712
     },
     {
       "id": "xs7uh",
       "num": "18",
-      "sequence": "",
+      "sequence": "18 of 18",
       "tier": "Technical",
       "title": "Technical: The Canvas",
       "subtitle": "An interactive solution landscape of the key white paper concepts.",
@@ -723,8 +740,8 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 10,
-      "status": "Draft",
+      "reading_min": 2,
+      "status": "Published",
       "tags": [
         "canvas",
         "visualization",
@@ -752,7 +769,8 @@
           "subtitle": "Un paysage de solutions interactif présentant les concepts clés du livre blanc.",
           "abstract": "Ce document réunit les différentes approches du livre blanc en une série de canevas interactifs. Chaque scène est un diagramme bilingue, téléchargeable et piloté par les données, doté d'agents animés et d'une description orale, et chacune peut être intégrée seule dans le document dont elle provient. Parcourez-le, zoomez et emportez l'architecture pour vos propres développements."
         }
-      }
+      },
+      "listen_sec": 109
     }
   ],
   "categories": [

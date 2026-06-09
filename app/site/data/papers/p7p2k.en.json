@@ -1,7 +1,7 @@
 {
   "id": "p7p2k",
   "num": "06",
-  "sequence": "6 of 8",
+  "sequence": "6 of 18",
   "tier": "Technical",
   "title": "The Well-Built Harness",
   "subtitle": "How the public service can build and ship enterprise-grade software at speed, without lowering the bar.",
@@ -34,7 +34,7 @@
   },
   "audio": {
     "src": "public/audio/en/p7p2k.mp3",
-    "duration_sec": null,
+    "duration_sec": 944,
     "script": "transcripts/wp-08.md"
   },
   "tldr_presentation": {
