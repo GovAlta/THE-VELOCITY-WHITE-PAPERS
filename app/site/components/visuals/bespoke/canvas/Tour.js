@@ -21,6 +21,11 @@
       narrative() { return C.t(this.scene.narrative, this.loc); },
       audioSrc() { return 'public/audio/' + this.loc + '/canvas/' + this.scene.id + '.mp3'; },
       readLabel() { return this.loc === 'fr' ? 'Lire le livre →' : 'Read the source paper →'; },
+      L() {
+        return this.loc === 'fr'
+          ? { download: 'Télécharger', downloadTitle: 'Télécharger cette architecture en JSON', listen: 'Écouter', pause: 'Pause', expand: 'Plein écran', close: 'Fermer', prev: 'Scène précédente', next: 'Scène suivante', describe: 'Décrire ce canevas', hide: 'Masquer la description' }
+          : { download: 'Download', downloadTitle: 'Download this architecture as JSON', listen: 'Listen', pause: 'Pause', expand: 'Expand', close: 'Close', prev: 'Previous scene', next: 'Next scene', describe: 'Describe this canvas', hide: 'Hide description' };
+      },
     },
     watch: { idx() { this.pauseAudio(); } },
     created() { C.loadData().then(d => { this.dataset = d; }).catch(() => {}); },
@@ -55,9 +60,9 @@
               <button v-for="(s, i) in scenes" :key="s.id" class="cv-chip" :class="{ active: i === idx }" @click="go(i)" :aria-selected="i === idx">{{ tt(s.title) }}</button>
             </div>
             <span class="cv-spacer"></span>
-            <button class="cv-btn" @click="download" title="Download this architecture as JSON">Download</button>
-            <button class="cv-btn" @click="toggleAudio">{{ playing ? 'Pause' : 'Listen' }}</button>
-            <button class="cv-btn cv-primary" @click="toggleFs">{{ fs ? 'Close' : 'Expand' }}</button>
+            <button class="cv-btn" @click="download" :title="L.downloadTitle">{{ L.download }}</button>
+            <button class="cv-btn" @click="toggleAudio">{{ playing ? L.pause : L.listen }}</button>
+            <button class="cv-btn cv-primary" @click="toggleFs">{{ fs ? L.close : L.expand }}</button>
           </div>
           <div class="cv-body">
             <canvas-scene :scene="scene.id" :key="scene.id + ':' + (fs ? 'fs' : 'in')" />
@@ -67,12 +72,12 @@
               <span class="cv-meta-title">{{ tt(scene.title) }}</span>
               <span class="cv-meta-paper" v-if="scene.paper">· <a :href="'/paper/' + scene.paper">{{ readLabel }}</a></span>
               <span class="cv-spacer"></span>
-              <button class="cv-btn" @click="prev" aria-label="Previous scene">‹</button>
+              <button class="cv-btn" @click="prev" :aria-label="L.prev">‹</button>
               <span style="font-size:11px;color:var(--ink-50);align-self:center;">{{ idx + 1 }} / {{ scenes.length }}</span>
-              <button class="cv-btn" @click="next" aria-label="Next scene">›</button>
+              <button class="cv-btn" @click="next" :aria-label="L.next">›</button>
             </div>
             <div class="cv-meta-blurb">{{ tt(scene.blurb) }}</div>
-            <button class="cv-btn" style="margin-top:8px;" @click="showNarr = !showNarr">{{ showNarr ? 'Hide description' : 'Describe this canvas' }}</button>
+            <button class="cv-btn" style="margin-top:8px;" @click="showNarr = !showNarr">{{ showNarr ? L.hide : L.describe }}</button>
             <p class="cv-narr" v-if="showNarr">{{ narrative }}</p>
             <audio ref="audio" :src="audioSrc" @ended="playing = false" preload="none"></audio>
           </div>

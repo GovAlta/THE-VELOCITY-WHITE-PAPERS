@@ -22,6 +22,11 @@
     data() { return { dataset: null, nodes: [], tx: 0, ty: 0, z: 1, dragId: null, panning: false, selected: null, playing: false, _px: 0, _py: 0, _otx: 0, _oty: 0, _onx: 0, _ony: 0, _moved: false }; },
     computed: {
       loc() { return (window.VWStore && window.VWStore.locale) === 'fr' ? 'fr' : 'en'; },
+      L() {
+        return this.loc === 'fr'
+          ? { zoomin: 'Zoom avant', zoomout: 'Zoom arrière', fit: 'Ajuster', close: 'Fermer', listen: 'Écouter', pause: 'Pause', hint: 'glissez les nœuds · molette pour zoomer · cliquez un nœud', loading: 'Chargement du canevas…' }
+          : { zoomin: 'Zoom in', zoomout: 'Zoom out', fit: 'Fit', close: 'Close', listen: 'Listen', pause: 'Pause', hint: 'drag nodes · scroll to zoom · click a node', loading: 'Loading canvas…' };
+      },
       sceneObj() {
         if (this.config && this.config.graph) return this.config;
         if (!this.dataset) return null;
@@ -103,7 +108,7 @@
       toggleAudio() { const el = this.$refs.audioEl; if (!el) return; if (this.playing) { el.pause(); this.playing = false; } else { el.play().then(() => { this.playing = true; }).catch(() => { this.playing = false; }); } },
     },
     render() {
-      if (!this.dataset && !this.sceneObj) return h('div', { class: 'cv-fig' }, [h('div', { style: 'padding:28px;text-align:center;color:var(--ink-50);font-size:12px;font-family:var(--font-mono);' }, 'Loading canvas…')]);
+      if (!this.dataset && !this.sceneObj) return h('div', { class: 'cv-fig' }, [h('div', { style: 'padding:28px;text-align:center;color:var(--ink-50);font-size:12px;font-family:var(--font-mono);' }, this.L.loading)]);
       const so = this.sceneObj;
       if (!so) return h('div', { class: 'cv-fig' }, [h('div', { style: 'padding:28px;color:var(--highlight);font-size:12px;' }, 'Scene not found: ' + this.scene)]);
       const loc = this.loc, narr = C.t(so.narrative, loc);
@@ -127,16 +132,16 @@
       const mini = h('div', { class: 'cv-mini' }, [h('svg', { width: mmW, height: mmH, viewBox: '0 0 ' + mmW + ' ' + mmH }, mmNodes)]);
 
       const ctrls = h('div', { class: 'cv-ctrls' }, [
-        h('button', { class: 'cv-btn', onClick: () => this.zoom(1.2), 'aria-label': 'Zoom in' }, '+'),
-        h('button', { class: 'cv-btn', onClick: () => this.zoom(0.83), 'aria-label': 'Zoom out' }, '−'),
-        h('button', { class: 'cv-btn', onClick: () => this.fit(), 'aria-label': 'Fit', title: 'Fit' }, '⤢'),
+        h('button', { class: 'cv-btn', onClick: () => this.zoom(1.2), 'aria-label': this.L.zoomin }, '+'),
+        h('button', { class: 'cv-btn', onClick: () => this.zoom(0.83), 'aria-label': this.L.zoomout }, '−'),
+        h('button', { class: 'cv-btn', onClick: () => this.fit(), 'aria-label': this.L.fit, title: this.L.fit }, '⤢'),
       ]);
 
-      const overlays = [mini, ctrls, h('div', { class: 'cv-hint' }, 'drag nodes · scroll to zoom · click a node')];
+      const overlays = [mini, ctrls, h('div', { class: 'cv-hint' }, this.L.hint)];
       if (this.selected) {
         const n = this.selected, ty = C.TYPE[n.type] || C.TYPE.system;
         overlays.push(h('div', { class: 'cv-inspect' }, [
-          h('button', { class: 'cv-x', onClick: () => { this.selected = null; }, 'aria-label': 'Close' }, '×'),
+          h('button', { class: 'cv-x', onClick: () => { this.selected = null; }, 'aria-label': this.L.close }, '×'),
           h('div', { class: 'cv-itype' }, (C.t(n.typeLabel, loc) || ty.t).toUpperCase()),
           h('h4', {}, C.t(n.label, loc)),
           h('p', {}, C.t(n.detail, loc) || C.t(n.sub, loc) || ''),
@@ -155,7 +160,7 @@
         children.push(h('div', { style: 'display:flex;align-items:center;gap:10px;padding:9px 12px;border-top:1px solid var(--rule);font-family:var(--font-mono);' }, [
           h('span', { style: 'font-family:var(--font-serif, Georgia, serif);font-style:italic;font-size:13px;color:var(--accent);' }, C.t(so.title, loc)),
           h('span', { style: 'flex:1 1 auto;' }),
-          h('button', { class: 'cv-btn', onClick: () => this.toggleAudio() }, this.playing ? 'Pause' : 'Listen'),
+          h('button', { class: 'cv-btn', onClick: () => this.toggleAudio() }, this.playing ? this.L.pause : this.L.listen),
           h('audio', { ref: 'audioEl', src: this.audioSrc, onEnded: () => { this.playing = false; }, preload: 'none' }),
         ]));
       }

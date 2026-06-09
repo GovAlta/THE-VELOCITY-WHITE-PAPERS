@@ -28,14 +28,18 @@
       next() { return (this.idx > -1 && this.idx < this.ordered.length - 1) ? this.ordered[this.idx + 1] : null; },
       fr() { return this.store.locale === 'fr'; },
     },
+    methods: {
+      titleOf(p) { const i = p && p.i18n && p.i18n[this.store.locale]; return (i && i.title) || (p && p.title) || ''; },
+      tierLabel(t) { const m = this.store.t.ui && this.store.t.ui.tier_labels; return (m && m[t]) || t; },
+    },
     template: `
       <nav class="cd-pager" :aria-label="fr ? 'Navigation entre les articles' : 'Article navigation'">
         <a v-if="prev" class="cd-pager-link prev" :href="'/paper/' + prev.id"
            @click.prevent="$emit('open', prev.id)"
-           :aria-label="(fr ? 'Précédent : ' : 'Previous: ') + prev.title">
+           :aria-label="(fr ? 'Précédent : ' : 'Previous: ') + titleOf(prev)">
           <span class="dir" aria-hidden="true">{{ fr ? '← Précédent' : '← Previous' }}</span>
-          <span class="ref" aria-hidden="true">№ {{ prev.num }} · {{ prev.tier }}</span>
-          <span class="t">{{ prev.title }}</span>
+          <span class="ref" aria-hidden="true">№ {{ prev.num }} · {{ tierLabel(prev.tier) }}</span>
+          <span class="t">{{ titleOf(prev) }}</span>
         </a>
         <a v-else class="cd-pager-link prev is-home" href="/"
            :aria-label="fr ? 'Retour à la bibliothèque' : 'Back to the library'">
@@ -45,10 +49,10 @@
 
         <a v-if="next" class="cd-pager-link next" :href="'/paper/' + next.id"
            @click.prevent="$emit('open', next.id)"
-           :aria-label="(fr ? 'Suivant : ' : 'Next: ') + next.title">
+           :aria-label="(fr ? 'Suivant : ' : 'Next: ') + titleOf(next)">
           <span class="dir" aria-hidden="true">{{ fr ? 'Suivant →' : 'Next →' }}</span>
-          <span class="ref" aria-hidden="true">№ {{ next.num }} · {{ next.tier }}</span>
-          <span class="t">{{ next.title }}</span>
+          <span class="ref" aria-hidden="true">№ {{ next.num }} · {{ tierLabel(next.tier) }}</span>
+          <span class="t">{{ titleOf(next) }}</span>
         </a>
         <a v-else class="cd-pager-link next is-home" href="/"
            :aria-label="fr ? 'Retour à la bibliothèque' : 'Back to the library'">
