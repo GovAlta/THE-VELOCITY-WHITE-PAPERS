@@ -540,6 +540,25 @@
 .civic-index .count {
   font-family: var(--font-mono); font-size: 12px; color: var(--ink-50);
 }
+.civic-index .index-head { gap: 14px; flex-wrap: wrap; }
+.civic-index .index-head .count { margin-left: auto; }
+.idx-dlall {
+  font-family: var(--font-mono); font-size: 12px; white-space: nowrap;
+  padding: 8px 13px; border-radius: 6px; cursor: pointer;
+  background: var(--accent); color: var(--paper); border: 1px solid var(--accent);
+}
+.idx-dlall:hover { filter: brightness(1.08); }
+.idx-dlall:disabled { opacity: 0.55; cursor: default; }
+.idx-dlerr {
+  font-family: var(--font-mono); font-size: 12px; color: var(--highlight);
+  margin: -18px 0 18px;
+}
+.idx-get { white-space: nowrap; }
+.idx-dl {
+  font-family: var(--font-mono); font-size: 11px; padding: 4px 9px; cursor: pointer;
+  background: transparent; color: var(--accent); border: 1px solid var(--rule); border-radius: 5px;
+}
+.idx-dl:hover { border-color: var(--accent); }
 .civic-index .filters {
   display: flex; align-items: stretch;
   border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);

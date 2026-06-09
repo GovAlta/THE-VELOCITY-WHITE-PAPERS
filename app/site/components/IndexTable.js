@@ -8,7 +8,7 @@
     emits: ['open'],
     setup() { return { edit: window.VWEdit || null, store: window.VWStore }; },
     data() {
-      return { query: '', tier: 'all', adding: false, draft: { id: '', num: '', title: '', tier: 'Technical' } };
+      return { query: '', tier: 'all', adding: false, draft: { id: '', num: '', title: '', tier: 'Technical' }, dlBusy: false, dlErr: '' };
     },
     computed: {
       editing() { return !!(this.edit && this.edit.enabled); },
@@ -32,6 +32,20 @@
       titleOf(p) { const i = p.i18n && p.i18n[this.store.locale]; return (i && i.title) || p.title; },
       subtitleOf(p) { const i = p.i18n && p.i18n[this.store.locale]; return (i && i.subtitle) || p.subtitle; },
       tierLabel(t) { const m = this.store.t.ui && this.store.t.ui.tier_labels; return (m && m[t]) || t; },
+      async downloadRow(p) {
+        const loc = this.store.locale || 'en';
+        try {
+          const doc = await window.VWExport.fetchPaper(p.id, loc);
+          window.VWExport.download(p.id + '.' + loc + '.md', 'text/markdown', window.VWExport.blocksToMarkdown(doc));
+        } catch (e) { /* a single failed fetch is non-fatal */ }
+      },
+      async downloadAll() {
+        if (this.dlBusy) return;
+        this.dlBusy = true; this.dlErr = '';
+        try { await window.VWExport.downloadAll(this.papers, this.store.locale || 'en'); }
+        catch (e) { this.dlErr = this.store.locale === 'fr' ? 'Échec du téléchargement.' : 'Download failed.'; }
+        finally { this.dlBusy = false; }
+      },
       statusClass(p) {
         const s = (p.status || '').toLowerCase();
         if (s === 'published')   return 'status published';
@@ -55,7 +69,13 @@
         <div class="index-head">
           <h1>{{ (store.t.ui && store.t.ui.index_title) || 'The Index' }}</h1>
           <div class="count">{{ filtered.length }} / {{ papers.length }} {{ (store.t.ui && store.t.ui.papers_word) || 'papers' }}</div>
+          <button class="idx-dlall" :disabled="dlBusy" @click="downloadAll"
+                  :title="store.locale === 'fr' ? 'Télécharger tous les livres en JSON + Markdown (sans média)' : 'Download every paper as JSON + Markdown (no media)'">
+            <span aria-hidden="true">⤓</span>
+            {{ dlBusy ? (store.locale === 'fr' ? 'Préparation…' : 'Preparing…') : (store.locale === 'fr' ? 'Tout télécharger (.zip)' : 'Download all (.zip)') }}
+          </button>
         </div>
+        <p v-if="dlErr" class="idx-dlerr">{{ dlErr }}</p>
 
         <div v-if="editing" class="vw-index-edit">
           <button v-if="!adding" class="vw-gen-btn" @click="adding = true">+ Add paper</button>
@@ -95,6 +115,7 @@
               <th>{{ (store.t.ui && store.t.ui.col_tier) || 'Tier' }}</th>
               <th>{{ (store.t.ui && store.t.ui.col_read) || 'Read' }}</th>
               <th>{{ (store.t.ui && store.t.ui.status) || 'Status' }}</th>
+              <th>{{ store.locale === 'fr' ? 'Obtenir' : 'Get' }}</th>
             </tr>
           </thead>
           <tbody>
@@ -115,6 +136,13 @@
               <td class="track" data-label="Tier">{{ tierLabel(p.tier) }}</td>
               <td class="read"  data-label="Read">{{ p.reading_min ? p.reading_min + ' min' : '—' }}</td>
               <td :class="statusClass(p)" data-label="Status">{{ p.status }}</td>
+              <td class="idx-get" data-label="Get" @click.stop>
+                <button class="idx-dl" @click="downloadRow(p)"
+                        :title="store.locale === 'fr' ? 'Télécharger le Markdown' : 'Download Markdown'"
+                        :aria-label="(store.locale === 'fr' ? 'Télécharger le Markdown : ' : 'Download Markdown: ') + titleOf(p)">
+                  <span aria-hidden="true">⤓</span> MD
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>

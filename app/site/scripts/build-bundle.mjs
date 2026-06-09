@@ -31,6 +31,7 @@ const NO_HASH = args.includes('--no-hash');
 const JS_FILES = [
   'components/_lib/a11y.js',
   'components/_lib/meta.js',
+  'components/_lib/export.js',
   'components/visuals/_lib/anim.js',
   'components/visuals/_lib/registry.js',
   'components/visuals/reusable/TileHeatmap.js',
