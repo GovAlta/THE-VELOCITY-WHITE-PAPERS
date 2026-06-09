@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "fr",
+  "slot": "fig-07",
+  "out_path": "public\\images\\l5wsi\\fr\\fig-07.jpg",
+  "bytes_jpg": 120332,
+  "bytes_png_source": 2353220,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T08:20:48.945Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial flow diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a box « NAVIGUER VERS LA ROUTE » with a tag « MÉTA : requiresAuth / requiresAdmin / guestOnly / layout ». It flows into a diamond labelled « GARDE beforeEach ». Three branches: « AUTORISER » then « AFFICHER LA VUE CHARGÉE EN DIFFÉRÉ » (drawn as a small separate chunk box); « NON CONNECTÉ » then « REDIRIGER VERS CONNEXION (CONSERVER DESTINATION) »; « PAS ADMIN » then « REDIRIGER VERS ACCUEIL ». A small inline filter on the redirect arrow is labelled « sanitizeRedirect — CHEMINS RELATIFS SEULEMENT ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial flow diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a box « NAVIGUER VERS LA ROUTE » with a tag « MÉTA : requiresAuth / requiresAdmin / guestOnly / layout ». It flows into a diamond labelled « GARDE beforeEach ». Three branches: « AUTORISER » then « AFFICHER LA VUE CHARGÉE EN DIFFÉRÉ » (drawn as a small separate chunk box); « NON CONNECTÉ » then « REDIRIGER VERS CONNEXION (CONSERVER DESTINATION) »; « PAS ADMIN » then « REDIRIGER VERS ACCUEIL ». A small inline filter on the redirect arrow is labelled « sanitizeRedirect — CHEMINS RELATIFS SEULEMENT ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\l5wsi\\en\\fig-07.source.png"
+}

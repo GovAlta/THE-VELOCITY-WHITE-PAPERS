@@ -1,0 +1,17 @@
+{
+  "paper_id": "dt725",
+  "locale": "fr",
+  "slot": "fig-01",
+  "out_path": "public\\images\\dt725\\fr\\fig-12-1.jpg",
+  "bytes_jpg": 155834,
+  "bytes_png_source": 2106697,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:35:57.986Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. In the centre, a simple schematic person token stands on a clear, open path. To the left, a stack of three labelled blocks reading TECHNICAL DEBT, CASE BACKLOGS, and RED TAPE is being lifted and carried out of the way by a small robot-and-gear motif labelled AI, clearing the path ahead of the person. Above the scene, a heading reads HUMAN-CENTERED AI. A small caption below reads THE TOOLS CLEAR THE BARRIERS; THE PEOPLE DO THE WORK. Calm, architectural, legible labels. No logos, no real people beyond a simple schematic token. On-image labels in Canadian French read: 'DETTE TECHNIQUE', 'ARRIÉRÉS DE DOSSIERS', 'PAPERASSERIE', 'IA', heading 'IA CENTRÉE SUR L'HUMAIN', caption 'LES OUTILS DÉGAGENT LES OBSTACLES; LES PERSONNES FONT LE TRAVAIL'. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. In the centre, a simple schematic person token stands on a clear, open path. To the left, a stack of three labelled blocks reading TECHNICAL DEBT, CASE BACKLOGS, and RED TAPE is being lifted and carried out of the way by a small robot-and-gear motif labelled AI, clearing the path ahead of the person. Above the scene, a heading reads HUMAN-CENTERED AI. A small caption below reads THE TOOLS CLEAR THE BARRIERS; THE PEOPLE DO THE WORK. Calm, architectural, legible labels. No logos, no real people beyond a simple schematic token. On-image labels in Canadian French read: 'DETTE TECHNIQUE', 'ARRIÉRÉS DE DOSSIERS', 'PAPERASSERIE', 'IA', heading 'IA CENTRÉE SUR L'HUMAIN', caption 'LES OUTILS DÉGAGENT LES OBSTACLES; LES PERSONNES FONT LE TRAVAIL'. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\dt725\\en\\fig-12-1.source.png"
+}

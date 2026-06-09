@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "fr",
+  "slot": "fig-09",
+  "out_path": "public\\images\\l5wsi\\fr\\fig-09.jpg",
+  "bytes_jpg": 133084,
+  "bytes_png_source": 2108299,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T08:23:49.297Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels, split into two halves by a thin vertical rule. LEFT half titled « INTERFACE »: boxes « PRIMEVUE (AURA) » and « TAILWIND » combine into a « ÉCRAN » box, with small badges « LIEN D'ACCÈS », « ARIA-LIVE », « WCAG 2.1 AA ». RIGHT half titled « COMPILATION ET LIVRAISON »: a « VITE » box splits into four stacked chunk boxes « VUE », « PRIMEVUE », « GRAPHIQUES », « CARTES », then a « SERVICE WORKER » box precaches a « COQUILLE », leading to an « PWA INSTALLABLE » box with a small maskable icon and a tag « MISE À JOUR SUR INVITE ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels, split into two halves by a thin vertical rule. LEFT half titled « INTERFACE »: boxes « PRIMEVUE (AURA) » and « TAILWIND » combine into a « ÉCRAN » box, with small badges « LIEN D'ACCÈS », « ARIA-LIVE », « WCAG 2.1 AA ». RIGHT half titled « COMPILATION ET LIVRAISON »: a « VITE » box splits into four stacked chunk boxes « VUE », « PRIMEVUE », « GRAPHIQUES », « CARTES », then a « SERVICE WORKER » box precaches a « COQUILLE », leading to an « PWA INSTALLABLE » box with a small maskable icon and a tag « MISE À JOUR SUR INVITE ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\l5wsi\\en\\fig-09.source.png"
+}

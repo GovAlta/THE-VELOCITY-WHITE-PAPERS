@@ -1,0 +1,17 @@
+{
+  "paper_id": "uwpxr",
+  "locale": "fr",
+  "slot": "fig-01",
+  "out_path": "public\\images\\uwpxr\\fr\\fig-9-1.jpg",
+  "bytes_jpg": 188295,
+  "bytes_png_source": 2525749,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:10:21.251Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial architecture diagram on warm cream paper, deep navy line work with small rust accents. A large rounded box labelled NEXUS, GOOGLE CLOUD. Inside it, a box labelled DEVELOPER VM containing three small labelled panels: a dark TERMINAL panel showing several stacked windows each with a tiny robot icon, a small BROWSER panel, and a FILE SYSTEM tree. Several more small robot icons inside the VM labelled AGENTS suggest many running at once. A thin outer band around the large box is labelled SECURITY OVERLAY. On the right edge, a small locked gateway icon labelled PRIVATE VPN ENDPOINT, through which a small box labelled APP connects outward. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial architecture diagram on warm cream paper, deep navy line work with small rust accents. A large rounded box labelled NEXUS, GOOGLE CLOUD. Inside it, a box labelled DEVELOPER VM containing three small labelled panels: a dark TERMINAL panel showing several stacked windows each with a tiny robot icon, a small BROWSER panel, and a FILE SYSTEM tree. Several more small robot icons inside the VM labelled AGENTS suggest many running at once. A thin outer band around the large box is labelled SECURITY OVERLAY. On the right edge, a small locked gateway icon labelled PRIVATE VPN ENDPOINT, through which a small box labelled APP connects outward. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\uwpxr\\en\\fig-9-1.source.png"
+}

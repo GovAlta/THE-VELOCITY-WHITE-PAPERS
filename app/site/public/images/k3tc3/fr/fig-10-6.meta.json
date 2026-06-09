@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "fr",
+  "slot": "fig-06",
+  "out_path": "public\\images\\k3tc3\\fr\\fig-10-6.jpg",
+  "bytes_jpg": 209576,
+  "bytes_png_source": 2658229,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:34:48.601Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three labelled pillars stand side by side supporting a single horizontal lintel labelled USINE D'IA. Left pillar labelled PRONGHORN, captioned EXIGENCES, NORMES, ARCHITECTURE. Centre pillar labelled NEXUS, captioned L'ENVIRONNEMENT DANS LEQUEL LES AGENTS TRAVAILLENT. Right pillar labelled VELOCITY, captioned MESURE ET ORCHESTRATION. A thin rust line labelled FLUX D'ÉVÉNEMENTS SERVEUR connects the NEXUS pillar to the VELOCITY pillar. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three labelled pillars stand side by side supporting a single horizontal lintel labelled USINE D'IA. Left pillar labelled PRONGHORN, captioned EXIGENCES, NORMES, ARCHITECTURE. Centre pillar labelled NEXUS, captioned L'ENVIRONNEMENT DANS LEQUEL LES AGENTS TRAVAILLENT. Right pillar labelled VELOCITY, captioned MESURE ET ORCHESTRATION. A thin rust line labelled FLUX D'ÉVÉNEMENTS SERVEUR connects the NEXUS pillar to the VELOCITY pillar. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\k3tc3\\en\\fig-10-6.source.png"
+}

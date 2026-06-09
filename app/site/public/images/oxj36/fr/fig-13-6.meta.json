@@ -1,0 +1,17 @@
+{
+  "paper_id": "oxj36",
+  "locale": "fr",
+  "slot": "fig-06",
+  "out_path": "public\\images\\oxj36\\fr\\fig-13-6.jpg",
+  "bytes_jpg": 127121,
+  "bytes_png_source": 2880286,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:55:39.287Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A vertical fence runs down the middle. On the inside, a path labelled « AUTORISÉ » passes through a small gate labelled « CONTRÔLES » to a box labelled « SÛR ». On the outside, a path labelled « INFORMATIQUE FANTÔME » runs around the fence, skipping the controls, ending at a box labelled « EXPOSÉ » with a small rust warning mark. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. A vertical fence runs down the middle. On the inside, a path labelled « AUTORISÉ » passes through a small gate labelled « CONTRÔLES » to a box labelled « SÛR ». On the outside, a path labelled « INFORMATIQUE FANTÔME » runs around the fence, skipping the controls, ending at a box labelled « EXPOSÉ » with a small rust warning mark. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\oxj36\\en\\fig-13-6.source.png"
+}

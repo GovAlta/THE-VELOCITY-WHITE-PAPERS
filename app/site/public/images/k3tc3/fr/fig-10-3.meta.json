@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\k3tc3\\fr\\fig-10-3.jpg",
+  "bytes_jpg": 151437,
+  "bytes_png_source": 2371848,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:27:13.578Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board labelled PLATEAU DE JEU VELOCITY with a small human token making a move. A rust line labelled FLUX D'ÉVÉNEMENTS SERVEUR runs to the right into a large rounded boundary labelled NEXUS, where several small robot tokens labelled AGENTS sit, each tagged ÉCOUTE SON PROPRE PROJET. One agent is lit up, woken by the move, with a small arrow back to the board labelled ACCOMPLIT L'ÉTAPE SUIVANTE. Off to one side, a small badge labelled AGENT DE CYBERSÉCURITÉ points an arrow back down the board labelled RENVOIE LE TRAVAIL EN ARRIÈRE SI UN CONTRÔLE MANQUE. A caption reads LE PLATEAU EST L'INVITE. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board labelled PLATEAU DE JEU VELOCITY with a small human token making a move. A rust line labelled FLUX D'ÉVÉNEMENTS SERVEUR runs to the right into a large rounded boundary labelled NEXUS, where several small robot tokens labelled AGENTS sit, each tagged ÉCOUTE SON PROPRE PROJET. One agent is lit up, woken by the move, with a small arrow back to the board labelled ACCOMPLIT L'ÉTAPE SUIVANTE. Off to one side, a small badge labelled AGENT DE CYBERSÉCURITÉ points an arrow back down the board labelled RENVOIE LE TRAVAIL EN ARRIÈRE SI UN CONTRÔLE MANQUE. A caption reads LE PLATEAU EST L'INVITE. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\k3tc3\\en\\fig-10-3.source.png"
+}

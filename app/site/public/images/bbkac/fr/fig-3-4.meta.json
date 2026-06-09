@@ -1,0 +1,17 @@
+{
+  "paper_id": "bbkac",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\bbkac\\fr\\fig-3-4.jpg",
+  "bytes_jpg": 224379,
+  "bytes_png_source": 2885586,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T06:24:49.296Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of two stacked tiers of work. The lower tier is a neat row of precise, mechanical inspectors stamping exact checkmarks across code, dependable and literal. The upper tier is a single thoughtful figure weighing and judging what the lower tier surfaced and pointing back to specific lines. The exact work below feeds the judgment above. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of two stacked tiers of work. The lower tier is a neat row of precise, mechanical inspectors stamping exact checkmarks across code, dependable and literal. The upper tier is a single thoughtful figure weighing and judging what the lower tier surfaced and pointing back to specific lines. The exact work below feeds the judgment above. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\bbkac\\en\\fig-3-4.source.png"
+}

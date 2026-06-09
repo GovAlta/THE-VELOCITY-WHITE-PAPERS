@@ -1,0 +1,17 @@
+{
+  "paper_id": "qxlzo",
+  "locale": "fr",
+  "slot": "fig-01",
+  "out_path": "public\\images\\qxlzo\\fr\\fig-11-1.jpg",
+  "bytes_jpg": 179714,
+  "bytes_png_source": 2032636,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T06:12:36.193Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial layered architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as horizontal bands stacked from bottom to top. Bottom band labelled NUAGE ET CALCUL holding small boxes GOOGLE CLOUD, AZURE, AWS, GRAPPE DE GPU SUR PLACE, CENTRES DE DONNÉES HÉRITÉS. Next band labelled ACCÈS AUX MODÈLES holding boxes AWS BEDROCK, GOOGLE AGENT PLATFORM, AZURE AI STUDIO. Next band labelled MODÈLES holding boxes CLAUDE OPUS ET SONNET and MODÈLES À CODE SOURCE OUVERT. Next band labelled PASSERELLE holding one box BIFROST with a small caption ABSTRACTION, COÛT, RP. Top band labelled DÉPLOIEMENT holding boxes CHARGES DE TRAVAIL AGENTIQUES VERS GCP and APPLICATIONS TRADITIONNELLES VERS AZURE ET AWS. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial layered architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as horizontal bands stacked from bottom to top. Bottom band labelled NUAGE ET CALCUL holding small boxes GOOGLE CLOUD, AZURE, AWS, GRAPPE DE GPU SUR PLACE, CENTRES DE DONNÉES HÉRITÉS. Next band labelled ACCÈS AUX MODÈLES holding boxes AWS BEDROCK, GOOGLE AGENT PLATFORM, AZURE AI STUDIO. Next band labelled MODÈLES holding boxes CLAUDE OPUS ET SONNET and MODÈLES À CODE SOURCE OUVERT. Next band labelled PASSERELLE holding one box BIFROST with a small caption ABSTRACTION, COÛT, RP. Top band labelled DÉPLOIEMENT holding boxes CHARGES DE TRAVAIL AGENTIQUES VERS GCP and APPLICATIONS TRADITIONNELLES VERS AZURE ET AWS. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\qxlzo\\en\\fig-11-1.source.png"
+}

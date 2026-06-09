@@ -1,0 +1,17 @@
+{
+  "paper_id": "eujjc",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\eujjc\\fr\\fig-14-2.jpg",
+  "bytes_jpg": 105435,
+  "bytes_png_source": 2218175,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T08:00:04.581Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single simple robot token at the centre inside a box labelled TRAVAILLEUR. Around it, eight smaller robot tokens arranged evenly in a ring, each labelled with one concern: CYBERSÉCURITÉ, AQ, CHANGEMENT, REVUE DE CODE, INFRASTRUCTURE, COMMUNICATIONS, JURIDIQUE, CONFIDENTIALITÉ. Thin arrows point inward from each ring token toward the centre, two of them carrying a small rust tag reading BILLET. A small caption below reads UN CHEF, HUIT AUDITEURS. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single simple robot token at the centre inside a box labelled TRAVAILLEUR. Around it, eight smaller robot tokens arranged evenly in a ring, each labelled with one concern: CYBERSÉCURITÉ, AQ, CHANGEMENT, REVUE DE CODE, INFRASTRUCTURE, COMMUNICATIONS, JURIDIQUE, CONFIDENTIALITÉ. Thin arrows point inward from each ring token toward the centre, two of them carrying a small rust tag reading BILLET. A small caption below reads UN CHEF, HUIT AUDITEURS. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\eujjc\\en\\fig-14-2.source.png"
+}

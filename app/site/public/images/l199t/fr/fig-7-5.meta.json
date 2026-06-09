@@ -1,0 +1,17 @@
+{
+  "paper_id": "l199t",
+  "locale": "fr",
+  "slot": "fig-05",
+  "out_path": "public\\images\\l199t\\fr\\fig-7-5.jpg",
+  "bytes_jpg": 251079,
+  "bytes_png_source": 2797223,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:00:07.099Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of four review agents, one green, one amber-yellow, one rust-red, one navy-blue, working in concert and in balance around a single application as it passes through a checkpoint or gate. Each agent contributes its own check and the four combine into one verdict. A sense of harmonious checks and balances guarding one piece of work. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of four review agents, one green, one amber-yellow, one rust-red, one navy-blue, working in concert and in balance around a single application as it passes through a checkpoint or gate. Each agent contributes its own check and the four combine into one verdict. A sense of harmonious checks and balances guarding one piece of work. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\l199t\\en\\fig-7-5.source.png"
+}

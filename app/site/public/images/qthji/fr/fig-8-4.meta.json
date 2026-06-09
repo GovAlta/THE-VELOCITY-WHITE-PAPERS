@@ -1,0 +1,17 @@
+{
+  "paper_id": "qthji",
+  "locale": "fr",
+  "slot": "fig-05",
+  "out_path": "public\\images\\qthji\\fr\\fig-8-4.jpg",
+  "bytes_jpg": 101041,
+  "bytes_png_source": 1992389,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:07:02.804Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, flowing left to right. On the left, four small labelled inputs stacked: « CLAVARDAGE », « ARTÉFACTS », « EXIGENCES », « CANEVAS ». They feed into a central row of four rounded agent badges labelled « ANALYSE DE RENTABILISATION », « CHARTE ET DEMANDE DE PROPOSITIONS », « PLANIFICATEUR DE PROJET », and « ÉCHÉANCIER », shown working together with small connecting lines. To the right, they produce a document labelled « PLAN DE PROJET », and a curved arrow labelled « TRANSFERT » leads from there to a box labelled « LA CONSTRUCTION ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, flowing left to right. On the left, four small labelled inputs stacked: « CLAVARDAGE », « ARTÉFACTS », « EXIGENCES », « CANEVAS ». They feed into a central row of four rounded agent badges labelled « ANALYSE DE RENTABILISATION », « CHARTE ET DEMANDE DE PROPOSITIONS », « PLANIFICATEUR DE PROJET », and « ÉCHÉANCIER », shown working together with small connecting lines. To the right, they produce a document labelled « PLAN DE PROJET », and a curved arrow labelled « TRANSFERT » leads from there to a box labelled « LA CONSTRUCTION ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\qthji\\en\\fig-8-4.source.png"
+}

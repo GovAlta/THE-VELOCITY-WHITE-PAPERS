@@ -1,0 +1,17 @@
+{
+  "paper_id": "eujjc",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\eujjc\\fr\\fig-14-3.jpg",
+  "bytes_jpg": 222156,
+  "bytes_png_source": 2749827,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T08:03:11.255Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, divided into two contrasting halves by a thin vertical rule. On the LEFT half, a simple seated person token reads a single dense page labelled NOTE D'INFORMATION, its cramped horizontal text-lines suggesting a narrow channel, with a small rust tag ENVIRON 40 BITS/S. On the RIGHT half, the same simple person token stands inside a large, immersive three-dimensional simulation rendered in light isometric line work: floating volumetric blocks and flowing connection lines, with many tiny agent tokens at work transforming a tangled system into an orderly grid of modules at the far side labelled ÉTAT FINAL CLARIFIÉ; label the scene SIMULATION 3D INTERACTIVE. A small caption below reads ÉLARGIR LE CANAL, PAS SIMPLIFIER LA VÉRITÉ. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, divided into two contrasting halves by a thin vertical rule. On the LEFT half, a simple seated person token reads a single dense page labelled NOTE D'INFORMATION, its cramped horizontal text-lines suggesting a narrow channel, with a small rust tag ENVIRON 40 BITS/S. On the RIGHT half, the same simple person token stands inside a large, immersive three-dimensional simulation rendered in light isometric line work: floating volumetric blocks and flowing connection lines, with many tiny agent tokens at work transforming a tangled system into an orderly grid of modules at the far side labelled ÉTAT FINAL CLARIFIÉ; label the scene SIMULATION 3D INTERACTIVE. A small caption below reads ÉLARGIR LE CANAL, PAS SIMPLIFIER LA VÉRITÉ. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\eujjc\\en\\fig-14-3.source.png"
+}

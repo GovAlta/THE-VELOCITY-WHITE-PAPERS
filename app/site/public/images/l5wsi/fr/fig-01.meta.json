@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "fr",
+  "slot": "fig-01",
+  "out_path": "public\\images\\l5wsi\\fr\\fig-01.jpg",
+  "bytes_jpg": 74765,
+  "bytes_png_source": 1983100,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T08:12:29.119Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep Alberta navy line work with small rust accents, legible labels. A horizontal pipeline: a token labelled « REQUÊTE » on the far left flows right through a row of labelled gate boxes in order: « MANDATAIRE DE CONFIANCE », « EN-TÊTES HELMET », « PERMISSIONS-POLICY », « COMPRESSION », « LISTE CORS », « LIMITE DE DÉBIT », « CONTENT-TYPE », « ANALYSE DU CORPS », « TÉMOINS + JOURNAL », « CSRF », then into a larger box « GESTIONNAIRE DE ROUTE ». A return arrow labelled « RÉPONSE » loops back along the bottom through a box « GESTIONNAIRE D'ERREURS ». A small rust caption reads « VÉRIFS PEU COÛTEUSES D'ABORD, IDENTITÉ EN DERNIER ». Calm, architectural, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep Alberta navy line work with small rust accents, legible labels. A horizontal pipeline: a token labelled « REQUÊTE » on the far left flows right through a row of labelled gate boxes in order: « MANDATAIRE DE CONFIANCE », « EN-TÊTES HELMET », « PERMISSIONS-POLICY », « COMPRESSION », « LISTE CORS », « LIMITE DE DÉBIT », « CONTENT-TYPE », « ANALYSE DU CORPS », « TÉMOINS + JOURNAL », « CSRF », then into a larger box « GESTIONNAIRE DE ROUTE ». A return arrow labelled « RÉPONSE » loops back along the bottom through a box « GESTIONNAIRE D'ERREURS ». A small rust caption reads « VÉRIFS PEU COÛTEUSES D'ABORD, IDENTITÉ EN DERNIER ». Calm, architectural, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\l5wsi\\en\\fig-01.source.png"
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "oxj36",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\oxj36\\fr\\fig-13-3.jpg",
+  "bytes_jpg": 113777,
+  "bytes_png_source": 1956553,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:49:33.244Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled « ACCÈS DÉLÉGUÉ »: a box labelled « PASSERELLE D'AGENTS » with small input lines labelled « COURRIEL », « CALENDRIER », « PGI », SERVICENOW, SHAREPOINT feeding into it, and a small note « GIA » beneath. RIGHT panel labelled « DU CODAGE AU FEELING À LA PRODUCTION »: a box labelled « CONSTRUCTION » passes rightward through three gates labelled « ROUGE + BLEU », « GESTION INFO », « IDENTITÉ », into a final box labelled « PRODUCTION ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, in two panels. LEFT panel labelled « ACCÈS DÉLÉGUÉ »: a box labelled « PASSERELLE D'AGENTS » with small input lines labelled « COURRIEL », « CALENDRIER », « PGI », SERVICENOW, SHAREPOINT feeding into it, and a small note « GIA » beneath. RIGHT panel labelled « DU CODAGE AU FEELING À LA PRODUCTION »: a box labelled « CONSTRUCTION » passes rightward through three gates labelled « ROUGE + BLEU », « GESTION INFO », « IDENTITÉ », into a final box labelled « PRODUCTION ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\oxj36\\en\\fig-13-3.source.png"
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "oxj36",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\oxj36\\fr\\fig-13-2.jpg",
+  "bytes_jpg": 237334,
+  "bytes_png_source": 2849974,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:48:18.685Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. At the center, a sturdy keep labelled « NOYAU CENTRAL » with a short stacked list inside reading « CYBERSÉCURITÉ », « IDENTITÉ », « RÉSEAU », « DONNÉES ». Arrows radiate outward to four small workshop boxes around it labelled « BÂTISSEURS MINISTÉRIELS ». A band along the bottom reads PRONGHORN · NEXUS · VÉLOCITÉ. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. At the center, a sturdy keep labelled « NOYAU CENTRAL » with a short stacked list inside reading « CYBERSÉCURITÉ », « IDENTITÉ », « RÉSEAU », « DONNÉES ». Arrows radiate outward to four small workshop boxes around it labelled « BÂTISSEURS MINISTÉRIELS ». A band along the bottom reads PRONGHORN · NEXUS · VÉLOCITÉ. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\oxj36\\en\\fig-13-2.source.png"
+}

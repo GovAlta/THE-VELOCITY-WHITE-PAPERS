@@ -1,0 +1,17 @@
+{
+  "paper_id": "oxj36",
+  "locale": "fr",
+  "slot": "fig-01",
+  "out_path": "public\\images\\oxj36\\fr\\fig-13-1.jpg",
+  "bytes_jpg": 128063,
+  "bytes_png_source": 2428175,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:45:10.105Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single pendulum hangs from a pivot and swings between two labelled posts: « CENTRALISER » on the left and « DÉCENTRALISER » on the right. Beneath « CENTRALISER », small captions read « ÉCONOMIE D'ÉCHELLE » and « GOULOT D'ÉTRANGLEMENT ». Beneath « DÉCENTRALISER », small captions read « AUTONOMIE » and « DUPLICATION ». A faint arc shows the swing. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single pendulum hangs from a pivot and swings between two labelled posts: « CENTRALISER » on the left and « DÉCENTRALISER » on the right. Beneath « CENTRALISER », small captions read « ÉCONOMIE D'ÉCHELLE » and « GOULOT D'ÉTRANGLEMENT ». Beneath « DÉCENTRALISER », small captions read « AUTONOMIE » and « DUPLICATION ». A faint arc shows the swing. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\oxj36\\en\\fig-13-1.source.png"
+}
