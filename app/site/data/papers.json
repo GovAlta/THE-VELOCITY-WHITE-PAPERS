@@ -428,7 +428,7 @@
         "Technology and Innovation"
       ],
       "published": null,
-      "reading_min": 10,
+      "reading_min": 9,
       "status": "Published",
       "tags": [
         "tech-stack",
@@ -458,7 +458,7 @@
           "abstract": "Dans la mise en œuvre de sa stratégie en matière d'IA, l'Alberta a mis à l'essai une vaste gamme d'outils de codage agentique et de plateformes d'IA générative. Le présent document expose la pile technologique actuelle et les principes qui la sous-tendent : le bon modèle, dans le bon environnement, pour le bon cas d'usage, avec une chaîne d'approvisionnement délibérément diversifiée et des couches d'abstraction qui préviennent la dépendance à un fournisseur. L'Alberta exploite un environnement hybride réparti sur les nuages de Google, d'Azure et d'AWS, une grappe de calcul sur place et trois centres de données hérités, en accédant aux modèles par l'entremise d'AWS Bedrock, de la Google Agent Platform et d'Azure AI Studio. L'information est classifiée d'« non classifié » jusqu'à « Protégé C », les données sensibles sont contrôlées au Canada et le calcul souverain est en cours de développement. L'usage est encadré par la politique d'utilisation de l'IA de l'Alberta, son cadre de gouvernance de l'IA et la Protection of Privacy Act. Le document aborde également les contrôles de sécurité et de chaîne d'approvisionnement entourant les agents, ainsi que le coût et l'échelle de l'exploitation de cette pile. La pile devrait évoluer au fil des outils."
         }
       },
-      "listen_sec": 596
+      "listen_sec": 551
     },
     {
       "id": "dt725",

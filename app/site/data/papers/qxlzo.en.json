@@ -13,7 +13,7 @@
     "Technology and Innovation"
   ],
   "published": null,
-  "reading_min": 10,
+  "reading_min": 9,
   "status": "Published",
   "tags": [
     "tech-stack",
@@ -35,7 +35,7 @@
   },
   "audio": {
     "src": "public/audio/en/qxlzo.mp3",
-    "duration_sec": 596
+    "duration_sec": 551
   },
   "tldr_presentation": {
     "id": "qxlzo-tldr",
@@ -274,7 +274,7 @@
     },
     {
       "type": "paragraph",
-      "text": "All data tied to these workloads is controlled in Canada through our enterprise agreements and platform guardrails. Depending on the workload, we use domestic compute or inference from the United States, which is what the cloud providers primarily offer today. We are working with every cloud provider to bring more hardware into Canada and shift ever more workloads into a sovereign environment, and we are watching the Google and Telus sovereign-compute consortiums closely. We have released a Sovereign Compute prequalification request inviting wholly Canadian companies to help with our most sensitive work, and we support the Government of Canada's objective to grow the sovereign-compute space. For health and security workloads, exclusive Government of Alberta control of the data is a non-negotiable position."
+      "text": "All data tied to these workloads is controlled in Canada through our enterprise agreements and platform guardrails. Depending on the workload, we use domestic compute or inference from the United States, which is what the cloud providers primarily offer today. We are working with every cloud provider to bring more hardware into Canada and shift ever more workloads into a sovereign environment, and we are watching a range of Canadian sovereign-compute consortiums closely. We have released a Sovereign Compute prequalification request inviting wholly Canadian companies to help with our most sensitive work, and we support the Government of Canada's objective to grow the sovereign-compute space. For health and security workloads, exclusive Government of Alberta control of the data is a non-negotiable position."
     },
     {
       "type": "figure",
