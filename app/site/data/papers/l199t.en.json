@@ -148,7 +148,7 @@
         "caption": "Checks and balances",
         "visual_config": {
           "stat_value": "~95",
-          "stat_label": "Security controls every application is checked against, on every pass"
+          "stat_label": "Major security controls in the secure template — verified by 400+ individual checks every pass"
         },
         "subcaption": "Bundled into the harness as gates. A piece of work passes only when it clears them all.",
         "text": "Apart, each agent is useful. Together they are checks and balances, bundled into the harness as gates. The harness will not call a piece of work done if the security scan shows a critical finding, if the scan is stale, or if the review never ran. The gates are mechanical, not aspirational. This is how the cyber problem is answered without patching forever, and how the build methods stay safe at speed. Security and quality become a property of how the code is made."
@@ -188,6 +188,10 @@
     {
       "n": "08",
       "title": "What this gives the builders"
+    },
+    {
+      "n": "09",
+      "title": "Appendix: the complete inventory of checks"
     }
   ],
   "blocks": [
@@ -221,7 +225,7 @@
         [
           "Green",
           "Code quality, dependencies, committed secrets, test coverage, the build pipeline.",
-          "Deterministic, around 30 checks in two rounds.",
+          "Deterministic. 30 scanners in two rounds.",
           "First. The evidence base the others read."
         ],
         [
@@ -233,12 +237,12 @@
         [
           "Red",
           "The finished application from an outside attacker's point of view.",
-          "Reconnaissance by ordinary tooling; attack-planning by Claude.",
+          "Deterministic recon and DAST scanners; attack-planning by Claude.",
           "After the core features land."
         ],
         [
           "Blue",
-          "The defensive posture, against an international security standard.",
+          "The defensive posture, against OWASP ASVS Level 2 (285 requirements) and Alberta's 62 cloud-security rules.",
           "Mostly judgment, built on the others' evidence.",
           "Last. It reads Green and Red and writes the verdict."
         ]
@@ -393,13 +397,13 @@
     },
     {
       "type": "paragraph",
-      "text": "Across sixteen categories, from authentication and session handling to cross-site request protection, input validation, and supply-chain hygiene. The estate gets a little safer with every pass, and the lesson is kept rather than relearned."
+      "text": "Across fourteen ASVS chapters and ten Alberta cloud-security domains, from authentication and session handling to input validation and supply-chain hygiene. A full pass runs more than four hundred individual checks, the estate gets a little safer each time, and the lesson is kept rather than relearned."
     },
     {
       "type": "keystat",
-      "label": "Security controls built into the template the agents check against",
+      "label": "Major security controls built into the secure template",
       "value": "~95",
-      "body": "The four agents check each application against this baseline on every pass."
+      "body": "The four review agents verify these and far more — over four hundred individual checks on every pass: 285 ASVS Level 2 requirements, 62 Alberta cloud-security rules, plus the Green, Yellow, and Red checks."
     },
     {
       "type": "figure",
@@ -447,6 +451,1998 @@
     {
       "type": "paragraph",
       "text": "With the harness and its review agents in place, the question turns to the factory that puts them to work on every build. The next papers open up that factory: where applications are [designed and specified](/paper/qthji), where agents build and test them under these same controls, and where the work is tracked and measured."
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Appendix: the complete inventory of checks"
+    },
+    {
+      "type": "paragraph",
+      "text": "The body of this paper describes four agents. The full surface is larger, and worth setting out in plain sight. Every application is built on a secure template of roughly **ninety-five major security controls** (see [Anatomy of a Template](/paper/l5wsi)). The four review agents verify that template and far more: audited against the harness source, a complete pass runs **more than four hundred individual checks** — 285 OWASP ASVS Level 2 requirements, 62 Alberta cloud-security rules, thirty Green scanners, twelve Yellow rules, and twenty-three Red tools and stages. Green, Yellow, and Red's reconnaissance and scanners are deterministic and act as gates that never drift; Red's exploitation planner and most of Blue are probabilistic, the expert read a checklist would miss. The full inventory follows."
+    },
+    {
+      "type": "table",
+      "title": "Green — code quality and supply-chain hygiene (30 checks, all deterministic)",
+      "columns": [
+        "Check",
+        "What it checks"
+      ],
+      "rows": [
+        [
+          "api_base_url_audit",
+          "API base URL drift across frontend, tests, CI, env templates, and Go defaults."
+        ],
+        [
+          "broken_file_deps_scan",
+          "Local file: path dependencies that fail outside the monorepo."
+        ],
+        [
+          "ci_pipeline_audit",
+          "Missing security gates (SAST, dep audit, secret scan, build, test) in CI workflows."
+        ],
+        [
+          "console_log_scan",
+          "console.* debug calls left in production source."
+        ],
+        [
+          "dangerous_patterns_scan",
+          "SAST for innerHTML/eval/document.write/dangerouslySetInnerHTML and Go SQL string-building."
+        ],
+        [
+          "depcheck_scan",
+          "Unused or missing npm dependencies."
+        ],
+        [
+          "env_default_audit",
+          "Risky defaults in committed .env files (devtools on, debug, placeholders)."
+        ],
+        [
+          "eslint_config_audit",
+          "ESLint config anti-patterns (blanket disable, missing rules)."
+        ],
+        [
+          "eslint_scan",
+          "ESLint findings, one per file/rule/severity."
+        ],
+        [
+          "gitignore_audit",
+          ".gitignore covers env, build artifacts, node_modules, coverage."
+        ],
+        [
+          "go_test_bypass_audit",
+          "Build-tag test files that disable auth; verifies prod cannot carry the bypass."
+        ],
+        [
+          "go_test_coverage_scan",
+          "Low Go test coverage, stricter for auth/security packages."
+        ],
+        [
+          "go_toolchain_audit",
+          "go.mod go/toolchain directives; capitalized error strings."
+        ],
+        [
+          "golangci_audit",
+          ".golangci.yml present and enabling the expected linters."
+        ],
+        [
+          "govulncheck_scan",
+          "Reachable Go vulnerabilities with the import trace."
+        ],
+        [
+          "integration_test_enum",
+          "Counts //go:build integration suites so orphaned tests are visible."
+        ],
+        [
+          "java_patterns_scan",
+          "SAST for Java/JSP: SQLi, XXE, weak crypto, TLS/host-verifier bypass, XSS."
+        ],
+        [
+          "license_scan",
+          "GPL/AGPL/LGPL copyleft packages in npm trees."
+        ],
+        [
+          "madge_scan",
+          "Circular module imports in JS/TS."
+        ],
+        [
+          "migration_sequence_scan",
+          "Gaps in numbered SQL migration sequences."
+        ],
+        [
+          "npm_audit_scan",
+          "npm audit advisories per package tree."
+        ],
+        [
+          "osv_scan",
+          "OSV.dev dependency vulnerabilities across 11 ecosystems."
+        ],
+        [
+          "prettier_check",
+          "Packages with no enforced formatting standard."
+        ],
+        [
+          "python_patterns_scan",
+          "SAST for Python: eval/exec, pickle, shell=True, SQLi, weak hash, debug modes."
+        ],
+        [
+          "redocly_scan",
+          "OpenAPI document lint."
+        ],
+        [
+          "secret_scan",
+          "Credentials and API keys across the tree (~10 provider patterns)."
+        ],
+        [
+          "semgrep_scan",
+          "Semgrep SAST with security/JS/TS/Go rulesets."
+        ],
+        [
+          "vitest_coverage_scan",
+          "Source files over 100 lines with under 20% coverage."
+        ],
+        [
+          "vue_tsc_scan",
+          "Vue/TS type errors the build would not fail on."
+        ],
+        [
+          "websocket_audit",
+          "WebSocket handlers: rate limiting, error leakage, unauthenticated messages."
+        ]
+      ],
+      "caption": "Each scanner runs in its own subprocess and stays quiet on stacks it does not apply to. Green is the deterministic evidence base every other agent reads. Several checks bundle sub-items — secret_scan alone covers about ten credential types.",
+      "source": "AIDE common harness — control inventory, audited from source."
+    },
+    {
+      "type": "table",
+      "title": "Yellow — writing and AI-smell (12 rules, all deterministic)",
+      "columns": [
+        "Rule",
+        "What it flags"
+      ],
+      "rows": [
+        [
+          "rule01_not_x_but_y",
+          "\"not X, but Y\" constructions — the strongest single AI-prose tell (6 patterns)."
+        ],
+        [
+          "rule02_em_dash",
+          "Em dashes and en dashes in prose."
+        ],
+        [
+          "rule03_tetracolon",
+          "Four-part parallel structures used as flourish."
+        ],
+        [
+          "rule04_cinematic_sentences",
+          "Runs of short declarative sentences for dramatic effect."
+        ],
+        [
+          "rule05_rhetorical_anchor",
+          "\"this is the moment / this is where / this is how\" anchors (3 patterns)."
+        ],
+        [
+          "rule06_banned_vocabulary",
+          "Banned words, openers, clichés, metaphor words (~45 patterns)."
+        ],
+        [
+          "rule07_rule_of_three",
+          "\"X, Y, and Z\" lists used as flourish."
+        ],
+        [
+          "rule08_participial_tail",
+          "Sentences closing with a comma + -ing phrase that restate the sentence."
+        ],
+        [
+          "rule09_ensure_hedge",
+          "\"ensure\" used as a verb hedge."
+        ],
+        [
+          "rule10_intensifier",
+          "Vague intensifiers (very, really, truly, extremely, …) — 10 words."
+        ],
+        [
+          "rule11_decorations_emoji",
+          "Emojis and box-drawing/ASCII-art noise."
+        ],
+        [
+          "rule12_ai_smell",
+          "Five composite tics: sycophancy, recap, over-explanation, hedge-stacks, \"as an AI\"."
+        ]
+      ],
+      "caption": "Twelve regex and heuristic rules over all prose in the project, expanding to more than sixty distinct sub-patterns. The same rules govern these papers.",
+      "source": "AIDE common harness — control inventory, audited from source."
+    },
+    {
+      "type": "table",
+      "title": "Red — adversarial recon, scanning, and exploitation (23 tools and stages)",
+      "columns": [
+        "Layer",
+        "Tool / stage",
+        "What it does",
+        "Mode"
+      ],
+      "rows": [
+        [
+          "Recon",
+          "ct_search",
+          "Certificate-transparency search (crt.sh) for subdomains.",
+          "Deterministic"
+        ],
+        [
+          "Recon",
+          "dns_enum",
+          "DNS record enumeration, optional AXFR / DNSSEC.",
+          "Deterministic"
+        ],
+        [
+          "Recon",
+          "endpoint_discovery",
+          "Endpoint/dir discovery: 80-path wordlist, robots.txt, sitemap.",
+          "Deterministic"
+        ],
+        [
+          "Recon",
+          "http_headers",
+          "Audits 6 response headers (HSTS, CSP, X-CTO, X-Frame, Referrer-Policy…).",
+          "Deterministic"
+        ],
+        [
+          "Recon",
+          "port_scan",
+          "TCP port scan (nmap or Node fallback).",
+          "Deterministic"
+        ],
+        [
+          "Recon",
+          "subdomain_discovery",
+          "Subdomains via subfinder, crt.sh, and a bruteforce wordlist.",
+          "Deterministic"
+        ],
+        [
+          "Recon",
+          "tech_fingerprint",
+          "Technology fingerprinting (httpx/whatweb or header/body sniffing).",
+          "Deterministic"
+        ],
+        [
+          "Recon",
+          "tls_scan",
+          "TLS/SSL analysis: protocols, ciphers, certificate.",
+          "Deterministic"
+        ],
+        [
+          "Recon",
+          "waf_detect",
+          "WAF/CDN detection (wafw00f or probe heuristic).",
+          "Deterministic"
+        ],
+        [
+          "Recon",
+          "whois_lookup",
+          "WHOIS registrar/registrant/dates, normalised.",
+          "Deterministic"
+        ],
+        [
+          "Scanner",
+          "nmap_scan",
+          "Service/version port scan with banner grab.",
+          "Deterministic"
+        ],
+        [
+          "Scanner",
+          "osv_scan",
+          "Dependency vulnerabilities via osv-scanner / OSV.dev.",
+          "Deterministic"
+        ],
+        [
+          "Scanner",
+          "semgrep_scan",
+          "Semgrep SAST with security rulesets.",
+          "Deterministic"
+        ],
+        [
+          "Scanner",
+          "trufflehog_scan",
+          "Secret scan (trufflehog or 20+ regex patterns).",
+          "Deterministic"
+        ],
+        [
+          "Scanner",
+          "whatweb_scan",
+          "Web technology fingerprinting.",
+          "Deterministic"
+        ],
+        [
+          "Scanner",
+          "zap_scan",
+          "OWASP ZAP dynamic (DAST) baseline scan.",
+          "Deterministic"
+        ],
+        [
+          "Scanner",
+          "zap_parse",
+          "Parses the ZAP report to JSON (alerts, severities, CWEs).",
+          "Deterministic"
+        ],
+        [
+          "Exploitation",
+          "claude_sdk planner",
+          "LLM planner; four stages (recon synthesis → code analysis → PoC → recommendation); plans auth-bypass / RCE / exfil paths.",
+          "Probabilistic"
+        ],
+        [
+          "Output eval",
+          "code_analysis check",
+          "Validates the code-analysis deliverable (schema, attack-surface coverage).",
+          "Deterministic"
+        ],
+        [
+          "Output eval",
+          "poc_execution check",
+          "Validates the PoC deliverable (structure, severity taxonomy, chains).",
+          "Deterministic"
+        ],
+        [
+          "Output eval",
+          "recommendation check",
+          "Validates the remediation deliverable (ranking, affected files, coverage).",
+          "Deterministic"
+        ],
+        [
+          "Output eval",
+          "subjective judge",
+          "LLM-as-judge scoring of deliverable quality against criteria.",
+          "Probabilistic"
+        ],
+        [
+          "Output eval",
+          "scoring",
+          "Weighted objective/subjective score → grade.",
+          "Deterministic"
+        ]
+      ],
+      "caption": "Recon and the active scanners are deterministic tooling; the exploitation planner reasons with Claude across four internal stages; the output-eval stages grade Red's own deliverables. Red runs only against systems the government owns and has authorized for testing.",
+      "source": "AIDE common harness — control inventory, audited from source."
+    },
+    {
+      "type": "table",
+      "title": "Blue — defensive review and compliance (15 phases)",
+      "columns": [
+        "Phase",
+        "What it does",
+        "Mode"
+      ],
+      "rows": [
+        [
+          "01 application-map",
+          "Maps stack, endpoints, auth, secrets, trust boundaries.",
+          "Probabilistic"
+        ],
+        [
+          "02 security-classification",
+          "Classifies each component by data sensitivity; assigns controls.",
+          "Probabilistic"
+        ],
+        [
+          "03 security-architecture",
+          "Architecture review: auth model, sessions, secrets, boundaries.",
+          "Probabilistic"
+        ],
+        [
+          "04 threat-model",
+          "STRIDE threat model per asset, with mitigations.",
+          "Probabilistic"
+        ],
+        [
+          "05 asvs-level2-assessment",
+          "Walks 285 ASVS L2 requirement checks; pass/fail/N-A with evidence.",
+          "Judgement + deterministic evidence"
+        ],
+        [
+          "06 cas-compliance",
+          "Walks 62 Alberta cloud-security (CAS) rules; same shape as ASVS.",
+          "Judgement + deterministic evidence"
+        ],
+        [
+          "07 kill-chain-aggregator",
+          "Folds Blue + Red findings into a Lockheed kill chain.",
+          "Probabilistic"
+        ],
+        [
+          "08 tool-scanning",
+          "Orchestrates the deterministic scanners (npm audit, secretlint, ESLint-security, OSV).",
+          "Deterministic orchestration"
+        ],
+        [
+          "09 security-unit-tests",
+          "Generates security unit tests per ASVS requirement.",
+          "Probabilistic"
+        ],
+        [
+          "10 dr-resilience",
+          "Disaster-recovery and resilience: failure modes, recovery objectives, backups.",
+          "Probabilistic"
+        ],
+        [
+          "11 code-fix-generation",
+          "Proposes a unified-diff patch per finding.",
+          "Probabilistic"
+        ],
+        [
+          "12 security-overview-report",
+          "Composes the ranked report: summary, kill chain, ASVS/CAS, roadmap.",
+          "Probabilistic"
+        ],
+        [
+          "13 requirements-map",
+          "Maps business/functional/non-functional requirements onto the app map.",
+          "Probabilistic"
+        ],
+        [
+          "14 asvs-compliant-builder",
+          "Generates ASVS-L2-compliant code with inline requirement refs.",
+          "Deterministic codegen"
+        ],
+        [
+          "15 cas-compliant-builder",
+          "Generates CAS-compliant code with inline rule refs.",
+          "Deterministic codegen"
+        ]
+      ],
+      "caption": "Blue runs last and reads everything the others produced. Most phases are LLM judgement over deterministic evidence; phases 05 and 06 are the two standards walks enumerated below.",
+      "source": "AIDE common harness — control inventory, audited from source."
+    },
+    {
+      "type": "table",
+      "title": "Blue phase 05 — OWASP ASVS Level 2, by chapter (285 requirement checks)",
+      "columns": [
+        "ASVS chapter",
+        "Checks"
+      ],
+      "rows": [
+        [
+          "V1 Architecture, Design & Threat Modeling",
+          "44"
+        ],
+        [
+          "V2 Authentication",
+          "45"
+        ],
+        [
+          "V3 Session Management",
+          "19"
+        ],
+        [
+          "V4 Access Control",
+          "12"
+        ],
+        [
+          "V5 Input Validation, Sanitization & Encoding",
+          "30"
+        ],
+        [
+          "V6 Stored Cryptography",
+          "16"
+        ],
+        [
+          "V7 Error Handling & Logging",
+          "14"
+        ],
+        [
+          "V8 Data Protection",
+          "19"
+        ],
+        [
+          "V9 Communication Security",
+          "8"
+        ],
+        [
+          "V10 Malicious Code",
+          "10"
+        ],
+        [
+          "V11 Business Logic",
+          "8"
+        ],
+        [
+          "V12 Files & Resources",
+          "17"
+        ],
+        [
+          "V13 API & Web Service Security",
+          "22"
+        ],
+        [
+          "V14 Configuration & Deployment",
+          "21"
+        ],
+        [
+          "Total",
+          "285"
+        ]
+      ],
+      "caption": "Phase 05 walks every requirement of the OWASP Application Security Verification Standard at Level 2. Applicability varies with the application; file-upload, GraphQL, SOAP, and unmanaged-language requirements are recorded as not-applicable when the feature is absent. Every requirement is listed in full below.",
+      "source": "AIDE common harness — control inventory, audited from source."
+    },
+    {
+      "type": "table",
+      "title": "Blue phase 06 — Alberta cloud-security (CAS) rules (62, by domain)",
+      "columns": [
+        "Domain",
+        "Rule",
+        "What it requires"
+      ],
+      "rows": [
+        [
+          "Authentication",
+          "AUTH-001",
+          "External User Authentication"
+        ],
+        [
+          "Authentication",
+          "AUTH-002",
+          "organizational Staff Authentication"
+        ],
+        [
+          "Authentication",
+          "AUTH-003",
+          "Partner Authentication"
+        ],
+        [
+          "Authentication",
+          "AUTH-004",
+          "API Authentication"
+        ],
+        [
+          "Authentication",
+          "MFA-001",
+          "Multi-Factor Authentication for organizational Staff"
+        ],
+        [
+          "Authentication",
+          "MFA-002",
+          "Multi-Factor Authentication for Public/External Users"
+        ],
+        [
+          "Identity Protocol & Provider Management",
+          "IDPR-001",
+          "Identity Protocol Standard"
+        ],
+        [
+          "Identity Protocol & Provider Management",
+          "IDPR-002",
+          "OIDC Discovery Endpoint"
+        ],
+        [
+          "Identity Protocol & Provider Management",
+          "IDPV-001",
+          "Identity Provider Validation"
+        ],
+        [
+          "Identity Protocol & Provider Management",
+          "IDBR-001",
+          "Identity Broker / Federator"
+        ],
+        [
+          "Authorization",
+          "AUTHZ-001",
+          "Authorization Backend"
+        ],
+        [
+          "Authorization",
+          "AUTHZ-002",
+          "RBAC/ABAC + Middleware Ordering"
+        ],
+        [
+          "Authorization",
+          "AUTHZ-003",
+          "Separation of Duties"
+        ],
+        [
+          "Authorization",
+          "AUTHZ-004",
+          "Non-Privileged Access for Non-Security Functions"
+        ],
+        [
+          "Authorization",
+          "AUTHZ-005",
+          "Role Source Integrity"
+        ],
+        [
+          "Authorization",
+          "AUTHZ-006",
+          "Client-Side Sensitive Claims"
+        ],
+        [
+          "Network & Perimeter Security",
+          "BOT-001",
+          "Bot / Fraud Protection"
+        ],
+        [
+          "Network & Perimeter Security",
+          "FW-001",
+          "Firewall (Cloud Landing Zone)"
+        ],
+        [
+          "Network & Perimeter Security",
+          "FW-002",
+          "Firewall (Data Centre)"
+        ],
+        [
+          "Network & Perimeter Security",
+          "CDN-001",
+          "Content Delivery Network"
+        ],
+        [
+          "Network & Perimeter Security",
+          "WAF-001",
+          "Web Application Firewall"
+        ],
+        [
+          "Network & Perimeter Security",
+          "CORS-001",
+          "Cross-Origin Resource Sharing"
+        ],
+        [
+          "Network & Perimeter Security",
+          "RATE-001",
+          "Rate Limiting"
+        ],
+        [
+          "Secrets & Encryption",
+          "SEC-001",
+          "Secrets in Source Code"
+        ],
+        [
+          "Secrets & Encryption",
+          "SEC-002",
+          "Secrets Management"
+        ],
+        [
+          "Secrets & Encryption",
+          "SEC-003",
+          "JWT Security"
+        ],
+        [
+          "Secrets & Encryption",
+          "SEC-004",
+          ".env / Config File Secrets"
+        ],
+        [
+          "Secrets & Encryption",
+          "SEC-005",
+          "System Credential Lifecycle"
+        ],
+        [
+          "Secrets & Encryption",
+          "ENC-001",
+          "Encryption (Protected A and Higher)"
+        ],
+        [
+          "Secrets & Encryption",
+          "ENC-002",
+          "Encryption for Health Data (Protected B)"
+        ],
+        [
+          "Secrets & Encryption",
+          "ENC-003",
+          "Encryption for Sensitive Data (Protected B)"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "LOG-001",
+          "Security Event Logging"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "LOG-002",
+          "Immutable Logs"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "LOG-003",
+          "No Secrets or PII in Logs"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "LOG-004",
+          "Time Synchronization"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "LOG-005",
+          "Structured Logs (JSON)"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "LOG-006",
+          "Log Shipping"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "LOG-007",
+          "Telemetry Logs"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "LOG-008",
+          "Audit Failure Handling"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "LOG-010",
+          "Audit Access Control"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "MAL-001",
+          "Anti-Malware"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "PAT-001",
+          "Patching"
+        ],
+        [
+          "Logging, Monitoring & Vulnerability Management",
+          "VUL-001",
+          "Vulnerability Management"
+        ],
+        [
+          "Cloud & Data Security",
+          "RES-001",
+          "Data Residency"
+        ],
+        [
+          "Cloud & Data Security",
+          "CDS-001",
+          "Cloud Data Security"
+        ],
+        [
+          "Cloud & Data Security",
+          "STORE-001",
+          "Storage Bucket Security"
+        ],
+        [
+          "Cloud & Data Security",
+          "STORE-002",
+          "Data Store Security"
+        ],
+        [
+          "Web Application Security",
+          "WEB-001",
+          "OWASP ASVS Level 2 Compliance"
+        ],
+        [
+          "Web Application Security",
+          "CSP-001",
+          "Content Security Policy"
+        ],
+        [
+          "Web Application Security",
+          "HDR-001",
+          "Security Headers"
+        ],
+        [
+          "Web Application Security",
+          "PWD-001",
+          "Password Policy"
+        ],
+        [
+          "Web Application Security",
+          "SESSION-001",
+          "Session Management"
+        ],
+        [
+          "Web Application Security",
+          "SESSION-002",
+          "Federated Logout"
+        ],
+        [
+          "Web Application Security",
+          "UPLOAD-001",
+          "File Upload Security"
+        ],
+        [
+          "Web Application Security",
+          "UPLOAD-002",
+          "File Upload Storage"
+        ],
+        [
+          "Account Lifecycle",
+          "ACCT-001",
+          "Inactive Account Lifecycle"
+        ],
+        [
+          "AI Agent Security",
+          "AI-001",
+          "AI Input Sanitization"
+        ],
+        [
+          "AI Agent Security",
+          "AI-002",
+          "AI Output Sanitization"
+        ],
+        [
+          "AI Agent Security",
+          "AI-003",
+          "AI Cost Controls"
+        ],
+        [
+          "AI Agent Security",
+          "AI-004",
+          "AI Data Boundary"
+        ],
+        [
+          "AI Agent Security",
+          "AI-005",
+          "AI Tool Execution"
+        ],
+        [
+          "AI Agent Security",
+          "AI-006",
+          "AI Code Generation"
+        ]
+      ],
+      "caption": "Phase 06 walks Alberta's cloud application security baseline — 62 rules across 10 domains, several mapping to ITSG-33 control families. Rule LOG-001 alone carries eleven sub-requirements (a–k).",
+      "source": "AIDE common harness — control inventory, audited from source."
+    },
+    {
+      "type": "table",
+      "title": "Blue phase 05 — the full OWASP ASVS Level 2 checklist (285 requirements)",
+      "columns": [
+        "Req ID",
+        "Requirement (ASVS Level 2)"
+      ],
+      "rows": [
+        [
+          "V1.1.1",
+          "The use of a secure software development lifecycle that addresses security in all stages"
+        ],
+        [
+          "V1.1.2",
+          "The use of threat modeling for every design change or sprint planning to identify threats, plan for countermeasures, facilitate appropriate risk responses, and guide security testing"
+        ],
+        [
+          "V1.1.3",
+          "All user stories and features contain functional security constraints"
+        ],
+        [
+          "V1.1.4",
+          "Documentation and justification of all the application's trust boundaries, components, and significant data flows"
+        ],
+        [
+          "V1.1.5",
+          "Definition and security analysis of the application's high-level architecture and all remote services"
+        ],
+        [
+          "V1.1.6",
+          "Implementation of centralized, simple (economy of design), vetted, secure, and reusable security controls to avoid duplicate, missing, inconsistent, or fragile controls"
+        ],
+        [
+          "V1.1.7",
+          "Availability of a secure coding checklist, security requirements, guideline, or policy to all developers"
+        ],
+        [
+          "V1.2.1",
+          "The use of unique or special low-privilege operating system accounts for all application components, services, and servers"
+        ],
+        [
+          "V1.2.2",
+          "Communications between application components, including APIs, middleware and data layers, are authenticated"
+        ],
+        [
+          "V1.2.3",
+          "Uses a single vetted authentication mechanism that is known to be strong, can be extended to include strong authentication, and has sufficient logging and monitoring to detect account abuse or…"
+        ],
+        [
+          "V1.2.4",
+          "All authentication pathways and identity management APIs implement consistent authentication security control strength, such that there are no weaker alternatives that can be used to break the…"
+        ],
+        [
+          "V1.3.1",
+          "Uses a single vetted session management mechanism that is known to be strong, can be extended to include strong authentication"
+        ],
+        [
+          "V1.4.1",
+          "Trusted enforcement points such as access control gateways, servers, and serverless functions enforce access controls"
+        ],
+        [
+          "V1.4.2",
+          "[Removed in ASVS 4.0.3 — skip]"
+        ],
+        [
+          "V1.4.3",
+          "A single and auditable access control mechanism is used by the application"
+        ],
+        [
+          "V1.4.4",
+          "Data and functionality are protected based on security classification of the data being handled"
+        ],
+        [
+          "V1.4.5",
+          "**Application Partitioning (SC-2)**"
+        ],
+        [
+          "V1.5.1",
+          "Input and output requirements clearly define how to handle and process data based on type, content, and applicable laws, regulations, and other policy compliance"
+        ],
+        [
+          "V1.5.2",
+          "Serialization is not used when communicating with untrusted clients"
+        ],
+        [
+          "V1.5.3",
+          "Input validation is enforced on a trusted service layer, not on the client alone"
+        ],
+        [
+          "V1.5.4",
+          "Output encoding occurs close to or by the interpreter for which it is intended"
+        ],
+        [
+          "V1.6.1",
+          "There is an explicit policy for management of cryptographic keys and that a cryptographic key lifecycle follows a key management standard such as NIST SP 800-57"
+        ],
+        [
+          "V1.6.2",
+          "Consumers of cryptographic services protect key material and other secrets by using key vaults or API-based alternatives"
+        ],
+        [
+          "V1.6.3",
+          "All keys and passwords are replaceable and are part of a well-defined process to re-encrypt sensitive data"
+        ],
+        [
+          "V1.6.4",
+          "The architecture treats client-side secrets as visible to attackers"
+        ],
+        [
+          "V1.7.1",
+          "A common logging format and approach is used across the system"
+        ],
+        [
+          "V1.7.2",
+          "Logs are securely transmitted to a preferably remote system for analysis, detection, alerting, and escalation"
+        ],
+        [
+          "V1.8.1",
+          "All sensitive data is identified and classified into protection levels"
+        ],
+        [
+          "V1.8.2",
+          "All protection levels have an associated set of protection requirements"
+        ],
+        [
+          "V1.9.1",
+          "The application encrypts communications between components, particularly when these components are in different containers, systems, sites, or cloud providers"
+        ],
+        [
+          "V1.9.2",
+          "Application components verify the authenticity of each side in a communication link to prevent person-in-the-middle attacks"
+        ],
+        [
+          "V1.10.1",
+          "A source code control system is in use, with procedures to ensure that check-ins are accompanied by issues or change tickets"
+        ],
+        [
+          "V1.11.1",
+          "The definition and documentation of all application components in terms of the business or security functions they provide"
+        ],
+        [
+          "V1.11.2",
+          "All high-value business logic flows, including authentication, session management and access control, do not share unsynchronized state"
+        ],
+        [
+          "V1.11.3",
+          "All high-value business logic flows, including authentication, session management and access control, are thread-safe and resistant to time-of-check and time-of-use race conditions"
+        ],
+        [
+          "V1.12.1",
+          "User-uploaded files are stored outside the web root or in a cloud storage bucket with separate access policies"
+        ],
+        [
+          "V1.12.2",
+          "User-uploaded files — if required to be displayed or downloaded from the application — are served by either octet stream downloads, or from an unrelated domain, such as a cloud file storage bucket"
+        ],
+        [
+          "V1.13.1",
+          "All application components use the same encoding and escaping strategies to avoid attacks"
+        ],
+        [
+          "V1.14.1",
+          "The segregation of components of differing trust levels through well-defined security controls, firewall rules, API gateways, reverse proxies, cloud-based security groups, or similar mechanisms"
+        ],
+        [
+          "V1.14.2",
+          "Binary signatures, trusted connections, and verified endpoints are used to deploy binaries to remote devices"
+        ],
+        [
+          "V1.14.3",
+          "The build pipeline warns of out-of-date or insecure components and takes appropriate actions"
+        ],
+        [
+          "V1.14.4",
+          "The build pipeline contains a build step to automatically build and verify the secure deployment of the application, particularly if the application infrastructure is software defined, such as cloud…"
+        ],
+        [
+          "V1.14.5",
+          "Application deployments adequately sandbox, containerize and/or isolate at the network level to delay and deter attackers from attacking other applications"
+        ],
+        [
+          "V1.14.6",
+          "Does not use unsupported, insecure, or deprecated client-side technologies such as NSAPI plugins, Flash, Shockwave, ActiveX, Silverlight, NACL, or client-side Java applets"
+        ],
+        [
+          "V2.1.1",
+          "User-set passwords are at least 12 characters in length (or 15 for privileged accounts per DUC v4.3)"
+        ],
+        [
+          "V2.1.2",
+          "Passwords of at least 64 characters are permitted and that passwords of more than 128 characters are denied"
+        ],
+        [
+          "V2.1.3",
+          "Password truncation is not performed"
+        ],
+        [
+          "V2.1.6",
+          "A \"change password\" function is included that requires the current and new password"
+        ],
+        [
+          "V2.1.9",
+          "There are no password composition rules limiting the type of characters permitted"
+        ],
+        [
+          "V2.1.12",
+          "The user can choose to temporarily view the entire masked password, or temporarily view the last typed character"
+        ],
+        [
+          "V2.2.1",
+          "Anti-automation controls are effective at mitigating breached credential testing, brute force, and account lockout attacks"
+        ],
+        [
+          "V2.2.2",
+          "The use of weak authenticators (such as SMS and email) is limited to secondary verification and transaction approval"
+        ],
+        [
+          "V2.2.3",
+          "Secure notifications are sent to users after updates to authentication details"
+        ],
+        [
+          "V2.2.4",
+          "**[ENV-VAR BYPASS RULE — NEVER WAIVED]** Verify that anti-automation, lockout, rate limiting, and brute force controls are not bypassable via environment variables, configuration flags, or feature…"
+        ],
+        [
+          "V2.2.5",
+          "Credential providers and external credential partners are trusted and kept up to date"
+        ],
+        [
+          "V2.3.1",
+          "System generated initial passwords or activation codes are at least 6 characters long, contain letters and numbers, and expire after a short period of time"
+        ],
+        [
+          "V2.3.2",
+          "Enrollment and other high-value actions complete within a time period that has an appropriate expiry"
+        ],
+        [
+          "V2.3.3",
+          "Password hints or knowledge-based authentication (so-called \"secret questions\") are not present"
+        ],
+        [
+          "V2.4.1",
+          "Passwords are stored in a form that is resistant to offline attacks, using an approved adaptive hashing or salted hashing (bcrypt, scrypt, argon2, PBKDF2)"
+        ],
+        [
+          "V2.4.2",
+          "The salt is at least 32 bits in length and chosen arbitrarily to minimize salt value collisions among stored hashes"
+        ],
+        [
+          "V2.4.3",
+          "If PBKDF2 is used, the iteration count is as large as verification server performance will allow, typically at least 100,000 iterations"
+        ],
+        [
+          "V2.4.4",
+          "If bcrypt is used, the work factor is as large as verification server performance will allow, with a minimum of 10"
+        ],
+        [
+          "V2.4.5",
+          "An additional iteration of a key derivation function is performed, using a salt value that is secret and known only to the verifier"
+        ],
+        [
+          "V2.5.1",
+          "A system generated initial activation secret or recovery secret is not sent in clear text to the user"
+        ],
+        [
+          "V2.5.2",
+          "Password hints or knowledge-based recovery (secret questions) are not present"
+        ],
+        [
+          "V2.5.3",
+          "OTP or multi-factor recovery, refresh, or bypass codes are exchanged using a secure channel"
+        ],
+        [
+          "V2.5.4",
+          "Forgotten password and other recovery paths use a TOTP or other soft token, push notification, or other offline recovery mechanism"
+        ],
+        [
+          "V2.5.5",
+          "If an authentication factor is changed or replaced, the user is notified of this event"
+        ],
+        [
+          "V2.5.6",
+          "Forgotten password and other recovery paths use a time-limited one-time reset link, OTP, or another secret"
+        ],
+        [
+          "V2.5.7",
+          "OTP factors, where used, are invalidated after use"
+        ],
+        [
+          "V2.6.1",
+          "Look-up secrets have sufficient randomness of at least 112 bits of entropy"
+        ],
+        [
+          "V2.6.2",
+          "Look-up secrets are resistant to offline attacks, such as predictable values"
+        ],
+        [
+          "V2.6.3",
+          "Look-up secrets are salted and hashed using an approved one-way hash"
+        ],
+        [
+          "V2.7.1",
+          "Clear text out-of-band (NIST \"restricted\") authenticators, such as SMS or PSTN, are not offered by default, and that stronger alternatives such as push notifications are offered first"
+        ],
+        [
+          "V2.7.2",
+          "The out-of-band verifier expires out-of-band authentication requests after 10 minutes"
+        ],
+        [
+          "V2.7.3",
+          "The out-of-band authenticator is used at most once"
+        ],
+        [
+          "V2.8.1",
+          "Time-based OTPs have a defined lifetime before expiring"
+        ],
+        [
+          "V2.8.2",
+          "The keys used for time-based OTPs are stored securely using platform secrets storage"
+        ],
+        [
+          "V2.8.3",
+          "Approved cryptographic algorithms are used in the generation, seeding, and verification of OTPs"
+        ],
+        [
+          "V2.8.4",
+          "Time-based OTP can only be used once within the validity period"
+        ],
+        [
+          "V2.8.5",
+          "If a time-based multi-factor OTP token is re-used during the validity period, it is logged and the user is alerted"
+        ],
+        [
+          "V2.8.6",
+          "Physical single-factor OTP generators can be revoked in case of theft or loss"
+        ],
+        [
+          "V2.9.1",
+          "Cryptographic keys used in verification are stored securely and protected against disclosure, such as using a TPM, HSM, or OS keystore"
+        ],
+        [
+          "V2.9.2",
+          "The challenge nonce is at least 64 bits in length, and statistically unique or unique over the lifetime of the cryptographic device"
+        ],
+        [
+          "V2.9.3",
+          "Approved cryptographic algorithms are used in the generation, seeding, and verification"
+        ],
+        [
+          "V2.10.1",
+          "Integration secrets do not rely on unchanging passwords, such as API keys or shared secrets, except with legacy systems"
+        ],
+        [
+          "V2.10.2",
+          "If passwords are required for service authentication, the credentials used are not a default password"
+        ],
+        [
+          "V2.10.3",
+          "Passwords are stored with sufficient protection to prevent offline recovery attacks, including local system access"
+        ],
+        [
+          "V2.10.4",
+          "Passwords, integrations with databases and third-party systems, seeds and internal secrets, and API keys are managed securely and not included in source code or stored within source code repositories"
+        ],
+        [
+          "V3.1.1",
+          "The application never reveals session tokens in URL parameters or error messages"
+        ],
+        [
+          "V3.1.2",
+          "The application generates a new session token on user authentication and can be revoked, and that existing sessions are invalidated upon authentication"
+        ],
+        [
+          "V3.2.1",
+          "The application generates a new session token on user authentication"
+        ],
+        [
+          "V3.2.2",
+          "Session tokens possess at least 64 bits of entropy"
+        ],
+        [
+          "V3.2.3",
+          "The application only stores session tokens in the browser using secure methods"
+        ],
+        [
+          "V3.2.4",
+          "Session token are generated using approved cryptographic algorithms"
+        ],
+        [
+          "V3.3.1",
+          "Logout and expiration invalidate the session token, such that the back button or a downstream relying party does not resume an authenticated session, including across relying parties"
+        ],
+        [
+          "V3.3.2",
+          "Provides a mechanism to allow users to log out of any or all currently active sessions"
+        ],
+        [
+          "V3.3.3",
+          "Gives the option to terminate all other active sessions after a successful password change"
+        ],
+        [
+          "V3.3.4",
+          "Users are able to view and (optionally) log out any or all currently active sessions and devices"
+        ],
+        [
+          "V3.4.1",
+          "Cookie-based session tokens have the `Secure` attribute set"
+        ],
+        [
+          "V3.4.2",
+          "Cookie-based session tokens have the `HttpOnly` attribute set to prevent JavaScript access"
+        ],
+        [
+          "V3.4.3",
+          "Cookie-based session tokens utilize the `SameSite` attribute to limit exposure to cross-site request forgery attacks"
+        ],
+        [
+          "V3.4.4",
+          "Cookie-based session tokens use the `__Host-` prefix to provide cookie isolation"
+        ],
+        [
+          "V3.4.5",
+          "If the application is published under a domain name with other applications that set or use session cookies that might disclose the session cookies, set the path attribute as precisely as possible"
+        ],
+        [
+          "V3.5.1",
+          "The application allows users to revoke OAuth tokens that form trust relationships with linked applications"
+        ],
+        [
+          "V3.5.2",
+          "The application uses session tokens rather than static API secrets and keys, except with legacy integrations"
+        ],
+        [
+          "V3.5.3",
+          "Stateless session tokens use digital signatures, encryption, and other countermeasures to protect against tampering, enveloping, replay, null cipher, and key substitution attacks"
+        ],
+        [
+          "V3.7.1",
+          "The application ensures a full, valid login session or requires re-authentication or secondary verification before allowing any sensitive transactions or account changes"
+        ],
+        [
+          "V4.1.1",
+          "Enforces access control rules on a trusted service layer, especially if client-side access control is present and could be bypassed"
+        ],
+        [
+          "V4.1.2",
+          "All user and data attributes and policy information used by access controls cannot be manipulated by end users unless specifically authorized"
+        ],
+        [
+          "V4.1.3",
+          "The principle of least privilege exists — users should only be able to access functions, data files, URLs, controllers, services, and other resources, for which they possess specific authorization"
+        ],
+        [
+          "V4.1.4",
+          "The principle of deny by default exists whereby new users/roles start with minimal or no permissions and users/roles do not receive access to new features until access is explicitly assigned"
+        ],
+        [
+          "V4.1.5",
+          "Access controls fail securely including when an exception occurs"
+        ],
+        [
+          "V4.1.6",
+          "Middleware ordering enforces authentication before other security-relevant processing for protected routes"
+        ],
+        [
+          "V4.2.1",
+          "Sensitive data and APIs are protected against Insecure Direct Object Reference (IDOR) / Broken Object Level Authorization (BOLA) attacks that target creation, reading, updating and deleting of records"
+        ],
+        [
+          "V4.2.2",
+          "Or framework enforces a strong anti-CSRF mechanism to protect authenticated functionality, and effective anti-automation or anti-CSRF protects unauthenticated functionality"
+        ],
+        [
+          "V4.3.1",
+          "Administrative interfaces use appropriate multi-factor authentication to prevent unauthorized use"
+        ],
+        [
+          "V4.3.2",
+          "Directory browsing is disabled unless deliberately desired"
+        ],
+        [
+          "V4.3.3",
+          "The application does not allow discovery or disclosure of file or directory metadata, such as Thumbs.db, .DS_Store, .git, or .svn folders"
+        ],
+        [
+          "V4.4.1",
+          "**Non-Privileged Access for Non-Security Functions (AC-6(2))**"
+        ],
+        [
+          "V5.1.1",
+          "Has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters"
+        ],
+        [
+          "V5.1.2",
+          "Frameworks protect against mass parameter assignment attacks, or that the application has countermeasures to protect against unsafe parameter assignment"
+        ],
+        [
+          "V5.1.3",
+          "All input (HTML form fields, REST requests, URL parameters, HTTP headers, cookies, batch files, RSS feeds, etc.) is validated using positive validation (allow lists)"
+        ],
+        [
+          "V5.1.4",
+          "Structured data is strongly typed and validated against a defined schema including allowed characters, length and pattern"
+        ],
+        [
+          "V5.1.5",
+          "URL redirects and forwards only allow destinations which appear on an allowlist, or show a warning when redirecting to potentially untrusted content"
+        ],
+        [
+          "V5.2.1",
+          "All untrusted HTML input from WYSIWYG editors or similar is properly sanitized with an HTML sanitizer library or framework feature"
+        ],
+        [
+          "V5.2.2",
+          "Unstructured data is sanitized to enforce safety measures such as allowed characters and length"
+        ],
+        [
+          "V5.2.3",
+          "Sanitizes user input before passing to mail systems to protect against SMTP or IMAP injection"
+        ],
+        [
+          "V5.2.4",
+          "Avoids the use of `eval()` or other dynamic code execution features"
+        ],
+        [
+          "V5.2.5",
+          "Protects against template injection attacks by ensuring that any user input being included is sanitized or sandboxed"
+        ],
+        [
+          "V5.2.6",
+          "Protects against SSRF attacks, by validating or sanitizing untrusted data or HTTP file metadata"
+        ],
+        [
+          "V5.2.7",
+          "Sanitizes, disables, or sandboxes user-supplied SVG scriptable content"
+        ],
+        [
+          "V5.2.8",
+          "Sanitizes, disables, or sandboxes user-supplied scriptable or expression template language content"
+        ],
+        [
+          "V5.3.1",
+          "Output encoding is relevant for the interpreter and context required, such as encoding HTML entities for HTML content, URL encoding for URL parameters, attribute encoding for CSS or URL, etc"
+        ],
+        [
+          "V5.3.2",
+          "Output encoding preserves the user's chosen character set and locale, such that any Unicode character point is valid and safely handled"
+        ],
+        [
+          "V5.3.3",
+          "Context-aware, preferably automated output escaping protects against reflected, stored, and DOM XSS"
+        ],
+        [
+          "V5.3.4",
+          "Data selection or database queries (e.g., SQL, HQL, ORM, NoSQL) use parameterized queries, ORMs, entity frameworks or are otherwise protected from database injection attacks"
+        ],
+        [
+          "V5.3.5",
+          "Where parameterized or safer mechanisms are not present, context-specific output encoding is used to protect against injection attacks, such as the use of SQL escaping to protect against SQL Injection"
+        ],
+        [
+          "V5.3.6",
+          "Protects against JavaScript or JSON injection attacks, including for eval attacks and remote JavaScript includes"
+        ],
+        [
+          "V5.3.7",
+          "Protects against LDAP injection vulnerabilities, or that specific security controls to prevent LDAP injection have been implemented"
+        ],
+        [
+          "V5.3.8",
+          "Protects against OS command injection and that operating system calls use parameterized OS queries or use contextual command line output encoding"
+        ],
+        [
+          "V5.3.9",
+          "Protects against Local File Inclusion (LFI) or Remote File Inclusion (RFI) attacks"
+        ],
+        [
+          "V5.3.10",
+          "Protects against XPath injection or XML injection attacks"
+        ],
+        [
+          "V5.4.1",
+          "Uses memory-safe string, buffer, and integer operations for managed/unmanaged code"
+        ],
+        [
+          "V5.4.2",
+          "Format strings do not take potentially hostile input"
+        ],
+        [
+          "V5.4.3",
+          "Sign, range, and input validation techniques are used to prevent integer overflows"
+        ],
+        [
+          "V5.5.1",
+          "Serialized objects use integrity checks or are encrypted to prevent hostile object creation or data tampering"
+        ],
+        [
+          "V5.5.2",
+          "Correctly restricts XML parsers to only use the most restrictive configuration possible and to ensure that unsafe features such as resolving external entities are disabled to prevent XML External…"
+        ],
+        [
+          "V5.5.3",
+          "Deserialization of untrusted data is avoided or is protected in both custom code and third-party libraries"
+        ],
+        [
+          "V5.5.4",
+          "When parsing JSON in browsers or JavaScript-based backends, `JSON.parse` is used to parse the JSON document"
+        ],
+        [
+          "V6.1.1",
+          "Regulated private data is stored encrypted while at rest, such as Personally Identifiable Information (PII), sensitive personal information, or data assessed as likely to be subject to applicable…"
+        ],
+        [
+          "V6.1.2",
+          "Regulated health data is stored encrypted while at rest, such as medical records, medical device details, or de-anonymized research records"
+        ],
+        [
+          "V6.1.3",
+          "Regulated financial data is stored encrypted while at rest, such as financial accounts, defaults or credit history, tax records, pay history, beneficiaries, or de-anonymized market or research records"
+        ],
+        [
+          "V6.2.1",
+          "All cryptographic modules fail securely, and errors are handled in a way that does not enable Padding Oracle attacks"
+        ],
+        [
+          "V6.2.2",
+          "Industry-proven or government-approved cryptographic algorithms, modes, and libraries are used, rather than custom-developed cryptography"
+        ],
+        [
+          "V6.2.3",
+          "Encryption initialization vector, cipher configuration, and block modes are configured securely using the latest advice"
+        ],
+        [
+          "V6.2.4",
+          "Random number, encryption or hashing algorithms, key lengths, rounds, ciphers or modes, can be reconfigured, upgraded, or swapped at any time, to protect against cryptographic breaks"
+        ],
+        [
+          "V6.2.5",
+          "Known insecure block modes (i.e., ECB) are not used"
+        ],
+        [
+          "V6.2.6",
+          "Nonces, initialization vectors, and other single-use numbers must not be used more than once with a given encryption key"
+        ],
+        [
+          "V6.2.7",
+          "Encrypted data is authenticated via signatures, authenticated cipher modes or HMAC to ensure that ciphertext is not altered by an unauthorized party"
+        ],
+        [
+          "V6.2.8",
+          "All cryptographic operations are constant-time, with no 'short-circuit' operations in comparisons, key derivations, or encryptions to avoid information leakage"
+        ],
+        [
+          "V6.3.1",
+          "All random numbers, random file names, random GUIDs, and random strings are generated using the cryptographic module's approved cryptographically secure random number generator when these random…"
+        ],
+        [
+          "V6.3.2",
+          "Random GUIDs are created using the GUID v4 algorithm, and a Cryptographically-secure Pseudorandom Number Generator (CSPRNG)"
+        ],
+        [
+          "V6.3.3",
+          "Random numbers are created with proper entropy even when the application is under heavy load, or that the application degrades gracefully in such circumstances"
+        ],
+        [
+          "V6.4.1",
+          "A secrets management solution such as a key vault is used to securely create, store, control access to and destroy secrets"
+        ],
+        [
+          "V6.4.2",
+          "Key material is not exposed to the application but instead uses an isolated security module like a vault for cryptographic operations"
+        ],
+        [
+          "V7.1.1",
+          "Does not log credentials or payment details"
+        ],
+        [
+          "V7.1.2",
+          "Does not log other sensitive personal data that could lead to applicable privacy legislation implications"
+        ],
+        [
+          "V7.1.3",
+          "Logs security relevant events including successful and failed authentication events, access control failures, deserialization failures and input validation failures"
+        ],
+        [
+          "V7.1.4",
+          "Each log event includes necessary information that would allow for a detailed investigation when an incident occurs"
+        ],
+        [
+          "V7.2.1",
+          "All authentication decisions are logged, without storing sensitive session tokens or passwords"
+        ],
+        [
+          "V7.2.2",
+          "All access control decisions can be logged and all failed decisions are logged"
+        ],
+        [
+          "V7.3.1",
+          "All logging components appropriately encode data to prevent log injection"
+        ],
+        [
+          "V7.3.2",
+          "All events are protected from injection when viewed in log viewing software"
+        ],
+        [
+          "V7.3.3",
+          "Security logs are protected from unauthorized access and modification"
+        ],
+        [
+          "V7.3.4",
+          "Time sources are synchronized to the correct time and time zone"
+        ],
+        [
+          "V7.4.1",
+          "A generic message is shown when an unexpected or security sensitive error occurs, potentially with a unique ID which support personnel can use to investigate"
+        ],
+        [
+          "V7.4.2",
+          "Exception handling is used across the codebase to account for expected and unexpected error conditions"
+        ],
+        [
+          "V7.4.3",
+          "A \"last resort\" error handler is defined which will catch all unhandled exceptions"
+        ],
+        [
+          "V7.4.4",
+          "**Error Response Normalization Rule**"
+        ],
+        [
+          "V8.1.1",
+          "The application protects sensitive data from being cached in server components such as load balancers and application caches"
+        ],
+        [
+          "V8.1.2",
+          "All cached or temporary copies of sensitive data stored on the server are protected from unauthorized access or purged/invalidated after the authorized user accesses the sensitive data"
+        ],
+        [
+          "V8.1.3",
+          "The application minimizes the number of parameters in a request, such as hidden fields, Ajax variables, cookies and header values"
+        ],
+        [
+          "V8.1.4",
+          "The application can detect and alert on abnormal numbers of requests, such as by IP, user, total per hour or day, or whatever makes sense for the application"
+        ],
+        [
+          "V8.1.5",
+          "Regular backups of important data are performed and that test restoration of data is performed"
+        ],
+        [
+          "V8.1.6",
+          "Sensitive information contained in memory is overwritten as soon as it is no longer required to mitigate memory dumping attacks"
+        ],
+        [
+          "V8.1.7",
+          "Sensitive or private information that is required to be encrypted, is encrypted using approved cryptographic algorithms that provide both confidentiality and integrity"
+        ],
+        [
+          "V8.1.8",
+          "Cloud storage and object storage access policies protect sensitive data from unauthorized access"
+        ],
+        [
+          "V8.2.1",
+          "The application sets sufficient anti-caching headers so that sensitive data is not cached in modern browsers"
+        ],
+        [
+          "V8.2.2",
+          "Data stored in browser storage (localStorage, sessionStorage, IndexedDB, or cookies) does not contain sensitive data or PII"
+        ],
+        [
+          "V8.2.3",
+          "Authenticated data is cleared from client storage, such as the browser DOM, after the client or session is terminated"
+        ],
+        [
+          "V8.3.1",
+          "Sensitive data is sent to the server in the HTTP message body or headers, and that query string parameters from any HTTP verb do not contain sensitive data"
+        ],
+        [
+          "V8.3.2",
+          "Users have a method to remove or export their data on demand"
+        ],
+        [
+          "V8.3.3",
+          "Users are provided clear language regarding collection and use of supplied personal information and that users have provided opt-in consent for the use of that data before it is used in any way"
+        ],
+        [
+          "V8.3.4",
+          "All sensitive data created and processed by the application has been identified, and ensure that a policy exists on how to deal with sensitive data"
+        ],
+        [
+          "V8.3.5",
+          "Accessing sensitive data is audited (without logging the sensitive data itself), if the data is collected under relevant data protection directives or where logging of access is required"
+        ],
+        [
+          "V8.3.6",
+          "Sensitive information contained in memory is overwritten as soon as it is no longer required"
+        ],
+        [
+          "V8.3.7",
+          "Sensitive or private information that is required to be encrypted, is encrypted using approved cryptographic algorithms that provide both confidentiality and integrity"
+        ],
+        [
+          "V8.3.8",
+          "Sensitive personal information is subject to data retention classification, such that old or out of date data is deleted automatically, on a schedule, or as the situation requires"
+        ],
+        [
+          "V9.1.1",
+          "TLS is used for all client connectivity, and does not fall back to insecure or unencrypted protocols"
+        ],
+        [
+          "V9.1.2",
+          "Only the latest recommended versions of the TLS protocol are enabled, such as TLS 1.2 and TLS 1.3"
+        ],
+        [
+          "V9.1.3",
+          "Only the latest recommended cipher suites are enabled, with the weakest cipher suites removed"
+        ],
+        [
+          "V9.2.1",
+          "Connections to and from the server use trusted TLS certificates"
+        ],
+        [
+          "V9.2.2",
+          "Encrypted communications such as TLS are used for all inbound and outbound connections, including for management ports, monitoring, authentication, API, or web service calls"
+        ],
+        [
+          "V9.2.3",
+          "All encrypted connections to external systems that involve sensitive information or functions are authenticated"
+        ],
+        [
+          "V9.2.4",
+          "Proper certification revocation, such as Online Certificate Status Protocol (OCSP) Stapling, is enabled and configured"
+        ],
+        [
+          "V9.2.5",
+          "Backend TLS connection failures are logged"
+        ],
+        [
+          "V10.1.1",
+          "A malware scanning tool is used during build or CI/CD to detect potentially malicious code in sourced or developed code, third-party libraries, or external content"
+        ],
+        [
+          "V10.2.1",
+          "Source code and third-party libraries do not contain unauthorized phone home or data collection capabilities"
+        ],
+        [
+          "V10.2.2",
+          "Does not ask for unnecessary or excessive permissions"
+        ],
+        [
+          "V10.2.3",
+          "Source code and third-party libraries do not contain back doors, such as hardcoded or undocumented accounts or keys, code obfuscation, undocumented binary blobs, rootkits, or anti-debug, unsafe…"
+        ],
+        [
+          "V10.2.4",
+          "Source code and third-party libraries do not contain Easter eggs or any other potentially unwanted functionality"
+        ],
+        [
+          "V10.2.5",
+          "Source code and third-party libraries do not contain time bombs by searching for date and time related functions"
+        ],
+        [
+          "V10.2.6",
+          "Source code and third-party libraries do not contain malicious code that specifically searches for or attempts to steal passwords, access tokens, personal, or authentication credentials"
+        ],
+        [
+          "V10.3.1",
+          "If the application has a client or server auto-update feature, updates should be obtained over secure channels and digitally signed"
+        ],
+        [
+          "V10.3.2",
+          "Employs integrity protections, such as code signing or subresource integrity"
+        ],
+        [
+          "V10.3.3",
+          "**[AI/Bot Code Provenance — ALWAYS VERIFY]** Verify that code generated by AI coding tools or CI/CD automation (e.g., GitHub Copilot, GPT Engineer, Cursor, Codegen bots, Dependabot) was…"
+        ],
+        [
+          "V11.1.1",
+          "The application will only process business logic flows for the same user in sequential step order and without skipping steps"
+        ],
+        [
+          "V11.1.2",
+          "The application will only process business logic flows with all steps being processed in realistic human time, i.e., transactions are not submitted too quickly"
+        ],
+        [
+          "V11.1.3",
+          "The application has appropriate limits for specific business actions or transactions, and that these limits are correctly enforced on a per-user basis"
+        ],
+        [
+          "V11.1.4",
+          "The application has anti-automation controls to protect against excessive calls such as mass data exfiltration, business logic requests, file uploads or denial of service attacks"
+        ],
+        [
+          "V11.1.5",
+          "The application has business logic limits or validation to protect against likely business risks or threats, identified using threat modeling or similar methodologies"
+        ],
+        [
+          "V11.1.6",
+          "The application does not suffer from \"time of check to time of use\" (TOCTOU) problems or other race conditions for sensitive operations"
+        ],
+        [
+          "V11.1.7",
+          "The application monitors for unusual events or activity from a business logic perspective"
+        ],
+        [
+          "V11.1.8",
+          "The application has configurable alerting when automated attacks or unusual activity is detected"
+        ],
+        [
+          "V12.1.1",
+          "Will not accept large files that could fill up storage or cause a denial of service"
+        ],
+        [
+          "V12.1.2",
+          "Compressed files are checked for \"zip bombs\" — small files that will decompress into huge amounts of data thus exhausting file storage"
+        ],
+        [
+          "V12.1.3",
+          "A file size quota and maximum number of files per user is enforced to ensure that a single user cannot fill the storage with too many files"
+        ],
+        [
+          "V12.2.1",
+          "Files obtained from untrusted sources are validated to be of expected type based on the file's content"
+        ],
+        [
+          "V12.3.1",
+          "User-submitted filenames are not used directly in file system or framework operations, and that a URL parser is used to prevent path traversal attacks"
+        ],
+        [
+          "V12.3.2",
+          "User-submitted filenames are validated or ignored to prevent the disclosure, creation, updating or removal of local files (LFI)"
+        ],
+        [
+          "V12.3.3",
+          "User-submitted filenames are validated or ignored to prevent the disclosure, creation, updating or removal of remote files (RFI)"
+        ],
+        [
+          "V12.3.4",
+          "Protects against Reflective File Download (RFD) by validating or ignoring user-submitted filenames in a JSON, JSONP, or URL parameter, the response Content-Type header should be set to text/plain,…"
+        ],
+        [
+          "V12.3.5",
+          "Untrusted file metadata is not used directly with system APIs or libraries to protect against OS command injection"
+        ],
+        [
+          "V12.3.6",
+          "Does not include and execute functionality from untrusted sources"
+        ],
+        [
+          "V12.4.1",
+          "Files obtained from untrusted sources are stored outside the web root, with limited permissions"
+        ],
+        [
+          "V12.4.2",
+          "Files obtained from untrusted sources are scanned by antivirus scanners to prevent upload and serving of known malicious content"
+        ],
+        [
+          "V12.4.3",
+          "File upload paths are not served from the same hostname and port as the main application"
+        ],
+        [
+          "V12.4.4",
+          "Cloud storage bucket policies restrict access to authorized users and prevent unauthenticated public access, public listing, or public write operations"
+        ],
+        [
+          "V12.5.1",
+          "The web tier is configured to serve only files with specific file extensions to prevent unintentional information and source code leakage"
+        ],
+        [
+          "V12.5.2",
+          "Direct requests to uploaded files will never be executed as HTML or JavaScript content"
+        ],
+        [
+          "V12.6.1",
+          "The web or application server is configured with an allowlist of resources or systems to which the server can send requests or load data/files from"
+        ],
+        [
+          "V13.1.1",
+          "All application components use the same encodings and parsers to avoid parsing attacks that exploit different URI or file parsing behavior that could be used in SSRF and RFI attacks"
+        ],
+        [
+          "V13.1.2",
+          "Access to administration and management functions is limited to authorized administrators"
+        ],
+        [
+          "V13.1.3",
+          "API URLs do not expose sensitive information, such as the API key, session tokens etc"
+        ],
+        [
+          "V13.1.4",
+          "Authorization decisions are made at both the URI, enforced by programmatic or declarative security at the controller level, and at the resource or object level, enforced by model-based permissions"
+        ],
+        [
+          "V13.1.5",
+          "Requests containing unexpected or missing content types are rejected with appropriate headers (HTTP response status 406 Unacceptable or 415 Unsupported Media Type)"
+        ],
+        [
+          "V13.2.1",
+          "Enabled RESTful HTTP methods are a valid choice for the user or action, such that normal users cannot use DELETE or PUT on protected API or resources, such as `DELETE /users/{id}` or `PUT…"
+        ],
+        [
+          "V13.2.2",
+          "JSON schema validation is in place and verified before accepting input"
+        ],
+        [
+          "V13.2.3",
+          "RESTful web services that utilize cookies are protected from Cross-Site Request Forgery via the use of at least one or more of the following"
+        ],
+        [
+          "V13.2.6",
+          "REST services are protected from Denial of Service (DoS) using rate limiting or other anti-DoS mitigations"
+        ],
+        [
+          "V13.3.1",
+          "XSD schema validation takes place to ensure a properly formed XML document, followed by validation of each input field before any processing of that data takes place"
+        ],
+        [
+          "V13.3.2",
+          "The message payload is signed using WS-Security to ensure reliable transport between client and service"
+        ],
+        [
+          "V13.4.1",
+          "A query allowlist or a combination of depth limiting and amount limiting is used to prevent GraphQL or data layer expression Denial of Service (DoS) attacks"
+        ],
+        [
+          "V13.4.2",
+          "GraphQL or other data layer authorization logic is implemented at the business logic layer instead of the GraphQL layer"
+        ],
+        [
+          "V13.5.1",
+          "All API endpoints are protected using either authentication, authorization, or rate limiting"
+        ],
+        [
+          "V13.5.2",
+          "JWT tokens are validated as per the V3.5.3 requirements"
+        ],
+        [
+          "V13.5.3",
+          "API keys do not provide long-lived unrestricted access"
+        ],
+        [
+          "V13.6.1",
+          "The API has rate limiting enabled and that rate limiting is applied to both authenticated and unauthenticated users"
+        ],
+        [
+          "V13.6.2",
+          "Resource-intensive operations are protected by rate limits to prevent financial or resource abuse"
+        ],
+        [
+          "V13.7.1",
+          "OpenAPI or API documentation is not exposed in production, or if it must be, that access is restricted to authorized users"
+        ],
+        [
+          "V13.7.2",
+          "An API inventory exists and is maintained for all APIs"
+        ],
+        [
+          "V13.8.1",
+          "Inter-service calls use the minimum necessary authentication and authorization"
+        ],
+        [
+          "V13.8.2",
+          "Inter-service calls use mutual authentication"
+        ],
+        [
+          "V14.1.1",
+          "The build pipeline does not include any hardcoded credentials, tokens, or API keys"
+        ],
+        [
+          "V14.1.2",
+          "Build and deployment configurations do not contain any development, test, or debug settings that are enabled in production builds"
+        ],
+        [
+          "V14.1.3",
+          "Debug features are disabled in production, including developer tools, debug consoles, or stack traces exposed to end users"
+        ],
+        [
+          "V14.2.1",
+          "All third-party components and libraries are from pre-defined, trusted sources and are kept up to date"
+        ],
+        [
+          "V14.2.2",
+          "An inventory of all third-party libraries is maintained and available"
+        ],
+        [
+          "V14.2.3",
+          "Unused dependencies, unnecessary features, components, files, and documentation are removed"
+        ],
+        [
+          "V14.3.1",
+          "Web or application server and framework error messages do not expose any unintended information (e.g., stack traces, server-side technology, or internal component names)"
+        ],
+        [
+          "V14.3.2",
+          "Web or application server and framework versions are not disclosed in HTTP headers or pages"
+        ],
+        [
+          "V14.3.3",
+          "Health check endpoints return only minimum information required by the load balancer or orchestrator"
+        ],
+        [
+          "V14.3.4",
+          "Authentication status endpoints do not expose internal implementation details (e.g., auth driver names, session store types, provider configuration)"
+        ],
+        [
+          "V14.4.1",
+          "Every HTTP response contains a Content-Type header with a safe character set (e.g., UTF-8, ISO 8859-1)"
+        ],
+        [
+          "V14.4.2",
+          "All API responses contain a `Content-Disposition"
+        ],
+        [
+          "V14.4.3",
+          "A Content Security Policy (CSP) response header is in place with a policy that helps mitigate common DOM, XSS, and JavaScript injection attacks"
+        ],
+        [
+          "V14.4.4",
+          "All responses contain an X-Content-Type-Options header with value `nosniff`"
+        ],
+        [
+          "V14.4.5",
+          "HTTP Strict Transport Security headers are included on all responses and for all subdomains"
+        ],
+        [
+          "V14.4.6",
+          "A suitable `Referrer-Policy` header is included"
+        ],
+        [
+          "V14.4.7",
+          "The content of a web application cannot be embedded in a third-party site by default and that embedding of the exact resources is only allowed where necessary using appropriate…"
+        ],
+        [
+          "V14.5.1",
+          "Server only accepts HTTP methods in use by the application and rejects unexpected methods (405 Method Not Allowed)"
+        ],
+        [
+          "V14.5.2",
+          "The supplied Origin header is not used for authentication or access control decisions, as the Origin header can easily be changed by an attacker"
+        ],
+        [
+          "V14.5.3",
+          "The cross-origin resource sharing (CORS) Allow-Origin header uses a strict allowlist of trusted domains and does not support the \"null\" origin"
+        ],
+        [
+          "V14.5.4",
+          "HTTP headers added by a trusted proxy or SSO devices, such as a bearer token, are authenticated by the application"
+        ]
+      ],
+      "caption": "The complete requirement-by-requirement checklist Blue walks against every application. Requirement ids group by chapter (V2 = authentication, V5 = input validation, and so on).",
+      "source": "AIDE common harness — control inventory, audited from source."
+    },
+    {
+      "type": "paragraph",
+      "text": "This inventory is not a description of the harness — it is the harness. Every check above is runnable code or a model skill in the open-source common harness, free for any government or organization to take, run, and extend. Browse and download it from our [repositories](/repos)."
     },
     {
       "type": "tag_row",
