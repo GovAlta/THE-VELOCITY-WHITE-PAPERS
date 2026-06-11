@@ -459,7 +459,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The body of this paper describes four agents. The full inventory is larger, and a security lead should be able to see all of it. Every application starts from a secure template that builds in about ninety-five major security controls (see [Anatomy of a Template](/paper/l5wsi)). The four review agents verify that template and a great deal more. Audited against the harness source, a complete pass runs more than four hundred individual checks. The largest share is Blue's two standards walks: 285 OWASP ASVS Level 2 requirements and 62 Alberta cloud-security rules. The rest are the Green, Yellow, and Red checks listed below. Green, Yellow, and Red's reconnaissance and scanners are deterministic, so they make good gates: the same code returns the same findings every time. Red's exploitation planner and most of Blue are probabilistic, the judgement a senior reviewer brings."
+      "text": "The full inventory of checks and controls are listed below. Every application starts from a secure template that builds in about ninety-five major security controls (see [Anatomy of a Template](/paper/l5wsi)). The four review agents verify that template and a great deal more. The complete pass runs more than four hundred individual checks. The largest share is Blue's two standards walks: 285 OWASP ASVS Level 2 requirements and 62 Alberta cloud-security rules. View the tables below for a full inventory."
     },
     {
       "type": "table",
@@ -2439,10 +2439,6 @@
       ],
       "caption": "The complete requirement-by-requirement checklist Blue walks against every application. Requirement ids group by chapter (V2 = authentication, V5 = input validation, and so on).",
       "source": "AIDE common harness — control inventory, audited from source."
-    },
-    {
-      "type": "paragraph",
-      "text": "Every check above is runnable code or a model skill in the open-source common harness. Any government or organization can take it, run it, and extend it. Browse and download it from our [repositories](/repos)."
     },
     {
       "type": "tag_row",
