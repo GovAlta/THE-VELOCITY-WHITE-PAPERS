@@ -148,7 +148,7 @@
         "caption": "Checks and balances",
         "visual_config": {
           "stat_value": "~95",
-          "stat_label": "Major security controls in the secure template — verified by 400+ individual checks every pass"
+          "stat_label": "Major security controls in the secure template, verified by 400+ checks every pass"
         },
         "subcaption": "Bundled into the harness as gates. A piece of work passes only when it clears them all.",
         "text": "Apart, each agent is useful. Together they are checks and balances, bundled into the harness as gates. The harness will not call a piece of work done if the security scan shows a critical finding, if the scan is stale, or if the review never ran. The gates are mechanical, not aspirational. This is how the cyber problem is answered without patching forever, and how the build methods stay safe at speed. Security and quality become a property of how the code is made."
@@ -397,13 +397,13 @@
     },
     {
       "type": "paragraph",
-      "text": "Across fourteen ASVS chapters and ten Alberta cloud-security domains, from authentication and session handling to input validation and supply-chain hygiene. A full pass runs more than four hundred individual checks, the estate gets a little safer each time, and the lesson is kept rather than relearned."
+      "text": "The agents check each application against fourteen ASVS chapters and ten Alberta cloud-security domains, covering areas such as authentication, input validation, and supply-chain hygiene. A full pass runs more than four hundred individual checks. The estate gets a little safer each time, and the lesson is kept rather than relearned."
     },
     {
       "type": "keystat",
       "label": "Major security controls built into the secure template",
       "value": "~95",
-      "body": "The four review agents verify these and far more — over four hundred individual checks on every pass: 285 ASVS Level 2 requirements, 62 Alberta cloud-security rules, plus the Green, Yellow, and Red checks."
+      "body": "The four review agents verify these and more. A complete pass runs over four hundred individual checks: 285 ASVS Level 2 requirements, 62 Alberta cloud-security rules, plus the Green, Yellow, and Red checks."
     },
     {
       "type": "figure",
@@ -459,7 +459,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The body of this paper describes four agents. The full surface is larger, and worth setting out in plain sight. Every application is built on a secure template of roughly **ninety-five major security controls** (see [Anatomy of a Template](/paper/l5wsi)). The four review agents verify that template and far more: audited against the harness source, a complete pass runs **more than four hundred individual checks** — 285 OWASP ASVS Level 2 requirements, 62 Alberta cloud-security rules, thirty Green scanners, twelve Yellow rules, and twenty-three Red tools and stages. Green, Yellow, and Red's reconnaissance and scanners are deterministic and act as gates that never drift; Red's exploitation planner and most of Blue are probabilistic, the expert read a checklist would miss. The full inventory follows."
+      "text": "The body of this paper describes four agents. The full inventory is larger, and a security lead should be able to see all of it. Every application starts from a secure template that builds in about ninety-five major security controls (see [Anatomy of a Template](/paper/l5wsi)). The four review agents verify that template and a great deal more. Audited against the harness source, a complete pass runs more than four hundred individual checks. The largest share is Blue's two standards walks: 285 OWASP ASVS Level 2 requirements and 62 Alberta cloud-security rules. The rest are the Green, Yellow, and Red checks listed below. Green, Yellow, and Red's reconnaissance and scanners are deterministic, so they make good gates: the same code returns the same findings every time. Red's exploitation planner and most of Blue are probabilistic, the judgement a senior reviewer brings."
     },
     {
       "type": "table",
@@ -590,7 +590,7 @@
           "WebSocket handlers: rate limiting, error leakage, unauthenticated messages."
         ]
       ],
-      "caption": "Each scanner runs in its own subprocess and stays quiet on stacks it does not apply to. Green is the deterministic evidence base every other agent reads. Several checks bundle sub-items — secret_scan alone covers about ten credential types.",
+      "caption": "Each scanner runs in its own subprocess and stays quiet on stacks it does not apply to. Green is the deterministic evidence base every other agent reads. Several checks bundle sub-items; secret_scan alone covers about ten credential types.",
       "source": "AIDE common harness — control inventory, audited from source."
     },
     {
@@ -962,7 +962,7 @@
           "285"
         ]
       ],
-      "caption": "Phase 05 walks every requirement of the OWASP Application Security Verification Standard at Level 2. Applicability varies with the application; file-upload, GraphQL, SOAP, and unmanaged-language requirements are recorded as not-applicable when the feature is absent. Every requirement is listed in full below.",
+      "caption": "Phase 05 walks every requirement of the OWASP Application Security Verification Standard at Level 2. Applicability varies with the application; file-upload, GraphQL, SOAP, and unmanaged-language requirements are recorded as not-applicable when the feature is absent. The next table lists every requirement in full.",
       "source": "AIDE common harness — control inventory, audited from source."
     },
     {
@@ -1285,7 +1285,7 @@
           "AI Code Generation"
         ]
       ],
-      "caption": "Phase 06 walks Alberta's cloud application security baseline — 62 rules across 10 domains, several mapping to ITSG-33 control families. Rule LOG-001 alone carries eleven sub-requirements (a–k).",
+      "caption": "Phase 06 walks Alberta's cloud application security baseline: 62 rules across 10 domains, several mapping to ITSG-33 control families. Rule LOG-001 alone carries eleven sub-requirements (a through k).",
       "source": "AIDE common harness — control inventory, audited from source."
     },
     {
@@ -2442,7 +2442,7 @@
     },
     {
       "type": "paragraph",
-      "text": "This inventory is not a description of the harness — it is the harness. Every check above is runnable code or a model skill in the open-source common harness, free for any government or organization to take, run, and extend. Browse and download it from our [repositories](/repos)."
+      "text": "Every check above is runnable code or a model skill in the open-source common harness. Any government or organization can take it, run it, and extend it. Browse and download it from our [repositories](/repos)."
     },
     {
       "type": "tag_row",
