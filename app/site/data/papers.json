@@ -256,7 +256,7 @@
         "Ministry of Technology and Innovation"
       ],
       "published": "2026-06-16",
-      "reading_min": 10,
+      "reading_min": 11,
       "status": "Published",
       "tags": [
         "security",
@@ -277,11 +277,11 @@
       "i18n": {
         "fr": {
           "title": "Les agents rouge, bleu, vert et jaune",
-          "subtitle": "Quatre agents de révision, intégrés au harnais, qui vérifient chaque application sur le plan de la qualité, de la cohérence et de la sécurité avant sa mise en service.",
-          "abstract": "Si l'IA écrit et répare le code, il faut bien que quelque chose vérifie l'IA. Quatre agents de révision se trouvent à l'intérieur du harnais, chacun surnommé d'après une couleur. Le vert vérifie la qualité et l'hygiène du code. Le jaune vérifie la façon dont les textes se lisent. Le rouge attaque l'application comme le ferait une personne de l'extérieur. Le bleu la défend, évalue le code par rapport à une norme de sécurité internationale et transforme les éléments de preuve en un verdict sur lequel un décideur peut s'appuyer. Ces agents sont intégrés au harnais à titre de freins et contrepoids : un travail ne peut être considéré comme terminé tant qu'il n'a pas réussi. La sécurité et la qualité cessent d'être quelque chose que l'on poursuit après coup pour devenir des préoccupations de premier plan."
+          "subtitle": "Quatre agents de revue, intégrés au harnais, qui vérifient chaque application sur le plan de la qualité, de la cohérence et de la sécurité avant sa mise en service.",
+          "abstract": "Si l'IA écrit et répare le code, quelque chose doit vérifier l'IA. Quatre agents de revue circulent à l'intérieur du harnais, chacun désigné par une couleur. Le vert vérifie la qualité et l'hygiène du code. Le jaune vérifie la façon dont le texte se lit. Le rouge attaque l'application comme le ferait un tiers de l'extérieur. Le bleu la défend, évalue le code par rapport à une norme de sécurité internationale et transforme les preuves en un verdict sur lequel un décideur peut agir. Ces agents sont intégrés au harnais à titre de contrepoids et de garde-fous : un travail ne peut être déclaré terminé tant qu'il ne les a pas franchis. La sécurité et la qualité cessent d'être quelque chose que nous poursuivons après coup et deviennent des préoccupations de premier plan."
         }
       },
-      "listen_sec": 624
+      "listen_sec": 651
     },
     {
       "id": "qthji",
