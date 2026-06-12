@@ -778,7 +778,7 @@
       "sequence": "19 of 19",
       "tier": "Conceptual",
       "title": "Simulation: Government 3.0",
-      "subtitle": "A narrated, animated simulation of the Government 3.0 architecture, because some transformations are better witnessed than described.",
+      "subtitle": "A narrated, animated simulation of the Government 3.0 architecture.",
       "track": "Technical Appendix",
       "authors": [
         "Janak Alford",
@@ -796,7 +796,7 @@
         "visualization"
       ],
       "repo": null,
-      "abstract": "The Compression Problem argued that written briefings over-compress: the ideas that matter most are exactly the ones a page of text cannot carry, while human visual and spatial reasoning sits unused. This paper acts on that argument. It contains a narrated, animated simulation of the Government 3.0 architecture, the fourth and most radical of the Four Approaches. Watch agents gain delegated, observable access to the whole government estate. Watch an interface get built for one task and dissolve when the task is done. Watch a government that runs on rules learn where its own friction lives. The simulation is a reusable engine driven entirely by data, so the next concept can be simulated by writing a new file rather than new software.",
+      "abstract": "The Compression Problem argued that written briefings over-compress: the ideas that matter most are exactly the ones a page of text cannot carry, while human visual and spatial reasoning sits unused. Building on this, this set of simulations present the Government 3.0 architecture, previously introduced in the Four Approaches. Watch agents gain delegated, observable access to securely interact with government tools and systems. Agents create dynamic interactions, built just in time, for the right audience. Feedback and monitoring allows the system to detect friction and to resolve this with recommendations to policy drivers to reduce red tape.",
       "related": [
         "zgym1",
         "eujjc",

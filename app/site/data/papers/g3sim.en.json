@@ -5,7 +5,7 @@
   "tier": "Conceptual",
   "category": "paper",
   "title": "Simulation: Government 3.0",
-  "subtitle": "A narrated, animated simulation of the Government 3.0 architecture, because some transformations are better witnessed than described.",
+  "subtitle": "A narrated, animated simulation of the Government 3.0 architecture.",
   "track": "Technical Appendix",
   "authors": [
     "Janak Alford",
@@ -23,7 +23,7 @@
     "visualization"
   ],
   "repo": null,
-  "abstract": "The Compression Problem argued that written briefings over-compress: the ideas that matter most are exactly the ones a page of text cannot carry, while human visual and spatial reasoning sits unused. This paper acts on that argument. It contains a narrated, animated simulation of the Government 3.0 architecture, the fourth and most radical of the Four Approaches. Watch agents gain delegated, observable access to the whole government estate. Watch an interface get built for one task and dissolve when the task is done. Watch a government that runs on rules learn where its own friction lives. The simulation is a reusable engine driven entirely by data, so the next concept can be simulated by writing a new file rather than new software.",
+  "abstract": "The Compression Problem argued that written briefings over-compress: the ideas that matter most are exactly the ones a page of text cannot carry, while human visual and spatial reasoning sits unused. Building on this, this set of simulations present the Government 3.0 architecture, previously introduced in the Four Approaches. Watch agents gain delegated, observable access to securely interact with government tools and systems. Agents create dynamic interactions, built just in time, for the right audience. Feedback and monitoring allows the system to detect friction and to resolve this with recommendations to policy drivers to reduce red tape.",
   "hero_image": {
     "src": "public/images/g3sim/en/hero.jpg",
     "alt": "A simple geometric simulation mid-play: small orange agents moving between people, gateways, and systems on a cream stage, with a camera frame around the action.",
@@ -140,7 +140,7 @@
     },
     {
       "n": "02",
-      "title": "The simulation"
+      "title": "The simulations"
     },
     {
       "n": "03",
@@ -149,16 +149,12 @@
     {
       "n": "04",
       "title": "How the engine works"
-    },
-    {
-      "n": "05",
-      "title": "Where this leads"
     }
   ],
   "blocks": [
     {
       "type": "dropcap_paragraph",
-      "text": "Two earlier papers set this one up. [The Four Approaches](/paper/zgym1) described Government 3.0, the most radical route to modernization, where the application dissolves and AI agents work directly against governed data. [The Compression Problem](/paper/eujjc) argued that a transformation of that scale cannot be carried by a written briefing: text over-compresses, and the human strengths it ignores, visual, spatial, and auditory reasoning, are exactly the ones that could absorb it. This paper acts on both. It contains a narrated, animated simulation of the Government 3.0 architecture. You are invited to stop reading and press play."
+      "text": "Simulations provide a meaningful alternatives to text briefings. These following simulations present the core concepts introduced in [The Four Approaches](/paper/zgym1), which described Government 3.0 as a future model of civic interaction with government IT systems. It contains a narrated, animated simulation of the approaches and steps to achieve the objective of a responsive government digital architecture. "
     },
     {
       "type": "section_heading",
@@ -167,12 +163,12 @@
     },
     {
       "type": "paragraph",
-      "text": "A decision-maker asked to approve a multi-year transformation receives, in the standard process, a briefing note. The note is honest and well-researched, and it stands in for thousands of pages of method the reader will never see. The Compression Problem called this over-compression: the structure, the motion, and the cause and effect are exactly what a page of prose cannot carry. A simulation compresses differently. It keeps the system whole and speeds it up, so five years of staged work plays out in eight narrated minutes. The eye verifies what the text could only assert."
+      "text": "Decision-makers are frequently asked to approve multi-year transformations. They review project plans, costs, and risks in a briefing note, written, format with a slide presentation. The information is significantly compressed, thousands of pages of design, architecture, business rules, and regulations, compressed into a high-level plan or ten-slide PowerPoint presentation. Decision-makers must rapidly make decisions based on the note and have little opportunity to see the bigger vision or to interact with the process. \n\nA visual and interactive simulation presents this information in a which is intended to be clear, well sequenced, and builds on visual, audio, and textual understanding of the problem and the solution. It keeps the system whole and speeds it up, so five years of staged work plays out in eight narrated minutes. The eye verifies what the text could only assert."
     },
     {
       "type": "pullquote",
-      "text": "You leave the Ferrari in the garage and ignore our millennia of evolution in visual, spatial, and auditory understanding.",
-      "cite": "Paper 14 · The Compression Problem"
+      "text": "Your spatial, visual, auditory, temporal, and even sensory intelligence is ignored when reading a text briefing. The simulation extends human engagement and understanding into different media formats. The simulation content is highly accessible for any type of learner or leader. ",
+      "cite": ""
     },
     {
       "type": "paragraph",
@@ -181,7 +177,7 @@
     {
       "type": "section_heading",
       "n": "02",
-      "title": "The simulation"
+      "title": "The simulations"
     },
     {
       "type": "figure",
@@ -270,20 +266,11 @@
     },
     {
       "type": "paragraph",
-      "text": "The player is a reusable engine, not a one-off video. Everything you watched is declared in a single data file: the actors as simple geometric shapes, the chapters, the narration in both languages, the captions, the camera positions, and every timed movement. The engine reads the file, renders the world, and builds one animation timeline per chapter. The narration audio is the master clock. Each step is placed at a fraction of its chapter, and the timeline is scaled to the real length of the recording, so the voice and the motion stay locked together at any point, in either language, even when you scrub."
+      "text": "The code which ships with these white papers is intended to form a foundation for future exploration. We will continue to develop these tools with feedback from stakeholders and share the latest presentation and simulation methods. Our intent is to make each presentation data-driven and reusable. Everything you watched is declared in a single data file: the actors as simple geometric shapes, the chapters, the narration in both languages, the captions, the camera positions, and every timed movement. The engine reads the file, renders the world, and builds one animation timeline per chapter. The narration audio is the master clock. Each step is placed at a fraction of its chapter, and the timeline is scaled to the real length of the recording, so the voice and the motion stay locked together at any point, in either language, even when you scrub."
     },
     {
       "type": "paragraph",
-      "text": "This design follows the same rule as the rest of the collection: content lives in data, behaviour lives in one engine. A new simulation, for a different concept, is a new JSON file. The shapes are deliberately simple, rectangles, circles, and small figures, because the information is in the structure and the motion, and the restraint keeps the picture legible to a first-time viewer. For readers who cannot or prefer not to watch animation, the same file drives a chapter-by-chapter storyboard with identical narration, captions, and a full transcript."
-    },
-    {
-      "type": "section_heading",
-      "n": "05",
-      "title": "Where this leads"
-    },
-    {
-      "type": "paragraph",
-      "text": "The Compression Problem asked what a briefing note should become when human reading capacity is the bottleneck. This paper is one answer: a witnessed system rather than a described one. The next candidates are already clear. The [Four Approaches](/paper/zgym1) could each play out against a real ministry portfolio. The [AI Factory](/paper/uwpxr) could be watched building an application end to end. A five-year remediation could run forward at speed, the way the Compression Problem imagined. Each of these is now a data file away. We will keep writing papers, because the record matters. But for the decisions that depend on seeing a system move, we intend to brief this way from now on."
+      "text": "This design follows the same rule as the rest of the collection: content lives in data, behaviour lives in one engine. Creating a new simulation only requires is a new JSON file. The shapes are deliberately simple, rectangles, circles, and small figures, because the information is in the structure and the motion, and the restraint keeps the picture legible to a first-time viewer. For readers who cannot or prefer not to watch animation, the same file drives a chapter-by-chapter storyboard with identical narration, captions, and a full transcript."
     },
     {
       "type": "tag_row",
