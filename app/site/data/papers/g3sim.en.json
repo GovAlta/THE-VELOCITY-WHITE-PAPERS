@@ -204,6 +204,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "The third player below leaves the rails entirely. The same eight chapters and the same narration play out in a navigable three-dimensional environment: buildings rise and sink, the gateway colonnade climbs out of the ground, and the camera is yours to take. Drag to orbit, scroll to zoom, and click any glowing marker to pause the ride and learn what that element is. Each marker opens a panel with the glossary definition, an excerpt from the paper that introduced the idea, and a link to read further. When AI can join these briefings live, that panel becomes a conversation; today it carries the pre-generated knowledge, so the future is visible in the present tense."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.3",
+      "title": "Government 3.0, in three dimensions",
+      "caption": "The 3D engine: ride the chapters or explore freely. Click the ⓘ markers to learn about gateways, agents, the audit ledger, governed APIs, and the rules core, with definitions and excerpts drawn from across the collection.",
+      "chart": {
+        "kind": "sim:three",
+        "sim": "gov3-3d"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "What you are watching"
@@ -299,6 +313,7 @@
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
     "components/visuals/bespoke/sim/_common.js",
     "components/visuals/bespoke/sim/Player.js",
-    "components/visuals/bespoke/sim/Iso.js"
+    "components/visuals/bespoke/sim/Iso.js",
+    "components/visuals/bespoke/sim/Three3D.js"
   ]
 }

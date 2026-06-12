@@ -207,6 +207,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "Le troisième lecteur ci-dessous quitte entièrement les rails. Les mêmes huit chapitres et la même narration se déroulent dans un environnement tridimensionnel navigable : les bâtiments s'élèvent et s'enfoncent, la colonnade des passerelles sort du sol, et la caméra vous appartient. Glissez pour orbiter, faites défiler pour zoomer, et cliquez sur un marqueur lumineux pour mettre la visite en pause et apprendre ce qu'est cet élément. Chaque marqueur ouvre un panneau avec la définition du glossaire, un extrait du livre qui a introduit l'idée et un lien pour aller plus loin. Quand l'IA pourra se joindre à ces présentations en direct, ce panneau deviendra une conversation; aujourd'hui, il porte le savoir prégénéré, et l'avenir devient visible au présent."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.3",
+      "title": "Gouvernement 3.0, en trois dimensions",
+      "caption": "Le moteur 3D : suivez les chapitres ou explorez librement. Cliquez sur les marqueurs ⓘ pour découvrir les passerelles, les agents, le registre d'audit, les API gouvernées et le cœur des règles, avec des définitions et des extraits tirés de toute la collection.",
+      "chart": {
+        "kind": "sim:three",
+        "sim": "gov3-3d"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "Ce que vous regardez"
@@ -317,6 +331,7 @@
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
     "components/visuals/bespoke/sim/_common.js",
     "components/visuals/bespoke/sim/Player.js",
-    "components/visuals/bespoke/sim/Iso.js"
+    "components/visuals/bespoke/sim/Iso.js",
+    "components/visuals/bespoke/sim/Three3D.js"
   ]
 }

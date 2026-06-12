@@ -42,7 +42,7 @@ const url = BASE + '/paper/' + PAPER;
 console.log('open', url);
 await page.goto(url, { waitUntil: 'networkidle2', timeout: 45000 });
 await page.waitForSelector('.sim-frame', { timeout: 30000 });
-await page.evaluate(() => { const el = document.querySelector('.sim-frame'); el.scrollIntoView({ block: 'center' }); });
+await page.evaluate(() => { const el = document.querySelector('.sim-frame'); el.scrollIntoView({ block: 'center' }); document.querySelectorAll('nav, header, .vw-nav, .app-nav').forEach(n => { n.style.visibility = 'hidden'; }); });
 await new Promise(r => setTimeout(r, 1200));
 
 /* Reach into the Vue component to seek deterministically (the Player registers
@@ -66,8 +66,9 @@ for (const s of SHOTS) {
   await seek(s.ch, s.f);
   const file = resolve(OUT, 'sim-' + LOCALE + '-ch' + (s.ch + 1) + '-' + Math.round(s.f * 100) + '.png');
   const idx = await page.evaluate(() => window.__simIdx || 0);
-  const el = (await page.$$('.sim-frame'))[idx];
-  await el.screenshot({ path: file });
+  await page.evaluate(i => { document.querySelectorAll('.sim-frame')[i].scrollIntoView({ block: 'center' }); }, idx);
+  await new Promise(r => setTimeout(r, 900));               // let any scroll-reveal animation finish
+  await page.screenshot({ path: file, captureBeyondViewport: false });   // full viewport, frame centred
   console.log('shot', file);
 }
 
