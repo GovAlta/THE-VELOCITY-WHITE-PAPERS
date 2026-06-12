@@ -32,7 +32,7 @@
   },
   "audio": {
     "src": "public/audio/en/g3sim.mp3",
-    "duration_sec": 406
+    "duration_sec": 421
   },
   "tldr_presentation": {
     "id": "g3sim-tldr",
@@ -154,7 +154,7 @@
   "blocks": [
     {
       "type": "dropcap_paragraph",
-      "text": "Simulations provide a meaningful alternatives to text briefings. These following simulations present the core concepts introduced in [The Four Approaches](/paper/zgym1), which described Government 3.0 as a future model of civic interaction with government IT systems. It contains a narrated, animated simulation of the approaches and steps to achieve the objective of a responsive government digital architecture. "
+      "text": "Simulations provide meaningful alternatives to text briefings. These following simulations present the core concepts introduced in [The Four Approaches](/paper/zgym1), which described Government 3.0 as a future model of civic interaction with government IT systems. It contains a narrated, animated simulation of the approaches and steps to achieve the objective of a responsive government digital architecture. "
     },
     {
       "type": "section_heading",
@@ -163,7 +163,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Decision-makers are frequently asked to approve multi-year transformations. They review project plans, costs, and risks in a briefing note, written, format with a slide presentation. The information is significantly compressed, thousands of pages of design, architecture, business rules, and regulations, compressed into a high-level plan or ten-slide PowerPoint presentation. Decision-makers must rapidly make decisions based on the note and have little opportunity to see the bigger vision or to interact with the process. \n\nA visual and interactive simulation presents this information in a which is intended to be clear, well sequenced, and builds on visual, audio, and textual understanding of the problem and the solution. It keeps the system whole and speeds it up, so five years of staged work plays out in eight narrated minutes. The eye verifies what the text could only assert."
+      "text": "Decision-makers are frequently asked to approve multi-year transformations. They review project plans, costs, and risks in a briefing note, written, format with a slide presentation. The information is significantly compressed, thousands of pages of design, architecture, business rules, and regulations, compressed into a high-level plan or ten-slide PowerPoint presentation. Decision-makers must rapidly make decisions based on the note and have little opportunity to see the bigger vision or to interact with the process. \n\nA visual and interactive simulation presents this information in a format which is intended to be clear, well sequenced, and builds on visual, audio, and textual understanding of the problem and the solution. It keeps the system whole and speeds it up, so five years of staged work plays out in eight narrated minutes. The eye verifies what the text could only assert."
     },
     {
       "type": "pullquote",
@@ -270,7 +270,7 @@
     },
     {
       "type": "paragraph",
-      "text": "This design follows the same rule as the rest of the collection: content lives in data, behaviour lives in one engine. Creating a new simulation only requires is a new JSON file. The shapes are deliberately simple, rectangles, circles, and small figures, because the information is in the structure and the motion, and the restraint keeps the picture legible to a first-time viewer. For readers who cannot or prefer not to watch animation, the same file drives a chapter-by-chapter storyboard with identical narration, captions, and a full transcript."
+      "text": "This design follows the same rule as the rest of the collection: content lives in data, behaviour lives in one engine. Creating a new simulation only requires a new JSON file. The shapes are deliberately simple, rectangles, circles, and small figures, because the information is in the structure and the motion, and the restraint keeps the picture legible to a first-time viewer. For readers who cannot or prefer not to watch animation, the same file drives a chapter-by-chapter storyboard with identical narration, captions, and a full transcript."
     },
     {
       "type": "tag_row",
