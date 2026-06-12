@@ -62,6 +62,7 @@
       .sim-bar { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border-bottom: 1px solid var(--rule); flex-wrap: wrap; background: var(--paper); }
       .sim-title { font-family: var(--font-serif, Georgia, serif); font-style: italic; font-size: 15px; color: var(--accent); margin: 0; }
       .sim-spacer { flex: 1 1 auto; }
+      .sim-actions { display: flex; gap: 8px; margin-left: auto; flex-wrap: nowrap; align-items: center; }
       .sim-btn { font-size: 12px; border: 1px solid var(--rule-strong); background: var(--paper); color: var(--ink-70); border-radius: 6px; padding: 5px 10px; cursor: pointer; line-height: 1.1; }
       .sim-btn:hover { border-color: var(--accent); color: var(--accent); }
       .sim-btn.sim-primary { background: var(--accent); color: #fff; border-color: var(--accent); min-width: 74px; }
