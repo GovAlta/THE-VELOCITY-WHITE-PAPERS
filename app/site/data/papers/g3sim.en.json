@@ -232,6 +232,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "The fifth player strips the story down to light. No buildings, no figures, no cloth: seven thousand particles in a dark field, and the architecture emerges from how they move. Each ministry system is a constellation of drifting points; each governed API snaps a thread of light between them, and you can watch the signal pulses begin to race the moment a connection lands. The audit ledger assembles itself as a golden helix, one particle per recorded action. Plain-language instruction becomes two spheres of light trading sparks. And in the closing chapter the whole field reorganizes into the platform's concentric strata around a radiant rules core, then finds its own knots of red friction and heals them to gold. Move your pointer through the field and the particles bend toward it; drag to orbit, scroll to dive in."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.5",
+      "title": "Government 3.0, as a living field",
+      "caption": "The manifold engine: the same eight chapters told entirely in particles and light. Threads grow as governed APIs open, pulses race the connections, and the finale heals the field's own friction. Your pointer is a gravity well; drag to orbit, scroll to zoom.",
+      "chart": {
+        "kind": "sim:manifold",
+        "sim": "gov3-manifold"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "What you are watching"
@@ -329,6 +343,7 @@
     "components/visuals/bespoke/sim/Player.js",
     "components/visuals/bespoke/sim/Iso.js",
     "components/visuals/bespoke/sim/Three3D.js",
-    "components/visuals/bespoke/sim/Tapestry.js"
+    "components/visuals/bespoke/sim/Tapestry.js",
+    "components/visuals/bespoke/sim/Manifold.js"
   ]
 }

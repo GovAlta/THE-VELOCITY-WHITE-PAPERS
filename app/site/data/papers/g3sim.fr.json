@@ -235,6 +235,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "Le cinquième lecteur réduit l'histoire à la lumière. Pas de bâtiments, pas de personnages, pas d'étoffe : sept mille particules dans un champ sombre, et l'architecture émerge de leur mouvement. Chaque système ministériel est une constellation de points à la dérive; chaque API gouvernée tend un fil de lumière entre eux, et l'on voit les impulsions de signal commencer à courir dès qu'une connexion s'établit. Le registre d'audit s'assemble en hélice dorée, une particule par action consignée. L'instruction en langage courant devient deux sphères de lumière qui échangent des étincelles. Et au chapitre final, le champ entier se réorganise en strates concentriques de la plateforme autour d'un noyau de règles rayonnant, puis trouve ses propres nœuds de friction rouge et les guérit en or. Déplacez votre pointeur dans le champ et les particules s'incurvent vers lui; glissez pour orbiter, faites défiler pour plonger."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.5",
+      "title": "Gouvernement 3.0, en champ vivant",
+      "caption": "Le moteur-manifold : les mêmes huit chapitres racontés entièrement en particules et en lumière. Les fils croissent à mesure que les API gouvernées s'ouvrent, les impulsions parcourent les connexions, et le final guérit la friction du champ lui-même. Votre pointeur est un puits de gravité; glissez pour orbiter, faites défiler pour zoomer.",
+      "chart": {
+        "kind": "sim:manifold",
+        "sim": "gov3-manifold"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "Ce que vous regardez"
@@ -347,6 +361,7 @@
     "components/visuals/bespoke/sim/Player.js",
     "components/visuals/bespoke/sim/Iso.js",
     "components/visuals/bespoke/sim/Three3D.js",
-    "components/visuals/bespoke/sim/Tapestry.js"
+    "components/visuals/bespoke/sim/Tapestry.js",
+    "components/visuals/bespoke/sim/Manifold.js"
   ]
 }
