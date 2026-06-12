@@ -220,7 +220,7 @@
         const tex = new T.CanvasTexture(cv);
         tex.anisotropy = 4;
         const sp = new T.Sprite(new T.SpriteMaterial({ map: tex, transparent: true, depthTest: true }));
-        const k = (o.world || 0.022);
+        const k = (o.world || 0.015);
         sp.scale.set(cv.width * k, cv.height * k, 1);
         return sp;
       },
@@ -300,24 +300,24 @@
             plane.position.y = 0.02;
             g.add(plane);
             if (label) {
-              const ls = this.texSprite(label.toUpperCase(), { size: 30, bold: true, color: '#5E5F66', world: 0.03 });
+              const ls = this.texSprite(label.toUpperCase(), { size: 30, bold: true, color: '#5E5F66', world: 0.02 });
               ls.position.set(0, 0.4, -(a.d || 8) / 2 + 0.6);
               g.add(ls);
             }
           } else if (a.kind === 'pill') {
-            const ps = this.texSprite(S.t(a.label, loc), { size: 30, color: a.text || '#3D3E45', bg: a.fill || 'rgba(239,234,217,0.95)', stroke: a.strokeC || '#B8AE99', key: a.keyColor || null, world: 0.026 });
+            const ps = this.texSprite(S.t(a.label, loc), { size: 30, color: a.text || '#3D3E45', bg: a.fill || 'rgba(239,234,217,0.95)', stroke: a.strokeC || '#B8AE99', key: a.keyColor || null, world: 0.016 });
             ps.position.y = a.hWorld != null ? a.hWorld : 2.2;
             g.add(ps);
           } else if (a.kind === 'tlabel') {
-            const ts = this.texSprite(S.t(a.label, loc), { size: a.size || 34, bold: true, color: a.color || '#5E5F66', bg: null, stroke: null, world: 0.03 });
+            const ts = this.texSprite(S.t(a.label, loc), { size: a.size || 34, bold: true, color: a.color || '#5E5F66', bg: null, stroke: null, world: 0.021 });
             ts.position.y = a.hWorld != null ? a.hWorld : 3;
             g.add(ts);
             g.userData.countable = a.countable || false;
-            g.userData.labelOpts = { size: a.size || 34, bold: true, color: a.color || '#5E5F66', bg: null, stroke: null, world: 0.03 };
+            g.userData.labelOpts = { size: a.size || 34, bold: true, color: a.color || '#5E5F66', bg: null, stroke: null, world: 0.021 };
           }
           /* learn hotspot */
           if (a.learn) {
-            const hs = this.texSprite('ⓘ', { size: 34, bold: true, color: '#ffffff', bg: 'rgba(178,63,21,0.95)', stroke: '#ffffff', world: 0.024, mono: false });
+            const hs = this.texSprite('ⓘ', { size: 34, bold: true, color: '#ffffff', bg: 'rgba(178,63,21,0.95)', stroke: '#ffffff', world: 0.016, mono: false });
             hs.position.y = (a.hotspotY != null ? a.hotspotY : (a.h || 4) + 1.4);
             hs.userData.hotspot = true;
             g.add(hs);
@@ -329,14 +329,14 @@
             if (!(a.marks || []).includes(mk)) return;
             const glyph = mk === 'lock' ? '🔒' : mk === 'shield' ? '✓' : mk === 'badge' ? 'ID' : '…';
             const colr = mk === 'shield' ? 'rgba(47,122,63,0.95)' : mk === 'badge' ? 'rgba(26,58,110,0.95)' : mk === 'bubble' ? 'rgba(255,255,255,0.96)' : 'rgba(61,62,69,0.95)';
-            const ms = this.texSprite(glyph, { size: 30, bold: true, color: mk === 'bubble' ? '#5E5F66' : '#fff', bg: colr, stroke: '#fff', world: 0.022, mono: false });
+            const ms = this.texSprite(glyph, { size: 30, bold: true, color: mk === 'bubble' ? '#5E5F66' : '#fff', bg: colr, stroke: '#fff', world: 0.015, mono: false });
             ms.position.y = (a.markY != null ? a.markY : (a.h || 3) + 0.9);
             ms.material.opacity = 0;
             g.add(ms);
             g.userData.markSprites[mk] = ms;
           });
           if (label && a.kind !== 'zone' && a.kind !== 'pill' && a.kind !== 'tlabel') {
-            const ls = this.texSprite(label, { size: 26, color: '#3D3E45', world: 0.02 });
+            const ls = this.texSprite(label, { size: 26, color: '#3D3E45', world: 0.014 });
             ls.position.set(0, a.labelY != null ? a.labelY : 0.65, (a.d ? a.d / 2 : 0.6) + 1.2);
             g.add(ls);
           }

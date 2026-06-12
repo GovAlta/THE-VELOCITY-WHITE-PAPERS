@@ -31,12 +31,12 @@
       "kind": "tlabel",
       "x": -19,
       "z": 3,
-      "hWorld": 6.6,
+      "hWorld": 7.2,
       "label": {
         "en": "PUBLIC SERVANTS & CITIZENS",
         "fr": "FONCTIONNAIRES ET CITOYENS"
       },
-      "size": 30
+      "size": 26
     },
     {
       "id": "pcit",
@@ -114,11 +114,7 @@
           "fr": "Livre 13 · L’IA et la culture du bâtisseur"
         }
       },
-      "hotspotY": 4.1,
-      "label": {
-        "en": "agent",
-        "fr": "agent"
-      }
+      "hotspotY": 4.1
     },
     {
       "id": "ags",
@@ -144,11 +140,7 @@
           "fr": "Livre 1 · Le navire de Thésée à deux milliards de dollars"
         }
       },
-      "hotspotY": 4.1,
-      "label": {
-        "en": "agent",
-        "fr": "agent"
-      }
+      "hotspotY": 4.1
     },
     {
       "id": "agd",
@@ -158,11 +150,7 @@
       "marks": [
         "badge"
       ],
-      "markY": 3.1,
-      "label": {
-        "en": "agent",
-        "fr": "agent"
-      }
+      "markY": 3.1
     },
     {
       "id": "a4",
@@ -195,21 +183,21 @@
     {
       "id": "lenable",
       "kind": "tlabel",
-      "x": -24,
-      "z": 10,
-      "hWorld": 6.6,
+      "x": -27,
+      "z": 13,
+      "hWorld": 6.2,
       "label": {
         "en": "INSTANT AI ENABLEMENT",
         "fr": "ACTIVATION IA INSTANTANÉE"
       },
-      "size": 26
+      "size": 22
     },
     {
       "id": "dp1",
       "kind": "pill",
-      "x": -24,
-      "z": 10,
-      "hWorld": 5.5,
+      "x": -27,
+      "z": 13,
+      "hWorld": 5.2,
       "label": {
         "en": "Simple app",
         "fr": "Appli simple"
@@ -218,9 +206,9 @@
     {
       "id": "dp2",
       "kind": "pill",
-      "x": -24,
-      "z": 10,
-      "hWorld": 4.5,
+      "x": -27,
+      "z": 13,
+      "hWorld": 4.25,
       "label": {
         "en": "Browser extension",
         "fr": "Extension de navigateur"
@@ -229,9 +217,9 @@
     {
       "id": "dp3",
       "kind": "pill",
-      "x": -24,
-      "z": 10,
-      "hWorld": 3.5,
+      "x": -27,
+      "z": 13,
+      "hWorld": 3.3000000000000003,
       "label": {
         "en": "Free agent",
         "fr": "Agent libre"
@@ -240,9 +228,9 @@
     {
       "id": "dp4",
       "kind": "pill",
-      "x": -24,
-      "z": 10,
-      "hWorld": 2.5,
+      "x": -27,
+      "z": 13,
+      "hWorld": 2.3500000000000005,
       "label": {
         "en": "Claude Code",
         "fr": "Claude Code"
@@ -251,9 +239,9 @@
     {
       "id": "dp5",
       "kind": "pill",
-      "x": -24,
-      "z": 10,
-      "hWorld": 1.5,
+      "x": -27,
+      "z": 13,
+      "hWorld": 1.4000000000000004,
       "label": {
         "en": "Copilot · Gemini",
         "fr": "Copilot · Gemini"
@@ -528,7 +516,7 @@
       "label": {
         "en": "0"
       },
-      "size": 44,
+      "size": 36,
       "color": "#2f7a3f",
       "countable": true
     },
@@ -1214,9 +1202,9 @@
           "t": 0.0,
           "do": "cam",
           "pos": [
-            -27,
-            12,
-            21
+            -31,
+            15,
+            26
           ],
           "look": [
             -13,
@@ -1336,6 +1324,20 @@
             2
           ],
           "dur": 3
+        },
+        {
+          "t": 0.92,
+          "do": "hide",
+          "ids": [
+            "lenable",
+            "dp1",
+            "dp2",
+            "dp3",
+            "dp4",
+            "dp5"
+          ],
+          "dur": 1.4,
+          "stagger": 0.05
         }
       ]
     },
@@ -1379,9 +1381,9 @@
           "t": 0.0,
           "do": "cam",
           "pos": [
-            6,
-            8,
-            20
+            3,
+            11,
+            24
           ],
           "look": [
             15,
@@ -1465,14 +1467,14 @@
           "t": 0.4,
           "do": "cam",
           "pos": [
-            26,
-            8,
-            19
+            29,
+            13,
+            25
           ],
           "look": [
-            16,
+            15,
             1.5,
-            9
+            8.5
           ],
           "dur": 4.2,
           "ease": "sine.inOut"
@@ -1768,9 +1770,9 @@
           "t": 0.0,
           "do": "cam",
           "pos": [
-            -25,
-            6,
-            11
+            -26.5,
+            7.5,
+            13
           ],
           "look": [
             -18,
