@@ -131,10 +131,12 @@
       kids.push(h('circle', { cx: 0, cy: 9, r: 9.5, fill: col2, 'data-glow': '' }));
       kids.push(h('path', { d: 'M-14,52 v-15 a14,14 0 0 1 28,0 v15 z', fill: col2 }));
       if (label) kids.push(txt(0, 67, label, { 'text-anchor': 'middle', 'font-size': 12.5, fill: PAL.ink70, 'font-family': 'var(--font-mono)' }));
+      /* The bubble floats fully ABOVE the head (y -46..-16) with a short tail
+         pointing down toward it, so it never covers a neighbouring agent. */
       kids.push(part('bubble', [
-        h('path', { d: 'M14,-22 h56 a9,9 0 0 1 9,9 v16 a9,9 0 0 1 -9,9 h-40 l-9,10 v-10 h-7 a9,9 0 0 1 -9,-9 v-16 a9,9 0 0 1 9,-9 z', fill: '#fff', stroke: PAL.ruleStrong, 'stroke-width': 1.5 }),
-        h('line', { x1: 22, y1: -11, x2: 64, y2: -11, stroke: PAL.rule, 'stroke-width': 3.2 }),
-        h('line', { x1: 22, y1: -3, x2: 54, y2: -3, stroke: PAL.rule, 'stroke-width': 3.2 }),
+        h('path', { d: 'M21,-46 h58 a9,9 0 0 1 9,9 v12 a9,9 0 0 1 -9,9 h-42 l-11,12 v-12 h-5 a9,9 0 0 1 -9,-9 v-12 a9,9 0 0 1 9,-9 z', fill: '#fff', stroke: PAL.ruleStrong, 'stroke-width': 1.5 }),
+        h('line', { x1: 28, y1: -37, x2: 72, y2: -37, stroke: PAL.rule, 'stroke-width': 3.2 }),
+        h('line', { x1: 28, y1: -27, x2: 60, y2: -27, stroke: PAL.rule, 'stroke-width': 3.2 }),
       ]));
     } else if (a.kind === 'disc') {
       const r = a.r || 80;
