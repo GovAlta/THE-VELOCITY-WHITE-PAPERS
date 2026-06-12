@@ -537,12 +537,12 @@
     {
       "id": "L1",
       "kind": "pill",
-      "gx": 1.8,
-      "gy": 9.0,
+      "gx": 0.8,
+      "gy": 9.6,
       "dy": -150,
       "label": {
         "en": "APIs & data interfaces",
-        "fr": "API et interfaces de données"
+        "fr": "API et données"
       },
       "color": "#2f7a3f",
       "w": 210
@@ -550,8 +550,8 @@
     {
       "id": "L2",
       "kind": "pill",
-      "gx": 1.8,
-      "gy": 9.0,
+      "gx": 0.8,
+      "gy": 9.6,
       "dy": -116,
       "label": {
         "en": "Gateways",
@@ -563,12 +563,12 @@
     {
       "id": "L3",
       "kind": "pill",
-      "gx": 1.8,
-      "gy": 9.0,
+      "gx": 0.8,
+      "gy": 9.6,
       "dy": -82,
       "label": {
         "en": "Identity & delegation",
-        "fr": "Identité et délégation"
+        "fr": "Identité · délégation"
       },
       "color": "#6b4fbf",
       "w": 210
@@ -576,12 +576,12 @@
     {
       "id": "L4",
       "kind": "pill",
-      "gx": 1.8,
-      "gy": 9.0,
+      "gx": 0.8,
+      "gy": 9.6,
       "dy": -48,
       "label": {
         "en": "Observability & audit",
-        "fr": "Observabilité et audit"
+        "fr": "Observabilité · audit"
       },
       "color": "#b8860b",
       "w": 210
@@ -589,12 +589,12 @@
     {
       "id": "L5",
       "kind": "pill",
-      "gx": 1.8,
-      "gy": 9.0,
+      "gx": 0.8,
+      "gy": 9.6,
       "dy": -14,
       "label": {
         "en": "Tasking & orchestration",
-        "fr": "Tâches et orchestration"
+        "fr": "Tâches · orchestration"
       },
       "color": "#1A3A6E",
       "w": 210
@@ -602,8 +602,8 @@
     {
       "id": "L6",
       "kind": "pill",
-      "gx": 1.8,
-      "gy": 9.0,
+      "gx": 0.8,
+      "gy": 9.6,
       "dy": 20,
       "label": {
         "en": "Ephemeral interfaces",
@@ -615,12 +615,12 @@
     {
       "id": "L7",
       "kind": "pill",
-      "gx": 1.8,
-      "gy": 9.0,
+      "gx": 0.8,
+      "gy": 9.6,
       "dy": 54,
       "label": {
         "en": "Knowledge & memory",
-        "fr": "Connaissances et mémoire"
+        "fr": "Connaissances · mémoire"
       },
       "color": "#2E5A9E",
       "w": 210
@@ -628,12 +628,12 @@
     {
       "id": "L8",
       "kind": "pill",
-      "gx": 1.8,
-      "gy": 9.0,
+      "gx": 0.8,
+      "gy": 9.6,
       "dy": 88,
       "label": {
         "en": "Tools & agent skills",
-        "fr": "Outils et compétences des agents"
+        "fr": "Outils des agents"
       },
       "color": "#3D3E45",
       "w": 210
@@ -641,20 +641,20 @@
     {
       "id": "lops",
       "kind": "label",
-      "gx": 1.8,
-      "gy": 9.0,
-      "dy": 130,
+      "gx": 0.8,
+      "gy": 9.6,
+      "dy": 124,
       "label": {
         "en": "operated by Technology and Innovation",
-        "fr": "exploitée par Technologie et Innovation"
+        "fr": "exploitée par TI"
       },
       "size": 12
     },
     {
       "id": "f1",
       "kind": "pill",
-      "gx": 4.2,
-      "gy": 2.6,
+      "gx": 7.6,
+      "gy": 8.8,
       "label": {
         "en": "friction",
         "fr": "friction"
@@ -666,7 +666,7 @@
       "id": "f2",
       "kind": "pill",
       "gx": 12.0,
-      "gy": 4.0,
+      "gy": 6.6,
       "label": {
         "en": "friction",
         "fr": "friction"
@@ -1824,6 +1824,23 @@
         "fr": "Un système vivant peut apprendre. À mesure que des millions d'interactions traversent la plateforme, les motifs de friction deviennent visibles : le formulaire en double, l'étape manuelle, la file d'attente que personne n'a conçue. Le système les détecte, les mesure et rédige une proposition. Les personnes restent souveraines. Les fonctionnaires et les élus examinent chaque changement, en s'appuyant sur la loi telle qu'elle est écrite. Approuvez le changement, et la règle se met à jour partout à la fois. La paperasserie cesse d'être un chantier d'archéologie et devient une tâche d'entretien. Voici le Gouvernement 3.0 : un gouvernement qui fonctionne selon des règles, apprend de la friction et s'améliore continuellement, sous direction humaine."
       },
       "steps": [
+        {
+          "t": 0.02,
+          "do": "hide",
+          "ids": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5",
+            "L6",
+            "L7",
+            "L8",
+            "lops"
+          ],
+          "dur": 1.2,
+          "stagger": 0.04
+        },
         {
           "t": 0.0,
           "do": "caption",

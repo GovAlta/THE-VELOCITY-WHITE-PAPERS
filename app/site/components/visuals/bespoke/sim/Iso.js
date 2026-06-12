@@ -485,7 +485,7 @@
           } else {
             const txt = S.t(a.label, loc);
             ctx.font = Math.max(9, 11.5 * p.k) + 'px var(--font-mono, monospace)';
-            const tw2 = a.w ? a.w * p.k : ctx.measureText(txt).width + 18;
+            const tw2 = Math.max(a.w ? a.w * p.k : 0, ctx.measureText(txt).width + 18 + (a.color ? 16 : 0));
             const hh = 21 * Math.max(0.8, p.k);
             const sc = st.s || 1;
             ctx.save();
