@@ -1,0 +1,307 @@
+{
+  "id": "g3sim",
+  "num": "19",
+  "sequence": "19 sur 19",
+  "tier": "Conceptual",
+  "category": "paper",
+  "title": "Simulation : Gouvernement 3.0",
+  "subtitle": "Une simulation animée et narrée de l'architecture Gouvernement 3.0, parce que certaines transformations gagnent à être observées plutôt que décrites.",
+  "track": "Technical Appendix",
+  "authors": [
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
+  ],
+  "published": "2026-06-16",
+  "reading_min": 7,
+  "status": "Published",
+  "tags": [
+    "government-3-0",
+    "simulation",
+    "agents",
+    "briefing",
+    "visualization"
+  ],
+  "repo": null,
+  "abstract": "Le problème de la compression soutenait que les notes d'information écrites compressent à l'excès : les idées les plus importantes sont précisément celles qu'une page de texte ne peut pas porter, pendant que le raisonnement visuel et spatial humain reste inutilisé. Ce document donne suite à cet argument. Il contient une simulation animée et narrée de l'architecture Gouvernement 3.0, la quatrième et la plus radicale des quatre approches. Regardez des agents obtenir un accès délégué et observable à l'ensemble du parc gouvernemental. Regardez une interface se construire pour une seule tâche et se dissoudre une fois la tâche terminée. Regardez un gouvernement qui fonctionne selon des règles apprendre où loge sa propre friction. La simulation est un moteur réutilisable entièrement piloté par les données, alors le prochain concept peut être simulé en écrivant un nouveau fichier plutôt qu'un nouveau logiciel.",
+  "hero_image": {
+    "src": "public/images/g3sim/fr/hero.jpg",
+    "alt": "Une simulation géométrique simple en cours de lecture : de petits agents orange se déplacent entre des personnes, des passerelles et des systèmes sur une scène crème, avec un cadre de caméra autour de l'action.",
+    "image_prompt": "An editorial cover illustration of a minimal geometric stage seen slightly from above: small orange circular agents moving along curved paths between simple navy rectangles and human figures, one ephemeral interface card materializing mid-air, a subtle camera frame around the scene suggesting a simulation in progress. Muted Alberta cream palette, navy and rust accents, archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/g3sim.mp3"
+  },
+  "tldr_presentation": {
+    "id": "g3sim-tldr",
+    "title": "Le document, en bref",
+    "locale": "fr",
+    "owner_id": "g3sim",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Simulation : Gouvernement 3.0",
+        "audio_file": "public/audio/fr/g3sim-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Document 19 · Annexe technique",
+        "subcaption": "Certaines transformations gagnent à être observées plutôt que décrites.",
+        "text": "Simulation : Gouvernement 3.0. Le problème de la compression soutenait que les notes d'information écrites compressent à l'excès, et que notre raisonnement visuel et spatial est le canal que nous laissons inutilisé. Ce document donne suite à l'argument. Il contient une simulation animée et narrée de l'architecture Gouvernement 3.0. Appuyez sur lecture, et regardez la transformation au lieu de la lire."
+      },
+      {
+        "id": "02",
+        "title": "Pourquoi simuler",
+        "audio_file": "public/audio/fr/g3sim-tldr/02.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Vous laissez la Ferrari au garage et ignorez nos millénaires d'évolution en compréhension visuelle, spatiale et auditive.",
+          "cite": "Document 14 · Le problème de la compression"
+        },
+        "text": "Pourquoi simuler. Un décideur appelé à approuver une transformation de cette ampleur mérite mieux qu'une note de deux pages qui tient lieu de milliers de pages de méthode. Une simulation compresse différemment : elle conserve la structure, le mouvement et les liens de cause à effet, et elle laisse l'œil faire la vérification. La narration synchronisée porte l'argument pendant que l'image porte le système."
+      },
+      {
+        "id": "03",
+        "title": "Les quatre étapes",
+        "audio_file": "public/audio/fr/g3sim-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Ce que montre la simulation",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Augmenter",
+              "desc": "Des agents ajoutent des API gouvernées et des verrous sensibles aux rôles à des centaines de systèmes fermés."
+            },
+            {
+              "label": "Faire confiance",
+              "desc": "Une identité déléguée pour chaque agent, et un registre d'audit pour chaque action."
+            },
+            {
+              "label": "Diriger",
+              "desc": "Tout fonctionnaire instancie un agent et l'instruit en langage courant."
+            },
+            {
+              "label": "Dissoudre",
+              "desc": "Les interfaces sont construites pour la tâche et disparaissent une fois la tâche terminée."
+            }
+          ]
+        },
+        "text": "La simulation raconte l'histoire par étapes. D'abord, l'augmentation : des agents ajoutent des portes gouvernées aux centaines de systèmes qui n'en ont aucune. Ensuite, la confiance : chaque agent porte une identité déléguée, et chaque action aboutit dans un registre d'audit. Puis, la direction : un fonctionnaire crée un agent et l'instruit en langage courant. Enfin, l'interface elle-même devient éphémère, construite pour la tâche et disparue une fois la tâche terminée."
+      },
+      {
+        "id": "04",
+        "title": "La destination",
+        "audio_file": "public/audio/fr/g3sim-tldr/04.mp3",
+        "visual": "compare",
+        "caption": "Gouvernement 3.0",
+        "visual_config": {
+          "left": {
+            "label": "Aujourd'hui",
+            "body": "Des milliers d'applications fixes, chacune construite, corrigée et sécurisée séparément."
+          },
+          "right": {
+            "label": "Gouvernement 3.0",
+            "body": "Des personnes et des agents au sommet, une plateforme gouvernée en dessous, et des règles en code au centre."
+          }
+        },
+        "text": "La destination est l'architecture sur laquelle la simulation se termine. Les personnes et leurs agents au sommet. En dessous, la plateforme qu'exploite Technologie et Innovation : API, passerelles, identité, observabilité, attribution des tâches, interfaces éphémères, connaissances et outils. Au centre, le gouvernement dans sa forme la plus pure : des règles, des politiques et des permissions écrites en code. Et parce que le système surveille sa propre friction, la paperasserie devient une tâche d'entretien avec les personnes aux commandes."
+      },
+      {
+        "id": "05",
+        "title": "Un moteur réutilisable",
+        "audio_file": "public/audio/fr/g3sim-tldr/05.mp3",
+        "visual": "list",
+        "caption": "Construit une fois, réutilisé ensuite",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Piloté par les données",
+              "desc": "Un seul fichier JSON contient les formes, la synchronisation, la caméra et le script."
+            },
+            {
+              "label": "Verrouillé sur l'audio",
+              "desc": "L'horloge de la narration pilote l'animation, alors la voix et le mouvement ne dérivent jamais."
+            },
+            {
+              "label": "Bilingue",
+              "desc": "Chaque étiquette, chaque légende et chaque ligne de narration porte l'anglais et le français."
+            }
+          ]
+        },
+        "text": "Le lecteur de simulation est un moteur réutilisable. Un seul fichier JSON déclare les formes, les mouvements, la caméra, les légendes et la narration de chaque chapitre, et le moteur en effectue le rendu avec la narration comme horloge maîtresse. Le prochain concept à expliquer reçoit un nouveau fichier de données, et aucun nouveau logiciel. Voici le format de note d'information que demandait Le problème de la compression."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Pourquoi une simulation"
+    },
+    {
+      "n": "02",
+      "title": "La simulation"
+    },
+    {
+      "n": "03",
+      "title": "Ce que vous regardez"
+    },
+    {
+      "n": "04",
+      "title": "Comment fonctionne le moteur"
+    },
+    {
+      "n": "05",
+      "title": "Où cela mène"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Deux documents antérieurs préparent celui-ci. [Les quatre approches](/paper/zgym1) décrivait Gouvernement 3.0, la voie de modernisation la plus radicale, où l'application se dissout et où les agents d'IA travaillent directement sur des données gouvernées. [Le problème de la compression](/paper/eujjc) soutenait qu'une transformation de cette ampleur ne peut pas être portée par une note d'information écrite : le texte compresse à l'excès, et les forces humaines qu'il ignore, le raisonnement visuel, spatial et auditif, sont précisément celles qui pourraient l'absorber. Ce document donne suite aux deux. Il contient une simulation animée et narrée de l'architecture Gouvernement 3.0. Nous vous invitons à cesser de lire et à appuyer sur lecture."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Pourquoi une simulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un décideur appelé à approuver une transformation pluriannuelle reçoit, dans le processus habituel, une note d'information. La note est honnête et bien documentée, et elle tient lieu de milliers de pages de méthode que le lecteur ne verra jamais. Le problème de la compression appelait cela la surcompression : la structure, le mouvement et les liens de cause à effet sont précisément ce qu'une page de prose ne peut pas porter. Une simulation compresse différemment. Elle garde le système entier et l'accélère, de sorte que cinq années de travaux par étapes se déroulent en huit minutes narrées. L'œil vérifie ce que le texte pouvait seulement affirmer."
+    },
+    {
+      "type": "pullquote",
+      "text": "Vous laissez la Ferrari au garage et ignorez nos millénaires d'évolution en compréhension visuelle, spatiale et auditive.",
+      "cite": "Document 14 · Le problème de la compression"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le format compte autant que le contenu. La narration est synchronisée avec l'animation, alors la voix explique chaque mouvement au moment où il se produit, dans l'une ou l'autre langue. Les légendes renforcent l'idée unique à l'écran. La caméra bouge avec retenue, et seulement pour diriger l'attention. Rien dans l'image n'est décoratif. Chaque forme est une partie réelle de l'architecture, et chaque mouvement est une étape réelle du plan."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "La simulation"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.1",
+      "title": "Gouvernement 3.0, en simulation",
+      "caption": "Appuyez sur Lecture pour la visite narrée complète, ou utilisez les pastilles de chapitre pour vous déplacer. Le bouton de transcription affiche la narration sous forme de texte. Agrandissez pour le plein écran. La simulation est bilingue et suit la langue du site.",
+      "chart": {
+        "kind": "sim:player",
+        "sim": "gov3"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Ce que vous regardez"
+    },
+    {
+      "type": "paragraph",
+      "text": "La simulation s'ouvre sur le parc tel qu'il existe aujourd'hui : les outils corporatifs dans un monde, les systèmes ministériels dans des dizaines d'autres, et des personnes qui transportent l'information à la main d'un système à l'autre. Les agents arrivent assez facilement, sous la forme d'une appli simple, d'une extension de navigateur ou d'un assistant dans les outils que vous utilisez déjà. Puis ils frappent le mur qui définit tout le problème : la plupart des systèmes gouvernementaux n'offrent aucune interface qu'une machine peut utiliser."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les chapitres du milieu montrent les quatre étapes qui suppriment le mur. Des agents de construction ajoutent des API gouvernées, chacune avec un verrou sensible aux rôles, à des centaines de systèmes fermés. L'identité et l'observabilité arrivent ensuite, alors chaque agent porte un insigne délégué et chaque action aboutit dans un registre d'audit. Puis un fonctionnaire instancie un agent, l'instruit en langage courant et raffine le plan par la conversation. Enfin, l'agent travaille à travers les passerelles et construit une interface seulement quand il a besoin de sa personne : un petit écran pour une décision, disparu une fois la décision prise."
+    },
+    {
+      "type": "table",
+      "title": "Les quatre étapes que parcourt la simulation",
+      "columns": [
+        "Étape",
+        "Ce qui se passe",
+        "Ce que cela débloque"
+      ],
+      "rows": [
+        [
+          "1 · Augmentation",
+          "Des agents de construction ajoutent des API gouvernées et un contrôle d'accès sensible aux rôles à des centaines de systèmes patrimoniaux.",
+          "Le parc devient accessible par machine, en toute sécurité, pour la première fois."
+        ],
+        [
+          "2 · Identité et observabilité",
+          "Chaque agent reçoit une identité déléguée liée à une personne; chaque action est consignée dans un registre d'audit.",
+          "On peut confier des actions aux agents, parce que chaque acte est attribuable et rejouable."
+        ],
+        [
+          "3 · Instancier et instruire",
+          "Un fonctionnaire crée un agent, décrit la tâche en langage courant et itère sur le plan.",
+          "Diriger des agents devient une compétence quotidienne plutôt qu'une spécialité technique."
+        ],
+        [
+          "4 · Attribution des tâches et interfaces éphémères",
+          "L'agent travaille à travers les passerelles et génère une interface juste-à-temps pour chaque décision humaine.",
+          "La couche applicative fixe, et son fardeau d'entretien, cesse d'être nécessaire."
+        ]
+      ],
+      "caption": "Chaque étape s'appuie sur la précédente. L'ordre est la chaîne de dépendances : pas de délégation sans portes, pas d'attribution de tâches sans confiance.",
+      "source": "Étapes de Gouvernement 3.0, documents 5 et 11."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les derniers chapitres reculent la caméra. Les personnes et leurs agents se trouvent au sommet. Technologie et Innovation exploite la plateforme en dessous : les API, les passerelles, l'identité et la délégation, l'observabilité, l'attribution des tâches, les interfaces éphémères, les connaissances et la mémoire, et les outils. Au centre se trouve le gouvernement dans sa forme la plus pure : des règles, des politiques et des permissions, écrites en code, tirées de la législation. Le chapitre de clôture montre la propriété qui rend l'architecture durable. Le système surveille sa propre friction, rédige le correctif et le soumet aux fonctionnaires et aux élus pour examen. Approuvez le correctif, et la règle se met à jour partout à la fois. La paperasserie devient une tâche d'entretien, exécutée continuellement, sous direction humaine."
+    },
+    {
+      "type": "keystat",
+      "label": "La note d'information, recompressée",
+      "value": "8 minutes",
+      "body": "La simulation compresse la transformation par étapes du parc gouvernemental en huit minutes narrées, dans l'une ou l'autre langue, avec l'architecture qui bouge à l'écran au lieu d'être décrite en prose."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Comment fonctionne le moteur"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le lecteur est un moteur réutilisable plutôt qu'une vidéo unique. Tout ce que vous avez regardé est déclaré dans un seul fichier de données : les acteurs en formes géométriques simples, les chapitres, la narration dans les deux langues, les légendes, les positions de caméra et chaque mouvement minuté. Le moteur lit le fichier, effectue le rendu du monde et construit une ligne de temps d'animation par chapitre. L'audio de la narration est l'horloge maîtresse. Chaque pas est placé à une fraction de son chapitre, et la ligne de temps est mise à l'échelle de la durée réelle de l'enregistrement, alors la voix et le mouvement restent verrouillés ensemble en tout point, dans l'une ou l'autre langue, même quand vous vous déplacez dans la lecture."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette conception suit la même règle que le reste de la collection : le contenu vit dans les données, le comportement vit dans un seul moteur. Une nouvelle simulation, pour un concept différent, est un nouveau fichier JSON. Les formes sont volontairement simples, des rectangles, des cercles et de petites silhouettes, parce que l'information se trouve dans la structure et le mouvement, et la retenue garde l'image lisible pour une personne qui la voit pour la première fois. Pour les lecteurs qui ne peuvent pas regarder l'animation, ou qui préfèrent s'en passer, le même fichier pilote un scénarimage chapitre par chapitre avec la même narration, les mêmes légendes et une transcription complète."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Où cela mène"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le problème de la compression demandait ce que devrait devenir une note d'information quand la capacité humaine de lecture est le goulot d'étranglement. Ce document est une réponse : un système observé plutôt qu'un système décrit. Les prochains candidats sont déjà clairs. Les [quatre approches](/paper/zgym1) pourraient chacune se dérouler sur un portefeuille ministériel réel. L'[usine d'IA](/paper/uwpxr) pourrait être observée pendant qu'elle construit une application de bout en bout. Une remédiation de cinq ans pourrait avancer en accéléré, comme l'imaginait Le problème de la compression. Chacune de ces possibilités est maintenant à un fichier de données près. Nous continuerons d'écrire des documents, parce que le dossier compte. Mais pour les décisions qui dépendent de voir un système bouger, nous comptons désormais informer de cette façon."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "government-3-0",
+        "simulation",
+        "agents",
+        "briefing"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "related": [
+    "zgym1",
+    "eujjc",
+    "xs7uh",
+    "qxlzo"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-11T00:00:00.000Z"
+    }
+  },
+  "translation_status": "draft",
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/sim/_common.js",
+    "components/visuals/bespoke/sim/Player.js"
+  ]
+}

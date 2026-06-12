@@ -392,13 +392,13 @@
       "paper_title_fr": "Les agents rouge, bleu, vert et jaune",
       "fno": "FIG. 7.1",
       "title": "Green: the plain facts of the code's health",
-      "title_fr": "Vert : les faits bruts sur l'état de santé du code",
+      "title_fr": "Vert : les faits bruts de la santé du code",
       "caption": "Green inspects the code itself: vulnerable dependencies, committed secrets, dangerous patterns, thin test coverage, and gaps in the build pipeline. Deterministic by design, so the same code returns the same findings every time.",
-      "caption_fr": "Le vert inspecte le code lui-même : dépendances vulnérables, secrets intégrés, motifs dangereux, couverture de tests insuffisante et lacunes dans le pipeline de construction. Déterministe par conception, de sorte que le même code retourne les mêmes constats chaque fois.",
+      "caption_fr": "Le vert inspecte le code lui-même : dépendances vulnérables, secrets enregistrés, motifs dangereux, couverture de tests insuffisante et lacunes dans le pipeline de construction. Déterministe par conception, donc le même code renvoie les mêmes constats à chaque fois.",
       "src": "public/images/l199t/en/fig-7-1.jpg",
       "src_fr": "public/images/l199t/fr/fig-7-1.jpg",
       "alt": "A green-tinted inspector methodically checking the parts of a machine against a checklist, finding a loose component.",
-      "alt_fr": "Un inspecteur teinté de vert vérifiant méthodiquement les pièces d'une machine par rapport à une liste de vérification, trouvant un composant desserré."
+      "alt_fr": "Un inspecteur teinté de vert vérifiant méthodiquement les pièces d'une machine par rapport à une liste de contrôle, trouvant un composant desserré."
     },
     {
       "paper_id": "l199t",
@@ -407,13 +407,13 @@
       "paper_title_fr": "Les agents rouge, bleu, vert et jaune",
       "fno": "FIG. 7.2",
       "title": "Yellow: writing that reads like a person wrote it",
-      "title_fr": "Jaune : un texte qui se lit comme si une personne l'avait écrit",
+      "title_fr": "Jaune : un texte qui se lit comme l'œuvre d'une personne",
       "caption": "Yellow runs twelve rules across all the prose in a project, flagging the tells of machine-made text and proposing a plain rewrite for each. The same rules that govern these papers.",
-      "caption_fr": "Le jaune applique douze règles à toute la prose d'un projet, signalant les indices d'un texte produit par une machine et proposant une réécriture simple pour chacun. Les mêmes règles qui régissent ces documents.",
+      "caption_fr": "Le jaune applique douze règles à toute la prose d'un projet, signalant les traces d'un texte produit par une machine et proposant une réécriture claire pour chacune. Les mêmes règles qui régissent ces documents.",
       "src": "public/images/l199t/en/fig-7-2.jpg",
       "src_fr": "public/images/l199t/fr/fig-7-2.jpg",
       "alt": "A yellow-tinted editor's pass over a page of text, circling tell-tale phrases and writing a cleaner line in the margin.",
-      "alt_fr": "Une révision teintée de jaune sur une page de texte, encerclant des phrases révélatrices et écrivant une ligne plus claire dans la marge."
+      "alt_fr": "Une relecture teintée de jaune sur une page de texte, encerclant des tournures révélatrices et écrivant une ligne plus nette dans la marge."
     },
     {
       "paper_id": "l199t",
@@ -422,13 +422,13 @@
       "paper_title_fr": "Les agents rouge, bleu, vert et jaune",
       "fno": "FIG. 7.3",
       "title": "Red: thinks like an adversary",
-      "title_fr": "Rouge : penser comme un adversaire",
+      "title_fr": "Rouge : pense comme un adversaire",
       "caption": "Red studies a finished application from the outside, maps its exposed surface, then plans concrete attack paths from what it finds. Reconnaissance is repeatable tooling; the attack plan is where Claude reasons.",
-      "caption_fr": "Le rouge étudie une application terminée de l'extérieur, cartographie sa surface exposée, puis planifie des chemins d'attaque concrets à partir de ce qu'il trouve. La reconnaissance repose sur des outils reproductibles; le plan d'attaque est là où Claude raisonne.",
+      "caption_fr": "Le rouge étudie une application terminée de l'extérieur, cartographie sa surface exposée, puis planifie des voies d'attaque concrètes à partir de ce qu'il trouve. La reconnaissance est un outillage reproductible ; le plan d'attaque est là où Claude raisonne.",
       "src": "public/images/l199t/en/fig-7-3.jpg",
       "src_fr": "public/images/l199t/fr/fig-7-3.jpg",
       "alt": "A red-accented security analyst studying a stylized application drawn as a fortress and network diagram, tracing test probes against its outer wall and marking exposed entry points.",
-      "alt_fr": "Un analyste de sécurité aux accents rouges étudiant une application stylisée dessinée comme une forteresse et un diagramme de réseau, traçant des sondes de test contre son mur extérieur et marquant les points d'entrée exposés."
+      "alt_fr": "Un analyste de sécurité teinté de rouge étudiant une application stylisée dessinée comme une forteresse et un schéma de réseau, traçant des sondes de test contre son mur extérieur et marquant les points d'entrée exposés."
     },
     {
       "paper_id": "l199t",
@@ -437,13 +437,13 @@
       "paper_title_fr": "Les agents rouge, bleu, vert et jaune",
       "fno": "FIG. 7.4",
       "title": "Blue: turns evidence into a verdict",
-      "title_fr": "Bleu : transformer les preuves en un verdict",
+      "title_fr": "Bleu : transforme les preuves en un verdict",
       "caption": "Blue reads the deterministic evidence and the attack map, checks the code against an international standard and Alberta's architecture standard, and writes the ranked, evidence-backed report leadership and auditors rely on.",
-      "caption_fr": "Le bleu lit les éléments de preuve déterministes et la carte d'attaque, vérifie le code par rapport à une norme internationale et à la norme d'architecture de l'Alberta, et rédige le rapport classé et étayé de preuves sur lequel la direction et les vérificateurs s'appuient.",
+      "caption_fr": "Le bleu lit les preuves déterministes et la carte d'attaque, vérifie le code par rapport à une norme internationale et à la norme d'architecture albertaine, et rédige le rapport classé et appuyé sur des preuves dont la direction et les vérificateurs dépendent.",
       "src": "public/images/l199t/en/fig-7-4.jpg",
       "src_fr": "public/images/l199t/fr/fig-7-4.jpg",
       "alt": "A blue-tinted architect inside, assembling the findings into a defensive map and a clear report, raising a shield over the building.",
-      "alt_fr": "Un architecte teinté de bleu, à l'intérieur, assemblant les constats en une carte défensive et un rapport clair, levant un bouclier au-dessus du bâtiment."
+      "alt_fr": "Un architecte teinté de bleu à l'intérieur, assemblant les constats en une carte défensive et un rapport clair, levant un bouclier au-dessus du bâtiment."
     },
     {
       "paper_id": "l199t",
@@ -452,13 +452,13 @@
       "paper_title_fr": "Les agents rouge, bleu, vert et jaune",
       "fno": "FIG. 7.5",
       "title": "The four working in concert",
-      "title_fr": "Les quatre agissant de concert",
+      "title_fr": "Les quatre œuvrant de concert",
       "caption": "Green and Yellow check the work, Red attacks it, Blue defends and judges. Bundled into the harness as gates, the four reach one verdict, and the application passes only when it clears them all.",
-      "caption_fr": "Le vert et le jaune vérifient le travail, le rouge l'attaque, le bleu le défend et juge. Intégrés au harnais à titre de portes, les quatre parviennent à un seul verdict, et l'application ne réussit que lorsqu'elle les franchit toutes.",
+      "caption_fr": "Le vert et le jaune vérifient le travail, le rouge l'attaque, le bleu le défend et le juge. Intégrés au harnais à titre de portes, les quatre parviennent à un seul verdict, et l'application ne passe que lorsqu'elle les franchit toutes.",
       "src": "public/images/l199t/en/fig-7-5.jpg",
       "src_fr": "public/images/l199t/fr/fig-7-5.jpg",
       "alt": "Four review agents coloured green, yellow, red, and blue working in concert around one application as it passes through a checkpoint gate.",
-      "alt_fr": "Quatre agents de révision de couleur verte, jaune, rouge et bleue agissant de concert autour d'une application alors qu'elle franchit une porte de point de contrôle."
+      "alt_fr": "Quatre agents de revue de couleur verte, jaune, rouge et bleue œuvrant de concert autour d'une application qui franchit un point de contrôle."
     },
     {
       "paper_id": "qthji",

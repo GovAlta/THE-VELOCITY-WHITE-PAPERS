@@ -1,0 +1,302 @@
+{
+  "id": "g3sim",
+  "num": "19",
+  "sequence": "19 of 19",
+  "tier": "Conceptual",
+  "category": "paper",
+  "title": "Simulation: Government 3.0",
+  "subtitle": "A narrated, animated simulation of the Government 3.0 architecture, because some transformations are better witnessed than described.",
+  "track": "Technical Appendix",
+  "authors": [
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
+  ],
+  "published": "2026-06-16",
+  "reading_min": 7,
+  "status": "Published",
+  "tags": [
+    "government-3-0",
+    "simulation",
+    "agents",
+    "briefing",
+    "visualization"
+  ],
+  "repo": null,
+  "abstract": "The Compression Problem argued that written briefings over-compress: the ideas that matter most are exactly the ones a page of text cannot carry, while human visual and spatial reasoning sits unused. This paper acts on that argument. It contains a narrated, animated simulation of the Government 3.0 architecture, the fourth and most radical of the Four Approaches. Watch agents gain delegated, observable access to the whole government estate. Watch an interface get built for one task and dissolve when the task is done. Watch a government that runs on rules learn where its own friction lives. The simulation is a reusable engine driven entirely by data, so the next concept can be simulated by writing a new file rather than new software.",
+  "hero_image": {
+    "src": "public/images/g3sim/en/hero.jpg",
+    "alt": "A simple geometric simulation mid-play: small orange agents moving between people, gateways, and systems on a cream stage, with a camera frame around the action.",
+    "image_prompt": "An editorial cover illustration of a minimal geometric stage seen slightly from above: small orange circular agents moving along curved paths between simple navy rectangles and human figures, one ephemeral interface card materializing mid-air, a subtle camera frame around the scene suggesting a simulation in progress. Muted Alberta cream palette, navy and rust accents, archival print quality, no text, no logos.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/en/g3sim.mp3",
+    "duration_sec": 404
+  },
+  "tldr_presentation": {
+    "id": "g3sim-tldr",
+    "title": "The paper, in brief",
+    "locale": "en",
+    "owner_id": "g3sim",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Simulation: Government 3.0",
+        "audio_file": "public/audio/en/g3sim-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Paper 19 · Technical Appendix",
+        "subcaption": "Some transformations are better witnessed than described.",
+        "text": "Simulation: Government 3.0. The Compression Problem argued that written briefings over-compress, and that our visual and spatial reasoning is the channel we leave unused. This paper acts on the argument. It contains a narrated, animated simulation of the Government 3.0 architecture. Press play, and watch the transformation instead of reading about it."
+      },
+      {
+        "id": "02",
+        "title": "Why simulate",
+        "audio_file": "public/audio/en/g3sim-tldr/02.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "You leave the Ferrari in the garage and ignore our millennia of evolution in visual, spatial, and auditory understanding.",
+          "cite": "Paper 14 · The Compression Problem"
+        },
+        "text": "Why simulate. A decision-maker asked to approve a transformation of this scale deserves better than a two-page note standing in for thousands of pages of method. A simulation compresses differently: it keeps the structure, the motion, and the cause and effect, and lets the eye do the verifying. Timed narration carries the argument while the picture carries the system."
+      },
+      {
+        "id": "03",
+        "title": "The four stages",
+        "audio_file": "public/audio/en/g3sim-tldr/03.mp3",
+        "visual": "list",
+        "caption": "What the simulation shows",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Augment",
+              "desc": "Agents add governed APIs and role-aware locks to hundreds of closed systems."
+            },
+            {
+              "label": "Trust",
+              "desc": "Delegated identity for every agent, and an audit ledger for every action."
+            },
+            {
+              "label": "Direct",
+              "desc": "Any public servant instantiates an agent and instructs it in plain language."
+            },
+            {
+              "label": "Dissolve",
+              "desc": "Interfaces are built for the task and disappear when the task is done."
+            }
+          ]
+        },
+        "text": "The simulation tells the story in stages. First, augmentation: agents add governed doorways to the hundreds of systems that have none. Second, trust: every agent carries a delegated identity, and every action lands in an audit ledger. Third, direction: a public servant creates an agent and instructs it in plain language. Fourth, the interface itself becomes ephemeral, built for the task and gone when the task is done."
+      },
+      {
+        "id": "04",
+        "title": "The destination",
+        "audio_file": "public/audio/en/g3sim-tldr/04.mp3",
+        "visual": "compare",
+        "caption": "Government 3.0",
+        "visual_config": {
+          "left": {
+            "label": "Today",
+            "body": "Thousands of fixed applications, each built, patched, and secured on its own."
+          },
+          "right": {
+            "label": "Government 3.0",
+            "body": "People and agents on top, a governed platform underneath, and rules as code at the core."
+          }
+        },
+        "text": "The destination is the architecture the simulation ends on. People and their agents on top. Underneath, the platform Technology and Innovation operates: APIs, gateways, identity, observability, tasking, ephemeral interfaces, knowledge, and tools. At the core, government in its purest form: rules, policies, and permissions written as code. And because the system watches its own friction, red tape becomes a maintenance task with people in command."
+      },
+      {
+        "id": "05",
+        "title": "A reusable engine",
+        "audio_file": "public/audio/en/g3sim-tldr/05.mp3",
+        "visual": "list",
+        "caption": "Built once, used again",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Data-driven",
+              "desc": "One JSON file holds the shapes, the timing, the camera, and the script."
+            },
+            {
+              "label": "Audio-locked",
+              "desc": "The narration clock drives the animation, so voice and motion never drift."
+            },
+            {
+              "label": "Bilingual",
+              "desc": "Every label, caption, and narration line carries English and French."
+            }
+          ]
+        },
+        "text": "The simulation player is a reusable engine. One JSON file declares the shapes, the movements, the camera, the captions, and the narration for each chapter, and the engine renders it with the narration as the master clock. The next concept we need to explain gets a new data file, and no new software. This is the briefing format The Compression Problem asked for."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Why a simulation"
+    },
+    {
+      "n": "02",
+      "title": "The simulation"
+    },
+    {
+      "n": "03",
+      "title": "What you are watching"
+    },
+    {
+      "n": "04",
+      "title": "How the engine works"
+    },
+    {
+      "n": "05",
+      "title": "Where this leads"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Two earlier papers set this one up. [The Four Approaches](/paper/zgym1) described Government 3.0, the most radical route to modernization, where the application dissolves and AI agents work directly against governed data. [The Compression Problem](/paper/eujjc) argued that a transformation of that scale cannot be carried by a written briefing: text over-compresses, and the human strengths it ignores, visual, spatial, and auditory reasoning, are exactly the ones that could absorb it. This paper acts on both. It contains a narrated, animated simulation of the Government 3.0 architecture. You are invited to stop reading and press play."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Why a simulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "A decision-maker asked to approve a multi-year transformation receives, in the standard process, a briefing note. The note is honest and well-researched, and it stands in for thousands of pages of method the reader will never see. The Compression Problem called this over-compression: the structure, the motion, and the cause and effect are exactly what a page of prose cannot carry. A simulation compresses differently. It keeps the system whole and speeds it up, so five years of staged work plays out in eight narrated minutes. The eye verifies what the text could only assert."
+    },
+    {
+      "type": "pullquote",
+      "text": "You leave the Ferrari in the garage and ignore our millennia of evolution in visual, spatial, and auditory understanding.",
+      "cite": "Paper 14 · The Compression Problem"
+    },
+    {
+      "type": "paragraph",
+      "text": "The format matters as much as the content. The narration is timed to the animation, so the voice explains each motion as it happens, in either language. The captions reinforce the one idea on screen. The camera moves sparingly, and only to direct attention. Nothing in the picture is decorative. Every shape is a real part of the architecture, and every movement is a real step in the plan."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "The simulation"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.1",
+      "title": "Government 3.0, simulated",
+      "caption": "Press Play for the full narrated walk-through, or use the chapter chips to jump. The transcript button shows the narration as text. Expand for full screen. The simulation is bilingual and follows the site language.",
+      "chart": {
+        "kind": "sim:player",
+        "sim": "gov3"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "What you are watching"
+    },
+    {
+      "type": "paragraph",
+      "text": "The simulation opens on the estate as it exists today: corporate tools in one world, ministry systems in dozens of others, and people carrying information across the gaps by hand. Agents arrive easily enough, as a simple app, a browser extension, or an assistant inside the tools you already use. Then they hit the wall that defines the whole problem: most government systems offer no interface a machine can use."
+    },
+    {
+      "type": "paragraph",
+      "text": "The middle chapters show the four stages that remove the wall. Build agents add governed APIs, each with a role-aware lock, to hundreds of closed systems. Identity and observability arrive next, so every agent carries a delegated badge and every action lands in an audit ledger. Then one public servant instantiates an agent, instructs it in plain language, and refines the plan through conversation. Finally the agent works across the gateways and builds an interface only when it needs its person: a small screen for one decision, gone when the decision is made."
+    },
+    {
+      "type": "table",
+      "title": "The four stages the simulation walks through",
+      "columns": [
+        "Stage",
+        "What happens",
+        "What it unlocks"
+      ],
+      "rows": [
+        [
+          "1 · Augmentation",
+          "Build agents add governed APIs and role-aware access control to hundreds of legacy systems.",
+          "The estate becomes reachable by machine, safely, for the first time."
+        ],
+        [
+          "2 · Identity & observability",
+          "Every agent gets a delegated identity tied to a person; every action is recorded in an audit ledger.",
+          "Agents can be trusted to act, because every act is attributable and replayable."
+        ],
+        [
+          "3 · Instantiate & instruct",
+          "A public servant creates an agent, describes the task in plain language, and iterates on the plan.",
+          "Directing agents becomes an everyday skill rather than a technical specialty."
+        ],
+        [
+          "4 · Tasking & ephemeral interfaces",
+          "The agent works across gateways and generates a just-in-time interface for each human decision.",
+          "The fixed application layer, and its maintenance burden, stops being needed."
+        ]
+      ],
+      "caption": "Each stage builds on the one before it. The order is the dependency chain: no delegation without doors, no tasking without trust.",
+      "source": "Government 3.0 staging, papers 5 and 11."
+    },
+    {
+      "type": "paragraph",
+      "text": "The final chapters pull the camera back. People and their agents sit on top. Technology and Innovation operates the platform underneath: the APIs, the gateways, the identity and delegation, the observability, the tasking, the ephemeral interfaces, the knowledge and memory, and the tools. At the centre sits government in its purest form: rules, policies, and permissions, written as code, drawn from legislation. The closing chapter shows the property that makes the architecture durable. The system watches its own friction, drafts the fix, and brings it to public servants and elected officials for review. Approve it, and the rule updates everywhere at once. Red tape becomes a maintenance task, performed continuously, under human direction."
+    },
+    {
+      "type": "keystat",
+      "label": "The briefing, recompressed",
+      "value": "8 minutes",
+      "body": "The simulation compresses the staged transformation of the government estate into eight narrated minutes, in either language, with the architecture moving on screen instead of described in prose."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "How the engine works"
+    },
+    {
+      "type": "paragraph",
+      "text": "The player is a reusable engine, not a one-off video. Everything you watched is declared in a single data file: the actors as simple geometric shapes, the chapters, the narration in both languages, the captions, the camera positions, and every timed movement. The engine reads the file, renders the world, and builds one animation timeline per chapter. The narration audio is the master clock. Each step is placed at a fraction of its chapter, and the timeline is scaled to the real length of the recording, so the voice and the motion stay locked together at any point, in either language, even when you scrub."
+    },
+    {
+      "type": "paragraph",
+      "text": "This design follows the same rule as the rest of the collection: content lives in data, behaviour lives in one engine. A new simulation, for a different concept, is a new JSON file. The shapes are deliberately simple, rectangles, circles, and small figures, because the information is in the structure and the motion, and the restraint keeps the picture legible to a first-time viewer. For readers who cannot or prefer not to watch animation, the same file drives a chapter-by-chapter storyboard with identical narration, captions, and a full transcript."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Where this leads"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Compression Problem asked what a briefing note should become when human reading capacity is the bottleneck. This paper is one answer: a witnessed system rather than a described one. The next candidates are already clear. The [Four Approaches](/paper/zgym1) could each play out against a real ministry portfolio. The [AI Factory](/paper/uwpxr) could be watched building an application end to end. A five-year remediation could run forward at speed, the way the Compression Problem imagined. Each of these is now a data file away. We will keep writing papers, because the record matters. But for the decisions that depend on seeing a system move, we intend to brief this way from now on."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "government-3-0",
+        "simulation",
+        "agents",
+        "briefing"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "related": [
+    "zgym1",
+    "eujjc",
+    "xs7uh",
+    "qxlzo"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation"
+  },
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/sim/_common.js",
+    "components/visuals/bespoke/sim/Player.js"
+  ]
+}
