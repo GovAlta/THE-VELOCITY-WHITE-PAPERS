@@ -1,0 +1,54 @@
+{
+  "agent": {
+    "w": 385,
+    "h": 480
+  },
+  "person_citizen": {
+    "w": 177,
+    "h": 480
+  },
+  "person_servant": {
+    "w": 151,
+    "h": 480
+  },
+  "person_director": {
+    "w": 273,
+    "h": 480
+  },
+  "person_official": {
+    "w": 188,
+    "h": 480
+  },
+  "sys_legacy": {
+    "w": 359,
+    "h": 480
+  },
+  "sys_open": {
+    "w": 447,
+    "h": 480
+  },
+  "tower_corp": {
+    "w": 294,
+    "h": 480
+  },
+  "kiosk_tools": {
+    "w": 393,
+    "h": 480
+  },
+  "gate": {
+    "w": 328,
+    "h": 480
+  },
+  "ledger": {
+    "w": 334,
+    "h": 480
+  },
+  "core": {
+    "w": 327,
+    "h": 480
+  },
+  "ui_card": {
+    "w": 396,
+    "h": 480
+  }
+}

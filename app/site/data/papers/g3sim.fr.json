@@ -193,6 +193,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "La même histoire est racontée deux fois sur cette page. Le lecteur ci-dessus dessine l'architecture comme un diagramme animé épuré. Celui ci-dessous la raconte comme un plateau de jeu isométrique : des bâtiments représentent les systèmes, des personnages représentent les personnes et leurs agents, et la caméra glisse au-dessus d'un petit monde pendant que la même narration joue. Les deux suivent les mêmes huit chapitres sur la même horloge audio. Choisissez la présentation qui vous convient. Les prochaines simulations paraîtront dans les deux styles."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.2",
+      "title": "Gouvernement 3.0, le plateau de jeu",
+      "caption": "Les mêmes huit chapitres sur un plateau de jeu isométrique, avec des personnages, agents et bâtiments générés par gpt-image-2. Appuyez sur Lecture, ou utilisez les pastilles de chapitre; la narration, les sous-titres et la transcription correspondent au lecteur-diagramme ci-dessus.",
+      "chart": {
+        "kind": "sim:iso",
+        "sim": "gov3-iso"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "Ce que vous regardez"
@@ -302,6 +316,7 @@
   "bespoke_scripts": [
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
     "components/visuals/bespoke/sim/_common.js",
-    "components/visuals/bespoke/sim/Player.js"
+    "components/visuals/bespoke/sim/Player.js",
+    "components/visuals/bespoke/sim/Iso.js"
   ]
 }

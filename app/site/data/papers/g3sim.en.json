@@ -194,6 +194,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "The same story is told twice on this page. The player above draws the architecture as a clean animated diagram. The one below tells it as an isometric game board: buildings stand in for systems, sprites stand in for people and their agents, and the camera glides over a small world while the same narration plays. Both run the same eight chapters on the same audio clock. Choose whichever way of watching suits you. Future simulations will ship in both styles."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.2",
+      "title": "Government 3.0, the game board",
+      "caption": "The same eight chapters on an isometric game board, with gpt-image-2 sprites for the people, agents, and buildings. Press Play, or use the chapter chips to jump; the narration, captions, and transcript match the diagram player above.",
+      "chart": {
+        "kind": "sim:iso",
+        "sim": "gov3-iso"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "What you are watching"
@@ -297,6 +311,7 @@
   "bespoke_scripts": [
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
     "components/visuals/bespoke/sim/_common.js",
-    "components/visuals/bespoke/sim/Player.js"
+    "components/visuals/bespoke/sim/Player.js",
+    "components/visuals/bespoke/sim/Iso.js"
   ]
 }

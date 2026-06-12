@@ -48,12 +48,15 @@ await new Promise(r => setTimeout(r, 1200));
 /* Reach into the Vue component to seek deterministically (the Player registers
    itself on window.__simPlayers when served from localhost). */
 async function seek(ch, f) {
-  await page.evaluate(([c, frac]) => {
-    const inst = (window.__simPlayers || [])[0];
-    if (!inst) throw new Error('sim-player instance not found (is this localhost?)');
+  const SIMID = opt('simid', null);
+  await page.evaluate(([c, frac, simid]) => {
+    const all = window.__simPlayers || [];
+    const inst = simid ? all.find(p => p.sim === simid) : all[0];
+    if (!inst) throw new Error('sim instance not found (is this localhost? simid=' + simid + ')');
     window.__sim = inst;
+    window.__simIdx = all.indexOf(inst);
     if (inst.ch !== c) { inst.pause(); inst.ch = c; }
-  }, [ch, f]);
+  }, [ch, f, SIMID]);
   await new Promise(r => setTimeout(r, 900));               // let the chapter prime (audio metadata or fallback)
   await page.evaluate(([c, frac]) => { window.__sim.seekTo(frac); }, [ch, f]);
   await new Promise(r => setTimeout(r, 350));
@@ -62,7 +65,8 @@ async function seek(ch, f) {
 for (const s of SHOTS) {
   await seek(s.ch, s.f);
   const file = resolve(OUT, 'sim-' + LOCALE + '-ch' + (s.ch + 1) + '-' + Math.round(s.f * 100) + '.png');
-  const el = await page.$('.sim-frame');
+  const idx = await page.evaluate(() => window.__simIdx || 0);
+  const el = (await page.$$('.sim-frame'))[idx];
   await el.screenshot({ path: file });
   console.log('shot', file);
 }

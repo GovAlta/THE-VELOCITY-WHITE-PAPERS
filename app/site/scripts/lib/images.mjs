@@ -25,6 +25,8 @@ export async function generatePNG(prompt, opts = {}) {
     size,
     n: 1,
   };
+  /* gpt-image models can emit true alpha; used for game sprites. */
+  if (opts.background && model.startsWith('gpt-image-')) body.background = opts.background;
   if (model === 'dall-e-3') {
     body.quality = 'hd';
     body.size = '1792x1024';
