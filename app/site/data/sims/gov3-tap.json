@@ -1,0 +1,527 @@
+{
+  "id": "gov3-tap",
+  "version": 1,
+  "engine": "tapestry",
+  "audioSim": "gov3",
+  "title": {
+    "en": "Government 3.0, the woven chronicle",
+    "fr": "Gouvernement 3.0, la chronique tissée"
+  },
+  "blurb": {
+    "en": "The same story told a fourth way: as a continuous embroidered tapestry in the Bayeux tradition, woven panel by panel as the narration plays. Hold the lens over the cloth to reveal the engineering drawn beneath the embroidery, and open the gold medallions in the margins to read the chronicle’s annotations.",
+    "fr": "La même histoire racontée d'une quatrième manière : une tapisserie brodée continue dans la tradition de Bayeux, tissée panneau par panneau au fil de la narration. Tenez la loupe sur l'étoffe pour révéler l'ingénierie dessinée sous la broderie, et ouvrez les médaillons dorés des marges pour lire les annotations de la chronique."
+  },
+  "style": "A panel from a medieval embroidered tapestry in the style of the Bayeux Tapestry, depicting an anachronistic modern subject with complete sincerity. Woven wool threads on warm cream linen; deep navy, rust red, gold ochre, and sage green threads; visible stitch direction and couching; flat medieval perspective; decorative top and bottom borders with small heraldic beasts and thread motifs; figures in the naive romanesque style of eleventh-century embroidery. No letters, no words, no inscriptions anywhere.",
+  "under_style": "Redraw this exact composition as the engineer's underdrawing hidden beneath an embroidered tapestry: precise ink construction lines on aged drafting vellum, ruled guides, measurement ticks, schematic symbols, circuit-like connection traces, faint grid, sepia and indigo ink. Keep every figure and object in exactly the same position and silhouette as the source image; replace the woven texture with technical line work. No letters, no words.",
+  "chapters": [
+    {
+      "id": "01",
+      "title": {
+        "en": "The estate today",
+        "fr": "Le parc aujourd'hui"
+      },
+      "dur": 42,
+      "narration": {
+        "en": "Every government service rests on software. Alberta alone runs thousands of systems: case files, permits, payments, records. A public servant moves between them by hand. They sign in to one system, copy what they need, and carry it to the next. The corporate tools live in one world. The ministry systems live in dozens of others. The connections you see here are people, walking information across the gaps. It works, but it is slow, and it cannot scale. This simulation shows how agentic AI changes the picture, one stage at a time.",
+        "fr": "Chaque service gouvernemental repose sur des logiciels. L'Alberta à elle seule exploite des milliers de systèmes : dossiers, permis, paiements, archives. Un fonctionnaire passe de l'un à l'autre à la main. Il ouvre une session dans un système, copie ce dont il a besoin, puis le transporte vers le suivant. Les outils corporatifs vivent dans un monde. Les systèmes ministériels vivent dans des dizaines d'autres. Les connexions que vous voyez ici sont des personnes, qui transportent l'information d'un système à l'autre. Cela fonctionne, mais c'est lent, et cela ne peut pas passer à l'échelle. Cette simulation montre comment l'IA agentique change le portrait, une étape à la fois."
+      },
+      "panel": "panel-01",
+      "under": "under-01",
+      "marginalia": [
+        {
+          "u": 0.3,
+          "v": 0.82,
+          "note": {
+            "en": "Alberta runs thousands of systems; the connections between them are people, walking information across the gaps.",
+            "fr": "L'Alberta exploite des milliers de systèmes; les liens entre eux sont des personnes, qui portent l'information d'un système à l'autre."
+          },
+          "paper": "bbkac"
+        },
+        {
+          "u": 0.72,
+          "v": 0.25,
+          "note": {
+            "en": "Forty years of code, contracts, and dependencies ride on these towers.",
+            "fr": "Quarante ans de code, de contrats et de dépendances reposent sur ces tours."
+          },
+          "paper": "cux4h"
+        }
+      ],
+      "steps": [
+        {
+          "t": 0.0,
+          "do": "caption",
+          "text": {
+            "en": "Thousands of systems. Human bridges.",
+            "fr": "Des milliers de systèmes. Des ponts humains."
+          }
+        },
+        {
+          "t": 0.4,
+          "do": "caption",
+          "text": {
+            "en": "People carry the information across the gaps.",
+            "fr": "Des personnes transportent l'information entre les systèmes."
+          }
+        },
+        {
+          "t": 0.82,
+          "do": "caption",
+          "text": {
+            "en": "It works. It is slow. It cannot scale.",
+            "fr": "Cela fonctionne. C'est lent. Cela ne passe pas à l'échelle."
+          }
+        }
+      ],
+      "prompt": "Clerks in tunics carry armfuls of paper scrolls back and forth between many tall, crumbling stone towers spread across the panel; each tower has a different odd shape and patched walls; long winding paths of golden thread connect the clerks' journeys; one clerk wipes his brow."
+    },
+    {
+      "id": "02",
+      "title": {
+        "en": "Agents find closed doors",
+        "fr": "Les agents trouvent portes closes"
+      },
+      "dur": 40,
+      "narration": {
+        "en": "An AI agent is software that can act on your behalf: read, decide, and do, under your instruction. Agents are easy to deploy. A simple app, a browser extension, an assistant inside the tools you already use. The hard part is access. Watch what happens when an agent tries to reach a ministry system. It stops at the wall. Most of these systems were built decades before agents existed. They offer no interface a machine can use, no API. Hundreds of valuable systems are effectively sealed. Before agents can help, someone has to add the doors.",
+        "fr": "Un agent d'IA est un logiciel qui peut agir en votre nom : lire, décider et exécuter, selon vos instructions. Les agents sont faciles à déployer. Une appli simple, une extension de navigateur, un assistant dans les outils que vous utilisez déjà. Le plus difficile est l'accès. Regardez ce qui se passe quand un agent tente d'atteindre un système ministériel. Il s'arrête au mur. La plupart de ces systèmes ont été construits des décennies avant l'existence des agents. Ils n'offrent aucune interface qu'une machine peut utiliser, aucune API. Des centaines de systèmes précieux sont, dans les faits, scellés. Avant que les agents puissent aider, quelqu'un doit ajouter les portes."
+      },
+      "panel": "panel-02",
+      "under": "under-02",
+      "marginalia": [
+        {
+          "u": 0.5,
+          "v": 0.7,
+          "note": {
+            "en": "Most government systems were built decades before agents existed; they offer no interface a machine can use.",
+            "fr": "La plupart des systèmes gouvernementaux ont été bâtis des décennies avant l'existence des agents; ils n'offrent aucune interface qu'une machine puisse utiliser."
+          },
+          "paper": "zgym1"
+        }
+      ],
+      "steps": [
+        {
+          "t": 0.0,
+          "do": "caption",
+          "text": {
+            "en": "Agents can act for you.",
+            "fr": "Les agents peuvent agir pour vous."
+          }
+        },
+        {
+          "t": 0.26,
+          "do": "caption",
+          "text": {
+            "en": "But the estate has no doors.",
+            "fr": "Mais le parc n'a pas de portes."
+          }
+        },
+        {
+          "t": 0.62,
+          "do": "caption",
+          "text": {
+            "en": "No machine interface. No API. Sealed.",
+            "fr": "Aucune interface machine. Aucune API. Scellé."
+          }
+        }
+      ],
+      "prompt": "Small rounded orange automata with single friendly lens-eyes stand before the sealed gates of stone towers; the gates are barred with heavy crossed planks and large padlocks woven in dark thread; the automata hold up small empty hands; clerks watch from a distance with curiosity."
+    },
+    {
+      "id": "03",
+      "title": {
+        "en": "Stage 1 · Augmentation",
+        "fr": "Étape 1 · Augmentation"
+      },
+      "dur": 42,
+      "narration": {
+        "en": "The first stage is augmentation, and the first workers are agents themselves. A wave of build agents moves through the estate, system by system. Each one adds an API: a governed doorway a machine can use. Each doorway gets a lock that understands roles, so a caseworker's agent sees case files and nothing else. This is the unglamorous work that opens everything that follows, and AI compresses it from decades to months. Hundreds of systems gain governed doorways. The estate is still old, but for the first time it can be reached safely.",
+        "fr": "La première étape est l'augmentation, et les premiers travailleurs sont les agents eux-mêmes. Une vague d'agents de construction parcourt le parc, système par système. Chacun ajoute une API : une porte gouvernée qu'une machine peut utiliser. Chaque porte reçoit un verrou qui comprend les rôles, de sorte que l'agent d'un responsable de dossiers voit les dossiers et rien d'autre. C'est le travail ingrat qui ouvre tout ce qui suit, et l'IA le comprime de quelques décennies à quelques mois. Des centaines de systèmes obtiennent des portes gouvernées. Le parc est encore vieux, mais pour la première fois, on peut y accéder en toute sécurité."
+      },
+      "panel": "panel-03",
+      "under": "under-03",
+      "marginalia": [
+        {
+          "u": 0.35,
+          "v": 0.3,
+          "note": {
+            "en": "Each doorway gets a role-aware lock: a caseworker’s agent sees case files and nothing else.",
+            "fr": "Chaque porte reçoit un verrou sensible aux rôles : l'agent d'un agent de dossier voit les dossiers, et rien d'autre."
+          },
+          "paper": "qxlzo"
+        },
+        {
+          "u": 0.78,
+          "v": 0.6,
+          "note": {
+            "en": "AI compresses this augmentation from decades to months; hundreds of systems gain governed APIs.",
+            "fr": "L'IA comprime cette augmentation de décennies en mois; des centaines de systèmes obtiennent des API gouvernées."
+          },
+          "paper": "offjm"
+        }
+      ],
+      "steps": [
+        {
+          "t": 0.0,
+          "do": "caption",
+          "text": {
+            "en": "Stage one · Augmentation",
+            "fr": "Première étape · Augmentation"
+          }
+        },
+        {
+          "t": 0.42,
+          "do": "caption",
+          "text": {
+            "en": "Each doorway gets a role-aware lock.",
+            "fr": "Chaque porte reçoit un verrou sensible aux rôles."
+          }
+        },
+        {
+          "t": 0.66,
+          "do": "caption",
+          "text": {
+            "en": "Hundreds of systems gain governed APIs.",
+            "fr": "Des centaines de systèmes obtiennent des API gouvernées."
+          }
+        }
+      ],
+      "prompt": "Orange automata work as masons on the stone towers, weaving glowing green doorways into the walls; thread scaffolding surrounds the towers; each new doorway has a small green shield above it; spools of thread and tools lie about; the work is methodical and calm."
+    },
+    {
+      "id": "04",
+      "title": {
+        "en": "Stage 2 · Identity & observability",
+        "fr": "Étape 2 · Identité et observabilité"
+      },
+      "dur": 40,
+      "narration": {
+        "en": "Power without accountability has no place in government. So every agent now carries a badge: a delegated identity, tied to the person it works for. An agent can only do what its person could do, and only what its person allowed. Every action it takes, every read and write through the gateways, is recorded in an audit ledger as it happens. Anyone with authority can replay exactly what an agent did, and why. Delegation makes agents useful. Observability makes them trustworthy. With both in place, agents can finally be allowed to act.",
+        "fr": "Le pouvoir sans responsabilité n'a pas sa place au gouvernement. Alors chaque agent porte maintenant un insigne : une identité déléguée, liée à la personne pour qui il travaille. Un agent peut seulement faire ce que sa personne pourrait faire, et seulement ce que sa personne a autorisé. Chaque action qu'il pose, chaque lecture et chaque écriture à travers les passerelles, est consignée dans un registre d'audit au moment même où elle se produit. Toute personne en autorité peut rejouer exactement ce qu'un agent a fait, et pourquoi. La délégation rend les agents utiles. L'observabilité les rend dignes de confiance. Avec les deux en place, on peut enfin permettre aux agents d'agir."
+      },
+      "panel": "panel-04",
+      "under": "under-04",
+      "marginalia": [
+        {
+          "u": 0.28,
+          "v": 0.45,
+          "note": {
+            "en": "A delegated identity: an agent can only do what its person could do, and only what its person allowed.",
+            "fr": "Une identité déléguée : un agent ne peut faire que ce que sa personne peut faire, et seulement ce qu'elle a permis."
+          },
+          "paper": "oxj36"
+        },
+        {
+          "u": 0.68,
+          "v": 0.55,
+          "note": {
+            "en": "Every action lands in the audit ledger as it happens; anyone with authority can replay exactly what an agent did.",
+            "fr": "Chaque action s'inscrit au registre d'audit au moment où elle se produit; quiconque a l'autorité peut rejouer exactement ce qu'un agent a fait."
+          },
+          "paper": "l199t"
+        }
+      ],
+      "steps": [
+        {
+          "t": 0.0,
+          "do": "caption",
+          "text": {
+            "en": "Stage two · Identity and observability",
+            "fr": "Deuxième étape · Identité et observabilité"
+          }
+        },
+        {
+          "t": 0.34,
+          "do": "caption",
+          "text": {
+            "en": "A badge for every agent: delegated identity.",
+            "fr": "Un insigne pour chaque agent : une identité déléguée."
+          }
+        },
+        {
+          "t": 0.72,
+          "do": "caption",
+          "text": {
+            "en": "Every action is recorded as it happens.",
+            "fr": "Chaque action est consignée au moment où elle se produit."
+          }
+        }
+      ],
+      "prompt": "A herald in navy robes pins small heraldic badges onto a line of orange automata; behind them, a great open ledger book on a stone pedestal records flowing lines of golden thread that arc from every automaton into its pages; above, a band of watchful embroidered eyes."
+    },
+    {
+      "id": "05",
+      "title": {
+        "en": "Stage 3 · Instantiate & instruct",
+        "fr": "Étape 3 · Instancier et instruire"
+      },
+      "dur": 40,
+      "narration": {
+        "en": "Now watch one person put this to work. A public servant creates an agent and explains the task in plain language. No code, no procurement, no project. The agent asks questions back. It proposes a plan, the person corrects it, and the loop repeats until both are satisfied. This is the new skill of the AI-enabled public service: directing, checking, and deciding. The agent receives its badge, a delegated slice of the person's own permissions, and sets off through the gateway to work.",
+        "fr": "Regardez maintenant une personne mettre tout cela au travail. Un fonctionnaire crée un agent et explique la tâche en langage courant. Pas de code, pas d'approvisionnement, pas de projet. L'agent pose des questions à son tour. Il propose un plan, la personne le corrige, et la boucle se répète jusqu'à ce que les deux soient satisfaits. Voilà la nouvelle compétence de la fonction publique habilitée par l'IA : diriger, vérifier et décider. L'agent reçoit son insigne, une tranche déléguée des permissions de la personne, et part travailler à travers la passerelle."
+      },
+      "panel": "panel-05",
+      "under": "under-05",
+      "marginalia": [
+        {
+          "u": 0.5,
+          "v": 0.3,
+          "note": {
+            "en": "No code, no procurement, no project: the task is described in plain language, and the plan is refined in conversation.",
+            "fr": "Pas de code, pas d'approvisionnement, pas de projet : la tâche est décrite en langage clair, et le plan se raffine par la conversation."
+          },
+          "paper": "dt725"
+        }
+      ],
+      "steps": [
+        {
+          "t": 0.0,
+          "do": "caption",
+          "text": {
+            "en": "Stage three · Instantiate and instruct",
+            "fr": "Troisième étape · Instancier et instruire"
+          }
+        },
+        {
+          "t": 0.2,
+          "do": "caption",
+          "text": {
+            "en": "Describe the task in plain language.",
+            "fr": "Décrivez la tâche en langage courant."
+          }
+        },
+        {
+          "t": 0.54,
+          "do": "caption",
+          "text": {
+            "en": "Instruct. Review. Refine.",
+            "fr": "Instruire. Examiner. Raffiner."
+          }
+        },
+        {
+          "t": 0.64,
+          "do": "caption",
+          "text": {
+            "en": "A badge: a delegated slice of your permissions.",
+            "fr": "Un insigne : une tranche déléguée de vos permissions."
+          }
+        }
+      ],
+      "prompt": "A public servant in a blue tunic sits across from a single orange automaton at a small wooden table; elegant speech scrolls unfurl between them in alternation; the automaton holds a freshly pressed wax seal on a ribbon; a quill and parchment rest on the table."
+    },
+    {
+      "id": "06",
+      "title": {
+        "en": "Stage 4 · Ephemeral interfaces",
+        "fr": "Étape 4 · Interfaces éphémères"
+      },
+      "dur": 44,
+      "narration": {
+        "en": "The agent works across the gateways: corporate tools on one side, ministry data on the other. When it needs the person, it builds an interface on the spot. A small screen, made for this task and this moment: the figures, a chart, a place to approve, a voice summary if you prefer. The person decides, and the work continues. When the task is done, the interface dissolves. Nothing is installed, and nothing is left to maintain. The thousands of fixed screens government keeps alive today stop being needed, one task at a time.",
+        "fr": "L'agent travaille à travers les passerelles : les outils corporatifs d'un côté, les données ministérielles de l'autre. Quand il a besoin de la personne, il construit une interface sur-le-champ. Un petit écran, fait pour cette tâche et ce moment : les chiffres, un graphique, un endroit pour approuver, un résumé vocal si vous préférez. La personne décide, et le travail continue. Quand la tâche est terminée, l'interface se dissout. Rien n'est installé, et il ne reste rien à maintenir. Les milliers d'écrans fixes que le gouvernement maintient en vie aujourd'hui cessent d'être nécessaires, une tâche à la fois."
+      },
+      "panel": "panel-06",
+      "under": "under-06",
+      "marginalia": [
+        {
+          "u": 0.42,
+          "v": 0.35,
+          "note": {
+            "en": "An interface for this task, this person, this moment; when the task is done, it dissolves, and nothing is left to maintain.",
+            "fr": "Une interface pour cette tâche, cette personne, ce moment; la tâche terminée, elle se dissout, et il ne reste rien à entretenir."
+          },
+          "paper": "zgym1"
+        }
+      ],
+      "steps": [
+        {
+          "t": 0.0,
+          "do": "caption",
+          "text": {
+            "en": "Stage four · Tasking and ephemeral interfaces",
+            "fr": "Quatrième étape · Attribution des tâches et interfaces éphémères"
+          }
+        },
+        {
+          "t": 0.3,
+          "do": "caption",
+          "text": {
+            "en": "When it needs you, it builds the interface.",
+            "fr": "Quand il a besoin de vous, il construit l'interface."
+          }
+        },
+        {
+          "t": 0.46,
+          "do": "caption",
+          "text": {
+            "en": "For this task, this person, this moment.",
+            "fr": "Pour cette tâche, cette personne, ce moment."
+          }
+        },
+        {
+          "t": 0.66,
+          "do": "caption",
+          "text": {
+            "en": "Decision made. The work continues.",
+            "fr": "Décision prise. Le travail continue."
+          }
+        },
+        {
+          "t": 0.8,
+          "do": "caption",
+          "text": {
+            "en": "Done. The interface dissolves. Nothing to maintain.",
+            "fr": "Terminé. L'interface se dissout. Rien à maintenir."
+          }
+        }
+      ],
+      "prompt": "Before a seated public servant, a shimmering rectangular window of light is being woven in mid-air by an orange automaton; the window shows tiny abstract charts woven in thread; at the panel's right edge the same window is shown unravelling into loose golden threads that drift away."
+    },
+    {
+      "id": "07",
+      "title": {
+        "en": "Government 3.0",
+        "fr": "Gouvernement 3.0"
+      },
+      "dur": 46,
+      "narration": {
+        "en": "Pull back, and the destination comes into view. On top: people. Public servants and citizens, each working with agents. Underneath: the platform Technology and Innovation operates. The doorways, the gateways, the identity and the delegation, the audit trail, the tasking, the ephemeral interfaces, the knowledge and the tools. At the centre sits government itself: rules, policies, and permissions. The legislation remains the ground truth, and the platform applies it as repeatable rules, so every decision is consistent. Services are delivered, insights are derived, and programs are operated by agents working against those rules, accountable to a named person at every step.",
+        "fr": "Prenez du recul, et la destination apparaît. Au sommet : des personnes. Des fonctionnaires et des citoyens, chacun travaillant avec des agents. En dessous : la plateforme qu'exploite Technologie et Innovation. Les portes d'accès, les passerelles, l'identité et la délégation, la piste d'audit, les tâches, les interfaces éphémères, les connaissances et les outils. Au centre se trouve le gouvernement lui-même : des règles, des politiques et des permissions. La législation demeure la source de vérité, et la plateforme l'applique en règles répétables, pour que chaque décision soit constante. Les services sont livrés, les constats sont dégagés et les programmes sont exploités par des agents qui travaillent selon ces règles, redevables à une personne nommée à chaque étape."
+      },
+      "panel": "panel-07",
+      "under": "under-07",
+      "marginalia": [
+        {
+          "u": 0.5,
+          "v": 0.78,
+          "note": {
+            "en": "People on top, the platform underneath, and at the core: rules, policies, and permissions, with legislation as the ground truth.",
+            "fr": "Les personnes au sommet, la plateforme en dessous, et au cœur : des règles, des politiques et des permissions, avec la législation comme source de vérité."
+          },
+          "paper": "zgym1"
+        },
+        {
+          "u": 0.18,
+          "v": 0.5,
+          "note": {
+            "en": "The thousands of separate user interfaces government maintains today largely disappear, and with them most of the code that has to be kept alive.",
+            "fr": "Les milliers d'interfaces distinctes que le gouvernement entretient aujourd'hui disparaissent en grande partie, et avec elles l'essentiel du code à maintenir en vie."
+          },
+          "paper": "eujjc"
+        }
+      ],
+      "steps": [
+        {
+          "t": 0.0,
+          "do": "caption",
+          "text": {
+            "en": "Government 3.0",
+            "fr": "Gouvernement 3.0"
+          }
+        },
+        {
+          "t": 0.16,
+          "do": "caption",
+          "text": {
+            "en": "The application layer fades away.",
+            "fr": "La couche applicative s'efface."
+          }
+        },
+        {
+          "t": 0.5,
+          "do": "caption",
+          "text": {
+            "en": "People on top. Platform underneath. Rules at the core.",
+            "fr": "Les personnes au sommet. La plateforme en dessous. Les règles au centre."
+          }
+        },
+        {
+          "t": 0.76,
+          "do": "caption",
+          "text": {
+            "en": "Accountable to a named person, at every step.",
+            "fr": "Redevable à une personne nommée, à chaque étape."
+          }
+        }
+      ],
+      "prompt": "At the centre, a great domed legislature radiates woven golden rays like a romanesque sun; beneath it, eight horizontal foundation strata in different coloured threads form its bedrock; around it, people and orange automata stand together in calm pairs; the old towers appear only as faint pale outlines fading at the panel edges."
+    },
+    {
+      "id": "08",
+      "title": {
+        "en": "A system that heals",
+        "fr": "Un système qui se répare"
+      },
+      "dur": 48,
+      "narration": {
+        "en": "A living system can learn. As millions of interactions flow through the platform, the patterns of friction become visible: the duplicate form, the manual step, the queue nobody designed. The system detects them, measures them, and drafts a proposal. People stay sovereign. Public servants and elected officials review every change, grounded in the law as written. Approve it, and the rule updates everywhere at once. Red tape stops being an archaeology project and becomes a maintenance task. This is Government 3.0: a government that runs on rules, learns from friction, and improves continuously, under human direction.",
+        "fr": "Un système vivant peut apprendre. À mesure que des millions d'interactions traversent la plateforme, les motifs de friction deviennent visibles : le formulaire en double, l'étape manuelle, la file d'attente que personne n'a conçue. Le système les détecte, les mesure et rédige une proposition. Les personnes restent souveraines. Les fonctionnaires et les élus examinent chaque changement, en s'appuyant sur la loi telle qu'elle est écrite. Approuvez le changement, et la règle se met à jour partout à la fois. La paperasserie cesse d'être un chantier d'archéologie et devient une tâche d'entretien. Voici le Gouvernement 3.0 : un gouvernement qui fonctionne selon des règles, apprend de la friction et s'améliore continuellement, sous direction humaine."
+      },
+      "panel": "panel-08",
+      "under": "under-08",
+      "marginalia": [
+        {
+          "u": 0.3,
+          "v": 0.4,
+          "note": {
+            "en": "The system detects its own friction, measures it, and drafts the proposal; people stay sovereign and review every change.",
+            "fr": "Le système détecte sa propre friction, la mesure et rédige la proposition; les personnes demeurent souveraines et examinent chaque changement."
+          },
+          "paper": "eujjc"
+        },
+        {
+          "u": 0.74,
+          "v": 0.62,
+          "note": {
+            "en": "Approve it, and the rule updates everywhere at once: red tape becomes a maintenance task, performed continuously, under human direction.",
+            "fr": "Approuvez, et la règle se met à jour partout à la fois : la paperasserie devient une tâche d'entretien, exécutée continuellement, sous direction humaine."
+          },
+          "paper": "l199t"
+        }
+      ],
+      "steps": [
+        {
+          "t": 0.0,
+          "do": "caption",
+          "text": {
+            "en": "A government that heals itself",
+            "fr": "Un gouvernement qui se répare lui-même"
+          }
+        },
+        {
+          "t": 0.2,
+          "do": "caption",
+          "text": {
+            "en": "Friction becomes visible. The system notices.",
+            "fr": "La friction devient visible. Le système la remarque."
+          }
+        },
+        {
+          "t": 0.46,
+          "do": "caption",
+          "text": {
+            "en": "The system drafts the change. People decide.",
+            "fr": "Le système rédige le changement. Les personnes décident."
+          }
+        },
+        {
+          "t": 0.76,
+          "do": "caption",
+          "text": {
+            "en": "Approved. The rule updates everywhere at once.",
+            "fr": "Approuvé. La règle se met à jour partout à la fois."
+          }
+        },
+        {
+          "t": 0.9,
+          "do": "caption",
+          "text": {
+            "en": "Rules at the core. Learning at the edges. People in command.",
+            "fr": "Les règles au centre. L'apprentissage en périphérie. Les personnes aux commandes."
+          }
+        }
+      ],
+      "prompt": "A circular band of thread loops around the radiant domed legislature like an ouroboros; at one point of the loop a dark knot snarls the thread; further along, two scribes and a robed official examine an unrolled scroll; beyond them, hands re-weave the thread smooth and golden; small discarded tangles fall away at the bottom border."
+    }
+  ]
+}

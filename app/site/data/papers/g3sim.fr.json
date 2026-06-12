@@ -221,6 +221,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "Le quatrième lecteur abandonne entièrement le langage visuel moderne. Les mêmes huit chapitres et la même narration se déroulent sur une tapisserie brodée continue dans la tradition de Bayeux : des clercs portent des parchemins entre des tours croulantes, des automates tissés reçoivent leurs insignes héraldiques, et la législature rayonne de fils d'or. Chaque panneau se tisse dans l'étoffe quand son chapitre commence. Deux choses ici n'existent nulle part ailleurs. Tenez la loupe sur la broderie et elle révèle le dessin d'ingénieur sous l'œuvre, la même composition redessinée en traits de construction sur vélin. Et les médaillons dorés des marges s'ouvrent en annotations de parchemin, chacune portant une ligne de la collection et un lien vers le livre dont elle provient."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.4",
+      "title": "Gouvernement 3.0, la chronique tissée",
+      "caption": "Le moteur-tapisserie : huit panneaux brodés qui se tissent au fil de la narration. Tenez la loupe sur l'étoffe pour voir l'ingénierie sous la broderie; ouvrez les médaillons dorés pour lire les annotations.",
+      "chart": {
+        "kind": "sim:tapestry",
+        "sim": "gov3-tap"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "Ce que vous regardez"
@@ -332,6 +346,7 @@
     "components/visuals/bespoke/sim/_common.js",
     "components/visuals/bespoke/sim/Player.js",
     "components/visuals/bespoke/sim/Iso.js",
-    "components/visuals/bespoke/sim/Three3D.js"
+    "components/visuals/bespoke/sim/Three3D.js",
+    "components/visuals/bespoke/sim/Tapestry.js"
   ]
 }

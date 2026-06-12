@@ -218,6 +218,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "The fourth player abandons modern visual language altogether. The same eight chapters and the same narration play across a continuous embroidered tapestry in the Bayeux tradition: clerks carry scrolls between crumbling towers, woven automata receive their heraldic badges, and the legislature radiates golden thread. Each panel weaves itself into the cloth as its chapter begins. Two things here exist nowhere else. Hold the lens over the embroidery and it reveals the engineer's underdrawing beneath the art, the same composition redrawn as construction lines on vellum. And the gold medallions in the margins open into parchment annotations, each carrying a line from the collection and a link to the paper it came from."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.4",
+      "title": "Government 3.0, the woven chronicle",
+      "caption": "The tapestry engine: eight embroidered panels woven in as the narration plays. Hold the lens over the cloth to see the engineering beneath the embroidery; open the gold medallions for the marginalia.",
+      "chart": {
+        "kind": "sim:tapestry",
+        "sim": "gov3-tap"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "What you are watching"
@@ -314,6 +328,7 @@
     "components/visuals/bespoke/sim/_common.js",
     "components/visuals/bespoke/sim/Player.js",
     "components/visuals/bespoke/sim/Iso.js",
-    "components/visuals/bespoke/sim/Three3D.js"
+    "components/visuals/bespoke/sim/Three3D.js",
+    "components/visuals/bespoke/sim/Tapestry.js"
   ]
 }
