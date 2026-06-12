@@ -143,9 +143,10 @@
       kids.push(h('circle', { r, fill: a.fill || 'rgba(26,58,110,0.07)', stroke: col, 'stroke-width': 2.4, 'data-glow': '' }));
       kids.push(h('circle', { r: r - 11, fill: 'none', stroke: col, 'stroke-width': 1, 'stroke-dasharray': '2 6', opacity: 0.7 }));
       const lines = S.wrap(label, 15).slice(0, 3);
-      const y0 = -(lines.length - 1) * 13 - (sub ? 9 : 0);
+      const y0 = -(lines.length - 1) * 13;
       lines.forEach((ln, i) => kids.push(txt(0, y0 + i * 26, ln, { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700, fill: col })));
-      if (sub) kids.push(txt(0, y0 + lines.length * 26 + 3, sub, { 'text-anchor': 'middle', 'font-size': 13, fill: PAL.ink50, 'font-family': 'var(--font-mono)' }));
+      /* the sub sits BELOW the disc — long phrases never collide with the rings */
+      if (sub) kids.push(txt(0, r + 18, sub, { 'text-anchor': 'middle', 'font-size': 13, fill: PAL.ink50, 'font-family': 'var(--font-mono)' }));
     } else if (a.kind === 'pill') {
       const w = a.w || Math.max(70, label.length * 8 + 24);
       kids.push(h('rect', { width: w, height: 26, rx: 13, fill: a.fill || PAL.paperAlt, stroke: a.stroke || PAL.ruleStrong, 'stroke-width': 1.2, 'data-glow': '' }));
@@ -334,11 +335,11 @@
               const stag = (sp.stagger || 0) * i;
               if (sp.fx === 'rise' && !idStr.includes('.')) {
                 const ax = simState.actors[idStr] || { x: 0, y: 0 };
-                tl.fromTo(el, { autoAlpha: from, x: ax.x, y: ax.y + 16 }, { autoAlpha: to, x: ax.x, y: ax.y, duration: dur, ease }, pos + stag);
+                tl.fromTo(el, { autoAlpha: from, x: ax.x, y: ax.y + 16 }, { autoAlpha: to, x: ax.x, y: ax.y, duration: dur, ease, immediateRender: pos === 0 }, pos + stag);
               } else if (sp.fx === 'pop') {
-                tl.fromTo(el, { autoAlpha: from, scale: 0.55, transformOrigin: '50% 50%' }, { autoAlpha: to, scale: 1, duration: dur, ease: 'back.out(1.8)' }, pos + stag);
+                tl.fromTo(el, { autoAlpha: from, scale: 0.55, transformOrigin: '50% 50%' }, { autoAlpha: to, scale: 1, duration: dur, ease: 'back.out(1.8)', immediateRender: pos === 0 }, pos + stag);
               } else {
-                tl.fromTo(el, { autoAlpha: from }, { autoAlpha: to, duration: dur, ease: 'power1.inOut' }, pos + stag);
+                tl.fromTo(el, { autoAlpha: from }, { autoAlpha: to, duration: dur, ease: 'power1.inOut', immediateRender: pos === 0 }, pos + stag);
               }
               if (idStr.includes('.')) simState.parts[idStr] = to; else if (simState.actors[idStr]) simState.actors[idStr].o = to;
             });
@@ -347,13 +348,13 @@
               const idStr = sp.id || sp.ids[0];
               const a = simState.actors[idStr] || { x: 0, y: 0 };
               const tx = sp.x != null ? sp.x : a.x, tyy = sp.y != null ? sp.y : a.y;
-              tl.fromTo(el, { x: a.x, y: a.y }, { x: tx, y: tyy, duration: dur, ease }, pos);
+              tl.fromTo(el, { x: a.x, y: a.y }, { x: tx, y: tyy, duration: dur, ease, immediateRender: pos === 0 }, pos);
               a.x = tx; a.y = tyy;
             });
           } else if (sp.do === 'cam') {
             const from = Object.assign({}, simState.cam);
             const to = { x: sp.x != null ? sp.x : from.x, y: sp.y != null ? sp.y : from.y, z: sp.z != null ? sp.z : from.z };
-            tl.fromTo(camProxy, { x: from.x, y: from.y, z: from.z }, { x: to.x, y: to.y, z: to.z, duration: dur, ease, onUpdate: applyCam }, pos);
+            tl.fromTo(camProxy, { x: from.x, y: from.y, z: from.z }, { x: to.x, y: to.y, z: to.z, duration: dur, ease, onUpdate: applyCam, immediateRender: pos === 0 }, pos);
             simState.cam = to;
           } else if (sp.do === 'pulse') {
             this.els(sp).forEach((el, i) => {
@@ -379,7 +380,7 @@
               if (!p) return;
               const len = p.getTotalLength ? p.getTotalLength() : 600;
               tl.set(el, { autoAlpha: 1 }, pos);
-              tl.fromTo(p, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease }, pos);
+              tl.fromTo(p, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease, immediateRender: pos === 0 }, pos);
               simState.actors[sp.id] && (simState.actors[sp.id].o = 1);
               simState.drawn[sp.id] = 1;
             });
