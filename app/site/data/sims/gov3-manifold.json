@@ -7,14 +7,14 @@
   "fr": "Gouvernement 3.0, dessiné en lumière"
  },
  "blurb": {
-  "en": "The fifth telling: the estate, the people, and the agents condensed out of seven thousand particles. The wall flashes red where agents strike it, doors stamp gold onto the towers, the audit ledger writes itself line by line, and the finale heals the system’s own friction in a single golden wave. Drag to orbit, scroll to zoom.",
-  "fr": "La cinquième manière : le parc, les personnes et les agents condensés en sept mille particules. Le mur rougeoie là où les agents le frappent, des portes dorées se gravent sur les tours, le registre d’audit s’écrit ligne par ligne, et le final guérit la friction du système en une seule onde dorée. Glissez pour orbiter, faites défiler pour zoomer."
+  "en": "The fifth telling: the estate, the people, and the agents condensed out of ten thousand particles. The wall flashes red where agents strike it, doors stamp gold onto the towers, the audit ledger writes itself line by line, and the finale heals the system’s own friction in a single golden wave. Drag to orbit, scroll to zoom — and flip the theme to redraw the whole field as ink on paper.",
+  "fr": "La cinquième manière : le parc, les personnes et les agents condensés en dix mille particules. Le mur rougeoie là où les agents le frappent, des portes dorées se gravent sur les tours, le registre d’audit s’écrit ligne par ligne, et le final guérit la friction du système en une seule onde dorée. Glissez pour orbiter, faites défiler pour zoomer — et basculez le thème pour redessiner tout le champ à l’encre sur papier."
  },
  "cast": [
   {
    "id": "floor",
    "kind": "floor",
-   "n": 620,
+   "n": 860,
    "color": "dim",
    "x": 0,
    "y": 0,
@@ -25,7 +25,7 @@
   {
    "id": "corp",
    "kind": "slab",
-   "n": 430,
+   "n": 600,
    "x": -26,
    "y": 0,
    "z": -1,
@@ -42,7 +42,7 @@
   {
    "id": "sys1",
    "kind": "tower",
-   "n": 215,
+   "n": 300,
    "x": 13,
    "y": 0,
    "z": -12,
@@ -54,7 +54,7 @@
   {
    "id": "pt1",
    "kind": "ring",
-   "n": 34,
+   "n": 46,
    "parent": "sys1",
    "offset": [
     -2.5,
@@ -67,7 +67,7 @@
   {
    "id": "sys2",
    "kind": "tower",
-   "n": 215,
+   "n": 300,
    "x": 22,
    "y": 0,
    "z": -12,
@@ -79,7 +79,7 @@
   {
    "id": "pt2",
    "kind": "ring",
-   "n": 34,
+   "n": 46,
    "parent": "sys2",
    "offset": [
     -2.5,
@@ -92,7 +92,7 @@
   {
    "id": "sys3",
    "kind": "tower",
-   "n": 215,
+   "n": 300,
    "x": 31,
    "y": 0,
    "z": -12,
@@ -104,7 +104,7 @@
   {
    "id": "pt3",
    "kind": "ring",
-   "n": 34,
+   "n": 46,
    "parent": "sys3",
    "offset": [
     -2.5,
@@ -117,7 +117,7 @@
   {
    "id": "sys4",
    "kind": "tower",
-   "n": 215,
+   "n": 300,
    "x": 13,
    "y": 0,
    "z": -1,
@@ -129,7 +129,7 @@
   {
    "id": "pt4",
    "kind": "ring",
-   "n": 34,
+   "n": 46,
    "parent": "sys4",
    "offset": [
     -2.5,
@@ -142,7 +142,7 @@
   {
    "id": "sys5",
    "kind": "tower",
-   "n": 215,
+   "n": 300,
    "x": 22,
    "y": 0,
    "z": -1,
@@ -154,7 +154,7 @@
   {
    "id": "pt5",
    "kind": "ring",
-   "n": 34,
+   "n": 46,
    "parent": "sys5",
    "offset": [
     -2.5,
@@ -167,7 +167,7 @@
   {
    "id": "sys6",
    "kind": "tower",
-   "n": 215,
+   "n": 300,
    "x": 31,
    "y": 0,
    "z": -1,
@@ -179,7 +179,7 @@
   {
    "id": "pt6",
    "kind": "ring",
-   "n": 34,
+   "n": 46,
    "parent": "sys6",
    "offset": [
     -2.5,
@@ -192,7 +192,7 @@
   {
    "id": "sys7",
    "kind": "tower",
-   "n": 215,
+   "n": 300,
    "x": 13,
    "y": 0,
    "z": 10,
@@ -204,7 +204,7 @@
   {
    "id": "pt7",
    "kind": "ring",
-   "n": 34,
+   "n": 46,
    "parent": "sys7",
    "offset": [
     -2.5,
@@ -217,7 +217,7 @@
   {
    "id": "sys8",
    "kind": "tower",
-   "n": 215,
+   "n": 300,
    "x": 22,
    "y": 0,
    "z": 10,
@@ -229,7 +229,7 @@
   {
    "id": "pt8",
    "kind": "ring",
-   "n": 34,
+   "n": 46,
    "parent": "sys8",
    "offset": [
     -2.5,
@@ -242,7 +242,7 @@
   {
    "id": "sys9",
    "kind": "tower",
-   "n": 215,
+   "n": 300,
    "x": 31,
    "y": 0,
    "z": 10,
@@ -254,7 +254,7 @@
   {
    "id": "pt9",
    "kind": "ring",
-   "n": 34,
+   "n": 46,
    "parent": "sys9",
    "offset": [
     -2.5,
@@ -267,7 +267,7 @@
   {
    "id": "wall",
    "kind": "wall",
-   "n": 560,
+   "n": 800,
    "x": 8.2,
    "y": 0,
    "z": -1,
@@ -278,7 +278,7 @@
   {
    "id": "p1",
    "kind": "person",
-   "n": 140,
+   "n": 200,
    "x": -7,
    "y": 0,
    "z": -7,
@@ -287,7 +287,7 @@
   {
    "id": "p2",
    "kind": "person",
-   "n": 140,
+   "n": 200,
    "x": -5,
    "y": 0,
    "z": 4,
@@ -296,7 +296,7 @@
   {
    "id": "p3",
    "kind": "person",
-   "n": 140,
+   "n": 200,
    "x": -1,
    "y": 0,
    "z": 11,
@@ -305,7 +305,7 @@
   {
    "id": "p4",
    "kind": "person",
-   "n": 140,
+   "n": 200,
    "x": -11,
    "y": 0,
    "z": 0,
@@ -314,7 +314,7 @@
   {
    "id": "p5",
    "kind": "person",
-   "n": 140,
+   "n": 200,
    "x": -9,
    "y": 0,
    "z": 8,
@@ -323,7 +323,7 @@
   {
    "id": "spark1",
    "kind": "orb",
-   "n": 16,
+   "n": 22,
    "r": 0.3,
    "parent": "p1",
    "offset": [
@@ -336,7 +336,7 @@
   {
    "id": "spark2",
    "kind": "orb",
-   "n": 16,
+   "n": 22,
    "r": 0.3,
    "parent": "p2",
    "offset": [
@@ -349,7 +349,7 @@
   {
    "id": "spark3",
    "kind": "orb",
-   "n": 16,
+   "n": 22,
    "r": 0.3,
    "parent": "p3",
    "offset": [
@@ -362,7 +362,7 @@
   {
    "id": "a1",
    "kind": "orb",
-   "n": 110,
+   "n": 155,
    "r": 0.7,
    "x": -20,
    "y": 3,
@@ -372,7 +372,7 @@
   {
    "id": "a2",
    "kind": "orb",
-   "n": 110,
+   "n": 155,
    "r": 0.7,
    "x": -16,
    "y": 2.5,
@@ -382,7 +382,7 @@
   {
    "id": "b1",
    "kind": "orb",
-   "n": 95,
+   "n": 135,
    "r": 0.62,
    "x": -18,
    "y": 3.5,
@@ -392,7 +392,7 @@
   {
    "id": "b2",
    "kind": "orb",
-   "n": 95,
+   "n": 135,
    "r": 0.62,
    "x": -18,
    "y": 5,
@@ -402,7 +402,7 @@
   {
    "id": "b3",
    "kind": "orb",
-   "n": 95,
+   "n": 135,
    "r": 0.62,
    "x": -18,
    "y": 6.5,
@@ -412,7 +412,7 @@
   {
    "id": "a7",
    "kind": "orb",
-   "n": 130,
+   "n": 185,
    "r": 0.75,
    "x": -0.8,
    "y": 3.2,
@@ -422,7 +422,7 @@
   {
    "id": "halo-a1",
    "kind": "halo",
-   "n": 28,
+   "n": 38,
    "r": 1,
    "parent": "a1",
    "offset": [
@@ -435,7 +435,7 @@
   {
    "id": "halo-a2",
    "kind": "halo",
-   "n": 28,
+   "n": 38,
    "r": 1,
    "parent": "a2",
    "offset": [
@@ -448,7 +448,7 @@
   {
    "id": "halo-b1",
    "kind": "halo",
-   "n": 28,
+   "n": 38,
    "r": 1,
    "parent": "b1",
    "offset": [
@@ -461,7 +461,7 @@
   {
    "id": "halo-b2",
    "kind": "halo",
-   "n": 28,
+   "n": 38,
    "r": 1,
    "parent": "b2",
    "offset": [
@@ -474,7 +474,7 @@
   {
    "id": "halo-b3",
    "kind": "halo",
-   "n": 28,
+   "n": 38,
    "r": 1,
    "parent": "b3",
    "offset": [
@@ -487,7 +487,7 @@
   {
    "id": "halo-a7",
    "kind": "halo",
-   "n": 28,
+   "n": 38,
    "r": 1,
    "parent": "a7",
    "offset": [
@@ -500,7 +500,7 @@
   {
    "id": "ledger",
    "kind": "ledger",
-   "n": 460,
+   "n": 650,
    "x": 2,
    "y": 0.8,
    "z": 21,
@@ -517,7 +517,7 @@
   {
    "id": "core",
    "kind": "dome",
-   "n": 620,
+   "n": 880,
    "x": 0,
    "y": 0,
    "z": 0,
@@ -527,7 +527,7 @@
   {
    "id": "panel1",
    "kind": "panel",
-   "n": 400,
+   "n": 560,
    "x": -1.2,
    "y": 2.4,
    "z": 5.6,
@@ -544,7 +544,7 @@
   {
    "id": "panel2",
    "kind": "panel",
-   "n": 240,
+   "n": 340,
    "x": 2.4,
    "y": 2.2,
    "z": 12.4,
@@ -556,7 +556,7 @@
   {
    "id": "doc",
    "kind": "doc",
-   "n": 90,
+   "n": 130,
    "x": -3.2,
    "y": 4.2,
    "z": 3.2,

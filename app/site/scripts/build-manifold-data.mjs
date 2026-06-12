@@ -21,42 +21,42 @@ const gov3 = JSON.parse(readFileSync(resolve(SITE, 'data/sims/gov3.json'), 'utf8
 const TX = [13, 22, 31], TZ = [-12, -1, 10];
 const THT = [7, 9, 5.5, 6.5, 10, 6, 8, 5.5, 7];
 const cast = [
-  { id: 'floor', kind: 'floor', n: 620, color: 'dim', x: 0, y: 0, z: 0, visible: true, baseEnergy: 0.3 },
-  { id: 'corp', kind: 'slab', n: 430, x: -26, y: 0, z: -1, w: 9, ht: 6.5, d: 8, color: 'corp',
+  { id: 'floor', kind: 'floor', n: 860, color: 'dim', x: 0, y: 0, z: 0, visible: true, baseEnergy: 0.3 },
+  { id: 'corp', kind: 'slab', n: 600, x: -26, y: 0, z: -1, w: 9, ht: 6.5, d: 8, color: 'corp',
     label: { en: 'Corporate tools', fr: 'Outils corporatifs' }, labelDy: 11.5 },
 ];
 for (let i = 0; i < 9; i++) {
   const id = 'sys' + (i + 1);
-  cast.push({ id, kind: 'tower', n: 215, x: TX[i % 3], y: 0, z: TZ[Math.floor(i / 3)],
+  cast.push({ id, kind: 'tower', n: 300, x: TX[i % 3], y: 0, z: TZ[Math.floor(i / 3)],
     w: 4.2, ht: THT[i], d: 4.2, color: 'system' });
-  cast.push({ id: 'pt' + (i + 1), kind: 'ring', n: 34, parent: id, offset: [-2.5, 2.2, 0],
+  cast.push({ id: 'pt' + (i + 1), kind: 'ring', n: 46, parent: id, offset: [-2.5, 2.2, 0],
     r: 1.15, color: 'gold' });
 }
-cast.push({ id: 'wall', kind: 'wall', n: 560, x: 8.2, y: 0, z: -1, len: 30, ht: 10.5, color: 'red' });
+cast.push({ id: 'wall', kind: 'wall', n: 800, x: 8.2, y: 0, z: -1, len: 30, ht: 10.5, color: 'red' });
 const PPOS = [[-7, 0, -7], [-5, 0, 4], [-1, 0, 11], [-11, 0, 0], [-9, 0, 8]];
 for (let i = 0; i < 5; i++) {
-  cast.push({ id: 'p' + (i + 1), kind: 'person', n: 140, x: PPOS[i][0], y: 0, z: PPOS[i][2], color: 'person' });
+  cast.push({ id: 'p' + (i + 1), kind: 'person', n: 200, x: PPOS[i][0], y: 0, z: PPOS[i][2], color: 'person' });
 }
 for (let i = 0; i < 3; i++) {
-  cast.push({ id: 'spark' + (i + 1), kind: 'orb', n: 16, r: 0.3, parent: 'p' + (i + 1),
+  cast.push({ id: 'spark' + (i + 1), kind: 'orb', n: 22, r: 0.3, parent: 'p' + (i + 1),
     offset: [0.9, 2.3, 0.4], color: 'white' });
 }
-cast.push({ id: 'a1', kind: 'orb', n: 110, r: 0.7, x: -20, y: 3, z: 4, color: 'agent' });
-cast.push({ id: 'a2', kind: 'orb', n: 110, r: 0.7, x: -16, y: 2.5, z: -6, color: 'agent' });
+cast.push({ id: 'a1', kind: 'orb', n: 155, r: 0.7, x: -20, y: 3, z: 4, color: 'agent' });
+cast.push({ id: 'a2', kind: 'orb', n: 155, r: 0.7, x: -16, y: 2.5, z: -6, color: 'agent' });
 for (let i = 0; i < 3; i++) {
-  cast.push({ id: 'b' + (i + 1), kind: 'orb', n: 95, r: 0.62, x: -18, y: 3.5 + i * 1.5, z: -9 + i * 8, color: 'agent' });
+  cast.push({ id: 'b' + (i + 1), kind: 'orb', n: 135, r: 0.62, x: -18, y: 3.5 + i * 1.5, z: -9 + i * 8, color: 'agent' });
 }
-cast.push({ id: 'a7', kind: 'orb', n: 130, r: 0.75, x: -0.8, y: 3.2, z: 2.4, color: 'agent' });
+cast.push({ id: 'a7', kind: 'orb', n: 185, r: 0.75, x: -0.8, y: 3.2, z: 2.4, color: 'agent' });
 for (const aid of ['a1', 'a2', 'b1', 'b2', 'b3', 'a7']) {
-  cast.push({ id: 'halo-' + aid, kind: 'halo', n: 28, r: 1.0, parent: aid, offset: [0, 1.5, 0], color: 'gold' });
+  cast.push({ id: 'halo-' + aid, kind: 'halo', n: 38, r: 1.0, parent: aid, offset: [0, 1.5, 0], color: 'gold' });
 }
-cast.push({ id: 'ledger', kind: 'ledger', n: 460, x: 2, y: 0.8, z: 21, w: 9, ht: 6.5, ry: 1.26, color: 'gold',
+cast.push({ id: 'ledger', kind: 'ledger', n: 650, x: 2, y: 0.8, z: 21, w: 9, ht: 6.5, ry: 1.26, color: 'gold',
   label: { en: 'Audit ledger', fr: 'Registre d’audit' }, labelDy: 8.4 });
-cast.push({ id: 'core', kind: 'dome', n: 620, x: 0, y: 0, z: 0, r: 6.5, color: 'gold' });
-cast.push({ id: 'panel1', kind: 'panel', n: 400, x: -1.2, y: 2.4, z: 5.6, w: 7, ht: 4.6, ry: 0.62, color: 'cream',
+cast.push({ id: 'core', kind: 'dome', n: 880, x: 0, y: 0, z: 0, r: 6.5, color: 'gold' });
+cast.push({ id: 'panel1', kind: 'panel', n: 560, x: -1.2, y: 2.4, z: 5.6, w: 7, ht: 4.6, ry: 0.62, color: 'cream',
   label: { en: 'An interface for this moment', fr: 'Une interface pour ce moment' }, labelDy: 4.2 });
-cast.push({ id: 'panel2', kind: 'panel', n: 240, x: 2.4, y: 2.2, z: 12.4, w: 5, ht: 3.4, ry: 0.65, color: 'cream' });
-cast.push({ id: 'doc', kind: 'doc', n: 90, x: -3.2, y: 4.2, z: 3.2, ry: 0.8, color: 'cream' });
+cast.push({ id: 'panel2', kind: 'panel', n: 340, x: 2.4, y: 2.2, z: 12.4, w: 5, ht: 3.4, ry: 0.65, color: 'cream' });
+cast.push({ id: 'doc', kind: 'doc', n: 130, x: -3.2, y: 4.2, z: 3.2, ry: 0.8, color: 'cream' });
 /* standalone labels (no particles) */
 const L = (id, x, y, z, en, fr, dy, parent) =>
   cast.push({ id, kind: 'label', x, y, z, label: { en, fr }, labelDy: dy, parent });
@@ -280,8 +280,8 @@ const out = {
   audioSim: 'gov3',
   title: { en: 'Government 3.0, drawn in light', fr: 'Gouvernement 3.0, dessiné en lumière' },
   blurb: {
-    en: 'The fifth telling: the estate, the people, and the agents condensed out of seven thousand particles. The wall flashes red where agents strike it, doors stamp gold onto the towers, the audit ledger writes itself line by line, and the finale heals the system’s own friction in a single golden wave. Drag to orbit, scroll to zoom.',
-    fr: 'La cinquième manière : le parc, les personnes et les agents condensés en sept mille particules. Le mur rougeoie là où les agents le frappent, des portes dorées se gravent sur les tours, le registre d’audit s’écrit ligne par ligne, et le final guérit la friction du système en une seule onde dorée. Glissez pour orbiter, faites défiler pour zoomer.',
+    en: 'The fifth telling: the estate, the people, and the agents condensed out of ten thousand particles. The wall flashes red where agents strike it, doors stamp gold onto the towers, the audit ledger writes itself line by line, and the finale heals the system’s own friction in a single golden wave. Drag to orbit, scroll to zoom — and flip the theme to redraw the whole field as ink on paper.',
+    fr: 'La cinquième manière : le parc, les personnes et les agents condensés en dix mille particules. Le mur rougeoie là où les agents le frappent, des portes dorées se gravent sur les tours, le registre d’audit s’écrit ligne par ligne, et le final guérit la friction du système en une seule onde dorée. Glissez pour orbiter, faites défiler pour zoomer — et basculez le thème pour redessiner tout le champ à l’encre sur papier.',
   },
   cast,
   chapters,

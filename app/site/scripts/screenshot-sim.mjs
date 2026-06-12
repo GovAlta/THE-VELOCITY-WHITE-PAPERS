@@ -38,6 +38,8 @@ page.on('pageerror', e => console.error('[pageerror]', e.message));
 page.on('console', m => { if (m.type() === 'error') console.error('[console]', m.text()); });
 
 if (LOCALE === 'fr') await page.evaluateOnNewDocument(() => { try { localStorage.setItem('vw_locale', 'fr'); } catch (e) {} });
+const THEME = opt('theme', '');
+if (THEME) await page.evaluateOnNewDocument((t) => { try { localStorage.setItem('vw_sim_theme', t); } catch (e) {} }, THEME);
 const url = BASE + '/paper/' + PAPER;
 console.log('open', url);
 await page.goto(url, { waitUntil: 'networkidle2', timeout: 45000 });

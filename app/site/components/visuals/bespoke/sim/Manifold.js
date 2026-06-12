@@ -28,14 +28,25 @@
   if (!S) return;
   const h = S.h;
   const THREE_URL = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.164.1/three.module.min.js';
-  const NLINK = 24, NSIG = 90, NFX = 720;
+  const NLINK = 24, NSIG = 120, NFX = 900;
 
+  /* two palettes: additive glow on the night void, ink stipple on the
+     collection's cream. Colours are referenced by NAME everywhere so a theme
+     flip re-resolves the whole scene. */
   const COL = {
     system: [0.50, 0.60, 0.92], sealed: [0.66, 0.38, 0.26], open: [0.38, 0.85, 0.66],
     corp: [0.55, 0.62, 0.92], person: [0.99, 0.87, 0.55], agent: [0.30, 0.95, 0.55],
     gold: [0.98, 0.78, 0.30], red: [0.96, 0.22, 0.10], cream: [0.96, 0.93, 0.84],
     dim: [0.30, 0.36, 0.55], white: [1, 1, 1], scan: [0.45, 0.7, 1.0],
   };
+  const COLL = {
+    system: [0.22, 0.32, 0.58], sealed: [0.52, 0.28, 0.18], open: [0.08, 0.46, 0.32],
+    corp: [0.30, 0.36, 0.64], person: [0.66, 0.44, 0.06], agent: [0.04, 0.50, 0.26],
+    gold: [0.72, 0.52, 0.06], red: [0.80, 0.10, 0.04], cream: [0.26, 0.29, 0.40],
+    dim: [0.58, 0.55, 0.47], white: [0.12, 0.13, 0.18], scan: [0.14, 0.38, 0.72],
+  };
+  const BG_DARK = 0x0b1124, BG_LIGHT = 0xf4efe3;
+  const BGL = [0.957, 0.937, 0.890];
 
   function mulberry(seed) {
     let a = seed >>> 0;
@@ -234,8 +245,10 @@
       start: { type: Number, default: 0 },
     },
     data() {
+      let theme = 'dark';
+      try { if (localStorage.getItem('vw_sim_theme') === 'light') theme = 'light'; } catch (e) {}
       return { dataset: null, error: null, ch: this.start || 0, playing: false, fs: false, showNarr: false, showCaps: false,
-               progress: 0, chDur: 30, audioOk: true, ready: false, webgl: true, motion: !S.prefersReducedMotion };
+               progress: 0, chDur: 30, audioOk: true, ready: false, webgl: true, motion: !S.prefersReducedMotion, theme };
     },
     computed: {
       loc() { return (window.VWStore && window.VWStore.locale) === 'fr' ? 'fr' : 'en'; },
@@ -259,9 +272,11 @@
       L() {
         return this.loc === 'fr'
           ? { play: 'Lecture', pause: 'Pause', replay: 'Rejouer', expand: 'Plein écran', close: 'Fermer', transcript: 'Transcription', hide: 'Masquer la transcription', caps: 'Sous-titres',
+              light: 'Clair', dark: 'Sombre',
               hint: 'glissez pour orbiter · molette pour zoomer · le champ frémit sous le pointeur',
               nowebgl: 'La 3D n’est pas disponible dans ce navigateur. La narration et la transcription restent accessibles.' }
           : { play: 'Play', pause: 'Pause', replay: 'Replay', expand: 'Expand', close: 'Close', transcript: 'Transcript', hide: 'Hide transcript', caps: 'Captions',
+              light: 'Light', dark: 'Dark',
               hint: 'drag to orbit · scroll to zoom · the field stirs under your pointer',
               nowebgl: '3D is not available in this browser. The narration and transcript remain available.' };
       },
@@ -270,6 +285,10 @@
       loc() { this.stopAll(); this.rebuildLabels(); this.$nextTick(() => this.primeChapter()); },
       ch() { this.$nextTick(() => this.primeChapter()); },
       fs() { this.$nextTick(() => this.fitCanvas()); },
+      theme() {
+        try { localStorage.setItem('vw_sim_theme', this.theme); } catch (e) {}
+        this.applyTheme();
+      },
     },
     created() {
       S.loadData(this.sim).then(d => { this.dataset = d; this.bootThree(); })
@@ -307,13 +326,13 @@
       initScene() {
         const T = this._T, host = this.$refs.stage3d;
         const renderer = new T.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
-        renderer.setClearColor(0x0b1124, 1);
+        renderer.setClearColor(this.theme === 'light' ? BG_LIGHT : BG_DARK, 1);
         host.appendChild(renderer.domElement);
         renderer.domElement.style.display = 'block';
         renderer.domElement.style.width = '100%';
         this._renderer = renderer;
         const scene = new T.Scene();
-        scene.fog = new T.FogExp2(0x0b1124, 0.0075);
+        scene.fog = new T.FogExp2(this.theme === 'light' ? BG_LIGHT : BG_DARK, 0.0075);
         this._scene = scene;
         this._camera = new T.PerspectiveCamera(46, 16 / 9, 0.1, 600);
         this._user = { th: 0, ph: 0, zoom: 1 };
@@ -342,8 +361,9 @@
         geo.setAttribute('position', new T.BufferAttribute(pos, 3));
         geo.setAttribute('color', new T.BufferAttribute(col, 3));
         const tex = this.dotTexture();
+        const blend0 = this.theme === 'light' ? T.NormalBlending : T.AdditiveBlending;
         const mat = new T.PointsMaterial({ size: 0.78, vertexColors: true, map: tex, alphaMap: tex,
-          transparent: true, depthWrite: false, blending: T.AdditiveBlending, sizeAttenuation: true });
+          transparent: true, depthWrite: false, blending: blend0, sizeAttenuation: true });
         this._points = new T.Points(geo, mat);
         this._points.frustumCulled = false;
         scene.add(this._points);
@@ -354,7 +374,7 @@
         const lgeo = new T.BufferGeometry();
         lgeo.setAttribute('position', new T.BufferAttribute(lpos, 3));
         lgeo.setAttribute('color', new T.BufferAttribute(lcol, 3));
-        this._links = new T.LineSegments(lgeo, new T.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.5, blending: T.AdditiveBlending }));
+        this._links = new T.LineSegments(lgeo, new T.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: this.theme === 'light' ? 0.75 : 0.5, blending: blend0 }));
         this._links.frustumCulled = false;
         scene.add(this._links);
         const spos = new Float32Array(NSIG * 3);
@@ -363,13 +383,28 @@
         sgeo.setAttribute('position', new T.BufferAttribute(spos, 3));
         sgeo.setAttribute('color', new T.BufferAttribute(scol, 3));
         this._signals = new T.Points(sgeo, new T.PointsMaterial({ size: 1.6, vertexColors: true, map: tex, alphaMap: tex,
-          transparent: true, depthWrite: false, blending: T.AdditiveBlending }));
+          transparent: true, depthWrite: false, blending: blend0 }));
         this._signals.frustumCulled = false;
         scene.add(this._signals);
 
         this.rebuildLabels();
         this.bindPointer(renderer.domElement);
         this.fitCanvas();
+      },
+      applyTheme() {
+        const T = this._T;
+        if (!T || !this._renderer) return;
+        const light = this.theme === 'light';
+        const blend = light ? T.NormalBlending : T.AdditiveBlending;
+        this._renderer.setClearColor(light ? BG_LIGHT : BG_DARK, 1);
+        if (this._scene && this._scene.fog) this._scene.fog.color.setHex(light ? BG_LIGHT : BG_DARK);
+        for (const m of [this._points, this._signals, this._links]) {
+          if (!m) continue;
+          m.material.blending = blend;
+          m.material.needsUpdate = true;
+        }
+        if (this._links) this._links.material.opacity = light ? 0.75 : 0.5;
+        this.rebuildLabels();
       },
       dotTexture() {
         const T = this._T;
@@ -414,7 +449,7 @@
           }
           const ent = { id: c.id, kind: c.kind, n, i0, local, aux, scat, cfg: c,
                         base: [c.x || 0, c.y || 0, c.z || 0],
-                        color: COL[c.color] || COL.dim, sprite: null };
+                        colName: c.color || 'dim', sprite: null };
           this._ents[c.id] = ent;
           this._entList.push(ent);
           i0 += n;
@@ -438,17 +473,22 @@
           if (!text) continue;
           const cv = document.createElement('canvas');
           const ctx = cv.getContext('2d');
-          ctx.font = '600 30px "IBM Plex Mono", monospace';
+          ctx.font = '700 34px "IBM Plex Mono", monospace';
           const tw = Math.ceil(ctx.measureText(text.toUpperCase()).width) + 36;
           cv.width = tw; cv.height = 64;
           const c2 = cv.getContext('2d');
-          c2.font = '600 30px "IBM Plex Mono", monospace';
+          c2.font = '700 34px "IBM Plex Mono", monospace';
           c2.textAlign = 'center'; c2.textBaseline = 'middle';
-          c2.shadowColor = 'rgba(243,222,160,0.85)'; c2.shadowBlur = 12;
-          c2.fillStyle = 'rgba(246,238,214,0.96)';
+          if (this.theme === 'light') {
+            c2.shadowColor = 'rgba(247,244,237,0.95)'; c2.shadowBlur = 8;
+            c2.fillStyle = 'rgba(26,32,54,1)';
+          } else {
+            c2.shadowColor = 'rgba(243,222,160,0.85)'; c2.shadowBlur = 12;
+            c2.fillStyle = 'rgba(246,238,214,0.96)';
+          }
           c2.fillText(text.toUpperCase(), tw / 2, 33);
           const tex = new T.CanvasTexture(cv);
-          const mat = new T.SpriteMaterial({ map: tex, transparent: true, opacity: 0, depthTest: false, depthWrite: false });
+          const mat = new T.SpriteMaterial({ map: tex, transparent: true, opacity: 0, depthTest: false, depthWrite: false, fog: false });
           const sp = new T.Sprite(mat);
           sp.userData.aspect = tw / 64;
           sp.renderOrder = 10;
@@ -531,7 +571,7 @@
             break;
           }
           case 'recolor':
-            for (const id of ids) { const s = st[id]; if (!s) continue; s.mix = Math.max(s.mix, f); s.mixCol = COL[b.color] || COL.gold; }
+            for (const id of ids) { const s = st[id]; if (!s) continue; s.mix = Math.max(s.mix, f); s.mixCol = b.color || 'gold'; }
             break;
           case 'tick': {
             const s = st[b.id]; if (!s) break;
@@ -556,19 +596,19 @@
           }
           case 'link': {
             const A = st[b.from], Bb = st[b.to];
-            if (A && Bb) this._stLinks.push({ a: A, b: Bb, draw: f, col: COL[b.color] || COL.gold, sig: !!b.signals });
+            if (A && Bb) this._stLinks.push({ a: A, b: Bb, draw: f, col: b.color || 'gold', sig: !!b.signals });
             break;
           }
           case 'stream': {
             const A = st[b.from], Bb = st[b.to];
-            if (A && Bb) this._stStreams.push({ a: A, b: Bb, f, col: COL[b.color] || COL.gold, dots: !!b.dots });
+            if (A && Bb) this._stStreams.push({ a: A, b: Bb, f, col: b.color || 'gold', dots: !!b.dots });
             break;
           }
           case 'wave': {
             const c = st[b.from];
             this._stWave = { x: c ? c.x : 0, y: c ? c.y + 3 : 3, z: c ? c.z : 0,
                              r: f * (b.r || 40), gain: Math.sin(Math.PI * Math.min(1, raw)) || (raw >= 1 ? 0 : 0),
-                             col: COL[b.color] || COL.gold, heal: !!b.heal, done: raw >= 1 };
+                             col: b.color || 'gold', heal: !!b.heal, done: raw >= 1 };
             break;
           }
         }
@@ -677,6 +717,8 @@
         const clock = p * this.chDur;
         const { pos, col, tgt, spd } = this._P;
         const wave = this._stWave;
+        const light = this.theme === 'light';
+        const PALA = light ? COLL : COL;
 
         for (const e of this._entList) {
           const s = st[e.id];
@@ -687,17 +729,19 @@
             const ox = Math.cos(a) * o.r, oz = Math.sin(a) * o.r;
             s.x += (ox - s.x) * o.f; s.y += (o.y - s.y) * o.f; s.z += (oz - s.z) * o.f;
           }
-          let cr = e.color[0], cg = e.color[1], cb = e.color[2];
+          const ink = PALA[e.colName] || PALA.dim;
+          let cr = ink[0], cg = ink[1], cb = ink[2];
           if (s.mix > 0 && s.mixCol) {
             let m = s.mix;
             /* the healing wave converts red knots to gold as it passes */
-            if (wave && wave.heal && s.mixCol === COL.red) {
+            if (wave && wave.heal && s.mixCol === 'red') {
               const dx = s.x - wave.x, dy = s.y - wave.y, dz = s.z - wave.z;
-              if (Math.sqrt(dx * dx + dy * dy + dz * dz) < wave.r) { s.mixCol = COL.gold; }
+              if (Math.sqrt(dx * dx + dy * dy + dz * dz) < wave.r) { s.mixCol = 'gold'; }
             }
-            cr += (s.mixCol[0] - cr) * m; cg += (s.mixCol[1] - cg) * m; cb += (s.mixCol[2] - cb) * m;
+            const mc = PALA[s.mixCol] || PALA.gold;
+            cr += (mc[0] - cr) * m; cg += (mc[1] - cg) * m; cb += (mc[2] - cb) * m;
           }
-          let en = s.energy * s.gain * (e.cfg.baseEnergy || 1) * 0.82;   // global exposure: additive blending blows out fast
+          let en = s.energy * s.gain * (e.cfg.baseEnergy || 1) * (light ? 1.0 : 0.82);   // additive blending blows out faster than ink
           /* the wave front flashes entities as it sweeps past */
           if (wave && !wave.done && en > 0.02) {
             const dx = s.x - wave.x, dy = s.y - wave.y, dz = s.z - wave.z;
@@ -705,14 +749,20 @@
             const band = Math.abs(d - wave.r);
             if (band < 3.2) {
               const k = (1 - band / 3.2) * 0.9;
-              cr += (wave.col[0] * 1.4 - cr) * k; cg += (wave.col[1] * 1.4 - cg) * k; cb += (wave.col[2] * 1.4 - cb) * k;
+              const wc = PALA[wave.col] || PALA.gold;
+              const boost = light ? 1 : 1.4;
+              cr += (wc[0] * boost - cr) * k; cg += (wc[1] * boost - cg) * k; cb += (wc[2] * boost - cb) * k;
             }
           }
-          if (s.flare > 0 && !s.flareAt) { const k = s.flare * 0.8; cr += (1.5 - cr) * k; cg += (1.4 - cg) * k; cb += (1.1 - cb) * k; }
+          if (s.flare > 0 && !s.flareAt) {
+            const k = s.flare * 0.8;
+            if (light) { cr += (0.85 - cr) * k; cg += (0.28 - cg) * k; cb += (0.05 - cb) * k; }
+            else { cr += (1.5 - cr) * k; cg += (1.4 - cg) * k; cb += (1.1 - cb) * k; }
+          }
           const fl = s.flareAt;
           const isWall = e.kind === 'wall';
           const isTower = e.kind === 'tower';
-          const open = isTower && s.mixCol === COL.open ? s.mix : 0;
+          const open = isTower && s.mixCol === 'open' ? s.mix : 0;
           for (let j = 0; j < e.n; j++) {
             const ix = (e.i0 + j) * 3;
             const lx = e.local[j * 3], ly = e.local[j * 3 + 1] * s.sy, lz = e.local[j * 3 + 2];
@@ -735,11 +785,25 @@
             const wy = f * gy + (1 - f) * e.scat[j * 3 + 1];
             const wz = f * gz + (1 - f) * e.scat[j * 3 + 2];
             tgt[ix] = wx; tgt[ix + 1] = wy; tgt[ix + 2] = wz;
-            let pr = cr * pe, pg = cg * pe, pb = cb * pe;
+            let pr, pg, pb;
+            if (light) {
+              /* ink on cream: energy is opacity toward the ink colour. A cream
+                 dot still paints OVER darker dots under normal blending, so
+                 invisible particles park far below the scene instead. */
+              if (pe <= 0.02) { tgt[ix + 1] = -500; col[ix] = BGL[0]; col[ix + 1] = BGL[1]; col[ix + 2] = BGL[2]; continue; }
+              const a2 = pe > 1 ? 1 : pe;
+              pr = BGL[0] + (cr - BGL[0]) * a2; pg = BGL[1] + (cg - BGL[1]) * a2; pb = BGL[2] + (cb - BGL[2]) * a2;
+            } else {
+              pr = cr * pe; pg = cg * pe; pb = cb * pe;
+            }
             if (fl) {
               const dx = wx - fl[0], dy = wy - fl[1], dz = wz - fl[2];
               const d2 = dx * dx + dy * dy + dz * dz;
-              if (d2 < 30) { const k = (1 - d2 / 30) * s.flare; pr += 1.4 * k; pg += 0.7 * k; pb += 0.4 * k; }
+              if (d2 < 30) {
+                const k = (1 - d2 / 30) * s.flare;
+                if (light) { pr += (0.88 - pr) * k; pg += (0.20 - pg) * k; pb += (0.04 - pb) * k; }
+                else { pr += 1.4 * k; pg += 0.7 * k; pb += 0.4 * k; }
+              }
             }
             col[ix] = pr; col[ix + 1] = pg; col[ix + 2] = pb;
           }
@@ -748,7 +812,7 @@
             const dy = e.cfg.labelDy != null ? e.cfg.labelDy : 6;
             e.sprite.position.set(s.x, s.y + dy * (s.sy < 1 ? s.sy + 0.3 : 1), s.z);
             const dCam = this._camera.position.distanceTo(e.sprite.position);
-            let hgt = dCam * 0.028;
+            let hgt = dCam * 0.034;
             const asp = e.sprite.userData.aspect || 4;
             if (hgt * asp > dCam * 0.5) hgt = dCam * 0.5 / asp;     // very long labels shrink to fit
             e.sprite.scale.set(hgt * asp, hgt, 1);
@@ -762,7 +826,12 @@
         for (let q = 0; q < NFX; q++) {
           const ix = (this._fx0 + q) * 3;
           const si = per ? Math.floor(q / per) : -1;
-          if (si < 0 || si >= streams.length) { tgt[ix + 1] = -60; col[ix] = col[ix + 1] = col[ix + 2] = 0; pos[ix + 1] = -60; continue; }
+          if (si < 0 || si >= streams.length) {
+            tgt[ix + 1] = -500; pos[ix + 1] = -500;
+            if (light) { col[ix] = BGL[0]; col[ix + 1] = BGL[1]; col[ix + 2] = BGL[2]; }
+            else { col[ix] = col[ix + 1] = col[ix + 2] = 0; }
+            continue;
+          }
           const sgm = streams[si];
           const jj = q - si * per;
           const u = ((jj / per) + clock * 0.22) % 1;
@@ -776,7 +845,13 @@
           pos[ix] = bx; pos[ix + 1] = by; pos[ix + 2] = bz;     // streams place exactly, no easing
           const gate = sgm.dots ? (jj % 5 === 0 ? 1.6 : 0.12) : 0.8;
           const k = sgm.f * gate;
-          col[ix] = sgm.col[0] * k; col[ix + 1] = sgm.col[1] * k; col[ix + 2] = sgm.col[2] * k;
+          const scol = PALA[sgm.col] || PALA.gold;
+          if (light) {
+            const a3 = k > 1 ? 1 : k;
+            col[ix] = BGL[0] + (scol[0] - BGL[0]) * a3; col[ix + 1] = BGL[1] + (scol[1] - BGL[1]) * a3; col[ix + 2] = BGL[2] + (scol[2] - BGL[2]) * a3;
+          } else {
+            col[ix] = scol[0] * k; col[ix + 1] = scol[1] * k; col[ix + 2] = scol[2] * k;
+          }
         }
 
         /* particle easing toward targets + ambient wander + pointer stir */
@@ -810,14 +885,18 @@
         const links = this._stLinks;
         for (let li = 0; li < NLINK; li++) {
           const o = li * 6;
-          if (li >= links.length) { lp[o + 1] = -90; lp[o + 4] = -90; continue; }
+          if (li >= links.length) { lp[o + 1] = -500; lp[o + 4] = -500; continue; }
           const lk = links[li];
           const ax = lk.a.x, ay = lk.a.y + 2.2, az = lk.a.z;
           const bx2 = ax + (lk.b.x - ax) * lk.draw, by2 = ay + (lk.b.y + 2.2 - ay) * lk.draw, bz2 = az + (lk.b.z - az) * lk.draw;
           lp[o] = ax; lp[o + 1] = ay; lp[o + 2] = az;
           lp[o + 3] = bx2; lp[o + 4] = by2; lp[o + 5] = bz2;
           const lw = 0.8 * Math.min(1, lk.a.energy, lk.b.energy);    // a thread dies with its endpoints
-          for (let q = 0; q < 2; q++) { lc[o + q * 3] = lk.col[0] * lw; lc[o + q * 3 + 1] = lk.col[1] * lw; lc[o + q * 3 + 2] = lk.col[2] * lw; }
+          const lcol = PALA[lk.col] || PALA.gold;
+          for (let q = 0; q < 2; q++) {
+            if (light) { lc[o + q * 3] = BGL[0] + (lcol[0] - BGL[0]) * lw; lc[o + q * 3 + 1] = BGL[1] + (lcol[1] - BGL[1]) * lw; lc[o + q * 3 + 2] = BGL[2] + (lcol[2] - BGL[2]) * lw; }
+            else { lc[o + q * 3] = lcol[0] * lw; lc[o + q * 3 + 1] = lcol[1] * lw; lc[o + q * 3 + 2] = lcol[2] * lw; }
+          }
         }
         this._links.geometry.attributes.position.needsUpdate = true;
         this._links.geometry.attributes.color.needsUpdate = true;
@@ -827,13 +906,15 @@
         const sp2 = this._signals.geometry.attributes.position.array;
         const sc2 = this._signals.geometry.attributes.color.array;
         for (let q = 0; q < NSIG; q++) {
-          if (!sigLinks.length) { sp2[q * 3 + 1] = -90; continue; }
+          if (!sigLinks.length) { sp2[q * 3 + 1] = -500; continue; }
           const lk = sigLinks[q % sigLinks.length];
           const u = ((q * 0.137) + clock * 0.16) % 1;
           sp2[q * 3] = lk.a.x + (lk.b.x - lk.a.x) * u;
           sp2[q * 3 + 1] = lk.a.y + 2.2 + (lk.b.y - lk.a.y) * u;
           sp2[q * 3 + 2] = lk.a.z + (lk.b.z - lk.a.z) * u;
-          sc2[q * 3] = lk.col[0] * 1.3; sc2[q * 3 + 1] = lk.col[1] * 1.3; sc2[q * 3 + 2] = lk.col[2] * 1.3;
+          const kcol = PALA[lk.col] || PALA.gold;
+          if (light) { sc2[q * 3] = kcol[0]; sc2[q * 3 + 1] = kcol[1]; sc2[q * 3 + 2] = kcol[2]; }
+          else { sc2[q * 3] = kcol[0] * 1.3; sc2[q * 3 + 1] = kcol[1] * 1.3; sc2[q * 3 + 2] = kcol[2] * 1.3; }
         }
         this._signals.geometry.attributes.position.needsUpdate = true;
         this._signals.geometry.attributes.color.needsUpdate = true;
@@ -865,9 +946,9 @@
         const look = this._lookV || (this._lookV = new T.Vector3());
         look.lerp(new T.Vector3(tg[0], tg[1], tg[2]), Math.min(1, dt * 5));
         this._camera.lookAt(look);
-        /* wide shots need fatter points to stay exposed */
+        /* wide shots need fatter points to stay exposed; ink needs more body than glow */
         const dist = this._camera.position.distanceTo(look);
-        this._points.material.size = Math.max(0.62, Math.min(1.2, 0.5 + dist * 0.0062));
+        this._points.material.size = Math.max(0.62, Math.min(1.25, 0.5 + dist * 0.0062)) * (light ? 1.22 : 1);
       },
 
       /* ---------- pointer: gentle stir + orbit + zoom ---------- */
@@ -921,13 +1002,14 @@
             h('div', { class: 'sim-actions' }, [
               h('button', { class: 'sim-btn sim-primary', onClick: () => this.toggle(), disabled: !this.ready }, this.playing ? this.L.pause : (this.progress >= 0.999 && this.ch === this.chapters.length - 1 ? this.L.replay : this.L.play)),
               h('button', { class: ['sim-btn', this.showCaps ? 'on' : ''], onClick: () => { this.showCaps = !this.showCaps; }, 'aria-pressed': this.showCaps ? 'true' : 'false' }, this.L.caps),
+              h('button', { class: 'sim-btn', onClick: () => { this.theme = this.theme === 'light' ? 'dark' : 'light'; } }, this.theme === 'light' ? this.L.dark : this.L.light),
               h('button', { class: 'sim-btn', onClick: () => this.toggleFs() }, this.fs ? this.L.close : this.L.expand),
             ]),
           ]),
-          h('div', { class: 'sim-stage', style: 'background:#0b1124;' }, [
+          h('div', { class: 'sim-stage', style: 'background:' + (this.theme === 'light' ? '#f4efe3' : '#0b1124') + ';' }, [
             h('div', { ref: 'stage3d', style: 'width:100%;' }),
             !this.webgl ? h('div', { style: 'padding:48px 24px;text-align:center;color:#9aa3c0;font-size:13px;' }, this.L.nowebgl) : null,
-            h('div', { class: 'sim3-hint', style: 'background:rgba(11,17,36,0.7);color:#9aa3c0;' }, this.L.hint),
+            h('div', { class: 'sim3-hint', style: this.theme === 'light' ? 'background:rgba(247,244,237,0.75);color:#5E5F66;' : 'background:rgba(11,17,36,0.7);color:#9aa3c0;' }, this.L.hint),
             h('div', { class: 'sim-caption', 'aria-live': 'polite' }, this.showCaps ? this.currentCaption : ''),
           ]),
           h('div', { class: 'sim-transport' }, [
