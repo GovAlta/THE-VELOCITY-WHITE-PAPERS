@@ -1,36 +1,42 @@
-/* sim:manifold — the living particle manifold (owner: sim).
+/* sim:manifold — the story drawn in light (owner: sim).
 
    Embed in a paper with:
        chart: { kind: "sim:manifold", sim: "gov3-manifold" }
 
-   The fifth telling, in the creative-coding tradition and modelled on the
-   intelligencemanifold reference: the entire story as a living field of
-   light. A pool of particles plays the systems, the people, and the agents;
-   per chapter they are assigned new formation targets and migrate with
-   noisy, organic motion. An edge graph grows between the systems, signal
-   pulses race along it, agents leave observable light-trails, and the
-   finale reorganizes the whole field into concentric strata around a
-   radiant core of rules.
+   The fifth telling. Particles are the medium, never the message: every noun
+   in the narration condenses into a legible pictogram — towers of light for
+   the ministry systems, walking figures for the public servants, green comets
+   for the agents, a red lattice for the wall of missing interfaces — and
+   every verb is a visible event timed to the words. The agent strikes the
+   wall and deflects. Doors stamp gold onto the towers one by one. The audit
+   ledger writes itself line by line. A public servant speaks, and the agent
+   condenses out of the words.
 
-   Rendered with Three.js Points (dynamic CDN import, additive blending,
-   vertex colours, fog over a deep navy void — the high-tech inversion of
-   the collection's cream). The pointer is a gravity well: reach in and stir
-   the field. Drag orbits, the wheel zooms.
+   The dataset declares a CAST (pictogram entities, each owning a slice of the
+   particle pool) and per-chapter BEATS (choreography keyed to fractions of
+   the narration). The whole scene is a pure function of (chapter, progress):
+   every frame re-evaluates all beats up to the playhead, so scrubbing and
+   chapter jumps are exact by construction. Per-particle easing and wander are
+   ambient texture on top of the deterministic structure.
 
-   Determinism contract: the STRUCTURE (formation, edge count, signal
-   density, accents) derives from (chapter, progress); individual particle
-   jitter is ambient texture, like the tapestry's dust. Same chapters,
-   narration, captions, transcript, and audio clock as the other engines. */
+   Rendered with Three.js Points (dynamic CDN import, additive blending over
+   a deep navy void). Labels are billboard text sprites, rebuilt per locale.
+   Drag orbits, the wheel zooms, the pointer stirs the field gently. */
 
 (function () {
   const S = window.VWSim;
   if (!S) return;
   const h = S.h;
   const THREE_URL = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.164.1/three.module.min.js';
-  const N = 6800;                       // the particle pool
-  const NEDGE = 360, NSIG = 140;
+  const NLINK = 24, NSIG = 90, NFX = 720;
 
-  /* deterministic pseudo-random (seeded), so formations are stable across visits */
+  const COL = {
+    system: [0.50, 0.60, 0.92], sealed: [0.66, 0.38, 0.26], open: [0.38, 0.85, 0.66],
+    corp: [0.55, 0.62, 0.92], person: [0.99, 0.87, 0.55], agent: [0.30, 0.95, 0.55],
+    gold: [0.98, 0.78, 0.30], red: [0.96, 0.22, 0.10], cream: [0.96, 0.93, 0.84],
+    dim: [0.30, 0.36, 0.55], white: [1, 1, 1], scan: [0.45, 0.7, 1.0],
+  };
+
   function mulberry(seed) {
     let a = seed >>> 0;
     return function () {
@@ -40,6 +46,185 @@
       return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
     };
   }
+  function hashId(s) { let x = 2166136261; for (let i = 0; i < s.length; i++) { x ^= s.charCodeAt(i); x = Math.imul(x, 16777619); } return x >>> 0; }
+  const ez = u => u <= 0 ? 0 : u >= 1 ? 1 : u * u * (3 - 2 * u);
+  const clamp01 = u => u < 0 ? 0 : u > 1 ? 1 : u;
+
+  /* ---------- glyph samplers: entity-local particle layouts ----------
+     Each writes n*3 floats into `local` and may fill `aux` (one float per
+     particle) with a per-particle gate value the writer pass interprets. */
+  const SAMPLERS = {
+    tower(rnd, local, aux, c) {
+      const w = c.w || 4, ht = c.ht || 7, d = c.d || 4, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const u = rnd(); let x = 0, y = 0, z = 0; aux[j] = 0;
+        if (u < 0.5) {                                    // the 12 box edges, verticals favoured
+          const e = rnd();
+          if (e < 0.55) { const k = Math.floor(rnd() * 4); x = (k % 2 ? 1 : -1) * w / 2; z = (k < 2 ? 1 : -1) * d / 2; y = rnd() * ht; }
+          else { const top = rnd() < 0.7; y = top ? ht : 0; const s = rnd() < 0.5; x = s ? (rnd() - 0.5) * w : (rnd() < 0.5 ? 1 : -1) * w / 2; z = s ? (rnd() < 0.5 ? 1 : -1) * d / 2 : (rnd() - 0.5) * d; }
+        } else if (u < 0.85) {                            // window rows on the faces
+          const row = 1 + Math.floor(rnd() * Math.max(2, ht - 2));
+          y = row + 0.2; aux[j] = 1;
+          const f = rnd();
+          if (f < 0.4) { x = -w / 2 - 0.02; z = (rnd() - 0.5) * d * 0.8; }
+          else if (f < 0.7) { z = -d / 2 - 0.02; x = (rnd() - 0.5) * w * 0.8; }
+          else { z = d / 2 + 0.02; x = (rnd() - 0.5) * w * 0.8; }
+        } else {                                          // sparse interior dust
+          x = (rnd() - 0.5) * w * 0.9; y = rnd() * ht; z = (rnd() - 0.5) * d * 0.9;
+        }
+        local[j * 3] = x; local[j * 3 + 1] = y; local[j * 3 + 2] = z;
+      }
+    },
+    slab(rnd, local, aux, c) {
+      const w = c.w || 9, ht = c.ht || 6, d = c.d || 8, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const u = rnd(); let x, y, z; aux[j] = 0;
+        if (u < 0.62) {                                   // the building block
+          const e = rnd();
+          if (e < 0.5) { const k = Math.floor(rnd() * 4); x = (k % 2 ? 1 : -1) * w / 2; z = (k < 2 ? 1 : -1) * d / 2; y = rnd() * ht; }
+          else { x = (rnd() - 0.5) * w; z = (rnd() - 0.5) * d; y = rnd() < 0.5 ? ht : rnd() * ht; aux[j] = y > 1 && rnd() < 0.5 ? 1 : 0; }
+        } else {                                          // the cloud puff above: SaaS
+          const t1 = rnd() * Math.PI * 2, t2 = Math.acos(2 * rnd() - 1), rr = (w * 0.30) * Math.cbrt(rnd());
+          x = rr * Math.sin(t2) * Math.cos(t1) * 1.5; y = ht + 2.4 + rr * Math.cos(t2) * 0.55; z = rr * Math.sin(t2) * Math.sin(t1);
+        }
+        local[j * 3] = x; local[j * 3 + 1] = y; local[j * 3 + 2] = z;
+      }
+    },
+    person(rnd, local, aux, c) {
+      const n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const u = rnd(); let x, y, z; aux[j] = 0;
+        if (u < 0.3) {                                    // head
+          const t1 = rnd() * Math.PI * 2, t2 = Math.acos(2 * rnd() - 1), rr = 0.5 * Math.cbrt(rnd());
+          x = rr * Math.sin(t2) * Math.cos(t1); y = 3.0 + rr * Math.cos(t2); z = rr * Math.sin(t2) * Math.sin(t1);
+        } else if (u < 0.85) {                            // torso, tapering
+          const k = rnd(); const rr = (0.62 - 0.3 * k) * Math.sqrt(rnd()); const a = rnd() * Math.PI * 2;
+          y = 0.7 + k * 1.8; x = Math.cos(a) * rr; z = Math.sin(a) * rr;
+        } else {                                          // base
+          const a = rnd() * Math.PI * 2; const rr = 0.5 * Math.sqrt(rnd());
+          y = 0.15; x = Math.cos(a) * rr; z = Math.sin(a) * rr;
+        }
+        local[j * 3] = x; local[j * 3 + 1] = y; local[j * 3 + 2] = z;
+      }
+    },
+    orb(rnd, local, aux, c) {
+      const r = c.r || 0.7, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const t1 = rnd() * Math.PI * 2, t2 = Math.acos(2 * rnd() - 1), rr = r * Math.pow(rnd(), 0.6);
+        local[j * 3] = rr * Math.sin(t2) * Math.cos(t1);
+        local[j * 3 + 1] = rr * Math.cos(t2);
+        local[j * 3 + 2] = rr * Math.sin(t2) * Math.sin(t1);
+        aux[j] = 0;
+      }
+    },
+    wall(rnd, local, aux, c) {
+      const len = c.len || 30, ht = c.ht || 10, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const u = rnd(); let y, z;
+        if (u < 0.72) {                                   // lattice lines
+          if (rnd() < 0.5) { z = (Math.floor(rnd() * 11) / 10 - 0.5) * len; y = rnd() * ht; }
+          else { y = (Math.floor(rnd() * 8) / 7) * ht; z = (rnd() - 0.5) * len; }
+        } else { z = (rnd() - 0.5) * len; y = rnd() * ht; }
+        local[j * 3] = (rnd() - 0.5) * 0.3; local[j * 3 + 1] = y; local[j * 3 + 2] = z;
+        aux[j] = rnd();                                   // drift seed for the dissolve
+      }
+    },
+    ring(rnd, local, aux, c) {
+      const r = c.r || 1.1, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const a = (j / n) * Math.PI * 2 + rnd() * 0.12;
+        local[j * 3] = (rnd() - 0.5) * 0.1;               // ring in the Y-Z plane, facing -x
+        local[j * 3 + 1] = Math.sin(a) * r;
+        local[j * 3 + 2] = Math.cos(a) * r;
+        aux[j] = 0;
+      }
+    },
+    halo(rnd, local, aux, c) {
+      const r = c.r || 1.0, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const a = (j / n) * Math.PI * 2;
+        local[j * 3] = Math.cos(a) * r;                   // ring in the X-Z plane: a crown
+        local[j * 3 + 1] = (rnd() - 0.5) * 0.08;
+        local[j * 3 + 2] = Math.sin(a) * r;
+        aux[j] = 0;
+      }
+    },
+    ledger(rnd, local, aux, c) {
+      const w = c.w || 9, ht = c.ht || 6.5, rows = 9, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const u = rnd(); let x, y; aux[j] = -1;
+        if (u < 0.3) {                                    // border, always lit once formed
+          const e = rnd();
+          if (e < 0.5) { x = (rnd() - 0.5) * w; y = rnd() < 0.5 ? 0 : ht; }
+          else { x = (rnd() < 0.5 ? -0.5 : 0.5) * w; y = rnd() * ht; }
+        } else {                                          // the rows: revealed by fill
+          const row = Math.floor(rnd() * rows);
+          aux[j] = (row + 0.5) / rows;
+          y = ht - 0.7 - row * ((ht - 1.2) / rows);
+          x = -w / 2 + 0.6 + rnd() * (w - 1.2) * (0.55 + 0.45 * rnd());
+        }
+        local[j * 3] = x; local[j * 3 + 1] = y; local[j * 3 + 2] = (rnd() - 0.5) * 0.15;
+      }
+    },
+    dome(rnd, local, aux, c) {
+      const r = c.r || 6.5, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const u = rnd(); let t1, t2; aux[j] = 0;
+        if (u < 0.42) { t1 = (Math.floor(rnd() * 8) / 8) * Math.PI * 2 + 0.02 * rnd(); t2 = rnd() * Math.PI / 2; }       // meridians
+        else if (u < 0.78) { t2 = (Math.floor(rnd() * 4) / 4) * (Math.PI / 2.2) + 0.15; t1 = rnd() * Math.PI * 2; }       // parallels
+        else { t1 = rnd() * Math.PI * 2; t2 = Math.acos(rnd()); }                                                          // fill
+        local[j * 3] = r * Math.sin(t2) * Math.cos(t1);
+        local[j * 3 + 1] = r * Math.cos(t2);
+        local[j * 3 + 2] = r * Math.sin(t2) * Math.sin(t1);
+      }
+    },
+    panel(rnd, local, aux, c) {
+      const w = c.w || 7, ht = c.ht || 4.6, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const u = rnd(); let x, y; aux[j] = 0;
+        if (u < 0.34) {                                   // border
+          const e = rnd();
+          if (e < 0.5) { x = (rnd() - 0.5) * w; y = (rnd() < 0.5 ? -0.5 : 0.5) * ht; }
+          else { x = (rnd() < 0.5 ? -0.5 : 0.5) * w; y = (rnd() - 0.5) * ht; }
+        } else if (u < 0.56) {                            // text rows, upper-left
+          const row = Math.floor(rnd() * 3);
+          y = ht * 0.32 - row * 0.55; x = -w * 0.42 + rnd() * w * 0.45;
+        } else if (u < 0.82) {                            // the chart bars, lower-left
+          const b = Math.floor(rnd() * 4); const hmax = [0.9, 1.6, 1.2, 1.9][b];
+          x = -w * 0.4 + b * 0.8 + (rnd() - 0.5) * 0.25; y = -ht * 0.42 + rnd() * hmax;
+        } else {                                          // the approve button, right
+          aux[j] = 3;
+          x = w * 0.26 + rnd() * w * 0.18; y = -ht * 0.18 + (rnd() - 0.5) * 0.8;
+        }
+        local[j * 3] = x; local[j * 3 + 1] = y; local[j * 3 + 2] = (rnd() - 0.5) * 0.12;
+      }
+    },
+    doc(rnd, local, aux, c) {
+      const w = 1.7, ht = 2.3, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        const u = rnd(); let x, y; aux[j] = -1;
+        if (u < 0.45) {
+          const e = rnd();
+          if (e < 0.5) { x = (rnd() - 0.5) * w; y = (rnd() < 0.5 ? -0.5 : 0.5) * ht; }
+          else { x = (rnd() < 0.5 ? -0.5 : 0.5) * w; y = (rnd() - 0.5) * ht; }
+        } else {
+          const row = Math.floor(rnd() * 4); aux[j] = (row + 0.5) / 4;
+          y = ht * 0.32 - row * 0.5; x = -w * 0.36 + rnd() * w * 0.72 * (0.6 + 0.4 * rnd());
+        }
+        local[j * 3] = x; local[j * 3 + 1] = y; local[j * 3 + 2] = (rnd() - 0.5) * 0.1;
+      }
+    },
+    floor(rnd, local, aux, c) {
+      const ex = 92, ez2 = 72, n = local.length / 3;
+      for (let j = 0; j < n; j++) {
+        let x, z;
+        if (rnd() < 0.5) { x = (Math.floor(rnd() * 13) / 12 - 0.5) * ex; z = (rnd() - 0.5) * ez2; }
+        else { z = (Math.floor(rnd() * 11) / 10 - 0.5) * ez2; x = (rnd() - 0.5) * ex; }
+        local[j * 3] = x; local[j * 3 + 1] = 0; local[j * 3 + 2] = z;
+        aux[j] = 0;
+      }
+    },
+  };
 
   window.VWComponents = window.VWComponents || {};
   window.VWComponents['sim-manifold'] = {
@@ -74,15 +259,15 @@
       L() {
         return this.loc === 'fr'
           ? { play: 'Lecture', pause: 'Pause', replay: 'Rejouer', expand: 'Plein écran', close: 'Fermer', transcript: 'Transcription', hide: 'Masquer la transcription', caps: 'Sous-titres',
-              hint: 'plongez le pointeur dans le champ · glissez pour orbiter · molette pour zoomer',
+              hint: 'glissez pour orbiter · molette pour zoomer · le champ frémit sous le pointeur',
               nowebgl: 'La 3D n’est pas disponible dans ce navigateur. La narration et la transcription restent accessibles.' }
           : { play: 'Play', pause: 'Pause', replay: 'Replay', expand: 'Expand', close: 'Close', transcript: 'Transcript', hide: 'Hide transcript', caps: 'Captions',
-              hint: 'reach into the field · drag to orbit · scroll to zoom',
+              hint: 'drag to orbit · scroll to zoom · the field stirs under your pointer',
               nowebgl: '3D is not available in this browser. The narration and transcript remain available.' };
       },
     },
     watch: {
-      loc() { this.stopAll(); this.$nextTick(() => this.primeChapter()); },
+      loc() { this.stopAll(); this.rebuildLabels(); this.$nextTick(() => this.primeChapter()); },
       ch() { this.$nextTick(() => this.primeChapter()); },
       fs() { this.$nextTick(() => this.fitCanvas()); },
     },
@@ -128,45 +313,61 @@
         renderer.domElement.style.width = '100%';
         this._renderer = renderer;
         const scene = new T.Scene();
-        scene.fog = new T.FogExp2(0x0b1124, 0.012);
+        scene.fog = new T.FogExp2(0x0b1124, 0.0075);
         this._scene = scene;
         this._camera = new T.PerspectiveCamera(46, 16 / 9, 0.1, 600);
-        this._rig = { theta: 0.6, phi: 1.12, dist: 64, target: new T.Vector3(0, 0, 0), spin: 0.018 };
+        this._user = { th: 0, ph: 0, zoom: 1 };
 
-        /* particle pool */
+        this.buildWorld();
+
+        /* the particle pool */
+        const N = this._N;
         const pos = new Float32Array(N * 3);
         const col = new Float32Array(N * 3);
         const tgt = new Float32Array(N * 3);
-        const meta = new Float32Array(N * 4);          // role, speed, phase, sizeBias
-        this._P = { pos, col, tgt, meta };
+        const spd = new Float32Array(N);
+        this._P = { pos, col, tgt, spd };
+        const rnd = mulberry(1879);
+        for (let i = 0; i < N; i++) {
+          pos[i * 3] = (rnd() - 0.5) * 110; pos[i * 3 + 1] = (rnd() - 0.5) * 50; pos[i * 3 + 2] = (rnd() - 0.5) * 110;
+          spd[i] = 2.2 + rnd() * 4.2;
+        }
+        /* comet tails: agent orbs get a wide speed spread, slow stragglers trail */
+        for (const e of this._entList) {
+          if (e.kind !== 'orb') continue;
+          const r2 = mulberry(hashId(e.id) ^ 77);
+          for (let j = 0; j < e.n; j++) spd[e.i0 + j] = 1.2 + Math.pow(r2(), 1.6) * 9;
+        }
         const geo = new T.BufferGeometry();
         geo.setAttribute('position', new T.BufferAttribute(pos, 3));
         geo.setAttribute('color', new T.BufferAttribute(col, 3));
         const tex = this.dotTexture();
-        const mat = new T.PointsMaterial({ size: 0.9, vertexColors: true, map: tex, alphaMap: tex,
+        const mat = new T.PointsMaterial({ size: 0.78, vertexColors: true, map: tex, alphaMap: tex,
           transparent: true, depthWrite: false, blending: T.AdditiveBlending, sizeAttenuation: true });
         this._points = new T.Points(geo, mat);
+        this._points.frustumCulled = false;
         scene.add(this._points);
 
-        /* edges + signals */
-        const epos = new Float32Array(NEDGE * 2 * 3);
-        const egeo = new T.BufferGeometry();
-        egeo.setAttribute('position', new T.BufferAttribute(epos, 3));
-        this._edges = new T.LineSegments(egeo, new T.LineBasicMaterial({ color: 0x3c5da8, transparent: true, opacity: 0.34, blending: T.AdditiveBlending }));
-        this._edges.frustumCulled = false;
-        scene.add(this._edges);
+        /* links (entity-to-entity threads) + signal pulses */
+        const lpos = new Float32Array(NLINK * 2 * 3);
+        const lcol = new Float32Array(NLINK * 2 * 3);
+        const lgeo = new T.BufferGeometry();
+        lgeo.setAttribute('position', new T.BufferAttribute(lpos, 3));
+        lgeo.setAttribute('color', new T.BufferAttribute(lcol, 3));
+        this._links = new T.LineSegments(lgeo, new T.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.5, blending: T.AdditiveBlending }));
+        this._links.frustumCulled = false;
+        scene.add(this._links);
         const spos = new Float32Array(NSIG * 3);
         const scol = new Float32Array(NSIG * 3);
         const sgeo = new T.BufferGeometry();
         sgeo.setAttribute('position', new T.BufferAttribute(spos, 3));
         sgeo.setAttribute('color', new T.BufferAttribute(scol, 3));
-        this._signals = new T.Points(sgeo, new T.PointsMaterial({ size: 1.7, vertexColors: true, map: tex, alphaMap: tex,
+        this._signals = new T.Points(sgeo, new T.PointsMaterial({ size: 1.6, vertexColors: true, map: tex, alphaMap: tex,
           transparent: true, depthWrite: false, blending: T.AdditiveBlending }));
         this._signals.frustumCulled = false;
         scene.add(this._signals);
-        this._sigState = Array.from({ length: NSIG }, (_, i) => ({ e: i % NEDGE, t: Math.random(), v: 0.25 + Math.random() * 0.5 }));
 
-        this.buildLayout();
+        this.rebuildLabels();
         this.bindPointer(renderer.domElement);
         this.fitCanvas();
       },
@@ -180,153 +381,197 @@
         g.addColorStop(0.35, 'rgba(255,255,255,0.7)');
         g.addColorStop(1, 'rgba(255,255,255,0)');
         c.fillStyle = g; c.fillRect(0, 0, 64, 64);
-        const tex = new T.CanvasTexture(cv);
-        return tex;
+        return new T.CanvasTexture(cv);
       },
 
-      /* ---------- the world layout (seeded, stable) ---------- */
-      buildLayout() {
-        const rnd = mulberry(40319);
-        /* 16 system clusters scattered on a wide disc */
-        this._clusters = Array.from({ length: 16 }, (_, i) => {
-          const a = (i / 16) * Math.PI * 2 + rnd() * 0.5;
-          const r = 16 + rnd() * 22;
-          return { x: Math.cos(a) * r, y: (rnd() - 0.5) * 7, z: Math.sin(a) * r, r: 2.6 + rnd() * 2.2 };
-        });
-        /* people: a loose arc on the west side */
-        this._people = Array.from({ length: 5 }, (_, i) => ({
-          x: -30 + i * 2.2, y: -2 + (i % 2) * 2.2, z: -6 + i * 3.2,
-        }));
-        /* edge endpoints between cluster pairs (deterministic shuffle) */
-        this._edgePairs = [];
-        for (let i = 0; i < NEDGE; i++) {
-          const a = Math.floor(rnd() * 16), b = (a + 1 + Math.floor(rnd() * 14)) % 16;
-          this._edgePairs.push([a, b]);
-        }
-        /* role assignment: 0 system, 1 person, 2 agent, 3 ledger, 4 friction-reserve */
-        const { meta } = this._P;
-        for (let i = 0; i < N; i++) {
-          const u = rnd();
-          const role = u < 0.66 ? 0 : u < 0.73 ? 1 : u < 0.85 ? 2 : u < 0.95 ? 3 : 4;
-          meta[i * 4] = role;
-          meta[i * 4 + 1] = 0.5 + rnd() * 1.4;        // speed
-          meta[i * 4 + 2] = rnd() * Math.PI * 2;      // phase
-          meta[i * 4 + 3] = 0.6 + rnd() * 1.3;        // size bias (via colour energy)
-          /* scatter start */
-          this._P.pos[i * 3] = (rnd() - 0.5) * 90;
-          this._P.pos[i * 3 + 1] = (rnd() - 0.5) * 40;
-          this._P.pos[i * 3 + 2] = (rnd() - 0.5) * 90;
-        }
-        this._roleRnd = mulberry(977);
-      },
-
-      /* per-chapter formation targets — pure function of (chapter fx, progress bucket) */
-      assignTargets() {
-        const fx = (this.chapter && this.chapter.fx) || { form: 'clusters' };
-        const rnd = mulberry(1234 + this.ch * 71);
-        const { tgt, col, meta } = this._P;
-        const C = {
-          system: [0.62, 0.66, 0.85], systemDim: [0.30, 0.34, 0.52], open: [0.45, 0.95, 0.55],
-          person: [0.99, 0.86, 0.46], agent: [1.0, 0.55, 0.16], ledger: [0.93, 0.74, 0.25],
-          core: [0.95, 0.88, 0.6], friction: [0.95, 0.25, 0.12], cream: [0.96, 0.93, 0.85],
-        };
-        const setC = (i, c, k) => { col[i * 3] = c[0] * k; col[i * 3 + 1] = c[1] * k; col[i * 3 + 2] = c[2] * k; };
-        for (let i = 0; i < N; i++) {
-          const role = meta[i * 4], bias = meta[i * 4 + 3];
-          let x = 0, y = 0, z = 0;
-          if (fx.form === 'manifold' || fx.form === 'healing') {
-            /* concentric strata around a radiant core */
-            if (role === 0 || role === 3) {
-              const stratum = i % 4;
-              const R = 9 + stratum * 5.5;
-              const t1 = rnd() * Math.PI * 2, t2 = Math.acos(2 * rnd() - 1);
-              x = R * Math.sin(t2) * Math.cos(t1); y = (R * Math.cos(t2)) * 0.55; z = R * Math.sin(t2) * Math.sin(t1);
-              setC(i, role === 3 ? C.ledger : C.system, 0.85 * bias);
-            } else if (role === 1) {
-              const a = rnd() * Math.PI * 2;
-              x = Math.cos(a) * 31; y = 2 + rnd() * 3; z = Math.sin(a) * 31;
-              setC(i, C.person, 1.1 * bias);
-            } else if (role === 2) {
-              const stratum = i % 3;
-              const R = 11 + stratum * 5.5;
-              const a = rnd() * Math.PI * 2;
-              x = Math.cos(a) * R; y = (rnd() - 0.5) * 6; z = Math.sin(a) * R;
-              setC(i, C.agent, 1.25 * bias);
-            } else {
-              if (fx.form === 'healing' && i % 3 === 0) {
-                x = 14 + rnd() * 3; y = 3 + rnd() * 2; z = 6 + rnd() * 3;       // the knot
-                setC(i, C.friction, 1.3);
-              } else {
-                const t1 = rnd() * Math.PI * 2, t2 = Math.acos(2 * rnd() - 1);
-                x = 4.5 * Math.sin(t2) * Math.cos(t1); y = 4.5 * Math.cos(t2); z = 4.5 * Math.sin(t2) * Math.sin(t1);
-                setC(i, C.core, 1.5 * bias);                                     // the radiant core
-              }
-            }
-          } else if (fx.form === 'ledger' && role === 3) {
-            const k = rnd();
-            const a = k * Math.PI * 7;
-            x = 24 + Math.cos(a) * 4.5; y = -8 + k * 18; z = 14 + Math.sin(a) * 4.5;   // the golden helix
-            setC(i, C.ledger, 1.25 * bias);
-          } else if (fx.form === 'dialogue' && (role === 1 || role === 2)) {
-            const left = role === 1;
-            const t1 = rnd() * Math.PI * 2, t2 = Math.acos(2 * rnd() - 1);
-            const R = 3.2;
-            x = (left ? -7 : 7) + R * Math.sin(t2) * Math.cos(t1);
-            y = R * Math.cos(t2); z = R * Math.sin(t2) * Math.sin(t1);
-            setC(i, left ? C.person : C.agent, 1.3 * bias);
-          } else if (fx.form === 'uiframe' && role === 2 && i % 2 === 0) {
-            /* a constellation snaps into an interface frame */
-            const k = rnd();
-            if (k < 0.62) {                              // the border
-              const e = Math.floor(rnd() * 4), tparam = rnd();
-              const Wd = 16, Hg = 10;
-              if (e === 0) { x = -Wd / 2 + tparam * Wd; y = Hg / 2; }
-              else if (e === 1) { x = -Wd / 2 + tparam * Wd; y = -Hg / 2; }
-              else if (e === 2) { x = -Wd / 2; y = -Hg / 2 + tparam * Hg; }
-              else { x = Wd / 2; y = -Hg / 2 + tparam * Hg; }
-              z = 0;
-            } else {                                     // chart bars inside
-              const bidx = Math.floor(rnd() * 4);
-              x = -5 + bidx * 3.4 + (rnd() - 0.5);
-              const hmax = [4, 7, 5, 8][bidx];
-              y = -4.4 + rnd() * hmax; z = 0.4;
-            }
-            x -= 2; y += 1;
-            setC(i, C.cream, 1.35 * bias);
-          } else {
-            /* default: the cluster archipelago */
-            if (role === 0 || role === 3) {
-              const c = this._clusters[i % 16];
-              const t1 = rnd() * Math.PI * 2, t2 = Math.acos(2 * rnd() - 1);
-              const rr = c.r * Math.cbrt(rnd());
-              x = c.x + rr * Math.sin(t2) * Math.cos(t1);
-              y = c.y + rr * Math.cos(t2) * 0.7;
-              z = c.z + rr * Math.sin(t2) * Math.sin(t1);
-              const opened = fx.ports && (i % 16) < 14;
-              setC(i, opened ? C.open : (fx.form === 'clusters' && !fx.ports ? C.systemDim : C.system), (opened ? 1.0 : 0.7) * bias);
-            } else if (role === 1) {
-              const p = this._people[i % 5];
-              x = p.x + (rnd() - 0.5) * 2.4; y = p.y + (rnd() - 0.5) * 2.4; z = p.z + (rnd() - 0.5) * 2.4;
-              setC(i, C.person, 1.15 * bias);
-            } else if (role === 2) {
-              if (fx.agents) {
-                const c = this._clusters[i % 16];
-                const a = rnd() * Math.PI * 2;
-                const orbitR = c.r + (fx.ports ? 0.8 : 2.6);
-                x = c.x + Math.cos(a) * orbitR; y = c.y + (rnd() - 0.5) * 2; z = c.z + Math.sin(a) * orbitR;
-                setC(i, C.agent, 1.3 * bias);
-              } else {
-                x = -34 + rnd() * 6; y = -14 - rnd() * 6; z = (rnd() - 0.5) * 20;   // waiting in the wings, dim
-                setC(i, C.agent, 0.001);
-              }
-            } else {
-              x = (rnd() - 0.5) * 110; y = -22 - rnd() * 10; z = (rnd() - 0.5) * 110;
-              setC(i, C.systemDim, 0.12);
+      /* ---------- the cast: allocate pool slices, bake glyphs ---------- */
+      buildWorld() {
+        const cast = this.dataset.cast || [];
+        this._ents = {};
+        this._entList = [];
+        let i0 = 0;
+        for (const c of cast) {
+          const n = c.kind === 'label' ? 0 : (c.n || 120);
+          const local = new Float32Array(n * 3);
+          const aux = new Float32Array(n);
+          if (n) SAMPLERS[c.kind](mulberry(hashId(c.id)), local, aux, c);
+          /* bake the static yaw into the glyph */
+          if (c.ry && n) {
+            const co = Math.cos(c.ry), si = Math.sin(c.ry);
+            for (let j = 0; j < n; j++) {
+              const x = local[j * 3], z = local[j * 3 + 2];
+              local[j * 3] = x * co + z * si;
+              local[j * 3 + 2] = -x * si + z * co;
             }
           }
-          tgt[i * 3] = x; tgt[i * 3 + 1] = y; tgt[i * 3 + 2] = z;
+          /* scatter cloud the glyph condenses from */
+          const scat = new Float32Array(n * 3);
+          const r2 = mulberry(hashId(c.id) ^ 9241);
+          for (let j = 0; j < n; j++) {
+            scat[j * 3] = (c.x || 0) + (r2() - 0.5) * 26;
+            scat[j * 3 + 1] = (c.y || 0) + 3 + (r2() - 0.5) * 18;
+            scat[j * 3 + 2] = (c.z || 0) + (r2() - 0.5) * 26;
+          }
+          const ent = { id: c.id, kind: c.kind, n, i0, local, aux, scat, cfg: c,
+                        base: [c.x || 0, c.y || 0, c.z || 0],
+                        color: COL[c.color] || COL.dim, sprite: null };
+          this._ents[c.id] = ent;
+          this._entList.push(ent);
+          i0 += n;
         }
-        this._points.geometry.attributes.color.needsUpdate = true;
+        this._N = i0 + NFX;
+        this._fx0 = i0;
+        /* reusable per-frame state objects, one per entity */
+        this._st = {};
+        for (const e of this._entList) this._st[e.id] = {};
+        this._stLinks = [];
+        this._stStreams = [];
+      },
+
+      /* ---------- labels: billboard text sprites, locale-aware ---------- */
+      rebuildLabels() {
+        const T = this._T;
+        if (!T || !this._scene || !this._entList) return;
+        for (const e of this._entList) {
+          if (e.sprite) { this._scene.remove(e.sprite); e.sprite.material.map.dispose(); e.sprite.material.dispose(); e.sprite = null; }
+          const text = e.cfg.label && S.t(e.cfg.label, this.loc);
+          if (!text) continue;
+          const cv = document.createElement('canvas');
+          const ctx = cv.getContext('2d');
+          ctx.font = '600 30px "IBM Plex Mono", monospace';
+          const tw = Math.ceil(ctx.measureText(text.toUpperCase()).width) + 36;
+          cv.width = tw; cv.height = 64;
+          const c2 = cv.getContext('2d');
+          c2.font = '600 30px "IBM Plex Mono", monospace';
+          c2.textAlign = 'center'; c2.textBaseline = 'middle';
+          c2.shadowColor = 'rgba(243,222,160,0.85)'; c2.shadowBlur = 12;
+          c2.fillStyle = 'rgba(246,238,214,0.96)';
+          c2.fillText(text.toUpperCase(), tw / 2, 33);
+          const tex = new T.CanvasTexture(cv);
+          const mat = new T.SpriteMaterial({ map: tex, transparent: true, opacity: 0, depthTest: false, depthWrite: false });
+          const sp = new T.Sprite(mat);
+          sp.userData.aspect = tw / 64;
+          sp.renderOrder = 10;
+          this._scene.add(sp);
+          e.sprite = sp;
+        }
+      },
+
+      /* ---------- the beat interpreter: state = f(chapter, progress) ---------- */
+      computeState(chIdx, p) {
+        const st = this._st;
+        for (const e of this._entList) {
+          const s = st[e.id];
+          s.x = e.base[0]; s.y = e.base[1]; s.z = e.base[2];
+          s.formed = e.cfg.visible ? 1 : 0;
+          s.energy = e.cfg.visible ? 1 : 0;
+          s.gain = 1; s.mix = 0; s.mixCol = null; s.fill = 0; s.label = 0;
+          s.flare = 0; s.flareAt = null; s.sy = 1; s.btnFlare = 0; s.orbit = null;
+          s.healed = 0;
+        }
+        this._stLinks.length = 0;
+        this._stStreams.length = 0;
+        this._stWave = null;
+        const chs = this.chapters;
+        for (let c = 0; c <= chIdx; c++) {
+          const beats = chs[c] && chs[c].beats; if (!beats) continue;
+          const pc = c < chIdx ? 1 : p;
+          for (const b of beats) {
+            if (c < chIdx && b.do === 'label' && !b.keep) continue;   // labels retire with their chapter
+            const span = b.t[1] - b.t[0] || 1e-4;
+            const raw = (pc - b.t[0]) / span;
+            if (raw <= 0) continue;
+            const latched = b.hold !== false && b.do !== 'flare';
+            const f = latched ? ez(raw) : Math.sin(Math.PI * clamp01(raw)) * (raw >= 1 ? 0 : 1);
+            if (!latched && raw >= 1) continue;
+            this.applyBeat(st, b, f, raw);
+          }
+        }
+        /* resolve parented entities (cast order guarantees parents first) */
+        for (const e of this._entList) {
+          const par = e.cfg.parent && st[e.cfg.parent];
+          if (!par) continue;
+          const s = st[e.id];
+          const off = e.cfg.offset || [0, 0, 0];
+          s.x = par.x + off[0]; s.y = par.y + off[1]; s.z = par.z + off[2];
+        }
+        return st;
+      },
+      applyBeat(st, b, f, raw) {
+        const ids = b.ids || (b.id ? [b.id] : []);
+        switch (b.do) {
+          case 'appear':
+            for (const id of ids) { const s = st[id]; if (!s) continue; s.formed = Math.max(s.formed, f); s.energy = Math.max(s.energy, f); }
+            break;
+          case 'fade':
+            for (const id of ids) { const s = st[id]; if (!s) continue; const k = 1 - f * (b.amt == null ? 1 : b.amt); s.energy *= k; s.label *= k; }
+            break;
+          case 'energy':
+            for (const id of ids) { const s = st[id]; if (!s) continue; s.gain = s.gain + (b.to - s.gain) * f; }
+            break;
+          case 'dissolve':
+            for (const id of ids) { const s = st[id]; if (!s) continue; s.formed *= (1 - f); s.energy *= (1 - f * 0.85); s.label *= (1 - f); }
+            break;
+          case 'move': {
+            const s = st[b.id]; if (!s) break;
+            s.x += (b.to[0] - s.x) * f; s.y += (b.to[1] - s.y) * f; s.z += (b.to[2] - s.z) * f;
+            break;
+          }
+          case 'path': case 'shuttle': {
+            const s = st[b.id]; if (!s) break;
+            let u = ez(clamp01(raw));
+            if (b.do === 'shuttle') { const k = clamp01(raw) * (b.trips || 1) * 2; const seg = Math.floor(k) % 2; u = seg ? 1 - (k % 1) : (k % 1); }
+            const pts = b.pts;
+            const tt = u * (pts.length - 1);
+            const i = Math.min(pts.length - 2, Math.floor(tt));
+            const w = tt - i;
+            s.x = pts[i][0] + (pts[i + 1][0] - pts[i][0]) * w;
+            s.y = pts[i][1] + (pts[i + 1][1] - pts[i][1]) * w;
+            s.z = pts[i][2] + (pts[i + 1][2] - pts[i][2]) * w;
+            break;
+          }
+          case 'recolor':
+            for (const id of ids) { const s = st[id]; if (!s) continue; s.mix = Math.max(s.mix, f); s.mixCol = COL[b.color] || COL.gold; }
+            break;
+          case 'tick': {
+            const s = st[b.id]; if (!s) break;
+            s.fill = Math.min(1, s.fill + f * (b.amt == null ? 1 : b.amt));
+            break;
+          }
+          case 'label':
+            for (const id of ids) { const s = st[id]; if (!s) continue; s.label = b.off ? s.label * (1 - f) : Math.max(s.label, f); }
+            break;
+          case 'flare':
+            for (const id of ids) { const s = st[id]; if (!s) continue; s.flare = Math.max(s.flare, f); if (b.at) s.flareAt = b.at; if (b.part === 'button') s.btnFlare = Math.max(s.btnFlare, f); }
+            break;
+          case 'squash': {
+            const s = st[b.id]; if (!s) break;
+            s.sy = 1 + (b.sy - 1) * f;
+            break;
+          }
+          case 'orbit': {
+            const s = st[b.id]; if (!s) break;
+            s.orbit = { r: b.r, y: b.y, speed: b.speed || 0.2, phase: b.phase || 0, f };
+            break;
+          }
+          case 'link': {
+            const A = st[b.from], Bb = st[b.to];
+            if (A && Bb) this._stLinks.push({ a: A, b: Bb, draw: f, col: COL[b.color] || COL.gold, sig: !!b.signals });
+            break;
+          }
+          case 'stream': {
+            const A = st[b.from], Bb = st[b.to];
+            if (A && Bb) this._stStreams.push({ a: A, b: Bb, f, col: COL[b.color] || COL.gold, dots: !!b.dots });
+            break;
+          }
+          case 'wave': {
+            const c = st[b.from];
+            this._stWave = { x: c ? c.x : 0, y: c ? c.y + 3 : 3, z: c ? c.z : 0,
+                             r: f * (b.r || 40), gain: Math.sin(Math.PI * Math.min(1, raw)) || (raw >= 1 ? 0 : 0),
+                             col: COL[b.color] || COL.gold, heal: !!b.heal, done: raw >= 1 };
+            break;
+          }
+        }
       },
 
       /* ---------- chapter lifecycle (audio is the clock) ---------- */
@@ -339,11 +584,7 @@
         this.stopAll();
         this.progress = 0;
         this.ready = false;
-        if (this._P) this.assignTargets();
-        if (this._rig) {
-          const looks = { dialogue: 26, uiframe: 30, ledger: 52, manifold: 66, healing: 62 };
-          this._rig.dist = looks[(this.chapter.fx || {}).form] || 64;
-        }
+        this._user.th = 0; this._user.ph = 0;
         const au = this.$refs.audio;
         const fallback = this.chapter.dur || 30;
         const done = (ok, dur) => {
@@ -404,7 +645,7 @@
         this.$nextTick(() => this.fitCanvas());
       },
 
-      /* ---------- the field ---------- */
+      /* ---------- render loop ---------- */
       fitCanvas() {
         const host = this.$refs.stage3d;
         if (!host || !this._renderer) return;
@@ -426,107 +667,213 @@
         };
         this._rafId = requestAnimationFrame(loop);
       },
-      step(dt, t) {
+      step(dt, wallClock) {
         const T = this._T;
-        if (!T || !this._P) return;
-        const { pos, tgt, meta } = this._P;
-        const fx = (this.chapter && this.chapter.fx) || {};
-        const settle = this.motion ? 1 : 30;                 // reduced motion: snap
-        /* pointer gravity well in world space */
+        if (!T || !this._P || !this._entList) return;
+        const p = this.progress;
+        const st = this.computeState(this.ch, p);
+        /* the story clock drives streams/signals/orbits so scrubbing stays exact;
+           the wall clock only feeds ambient wander */
+        const clock = p * this.chDur;
+        const { pos, col, tgt, spd } = this._P;
+        const wave = this._stWave;
+
+        for (const e of this._entList) {
+          const s = st[e.id];
+          /* orbiting entities ride the story clock */
+          if (s.orbit) {
+            const o = s.orbit;
+            const a = o.phase + clock * o.speed;
+            const ox = Math.cos(a) * o.r, oz = Math.sin(a) * o.r;
+            s.x += (ox - s.x) * o.f; s.y += (o.y - s.y) * o.f; s.z += (oz - s.z) * o.f;
+          }
+          let cr = e.color[0], cg = e.color[1], cb = e.color[2];
+          if (s.mix > 0 && s.mixCol) {
+            let m = s.mix;
+            /* the healing wave converts red knots to gold as it passes */
+            if (wave && wave.heal && s.mixCol === COL.red) {
+              const dx = s.x - wave.x, dy = s.y - wave.y, dz = s.z - wave.z;
+              if (Math.sqrt(dx * dx + dy * dy + dz * dz) < wave.r) { s.mixCol = COL.gold; }
+            }
+            cr += (s.mixCol[0] - cr) * m; cg += (s.mixCol[1] - cg) * m; cb += (s.mixCol[2] - cb) * m;
+          }
+          let en = s.energy * s.gain * (e.cfg.baseEnergy || 1) * 0.82;   // global exposure: additive blending blows out fast
+          /* the wave front flashes entities as it sweeps past */
+          if (wave && !wave.done && en > 0.02) {
+            const dx = s.x - wave.x, dy = s.y - wave.y, dz = s.z - wave.z;
+            const d = Math.sqrt(dx * dx + dy * dy + dz * dz);
+            const band = Math.abs(d - wave.r);
+            if (band < 3.2) {
+              const k = (1 - band / 3.2) * 0.9;
+              cr += (wave.col[0] * 1.4 - cr) * k; cg += (wave.col[1] * 1.4 - cg) * k; cb += (wave.col[2] * 1.4 - cb) * k;
+            }
+          }
+          if (s.flare > 0 && !s.flareAt) { const k = s.flare * 0.8; cr += (1.5 - cr) * k; cg += (1.4 - cg) * k; cb += (1.1 - cb) * k; }
+          const fl = s.flareAt;
+          const isWall = e.kind === 'wall';
+          const isTower = e.kind === 'tower';
+          const open = isTower && s.mixCol === COL.open ? s.mix : 0;
+          for (let j = 0; j < e.n; j++) {
+            const ix = (e.i0 + j) * 3;
+            const lx = e.local[j * 3], ly = e.local[j * 3 + 1] * s.sy, lz = e.local[j * 3 + 2];
+            let gx = s.x + lx, gy = s.y + ly, gz = s.z + lz;
+            let pe = en;
+            const a = e.aux[j];
+            if (isWall && s.energy < 0.999 && s.formed > 0) {
+              /* dissolving wall drifts upward as dust */
+              const g = 1 - s.energy;
+              gy += g * (6 + a * 8); gx += (a - 0.5) * g * 4;
+              pe *= Math.max(0, 1 - g * 1.2);
+            }
+            if (e.kind === 'ledger' || e.kind === 'doc') {
+              if (a >= 0) pe *= a <= s.fill ? 1 : 0.06;            // rows write in
+            }
+            if (isTower && a === 1) pe *= 0.55 + open * 0.9;        // windows warm when the door opens
+            if (e.kind === 'panel' && a === 3 && s.btnFlare > 0) pe *= 1 + s.btnFlare * 2.5;
+            const f = s.formed;
+            const wx = f * gx + (1 - f) * e.scat[j * 3];
+            const wy = f * gy + (1 - f) * e.scat[j * 3 + 1];
+            const wz = f * gz + (1 - f) * e.scat[j * 3 + 2];
+            tgt[ix] = wx; tgt[ix + 1] = wy; tgt[ix + 2] = wz;
+            let pr = cr * pe, pg = cg * pe, pb = cb * pe;
+            if (fl) {
+              const dx = wx - fl[0], dy = wy - fl[1], dz = wz - fl[2];
+              const d2 = dx * dx + dy * dy + dz * dz;
+              if (d2 < 30) { const k = (1 - d2 / 30) * s.flare; pr += 1.4 * k; pg += 0.7 * k; pb += 0.4 * k; }
+            }
+            col[ix] = pr; col[ix + 1] = pg; col[ix + 2] = pb;
+          }
+          /* the label rides its entity; constant screen size via distance scaling */
+          if (e.sprite) {
+            const dy = e.cfg.labelDy != null ? e.cfg.labelDy : 6;
+            e.sprite.position.set(s.x, s.y + dy * (s.sy < 1 ? s.sy + 0.3 : 1), s.z);
+            const dCam = this._camera.position.distanceTo(e.sprite.position);
+            let hgt = dCam * 0.028;
+            const asp = e.sprite.userData.aspect || 4;
+            if (hgt * asp > dCam * 0.5) hgt = dCam * 0.5 / asp;     // very long labels shrink to fit
+            e.sprite.scale.set(hgt * asp, hgt, 1);
+            e.sprite.material.opacity += (Math.min(1, s.label) * 0.95 - e.sprite.material.opacity) * Math.min(1, dt * 6);
+          }
+        }
+
+        /* fx pool: streams of light between entities */
+        const streams = this._stStreams;
+        const per = streams.length ? Math.floor(NFX / streams.length) : 0;
+        for (let q = 0; q < NFX; q++) {
+          const ix = (this._fx0 + q) * 3;
+          const si = per ? Math.floor(q / per) : -1;
+          if (si < 0 || si >= streams.length) { tgt[ix + 1] = -60; col[ix] = col[ix + 1] = col[ix + 2] = 0; pos[ix + 1] = -60; continue; }
+          const sgm = streams[si];
+          const jj = q - si * per;
+          const u = ((jj / per) + clock * 0.22) % 1;
+          const mx = (sgm.a.x + sgm.b.x) / 2, mz = (sgm.a.z + sgm.b.z) / 2;
+          const my = Math.max(sgm.a.y, sgm.b.y) / 2 + 4.5;
+          const iu = 1 - u;
+          const bx = iu * iu * sgm.a.x + 2 * iu * u * mx + u * u * sgm.b.x;
+          const by = iu * iu * (sgm.a.y + 2.4) + 2 * iu * u * my + u * u * (sgm.b.y + 2.4);
+          const bz = iu * iu * sgm.a.z + 2 * iu * u * mz + u * u * sgm.b.z;
+          tgt[ix] = bx; tgt[ix + 1] = by; tgt[ix + 2] = bz;
+          pos[ix] = bx; pos[ix + 1] = by; pos[ix + 2] = bz;     // streams place exactly, no easing
+          const gate = sgm.dots ? (jj % 5 === 0 ? 1.6 : 0.12) : 0.8;
+          const k = sgm.f * gate;
+          col[ix] = sgm.col[0] * k; col[ix + 1] = sgm.col[1] * k; col[ix + 2] = sgm.col[2] * k;
+        }
+
+        /* particle easing toward targets + ambient wander + pointer stir */
+        const settle = this.motion ? 1 : 30;
         let well = null;
         if (this._pw && this._pw.active) well = this._pw.point;
-        for (let i = 0; i < N; i++) {
+        const fxStart = this._fx0 * 3;
+        for (let i = 0; i < this._fx0; i++) {
           const ix = i * 3;
-          const sp = meta[i * 4 + 1] * settle;
-          const ph = meta[i * 4 + 2];
-          let dx = tgt[ix] - pos[ix], dy = tgt[ix + 1] - pos[ix + 1], dz = tgt[ix + 2] - pos[ix + 2];
-          pos[ix] += dx * dt * sp * 0.9;
-          pos[ix + 1] += dy * dt * sp * 0.9;
-          pos[ix + 2] += dz * dt * sp * 0.9;
+          const sp = spd[i] * settle;
+          pos[ix] += (tgt[ix] - pos[ix]) * Math.min(1, dt * sp);
+          pos[ix + 1] += (tgt[ix + 1] - pos[ix + 1]) * Math.min(1, dt * sp);
+          pos[ix + 2] += (tgt[ix + 2] - pos[ix + 2]) * Math.min(1, dt * sp);
           if (this.motion) {
-            /* organic wander */
-            pos[ix] += Math.sin(t * 0.9 + ph + i * 0.61) * 0.012;
-            pos[ix + 1] += Math.cos(t * 1.1 + ph * 2) * 0.010;
-            pos[ix + 2] += Math.sin(t * 0.7 + ph * 3 + i * 0.13) * 0.012;
+            pos[ix] += Math.sin(wallClock * 0.9 + i * 0.61) * 0.009;
+            pos[ix + 1] += Math.cos(wallClock * 1.1 + i * 1.7) * 0.007;
+            pos[ix + 2] += Math.sin(wallClock * 0.7 + i * 0.13) * 0.009;
           }
           if (well) {
             const wx = well.x - pos[ix], wy = well.y - pos[ix + 1], wz = well.z - pos[ix + 2];
             const d2 = wx * wx + wy * wy + wz * wz;
-            if (d2 < 140) {
-              const f = (1 - d2 / 140) * 4.2 * dt;
-              pos[ix] += wx * f; pos[ix + 1] += wy * f; pos[ix + 2] += wz * f;
-            }
+            if (d2 < 34) { const f = (1 - d2 / 34) * 1.6 * dt; pos[ix] += wx * f; pos[ix + 1] += wy * f; pos[ix + 2] += wz * f; }
           }
         }
         this._points.geometry.attributes.position.needsUpdate = true;
+        this._points.geometry.attributes.color.needsUpdate = true;
 
-        /* edges grow with chapter progress */
-        const live = Math.round(NEDGE * (fx.edges || 0) * Math.min(1, this.progress * 2 + 0.15));
-        const ep = this._edges.geometry.attributes.position.array;
-        for (let e = 0; e < NEDGE; e++) {
-          const [a, b] = this._edgePairs[e];
-          const A = (fx.form === 'manifold' || fx.form === 'healing') ? this.strataPoint(a) : this._clusters[a];
-          const B = (fx.form === 'manifold' || fx.form === 'healing') ? this.strataPoint(b) : this._clusters[b];
-          const on = e < live;
-          ep[e * 6] = A.x; ep[e * 6 + 1] = on ? A.y : 1e4; ep[e * 6 + 2] = A.z;
-          ep[e * 6 + 3] = B.x; ep[e * 6 + 4] = on ? B.y : 1e4; ep[e * 6 + 5] = B.z;
+        /* links: deliberate threads between entities */
+        const lp = this._links.geometry.attributes.position.array;
+        const lc = this._links.geometry.attributes.color.array;
+        const links = this._stLinks;
+        for (let li = 0; li < NLINK; li++) {
+          const o = li * 6;
+          if (li >= links.length) { lp[o + 1] = -90; lp[o + 4] = -90; continue; }
+          const lk = links[li];
+          const ax = lk.a.x, ay = lk.a.y + 2.2, az = lk.a.z;
+          const bx2 = ax + (lk.b.x - ax) * lk.draw, by2 = ay + (lk.b.y + 2.2 - ay) * lk.draw, bz2 = az + (lk.b.z - az) * lk.draw;
+          lp[o] = ax; lp[o + 1] = ay; lp[o + 2] = az;
+          lp[o + 3] = bx2; lp[o + 4] = by2; lp[o + 5] = bz2;
+          const lw = 0.8 * Math.min(1, lk.a.energy, lk.b.energy);    // a thread dies with its endpoints
+          for (let q = 0; q < 2; q++) { lc[o + q * 3] = lk.col[0] * lw; lc[o + q * 3 + 1] = lk.col[1] * lw; lc[o + q * 3 + 2] = lk.col[2] * lw; }
         }
-        this._edges.geometry.attributes.position.needsUpdate = true;
+        this._links.geometry.attributes.position.needsUpdate = true;
+        this._links.geometry.attributes.color.needsUpdate = true;
 
-        /* signals race along live edges */
-        const sigLive = Math.round(NSIG * (fx.signals || 0));
+        /* signal pulses race the signal-enabled links, on the story clock */
+        const sigLinks = links.filter(l => l.sig && l.draw > 0.95 && Math.min(l.a.energy, l.b.energy) > 0.3);
         const sp2 = this._signals.geometry.attributes.position.array;
-        const sc = this._signals.geometry.attributes.color.array;
-        this._sigState.forEach((sg, i) => {
-          const on = i < sigLive && (sg.e % NEDGE) < Math.max(1, live);
-          if (!on) { sp2[i * 3 + 1] = 1e4; return; }
-          sg.t += dt * sg.v * (this.motion ? 1 : 0);
-          if (sg.t > 1) { sg.t = 0; sg.e = (sg.e + 7) % Math.max(1, live); }
-          const [a, b] = this._edgePairs[sg.e % NEDGE];
-          const A = (fx.form === 'manifold' || fx.form === 'healing') ? this.strataPoint(a) : this._clusters[a];
-          const B = (fx.form === 'manifold' || fx.form === 'healing') ? this.strataPoint(b) : this._clusters[b];
-          sp2[i * 3] = A.x + (B.x - A.x) * sg.t;
-          sp2[i * 3 + 1] = A.y + (B.y - A.y) * sg.t;
-          sp2[i * 3 + 2] = A.z + (B.z - A.z) * sg.t;
-          const gold = fx.trails || fx.form === 'manifold' || fx.form === 'healing';
-          sc[i * 3] = gold ? 0.95 : 1.0; sc[i * 3 + 1] = gold ? 0.78 : 0.6; sc[i * 3 + 2] = gold ? 0.3 : 0.25;
-        });
+        const sc2 = this._signals.geometry.attributes.color.array;
+        for (let q = 0; q < NSIG; q++) {
+          if (!sigLinks.length) { sp2[q * 3 + 1] = -90; continue; }
+          const lk = sigLinks[q % sigLinks.length];
+          const u = ((q * 0.137) + clock * 0.16) % 1;
+          sp2[q * 3] = lk.a.x + (lk.b.x - lk.a.x) * u;
+          sp2[q * 3 + 1] = lk.a.y + 2.2 + (lk.b.y - lk.a.y) * u;
+          sp2[q * 3 + 2] = lk.a.z + (lk.b.z - lk.a.z) * u;
+          sc2[q * 3] = lk.col[0] * 1.3; sc2[q * 3 + 1] = lk.col[1] * 1.3; sc2[q * 3 + 2] = lk.col[2] * 1.3;
+        }
         this._signals.geometry.attributes.position.needsUpdate = true;
         this._signals.geometry.attributes.color.needsUpdate = true;
 
-        /* healing sweep: late in chapter 8 the friction knot fades to core gold */
-        if (fx.form === 'healing' && this.progress > 0.72) {
-          const k = Math.min(1, (this.progress - 0.72) / 0.2);
-          const colA = this._points.geometry.attributes.color.array;
-          for (let i = 0; i < N; i++) {
-            if (meta[i * 4] === 4 && i % 3 === 0) {
-              colA[i * 3] = 0.95 - 0.0 * k; colA[i * 3 + 1] = 0.25 + 0.6 * k; colA[i * 3 + 2] = 0.12 + 0.4 * k;
-            }
+        /* scripted camera + user orbit offsets */
+        const cam = this.chapter && this.chapter.cam;
+        let th = 0.8, ph = 1.1, d = 60, tg = [0, 3, 0];
+        if (cam && cam.length) {
+          let k0 = cam[0], k1 = cam[cam.length - 1];
+          for (let i = 0; i < cam.length - 1; i++) {
+            if (p >= cam[i].t && p <= cam[i + 1].t) { k0 = cam[i]; k1 = cam[i + 1]; break; }
           }
-          this._points.geometry.attributes.color.needsUpdate = true;
+          const span = (k1.t - k0.t) || 1;
+          const w = ez(clamp01((p - k0.t) / span));
+          th = k0.th + (k1.th - k0.th) * w;
+          ph = k0.ph + (k1.ph - k0.ph) * w;
+          d = k0.d + (k1.d - k0.d) * w;
+          tg = [0, 1, 2].map(i => k0.tg[i] + (k1.tg[i] - k0.tg[i]) * w);
         }
-
-        /* camera rig: slow auto-rotation + user orbit */
-        const rig = this._rig;
-        if (this.motion && this.playing) rig.theta += rig.spin * dt;
+        /* user offsets decay gently while playing */
+        if (this.playing && this.motion) { this._user.th *= (1 - dt * 0.25); this._user.ph *= (1 - dt * 0.25); }
+        th += this._user.th; ph = Math.max(0.25, Math.min(1.45, ph + this._user.ph));
+        d = Math.max(12, Math.min(160, d * this._user.zoom));
         const cp = new T.Vector3(
-          rig.target.x + rig.dist * Math.sin(rig.phi) * Math.cos(rig.theta),
-          rig.target.y + rig.dist * Math.cos(rig.phi),
-          rig.target.z + rig.dist * Math.sin(rig.phi) * Math.sin(rig.theta));
-        this._camera.position.lerp(cp, 0.08);
-        this._camera.lookAt(rig.target);
-      },
-      strataPoint(i) {
-        /* stable per-cluster anchor re-mapped onto the manifold strata */
-        const a = (i / 16) * Math.PI * 2;
-        const R = 9 + (i % 4) * 5.5;
-        return { x: Math.cos(a * 2.3) * R, y: Math.sin(a * 1.7) * R * 0.4, z: Math.sin(a * 2.3) * R };
+          tg[0] + d * Math.sin(ph) * Math.cos(th),
+          tg[1] + d * Math.cos(ph),
+          tg[2] + d * Math.sin(ph) * Math.sin(th));
+        this._camera.position.lerp(cp, Math.min(1, dt * 5));
+        const look = this._lookV || (this._lookV = new T.Vector3());
+        look.lerp(new T.Vector3(tg[0], tg[1], tg[2]), Math.min(1, dt * 5));
+        this._camera.lookAt(look);
+        /* wide shots need fatter points to stay exposed */
+        const dist = this._camera.position.distanceTo(look);
+        this._points.material.size = Math.max(0.62, Math.min(1.2, 0.5 + dist * 0.0062));
       },
 
-      /* ---------- pointer: gravity well + orbit ---------- */
+      /* ---------- pointer: gentle stir + orbit + zoom ---------- */
       bindPointer(el) {
         const T = this._T;
-        let down = null, moved = false;
+        let down = null;
         el.style.touchAction = 'none';
         this._pw = { active: false, point: new T.Vector3() };
         const toWell = (e) => {
@@ -534,27 +881,25 @@
           const ndc = new T.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
           const ray = new T.Raycaster();
           ray.setFromCamera(ndc, this._camera);
-          /* the well lives on the sphere of the current formation radius */
-          const o = ray.ray.origin, d = ray.ray.direction;
-          const tHit = -o.dot(d) ;
-          this._pw.point.copy(o).addScaledVector(d, Math.max(10, tHit));
+          const o = ray.ray.origin, dvec = ray.ray.direction;
+          const tHit = -o.dot(dvec);
+          this._pw.point.copy(o).addScaledVector(dvec, Math.max(10, tHit));
         };
-        el.addEventListener('pointerdown', e => { down = { x: e.clientX, y: e.clientY }; moved = false; el.setPointerCapture(e.pointerId); });
+        el.addEventListener('pointerdown', e => { down = { x: e.clientX, y: e.clientY }; el.setPointerCapture(e.pointerId); });
         el.addEventListener('pointermove', e => {
           toWell(e);
           this._pw.active = true;
           if (!down) return;
           const dx = e.clientX - down.x, dy = e.clientY - down.y;
-          if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
-          this._rig.theta -= dx * 0.005;
-          this._rig.phi = Math.max(0.2, Math.min(Math.PI / 2.05, this._rig.phi - dy * 0.004));
+          this._user.th -= dx * 0.005;
+          this._user.ph -= dy * 0.004;
           down = { x: e.clientX, y: e.clientY };
         });
         el.addEventListener('pointerup', () => { down = null; });
         el.addEventListener('pointerleave', () => { this._pw.active = false; down = null; });
         el.addEventListener('wheel', e => {
           e.preventDefault();
-          this._rig.dist = Math.max(14, Math.min(150, this._rig.dist * (e.deltaY > 0 ? 1.07 : 0.93)));
+          this._user.zoom = Math.max(0.3, Math.min(2.4, this._user.zoom * (e.deltaY > 0 ? 1.07 : 0.93)));
         }, { passive: false });
       },
     },

@@ -236,13 +236,13 @@
     },
     {
       "type": "paragraph",
-      "text": "Le cinquième lecteur réduit l'histoire à la lumière. Pas de bâtiments, pas de personnages, pas d'étoffe : sept mille particules dans un champ sombre, et l'architecture émerge de leur mouvement. Chaque système ministériel est une constellation de points à la dérive; chaque API gouvernée tend un fil de lumière entre eux, et l'on voit les impulsions de signal commencer à courir dès qu'une connexion s'établit. Le registre d'audit s'assemble en hélice dorée, une particule par action consignée. L'instruction en langage courant devient deux sphères de lumière qui échangent des étincelles. Et au chapitre final, le champ entier se réorganise en strates concentriques de la plateforme autour d'un noyau de règles rayonnant, puis trouve ses propres nœuds de friction rouge et les guérit en or. Déplacez votre pointeur dans le champ et les particules s'incurvent vers lui; glissez pour orbiter, faites défiler pour plonger."
+      "text": "Le cinquième lecteur raconte l'histoire en lumière. Sept mille particules se condensent en le parc lui-même : neuf tours ministérielles aux fenêtres allumées, les outils corporatifs sous leur nuage, des fonctionnaires qui transportent l'information à la main d'un bord à l'autre. Chaque événement de la narration a sa contrepartie visible. Quand le premier agent fonce vers un système ministériel, un treillis rouge s'embrase là où il frappe et la comète est déviée : l'interface machine manquante, rendue visible. Les agents de construction gravent ensuite des portes dorées sur chaque tour et le mur se dissout en poussière. Chaque action écrit une ligne lumineuse dans le registre d'audit. Un fonctionnaire parle et un agent naît de ses mots, qui se condensent en travailleur; une interface s'assemble en plein air pour une seule décision avant de se disperser dans le néant. Au final, le parc entier se réorganise en architecture de destination, les personnes au-dessus, la plateforme en dessous, les règles au cœur rayonnant, trouve ses propres nœuds de friction rouge et les guérit en une seule onde dorée. Glissez pour orbiter, faites défiler pour zoomer; le champ frémit doucement sous votre pointeur."
     },
     {
       "type": "figure",
       "fno": "FIG. 19.5",
-      "title": "Gouvernement 3.0, en champ vivant",
-      "caption": "Le moteur-manifold : les mêmes huit chapitres racontés entièrement en particules et en lumière. Les fils croissent à mesure que les API gouvernées s'ouvrent, les impulsions parcourent les connexions, et le final guérit la friction du champ lui-même. Votre pointeur est un puits de gravité; glissez pour orbiter, faites défiler pour zoomer.",
+      "title": "Gouvernement 3.0, dessiné en lumière",
+      "caption": "Le moteur en champ de lumière : les mêmes huit chapitres, avec le parc, les agents et chaque action condensés en particules. Voyez le mur rougeoyer là où les agents le frappent, les portes se graver en or, le registre s'écrire ligne par ligne, et l'onde finale guérir la friction. Glissez pour orbiter, faites défiler pour zoomer.",
       "chart": {
         "kind": "sim:manifold",
         "sim": "gov3-manifold"
