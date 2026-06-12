@@ -66,6 +66,7 @@
       .sim-btn:hover { border-color: var(--accent); color: var(--accent); }
       .sim-btn.sim-primary { background: var(--accent); color: #fff; border-color: var(--accent); min-width: 74px; }
       .sim-btn:disabled { opacity: 0.45; cursor: default; }
+      .sim-btn.on { background: var(--accent); color: #fff; border-color: var(--accent); }
       .sim-stage { position: relative; overflow: hidden; background: var(--paper); }
       .sim-svg { width: 100%; display: block; aspect-ratio: 16 / 9; background:
         radial-gradient(ellipse at 50% 42%, rgba(26,58,110,0.035), transparent 62%), var(--paper); }

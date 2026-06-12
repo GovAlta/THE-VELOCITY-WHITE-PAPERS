@@ -67,8 +67,8 @@
       "prompt": "A small registry kiosk with a large open golden ledger book on an angled stand, navy canopy, a quill-like stylus."
     },
     "core": {
-      "h": 4.6,
-      "prompt": "A stately legislature rotunda monument, classical cream stone with a deep navy dome and a thin gold lantern, small formal steps."
+      "h": 4.4,
+      "prompt": "A stately Beaux-Arts legislature building closely modelled on the Alberta Legislature in Edmonton: warm beige-sandstone masonry, a tall ribbed sandstone dome with arched dormer windows around its drum, crowned by a slender columned cupola lantern with a small finial, a grand classical entrance portico with tall paired columns and a triangular pediment, balustrades along the roofline, formal stone steps at the base. Compact monument proportions, single building."
     },
     "ui_card": {
       "h": 2.0,
@@ -161,8 +161,8 @@
       "id": "poff",
       "kind": "sprite",
       "sprite": "person_official",
-      "gx": 15.0,
-      "gy": 9.4,
+      "gx": 18.6,
+      "gy": 10.2,
       "label": {
         "en": "Elected official",
         "fr": "Élu"
@@ -665,8 +665,8 @@
     {
       "id": "f2",
       "kind": "pill",
-      "gx": 12.0,
-      "gy": 6.6,
+      "gx": 13.6,
+      "gy": 5.0,
       "label": {
         "en": "friction",
         "fr": "friction"
@@ -677,8 +677,8 @@
     {
       "id": "lpd",
       "kind": "pill",
-      "gx": 12.8,
-      "gy": 2.8,
+      "gx": 13.2,
+      "gy": 2.4,
       "label": {
         "en": "detect",
         "fr": "détecter"
@@ -687,8 +687,8 @@
     {
       "id": "lpp",
       "kind": "pill",
-      "gx": 14.6,
-      "gy": 4.0,
+      "gx": 15.4,
+      "gy": 3.6,
       "label": {
         "en": "propose",
         "fr": "proposer"
@@ -697,8 +697,8 @@
     {
       "id": "prop",
       "kind": "pill",
-      "gx": 16.2,
-      "gy": 5.4,
+      "gx": 17.0,
+      "gy": 5.2,
       "label": {
         "en": "Change proposal: remove a duplicate step",
         "fr": "Proposition : retirer une étape en double"
@@ -709,8 +709,8 @@
     {
       "id": "lpr",
       "kind": "pill",
-      "gx": 14.4,
-      "gy": 7.2,
+      "gx": 15.2,
+      "gy": 8.6,
       "label": {
         "en": "people review",
         "fr": "examen par des personnes"
@@ -720,7 +720,7 @@
       "id": "lpu",
       "kind": "pill",
       "gx": 11.8,
-      "gy": 9.4,
+      "gy": 10.2,
       "label": {
         "en": "update the rule",
         "fr": "mise à jour de la règle"
@@ -764,8 +764,8 @@
     {
       "id": "rt1",
       "kind": "pill",
-      "gx": 8.4,
-      "gy": 10.6,
+      "gx": 7.6,
+      "gy": 10.8,
       "label": {
         "en": "duplicate form",
         "fr": "formulaire en double"
@@ -775,8 +775,8 @@
     {
       "id": "rt2",
       "kind": "pill",
-      "gx": 9.700000000000001,
-      "gy": 11.5,
+      "gx": 8.4,
+      "gy": 11.9,
       "label": {
         "en": "manual re-entry",
         "fr": "ressaisie manuelle"
@@ -786,8 +786,8 @@
     {
       "id": "rt3",
       "kind": "pill",
-      "gx": 11.0,
-      "gy": 12.4,
+      "gx": 9.2,
+      "gy": 13.0,
       "label": {
         "en": "wait queue",
         "fr": "file d'attente"

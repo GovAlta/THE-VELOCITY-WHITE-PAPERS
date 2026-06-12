@@ -200,7 +200,7 @@
       start: { type: Number, default: 0 },
     },
     data() {
-      return { dataset: null, error: null, ch: this.start || 0, playing: false, fs: false, showNarr: false,
+      return { dataset: null, error: null, ch: this.start || 0, playing: false, fs: false, showNarr: false, showCaps: false,
                progress: 0, chDur: 30, audioOk: true, ready: false, animated: S.gsapOK() };
     },
     computed: {
@@ -239,8 +239,8 @@
       timeLabel() { return S.fmtTime(this.progress * this.chDur) + ' / ' + S.fmtTime(this.chDur); },
       L() {
         return this.loc === 'fr'
-          ? { play: 'Lecture', pause: 'Pause', replay: 'Rejouer', expand: 'Plein écran', close: 'Fermer', transcript: 'Transcription', hide: 'Masquer la transcription', chapter: 'Chapitre', staticNote: 'Mode storyboard (animation désactivée)' }
-          : { play: 'Play', pause: 'Pause', replay: 'Replay', expand: 'Expand', close: 'Close', transcript: 'Transcript', hide: 'Hide transcript', chapter: 'Chapter', staticNote: 'Storyboard mode (animation off)' };
+          ? { play: 'Lecture', pause: 'Pause', replay: 'Rejouer', expand: 'Plein écran', close: 'Fermer', transcript: 'Transcription', hide: 'Masquer la transcription', caps: 'Sous-titres', chapter: 'Chapitre', staticNote: 'Mode storyboard (animation désactivée)' }
+          : { play: 'Play', pause: 'Pause', replay: 'Replay', expand: 'Expand', close: 'Close', transcript: 'Transcript', hide: 'Hide transcript', caps: 'Captions', chapter: 'Chapter', staticNote: 'Storyboard mode (animation off)' };
       },
     },
     watch: {
@@ -514,12 +514,13 @@
             h('h3', { class: 'sim-title' }, S.t(sim.title, loc)),
             h('span', { class: 'sim-spacer' }),
             h('button', { class: 'sim-btn sim-primary', onClick: () => this.toggle(), disabled: !this.ready }, this.playing ? this.L.pause : (this.progress >= 0.999 && this.ch === this.chapters.length - 1 ? this.L.replay : this.L.play)),
+            h('button', { class: ['sim-btn', this.showCaps ? 'on' : ''], onClick: () => { this.showCaps = !this.showCaps; }, 'aria-pressed': this.showCaps ? 'true' : 'false' }, this.L.caps),
             h('button', { class: 'sim-btn', onClick: () => this.toggleFs() }, this.fs ? this.L.close : this.L.expand),
           ]),
           h('div', { class: 'sim-stage' }, [
             svg,
             !this.animated ? h('div', { class: 'sim-static-note' }, this.L.staticNote) : null,
-            h('div', { class: 'sim-caption', 'aria-live': 'polite' }, this.currentCaption),
+            h('div', { class: 'sim-caption', 'aria-live': 'polite' }, this.showCaps ? this.currentCaption : ''),
           ]),
           h('div', { class: 'sim-transport' }, [
             h('input', { class: 'sim-scrub', type: 'range', min: 0, max: 1000, value: Math.round(this.progress * 1000), onInput: this.onScrub, 'aria-label': 'Timeline' }),
