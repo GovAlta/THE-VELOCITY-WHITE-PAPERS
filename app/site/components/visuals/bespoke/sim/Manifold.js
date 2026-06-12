@@ -847,6 +847,8 @@
           const k = sgm.f * gate;
           const scol = PALA[sgm.col] || PALA.gold;
           if (light) {
+            /* a faint cream dot would paint a pale arc OVER darker ink — park it */
+            if (k < 0.3) { tgt[ix + 1] = -500; pos[ix + 1] = -500; col[ix] = BGL[0]; col[ix + 1] = BGL[1]; col[ix + 2] = BGL[2]; continue; }
             const a3 = k > 1 ? 1 : k;
             col[ix] = BGL[0] + (scol[0] - BGL[0]) * a3; col[ix + 1] = BGL[1] + (scol[1] - BGL[1]) * a3; col[ix + 2] = BGL[2] + (scol[2] - BGL[2]) * a3;
           } else {
@@ -892,6 +894,7 @@
           lp[o] = ax; lp[o + 1] = ay; lp[o + 2] = az;
           lp[o + 3] = bx2; lp[o + 4] = by2; lp[o + 5] = bz2;
           const lw = 0.8 * Math.min(1, lk.a.energy, lk.b.energy);    // a thread dies with its endpoints
+          if (light && lw < 0.12) { lp[o + 1] = -500; lp[o + 4] = -500; continue; }   // a near-cream line reads white over ink
           const lcol = PALA[lk.col] || PALA.gold;
           for (let q = 0; q < 2; q++) {
             if (light) { lc[o + q * 3] = BGL[0] + (lcol[0] - BGL[0]) * lw; lc[o + q * 3 + 1] = BGL[1] + (lcol[1] - BGL[1]) * lw; lc[o + q * 3 + 2] = BGL[2] + (lcol[2] - BGL[2]) * lw; }
