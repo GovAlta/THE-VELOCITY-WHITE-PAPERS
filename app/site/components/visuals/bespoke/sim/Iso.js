@@ -39,7 +39,7 @@
       const ids = sp.id ? [sp.id] : (sp.ids || []);
       switch (sp.do) {
         case 'show': ids.forEach(id => { if (st.actors[id]) st.actors[id].a = 1; else if (st.links[id]) st.links[id].a = 1; }); break;
-        case 'hide': ids.forEach(id => { if (st.actors[id]) st.actors[id].a = 0; else if (st.links[id]) st.links[id].a = 0; }); break;
+        case 'hide': ids.forEach(id => { if (st.actors[id]) st.actors[id].a = 0; else if (st.links[id]) { st.links[id].a = 0; st.links[id].draw = 0; } }); break;
         case 'move': ids.forEach(id => { const a = st.actors[id]; if (a) { if (sp.gx != null) a.gx = sp.gx; if (sp.gy != null) a.gy = sp.gy; } }); break;
         case 'cam': st.cam = { gx: sp.gx != null ? sp.gx : st.cam.gx, gy: sp.gy != null ? sp.gy : st.cam.gy, z: sp.z != null ? sp.z : st.cam.z }; break;
         case 'swap': ids.forEach(id => { if (st.actors[id]) st.actors[id].sprite = sp.sprite; }); break;

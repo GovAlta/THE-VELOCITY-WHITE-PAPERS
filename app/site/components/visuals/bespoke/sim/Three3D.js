@@ -45,7 +45,7 @@
       const ids = sp.id ? [sp.id] : (sp.ids || []);
       switch (sp.do) {
         case 'show': ids.forEach(id => { if (st.actors[id]) st.actors[id].a = 1; else if (st.links[id]) st.links[id].a = 1; }); break;
-        case 'hide': ids.forEach(id => { if (st.actors[id]) st.actors[id].a = 0; else if (st.links[id]) st.links[id].a = 0; }); break;
+        case 'hide': ids.forEach(id => { if (st.actors[id]) st.actors[id].a = 0; else if (st.links[id]) { st.links[id].a = 0; st.links[id].draw = 0; } }); break;
         case 'move': ids.forEach(id => { const a = st.actors[id]; if (a) { if (sp.x != null) a.x = sp.x; if (sp.z != null) a.z = sp.z; if (sp.y != null) a.y = sp.y; } }); break;
         case 'cam': st.cam = { pos: sp.pos ? sp.pos.slice() : st.cam.pos, look: sp.look ? sp.look.slice() : st.cam.look }; break;
         case 'tint': ids.forEach(id => { if (st.actors[id]) st.actors[id].tint = sp.to != null ? sp.to : 1; }); break;
@@ -182,6 +182,8 @@
         scene.add(this._worldGroup);
         this._flowGroup = new T.Group();
         scene.add(this._flowGroup);
+        this._linkGroup = new T.Group();
+        scene.add(this._linkGroup);
         this._raycaster = new T.Raycaster();
         this._orbit = { dT: 0, dP: 0, dD: 1 };          // user offsets over the scripted camera
         this.bindPointer(renderer.domElement);
@@ -248,6 +250,7 @@
         const W = this._worldGroup;
         while (W.children.length) { W.remove(W.children[0]); }
         while (this._flowGroup.children.length) this._flowGroup.remove(this._flowGroup.children[0]);
+        while (this._linkGroup.children.length) this._linkGroup.remove(this._linkGroup.children[0]);
         this._nodes = {};
         const loc = this.loc;
         (this.dataset.actors || []).forEach(a => {
@@ -353,7 +356,7 @@
           geo.setAttribute('position', new T2.BufferAttribute(new Float32Array((N + 1) * 3), 3));
           const line = new T2.Line(geo, new T2.LineBasicMaterial({ color: 0x3d3e45, transparent: true }));
           line.userData = { frm: a.frm, to: a.to, arc: a.arc != null ? a.arc : 3, N };
-          this._scene.add(line);
+          this._linkGroup.add(line);
           this._linkNodes[a.id] = line;
         });
       },
@@ -583,8 +586,9 @@
             ids.forEach((id, i) => {
               const at = pos + (sp.stagger || 0) * i;
               if (!W.actors[id] && W.links[id]) {
-                tl.fromTo(W.links[id], { a: simTrack.links[id] ? simTrack.links[id].a : 1 }, { a: to, duration: dur, ease: 'power1.inOut', immediateRender: ir }, at);
-                if (simTrack.links[id]) simTrack.links[id].a = to;
+                const lf = simTrack.links[id] || { a: 1, draw: 0 };
+                tl.fromTo(W.links[id], { a: lf.a, draw: lf.draw }, { a: to, draw: to === 0 ? 0 : lf.draw, duration: dur, ease: 'power1.inOut', immediateRender: ir }, at);
+                if (simTrack.links[id]) { simTrack.links[id].a = to; if (to === 0) simTrack.links[id].draw = 0; }
                 return;
               }
               const tgt = W.actors[id]; if (!tgt) return;
