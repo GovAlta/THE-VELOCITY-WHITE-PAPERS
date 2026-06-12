@@ -638,9 +638,9 @@
       "kind": "link",
       "x1": 310,
       "y1": 535,
-      "x2": 905,
+      "x2": 745,
       "y2": 848,
-      "curve": 60,
+      "curve": 50,
       "color": "#9b958a",
       "dashed": true,
       "arrow": true
@@ -648,11 +648,11 @@
     {
       "id": "ml2",
       "kind": "link",
-      "x1": 200,
-      "y1": 470,
+      "x1": 215,
+      "y1": 520,
       "x2": 1262,
-      "y2": 324,
-      "curve": -160,
+      "y2": 336,
+      "curve": 170,
       "color": "#9b958a",
       "dashed": true,
       "arrow": true
@@ -664,7 +664,7 @@
       "y1": 537,
       "x2": 1085,
       "y2": 942,
-      "curve": 120,
+      "curve": 40,
       "color": "#9b958a",
       "dashed": true,
       "arrow": true
@@ -1109,7 +1109,7 @@
           "r": 4.5,
           "span": 8,
           "travel": 2.6,
-          "curveY": -90
+          "curveY": 60
         },
         {
           "t": 0.68,
@@ -1121,7 +1121,7 @@
           "r": 4.5,
           "span": 8,
           "travel": 2.6,
-          "curveY": -150
+          "curveY": 200
         },
         {
           "t": 0.82,
@@ -1223,7 +1223,7 @@
           "n": 3,
           "span": 6,
           "travel": 2,
-          "curveY": -80
+          "curveY": 50
         },
         {
           "t": 0.48,
