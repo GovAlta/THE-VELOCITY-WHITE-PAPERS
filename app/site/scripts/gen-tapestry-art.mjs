@@ -48,6 +48,11 @@ for (const ch of sim.chapters || []) {
       const buf = await generatePNG(prompt, { size: '1536x1024', model: 'gpt-image-2' });
       writeFileSync(panelSrc, buf);
       writeFileSync(panelJpg, await sharp(buf).jpeg({ quality: 84 }).toBuffer());
+      writeFileSync(panelJpg.replace(/\.jpg$/, '.meta.json'), JSON.stringify({
+        paper_id: simId, locale: 'shared', slot: 'panel-' + ch.id,
+        style_prompt: sim.style, image_prompt: ch.prompt, composed_prompt: prompt,
+        model: 'gpt-image-2', generated_at: new Date().toISOString(), jpg_quality: 84,
+      }, null, 2) + String.fromCharCode(10));
       gen++;
       console.log('[ok] panel-' + ch.id);
     } catch (e) { console.error('[err] panel-' + ch.id + ': ' + e.message.slice(0, 160)); continue; }
@@ -57,6 +62,12 @@ for (const ch of sim.chapters || []) {
     try {
       const buf = await generatePNGFromReference(sim.under_style, panelSrc, { size: '1536x1024', model: 'gpt-image-2' });
       writeFileSync(underJpg, await sharp(buf).jpeg({ quality: 82 }).toBuffer());
+      writeFileSync(underJpg.replace(/\.jpg$/, '.meta.json'), JSON.stringify({
+        paper_id: simId, locale: 'shared', slot: 'under-' + ch.id,
+        style_prompt: sim.under_style, image_prompt: 'Conditioned on panel-' + ch.id + ' (composition-locked underdrawing). Panel scene: ' + ch.prompt,
+        composed_prompt: sim.under_style, reference: 'panel-' + ch.id + '.src.png',
+        model: 'gpt-image-2', generated_at: new Date().toISOString(), jpg_quality: 82,
+      }, null, 2) + String.fromCharCode(10));
       gen++;
       console.log('[ok] under-' + ch.id);
     } catch (e) { console.error('[err] under-' + ch.id + ': ' + e.message.slice(0, 160)); }
