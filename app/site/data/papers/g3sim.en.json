@@ -32,7 +32,7 @@
   },
   "audio": {
     "src": "public/audio/en/g3sim.mp3",
-    "duration_sec": 404
+    "duration_sec": 406
   },
   "tldr_presentation": {
     "id": "g3sim-tldr",
@@ -101,10 +101,10 @@
           },
           "right": {
             "label": "Government 3.0",
-            "body": "People and agents on top, a governed platform underneath, and rules as code at the core."
+            "body": "People and agents on top, a governed platform underneath, and repeatable rules at the core, with legislation as the ground truth."
           }
         },
-        "text": "The destination is the architecture the simulation ends on. People and their agents on top. Underneath, the platform Technology and Innovation operates: APIs, gateways, identity, observability, tasking, ephemeral interfaces, knowledge, and tools. At the core, government in its purest form: rules, policies, and permissions written as code. And because the system watches its own friction, red tape becomes a maintenance task with people in command."
+        "text": "The destination is the architecture the simulation ends on. People and their agents on top. Underneath, the platform Technology and Innovation operates: APIs, gateways, identity, observability, tasking, ephemeral interfaces, knowledge, and tools. At the core, government in its purest form: rules, policies, and permissions, applied as repeatable rules so every decision is consistent, with legislation as the ground truth. And because the system watches its own friction, red tape becomes a maintenance task with people in command."
       },
       {
         "id": "05",
@@ -241,7 +241,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The final chapters pull the camera back. People and their agents sit on top. Technology and Innovation operates the platform underneath: the APIs, the gateways, the identity and delegation, the observability, the tasking, the ephemeral interfaces, the knowledge and memory, and the tools. At the centre sits government in its purest form: rules, policies, and permissions, written as code, drawn from legislation. The closing chapter shows the property that makes the architecture durable. The system watches its own friction, drafts the fix, and brings it to public servants and elected officials for review. Approve it, and the rule updates everywhere at once. Red tape becomes a maintenance task, performed continuously, under human direction."
+      "text": "The final chapters pull the camera back. People and their agents sit on top. Technology and Innovation operates the platform underneath: the APIs, the gateways, the identity and delegation, the observability, the tasking, the ephemeral interfaces, the knowledge and memory, and the tools. At the centre sits government in its purest form: rules, policies, and permissions. Legislation stays the ground truth, and the platform applies it as repeatable rules, so a decision comes out the same way for every person it touches. The closing chapter shows the property that makes the architecture durable. The system watches its own friction, drafts the fix, and brings it to public servants and elected officials for review. Approve it, and the rule updates everywhere at once. Red tape becomes a maintenance task, performed continuously, under human direction."
     },
     {
       "type": "keystat",

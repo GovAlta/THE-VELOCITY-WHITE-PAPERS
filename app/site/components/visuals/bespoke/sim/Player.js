@@ -478,7 +478,14 @@
       if (!sim) return h('div', { class: 'sim-fig' }, [h('div', { style: 'padding:28px;text-align:center;color:var(--ink-50);font-size:12px;' }, 'Loading simulation…')]);
       const st = this.renderState, loc = this.loc;
 
-      const world = (sim.actors || []).map(a => drawActor(a, loc, st));
+      /* Paint order: regions and connectors under structure, structure under
+         interfaces and labels, people and agents always on top — so an agent
+         crossing a gateway is never hidden behind it. Stable within a rank. */
+      const RANK = { zone: 0, link: 1, layer: 2, box: 3, sys: 3, disc: 3, label: 4, ui: 5, pill: 6, person: 7, agent: 8 };
+      const world = (sim.actors || [])
+        .map((a, i) => ({ a, i }))
+        .sort((m, n) => ((RANK[m.a.kind] != null ? RANK[m.a.kind] : 3) - (RANK[n.a.kind] != null ? RANK[n.a.kind] : 3)) || (m.i - n.i))
+        .map(({ a }) => drawActor(a, loc, st));
       const svg = h('svg', {
         ref: 'svg', class: 'sim-svg', viewBox: this.viewBox, preserveAspectRatio: 'xMidYMid meet',
         role: 'img', 'aria-label': this.narration,

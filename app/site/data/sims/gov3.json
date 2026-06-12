@@ -20,8 +20,8 @@
     {
       "id": "peoplelabel",
       "kind": "label",
-      "x": 320,
-      "y": 392,
+      "x": 300,
+      "y": 376,
       "label": {
         "en": "PUBLIC SERVANTS & CITIZENS",
         "fr": "FONCTIONNAIRES ET CITOYENS"
@@ -48,8 +48,8 @@
     {
       "id": "p2",
       "kind": "person",
-      "x": 215,
-      "y": 560,
+      "x": 180,
+      "y": 440,
       "label": {
         "en": "Citizen",
         "fr": "Citoyen"
@@ -62,8 +62,8 @@
     {
       "id": "p3",
       "kind": "person",
-      "x": 395,
-      "y": 560,
+      "x": 420,
+      "y": 440,
       "label": {
         "en": "Director",
         "fr": "Directeur"
@@ -90,8 +90,8 @@
     {
       "id": "a1",
       "kind": "agent",
-      "x": 442,
-      "y": 470,
+      "x": 358,
+      "y": 454,
       "label": {
         "en": "agent",
         "fr": "agent"
@@ -103,8 +103,8 @@
     {
       "id": "a2",
       "kind": "agent",
-      "x": 330,
-      "y": 645,
+      "x": 238,
+      "y": 454,
       "label": {
         "en": "agent",
         "fr": "agent"
@@ -116,8 +116,8 @@
     {
       "id": "a3",
       "kind": "agent",
-      "x": 165,
-      "y": 470,
+      "x": 478,
+      "y": 454,
       "label": {
         "en": "agent",
         "fr": "agent"
@@ -129,8 +129,8 @@
     {
       "id": "a4",
       "kind": "agent",
-      "x": 488,
-      "y": 430,
+      "x": 245,
+      "y": 390,
       "parts": [
         "badge"
       ]
@@ -168,8 +168,8 @@
     {
       "id": "enablelabel",
       "kind": "label",
-      "x": 350,
-      "y": 706,
+      "x": 320,
+      "y": 548,
       "label": {
         "en": "INSTANT AI ENABLEMENT",
         "fr": "ACTIVATION IA INSTANTANÉE"
@@ -183,7 +183,7 @@
       "id": "dp1",
       "kind": "pill",
       "x": 150,
-      "y": 728,
+      "y": 565,
       "label": {
         "en": "Simple app",
         "fr": "Appli simple"
@@ -192,8 +192,8 @@
     {
       "id": "dp2",
       "kind": "pill",
-      "x": 268,
-      "y": 728,
+      "x": 262,
+      "y": 565,
       "label": {
         "en": "Browser extension",
         "fr": "Extension navigateur"
@@ -202,8 +202,8 @@
     {
       "id": "dp3",
       "kind": "pill",
-      "x": 438,
-      "y": 728,
+      "x": 420,
+      "y": 565,
       "label": {
         "en": "Free agent",
         "fr": "Agent libre"
@@ -212,8 +212,8 @@
     {
       "id": "dp4",
       "kind": "pill",
-      "x": 188,
-      "y": 762,
+      "x": 190,
+      "y": 600,
       "label": {
         "en": "Claude Code",
         "fr": "Claude Code"
@@ -223,7 +223,7 @@
       "id": "dp5",
       "kind": "pill",
       "x": 330,
-      "y": 762,
+      "y": 600,
       "label": {
         "en": "Copilot · Gemini",
         "fr": "Copilot · Gemini"
@@ -636,11 +636,11 @@
     {
       "id": "ml1",
       "kind": "link",
-      "x1": 330,
-      "y1": 500,
-      "x2": 895,
-      "y2": 850,
-      "curve": 70,
+      "x1": 310,
+      "y1": 495,
+      "x2": 905,
+      "y2": 848,
+      "curve": 60,
       "color": "#9b958a",
       "dashed": true,
       "arrow": true
@@ -648,11 +648,11 @@
     {
       "id": "ml2",
       "kind": "link",
-      "x1": 250,
-      "y1": 555,
-      "x2": 1265,
-      "y2": 330,
-      "curve": -130,
+      "x1": 200,
+      "y1": 470,
+      "x2": 1262,
+      "y2": 324,
+      "curve": -160,
       "color": "#9b958a",
       "dashed": true,
       "arrow": true
@@ -660,11 +660,11 @@
     {
       "id": "ml3",
       "kind": "link",
-      "x1": 420,
-      "y1": 615,
-      "x2": 1075,
-      "y2": 945,
-      "curve": 60,
+      "x1": 430,
+      "y1": 495,
+      "x2": 1085,
+      "y2": 942,
+      "curve": 120,
       "color": "#9b958a",
       "dashed": true,
       "arrow": true
@@ -705,8 +705,8 @@
         "fr": "Règles · Politiques · Permissions"
       },
       "sub": {
-        "en": "government, as code",
-        "fr": "le gouvernement, en code"
+        "en": "applied as repeatable rules",
+        "fr": "appliquées en règles répétables"
       },
       "color": "#1A3A6E"
     },
@@ -813,8 +813,8 @@
     {
       "id": "f1",
       "kind": "pill",
-      "x": 1430,
-      "y": 444,
+      "x": 1240,
+      "y": 428,
       "label": {
         "en": "friction",
         "fr": "friction"
@@ -901,11 +901,11 @@
     {
       "id": "lk3",
       "kind": "link",
-      "x1": 1488,
-      "y1": 386,
-      "x2": 1516,
-      "y2": 548,
-      "curve": 30,
+      "x1": 1466,
+      "y1": 380,
+      "x2": 1500,
+      "y2": 546,
+      "curve": -26,
       "color": "#3D3E45",
       "arrow": true
     },
@@ -1745,8 +1745,8 @@
           "t": 0.78,
           "do": "move",
           "id": "a4",
-          "x": 320,
-          "y": 50,
+          "x": 555,
+          "y": 80,
           "dur": 3,
           "ease": "power1.inOut"
         },
@@ -1911,8 +1911,8 @@
       },
       "dur": 46,
       "narration": {
-        "en": "Pull back, and the destination comes into view. On top: people. Public servants and citizens, each working with agents. Underneath: the platform Technology and Innovation operates. The doorways, the gateways, the identity and the delegation, the audit trail, the tasking, the ephemeral interfaces, the knowledge and the tools. At the centre sits government itself in its purest form: rules, policies, and permissions, written as code, drawn from legislation. Services are delivered, insights are derived, and programs are operated by agents working against those rules, accountable to a named person at every step.",
-        "fr": "Prenez du recul, et la destination apparaît. Au sommet : les personnes. Des fonctionnaires et des citoyens, chacun travaillant avec des agents. En dessous : la plateforme qu'exploite Technologie et Innovation. Les portes, les passerelles, l'identité et la délégation, la piste d'audit, l'attribution des tâches, les interfaces éphémères, les connaissances et les outils. Au centre se trouve le gouvernement lui-même dans sa forme la plus pure : des règles, des politiques et des permissions, écrites en code, tirées de la législation. Les services sont livrés, les constats sont dégagés et les programmes sont exploités par des agents qui travaillent selon ces règles, redevables à une personne nommée à chaque étape."
+        "en": "Pull back, and the destination comes into view. On top: people. Public servants and citizens, each working with agents. Underneath: the platform Technology and Innovation operates. The doorways, the gateways, the identity and the delegation, the audit trail, the tasking, the ephemeral interfaces, the knowledge and the tools. At the centre sits government itself: rules, policies, and permissions. The legislation remains the ground truth, and the platform applies it as repeatable rules, so every decision is consistent. Services are delivered, insights are derived, and programs are operated by agents working against those rules, accountable to a named person at every step.",
+        "fr": "Prenez du recul, et la destination apparaît. Au sommet : des personnes. Des fonctionnaires et des citoyens, chacun travaillant avec des agents. En dessous : la plateforme qu'exploite Technologie et Innovation. Les portes d'accès, les passerelles, l'identité et la délégation, la piste d'audit, les tâches, les interfaces éphémères, les connaissances et les outils. Au centre se trouve le gouvernement lui-même : des règles, des politiques et des permissions. La législation demeure la source de vérité, et la plateforme l'applique en règles répétables, pour que chaque décision soit constante. Les services sont livrés, les constats sont dégagés et les programmes sont exploités par des agents qui travaillent selon ces règles, redevables à une personne nommée à chaque étape."
       },
       "steps": [
         {
