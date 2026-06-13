@@ -1,0 +1,3126 @@
+{
+ "id": "gov3-lumen",
+ "engine": "lumen",
+ "audioSim": "gov3",
+ "title": {
+  "en": "Government 3.0, a cathedral of light",
+  "fr": "Gouvernement 3.0, une cathédrale de lumière"
+ },
+ "blurb": {
+  "en": "The sixth telling, in glass and light. The estate begins as dark, sealed monoliths on a black reflecting floor. Augmentation transmutes the stone itself: each system crystallises from opaque rock into a faceted gem that light can pass through — opacity becoming observability. Agents are motes of green light carrying golden rings of delegated identity; the audit ledger inscribes itself in a glass slab; and at the centre the rules core ignites, sending light up through the whole structure before a golden wave heals the system’s own friction. Drag to orbit, scroll to zoom, click a crystal to learn what it is.",
+  "fr": "La sixième manière, en verre et en lumière. Le parc commence en monolithes sombres et scellés sur un sol noir réfléchissant. L’augmentation transmute la pierre elle-même : chaque système se cristallise, passant de roche opaque à gemme à facettes que la lumière traverse — l’opacité devenant observabilité. Les agents sont des lucioles de lumière verte portant des anneaux dorés d’identité déléguée; le registre d’audit s’inscrit dans une dalle de verre; et au centre, le noyau de règles s’embrase, envoyant la lumière à travers toute la structure avant qu’une onde dorée ne guérisse la friction du système. Glissez pour orbiter, faites défiler pour zoomer, cliquez sur un cristal pour découvrir ce qu’il est."
+ },
+ "cast": [
+  {
+   "id": "floor",
+   "kind": "floor",
+   "visible": true
+  },
+  {
+   "id": "c1",
+   "kind": "crystal",
+   "x": 15,
+   "z": 0.35,
+   "y": 3.25,
+   "w": 3.93,
+   "ht": 6.5,
+   "yaw": 2.27,
+   "seed": 1
+  },
+  {
+   "id": "c2",
+   "kind": "crystal",
+   "x": 11.43,
+   "z": 9.71,
+   "y": 4.5,
+   "w": 3.63,
+   "ht": 9,
+   "yaw": 0.14,
+   "seed": 2
+  },
+  {
+   "id": "c3",
+   "kind": "crystal",
+   "x": 0.65,
+   "z": 14.99,
+   "y": 2.5,
+   "w": 2.78,
+   "ht": 5,
+   "yaw": 1.56,
+   "seed": 3,
+   "learn": {
+    "term": "agent-gateway",
+    "papers": [
+     "oxj36",
+     "qxlzo"
+    ],
+    "factoid": {
+     "en": "Augmentation adds a governed API — a doorway a machine can use — with a role-aware lock, to systems sealed for decades.",
+     "fr": "L’augmentation ajoute une API gouvernée — une porte utilisable par une machine — avec un verrou selon les rôles, à des systèmes scellés depuis des décennies."
+    },
+    "cite": {
+     "en": "Paper 5 · The Agent Gateway",
+     "fr": "Livre 5 · La passerelle d’agents"
+    }
+   }
+  },
+  {
+   "id": "c4",
+   "kind": "crystal",
+   "x": -10.93,
+   "z": 10.27,
+   "y": 3.75,
+   "w": 3.18,
+   "ht": 7.5,
+   "yaw": 1.72,
+   "seed": 4
+  },
+  {
+   "id": "c5",
+   "kind": "crystal",
+   "x": -14.97,
+   "z": 0.89,
+   "y": 5.5,
+   "w": 3.35,
+   "ht": 11,
+   "yaw": 0.13,
+   "seed": 5
+  },
+  {
+   "id": "c6",
+   "kind": "crystal",
+   "x": -10.62,
+   "z": -10.6,
+   "y": 3,
+   "w": 3.77,
+   "ht": 6,
+   "yaw": 3.01,
+   "seed": 6
+  },
+  {
+   "id": "c7",
+   "kind": "crystal",
+   "x": -0.14,
+   "z": -15,
+   "y": 4.25,
+   "w": 3.74,
+   "ht": 8.5,
+   "yaw": 3.01,
+   "seed": 7
+  },
+  {
+   "id": "c8",
+   "kind": "crystal",
+   "x": 10.96,
+   "z": -10.24,
+   "y": 2.75,
+   "w": 3.78,
+   "ht": 5.5,
+   "yaw": 1.25,
+   "seed": 8
+  },
+  {
+   "id": "c9",
+   "kind": "crystal",
+   "x": 26.21,
+   "z": 11.64,
+   "y": 3.5,
+   "w": 3.08,
+   "ht": 7,
+   "yaw": 1.15,
+   "seed": 9
+  },
+  {
+   "id": "c10",
+   "kind": "crystal",
+   "x": 3.58,
+   "z": 27.79,
+   "y": 5,
+   "w": 3.08,
+   "ht": 10,
+   "yaw": 2,
+   "seed": 10
+  },
+  {
+   "id": "c11",
+   "kind": "crystal",
+   "x": -21.51,
+   "z": 17.35,
+   "y": 3,
+   "w": 2.77,
+   "ht": 6,
+   "yaw": 0.46,
+   "seed": 11
+  },
+  {
+   "id": "c12",
+   "kind": "crystal",
+   "x": -26.47,
+   "z": -9.69,
+   "y": 4,
+   "w": 2.65,
+   "ht": 8,
+   "yaw": 1.69,
+   "seed": 12
+  },
+  {
+   "id": "c13",
+   "kind": "crystal",
+   "x": -3.7,
+   "z": -27.44,
+   "y": 2.75,
+   "w": 2.93,
+   "ht": 5.5,
+   "yaw": 1.65,
+   "seed": 13
+  },
+  {
+   "id": "c14",
+   "kind": "crystal",
+   "x": 23.72,
+   "z": -17.17,
+   "y": 4.5,
+   "w": 3.03,
+   "ht": 9,
+   "yaw": 0.34,
+   "seed": 14
+  },
+  {
+   "id": "core",
+   "kind": "core",
+   "x": 0,
+   "y": 7.5,
+   "z": 0,
+   "r": 4.2,
+   "visible": false,
+   "learn": {
+    "term": "government-3-0",
+    "papers": [
+     "zgym1",
+     "eujjc"
+    ],
+    "factoid": {
+     "en": "Legislation stays the ground truth; the platform applies it as repeatable rules, so a decision comes out the same way for every person it touches.",
+     "fr": "La législation demeure la vérité de référence; la plateforme l’applique comme des règles reproductibles, de sorte qu’une décision est identique pour chaque personne concernée."
+    },
+    "cite": {
+     "en": "Paper 2 · Government 3.0",
+     "fr": "Livre 2 · Gouvernement 3.0"
+    }
+   }
+  },
+  {
+   "id": "ledger",
+   "kind": "slab",
+   "x": 30,
+   "y": 6,
+   "z": -18,
+   "w": 7,
+   "ht": 11,
+   "d": 1.4,
+   "yaw": -0.8,
+   "visible": false,
+   "label": {
+    "en": "Audit ledger",
+    "fr": "Registre d’audit"
+   },
+   "labelDy": 8.5,
+   "learn": {
+    "term": "observability",
+    "papers": [
+     "oxj36",
+     "l199t"
+    ],
+    "factoid": {
+     "en": "Every read and write an agent makes through the gateways is recorded as it happens, so anyone with authority can replay exactly what was done, and why.",
+     "fr": "Chaque lecture et écriture qu’un agent effectue via les passerelles est consignée en temps réel, afin que toute personne autorisée puisse rejouer exactement ce qui a été fait, et pourquoi."
+    },
+    "cite": {
+     "en": "Paper 11 · Observability",
+     "fr": "Livre 11 · Observabilité"
+    }
+   }
+  },
+  {
+   "id": "pane",
+   "kind": "pane",
+   "x": 6,
+   "y": 5.5,
+   "z": 6,
+   "w": 7,
+   "ht": 4.6,
+   "yaw": -0.6,
+   "visible": false,
+   "label": {
+    "en": "An interface, for this one decision",
+    "fr": "Une interface, pour cette seule décision"
+   },
+   "labelDy": 3.6
+  },
+  {
+   "id": "a1",
+   "kind": "orb",
+   "x": -34,
+   "y": 4,
+   "z": 8,
+   "r": 0.7,
+   "color": "agent",
+   "visible": false,
+   "learn": {
+    "term": "delegated-access",
+    "papers": [
+     "oxj36",
+     "qxlzo"
+    ],
+    "factoid": {
+     "en": "An agent carries a delegated identity tied to a person: it can only do what that person could do, and only what they allowed.",
+     "fr": "Un agent porte une identité déléguée liée à une personne : il ne peut faire que ce que cette personne pourrait faire, et seulement ce qu’elle a autorisé."
+    },
+    "cite": {
+     "en": "Paper 13 · The Builder Culture",
+     "fr": "Livre 13 · La culture du bâtisseur"
+    }
+   }
+  },
+  {
+   "id": "a2",
+   "kind": "orb",
+   "x": -32,
+   "y": 5,
+   "z": -10,
+   "r": 0.7,
+   "color": "agent",
+   "visible": false
+  },
+  {
+   "id": "b1",
+   "kind": "orb",
+   "x": -30,
+   "y": 6,
+   "z": -6,
+   "r": 0.62,
+   "color": "agent",
+   "visible": false
+  },
+  {
+   "id": "b2",
+   "kind": "orb",
+   "x": -27,
+   "y": 7.5,
+   "z": 1,
+   "r": 0.62,
+   "color": "agent",
+   "visible": false
+  },
+  {
+   "id": "b3",
+   "kind": "orb",
+   "x": -24,
+   "y": 9,
+   "z": 8,
+   "r": 0.62,
+   "color": "agent",
+   "visible": false
+  },
+  {
+   "id": "a7",
+   "kind": "orb",
+   "x": 4,
+   "y": 5,
+   "z": 8,
+   "r": 0.78,
+   "color": "agent",
+   "visible": false
+  },
+  {
+   "id": "ring1",
+   "kind": "ring",
+   "parent": "a1",
+   "r": 1.5,
+   "color": "gold",
+   "visible": false
+  },
+  {
+   "id": "ring7",
+   "kind": "ring",
+   "parent": "a7",
+   "r": 1.6,
+   "color": "gold",
+   "visible": false
+  },
+  {
+   "id": "p1",
+   "kind": "mote",
+   "x": -9,
+   "y": 2,
+   "z": -9,
+   "r": 0.5,
+   "color": "person",
+   "visible": false
+  },
+  {
+   "id": "p2",
+   "kind": "mote",
+   "x": -6,
+   "y": 2,
+   "z": 5,
+   "r": 0.5,
+   "color": "person",
+   "visible": false
+  },
+  {
+   "id": "p3",
+   "kind": "mote",
+   "x": -2,
+   "y": 2,
+   "z": 12,
+   "r": 0.5,
+   "color": "person",
+   "visible": false
+  },
+  {
+   "id": "p4",
+   "kind": "mote",
+   "x": -13,
+   "y": 2,
+   "z": 2,
+   "r": 0.5,
+   "color": "person",
+   "visible": false
+  },
+  {
+   "id": "p5",
+   "kind": "mote",
+   "x": -10,
+   "y": 2,
+   "z": 9,
+   "r": 0.5,
+   "color": "person",
+   "visible": false
+  },
+  {
+   "id": "Lestate",
+   "kind": "label",
+   "x": 0,
+   "y": 0,
+   "z": 0,
+   "label": {
+    "en": "The estate: sealed legacy systems",
+    "fr": "Le parc : systèmes hérités scellés"
+   },
+   "labelDy": 17
+  },
+  {
+   "id": "Lclosed",
+   "kind": "label",
+   "x": 0,
+   "y": 0,
+   "z": 0,
+   "label": {
+    "en": "No door a machine can open",
+    "fr": "Aucune porte qu’une machine peut ouvrir"
+   },
+   "labelDy": 4,
+   "parent": "c1"
+  },
+  {
+   "id": "Lglass",
+   "kind": "label",
+   "x": 0,
+   "y": 0,
+   "z": 0,
+   "label": {
+    "en": "Opacity becomes observability",
+    "fr": "L’opacité devient observabilité"
+   },
+   "labelDy": 17
+  },
+  {
+   "id": "Lid",
+   "kind": "label",
+   "x": 0,
+   "y": 0,
+   "z": 0,
+   "label": {
+    "en": "Delegated identity",
+    "fr": "Identité déléguée"
+   },
+   "labelDy": 3.2,
+   "parent": "a1"
+  },
+  {
+   "id": "Lplain",
+   "kind": "label",
+   "x": 0,
+   "y": 0,
+   "z": 0,
+   "label": {
+    "en": "Instructed in plain language",
+    "fr": "Instruit en langage courant"
+   },
+   "labelDy": 3.4,
+   "parent": "a7"
+  },
+  {
+   "id": "Lpeople",
+   "kind": "label",
+   "x": 0,
+   "y": 22,
+   "z": 0,
+   "label": {
+    "en": "People",
+    "fr": "Les personnes"
+   },
+   "labelDy": 3
+  },
+  {
+   "id": "Lcore",
+   "kind": "label",
+   "x": 0,
+   "y": 0,
+   "z": 0,
+   "label": {
+    "en": "Rules · policies · permissions",
+    "fr": "Règles · politiques · permissions"
+   },
+   "labelDy": 7,
+   "parent": "core"
+  },
+  {
+   "id": "Lheal",
+   "kind": "label",
+   "x": 0,
+   "y": 0,
+   "z": 0,
+   "label": {
+    "en": "Friction, healed",
+    "fr": "La friction, guérie"
+   },
+   "labelDy": 4,
+   "parent": "c10"
+  }
+ ],
+ "chapters": [
+  {
+   "id": "01",
+   "title": {
+    "en": "The estate today",
+    "fr": "Le parc aujourd'hui"
+   },
+   "dur": 42,
+   "narration": {
+    "en": "Every government service rests on software. Alberta alone runs thousands of systems: case files, permits, payments, records. A public servant moves between them by hand. They sign in to one system, copy what they need, and carry it to the next. The corporate tools live in one world. The ministry systems live in dozens of others. The connections you see here are people, walking information across the gaps. It works, but it is slow, and it cannot scale. This simulation shows how agentic AI changes the picture, one stage at a time.",
+    "fr": "Chaque service gouvernemental repose sur des logiciels. L'Alberta à elle seule exploite des milliers de systèmes : dossiers, permis, paiements, archives. Un fonctionnaire passe de l'un à l'autre à la main. Il ouvre une session dans un système, copie ce dont il a besoin, puis le transporte vers le suivant. Les outils corporatifs vivent dans un monde. Les systèmes ministériels vivent dans des dizaines d'autres. Les connexions que vous voyez ici sont des personnes, qui transportent l'information d'un système à l'autre. Cela fonctionne, mais c'est lent, et cela ne peut pas passer à l'échelle. Cette simulation montre comment l'IA agentique change le portrait, une étape à la fois."
+   },
+   "steps": [
+    {
+     "t": 0,
+     "do": "caption",
+     "text": {
+      "en": "Thousands of systems. Human bridges.",
+      "fr": "Des milliers de systèmes. Des ponts humains."
+     }
+    },
+    {
+     "t": 0.4,
+     "do": "caption",
+     "text": {
+      "en": "People carry the information across the gaps.",
+      "fr": "Des personnes transportent l'information entre les systèmes."
+     }
+    },
+    {
+     "t": 0.82,
+     "do": "caption",
+     "text": {
+      "en": "It works. It is slow. It cannot scale.",
+      "fr": "Cela fonctionne. C'est lent. Cela ne passe pas à l'échelle."
+     }
+    }
+   ],
+   "cam": [
+    {
+     "t": 0,
+     "th": 0.5,
+     "ph": 1.32,
+     "d": 70,
+     "tg": [
+      0,
+      4,
+      0
+     ]
+    },
+    {
+     "t": 0.5,
+     "th": 0.85,
+     "ph": 1.28,
+     "d": 62,
+     "tg": [
+      0,
+      4,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "th": 1,
+     "ph": 1.24,
+     "d": 64,
+     "tg": [
+      0,
+      5,
+      0
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "t": [
+      0,
+      0.04
+     ],
+     "do": "appear",
+     "ids": [
+      "floor"
+     ]
+    },
+    {
+     "t": [
+      0.04,
+      0.12
+     ],
+     "do": "appear",
+     "ids": [
+      "c1"
+     ]
+    },
+    {
+     "t": [
+      0.052000000000000005,
+      0.132
+     ],
+     "do": "appear",
+     "ids": [
+      "c2"
+     ]
+    },
+    {
+     "t": [
+      0.064,
+      0.144
+     ],
+     "do": "appear",
+     "ids": [
+      "c3"
+     ]
+    },
+    {
+     "t": [
+      0.07600000000000001,
+      0.156
+     ],
+     "do": "appear",
+     "ids": [
+      "c4"
+     ]
+    },
+    {
+     "t": [
+      0.088,
+      0.16799999999999998
+     ],
+     "do": "appear",
+     "ids": [
+      "c5"
+     ]
+    },
+    {
+     "t": [
+      0.1,
+      0.18
+     ],
+     "do": "appear",
+     "ids": [
+      "c6"
+     ]
+    },
+    {
+     "t": [
+      0.11200000000000002,
+      0.192
+     ],
+     "do": "appear",
+     "ids": [
+      "c7"
+     ]
+    },
+    {
+     "t": [
+      0.124,
+      0.20400000000000001
+     ],
+     "do": "appear",
+     "ids": [
+      "c8"
+     ]
+    },
+    {
+     "t": [
+      0.136,
+      0.216
+     ],
+     "do": "appear",
+     "ids": [
+      "c9"
+     ]
+    },
+    {
+     "t": [
+      0.148,
+      0.22799999999999998
+     ],
+     "do": "appear",
+     "ids": [
+      "c10"
+     ]
+    },
+    {
+     "t": [
+      0.16,
+      0.24
+     ],
+     "do": "appear",
+     "ids": [
+      "c11"
+     ]
+    },
+    {
+     "t": [
+      0.17200000000000001,
+      0.252
+     ],
+     "do": "appear",
+     "ids": [
+      "c12"
+     ]
+    },
+    {
+     "t": [
+      0.18400000000000002,
+      0.264
+     ],
+     "do": "appear",
+     "ids": [
+      "c13"
+     ]
+    },
+    {
+     "t": [
+      0.196,
+      0.276
+     ],
+     "do": "appear",
+     "ids": [
+      "c14"
+     ]
+    },
+    {
+     "t": [
+      0.2,
+      0.3
+     ],
+     "do": "label",
+     "ids": [
+      "Lestate"
+     ]
+    },
+    {
+     "t": [
+      0.34,
+      0.44
+     ],
+     "do": "appear",
+     "ids": [
+      "p1",
+      "p2",
+      "p3"
+     ]
+    },
+    {
+     "t": [
+      0.36,
+      0.66
+     ],
+     "do": "shuttle",
+     "id": "p1",
+     "pts": [
+      [
+       -9,
+       2,
+       -9
+      ],
+      [
+       -15,
+       2,
+       2
+      ],
+      [
+       10,
+       2,
+       -4
+      ]
+     ],
+     "trips": 1,
+     "dots": true
+    },
+    {
+     "t": [
+      0.58,
+      0.9
+     ],
+     "do": "shuttle",
+     "id": "p2",
+     "pts": [
+      [
+       -6,
+       2,
+       5
+      ],
+      [
+       13,
+       2,
+       6
+      ],
+      [
+       -4,
+       2,
+       12
+      ]
+     ],
+     "trips": 1,
+     "dots": true
+    },
+    {
+     "t": [
+      0.64,
+      0.95
+     ],
+     "do": "shuttle",
+     "id": "p3",
+     "pts": [
+      [
+       -2,
+       2,
+       12
+      ],
+      [
+       -13,
+       2,
+       2
+      ],
+      [
+       11,
+       2,
+       9
+      ]
+     ],
+     "trips": 1,
+     "dots": true
+    }
+   ]
+  },
+  {
+   "id": "02",
+   "title": {
+    "en": "Agents find closed doors",
+    "fr": "Les agents trouvent portes closes"
+   },
+   "dur": 40,
+   "narration": {
+    "en": "An AI agent is software that can act on your behalf: read, decide, and do, under your instruction. Agents are easy to deploy. A simple app, a browser extension, an assistant inside the tools you already use. The hard part is access. Watch what happens when an agent tries to reach a ministry system. It stops at the wall. Most of these systems were built decades before agents existed. They offer no interface a machine can use, no API. Hundreds of valuable systems are effectively sealed. Before agents can help, someone has to add the doors.",
+    "fr": "Un agent d'IA est un logiciel qui peut agir en votre nom : lire, décider et exécuter, selon vos instructions. Les agents sont faciles à déployer. Une appli simple, une extension de navigateur, un assistant dans les outils que vous utilisez déjà. Le plus difficile est l'accès. Regardez ce qui se passe quand un agent tente d'atteindre un système ministériel. Il s'arrête au mur. La plupart de ces systèmes ont été construits des décennies avant l'existence des agents. Ils n'offrent aucune interface qu'une machine peut utiliser, aucune API. Des centaines de systèmes précieux sont, dans les faits, scellés. Avant que les agents puissent aider, quelqu'un doit ajouter les portes."
+   },
+   "steps": [
+    {
+     "t": 0,
+     "do": "caption",
+     "text": {
+      "en": "Agents can act for you.",
+      "fr": "Les agents peuvent agir pour vous."
+     }
+    },
+    {
+     "t": 0.26,
+     "do": "caption",
+     "text": {
+      "en": "But the estate has no doors.",
+      "fr": "Mais le parc n'a pas de portes."
+     }
+    },
+    {
+     "t": 0.62,
+     "do": "caption",
+     "text": {
+      "en": "No machine interface. No API. Sealed.",
+      "fr": "Aucune interface machine. Aucune API. Scellé."
+     }
+    }
+   ],
+   "cam": [
+    {
+     "t": 0,
+     "th": 1,
+     "ph": 1.24,
+     "d": 60,
+     "tg": [
+      -4,
+      4,
+      0
+     ]
+    },
+    {
+     "t": 0.4,
+     "th": 1.1,
+     "ph": 1.3,
+     "d": 36,
+     "tg": [
+      -3,
+      4,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "th": 1.2,
+     "ph": 1.26,
+     "d": 48,
+     "tg": [
+      -4,
+      4,
+      -2
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "t": [
+      0.02,
+      0.1
+     ],
+     "do": "appear",
+     "ids": [
+      "a1"
+     ]
+    },
+    {
+     "t": [
+      0.04,
+      0.12
+     ],
+     "do": "label",
+     "ids": [
+      "Lid"
+     ],
+     "off": true
+    },
+    {
+     "t": [
+      0.1,
+      0.18
+     ],
+     "do": "appear",
+     "ids": [
+      "a2"
+     ]
+    },
+    {
+     "t": [
+      0.28,
+      0.4
+     ],
+     "do": "path",
+     "id": "a1",
+     "pts": [
+      [
+       -34,
+       4,
+       8
+      ],
+      [
+       -12,
+       4,
+       4
+      ],
+      [
+       -3.5,
+       4,
+       1.5
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.4,
+      0.5
+     ],
+     "do": "strike",
+     "ids": [
+      "c1"
+     ],
+     "from": "a1"
+    },
+    {
+     "t": [
+      0.42,
+      0.52
+     ],
+     "do": "path",
+     "id": "a1",
+     "pts": [
+      [
+       -3.5,
+       4,
+       1.5
+      ],
+      [
+       -9,
+       6.5,
+       4
+      ],
+      [
+       -16,
+       5,
+       8
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.5,
+      0.6
+     ],
+     "do": "path",
+     "id": "a2",
+     "pts": [
+      [
+       -32,
+       5,
+       -10
+      ],
+      [
+       -12,
+       5,
+       -7
+      ],
+      [
+       -3,
+       5,
+       -4
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.6,
+      0.7
+     ],
+     "do": "strike",
+     "ids": [
+      "c2"
+     ],
+     "from": "a2"
+    },
+    {
+     "t": [
+      0.62,
+      0.72
+     ],
+     "do": "path",
+     "id": "a2",
+     "pts": [
+      [
+       -3,
+       5,
+       -4
+      ],
+      [
+       -10,
+       6,
+       -9
+      ],
+      [
+       -20,
+       5,
+       -10
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.56,
+      0.78
+     ],
+     "do": "recolor",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14"
+     ],
+     "color": "sealed"
+    },
+    {
+     "t": [
+      0.64,
+      0.74
+     ],
+     "do": "label",
+     "ids": [
+      "Lclosed"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "03",
+   "title": {
+    "en": "Stage 1 · Augmentation",
+    "fr": "Étape 1 · Augmentation"
+   },
+   "dur": 42,
+   "narration": {
+    "en": "The first stage is augmentation, and the first workers are agents themselves. A wave of build agents moves through the estate, system by system. Each one adds an API: a governed doorway a machine can use. Each doorway gets a lock that understands roles, so a caseworker's agent sees case files and nothing else. This is the unglamorous work that opens everything that follows, and AI compresses it from decades to months. Hundreds of systems gain governed doorways. The estate is still old, but for the first time it can be reached safely.",
+    "fr": "La première étape est l'augmentation, et les premiers travailleurs sont les agents eux-mêmes. Une vague d'agents de construction parcourt le parc, système par système. Chacun ajoute une API : une porte gouvernée qu'une machine peut utiliser. Chaque porte reçoit un verrou qui comprend les rôles, de sorte que l'agent d'un responsable de dossiers voit les dossiers et rien d'autre. C'est le travail ingrat qui ouvre tout ce qui suit, et l'IA le comprime de quelques décennies à quelques mois. Des centaines de systèmes obtiennent des portes gouvernées. Le parc est encore vieux, mais pour la première fois, on peut y accéder en toute sécurité."
+   },
+   "steps": [
+    {
+     "t": 0,
+     "do": "caption",
+     "text": {
+      "en": "Stage one · Augmentation",
+      "fr": "Première étape · Augmentation"
+     }
+    },
+    {
+     "t": 0.42,
+     "do": "caption",
+     "text": {
+      "en": "Each doorway gets a role-aware lock.",
+      "fr": "Chaque porte reçoit un verrou sensible aux rôles."
+     }
+    },
+    {
+     "t": 0.66,
+     "do": "caption",
+     "text": {
+      "en": "Hundreds of systems gain governed APIs.",
+      "fr": "Des centaines de systèmes obtiennent des API gouvernées."
+     }
+    }
+   ],
+   "cam": [
+    {
+     "t": 0,
+     "th": 1.1,
+     "ph": 1.22,
+     "d": 58,
+     "tg": [
+      0,
+      5,
+      0
+     ]
+    },
+    {
+     "t": 0.5,
+     "th": 1.7,
+     "ph": 1.12,
+     "d": 56,
+     "tg": [
+      0,
+      5,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "th": 2.2,
+     "ph": 1.16,
+     "d": 62,
+     "tg": [
+      0,
+      5,
+      0
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "t": [
+      0,
+      0.08
+     ],
+     "do": "recolor",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14"
+     ],
+     "color": "stone"
+    },
+    {
+     "t": [
+      0.02,
+      0.1
+     ],
+     "do": "appear",
+     "ids": [
+      "b1",
+      "b2",
+      "b3"
+     ]
+    },
+    {
+     "t": [
+      0.16,
+      0.2
+     ],
+     "do": "path",
+     "id": "b1",
+     "pts": [
+      [
+       9,
+       5.25,
+       0.35
+      ],
+      [
+       12.5,
+       4.25,
+       0.35
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.18,
+      0.30000000000000004
+     ],
+     "do": "morph",
+     "ids": [
+      "c1"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.21000000000000002,
+      0.25
+     ],
+     "do": "path",
+     "id": "b2",
+     "pts": [
+      [
+       5.43,
+       6.5,
+       9.71
+      ],
+      [
+       8.93,
+       5.5,
+       9.71
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.23,
+      0.35000000000000003
+     ],
+     "do": "morph",
+     "ids": [
+      "c2"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.26,
+      0.3
+     ],
+     "do": "path",
+     "id": "b3",
+     "pts": [
+      [
+       -5.35,
+       4.5,
+       14.99
+      ],
+      [
+       -1.85,
+       3.5,
+       14.99
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.28,
+      0.4
+     ],
+     "do": "morph",
+     "ids": [
+      "c3"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.31000000000000005,
+      0.35000000000000003
+     ],
+     "do": "path",
+     "id": "b1",
+     "pts": [
+      [
+       -16.93,
+       5.75,
+       10.27
+      ],
+      [
+       -13.43,
+       4.75,
+       10.27
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.33000000000000007,
+      0.45000000000000007
+     ],
+     "do": "morph",
+     "ids": [
+      "c4"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.36,
+      0.39999999999999997
+     ],
+     "do": "path",
+     "id": "b2",
+     "pts": [
+      [
+       -20.97,
+       7.5,
+       0.89
+      ],
+      [
+       -17.47,
+       6.5,
+       0.89
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.38,
+      0.5
+     ],
+     "do": "morph",
+     "ids": [
+      "c5"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.41000000000000003,
+      0.45
+     ],
+     "do": "path",
+     "id": "b3",
+     "pts": [
+      [
+       -16.619999999999997,
+       5,
+       -10.6
+      ],
+      [
+       -13.12,
+       4,
+       -10.6
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.43000000000000005,
+      0.55
+     ],
+     "do": "morph",
+     "ids": [
+      "c6"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.4600000000000001,
+      0.5000000000000001
+     ],
+     "do": "path",
+     "id": "b1",
+     "pts": [
+      [
+       -6.14,
+       6.25,
+       -15
+      ],
+      [
+       -2.64,
+       5.25,
+       -15
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.4800000000000001,
+      0.6000000000000001
+     ],
+     "do": "morph",
+     "ids": [
+      "c7"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.51,
+      0.55
+     ],
+     "do": "path",
+     "id": "b2",
+     "pts": [
+      [
+       4.960000000000001,
+       4.75,
+       -10.24
+      ],
+      [
+       8.46,
+       3.75,
+       -10.24
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.53,
+      0.65
+     ],
+     "do": "morph",
+     "ids": [
+      "c8"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.56,
+      0.6000000000000001
+     ],
+     "do": "path",
+     "id": "b3",
+     "pts": [
+      [
+       20.21,
+       5.5,
+       11.64
+      ],
+      [
+       23.71,
+       4.5,
+       11.64
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.5800000000000001,
+      0.7000000000000001
+     ],
+     "do": "morph",
+     "ids": [
+      "c9"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.61,
+      0.65
+     ],
+     "do": "path",
+     "id": "b1",
+     "pts": [
+      [
+       -2.42,
+       7,
+       27.79
+      ],
+      [
+       1.08,
+       6,
+       27.79
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.63,
+      0.75
+     ],
+     "do": "morph",
+     "ids": [
+      "c10"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.66,
+      0.7000000000000001
+     ],
+     "do": "path",
+     "id": "b2",
+     "pts": [
+      [
+       -27.51,
+       5,
+       17.35
+      ],
+      [
+       -24.01,
+       4,
+       17.35
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.68,
+      0.8
+     ],
+     "do": "morph",
+     "ids": [
+      "c11"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.7100000000000001,
+      0.7500000000000001
+     ],
+     "do": "path",
+     "id": "b3",
+     "pts": [
+      [
+       -32.47,
+       6,
+       -9.69
+      ],
+      [
+       -28.97,
+       5,
+       -9.69
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.7300000000000001,
+      0.8500000000000001
+     ],
+     "do": "morph",
+     "ids": [
+      "c12"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.7600000000000001,
+      0.8000000000000002
+     ],
+     "do": "path",
+     "id": "b1",
+     "pts": [
+      [
+       -9.7,
+       4.75,
+       -27.44
+      ],
+      [
+       -6.2,
+       3.75,
+       -27.44
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.7800000000000001,
+      0.9000000000000001
+     ],
+     "do": "morph",
+     "ids": [
+      "c13"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.81,
+      0.8500000000000001
+     ],
+     "do": "path",
+     "id": "b2",
+     "pts": [
+      [
+       17.72,
+       6.5,
+       -17.17
+      ],
+      [
+       21.22,
+       5.5,
+       -17.17
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.8300000000000001,
+      0.9500000000000001
+     ],
+     "do": "morph",
+     "ids": [
+      "c14"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.4,
+      0.5
+     ],
+     "do": "label",
+     "ids": [
+      "Lglass"
+     ]
+    },
+    {
+     "t": [
+      0.86,
+      0.96
+     ],
+     "do": "energy",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14"
+     ],
+     "to": 1.15
+    }
+   ]
+  },
+  {
+   "id": "04",
+   "title": {
+    "en": "Stage 2 · Identity & observability",
+    "fr": "Étape 2 · Identité et observabilité"
+   },
+   "dur": 40,
+   "narration": {
+    "en": "Power without accountability has no place in government. So every agent now carries a badge: a delegated identity, tied to the person it works for. An agent can only do what its person could do, and only what its person allowed. Every action it takes, every read and write through the gateways, is recorded in an audit ledger as it happens. Anyone with authority can replay exactly what an agent did, and why. Delegation makes agents useful. Observability makes them trustworthy. With both in place, agents can finally be allowed to act.",
+    "fr": "Le pouvoir sans responsabilité n'a pas sa place au gouvernement. Alors chaque agent porte maintenant un insigne : une identité déléguée, liée à la personne pour qui il travaille. Un agent peut seulement faire ce que sa personne pourrait faire, et seulement ce que sa personne a autorisé. Chaque action qu'il pose, chaque lecture et chaque écriture à travers les passerelles, est consignée dans un registre d'audit au moment même où elle se produit. Toute personne en autorité peut rejouer exactement ce qu'un agent a fait, et pourquoi. La délégation rend les agents utiles. L'observabilité les rend dignes de confiance. Avec les deux en place, on peut enfin permettre aux agents d'agir."
+   },
+   "steps": [
+    {
+     "t": 0,
+     "do": "caption",
+     "text": {
+      "en": "Stage two · Identity and observability",
+      "fr": "Deuxième étape · Identité et observabilité"
+     }
+    },
+    {
+     "t": 0.34,
+     "do": "caption",
+     "text": {
+      "en": "A badge for every agent: delegated identity.",
+      "fr": "Un insigne pour chaque agent : une identité déléguée."
+     }
+    },
+    {
+     "t": 0.72,
+     "do": "caption",
+     "text": {
+      "en": "Every action is recorded as it happens.",
+      "fr": "Chaque action est consignée au moment où elle se produit."
+     }
+    }
+   ],
+   "cam": [
+    {
+     "t": 0,
+     "th": 2.2,
+     "ph": 1.2,
+     "d": 56,
+     "tg": [
+      6,
+      5,
+      -6
+     ]
+    },
+    {
+     "t": 0.4,
+     "th": 2.5,
+     "ph": 1.18,
+     "d": 50,
+     "tg": [
+      16,
+      5,
+      -10
+     ]
+    },
+    {
+     "t": 1,
+     "th": 2.7,
+     "ph": 1.2,
+     "d": 56,
+     "tg": [
+      12,
+      5,
+      -8
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "t": [
+      0,
+      0.06
+     ],
+     "do": "keep",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14"
+     ]
+    },
+    {
+     "t": [
+      0.06,
+      0.18
+     ],
+     "do": "appear",
+     "ids": [
+      "ring1"
+     ]
+    },
+    {
+     "t": [
+      0.1,
+      0.2
+     ],
+     "do": "label",
+     "ids": [
+      "Lid2"
+     ]
+    },
+    {
+     "t": [
+      0.28,
+      0.4
+     ],
+     "do": "appear",
+     "ids": [
+      "ledger"
+     ]
+    },
+    {
+     "t": [
+      0.32,
+      0.42
+     ],
+     "do": "label",
+     "ids": [
+      "ledger"
+     ]
+    },
+    {
+     "t": [
+      0.34,
+      0.54
+     ],
+     "do": "shuttle",
+     "id": "a1",
+     "pts": [
+      [
+       -16,
+       5,
+       8
+      ],
+      [
+       -3,
+       4.5,
+       2
+      ]
+     ],
+     "trips": 2
+    },
+    {
+     "t": [
+      0.4,
+      0.62
+     ],
+     "do": "stream",
+     "from": "a1",
+     "to": "ledger",
+     "color": "gold",
+     "dots": true
+    },
+    {
+     "t": [
+      0.5,
+      0.72
+     ],
+     "do": "stream",
+     "from": "c3",
+     "to": "ledger",
+     "color": "gold",
+     "dots": true
+    },
+    {
+     "t": [
+      0.36,
+      0.94
+     ],
+     "do": "inscribe",
+     "id": "ledger",
+     "to": 1
+    },
+    {
+     "t": [
+      0.66,
+      0.86
+     ],
+     "do": "link",
+     "from": "c3",
+     "to": "c6",
+     "color": "glass",
+     "signals": true
+    },
+    {
+     "t": [
+      0.72,
+      0.9
+     ],
+     "do": "link",
+     "from": "c6",
+     "to": "c11",
+     "color": "glass",
+     "signals": true
+    }
+   ]
+  },
+  {
+   "id": "05",
+   "title": {
+    "en": "Stage 3 · Instantiate & instruct",
+    "fr": "Étape 3 · Instancier et instruire"
+   },
+   "dur": 40,
+   "narration": {
+    "en": "Now watch one person put this to work. A public servant creates an agent and explains the task in plain language. No code, no procurement, no project. The agent asks questions back. It proposes a plan, the person corrects it, and the loop repeats until both are satisfied. This is the new skill of the AI-enabled public service: directing, checking, and deciding. The agent receives its badge, a delegated slice of the person's own permissions, and sets off through the gateway to work.",
+    "fr": "Regardez maintenant une personne mettre tout cela au travail. Un fonctionnaire crée un agent et explique la tâche en langage courant. Pas de code, pas d'approvisionnement, pas de projet. L'agent pose des questions à son tour. Il propose un plan, la personne le corrige, et la boucle se répète jusqu'à ce que les deux soient satisfaits. Voilà la nouvelle compétence de la fonction publique habilitée par l'IA : diriger, vérifier et décider. L'agent reçoit son insigne, une tranche déléguée des permissions de la personne, et part travailler à travers la passerelle."
+   },
+   "steps": [
+    {
+     "t": 0,
+     "do": "caption",
+     "text": {
+      "en": "Stage three · Instantiate and instruct",
+      "fr": "Troisième étape · Instancier et instruire"
+     }
+    },
+    {
+     "t": 0.2,
+     "do": "caption",
+     "text": {
+      "en": "Describe the task in plain language.",
+      "fr": "Décrivez la tâche en langage courant."
+     }
+    },
+    {
+     "t": 0.54,
+     "do": "caption",
+     "text": {
+      "en": "Instruct. Review. Refine.",
+      "fr": "Instruire. Examiner. Raffiner."
+     }
+    },
+    {
+     "t": 0.64,
+     "do": "caption",
+     "text": {
+      "en": "A badge: a delegated slice of your permissions.",
+      "fr": "Un insigne : une tranche déléguée de vos permissions."
+     }
+    }
+   ],
+   "cam": [
+    {
+     "t": 0,
+     "th": 0.7,
+     "ph": 1.28,
+     "d": 40,
+     "tg": [
+      -3,
+      4,
+      4
+     ]
+    },
+    {
+     "t": 0.2,
+     "th": 0.8,
+     "ph": 1.32,
+     "d": 22,
+     "tg": [
+      -1,
+      4,
+      4
+     ]
+    },
+    {
+     "t": 0.85,
+     "th": 0.9,
+     "ph": 1.28,
+     "d": 30,
+     "tg": [
+      -2,
+      4.5,
+      2
+     ]
+    },
+    {
+     "t": 1,
+     "th": 1.1,
+     "ph": 1.24,
+     "d": 44,
+     "tg": [
+      2,
+      5,
+      0
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "t": [
+      0,
+      0.06
+     ],
+     "do": "keep",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "ledger",
+      "ring1"
+     ]
+    },
+    {
+     "t": [
+      0,
+      0.08
+     ],
+     "do": "energy",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "ledger"
+     ],
+     "to": 0.35
+    },
+    {
+     "t": [
+      0.08,
+      0.16
+     ],
+     "do": "appear",
+     "ids": [
+      "p2"
+     ]
+    },
+    {
+     "t": [
+      0.1,
+      0.34
+     ],
+     "do": "pulse",
+     "id": "p2",
+     "r": 9
+    },
+    {
+     "t": [
+      0.16,
+      0.3
+     ],
+     "do": "stream",
+     "from": "p2",
+     "to": "a7",
+     "color": "person",
+     "dots": false
+    },
+    {
+     "t": [
+      0.2,
+      0.32
+     ],
+     "do": "appear",
+     "ids": [
+      "a7"
+     ]
+    },
+    {
+     "t": [
+      0.22,
+      0.3
+     ],
+     "do": "label",
+     "ids": [
+      "Lplain"
+     ]
+    },
+    {
+     "t": [
+      0.4,
+      0.5
+     ],
+     "do": "stream",
+     "from": "a7",
+     "to": "p2",
+     "color": "agent"
+    },
+    {
+     "t": [
+      0.52,
+      0.62
+     ],
+     "do": "stream",
+     "from": "p2",
+     "to": "a7",
+     "color": "person"
+    },
+    {
+     "t": [
+      0.66,
+      0.78
+     ],
+     "do": "appear",
+     "ids": [
+      "ring7"
+     ]
+    },
+    {
+     "t": [
+      0.7,
+      0.8
+     ],
+     "do": "flare",
+     "ids": [
+      "ring7"
+     ]
+    },
+    {
+     "t": [
+      0.84,
+      0.98
+     ],
+     "do": "energy",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "ledger"
+     ],
+     "to": 1
+    },
+    {
+     "t": [
+      0.84,
+      0.98
+     ],
+     "do": "path",
+     "id": "a7",
+     "pts": [
+      [
+       4,
+       5,
+       8
+      ],
+      [
+       -2,
+       5,
+       2
+      ],
+      [
+       -6,
+       5,
+       -2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "06",
+   "title": {
+    "en": "Stage 4 · Ephemeral interfaces",
+    "fr": "Étape 4 · Interfaces éphémères"
+   },
+   "dur": 44,
+   "narration": {
+    "en": "The agent works across the gateways: corporate tools on one side, ministry data on the other. When it needs the person, it builds an interface on the spot. A small screen, made for this task and this moment: the figures, a chart, a place to approve, a voice summary if you prefer. The person decides, and the work continues. When the task is done, the interface dissolves. Nothing is installed, and nothing is left to maintain. The thousands of fixed screens government keeps alive today stop being needed, one task at a time.",
+    "fr": "L'agent travaille à travers les passerelles : les outils corporatifs d'un côté, les données ministérielles de l'autre. Quand il a besoin de la personne, il construit une interface sur-le-champ. Un petit écran, fait pour cette tâche et ce moment : les chiffres, un graphique, un endroit pour approuver, un résumé vocal si vous préférez. La personne décide, et le travail continue. Quand la tâche est terminée, l'interface se dissout. Rien n'est installé, et il ne reste rien à maintenir. Les milliers d'écrans fixes que le gouvernement maintient en vie aujourd'hui cessent d'être nécessaires, une tâche à la fois."
+   },
+   "steps": [
+    {
+     "t": 0,
+     "do": "caption",
+     "text": {
+      "en": "Stage four · Tasking and ephemeral interfaces",
+      "fr": "Quatrième étape · Attribution des tâches et interfaces éphémères"
+     }
+    },
+    {
+     "t": 0.3,
+     "do": "caption",
+     "text": {
+      "en": "When it needs you, it builds the interface.",
+      "fr": "Quand il a besoin de vous, il construit l'interface."
+     }
+    },
+    {
+     "t": 0.46,
+     "do": "caption",
+     "text": {
+      "en": "For this task, this person, this moment.",
+      "fr": "Pour cette tâche, cette personne, ce moment."
+     }
+    },
+    {
+     "t": 0.66,
+     "do": "caption",
+     "text": {
+      "en": "Decision made. The work continues.",
+      "fr": "Décision prise. Le travail continue."
+     }
+    },
+    {
+     "t": 0.8,
+     "do": "caption",
+     "text": {
+      "en": "Done. The interface dissolves. Nothing to maintain.",
+      "fr": "Terminé. L'interface se dissout. Rien à maintenir."
+     }
+    }
+   ],
+   "cam": [
+    {
+     "t": 0,
+     "th": 1,
+     "ph": 1.26,
+     "d": 44,
+     "tg": [
+      4,
+      5,
+      2
+     ]
+    },
+    {
+     "t": 0.36,
+     "th": 0.7,
+     "ph": 1.3,
+     "d": 26,
+     "tg": [
+      6.5,
+      5.5,
+      6
+     ]
+    },
+    {
+     "t": 0.8,
+     "th": 0.6,
+     "ph": 1.26,
+     "d": 34,
+     "tg": [
+      8,
+      5,
+      4
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "t": [
+      0,
+      0.06
+     ],
+     "do": "keep",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "ledger",
+      "ring1",
+      "ring7",
+      "a7"
+     ]
+    },
+    {
+     "t": [
+      0.04,
+      0.28
+     ],
+     "do": "shuttle",
+     "id": "a7",
+     "pts": [
+      [
+       -6,
+       5,
+       -2
+      ],
+      [
+       12,
+       5,
+       -4
+      ]
+     ],
+     "trips": 2
+    },
+    {
+     "t": [
+      0.06,
+      0.26
+     ],
+     "do": "stream",
+     "from": "c5",
+     "to": "c12",
+     "color": "glass",
+     "dots": true
+    },
+    {
+     "t": [
+      0.3,
+      0.4
+     ],
+     "do": "path",
+     "id": "a7",
+     "pts": [
+      [
+       12,
+       5,
+       -4
+      ],
+      [
+       8,
+       5.5,
+       3
+      ],
+      [
+       6.4,
+       5.5,
+       6
+      ]
+     ]
+    },
+    {
+     "t": [
+      0.34,
+      0.46
+     ],
+     "do": "appear",
+     "ids": [
+      "pane"
+     ]
+    },
+    {
+     "t": [
+      0.38,
+      0.46
+     ],
+     "do": "label",
+     "ids": [
+      "pane"
+     ]
+    },
+    {
+     "t": [
+      0.56,
+      0.64
+     ],
+     "do": "flare",
+     "ids": [
+      "pane"
+     ]
+    },
+    {
+     "t": [
+      0.66,
+      0.8
+     ],
+     "do": "dissolve",
+     "ids": [
+      "pane"
+     ]
+    },
+    {
+     "t": [
+      0.66,
+      0.78
+     ],
+     "do": "label",
+     "ids": [
+      "pane"
+     ],
+     "off": true
+    },
+    {
+     "t": [
+      0.8,
+      0.92
+     ],
+     "do": "shuttle",
+     "id": "a7",
+     "pts": [
+      [
+       6.4,
+       5.5,
+       6
+      ],
+      [
+       16,
+       5,
+       4
+      ]
+     ],
+     "trips": 1
+    }
+   ]
+  },
+  {
+   "id": "07",
+   "title": {
+    "en": "Government 3.0",
+    "fr": "Gouvernement 3.0"
+   },
+   "dur": 46,
+   "narration": {
+    "en": "Pull back, and the destination comes into view. On top: people. Public servants and citizens, each working with agents. Underneath: the platform Technology and Innovation operates. The doorways, the gateways, the identity and the delegation, the audit trail, the tasking, the ephemeral interfaces, the knowledge and the tools. At the centre sits government itself: rules, policies, and permissions. The legislation remains the ground truth, and the platform applies it as repeatable rules, so every decision is consistent. Services are delivered, insights are derived, and programs are operated by agents working against those rules, accountable to a named person at every step.",
+    "fr": "Prenez du recul, et la destination apparaît. Au sommet : des personnes. Des fonctionnaires et des citoyens, chacun travaillant avec des agents. En dessous : la plateforme qu'exploite Technologie et Innovation. Les portes d'accès, les passerelles, l'identité et la délégation, la piste d'audit, les tâches, les interfaces éphémères, les connaissances et les outils. Au centre se trouve le gouvernement lui-même : des règles, des politiques et des permissions. La législation demeure la source de vérité, et la plateforme l'applique en règles répétables, pour que chaque décision soit constante. Les services sont livrés, les constats sont dégagés et les programmes sont exploités par des agents qui travaillent selon ces règles, redevables à une personne nommée à chaque étape."
+   },
+   "steps": [
+    {
+     "t": 0,
+     "do": "caption",
+     "text": {
+      "en": "Government 3.0",
+      "fr": "Gouvernement 3.0"
+     }
+    },
+    {
+     "t": 0.16,
+     "do": "caption",
+     "text": {
+      "en": "The application layer fades away.",
+      "fr": "La couche applicative s'efface."
+     }
+    },
+    {
+     "t": 0.5,
+     "do": "caption",
+     "text": {
+      "en": "People on top. Platform underneath. Rules at the core.",
+      "fr": "Les personnes au sommet. La plateforme en dessous. Les règles au centre."
+     }
+    },
+    {
+     "t": 0.76,
+     "do": "caption",
+     "text": {
+      "en": "Accountable to a named person, at every step.",
+      "fr": "Redevable à une personne nommée, à chaque étape."
+     }
+    }
+   ],
+   "cam": [
+    {
+     "t": 0,
+     "th": 1,
+     "ph": 1.2,
+     "d": 56,
+     "tg": [
+      0,
+      6,
+      0
+     ]
+    },
+    {
+     "t": 0.4,
+     "th": 1.3,
+     "ph": 1,
+     "d": 78,
+     "tg": [
+      0,
+      9,
+      0
+     ]
+    },
+    {
+     "t": 0.7,
+     "th": 1.7,
+     "ph": 0.86,
+     "d": 80,
+     "tg": [
+      0,
+      8,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "th": 2.1,
+     "ph": 0.92,
+     "d": 76,
+     "tg": [
+      0,
+      8,
+      0
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "t": [
+      0,
+      0.06
+     ],
+     "do": "keep",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "ledger"
+     ]
+    },
+    {
+     "t": [
+      0.06,
+      0.16
+     ],
+     "do": "appear",
+     "ids": [
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5"
+     ]
+    },
+    {
+     "t": [
+      0.1,
+      0.32
+     ],
+     "do": "move",
+     "id": "p1",
+     "to": [
+      9.653408180794099,
+      21,
+      5.273680924646234
+     ]
+    },
+    {
+     "t": [
+      0.13,
+      0.35
+     ],
+     "do": "move",
+     "id": "p2",
+     "to": [
+      6.66402172307809,
+      21,
+      8.751617820400028
+     ]
+    },
+    {
+     "t": [
+      0.16,
+      0.38
+     ],
+     "do": "move",
+     "id": "p3",
+     "to": [
+      2.516280885893053,
+      21,
+      10.708329958648513
+     ]
+    },
+    {
+     "t": [
+      0.19,
+      0.41000000000000003
+     ],
+     "do": "move",
+     "id": "p4",
+     "to": [
+      -2.0688452278216833,
+      21,
+      10.803697488513803
+     ]
+    },
+    {
+     "t": [
+      0.22,
+      0.44
+     ],
+     "do": "move",
+     "id": "p5",
+     "to": [
+      -6.294360279376805,
+      21,
+      9.021143423835115
+     ]
+    },
+    {
+     "t": [
+      0.26,
+      0.34
+     ],
+     "do": "label",
+     "ids": [
+      "Lpeople"
+     ]
+    },
+    {
+     "t": [
+      0.4,
+      0.6
+     ],
+     "do": "ignite",
+     "ids": [
+      "core"
+     ]
+    },
+    {
+     "t": [
+      0.6,
+      0.68
+     ],
+     "do": "label",
+     "ids": [
+      "Lcore"
+     ]
+    },
+    {
+     "t": [
+      0.62,
+      0.74
+     ],
+     "do": "link",
+     "from": "core",
+     "to": "c2",
+     "color": "gold",
+     "signals": true
+    },
+    {
+     "t": [
+      0.65,
+      0.77
+     ],
+     "do": "link",
+     "from": "core",
+     "to": "c4",
+     "color": "gold",
+     "signals": true
+    },
+    {
+     "t": [
+      0.6799999999999999,
+      0.8
+     ],
+     "do": "link",
+     "from": "core",
+     "to": "c6",
+     "color": "gold",
+     "signals": true
+    },
+    {
+     "t": [
+      0.71,
+      0.83
+     ],
+     "do": "link",
+     "from": "core",
+     "to": "c8",
+     "color": "gold",
+     "signals": true
+    },
+    {
+     "t": [
+      0.74,
+      0.86
+     ],
+     "do": "link",
+     "from": "core",
+     "to": "c11",
+     "color": "gold",
+     "signals": true
+    },
+    {
+     "t": [
+      0.77,
+      0.89
+     ],
+     "do": "link",
+     "from": "core",
+     "to": "c13",
+     "color": "gold",
+     "signals": true
+    },
+    {
+     "t": [
+      0.5,
+      0.64
+     ],
+     "do": "appear",
+     "ids": [
+      "a1"
+     ]
+    },
+    {
+     "t": [
+      0.5,
+      0.78
+     ],
+     "do": "orbit",
+     "id": "a1",
+     "r": 18,
+     "y": 9,
+     "speed": 0.16,
+     "phase": 0
+    },
+    {
+     "t": [
+      0.52,
+      0.66
+     ],
+     "do": "appear",
+     "ids": [
+      "a2"
+     ]
+    },
+    {
+     "t": [
+      0.52,
+      0.8
+     ],
+     "do": "orbit",
+     "id": "a2",
+     "r": 18,
+     "y": 9,
+     "speed": 0.16,
+     "phase": 1.05
+    },
+    {
+     "t": [
+      0.54,
+      0.68
+     ],
+     "do": "appear",
+     "ids": [
+      "b1"
+     ]
+    },
+    {
+     "t": [
+      0.54,
+      0.8200000000000001
+     ],
+     "do": "orbit",
+     "id": "b1",
+     "r": 18,
+     "y": 9,
+     "speed": 0.16,
+     "phase": 2.1
+    },
+    {
+     "t": [
+      0.56,
+      0.7
+     ],
+     "do": "appear",
+     "ids": [
+      "b2"
+     ]
+    },
+    {
+     "t": [
+      0.56,
+      0.8400000000000001
+     ],
+     "do": "orbit",
+     "id": "b2",
+     "r": 18,
+     "y": 9,
+     "speed": 0.16,
+     "phase": 3.1500000000000004
+    },
+    {
+     "t": [
+      0.58,
+      0.72
+     ],
+     "do": "appear",
+     "ids": [
+      "b3"
+     ]
+    },
+    {
+     "t": [
+      0.58,
+      0.86
+     ],
+     "do": "orbit",
+     "id": "b3",
+     "r": 18,
+     "y": 9,
+     "speed": 0.16,
+     "phase": 4.2
+    },
+    {
+     "t": [
+      0.6,
+      0.74
+     ],
+     "do": "appear",
+     "ids": [
+      "a7"
+     ]
+    },
+    {
+     "t": [
+      0.6,
+      0.88
+     ],
+     "do": "orbit",
+     "id": "a7",
+     "r": 18,
+     "y": 9,
+     "speed": 0.16,
+     "phase": 5.25
+    },
+    {
+     "t": [
+      0.8,
+      0.95
+     ],
+     "do": "energy",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14"
+     ],
+     "to": 1.25
+    }
+   ]
+  },
+  {
+   "id": "08",
+   "title": {
+    "en": "A system that heals",
+    "fr": "Un système qui se répare"
+   },
+   "dur": 48,
+   "narration": {
+    "en": "A living system can learn. As millions of interactions flow through the platform, the patterns of friction become visible: the duplicate form, the manual step, the queue nobody designed. The system detects them, measures them, and drafts a proposal. People stay sovereign. Public servants and elected officials review every change, grounded in the law as written. Approve it, and the rule updates everywhere at once. Red tape stops being an archaeology project and becomes a maintenance task. This is Government 3.0: a government that runs on rules, learns from friction, and improves continuously, under human direction.",
+    "fr": "Un système vivant peut apprendre. À mesure que des millions d'interactions traversent la plateforme, les motifs de friction deviennent visibles : le formulaire en double, l'étape manuelle, la file d'attente que personne n'a conçue. Le système les détecte, les mesure et rédige une proposition. Les personnes restent souveraines. Les fonctionnaires et les élus examinent chaque changement, en s'appuyant sur la loi telle qu'elle est écrite. Approuvez le changement, et la règle se met à jour partout à la fois. La paperasserie cesse d'être un chantier d'archéologie et devient une tâche d'entretien. Voici le Gouvernement 3.0 : un gouvernement qui fonctionne selon des règles, apprend de la friction et s'améliore continuellement, sous direction humaine."
+   },
+   "steps": [
+    {
+     "t": 0,
+     "do": "caption",
+     "text": {
+      "en": "A government that heals itself",
+      "fr": "Un gouvernement qui se répare lui-même"
+     }
+    },
+    {
+     "t": 0.2,
+     "do": "caption",
+     "text": {
+      "en": "Friction becomes visible. The system notices.",
+      "fr": "La friction devient visible. Le système la remarque."
+     }
+    },
+    {
+     "t": 0.46,
+     "do": "caption",
+     "text": {
+      "en": "The system drafts the change. People decide.",
+      "fr": "Le système rédige le changement. Les personnes décident."
+     }
+    },
+    {
+     "t": 0.76,
+     "do": "caption",
+     "text": {
+      "en": "Approved. The rule updates everywhere at once.",
+      "fr": "Approuvé. La règle se met à jour partout à la fois."
+     }
+    },
+    {
+     "t": 0.9,
+     "do": "caption",
+     "text": {
+      "en": "Rules at the core. Learning at the edges. People in command.",
+      "fr": "Les règles au centre. L'apprentissage en périphérie. Les personnes aux commandes."
+     }
+    }
+   ],
+   "cam": [
+    {
+     "t": 0,
+     "th": 2.1,
+     "ph": 0.96,
+     "d": 72,
+     "tg": [
+      0,
+      7,
+      0
+     ]
+    },
+    {
+     "t": 0.45,
+     "th": 2.5,
+     "ph": 1.04,
+     "d": 60,
+     "tg": [
+      0,
+      6,
+      0
+     ]
+    },
+    {
+     "t": 0.8,
+     "th": 2.9,
+     "ph": 1,
+     "d": 56,
+     "tg": [
+      0,
+      6,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "th": 3.2,
+     "ph": 0.96,
+     "d": 66,
+     "tg": [
+      0,
+      7,
+      0
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "t": [
+      0,
+      0.06
+     ],
+     "do": "keep",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "core",
+      "ledger"
+     ]
+    },
+    {
+     "t": [
+      0,
+      0.06
+     ],
+     "do": "ignite",
+     "ids": [
+      "core"
+     ]
+    },
+    {
+     "t": [
+      0.08,
+      0.22
+     ],
+     "do": "stream",
+     "from": "p1",
+     "to": "core",
+     "color": "gold",
+     "dots": true
+    },
+    {
+     "t": [
+      0.16,
+      0.3
+     ],
+     "do": "recolor",
+     "ids": [
+      "c10",
+      "c4"
+     ],
+     "color": "red"
+    },
+    {
+     "t": [
+      0.18,
+      0.32
+     ],
+     "do": "flare",
+     "ids": [
+      "c10",
+      "c4"
+     ]
+    },
+    {
+     "t": [
+      0.26,
+      0.34
+     ],
+     "do": "label",
+     "ids": [
+      "Lheal"
+     ]
+    },
+    {
+     "t": [
+      0.4,
+      0.56
+     ],
+     "do": "wave",
+     "from": "core",
+     "r": 48,
+     "color": "scan"
+    },
+    {
+     "t": [
+      0.5,
+      0.6
+     ],
+     "do": "flare",
+     "ids": [
+      "c10",
+      "c4"
+     ]
+    },
+    {
+     "t": [
+      0.56,
+      0.72
+     ],
+     "do": "stream",
+     "from": "core",
+     "to": "c10",
+     "color": "gold",
+     "dots": true
+    },
+    {
+     "t": [
+      0.78,
+      0.94
+     ],
+     "do": "wave",
+     "from": "core",
+     "r": 52,
+     "color": "gold",
+     "heal": true
+    },
+    {
+     "t": [
+      0.8,
+      0.9
+     ],
+     "do": "label",
+     "ids": [
+      "Lheal"
+     ],
+     "off": true
+    },
+    {
+     "t": [
+      0.9,
+      1
+     ],
+     "do": "energy",
+     "ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "core"
+     ],
+     "to": 1.35
+    }
+   ]
+  }
+ ]
+}

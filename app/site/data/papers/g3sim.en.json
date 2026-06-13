@@ -246,6 +246,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "The sixth player turns the story into architecture. It is the most demanding of the six on the machine, and the most cinematic: a cathedral of glass and light, lit by a hand-built bloom and reflected on a black mirror floor. The estate begins as dark, opaque monoliths — systems sealed so completely that no door a machine could open exists. Augmentation does not bolt a doorway onto the stone; it transmutes the stone itself, and each system crystallizes from rough rock into a faceted gem that light passes through. Opacity becoming observability, made literal. Agents are motes of green light that carry golden rings of delegated identity; the audit ledger inscribes itself, line by line, into a tall slab of glass; and at the centre the rules core ignites, throwing light up through the whole structure before a single golden wave finds the red veins of friction and heals them. You can fly the cathedral freely, and click any crystal to pause and read what it represents, with the glossary definition and the papers behind it."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.6",
+      "title": "Government 3.0, a cathedral of light",
+      "caption": "The cathedral engine: the same eight chapters rendered as glass and light, with bloom, reflection, and a custom crystal shader. Watch the sealed monoliths crystallize from opaque stone into faceted glass, the ledger inscribe itself, the rules core ignite, and a golden wave heal the friction. Drag to orbit, scroll to zoom, click a crystal to learn what it is.",
+      "chart": {
+        "kind": "sim:lumen",
+        "sim": "gov3-lumen"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "What you are watching"
@@ -344,6 +358,7 @@
     "components/visuals/bespoke/sim/Iso.js",
     "components/visuals/bespoke/sim/Three3D.js",
     "components/visuals/bespoke/sim/Tapestry.js",
-    "components/visuals/bespoke/sim/Manifold.js"
+    "components/visuals/bespoke/sim/Manifold.js",
+    "components/visuals/bespoke/sim/Lumen.js"
   ]
 }

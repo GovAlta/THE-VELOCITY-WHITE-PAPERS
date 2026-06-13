@@ -249,6 +249,20 @@
       }
     },
     {
+      "type": "paragraph",
+      "text": "Le sixième lecteur transforme l'histoire en architecture. C'est le plus exigeant des six pour la machine, et le plus cinématographique : une cathédrale de verre et de lumière, éclairée par un halo (bloom) fait main et reflétée sur un sol miroir noir. Le parc commence en monolithes sombres et opaques — des systèmes si bien scellés qu'aucune porte qu'une machine pourrait ouvrir n'existe. L'augmentation ne fixe pas une porte sur la pierre; elle transmute la pierre elle-même, et chaque système se cristallise, passant de roche brute à gemme à facettes que la lumière traverse. L'opacité devenant observabilité, rendue littérale. Les agents sont des lucioles de lumière verte qui portent des anneaux dorés d'identité déléguée; le registre d'audit s'inscrit, ligne par ligne, dans une haute dalle de verre; et au centre, le noyau de règles s'embrase, projetant la lumière à travers toute la structure avant qu'une seule onde dorée ne trouve les veines rouges de la friction et ne les guérisse. Vous pouvez survoler la cathédrale librement, et cliquer sur n'importe quel cristal pour faire une pause et lire ce qu'il représente, avec la définition du glossaire et les livres qui le sous-tendent."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 19.6",
+      "title": "Gouvernement 3.0, une cathédrale de lumière",
+      "caption": "Le moteur-cathédrale : les mêmes huit chapitres rendus en verre et en lumière, avec halo, réflexion et un nuanceur de cristal sur mesure. Voyez les monolithes scellés se cristalliser de pierre opaque en verre à facettes, le registre s'inscrire, le noyau de règles s'embraser, et une onde dorée guérir la friction. Glissez pour orbiter, faites défiler pour zoomer, cliquez sur un cristal pour découvrir ce qu'il est.",
+      "chart": {
+        "kind": "sim:lumen",
+        "sim": "gov3-lumen"
+      }
+    },
+    {
       "type": "section_heading",
       "n": "03",
       "title": "Ce que vous regardez"
@@ -362,6 +376,7 @@
     "components/visuals/bespoke/sim/Iso.js",
     "components/visuals/bespoke/sim/Three3D.js",
     "components/visuals/bespoke/sim/Tapestry.js",
-    "components/visuals/bespoke/sim/Manifold.js"
+    "components/visuals/bespoke/sim/Manifold.js",
+    "components/visuals/bespoke/sim/Lumen.js"
   ]
 }
