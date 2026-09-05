@@ -1,0 +1,17 @@
+{
+  "paper_id": "yu5k9",
+  "locale": "en",
+  "slot": "fig-02",
+  "out_path": "public\\images\\yu5k9\\en\\fig-15-2.jpg",
+  "bytes_jpg": 230097,
+  "bytes_png_source": 2730751,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-08T01:01:20.177Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A header at the top reads READINESS. Beneath it a two-by-two grid of four equal cells, each labelled clearly: EDUCATION, SECURITY BOTH SIDES, SELF-SUFFICIENCY, GOVERNANCE. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. A header at the top reads READINESS. Beneath it a two-by-two grid of four equal cells, each labelled clearly: EDUCATION, SECURITY BOTH SIDES, SELF-SUFFICIENCY, GOVERNANCE. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

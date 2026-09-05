@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "en",
+  "slot": "fig-06",
+  "out_path": "public\\images\\k3tc3\\en\\fig-10-6.jpg",
+  "bytes_jpg": 218495,
+  "bytes_png_source": 2781794,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T19:29:05.134Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three labelled pillars stand side by side supporting a single horizontal lintel labelled AI FACTORY. Left pillar labelled PRONGHORN, captioned REQUIREMENTS, STANDARDS, ARCHITECTURE. Centre pillar labelled NEXUS, captioned THE ENVIRONMENT AGENTS WORK IN. Right pillar labelled VELOCITY, captioned MEASUREMENT AND ORCHESTRATION. A thin rust line labelled SERVER-SENT EVENTS connects the NEXUS pillar to the VELOCITY pillar. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three labelled pillars stand side by side supporting a single horizontal lintel labelled AI FACTORY. Left pillar labelled PRONGHORN, captioned REQUIREMENTS, STANDARDS, ARCHITECTURE. Centre pillar labelled NEXUS, captioned THE ENVIRONMENT AGENTS WORK IN. Right pillar labelled VELOCITY, captioned MEASUREMENT AND ORCHESTRATION. A thin rust line labelled SERVER-SENT EVENTS connects the NEXUS pillar to the VELOCITY pillar. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

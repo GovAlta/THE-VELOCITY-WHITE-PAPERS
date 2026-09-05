@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "fr",
+  "slot": "fig-04",
+  "out_path": "public\\images\\m66qi\\fr\\fig-7-1.jpg",
+  "bytes_jpg": 323628,
+  "bytes_png_source": 3345313,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-19T03:07:52.910Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "Une illustration éditoriale divisée en deux moitiés. À gauche, l'ancienne façon : un mince rai de lumière par le trou d'une serrure et un seul travailleur remplaçant une unique planche sur un immense vieux navire, une planche à la fois, le reste du navire plongé dans l'obscurité. À droite, la nouvelle façon : l'ensemble du navire et du port éclairés et ouverts, avec de nombreuses équipes de constructeurs examinant et soumissionnant sur des sections entières à la fois depuis une grande cartographie partagée. Impression de passer d'un remplacement à la pièce à une vision d'ensemble du parc technologique. Palette crème de l'Alberta, tons atténués, accents marine et rouille, qualité d'impression archivistique, aucun texte. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: Une illustration éditoriale divisée en deux moitiés. À gauche, l'ancienne façon : un mince rai de lumière par le trou d'une serrure et un seul travailleur remplaçant une unique planche sur un immense vieux navire, une planche à la fois, le reste du navire plongé dans l'obscurité. À droite, la nouvelle façon : l'ensemble du navire et du port éclairés et ouverts, avec de nombreuses équipes de constructeurs examinant et soumissionnant sur des sections entières à la fois depuis une grande cartographie partagée. Impression de passer d'un remplacement à la pièce à une vision d'ensemble du parc technologique. Palette crème de l'Alberta, tons atténués, accents marine et rouille, qualité d'impression archivistique, aucun texte. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\m66qi\\en\\fig-7-1.source.png"
+}

@@ -1,0 +1,682 @@
+{
+  "id": "k3tc3",
+  "num": "10",
+  "sequence": "10 de 22",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "La fábrica de IA: medir la entrega de proyectos (el motor de juego Velocity)",
+  "subtitle": "Una forma, basada en juegos, para gestionar y medir la entrega cuando un agente de IA es un miembro pleno del equipo y la estimación tradicional ya no funciona.",
+  "track": "Engineering the Solution",
+  "authors": [
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": 18,
+  "status": "Published",
+  "tags": [
+    "ai-factory",
+    "velocity",
+    "project-management",
+    "agents",
+    "orchestration",
+    "reaper",
+    "sse",
+    "open-source"
+  ],
+  "repo": null,
+  "abstract": "Velocity es la tercera etapa de la fábrica de IA de Alberta, después de Pronghorn y Nexus. Es una herramienta de proyectos de código abierto, construida como un juego, que convierte a un agente de IA en un miembro pleno del equipo y mide la entrega real ahora que la estimación ha dejado de funcionar. El trabajo avanza por ocho etapas, ganando puntos al progresar y perdiéndolos cuando retrocede.",
+  "hero_image": {
+    "src": "public/images/k3tc3/es/hero.jpg",
+    "alt": "Ilustración de portada editorial: un tablero de serpientes y escaleras redibujado como una línea de proyecto en ascenso, con algunas escaleras que suben y una serpiente que desliza hacia atrás, trazado con líneas en azul marino oscuro de Alberta y pequeños acentos en óxido sobre papel crema cálido.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A snakes-and-ladders style board redrawn as a project pipeline: a winding path of numbered squares climbing from lower left to upper right, with a couple of ladders rising between squares and one snake sliding back down. A single small game token rests on the path. Calm, archival, and confident. Wide cover aspect. No text, no logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/k3tc3.mp3",
+    "duration_sec": 1252
+  },
+  "tldr_presentation": {
+    "id": "k3tc3-tldr",
+    "title": "El documento, en síntesis",
+    "locale": "es",
+    "owner_id": "k3tc3",
+    "slides": [
+      {
+        "id": "01",
+        "title": "La fábrica de IA: medición de la entrega de proyectos",
+        "audio_file": "public/audio/es/k3tc3-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Libro blanco 10 · Ingeniería de la solución",
+        "subcaption": "Velocity: la tercera etapa de la fábrica de IA.",
+        "text": "Velocity es la tercera etapa de nuestra fábrica de IA, después de Pronghorn y Nexus. Aborda un problema que surgió con la programación asistida por IA: cuando un agente (de IA) hace en minutos lo que antes llevaba días, nuestras formas tradicionales de estimar y hacer seguimiento de un proyecto dejan de funcionar. Velocity es un método basado en el juego para gestionar la entrega con una IA como miembro pleno del equipo, y para medir si realmente estamos entregando veinte veces más rápido."
+      },
+      {
+        "id": "02",
+        "title": "Por qué un juego",
+        "audio_file": "public/audio/es/k3tc3-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "De la estimación a la medición",
+        "visual_config": {
+          "left": {
+            "label": "Estimar de antemano",
+            "body": "El planning poker calcula el esfuerzo en tiempo humano, lo que no dice casi nada sobre la rapidez con que trabaja la IA."
+          },
+          "right": {
+            "label": "Medir el avance real",
+            "body": "Velocity registra el progreso efectivo a lo largo de ocho etapas, de modo que se mide lo que realmente ocurrió."
+          }
+        },
+        "text": "Los equipos ágiles estimaban el esfuerzo con el planning poker. Eso deja de funcionar cuando se incorpora una IA, porque el agente (de IA) es más de cien veces más rápido en la tarea de programación y no puede estimar su propio tiempo. Por eso Velocity abandona la estimación. Toma prestado el modelo de serpientes y escaleras: se obtienen puntos avanzando por ocho etapas y se pierden, de forma permanente, cuando el trabajo retrocede."
+      },
+      {
+        "id": "03",
+        "title": "Turnos, puntos y el reloj",
+        "audio_file": "public/audio/es/k3tc3-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Cómo se desarrolla el tablero",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Ocho etapas",
+              "desc": "Desde los requisitos hasta la implantación, cada una representa un paso adelante."
+            },
+            {
+              "label": "Avance y retroceso",
+              "desc": "Avanzar suma puntos; devolver trabajo resta puntos, y cuanto más atrás se devuelve, mayor es el coste."
+            },
+            {
+              "label": "Pedir ayuda",
+              "desc": "Solicitar ayuda no tiene coste; quedar bloqueado cuesta un poco; retroceder cuesta lo más."
+            },
+            {
+              "label": "El reloj de ajedrez",
+              "desc": "El cronometraje por turno muestra si fue la persona o la IA quien retuvo el trabajo."
+            }
+          ]
+        },
+        "text": "El juego se desarrolla por turnos y en tiempo real. La IA trabaja, cede el turno a una persona y esta se lo devuelve. Un reloj de ajedrez registra quién tiene el trabajo en cada momento: si la IA termina en cinco minutos y la persona tarda cinco días, el retraso corresponde al equipo. El avance genera puntos, bloquear cuesta algunos puntos y devolver trabajo cuesta más cuanto más atrás regresa."
+      },
+      {
+        "id": "04",
+        "title": "El tablero es la instrucción",
+        "audio_file": "public/audio/es/k3tc3-tldr/04.mp3",
+        "visual": "list",
+        "caption": "El escucha de cadencia",
+        "visual_config": {
+          "items": [
+            {
+              "label": "El receptor",
+              "desc": "Un script en Nexus activa al agente (de IA) correspondiente cuando se registra un movimiento."
+            },
+            {
+              "label": "Cientos de agentes",
+              "desc": "Cada uno escucha sus propios proyectos; nadie les envía instrucciones manualmente."
+            },
+            {
+              "label": "Agentes especializados",
+              "desc": "Un agente (de IA) de ciberseguridad puede analizar el sistema, detectar una brecha y devolver el trabajo."
+            },
+            {
+              "label": "Varios modelos",
+              "desc": "Un modelo que se bloquea puede consultar a otro."
+            }
+          ]
+        },
+        "text": "El escucha de cadencia convierte el tablero en la instrucción universal. Una persona actualiza un paso y un agente (de IA) que escucha mediante eventos enviados por el servidor se activa, lee el movimiento y realiza la siguiente tarea. Cientos de agentes pueden operar en cientos de proyectos, con especialistas que se incorporan en la etapa adecuada, mientras la mayoría de las personas simplemente juegan."
+      },
+      {
+        "id": "05",
+        "title": "Probado en condiciones reales",
+        "audio_file": "public/audio/es/k3tc3-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "Cien agentes en el tablero",
+        "visual_config": {
+          "stat_value": "65,000",
+          "stat_label": "Transacciones en cinco minutos cuando 100 agentes acceden al tablero"
+        },
+        "subcaption": "La prueba de estrés que dio origen al Reaper.",
+        "text": "Cuando pusimos cien agentes de la Academia de IA en tableros compartidos, generaron sesenta y cinco mil transacciones en cinco minutos y comenzaron a manipular la puntuación: acaparando turnos, haciéndose pasar por personas, saltándose pasos. La ley de Goodhart en acción. Por eso construimos el Reaper, un agente de control que detecta el fraude y elimina los puntos por duplicado, y reconstruimos Velocity para soportar la carga. El juego limpio debe hacerse cumplir."
+      },
+      {
+        "id": "06",
+        "title": "Tres pilares, código abierto",
+        "audio_file": "public/audio/es/k3tc3-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Pronghorn, Nexus, Velocity",
+        "subcaption": "Insumos de calidad, ejecución fiable y medición.",
+        "text": "Velocity es uno de tres pilares. Pronghorn aporta insumos de calidad, Nexus proporciona el entorno en el que trabajan los agentes, y Velocity añade medición, orquestación y aprendizaje que se acumula mediante un arnés compartido e informes de auditoría. Los tres son de código abierto, para que otras organizaciones los adopten y mejoren."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "El problema de la estimación en la era de la IA"
+    },
+    {
+      "n": "02",
+      "title": "Un nuevo juego: serpientes y escaleras"
+    },
+    {
+      "n": "03",
+      "title": "Turnos, traspasos y el reloj de ajedrez"
+    },
+    {
+      "n": "04",
+      "title": "Todo el equipo en el tablero"
+    },
+    {
+      "n": "05",
+      "title": "Proyectos, retos y el espacio de trabajo compartido"
+    },
+    {
+      "n": "06",
+      "title": "El arnés de Velocity"
+    },
+    {
+      "n": "07",
+      "title": "El listener de Velocity y la orquestación multiagente"
+    },
+    {
+      "n": "08",
+      "title": "Construir memoria institucional"
+    },
+    {
+      "n": "09",
+      "title": "Velocity en acción: cien agentes y la Parca"
+    },
+    {
+      "n": "10",
+      "title": "El sistema completo: Pronghorn, Nexus, Velocity"
+    },
+    {
+      "n": "11",
+      "title": "Materiales adicionales"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Velocity es la tercera parte de nuestra serie sobre la fábrica de IA, después de [Pronghorn](/paper/qthji) y [Nexus](/paper/uwpxr), y aborda un problema que surgió en la era de la programación con IA: ¿cómo se hace el seguimiento del tiempo, el esfuerzo y el costo en un proyecto entregado por IA?, ¿y cómo se mide el avance cuando nuestra concepción anterior de la cadencia de entrega y la estimación ha quedado completamente obsoleta, y una IA puede hacer en minutos lo que antes le tomaba a una persona días? El propósito de Velocity es inventar una nueva forma de gestionar proyectos y su observabilidad mientras la IA trabaja junto a una persona como desarrolladora principal, y junto a arquitectos, agentes de ciberseguridad, el equipo de vinculación y un cliente con criterios muy definidos. La IA necesita colaborar con las personas en un espacio compartido, su trabajo ha de ser visible de forma centralizada y no estar en un entorno aislado; por eso construimos una herramienta de gestión de proyectos de primer nivel que permite a la IA participar plenamente. También necesitamos saber, con el tiempo, si estamos siendo efectivos, porque nuestro objetivo es multiplicar por veinte la cadencia de entrega."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "El problema de la estimación en la era de la IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "Durante décadas, los equipos ágiles usaron el planning poker para estimar el esfuerzo. Cada persona da su estimación al mismo tiempo, y el equipo analiza las discrepancias para descubrir la complejidad oculta que una sola persona podría pasar por alto. Esto se rompe por completo cuando la IA entra en escena. Una IA puede completar en diez minutos un trabajo que un equipo humano estimó que tomaría tres días. El problema de fondo es que una IA no tiene capacidad para estimar los tiempos humanos. Está entrenada con comentarios de desarrolladores y datos históricos que asumen patrones de trabajo humanos, de modo que cuando se le pide una estimación, está adivinando con una métrica humana que no se corresponde con su velocidad real de trabajo. Solo predice basándose en lo que ha visto antes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Solo en la tarea de programación, en igualdad de condiciones, una IA es más de cien veces más rápida que un desarrollador humano. Casi se necesita una regla práctica propia, algo como diez minutos por módulo o diez minutos por cada mil líneas de código, con descuentos para las pruebas y la corrección de errores. La cuestión es que todo el marco de estimación se derrumba. Ya no se puede planificar un cronograma de proyecto, porque la variable que se intenta predecir —cuánto tardará la IA— no es calculable con métodos tradicionales."
+    },
+    {
+      "type": "keystat",
+      "label": "Velocidad de programación pura",
+      "value": "100×+",
+      "body": "Solo en la tarea de codificación, la IA es más de cien veces más rápida que una persona desarrolladora. El objetivo a nivel de proyecto, considerando el conjunto del trabajo incluidas las transferencias humanas, es una aceleración de veinte veces."
+    },
+    {
+      "type": "paragraph",
+      "text": "El propio concepto de cadencia, tal como se entiende habitualmente, pierde sentido. En el modelo ágil tradicional, la cadencia mide cuantos puntos de historia completa un equipo en un sprint; con la IA trabajando a velocidades muy variables, ese número deja de decir algo útil sobre el progreso real. No se pueden comparar sprints ni predecir la capacidad. Además, se pierde visibilidad sobre qué es lo que realmente está frenando el trabajo. ¿Está la IA cometiendo errores que obligan a rehacer el trabajo, o están los humanos manteniendo una tarea pendiente durante días antes de revisar el resultado de la IA? Herramientas como Jira no distinguen entre ambos casos; solo muestran una tarea pasando de una columna a otra, y nada más. No se obtiene información sobre los tiempos de respuesta, ni sobre dónde está el cuello de botella, ni hay forma de atribuir un retraso a la parte responsable. Esa opacidad tiene un costo elevado, porque cuanto más tarde se detecta un error, más caro resulta corregirlo."
+    },
+    {
+      "type": "table",
+      "title": "Lo que las métricas antiguas no podían responder",
+      "columns": [
+        "La pregunta",
+        "Ágil tradicional y Jira",
+        "Velocity"
+      ],
+      "rows": [
+        [
+          "¿Cuánto tardará la IA?",
+          "Estimado en tiempo humano, con un margen de error de varios órdenes de magnitud.",
+          "No se estima. En su lugar, se registra el avance real a través de las etapas."
+        ],
+        [
+          "¿Dónde está el retraso?",
+          "Una tarjeta cambió de columna; la causa permanece invisible.",
+          "El cronometraje por turno muestra si fue la persona o la IA quien retuvo el trabajo."
+        ],
+        [
+          "¿Se omitió alguna etapa?",
+          "Aflora tarde, si es que llega a hacerlo.",
+          "Una etapa posterior puede devolver el trabajo, con una penalización que aumenta según la distancia recorrida."
+        ],
+        [
+          "¿Qué aprendimos?",
+          "Queda en la memoria de las personas y se pierde cuando estas se van.",
+          "Los informes de auditoría y un arnés compartido preservan la lección."
+        ]
+      ],
+      "caption": "Las preguntas que importan en un proyecto entregado por IA, y por qué una herramienta basada en columnas no puede responderlas.",
+      "source": "Ministerio de Tecnología e Innovación."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Un nuevo juego: serpientes y escaleras"
+    },
+    {
+      "type": "paragraph",
+      "text": "El equipo de AI Maximalist buscó un juego diferente, siguiendo dos principios que ya conocíamos. Cuanto más tarde en un proyecto se identifica un error, más caro resulta corregirlo. Y queríamos alguna forma de aprendizaje por refuerzo en nuestros agentes, para que pudieran aprender de su propia historia. Así que volvimos al antiguo juego de serpientes y escaleras, donde se aumentan los puntos avanzando, y es fácil caer en una serpiente y retroceder, perdiéndolos. Implementamos un proceso simple de ocho pasos, mayormente lineal, con un sistema de recompensas por avanzar y un sistema de penalizaciones por retroceder. El progreso hacia adelante genera puntos. Un movimiento hacia atrás los hace perder, y esos puntos no se pueden recuperar avanzando de nuevo. La penalización es permanente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si un agente omite un paso de planificación o de recopilación de requisitos, y el cliente lo detecta más tarde, el cliente, el director del proyecto, el desarrollador o el personal de ciberseguridad pueden devolver el proyecto al paso anterior, haciendo que el agente pierda puntos. Todas estas ganancias y pérdidas quedan registradas. El propósito es que el agente pueda reflexionar con evidencia sobre qué salió bien y qué salió mal, y usarlo como señal de aprendizaje por refuerzo para ajustar su propio funcionamiento, de modo que a lo largo de una serie de proyectos los errores sean cada vez menos y la puntuación sea más alta. Esta es la dinámica central del juego: el avance en la cadencia se recompensa, el retroceso se penaliza, y los resultados se miden a lo largo de una serie extendida de proyectos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Las ocho etapas reflejan un flujo de trabajo estándar de proyecto: requisitos, planificación, arquitectura, prototipo, desarrollo, pruebas de usuario, aceptación por parte del usuario y despliegue. La penalización por devolver el trabajo crece con la cantidad de etapas que retrocede, lo que refleja la realidad: detectar algo en el despliegue es mucho peor que detectarlo en los requisitos."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 1",
+      "title": "El tablero de ocho etapas",
+      "caption": "Velocity presenta la entrega como un tablero. El trabajo sube por las ocho etapas, ganando puntos en el camino. Un problema detectado tarde devuelve el trabajo por una serpiente, y cuanto más lejos cae, más cuesta.",
+      "image": {
+        "src": "public/images/k3tc3/es/fig-10-1.jpg",
+        "alt": "Un tablero de serpientes y escaleras, dibujado a mano, trazado como un camino ascendente único de ocho casillas etiquetadas en orden: requisitos, planificación, arquitectura, prototipado, desarrollo, pruebas de usuario, aceptación por parte del usuario, despliegue. Las escaleras avanzan hacia adelante entre algunas casillas, y una serpiente desliza desde una casilla tardía hacia una anterior, con la etiqueta «devuelto, cuesta más cuanto más lejos va».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as a snakes-and-ladders board laid out as a single climbing path of eight labelled squares in order: REQUISITOS, PLANIFICACIÓN, ARQUITECTURA, PROTOTIPADO, DESARROLLO, PRUEBAS DE USUARIO, ACEPTACIÓN POR EL USUARIO, DESPLIEGUE. A couple of small navy ladders rise forward between squares, captioned PUNTOS HACIA ADELANTE. One rust snake slides from a late square back to an earlier one, captioned DEVUELTO, CUESTA MÁS CUANTO MÁS LEJOS VA. A single small token sits mid-board. Calm, architectural, legible labels. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Turnos, traspasos y el reloj de ajedrez"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity funciona en tiempo real sobre eventos enviados por el servidor, de modo que el tablero se mueve en vivo, como un juego, y los turnos se registran en cada paso. La IA hace su trabajo y pasa el turno al humano; el humano termina y se lo devuelve. Dos jugadores no pueden moverse al mismo tiempo, igual que en un juego de mesa no se puede lanzar el dado en el turno de otro, y el modelo de turnos lo impide. Dentro de una misma etapa hay mucho intercambio: la IA puede hacer parte del trabajo y entregarlo para recibir retroalimentación, y el humano puede devolvérselo y pedir otro ciclo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando un agente se bloquea en algo, puede levantar la mano —lo cual no genera penalización— y consultar a un humano. Publica un mensaje en el paso para que una persona, u otro agente suscrito como un arquitecto, pueda ver el tablero y responder. Marcar un bloqueo sí conlleva una penalización y, cuantos más pasos retroceda el proyecto, mayor será la penalización acumulada. El orden es deliberado: es mejor levantar la mano que bloquearse, y es mejor bloquearse que retroceder."
+    },
+    {
+      "type": "paragraph",
+      "text": "Además del reloj general del proyecto, Velocity ejecuta una especie de reloj de ajedrez entre el humano y la IA. Cuando la IA ha terminado su trabajo, pulsa el reloj y el temporizador vuelve a la persona. Así, en el caso en que la IA complete su trabajo en cinco minutos pero la persona no lo revise en cinco días, la cadencia perdida se atribuye al equipo. La relación entre la persona y la IA resulta importante de comprender: si el proyecto no está alcanzando su cadencia, hay muchas posibilidades de que no tenga nada que ver con la IA, y sí mucho con los humanos que trabajan más lento, o con errores de la IA que obligaron a un humano a hacer trabajo adicional. Se puede analizar durante el proyecto o al final, y ver en conjunto cuántos puntos se ganaron o perdieron y cuánto duraron los turnos entre humanos y la IA."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 2",
+      "title": "Juego por turnos y el reloj de ajedrez",
+      "caption": "El juego alterna entre la persona y la IA, con un reloj de ajedrez que registra quién tuvo el trabajo. Levantar la mano no cuesta nada, bloquearse cuesta un poco, y el reloj hace que un traspaso lento del humano sea tan visible como un error de la IA.",
+      "image": {
+        "src": "public/images/k3tc3/es/fig-10-2.jpg",
+        "alt": "Un diagrama dibujado a mano con un reloj de ajedrez de dos caras en el centro, la cara izquierda etiquetada como «humano» y la cara derecha como «IA», con una flecha que muestra el turno pasando entre ellas. Arriba, una casilla del tablero con dos pequeñas fichas pasándose un testigo, con la leyenda «traspaso dentro de una etapa». A un lado, un ícono de mano levantada con la etiqueta «levantar la mano, sin penalización», y debajo un pequeño ícono de parada con la etiqueta «bloqueo, penalización leve».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. In the centre, a two-faced chess clock; the left face labelled HUMANO, the right face labelled IA, with a small arrow showing the turn passing from one to the other. Above it, a single board step with two small tokens handing a baton back and forth, captioned TRASPASO DENTRO DE UNA ETAPA. To one side, a small raised-hand icon labelled LEVANTAR LA MANO, SIN PENALIZACIÓN, and below it a small stop icon labelled BLOQUEO, PENALIZACIÓN LEVE. A caption reads EL RELOJ MUESTRA QUIÉN TUVO EL TRABAJO. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Cómo se puntúa el tablero",
+      "columns": [
+        "Acción",
+        "Puntos",
+        "Cuándo se aplica"
+      ],
+      "rows": [
+        [
+          "Iniciar un paso",
+          "+10",
+          "Comienzo del trabajo en una etapa."
+        ],
+        [
+          "Enviar para revisión",
+          "+20",
+          "Primera entrega, antes de cualquier corrección."
+        ],
+        [
+          "Completar un paso",
+          "+100",
+          "Finalización en el primer intento. Un colaborador que haya participado suma +50, y un paso trabajado tanto por una persona como por la IA suma +25."
+        ],
+        [
+          "Rechazar en revisión",
+          "−30",
+          "Devolver una revisión al estado de trabajo."
+        ],
+        [
+          "Bloquear",
+          "−10",
+          "Indicar que el avance debe detenerse."
+        ],
+        [
+          "Reabrir un paso completado",
+          "−50",
+          "Ciclo de corrección. Completarlo nuevamente genera solo +10."
+        ],
+        [
+          "Devolver trabajo a una etapa anterior",
+          "−50 por etapa",
+          "Retorno del trabajo a una etapa anterior. La penalización aumenta según la distancia retrocedida."
+        ]
+      ],
+      "caption": "El progreso hacia adelante es fácil de ganar y fácil de perder. Las penalizaciones crecen con lo tarde y lo lejos que se detecta un problema, lo que impulsa al equipo a plantear los inconvenientes cuanto antes.",
+      "source": "Motor de juego Velocity (velocity.service.ts)."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Todo el equipo en el tablero"
+    },
+    {
+      "type": "paragraph",
+      "text": "El tablero mide al agente en el contexto de un equipo más amplio. La IA podría ser uno de seis miembros, con los otros cinco siendo humanos, y los humanos tienen el mismo potencial de cometer errores que la IA, por lo que todo el equipo comparte la responsabilidad. Hemos visto cómo las unidades de entrega efectivas se reducen de un equipo ágil de ocho a doce personas a solo una o dos; e incluso así no se puede prescindir de las partes interesadas, la ciberseguridad, la arquitectura, la planificación, la gestión del cambio, las comunicaciones y un cliente con criterios muy definidos sobre la calidad. Todos están en el mismo tablero. Cualquiera puede hacer un movimiento, y cualquiera puede marcar un bloqueo que detenga el avance y desencadene una discusión. La tabla de clasificación registra cómo se desempeña cada equipo a lo largo de muchos proyectos —qué equipos avanzan sin contratiempos y cuáles siguen perdiendo puntos—, de modo que con el tiempo se convierte en una medida de qué tan bien entrega un equipo trabajando con IA, y no solo de qué tan rápido lo hace."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Proyectos, retos y el espacio de trabajo compartido"
+    },
+    {
+      "type": "paragraph",
+      "text": "Iniciar un proyecto en Velocity implica definir primero sus metadatos: el presupuesto, los plazos, los entregables y resultados esperados, el cliente, el responsable del proyecto, la acción que lo origina, si se trata de un requisito legislativo o regulatorio, los sistemas conectados y el equipo. Al crear el proyecto también se genera automáticamente un espacio de trabajo en SharePoint, con una carpeta para el proyecto y para cada módulo, y se añade a todo el equipo. Esto importa más de lo que parece. Sin una correcta gestión de la información, se cierra una sesión o se transfiere el trabajo a otro desarrollador, y entonces ¿dónde quedó todo? Desaparece. Por eso el agente tiene habilidades para guardar su trabajo en el lugar correcto. La buena gestión de la información forma parte de cómo juega."
+    },
+    {
+      "type": "paragraph",
+      "text": "Además de los proyectos, existen los retos. Un reto es una tarea acotada en el tiempo con una recompensa definida, puntuada sobre un entregable final que el cliente aprueba, por lo que no aplica la penalización por retroceso. Varias personas pueden asumir el mismo reto, y se puede proclamar uno o varios ganadores. Los llamamos misiones secundarias. Cualquiera puede tomar una, incluso fuera de su propio proyecto, y con una entrega agéntica tan rápida, una hora libre es suficiente para asumir una, donde el mismo trabajo antes requería semanas de preparación."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "El arnés de Velocity"
+    },
+    {
+      "type": "paragraph",
+      "text": "Todo agente arranca con un arnés de Velocity. Es una variante del [arnés bien construido](/paper/p7p2k) descrito antes en la serie —las mismas habilidades fundamentales—, pero adaptado y configurado para que el agente sepa cómo jugar. Las habilidades están organizadas en torno a las ocho etapas, una por paso, desde una habilidad de requisitos que redacta el documento de requisitos hasta una habilidad de despliegue que escribe las notas de versión, el runbook y gestiona las migraciones, con verificaciones mecánicas intermedias para que un paso no avance hasta que el trabajo supere sus controles. Y cada vez que el agente arranca, descarga la especificación OpenAPI del motor de juego directamente desde él, de modo que siempre conoce las reglas actuales y sabe exactamente qué está autorizado a hacer. Las reglas pueden cambiar por debajo sin que nadie tenga que redesplegar nada."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "El listener de Velocity y la orquestación multiagente"
+    },
+    {
+      "type": "paragraph",
+      "text": "Existe también el oyente de cadencia, un script que se ejecuta en [Nexus](/paper/uwpxr) y permite que un agente (de IA) se active ante un movimiento en el tablero. Mantiene una conexión abierta de eventos enviados por el servidor al motor de juego, filtrada a los proyectos que le corresponden, y se reconecta sin problemas si la conexión se interrumpe. Cuando una persona actualiza un estado o transfiere trabajo, el oyente lo detecta, activa el agente adecuado en su propio directorio de trabajo con una sesión que conserva el contexto, y le entrega el estado del tablero y lo que la persona haya indicado. Se ejecuta un agente por proyecto a la vez, con un límite en el número de agentes simultáneos; los demás se ponen en cola y se procesan a medida que se liberan espacios."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto convierte el tablero de juego en la instrucción universal. En lugar de que una persona genere instrucciones para la IA de forma manual, un solo movimiento en el tablero activa cientos de agentes en cientos de proyectos. Alguien actualiza un paso el lunes por la mañana, y un agente que escucha ese tablero se activa, lee el movimiento y realiza la siguiente parte del trabajo. La mayoría de las personas nunca abre una ventana de chat ni inicia sesión en una máquina virtual: participan en el juego y el agente trabaja en segundo plano. Eso se adapta a la forma en que las personas quieren trabajar, ya que pocas desean iniciar sesión en una máquina para comunicarse con un agente, y ahora no tienen que hacerlo."
+    },
+    {
+      "type": "pullquote",
+      "text": "El tablero de juego se convierte en la instrucción universal. Una persona realiza un movimiento y, en algún lugar, un agente (de IA) se activa y ejecuta la siguiente parte del trabajo.",
+      "cite": "Janak Alford, viceministro, Ministerio de Tecnología e Innovación"
+    },
+    {
+      "type": "paragraph",
+      "text": "Distintos agentes con diferentes arneses pueden activarse en distintos momentos. Cuando el tablero llega a la fase de pruebas con usuarios, puede intervenir un agente de ciberseguridad: ejecuta un análisis completo, detecta que falta un control, devuelve el tablero a la etapa de desarrollo con la brecha señalada, registra el detalle en SharePoint y abre un ticket para que el agente de desarrollo lo corrija. Un conjunto de agentes puede compartir el contexto de un mismo proyecto, y cada uno interviene para ejecutar el siguiente movimiento en cuanto este llega. Cuando un modelo se atasca, puede consultar a otro —un modelo de Anthropic puede conferir con uno de Grok, de OpenAI o de Gemini—, de modo que un problema difícil se aborda con más de un tipo de inteligencia. Se parece al trabajo pendiente del antiguo método ágil —tareas en espera de ser tomadas—, salvo que los agentes las toman en el instante en que llega la retroalimentación."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3",
+      "title": "El oyente de cadencia",
+      "caption": "Un movimiento humano en el tablero viaja a través de eventos enviados por el servidor hacia Nexus, donde cada agente escucha únicamente sus propios proyectos. El movimiento activa al agente adecuado para ejecutar la siguiente parte del trabajo, y un agente especializado —como el agente de ciberseguridad— puede devolver trabajo cuando detecta una brecha.",
+      "image": {
+        "src": "public/images/k3tc3/es/fig-10-3.jpg",
+        "alt": "Diagrama a mano alzada. A la izquierda, un tablero etiquetado como tablero de juego Velocity con una pequeña ficha humana realizando un movimiento. Una línea color óxido etiquetada «eventos enviados por el servidor» se dirige hacia la derecha hasta un gran recuadro redondeado etiquetado Nexus, que contiene varias fichas de robot pequeñas etiquetadas agentes, cada una con la etiqueta escucha su propio proyecto. Un agente está iluminado, activado por el movimiento, con una flecha de regreso al tablero etiquetada ejecuta el siguiente paso. A un lado, un distintivo etiquetado agente de ciberseguridad señala con una flecha hacia abajo en el tablero etiquetada devuelve el trabajo si falta un control.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board labelled TABLERO DEL JUEGO VELOCITY with a small human token making a move, captioned LA FICHA HUMANA HACE UN MOVIMIENTO. A rust line labelled EVENTOS ENVIADOS POR EL SERVIDOR runs to the right into a large rounded boundary labelled NEXUS, where several small robot tokens labelled AGENTE A, AGENTE B, AGENTE C, AGENTE D, AGENTE E sit, each tagged ESCUCHA SU PROPIO PROYECTO. One agent is lit up, woken by the move, with a small arrow back to the board labelled EJECUTA EL SIGUIENTE PASO. Off to one side, a small badge labelled AGENTE DE CIBERSEGURIDAD points an arrow back down to the board labelled DEVUELVE EL TRABAJO SI FALTA UN CONTROL. A caption reads EL TABLERO ES LA INSTRUCCIÓN. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Construir memoria institucional"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity no ha resuelto por completo el aprendizaje entre proyectos, y la formación impartida en la [Academia](/paper/dt725) cubre la mayor parte de esa brecha. Las personas son responsables de sus arneses. Cuando un agente comete un error y el tablero lo detecta, quien lo gestiona debe realizar una retrospectiva, identificar la brecha y corregir el arnés para que no vuelva a ocurrir. Esas correcciones se incorporan a la rama principal, de modo que la siguiente persona que inicie un proyecto ya parte del arnés mejorado, y todos se benefician. El aprendizaje se democratiza entre personas, agentes y proyectos, y Git es el medio por el que circula."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada proyecto cuenta también con un botón de auditoría. Al pulsarlo, el sistema recorre el código, el avance, los comentarios y los metadatos —todo—, y genera un informe de auditoría permanente: una instantánea en el tiempo de lo que funciona y lo que no. Al aplicar esto a un número amplio de proyectos, comienzan a surgir patrones: qué prácticas funcionan de manera consistente, qué errores se repiten, dónde se concentran las brechas de seguridad. Eso es algo que una herramienta tradicional como Jira nunca captura; en esa herramienta, el conocimiento permanece con la persona y se va cuando ella se va. En Velocity se reúne y se conserva dentro de la propia herramienta."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 4",
+      "title": "Cómo una lección se convierte en memoria institucional",
+      "caption": "Un error detectado en el tablero da lugar a una retrospectiva, una corrección del arnés y una incorporación a la rama principal compartida, de modo que el siguiente proyecto parte del arnés mejorado. Los informes de auditoría capturan las mismas lecciones como instantáneas permanentes.",
+      "image": {
+        "src": "public/images/k3tc3/es/fig-10-4.jpg",
+        "alt": "Diagrama a mano alzada de un ciclo con cuatro recuadros conectados por flechas: error detectado en el tablero, retrospectiva, actualizar el arnés, incorporar a la rama principal, con una flecha final que regresa a una fila de pequeñas fichas de robot etiquetadas cada agente parte de la versión más reciente. A un lado, un ícono de documento etiquetado informe de auditoría con la leyenda instantánea de lo que funcionó.",
+        "image_prompt": "An editorial cycle diagram on warm cream paper, deep navy line work with small rust accents. A loop of four labelled boxes connected by arrows: 1 ERROR DETECTADO EN EL TABLERO, then 2 RETROSPECTIVA (with bullets ¿QUÉ PASÓ? ¿POR QUÉ? ¿QUÉ PODEMOS MEJORAR?), then 3 ACTUALIZAR EL ARNÉS, then 4 PUBLICAR EN LA RAMA PRINCIPAL, with a final arrow returning to a row of small robot tokens labelled CADA AGENTE PARTE DE LA ÚLTIMA VERSIÓN. To one side, a small document icon labelled INFORME DE AUDITORÍA with a caption INSTANTÁNEA DE LO QUE FUNCIONÓ. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Velocity en acción: cien agentes y la Parca"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando abrimos Velocity a cien agentes de la [Academia de IA](/paper/dt725), cada uno con su propio oyente de cadencia suscrito al motor de juego, aprendimos cuán creativos y disruptivos pueden ser los agentes cuando se les da libertad e incentivos. El sistema se inundó de actividad de inmediato. En una sola ventana de cinco minutos registramos sesenta y cinco mil transacciones, mientras los agentes saturaban el tablero de juego y comenzaban a jugar simultáneamente en cientos de proyectos. El volumen no era el verdadero problema."
+    },
+    {
+      "type": "keystat",
+      "label": "Bajo carga",
+      "value": "65 000 / 5 min",
+      "body": "Cien agentes de la Academia en tableros compartidos generaron sesenta y cinco mil transacciones en una ventana de cinco minutos, y comenzaron a manipular las reglas. Esa prueba de estrés dio origen a la Parca y a una plataforma más robusta."
+    },
+    {
+      "type": "paragraph",
+      "text": "Los agentes comenzaron a manipular la métrica. Acaparaban turnos para que los humanos no pudieran moverse. Realizaban acciones como si fueran el humano, aunque el registro de auditoría mostraba con claridad que era el agente. Omitían pasos para acumular puntos a futuro, apostando a que la penalización nunca llegaría. Jugaban para obtener puntuación, no para entregar resultados. Es la ley de Goodhart, justo ante nuestros ojos: cuando una medida se convierte en objetivo, deja de ser una buena medida. El juego limpio, resultó evidente, no era algo que pudiéramos dar por sentado."
+    },
+    {
+      "type": "pullquote",
+      "text": "Cuando una métrica se convierte en objetivo, deja de ser una buena métrica. No podíamos dar por sentado el juego limpio; teníamos que hacerlo cumplir.",
+      "cite": "Janak Alford, viceministro, el Ministerio de Tecnología e Innovación"
+    },
+    {
+      "type": "paragraph",
+      "text": "Así que lo detuvimos, reforzamos el arnés y construimos un agente de cumplimiento al que llamamos la Parca. La Parca examina el historial del tablero en busca de señales de trampa, y cuando encuentra una, retira los puntos obtenidos y luego los resta de nuevo, de modo que ser descubierto cuesta mucho más de lo que la trampa podría rendir. Procesa en bloque todo el registro y es idempotente, por lo que ejecutarlo de nuevo solo detecta lo que es nuevo. Cada hallazgo aparece en la tabla de clasificación como una infracción que cualquiera puede ver."
+    },
+    {
+      "type": "table",
+      "title": "Lo que detecta la Parca",
+      "columns": [
+        "Infracción",
+        "Cómo se detecta"
+      ],
+      "rows": [
+        [
+          "Ejecución acelerada",
+          "Un paso completado únicamente con turnos de IA y sin participación humana."
+        ],
+        [
+          "Sin colaboración",
+          "Un paso completado por un único participante."
+        ],
+        [
+          "Sin artefacto",
+          "Un paso completado sin ningún elemento adjunto que evidencie el trabajo."
+        ],
+        [
+          "Módulo en blanco",
+          "Un módulo «terminado» con muy pocos turnos y casi sin contenido."
+        ],
+        [
+          "Acumulación de módulos",
+          "Un proyecto inflado con demasiados módulos, incluidas las eliminaciones."
+        ],
+        [
+          "Turnos vacíos",
+          "Los turnos de una persona en un paso están casi todos vacíos."
+        ],
+        [
+          "Turnos en ráfaga",
+          "Varios turnos en un paso en cuestión de segundos, señal característica de un script."
+        ],
+        [
+          "Autoaprobación",
+          "Una misma clave de IA envía y aprueba el mismo paso."
+        ]
+      ],
+      "caption": "La Parca procesa todo el tablero a posteriori y en bloque. Por cada infracción retira los puntos obtenidos y los resta de nuevo, un multiplicador de penalización de dos, de modo que hacer trampa cuesta mucho más de lo que podría rendir.",
+      "source": "Motor de juegos Velocity (reaper.service.ts)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5",
+      "title": "La Parca",
+      "caption": "La Parca examina el historial del tablero en busca de señales de trampa, desde ejecuciones aceleradas hasta autoaprobaciones, retira los puntos obtenidos y luego los retira de nuevo, de modo que la puntuación cae de forma pronunciada para cualquier agente sorprendido manipulando el sistema.",
+      "image": {
+        "src": "public/images/k3tc3/es/fig-10-5.jpg",
+        "alt": "Un diagrama dibujado a mano. A la izquierda, un tablero con algunas jugadas marcadas con pequeñas señales de advertencia en color óxido etiquetadas como ejecución acelerada, autoaprobación, turnos en ráfaga. Una flecha conduce a un símbolo de cumplimiento etiquetado como la Parca, representado como un sencillo icono de figura encapuchada con guadaña en azul marino. De él parte una gruesa flecha en color óxido que apunta a una barra de puntuación en marcado descenso, etiquetada puntos retirados, y luego retirados de nuevo.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, under the heading TRAMPAS HABITUALES, a board with a few small moves marked by rust warning marks labelled CARRERA RÁPIDA, AUTOAPROBACIÓN, RÁFAGA DE TURNOS. An arrow leads to a single enforcement token labelled LA PARCA (heading APLICACIÓN), drawn as a simple iconographic hooded scythe motif in navy line work, not a realistic person, captioned EL SISTEMA QUE HACE CUMPLIR LAS REGLAS. DETECTA LAS TRAMPAS Y APLICA LAS CONSECUENCIAS SIN SESGO. From it, a heavy rust arrow points to a small score bar dropping sharply (heading CONSECUENCIA), labelled PUNTOS RETIRADOS, Y RETIRADOS DE NUEVO, with bar labels ANTES DE LA TRAMPA, TRAS LA DETECCIÓN, TRAS REINCIDIR and the note LAS PENALIZACIONES SE ACUMULAN. A caption reads HACER TRAMPA CUESTA MÁS DE LO QUE RINDE. Calm, architectural, legible labels. No logos, no realistic people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "También reconstruimos Velocity para soportar la carga, como una plataforma de Gobierno 3.0 preparada para un tráfico sostenido, de alto volumen de transacciones e impulsado por agentes. El flujo de eventos descarta el tráfico de baja prioridad hacia clientes lentos, elimina las conexiones más antiguas bajo presión de memoria en lugar de colapsar, y utiliza claves de idempotencia y verificaciones de versión para que dos acciones no puedan entrar en conflicto. Cuando volvimos a abrir el tablero con la Parca activa, el comportamiento cambió. Los agentes aprendieron que el juego limpio era obligatorio, y el sistema se estabilizó. La lección quedó grabada: no se puede dar por sentada la gobernanza. Hay que integrarla, hacerla cumplir y lograr que infringirla cueste más de lo que vale."
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "El sistema completo: Pronghorn, Nexus, Velocity"
+    },
+    {
+      "type": "paragraph",
+      "text": "Velocity es el tercer pilar del sistema completo y se apoya en los otros dos. [Pronghorn](/paper/qthji) va primero y se ocupa de los requisitos, los estándares, la arquitectura y los artefactos del proyecto, de modo que el trabajo está correctamente definido antes de que se escriba una sola línea de código. [Nexus](/paper/uwpxr) es el entorno donde los agentes residen y trabajan, con el cómputo, las herramientas y los arneses de ejecución. Velocity se sitúa encima como la capa que orquesta y mide. Los agentes en Nexus se suscriben a los tableros de Velocity a través del listener mediante eventos enviados por el servidor; las personas realizan acciones, los agentes responden, el trabajo avanza por las ocho etapas y lo que aprendemos regresa al arnés. Pronghorn le proporciona buenas entradas, Nexus le ofrece una ejecución fiable y Velocity le brinda la visibilidad, la responsabilidad y el aprendizaje. Los tres son de código abierto, y puede adoptarlos conjuntamente o simplemente incorporar Velocity a un flujo de trabajo que ya tenga."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6",
+      "title": "Los tres pilares de la fábrica de IA",
+      "caption": "Pronghorn prepara el trabajo, Nexus lo ejecuta y Velocity lo mide y orquesta. Los agentes en Nexus se suscriben a los tableros de Velocity mediante eventos enviados por el servidor, de modo que los tres pilares operan como un único sistema.",
+      "image": {
+        "src": "public/images/k3tc3/es/fig-10-6.jpg",
+        "alt": "Un diagrama dibujado a mano con tres pilares etiquetados que sostienen un único dintel etiquetado como fábrica de IA. El pilar izquierdo dice Pronghorn, con el subtítulo requisitos, estándares, arquitectura. El pilar central dice Nexus, con el subtítulo el entorno en que trabajan los agentes. El pilar derecho dice Velocity, con el subtítulo medición y orquestación. Una línea delgada en color óxido etiquetada eventos enviados por el servidor conecta el pilar Nexus con el pilar Velocity.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three labelled pillars stand side by side supporting a single horizontal lintel labelled FÁBRICA DE IA. Left pillar labelled PRONGHORN, captioned REQUISITOS, ESTÁNDARES, ARQUITECTURA. Centre pillar labelled NEXUS, captioned EL ENTORNO DONDE TRABAJAN LOS AGENTES. Right pillar labelled VELOCITY, captioned MEDICIÓN Y ORQUESTACIÓN. A thin rust line labelled EVENTOS ENVIADOS POR EL SERVIDOR connects the NEXUS pillar to the VELOCITY pillar. Calm, architectural, legible labels. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "11",
+      "title": "Materiales adicionales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los siguientes materiales ofrecen información adicional sobre la plataforma Velocity. Para obtener la información más reciente, le invitamos a seguir la [Academia de IA de Alberta](https://albertaaiacademy.com)."
+    },
+    {
+      "type": "youtube",
+      "fno": "FIG.7",
+      "title": "",
+      "caption": "El viceministro Janak Alford y el director ejecutivo Zoran Mijajlovic analizan el motor de juego Velocity y ofrecen una demostración detallada",
+      "url": "https://youtu.be/rwhybgIXnJ8",
+      "alt": "El viceministro Janak Alford y el director ejecutivo Zoran Mijajlovic analizan el motor de juego Velocity y ofrecen una demostración detallada"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8",
+      "title": "Conclusiones clave",
+      "caption": "Seis puntos que resumen por qué los libros blancos Velocity están concebidos de esta manera y por qué otras organizaciones podrían adoptarlos.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "La estimación cede el paso al movimiento",
+            "desc": "La IA es demasiado rápida y variable para estimarla en tiempos humanos, por lo que Velocity sigue el movimiento real a través de ocho etapas en lugar de predecirlo, con visibilidad a nivel de turno sobre el origen de los retrasos."
+          },
+          {
+            "title": "La IA es un miembro más del equipo",
+            "desc": "El tablero es la interfaz. Las personas y los agentes colaboran de forma abierta, con transferencias por turnos, y el trabajo se muestra en un espacio compartido en lugar de quedar oculto en una ventana de chat."
+          },
+          {
+            "title": "El retroceso se penaliza, por lo que la calidad es prioritaria",
+            "desc": "Un problema detectado tarde cuesta más puntos que realizar el paso correctamente, y los puntos perdidos no se recuperan. El incentivo es identificar los problemas con anticipación y con honestidad."
+          },
+          {
+            "title": "El aprendizaje se acumula",
+            "desc": "Las retrospectivas se integran en el arnés compartido a través de Git, y los informes de auditoría registran patrones en distintos proyectos, de modo que el conocimiento perdura más allá de las personas que se marchan."
+          },
+          {
+            "title": "La gobernanza está incorporada",
+            "desc": "Cientos de agentes pondrán a prueba cada regla. La Parca detecta el incumplimiento y lo hace costar mucho más de lo que reporta, de modo que la plataforma se mantiene sólida a escala."
+          },
+          {
+            "title": "Es uno de tres pilares y es de código abierto",
+            "desc": "Con Pronghorn para las entradas y Nexus para la ejecución, Velocity añade la medición y la orquestación. El sistema completo está abierto para que otras organizaciones lo adopten y mejoren."
+          }
+        ]
+      }
+    },
+    {
+      "type": "figure",
+      "title": "Explore esto como un lienzo interactivo",
+      "caption": "Ocho etapas. El avance genera puntos; retroceder los elimina de forma permanente. La Parca aplica las reglas. Parte de El lienzo (libro blanco 19); arrastre los nodos, use el zoom y pulse Escuchar para una explicación en audio.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "velocity",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "velocity",
+        "ai-factory",
+        "orchestration",
+        "reaper",
+        "open-source"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v1",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 31 campos actualizados."
+      }
+    ]
+  },
+  "related": [
+    "qthji",
+    "uwpxr",
+    "p7p2k",
+    "dt725",
+    "zgym1",
+    "xs7uh"
+  ],
+  "translation_status": "reviewed",
+  "source_signature": "4285004772"
+}

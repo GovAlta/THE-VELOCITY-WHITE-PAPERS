@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "fr",
+  "slot": "fig-01",
+  "out_path": "public\\images\\wp-08\\fr\\fig-01-workbench.jpg",
+  "bytes_jpg": 284935,
+  "bytes_png_source": 2920574,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T11:03:06.085Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of a workbench viewed from above. A simple wooden frame sits in the centre and holds a partially built application diagram, drawn as a few connected boxes. Around the frame, five labelled compartments hold props: a small contract scroll labelled CLAUDE.md, a stack of drawers labelled SKILLS, a small gate labelled HOOKS, a shield labelled CYBER, and a circular dial labelled EVALS. The compartments are arranged in a clear ring around the central frame. Hand-drawn lines, navy and rust on warm cream paper, calm and architectural. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of a workbench viewed from above. A simple wooden frame sits in the centre and holds a partially built application diagram, drawn as a few connected boxes. Around the frame, five labelled compartments hold props: a small contract scroll labelled CLAUDE.md, a stack of drawers labelled SKILLS, a small gate labelled HOOKS, a shield labelled CYBER, and a circular dial labelled EVALS. The compartments are arranged in a clear ring around the central frame. Hand-drawn lines, navy and rust on warm cream paper, calm and architectural. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wp-08\\en\\fig-01-workbench.source.png"
+}

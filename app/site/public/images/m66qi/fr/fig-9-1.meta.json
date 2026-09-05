@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "fr",
+  "slot": "fig-06",
+  "out_path": "public\\images\\m66qi\\fr\\fig-9-1.jpg",
+  "bytes_jpg": 182274,
+  "bytes_png_source": 2180201,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-19T13:36:00.019Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "Illustration éditoriale d'un filtre passe-haut pour les soumissions, où l'IA évalue la qualité des offres et les intègre dans une structure de carte des capacités opérationnelles gouvernementales en trois dimensions. Une impression de filtre qui favorise la preuve sur la présentation. Palette crème Alberta atténuée, accents marine et rouille, qualité d'impression d'archives, sans texte. Toutes les étiquettes textuelles en français canadien. Reproduire fidèlement la composition de l'image source ; seules les étiquettes textuelles changent.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: Illustration éditoriale d'un filtre passe-haut pour les soumissions, où l'IA évalue la qualité des offres et les intègre dans une structure de carte des capacités opérationnelles gouvernementales en trois dimensions. Une impression de filtre qui favorise la preuve sur la présentation. Palette crème Alberta atténuée, accents marine et rouille, qualité d'impression d'archives, sans texte. Toutes les étiquettes textuelles en français canadien. Reproduire fidèlement la composition de l'image source ; seules les étiquettes textuelles changent.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\m66qi\\en\\fig-9-1.source.png"
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "rhx4t",
+  "locale": "fr",
+  "slot": "fig-05",
+  "out_path": "public\\images\\rhx4t\\fr\\fig-11-5.jpg",
+  "bytes_jpg": 218695,
+  "bytes_png_source": 2710039,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-23T12:05:55.916Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration of three ascending steps or tiers reading left to right as a progression. The lowest and largest step shows a heavy, slow multi-year vendor contract drawn as a massive ledger; the middle step shows a mid-size product team as a small cluster of figures; the highest step shows a compact, fast AI factory line. Each step is smaller in cost yet higher in output than the one before, suggesting an order-of-magnitude jump. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos, no people faces. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial illustration of three ascending steps or tiers reading left to right as a progression. The lowest and largest step shows a heavy, slow multi-year vendor contract drawn as a massive ledger; the middle step shows a mid-size product team as a small cluster of figures; the highest step shows a compact, fast AI factory line. Each step is smaller in cost yet higher in output than the one before, suggesting an order-of-magnitude jump. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos, no people faces. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\rhx4t\\en\\fig-11-5.source.png"
+}

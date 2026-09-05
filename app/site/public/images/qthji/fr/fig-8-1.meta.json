@@ -1,0 +1,17 @@
+{
+  "paper_id": "qthji",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\qthji\\fr\\fig-8-1.jpg",
+  "bytes_jpg": 119508,
+  "bytes_png_source": 2235621,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:02:30.592Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three rounded boxes in a row, left to right, joined by curved arrows. The first box, drawn with a rust outline to emphasise it, is labelled PRONGHORN with a smaller word « CONCEPTION » beneath. The second box is labelled NEXUS with « CONSTRUCTION » beneath. The third box is labelled VELOCITY with « MESURE » beneath. A small caption under the row reads « TROIS ÉTAPES, UNE SEULE CHAÎNE DE MONTAGE ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. Three rounded boxes in a row, left to right, joined by curved arrows. The first box, drawn with a rust outline to emphasise it, is labelled PRONGHORN with a smaller word « CONCEPTION » beneath. The second box is labelled NEXUS with « CONSTRUCTION » beneath. The third box is labelled VELOCITY with « MESURE » beneath. A small caption under the row reads « TROIS ÉTAPES, UNE SEULE CHAÎNE DE MONTAGE ». Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\qthji\\en\\fig-8-1.source.png"
+}

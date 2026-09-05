@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "es",
+  "slot": "fig-10",
+  "out_path": "public\\images\\l5wsi\\es\\fig-10.jpg",
+  "bytes_jpg": 177429,
+  "bytes_png_source": 2403301,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:05:01.637Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A large shield outline containing a neat checklist of ten rows: A01 CONTROL DE ACCESO — RBAC; A02 CRIPTOGRAFÍA — RS256 + HASH; A03 INYECCIÓN — SQL PARAMETRIZADO; A04 DISEÑO INSEGURO — CSRF POR DEFECTO; A05 CONFIGURACIÓN — ENCABEZADOS ESTRICTOS; A06 COMPONENTES — DEPENDENCIAS FIJADAS; A07 AUTENTICACIÓN — TOKENS CORTOS; A08 INTEGRIDAD — FIRMAS VERIFICADAS; A09 REGISTRO — TRAZA DE AUDITORÍA; A10 SSRF — SEÑALADO. Rows A01 through A09 each have a small navy check mark; A10 has a small rust tag reading N/A. Title above the shield reads OWASP TOP 10 · ASVS NIVEL 2. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A large shield outline containing a neat checklist of ten rows: A01 CONTROL DE ACCESO — RBAC; A02 CRIPTOGRAFÍA — RS256 + HASH; A03 INYECCIÓN — SQL PARAMETRIZADO; A04 DISEÑO INSEGURO — CSRF POR DEFECTO; A05 CONFIGURACIÓN — ENCABEZADOS ESTRICTOS; A06 COMPONENTES — DEPENDENCIAS FIJADAS; A07 AUTENTICACIÓN — TOKENS CORTOS; A08 INTEGRIDAD — FIRMAS VERIFICADAS; A09 REGISTRO — TRAZA DE AUDITORÍA; A10 SSRF — SEÑALADO. Rows A01 through A09 each have a small navy check mark; A10 has a small rust tag reading N/A. Title above the shield reads OWASP TOP 10 · ASVS NIVEL 2. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\l5wsi\\en\\fig-10.source.png"
+}

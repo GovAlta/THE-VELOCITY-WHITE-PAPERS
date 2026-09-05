@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-08",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-8.jpg",
+  "bytes_jpg": 137453,
+  "bytes_png_source": 2233566,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T04:02:25.374Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un organigramme : une boîte de recherche contenant l’expression délais d’approbation discrétionnaires à gauche, une flèche étiquetée transformer en une empreinte numérique, une flèche vers un cylindre de base de données étiqueté index de similarité, puis une flèche en sortie vers une courte liste classée de cartes de résultats provenant de différentes sources, chacune avec un score de proximité tel que 0,74, 0,71, 0,68.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un organigramme : une boîte de recherche contenant l’expression délais d’approbation discrétionnaires à gauche, une flèche étiquetée transformer en une empreinte numérique, une flèche vers un cylindre de base de données étiqueté index de similarité, puis une flèche en sortie vers une courte liste classée de cartes de résultats provenant de différentes sources, chacune avec un score de proximité tel que 0,74, 0,71, 0,68.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-8.source.png"
+}

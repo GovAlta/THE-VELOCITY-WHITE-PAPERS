@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "es",
+  "slot": "fig-11",
+  "out_path": "public\\images\\wq3kd\\es\\fig-21-11.jpg",
+  "bytes_jpg": 212634,
+  "bytes_png_source": 1767630,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:13:40.880Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.",
+  "image_prompt": "A diagram in two parts. On the left, under the heading 1. ANÁLISIS CON CUATRO LENTES DE TRÁMITES BUROCRÁTICOS, a single card labelled Una sección de Alberta with a fan of arrows reaching ten small cards labelled JURISDICCIONES PARES (Columbia Británica, Saskatchewan, Manitoba, Ontario, Quebec, Nuevo Brunswick, Nueva Escocia, Isla del Príncipe Eduardo, Terranova y Labrador, Yukón), each with a score, and the arrows pass through a four-stripe funnel labelled CUATRO LENTES (NECESIDAD, DISEÑO, EJECUCIÓN, IMPACTO), producing a card labelled HALLAZGO. On the right, under the heading 2. MAPA DE CALOR DE TRÁMITES POR PARTE DE LA LEY, a heat-map grid with rows labelled PARTES DE LA LEY (Parte 1 Preliminar, Parte 2 Marco regulatorio, Parte 3 Permisos y autorizaciones, Parte 4 Cumplimiento y aplicación, Parte 5 Apelaciones y revisiones, Parte 6 Disposiciones varias, Anexos) and columns labelled JURISDICCIONES, the cells shaded from light to dark, with a legend PUNTUACIÓN DE TRÁMITES (0–100) · MÁS ALTO = MÁS TRÁMITES. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.\n\nSubject: A diagram in two parts. On the left, under the heading 1. ANÁLISIS CON CUATRO LENTES DE TRÁMITES BUROCRÁTICOS, a single card labelled Una sección de Alberta with a fan of arrows reaching ten small cards labelled JURISDICCIONES PARES (Columbia Británica, Saskatchewan, Manitoba, Ontario, Quebec, Nuevo Brunswick, Nueva Escocia, Isla del Príncipe Eduardo, Terranova y Labrador, Yukón), each with a score, and the arrows pass through a four-stripe funnel labelled CUATRO LENTES (NECESIDAD, DISEÑO, EJECUCIÓN, IMPACTO), producing a card labelled HALLAZGO. On the right, under the heading 2. MAPA DE CALOR DE TRÁMITES POR PARTE DE LA LEY, a heat-map grid with rows labelled PARTES DE LA LEY (Parte 1 Preliminar, Parte 2 Marco regulatorio, Parte 3 Permisos y autorizaciones, Parte 4 Cumplimiento y aplicación, Parte 5 Apelaciones y revisiones, Parte 6 Disposiciones varias, Anexos) and columns labelled JURISDICCIONES, the cells shaded from light to dark, with a legend PUNTUACIÓN DE TRÁMITES (0–100) · MÁS ALTO = MÁS TRÁMITES. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-11.source.png"
+}

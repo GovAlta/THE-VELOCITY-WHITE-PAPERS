@@ -1,0 +1,17 @@
+{
+  "paper_id": "oxj36",
+  "locale": "en",
+  "slot": "fig-07",
+  "out_path": "public\\images\\oxj36\\en\\fig-13-7.jpg",
+  "bytes_jpg": 122880,
+  "bytes_png_source": 2339404,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-07T23:26:47.003Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A central hub labelled GOVERNANCE connects by straight spokes to six outer nodes labelled DELIVERY. Three of the spokes carry small tags reading DATA, PROCUREMENT, and SOLUTIONING. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. A central hub labelled GOVERNANCE connects by straight spokes to six outer nodes labelled DELIVERY. Three of the spokes carry small tags reading DATA, PROCUREMENT, and SOLUTIONING. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

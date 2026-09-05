@@ -1,0 +1,2941 @@
+{
+  "_note": "Solution Landscape canvas dataset. Each scene is a real node-graph architecture diagram: groups (regions), nodes (typed: system/legacy/agent/review/service/data/gateway/module/stage/infra/human/future/approach), and edges (kind: flow/dep/data/ctrl, optional label, optional dir 'h'|'v' to force the connection axis, optional animated for a flowing dot). Node x,y are top-left in a 1280x820 space; the engine fits and lets the reader drag/pan/zoom. title/blurb/narrative carry {en,fr}; node labels and detail are plain strings and read in both locales until translated. The narrative is the accessible description and the audio script. Downloadable, editable source for the canvas in paper xs7uh; scenes embed individually via canvas:scene.",
+  "version": "3",
+  "title": {
+    "en": "The Solution Landscape",
+    "fr": "Le paysage de la solution",
+    "es": "El panorama de soluciones"
+  },
+  "scenes": [
+    {
+      "id": "estate",
+      "kind": "graph",
+      "paper": "bbkac",
+      "title": {
+        "en": "The legacy estate, scanned",
+        "fr": "Le parc hérité, balayé",
+        "es": "El parque tecnológico heredado, analizado"
+      },
+      "blurb": {
+        "en": "Agentic reconnaissance reads the whole GitHub estate, one repository at a time, and reports the ground truth.",
+        "fr": "Une reconnaissance agentique lit tout le parc GitHub, un dépôt à la fois.",
+        "es": "La exploración agéntica lee todo el patrimonio tecnológico en GitHub, repositorio por repositorio, e informa sobre la situación real."
+      },
+      "narrative": {
+        "en": "This scene shows the Government of Alberta's legacy software estate being read by Git Insights. On the left, the GitHub estate: about four hundred sixty-six million lines of code across roughly three thousand four hundred repositories, with eight thousand contributors and nearly nine hundred fifty thousand commits over eight years. A two-tier scan reads it: deterministic code clones and counts each repository and finds known-bad patterns, then an AI judgment pass grades health and must cite an exact file and line. About fifty agents read the whole estate in roughly twenty hours for less than two thousand dollars. On the right, the outputs: health scores, a business-capability canvas, and a disposition for each system, keep, invest, migrate, or retire.",
+        "fr": "Cette scène montre le parc logiciel hérité du gouvernement de l’Alberta lu par Git Insights. À gauche, le parc GitHub : environ quatre cent soixante-six millions de lignes de code réparties dans à peu près trois mille quatre cents dépôts, avec huit mille contributeurs et près de neuf cent cinquante mille validations sur huit ans. Un balayage à deux niveaux le lit : un clonage déterministe compte chaque dépôt et repère les motifs reconnus comme problématiques, puis une passe de jugement par l’IA évalue l’état de santé et doit citer un fichier et une ligne exacts. Environ cinquante agents lisent tout le parc en à peu près vingt heures pour moins de deux mille dollars. À droite, les résultats : des scores de santé, un canevas des capacités d’affaires et une disposition pour chaque système, à savoir conserver, investir, migrer ou retirer.",
+        "es": "Esta escena muestra cómo Git Insights lee el patrimonio de software heredado del Gobierno de Alberta. A la izquierda, el patrimonio en GitHub: aproximadamente cuatrocientos sesenta y seis millones de líneas de código distribuidas en cerca de tres mil cuatrocientos repositorios, con ocho mil colaboradores y casi novecientas cincuenta mil confirmaciones a lo largo de ocho años. El análisis se realiza en dos niveles: primero, una exploración determinista que clona y cuenta cada repositorio y detecta patrones problemáticos conocidos; luego, una fase de evaluación asistida por la IA que califica la salud de cada repositorio y debe citar el archivo y la línea exactos. Aproximadamente cincuenta agentes de IA leen todo el patrimonio en unas veinte horas por menos de dos mil dólares. A la derecha, los resultados: puntuaciones de salud, un mapa de capacidades de negocio y una disposición para cada sistema: conservar, invertir, migrar o retirar."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "gi",
+            "label": {
+              "en": "Git Insights · ~50 agents",
+              "fr": "Git Insights · ~50 agents",
+              "es": "Git Insights · ~50 agentes"
+            },
+            "x": 360,
+            "y": 190,
+            "w": 250,
+            "h": 380,
+            "color": "#B23F15"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "estate",
+            "type": "legacy",
+            "label": {
+              "en": "GitHub estate",
+              "fr": "Parc GitHub",
+              "es": "Patrimonio en GitHub"
+            },
+            "sub": {
+              "en": "~3,400 repositories · 8 yrs",
+              "fr": "~3 400 dépôts · 8 ans",
+              "es": "~3 400 repositorios · 8 años"
+            },
+            "metric": "466M LOC",
+            "x": 60,
+            "y": 360,
+            "detail": {
+              "en": "The whole legacy estate: 466,792,649 lines of code across ~3,400 repositories, 8,178 contributors, 948,571 commits, 145,486 pull requests, read one repository at a time.",
+              "fr": "Tout le parc hérité : 466 792 649 lignes de code réparties dans ~3 400 dépôts, 8 178 contributeurs, 948 571 validations, 145 486 demandes de tirage, lues un dépôt à la fois.",
+              "es": "Todo el patrimonio heredado: 466 792 649 líneas de código en ~3 400 repositorios, 8 178 colaboradores, 948 571 confirmaciones, 145 486 solicitudes de incorporación, leídas repositorio por repositorio."
+            }
+          },
+          {
+            "id": "det",
+            "type": "service",
+            "label": {
+              "en": "Deterministic scan",
+              "fr": "Balayage déterministe",
+              "es": "Exploración determinista"
+            },
+            "sub": {
+              "en": "clone · count · find patterns",
+              "fr": "cloner · compter · repérer les motifs",
+              "es": "clonar · contar · detectar patrones"
+            },
+            "x": 390,
+            "y": 230,
+            "detail": {
+              "en": "Lists files, frameworks, and dependencies and flags known-bad patterns. Same input, same output. Feeds the judgment pass.",
+              "fr": "Répertorie les fichiers, les cadriciels et les dépendances et signale les motifs reconnus comme problématiques. Même entrée, même sortie. Alimente la passe de jugement.",
+              "es": "Lista archivos, marcos de trabajo y dependencias, y marca patrones problemáticos conocidos. La misma entrada produce siempre la misma salida. Alimenta la fase de evaluación."
+            }
+          },
+          {
+            "id": "judge",
+            "type": "agent",
+            "label": {
+              "en": "AI judgment",
+              "fr": "Jugement par l’IA",
+              "es": "Evaluación por IA"
+            },
+            "sub": {
+              "en": "grades health · cites file:line",
+              "fr": "évalue l’état de santé · cite fichier:ligne",
+              "es": "califica la salud · cita archivo:línea"
+            },
+            "metric": "25M tok/min",
+            "x": 390,
+            "y": 430,
+            "detail": {
+              "en": "An AI pass that grades each repository out of ten across quality, architecture, security, tests, docs and dependencies, and must cite the exact file and line behind every judgment.",
+              "fr": "Une passe d’IA qui note chaque dépôt sur dix pour la qualité, l’architecture, la sécurité, les tests, la documentation et les dépendances, et qui doit citer le fichier et la ligne exacts derrière chaque jugement.",
+              "es": "Una fase asistida por la IA que puntúa cada repositorio sobre diez en calidad, arquitectura, seguridad, pruebas, documentación y dependencias, y debe citar el archivo y la línea exactos que respaldan cada evaluación."
+            }
+          },
+          {
+            "id": "health",
+            "type": "data",
+            "label": {
+              "en": "Health scores",
+              "fr": "Scores de santé",
+              "es": "Puntuaciones de salud"
+            },
+            "sub": {
+              "en": "quality · security · tests · docs",
+              "fr": "qualité · sécurité · tests · documentation",
+              "es": "calidad · seguridad · pruebas · documentación"
+            },
+            "x": 830,
+            "y": 150,
+            "detail": {
+              "en": "Per-repository health out of ten, rolled up into a nine-box active-versus-healthy grid, scored across quality, security, tests, and documentation.",
+              "fr": "État de santé par dépôt sur dix, regroupé dans une grille à neuf cases actif-contre-santé, évalué pour la qualité, la sécurité, les tests et la documentation.",
+              "es": "Salud por repositorio sobre diez, consolidada en una cuadrícula de nueve celdas de actividad frente a salud, puntuada en calidad, seguridad, pruebas y documentación."
+            }
+          },
+          {
+            "id": "canvas",
+            "type": "data",
+            "label": {
+              "en": "Capability canvas",
+              "fr": "Canevas des capacités",
+              "es": "Mapa de capacidades"
+            },
+            "sub": {
+              "en": "business functions per repo",
+              "fr": "fonctions d’affaires par dépôt",
+              "es": "funciones de negocio por repositorio"
+            },
+            "x": 830,
+            "y": 360,
+            "detail": {
+              "en": "What each system actually does, reverse-engineered into a business-capability canvas with each conclusion traced to a source file.",
+              "fr": "Ce que fait réellement chaque système, rétro-conçu en un canevas des capacités d’affaires, chaque conclusion étant rattachée à un fichier source.",
+              "es": "Lo que cada sistema hace en la práctica, reconstruido mediante ingeniería inversa en un mapa de capacidades de negocio, con cada conclusión trazada hasta su archivo fuente."
+            }
+          },
+          {
+            "id": "disp",
+            "type": "data",
+            "label": {
+              "en": "Disposition",
+              "fr": "Disposition",
+              "es": "Disposición"
+            },
+            "sub": {
+              "en": "keep · invest · migrate · retire",
+              "fr": "conserver · investir · migrer · retirer",
+              "es": "conservar · invertir · migrar · retirar"
+            },
+            "x": 830,
+            "y": 570,
+            "detail": {
+              "en": "A classification and disposition for every system, plus a modernization-effort estimate.",
+              "fr": "Une classification et une disposition pour chaque système, ainsi qu’une estimation de l’effort de modernisation.",
+              "es": "Una clasificación y disposición para cada sistema, más una estimación del esfuerzo de modernización."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "estate",
+            "to": "det",
+            "kind": "flow",
+            "label": {
+              "en": "clone & count",
+              "fr": "cloner et compter",
+              "es": "clonar y contar"
+            },
+            "animated": true
+          },
+          {
+            "from": "estate",
+            "to": "judge",
+            "kind": "dep"
+          },
+          {
+            "from": "det",
+            "to": "judge",
+            "kind": "flow",
+            "label": {
+              "en": "evidence",
+              "fr": "preuves",
+              "es": "evidencia"
+            },
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "judge",
+            "to": "health",
+            "kind": "data",
+            "animated": true
+          },
+          {
+            "from": "judge",
+            "to": "canvas",
+            "kind": "data",
+            "animated": true
+          },
+          {
+            "from": "judge",
+            "to": "disp",
+            "kind": "data",
+            "animated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "approaches",
+      "kind": "graph",
+      "paper": "zgym1",
+      "title": {
+        "en": "Four approaches to modernization",
+        "fr": "Quatre approches de modernisation",
+        "es": "Cuatro enfoques de modernización"
+      },
+      "blurb": {
+        "en": "Four ways to modernize, climbing from lightest touch to the most complete rebuild. A real estate needs all four.",
+        "fr": "Quatre façons de moderniser, de la plus légère à la reconstruction la plus complète.",
+        "es": "Cuatro formas de modernizar, desde la intervención más ligera hasta la reconstrucción más completa. Un patrimonio tecnológico real necesita las cuatro."
+      },
+      "narrative": {
+        "en": "This scene lays out the four approaches to modernization, climbing in ambition from left to right. Approach one, the AI Garage, fixes one system at a time in place. Approach two, the AI Factory, builds a fresh modular application from scratch with a team of specialist agents. Approach three, AI Rationalization, steps back to a whole ministry and collapses a portfolio of overlapping systems into a few shared modern modules, for example one hundred eighty-five applications into sixteen. Approach four, Government three point zero, dissolves the application itself: agents work directly against governed data and generate the interface a person needs in the moment. All four reach for about a ninety-five percent reduction in the cost and time of building and maintaining government software.",
+        "fr": "Cette scène présente les quatre approches de la modernisation, dont l’ambition s’accroît de gauche à droite. La première approche, le Garage d’IA, corrige un système à la fois, sur place. La deuxième approche, l’Usine d’IA, construit une application modulaire neuve à partir de zéro avec une équipe d’agents spécialisés. La troisième approche, la Rationalisation par l’IA, prend du recul à l’échelle d’un ministère entier et regroupe un portefeuille de systèmes qui se chevauchent en quelques modules modernes partagés, par exemple cent quatre-vingt-cinq applications ramenées à seize. La quatrième approche, le Gouvernement trois point zéro, dissout l’application elle-même : les agents travaillent directement sur des données gouvernées et génèrent l’interface dont une personne a besoin au moment voulu. Les quatre visent une réduction d’environ quatre-vingt-quinze pour cent du coût et du temps de construction et d’entretien des logiciels gouvernementaux.",
+        "es": "Esta escena presenta los cuatro enfoques de modernización, ordenados de menor a mayor ambición de izquierda a derecha. El primer enfoque, el Taller de IA, corrige un sistema a la vez en su lugar. El segundo, la Fábrica de IA, construye una aplicación modular nueva desde cero con un equipo de agentes especializados. El tercero, la Racionalización con IA, adopta una visión de ministerio completo y consolida un portafolio de sistemas superpuestos en unos pocos módulos modernos compartidos; por ejemplo, ciento ochenta y cinco aplicaciones reducidas a dieciséis. El cuarto, Gobierno 3.0, elimina la aplicación en sí: los agentes de IA trabajan directamente sobre datos gobernados y generan la interfaz que cada persona necesita en el momento. Los cuatro apuntan a una reducción de alrededor del 95 % en el coste y el tiempo de desarrollo y mantenimiento del software gubernamental."
+      },
+      "graph": {
+        "groups": [],
+        "nodes": [
+          {
+            "id": "a1",
+            "type": "approach",
+            "label": {
+              "en": "AI Garage",
+              "fr": "Garage d’IA",
+              "es": "Taller de IA"
+            },
+            "sub": {
+              "en": "fix one system, in place",
+              "fr": "corriger un système, sur place",
+              "es": "corregir un sistema, en su lugar"
+            },
+            "metric": "1",
+            "x": 60,
+            "y": 540,
+            "detail": {
+              "en": "Repairs, remediates, or matches one system at a time, in place. Lowest risk; treats symptoms rather than the disease.",
+              "fr": "Répare, corrige ou met à niveau un système à la fois, sur place. Risque le plus faible; traite les symptômes plutôt que la maladie.",
+              "es": "Repara, corrige o adapta un sistema a la vez, en su lugar. El menor riesgo; trata los síntomas en lugar de la causa de fondo."
+            }
+          },
+          {
+            "id": "a2",
+            "type": "approach",
+            "label": {
+              "en": "AI Factory",
+              "fr": "Usine d’IA",
+              "es": "Fábrica de IA"
+            },
+            "sub": {
+              "en": "build fresh, modular",
+              "fr": "construire à neuf, modulaire",
+              "es": "construir desde cero, de forma modular"
+            },
+            "metric": "2",
+            "x": 360,
+            "y": 400,
+            "detail": {
+              "en": "Builds a fresh application from scratch with a team of specialist agents. Modular, government-owned, parts none much larger than ~1,000 lines.",
+              "fr": "Construit une application neuve à partir de zéro avec une équipe d’agents spécialisés. Modulaire, propriété du gouvernement, aucune partie ne dépassant guère ~1 000 lignes.",
+              "es": "Construye una aplicación nueva desde cero con un equipo de agentes especializados. Modular, de propiedad gubernamental, con componentes de no más de ~1 000 líneas."
+            }
+          },
+          {
+            "id": "a3",
+            "type": "approach",
+            "color": "#B23F15",
+            "label": {
+              "en": "AI Rationalization",
+              "fr": "Rationalisation par l’IA",
+              "es": "Racionalización con IA"
+            },
+            "sub": {
+              "en": "185 → 16 per ministry",
+              "fr": "185 → 16 par ministère",
+              "es": "185 → 16 por ministerio"
+            },
+            "metric": "3",
+            "x": 660,
+            "y": 270,
+            "detail": {
+              "en": "Steps back to a whole ministry and collapses a portfolio of overlapping systems into a few shared modern modules. A program that once ran 5 to 8 years can run in weeks to months.",
+              "fr": "Prend du recul à l’échelle d’un ministère entier et regroupe un portefeuille de systèmes qui se chevauchent en quelques modules modernes partagés. Un programme qui durait autrefois de 5 à 8 ans peut se réaliser en quelques semaines ou quelques mois.",
+              "es": "Adopta una visión de ministerio completo y consolida un portafolio de sistemas superpuestos en unos pocos módulos modernos compartidos. Un programa que antes llevaba entre 5 y 8 años puede ejecutarse en semanas o meses."
+            }
+          },
+          {
+            "id": "a4",
+            "type": "future",
+            "label": {
+              "en": "Government 3.0",
+              "fr": "Gouvernement 3.0",
+              "es": "Gobierno 3.0"
+            },
+            "sub": {
+              "en": "dissolve the app",
+              "fr": "dissoudre l’application",
+              "es": "eliminar la aplicación"
+            },
+            "metric": "4",
+            "x": 980,
+            "y": 140,
+            "detail": {
+              "en": "Dissolves the application itself. AI agents work directly against governed data and generate the interface a person needs in the moment. Most radical, fastest, most cost-effective.",
+              "fr": "Dissout l’application elle-même. Les agents d’IA travaillent directement sur des données gouvernées et génèrent l’interface dont une personne a besoin au moment voulu. La plus radicale, la plus rapide, la plus économique.",
+              "es": "Elimina la aplicación en sí. Los agentes de IA trabajan directamente sobre datos gobernados y generan la interfaz que cada persona necesita en el momento. El enfoque más radical, más rápido y más rentable."
+            }
+          },
+          {
+            "id": "target",
+            "type": "data",
+            "label": {
+              "en": "≈95% less cost & time",
+              "fr": "≈95 % de coût et de temps en moins",
+              "es": "≈95 % menos costo y tiempo"
+            },
+            "sub": {
+              "en": "the prize all four reach for",
+              "fr": "le but que visent les quatre",
+              "es": "el objetivo al que aspiran los cuatro enfoques"
+            },
+            "x": 520,
+            "y": 660,
+            "w": 320,
+            "detail": {
+              "en": "Each approach reaches for about a 95% reduction in the cost and time of building and maintaining government software.",
+              "fr": "Chaque approche vise une réduction d’environ 95 % du coût et du temps de construction et d’entretien des logiciels gouvernementaux.",
+              "es": "Cada enfoque aspira a una reducción de aproximadamente el 95 % en el costo y el tiempo de construir y mantener software gubernamental."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "a1",
+            "to": "a2",
+            "kind": "flow",
+            "label": {
+              "en": "more ambitious",
+              "fr": "plus ambitieux",
+              "es": "más ambicioso"
+            },
+            "animated": true
+          },
+          {
+            "from": "a2",
+            "to": "a3",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "a3",
+            "to": "a4",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "a3",
+            "to": "target",
+            "kind": "dep"
+          },
+          {
+            "from": "a4",
+            "to": "target",
+            "kind": "dep"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stack",
+      "kind": "graph",
+      "paper": "qxlzo",
+      "title": {
+        "en": "The agentic technology stack",
+        "fr": "La pile technologique agentique",
+        "es": "La pila tecnológica agéntica"
+      },
+      "blurb": {
+        "en": "The right model, in the right environment, for the right use case, with abstraction layers that prevent lock-in.",
+        "fr": "Le bon modèle, dans le bon environnement, pour le bon cas d’usage.",
+        "es": "El modelo adecuado, en el entorno adecuado, para el caso de uso adecuado, con capas de abstracción que evitan la dependencia de un proveedor."
+      },
+      "narrative": {
+        "en": "This scene stacks the agentic technology platform in layers, from the cloud up to security. At the base sit cloud and compute: Google Cloud, Azure, AWS, an on-premises GPU cluster, and three legacy data centres. Above that is model access through AWS Bedrock, the Google Enterprise Agent Platform, and Azure AI Studio. Then the models themselves, Claude Opus and Sonnet, with open-source models available offline. Above the models sits the Bifrost gateway, which handles abstraction, cost control, and personal-information protection. Then deployment, sending agentic workloads to Google Cloud and traditional applications to Azure and AWS. At the top, security and data-loss prevention through Microsoft Defender and Purview. The supply chain is diversified on purpose so no single provider can lock the province in.",
+        "fr": "Cette scène empile la plateforme technologique agentique en couches, du nuage jusqu’à la sécurité. À la base se trouvent le nuage et le calcul : Google Cloud, Azure, AWS, une grappe de processeurs graphiques sur site et trois centres de données hérités. Au-dessus se trouve l’accès aux modèles par l’entremise d’AWS Bedrock, de la Google Enterprise Agent Platform et d’Azure AI Studio. Viennent ensuite les modèles eux-mêmes, Claude Opus et Sonnet, avec des modèles à code source ouvert disponibles hors ligne. Au-dessus des modèles se trouve la passerelle Bifrost, qui gère l’abstraction, le contrôle des coûts et la protection des renseignements personnels. Puis le déploiement, qui envoie les charges de travail agentiques vers Google Cloud et les applications traditionnelles vers Azure et AWS. Au sommet, la sécurité et la prévention des pertes de données par l’entremise de Microsoft Defender et Purview. La chaîne d’approvisionnement est diversifiée à dessein afin qu’aucun fournisseur unique ne puisse enfermer la province dans sa dépendance.",
+        "es": "Esta escena muestra la plataforma tecnológica de la IA agéntica organizada en capas, desde la nube hasta la seguridad. En la base se encuentran la nube y la capacidad de cómputo: Google Cloud, Azure, AWS, un clúster GPU en las instalaciones propias y tres centros de datos heredados. Por encima está el acceso a los modelos a través de AWS Bedrock, la Google Enterprise Agent Platform y Azure AI Studio. A continuación, los modelos propiamente dichos: Claude Opus y Sonnet, con modelos de código abierto disponibles sin conexión. Sobre los modelos se sitúa la pasarela Bifrost, que gestiona la abstracción, el control de costos y la protección de información personal. Después viene el despliegue, que envía las cargas de trabajo agénticas a Google Cloud y las aplicaciones tradicionales a Azure y AWS. En la capa superior, la seguridad y la prevención de pérdida de datos a través de Microsoft Defender y Purview. La cadena de suministro está diversificada deliberadamente para que ningún proveedor pueda generar dependencia con la provincia."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "stk",
+            "label": {
+              "en": "The agentic stack",
+              "fr": "La pile agentique",
+              "es": "La pila agéntica"
+            },
+            "x": 330,
+            "y": 90,
+            "w": 620,
+            "h": 660
+          }
+        ],
+        "nodes": [
+          {
+            "id": "security",
+            "type": "review",
+            "label": {
+              "en": "Security & data-loss prevention",
+              "fr": "Sécurité et prévention des pertes de données",
+              "es": "Seguridad y prevención de pérdida de datos"
+            },
+            "sub": "Microsoft Defender · Purview · GitHub",
+            "x": 360,
+            "y": 120,
+            "w": 560,
+            "detail": {
+              "en": "Defender and Purview plus GitHub tooling. ~99%+ of systems sit at Protected B at the highest.",
+              "fr": "Defender et Purview, plus l’outillage GitHub. Plus de ~99 % des systèmes se situent au plus à Protégé B.",
+              "es": "Defender y Purview, junto con herramientas de GitHub. Aproximadamente el 99 %+ de los sistemas se encuentran como máximo en el nivel Protected B."
+            }
+          },
+          {
+            "id": "deploy",
+            "type": "service",
+            "label": {
+              "en": "Deployment",
+              "fr": "Déploiement",
+              "es": "Despliegue"
+            },
+            "sub": {
+              "en": "agentic → Google Cloud · apps → Azure, AWS",
+              "fr": "agentique → Google Cloud · applications → Azure, AWS",
+              "es": "agéntico → Google Cloud · apps → Azure, AWS"
+            },
+            "x": 360,
+            "y": 230,
+            "w": 560,
+            "detail": {
+              "en": "Agentic workloads deploy to Google Cloud; traditional applications to Azure and AWS.",
+              "fr": "Les charges de travail agentiques se déploient vers Google Cloud; les applications traditionnelles vers Azure et AWS.",
+              "es": "Las cargas de trabajo agénticas se despliegan en Google Cloud; las aplicaciones tradicionales, en Azure y AWS."
+            }
+          },
+          {
+            "id": "gateway",
+            "type": "gateway",
+            "label": {
+              "en": "Bifrost gateway",
+              "fr": "Passerelle Bifrost",
+              "es": "Pasarela Bifrost"
+            },
+            "sub": {
+              "en": "abstraction · cost · PII control",
+              "fr": "abstraction · coût · contrôle des RP",
+              "es": "abstracción · costo · control de datos personales"
+            },
+            "x": 360,
+            "y": 340,
+            "w": 560,
+            "detail": {
+              "en": "The abstraction layer. Routes to the right model, controls cost and PII, and prevents provider lock-in.",
+              "fr": "La couche d’abstraction. Achemine vers le bon modèle, contrôle le coût et les renseignements personnels, et prévient la dépendance envers un fournisseur.",
+              "es": "La capa de abstracción. Enruta hacia el modelo adecuado, controla el costo y los datos personales, y evita la dependencia de un proveedor."
+            }
+          },
+          {
+            "id": "models",
+            "type": "agent",
+            "label": {
+              "en": "Models",
+              "fr": "Modèles",
+              "es": "Modelos"
+            },
+            "sub": {
+              "en": "Claude Opus & Sonnet · open-source offline",
+              "fr": "Claude Opus et Sonnet · code source ouvert hors ligne",
+              "es": "Claude Opus y Sonnet · código abierto sin conexión"
+            },
+            "x": 360,
+            "y": 450,
+            "w": 560,
+            "detail": {
+              "en": "Claude Opus and Sonnet for most work; open-source models available offline. 18 months of model trials across Gemini, OpenAI, and Anthropic.",
+              "fr": "Claude Opus et Sonnet pour la plupart des travaux; des modèles à code source ouvert disponibles hors ligne. 18 mois d’essais de modèles avec Gemini, OpenAI et Anthropic.",
+              "es": "Claude Opus y Sonnet para la mayor parte del trabajo; modelos de código abierto disponibles sin conexión. 18 meses de pruebas de modelos con Gemini, OpenAI y Anthropic."
+            }
+          },
+          {
+            "id": "access",
+            "type": "service",
+            "label": {
+              "en": "Model access",
+              "fr": "Accès aux modèles",
+              "es": "Acceso a modelos"
+            },
+            "sub": "Bedrock · Google Enterprise Agent Platform · Azure AI Studio",
+            "x": 360,
+            "y": 560,
+            "w": 560,
+            "detail": {
+              "en": "Model access through AWS Bedrock, the Google Enterprise Agent Platform, and Azure AI Studio. Enterprise agreements run 25 to 50 million tokens per minute.",
+              "fr": "Accès aux modèles par l’entremise d’AWS Bedrock, de la Google Enterprise Agent Platform et d’Azure AI Studio. Les ententes d’entreprise vont de 25 à 50 millions de jetons par minute.",
+              "es": "Acceso a modelos a través de AWS Bedrock, la Google Enterprise Agent Platform y Azure AI Studio. Los acuerdos empresariales cubren entre 25 y 50 millones de tokens por minuto."
+            }
+          },
+          {
+            "id": "cloud",
+            "type": "infra",
+            "label": {
+              "en": "Cloud & compute",
+              "fr": "Nuage et calcul",
+              "es": "Nube y cómputo"
+            },
+            "sub": {
+              "en": "GCP · Azure · AWS · on-prem GPU · 3 data centres",
+              "fr": "GCP · Azure · AWS · GPU sur site · 3 centres de données",
+              "es": "GCP · Azure · AWS · GPU en sitio · 3 centros de datos"
+            },
+            "x": 360,
+            "y": 670,
+            "w": 560,
+            "detail": {
+              "en": "Google Cloud, Azure, AWS, an on-premises GPU cluster, and three legacy data centres.",
+              "fr": "Google Cloud, Azure, AWS, une grappe de processeurs graphiques sur site et trois centres de données hérités.",
+              "es": "Google Cloud, Azure, AWS, un clúster GPU en las instalaciones propias y tres centros de datos heredados."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "cloud",
+            "to": "access",
+            "kind": "flow",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "access",
+            "to": "models",
+            "kind": "flow",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "models",
+            "to": "gateway",
+            "kind": "flow",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "gateway",
+            "to": "deploy",
+            "kind": "flow",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "deploy",
+            "to": "security",
+            "kind": "flow",
+            "dir": "v",
+            "animated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "harness",
+      "kind": "graph",
+      "paper": "p7p2k",
+      "title": {
+        "en": "The harness and its review agents",
+        "fr": "Le harnais et ses agents de revue",
+        "es": "El arnés y sus agentes de revisión"
+      },
+      "blurb": {
+        "en": "A worker agent ringed by four review agents that gate the work: green, yellow, red, and blue.",
+        "fr": "Un agent ouvrier entouré de quatre agents de revue : vert, jaune, rouge et bleu.",
+        "es": "Un agente trabajador rodeado por cuatro agentes de revisión que controlan el trabajo: verde, amarillo, rojo y azul."
+      },
+      "narrative": {
+        "en": "This scene shows a worker agent at the centre, gated by the four review agents that ship with every harness. Green checks code hygiene and the supply chain, and is deterministic. Yellow audits how the writing reads, catching AI tells, and is deterministic. Red plays the attacker, running outside-in reconnaissance and then planning concrete attack paths. Blue plays the defender, building a threat model and walking every OWASP control to write the ranked verdict. Feeding the worker from below are the parts of the harness itself: the rules file, the skills, the templates, the hooks, and the evals. A piece of work is not done until it passes the gates, and about ninety-five security controls are checked on every pass.",
+        "fr": "Cette scène montre un agent ouvrier au centre, contrôlé par les quatre agents de revue qui accompagnent chaque harnais. Le vert vérifie l’hygiène du code et la chaîne d’approvisionnement, et il est déterministe. Le jaune vérifie la façon dont le texte se lit, en repérant les tics de l’IA, et il est déterministe. Le rouge joue l’attaquant, en menant une reconnaissance de l’extérieur vers l’intérieur, puis en planifiant des chemins d’attaque concrets. Le bleu joue le défenseur, en bâtissant un modèle de menaces et en parcourant chaque contrôle OWASP pour rédiger le verdict classé. Alimentant l’ouvrier par le bas se trouvent les éléments du harnais lui-même : le fichier de règles, les compétences, les gabarits, les crochets et les évaluations. Une pièce de travail n’est pas terminée tant qu’elle n’a pas franchi les portes de contrôle, et environ quatre-vingt-quinze contrôles de sécurité sont vérifiés à chaque passe.",
+        "es": "Esta escena muestra un agente trabajador en el centro, controlado por los cuatro agentes de revisión que se incluyen en cada arnés. El verde verifica la higiene del código y la cadena de suministro, y es determinista. El amarillo audita la legibilidad del texto escrito, detectando indicios de generación automática, y también es determinista. El rojo actúa como atacante, realizando reconocimiento externo y luego planificando rutas de ataque concretas. El azul actúa como defensor, construyendo un modelo de amenazas y recorriendo todos los controles OWASP para redactar el veredicto ordenado por prioridad. Desde abajo, el agente trabajador se nutre de las propias partes del arnés: el archivo de reglas, las habilidades, las plantillas, los hooks y las evaluaciones. Un trabajo no se considera terminado hasta que supera los controles, y en cada pasada se verifican aproximadamente noventa y cinco controles de seguridad."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "hp",
+            "label": {
+              "en": "The harness",
+              "fr": "Le harnais",
+              "es": "El arnés"
+            },
+            "x": 40,
+            "y": 640,
+            "w": 1160,
+            "h": 130
+          }
+        ],
+        "nodes": [
+          {
+            "id": "worker",
+            "type": "agent",
+            "label": {
+              "en": "Worker agent",
+              "fr": "Agent ouvrier",
+              "es": "Agente trabajador"
+            },
+            "sub": {
+              "en": "writes the application code",
+              "fr": "écrit le code de l’application",
+              "es": "escribe el código de la aplicación"
+            },
+            "metric": {
+              "en": "~95 controls",
+              "fr": "~95 contrôles",
+              "es": "~95 controles"
+            },
+            "x": 548,
+            "y": 330,
+            "detail": {
+              "en": "The coding agent paired with a person. Its work is gated by the four review agents and grounded by the harness parts.",
+              "fr": "L’agent de codage jumelé à une personne. Son travail est contrôlé par les quatre agents de revue et ancré par les éléments du harnais.",
+              "es": "El agente de codificación que trabaja junto a una persona. Su trabajo es controlado por los cuatro agentes de revisión y fundamentado por las partes del arnés."
+            }
+          },
+          {
+            "id": "green",
+            "type": "review",
+            "color": "#2f7a3f",
+            "label": {
+              "en": "Green",
+              "fr": "Vert",
+              "es": "Verde"
+            },
+            "sub": {
+              "en": "code hygiene · deterministic",
+              "fr": "hygiène du code · déterministe",
+              "es": "higiene del código · determinista"
+            },
+            "x": 250,
+            "y": 130,
+            "detail": {
+              "en": "Vulnerable dependencies, committed secrets, dangerous patterns, thin coverage. ~30 deterministic checks. Runs first; the evidence base others read.",
+              "fr": "Dépendances vulnérables, secrets validés, motifs dangereux, couverture insuffisante. ~30 contrôles déterministes. S’exécute en premier; la base de preuves que les autres lisent.",
+              "es": "Dependencias con vulnerabilidades, secretos confirmados en el repositorio, patrones peligrosos y cobertura insuficiente. Aproximadamente 30 verificaciones deterministas. Se ejecuta primero y constituye la base de evidencia que leen los demás agentes."
+            }
+          },
+          {
+            "id": "yellow",
+            "type": "review",
+            "color": "#b8860b",
+            "label": {
+              "en": "Yellow",
+              "fr": "Jaune",
+              "es": "Amarillo"
+            },
+            "sub": {
+              "en": "prose audit · deterministic",
+              "fr": "vérification du texte · déterministe",
+              "es": "auditoría de texto · determinista"
+            },
+            "x": 846,
+            "y": 130,
+            "detail": {
+              "en": "Walks 12 rules across all project prose, flagging AI tells with a plain rewrite. Deterministic, runs in parallel, cheapest.",
+              "fr": "Parcourt 12 règles sur tout le texte du projet, signalant les tics de l’IA avec une réécriture simple. Déterministe, s’exécute en parallèle, le moins coûteux.",
+              "es": "Aplica 12 reglas a todo el texto del proyecto, señalando indicios de generación automática con una reescritura clara. Determinista, se ejecuta en paralelo y es el menos costoso."
+            }
+          },
+          {
+            "id": "red",
+            "type": "review",
+            "color": "#b1331a",
+            "label": {
+              "en": "Red",
+              "fr": "Rouge",
+              "es": "Rojo"
+            },
+            "sub": {
+              "en": "attacker · recon + planning",
+              "fr": "attaquant · reconnaissance + planification",
+              "es": "atacante · reconocimiento y planificación"
+            },
+            "x": 250,
+            "y": 520,
+            "detail": {
+              "en": "Outside-in reconnaissance with deterministic tooling, then a Claude pass that plans concrete attack paths. Authorized targets only.",
+              "fr": "Reconnaissance de l’extérieur vers l’intérieur avec un outillage déterministe, puis une passe de Claude qui planifie des chemins d’attaque concrets. Cibles autorisées seulement.",
+              "es": "Reconocimiento externo con herramientas deterministas, seguido de un análisis con Claude que planifica rutas de ataque concretas. Solo objetivos autorizados."
+            }
+          },
+          {
+            "id": "blue",
+            "type": "review",
+            "color": "#1f4f8f",
+            "label": {
+              "en": "Blue",
+              "fr": "Bleu",
+              "es": "Azul"
+            },
+            "sub": {
+              "en": "defender · ASVS verdict",
+              "fr": "défenseur · verdict ASVS",
+              "es": "defensor · veredicto ASVS"
+            },
+            "x": 846,
+            "y": 520,
+            "detail": {
+              "en": "Threat model, every OWASP ASVS Level 2 requirement walked, Red's recon folded into kill chains, then a ranked evidence-backed verdict.",
+              "fr": "Modèle de menaces, chaque exigence OWASP ASVS de niveau 2 parcourue, la reconnaissance du Rouge intégrée dans des chaînes d’attaque, puis un verdict classé et étayé par des preuves.",
+              "es": "Modelo de amenazas, revisión de cada requisito OWASP ASVS Nivel 2, integración del reconocimiento del equipo Rojo en cadenas de ataque y, por último, un veredicto fundamentado en evidencias y ordenado por prioridad."
+            }
+          },
+          {
+            "id": "claude",
+            "type": "infra",
+            "label": "CLAUDE.md",
+            "sub": {
+              "en": "the rules",
+              "fr": "les règles",
+              "es": "las reglas"
+            },
+            "x": 60,
+            "y": 670,
+            "w": 150,
+            "h": 64,
+            "detail": {
+              "en": "The one-page rules file the agent reads first every session.",
+              "fr": "Le fichier de règles d’une page que l’agent lit en premier à chaque session.",
+              "es": "El archivo de reglas de una página que el agente lee al inicio de cada sesión."
+            }
+          },
+          {
+            "id": "skills",
+            "type": "infra",
+            "label": {
+              "en": "Skills",
+              "fr": "Compétences",
+              "es": "Habilidades"
+            },
+            "sub": {
+              "en": "playbooks on demand",
+              "fr": "guides pratiques sur demande",
+              "es": "manuales bajo demanda"
+            },
+            "x": 290,
+            "y": 670,
+            "w": 150,
+            "h": 64,
+            "detail": {
+              "en": "Small playbooks in .claude/skills, opened only when the task matches.",
+              "fr": "De petits guides pratiques dans .claude/skills, ouverts uniquement lorsque la tâche correspond.",
+              "es": "Pequeños manuales en .claude/skills, que se abren únicamente cuando la tarea lo requiere."
+            }
+          },
+          {
+            "id": "tmpl",
+            "type": "infra",
+            "label": {
+              "en": "Templates",
+              "fr": "Gabarits",
+              "es": "Plantillas"
+            },
+            "sub": {
+              "en": "the reference app",
+              "fr": "l’application de référence",
+              "es": "la aplicación de referencia"
+            },
+            "x": 520,
+            "y": 670,
+            "w": 150,
+            "h": 64,
+            "detail": {
+              "en": "The masterpiece reference app: Vue + Vite, Node + Express, Postgres 18, SSO, with 100+ decisions pre-made.",
+              "fr": "L’application de référence par excellence : Vue + Vite, Node + Express, Postgres 18, authentification unique, avec plus de 100 décisions déjà prises.",
+              "es": "La aplicación de referencia modelo: Vue + Vite, Node + Express, Postgres 18, SSO, con más de 100 decisiones predefinidas."
+            }
+          },
+          {
+            "id": "hooks",
+            "type": "infra",
+            "label": {
+              "en": "Hooks",
+              "fr": "Crochets",
+              "es": "Puntos de control"
+            },
+            "sub": {
+              "en": "deterministic gates",
+              "fr": "portes de contrôle déterministes",
+              "es": "compuertas deterministas"
+            },
+            "x": 750,
+            "y": 670,
+            "w": 150,
+            "h": 64,
+            "detail": {
+              "en": "Deterministic programs that run at key moments and cannot be talked out of a finding.",
+              "fr": "Des programmes déterministes qui s’exécutent à des moments clés et que rien ne peut dissuader d’un constat.",
+              "es": "Programas deterministas que se ejecutan en momentos clave y no pueden ser rebatidos en sus hallazgos."
+            }
+          },
+          {
+            "id": "evals",
+            "type": "infra",
+            "label": {
+              "en": "Evals",
+              "fr": "Évaluations",
+              "es": "Evaluaciones"
+            },
+            "sub": {
+              "en": "checks every release",
+              "fr": "vérifie chaque version",
+              "es": "verificaciones en cada versión"
+            },
+            "x": 980,
+            "y": 670,
+            "w": 150,
+            "h": 64,
+            "detail": {
+              "en": "Probabilistic and deterministic checks run on every release.",
+              "fr": "Des contrôles probabilistes et déterministes exécutés à chaque version.",
+              "es": "Verificaciones probabilistas y deterministas que se ejecutan en cada versión publicada."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "green",
+            "to": "worker",
+            "kind": "ctrl",
+            "label": {
+              "en": "gate",
+              "fr": "porte",
+              "es": "compuerta"
+            },
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "yellow",
+            "to": "worker",
+            "kind": "ctrl",
+            "label": {
+              "en": "gate",
+              "fr": "porte",
+              "es": "compuerta"
+            },
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "red",
+            "to": "worker",
+            "kind": "ctrl",
+            "label": {
+              "en": "gate",
+              "fr": "porte",
+              "es": "compuerta"
+            },
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "blue",
+            "to": "worker",
+            "kind": "ctrl",
+            "label": {
+              "en": "gate",
+              "fr": "porte",
+              "es": "compuerta"
+            },
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "claude",
+            "to": "worker",
+            "kind": "dep",
+            "dir": "v"
+          },
+          {
+            "from": "skills",
+            "to": "worker",
+            "kind": "dep",
+            "dir": "v"
+          },
+          {
+            "from": "tmpl",
+            "to": "worker",
+            "kind": "dep",
+            "dir": "v"
+          },
+          {
+            "from": "hooks",
+            "to": "worker",
+            "kind": "dep",
+            "dir": "v"
+          },
+          {
+            "from": "evals",
+            "to": "worker",
+            "kind": "dep",
+            "dir": "v"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cyber",
+      "kind": "graph",
+      "paper": "mwo98",
+      "title": {
+        "en": "The cyber imperative",
+        "fr": "L’impératif cybernétique",
+        "es": "El imperativo de la ciberseguridad"
+      },
+      "blurb": {
+        "en": "The siege is intensifying and the walls are aging. AI defends at machine speed, and modernization cuts the attack surface.",
+        "fr": "Le siège s’intensifie et les murs vieillissent. L’IA défend à la vitesse de la machine.",
+        "es": "La presión externa se intensifica y las defensas envejecen. La IA protege a la velocidad de las máquinas, y la modernización reduce la superficie de ataque."
+      },
+      "narrative": {
+        "en": "This scene shows the cyber imperative: why modernization is a security requirement. On the left, the siege outside the wall. Cyber controls now block about one hundred eighty-nine million connection attempts a day, more than double two years ago; AI is generating exploits at machine speed; and the software supply chain has become the primary target. In the centre, the harness's review agents defend at the same speed: Red runs attacker reconnaissance and plans attack paths, Green checks the supply chain for vulnerable dependencies and secrets, and Blue, the defender, walks every OWASP control, folds Red's reconnaissance into kill chains, and writes the verdict, about ninety-five controls on every pass. On the right, the stakes and the move: an aging estate running past vendor support is the exposure, a single incident costs on the order of five million dollars a month, and modernizing into shared modules cuts the attack surface by more than ninety percent.",
+        "fr": "Cette scène montre l’impératif cybernétique : pourquoi la modernisation est une exigence de sécurité. À gauche, le siège à l’extérieur de la muraille. Les contrôles de cybersécurité bloquent maintenant environ cent quatre-vingt-neuf millions de tentatives de connexion par jour, plus du double d’il y a deux ans; l’IA génère des exploits à la vitesse de la machine; et la chaîne d’approvisionnement logicielle est devenue la cible principale. Au centre, les agents de revue du harnais défendent à la même vitesse : le rouge mène la reconnaissance de l’attaquant et planifie les chemins d’attaque, le vert vérifie la chaîne d’approvisionnement à la recherche de dépendances vulnérables et de secrets, et le bleu, le défenseur, parcourt chaque contrôle OWASP, intègre la reconnaissance du rouge dans des chaînes d’attaque, puis rédige le verdict, environ quatre-vingt-quinze contrôles à chaque passe. À droite, les enjeux et la décision : un parc vieillissant qui dépasse le soutien des fournisseurs constitue l’exposition, un seul incident coûte de l’ordre de cinq millions de dollars par mois, et la modernisation en modules partagés réduit la surface d’attaque de plus de quatre-vingt-dix pour cent.",
+        "es": "Esta escena presenta el imperativo de la ciberseguridad: por qué la modernización es un requisito de seguridad. A la izquierda, la amenaza exterior. Los controles de ciberseguridad bloquean ahora cerca de 189 millones de intentos de conexión al día, más del doble que hace dos años; la IA genera exploits a la velocidad de las máquinas; y la cadena de suministro de software se ha convertido en el objetivo principal. En el centro, los agentes de revisión del arnés defienden a esa misma velocidad: el equipo Rojo realiza reconocimiento desde el exterior y planifica rutas de ataque; el equipo Verde verifica la cadena de suministro en busca de dependencias vulnerables y credenciales expuestas; y el equipo Azul, el defensor, revisa cada control OWASP, integra el reconocimiento del equipo Rojo en cadenas de ataque y redacta el veredicto —aproximadamente 95 controles en cada revisión—. A la derecha, las consecuencias y la respuesta: un parque tecnológico envejecido que funciona sin soporte del fabricante representa la exposición, un solo incidente puede costar del orden de 5 millones de dólares al mes, y la modernización hacia módulos compartidos reduce la superficie de ataque en más del 90 %."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "siege",
+            "label": {
+              "en": "Outside the wall",
+              "fr": "À l’extérieur de la muraille",
+              "es": "Fuera del perímetro"
+            },
+            "x": 40,
+            "y": 120,
+            "w": 300,
+            "h": 560,
+            "color": "#b1331a"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "attacks",
+            "type": "legacy",
+            "color": "#b1331a",
+            "label": {
+              "en": "Connection attempts",
+              "fr": "Tentatives de connexion",
+              "es": "Intentos de conexión"
+            },
+            "sub": {
+              "en": "2× in two years",
+              "fr": "2× en deux ans",
+              "es": "×2 en dos años"
+            },
+            "metric": "189M/day",
+            "x": 70,
+            "y": 170,
+            "detail": {
+              "en": "Cyber controls block about 189 million connection attempts a day, more than double two years ago.",
+              "fr": "Les contrôles de cybersécurité bloquent environ 189 millions de tentatives de connexion par jour, plus du double d’il y a deux ans.",
+              "es": "Los controles de ciberseguridad bloquean cerca de 189 millones de intentos de conexión al día, más del doble que hace dos años."
+            }
+          },
+          {
+            "id": "exploits",
+            "type": "legacy",
+            "color": "#b1331a",
+            "label": {
+              "en": "AI-generated exploits",
+              "fr": "Exploits générés par l’IA",
+              "es": "Exploits generados por IA"
+            },
+            "sub": {
+              "en": "at machine speed",
+              "fr": "à la vitesse de la machine",
+              "es": "a la velocidad de las máquinas"
+            },
+            "x": 70,
+            "y": 330,
+            "detail": {
+              "en": "Attackers use AI to generate exploits at lightning speed.",
+              "fr": "Les attaquants utilisent l’IA pour générer des exploits à une vitesse fulgurante.",
+              "es": "Los atacantes utilizan la IA para generar exploits a una velocidad vertiginosa."
+            }
+          },
+          {
+            "id": "supply",
+            "type": "legacy",
+            "color": "#b1331a",
+            "label": {
+              "en": "Supply-chain attacks",
+              "fr": "Attaques de la chaîne d’approvisionnement",
+              "es": "Ataques a la cadena de suministro"
+            },
+            "sub": {
+              "en": "the primary target",
+              "fr": "la cible principale",
+              "es": "el objetivo principal"
+            },
+            "x": 70,
+            "y": 490,
+            "detail": {
+              "en": "The software supply chain has become a primary target.",
+              "fr": "La chaîne d’approvisionnement logicielle est devenue une cible principale.",
+              "es": "La cadena de suministro de software se ha convertido en un objetivo principal."
+            }
+          },
+          {
+            "id": "red",
+            "type": "review",
+            "color": "#b1331a",
+            "label": {
+              "en": "Red — attacker sim",
+              "fr": "Rouge — simulation d’attaquant",
+              "es": "Rojo — simulación de atacante"
+            },
+            "sub": {
+              "en": "recon + attack paths",
+              "fr": "reconnaissance + chemins d’attaque",
+              "es": "reconocimiento + rutas de ataque"
+            },
+            "x": 470,
+            "y": 180,
+            "detail": {
+              "en": "Outside-in reconnaissance, then plans concrete attack paths. Authorized targets only.",
+              "fr": "Reconnaissance de l’extérieur vers l’intérieur, puis planification de chemins d’attaque concrets. Cibles autorisées seulement.",
+              "es": "Reconocimiento externo y planificación de rutas de ataque concretas. Solo objetivos autorizados."
+            }
+          },
+          {
+            "id": "blue",
+            "type": "review",
+            "color": "#1f4f8f",
+            "label": {
+              "en": "Blue — defender",
+              "fr": "Bleu — défenseur",
+              "es": "Azul — defensor"
+            },
+            "sub": {
+              "en": "ASVS L2 · threat model",
+              "fr": "ASVS niveau 2 · modèle de menaces",
+              "es": "ASVS N2 · modelo de amenazas"
+            },
+            "metric": {
+              "en": "~95 controls",
+              "fr": "~95 contrôles",
+              "es": "~95 controles"
+            },
+            "x": 470,
+            "y": 350,
+            "detail": {
+              "en": "Threat model, every OWASP ASVS Level 2 control, Red's recon folded into kill chains, then a ranked verdict.",
+              "fr": "Modèle de menaces, chaque contrôle OWASP ASVS de niveau 2, la reconnaissance du Rouge intégrée dans des chaînes d’attaque, puis un verdict classé.",
+              "es": "Modelo de amenazas, todos los controles del nivel 2 de OWASP ASVS, el reconocimiento del equipo Red integrado en las cadenas de ataque y, a continuación, un veredicto priorizado."
+            }
+          },
+          {
+            "id": "green",
+            "type": "review",
+            "color": "#2f7a3f",
+            "label": {
+              "en": "Green — supply chain",
+              "fr": "Vert — chaîne d’approvisionnement",
+              "es": "Verde — cadena de suministro"
+            },
+            "sub": {
+              "en": "deps · secrets",
+              "fr": "dépendances · secrets",
+              "es": "dependencias · secretos"
+            },
+            "x": 470,
+            "y": 520,
+            "detail": {
+              "en": "Vulnerable dependencies, committed secrets, dangerous patterns.",
+              "fr": "Dépendances vulnérables, secrets validés, motifs dangereux.",
+              "es": "Dependencias vulnerables, secretos confirmados en el código y patrones peligrosos."
+            }
+          },
+          {
+            "id": "estate",
+            "type": "legacy",
+            "color": "#8a6d3b",
+            "label": {
+              "en": "Aging estate",
+              "fr": "Parc vieillissant",
+              "es": "Parque tecnológico envejecido"
+            },
+            "sub": {
+              "en": "past vendor support",
+              "fr": "au-delà du soutien des fournisseurs",
+              "es": "fuera del soporte del proveedor"
+            },
+            "x": 860,
+            "y": 200,
+            "detail": {
+              "en": "Much of the estate runs on technology moving past vendor support. This is the exposure.",
+              "fr": "Une grande partie du parc fonctionne sur une technologie qui dépasse le soutien des fournisseurs. C’est l’exposition.",
+              "es": "Gran parte del parque tecnológico opera con tecnología que ha quedado fuera del soporte del proveedor. Esta es la exposición."
+            }
+          },
+          {
+            "id": "modern",
+            "type": "future",
+            "label": {
+              "en": "Modernized modules",
+              "fr": "Modules modernisés",
+              "es": "Módulos modernizados"
+            },
+            "sub": {
+              "en": "attack surface −90%",
+              "fr": "surface d’attaque −90 %",
+              "es": "superficie de ataque −90 %"
+            },
+            "x": 860,
+            "y": 460,
+            "detail": {
+              "en": "Modernizing into shared modules cuts complexity and attack surface by more than 90%.",
+              "fr": "La modernisation en modules partagés réduit la complexité et la surface d’attaque de plus de 90 %.",
+              "es": "La modernización mediante módulos compartidos reduce la complejidad y la superficie de ataque en más del 90 %."
+            }
+          },
+          {
+            "id": "cost",
+            "type": "data",
+            "label": {
+              "en": "Cost of one incident",
+              "fr": "Coût d’un seul incident",
+              "es": "Costo de un incidente"
+            },
+            "metric": "$5M/mo",
+            "x": 860,
+            "y": 640,
+            "detail": {
+              "en": "A single government cyber incident runs on the order of $5M per month, and that is close to a best case.",
+              "fr": "Un seul incident cybernétique gouvernemental coûte de l’ordre de 5 M$ par mois, et c’est près d’un scénario optimal.",
+              "es": "Un solo incidente de ciberseguridad gubernamental supone del orden de 5 millones de dólares al mes, y eso se acerca a un escenario favorable."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "attacks",
+            "to": "blue",
+            "kind": "ctrl",
+            "label": {
+              "en": "block",
+              "fr": "bloquer",
+              "es": "bloquear"
+            },
+            "animated": true
+          },
+          {
+            "from": "exploits",
+            "to": "blue",
+            "kind": "ctrl",
+            "animated": true
+          },
+          {
+            "from": "supply",
+            "to": "green",
+            "kind": "ctrl",
+            "animated": true
+          },
+          {
+            "from": "red",
+            "to": "blue",
+            "kind": "dep",
+            "label": {
+              "en": "kill chains",
+              "fr": "chaînes d’attaque",
+              "es": "cadenas de ataque"
+            }
+          },
+          {
+            "from": "green",
+            "to": "blue",
+            "kind": "data",
+            "label": {
+              "en": "evidence",
+              "fr": "preuves",
+              "es": "evidencia"
+            }
+          },
+          {
+            "from": "blue",
+            "to": "estate",
+            "kind": "flow",
+            "label": {
+              "en": "defend",
+              "fr": "défendre",
+              "es": "defender"
+            }
+          },
+          {
+            "from": "estate",
+            "to": "modern",
+            "kind": "flow",
+            "label": {
+              "en": "modernize",
+              "fr": "moderniser",
+              "es": "modernizar"
+            },
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "estate",
+            "to": "cost",
+            "kind": "dep",
+            "dir": "v"
+          }
+        ]
+      }
+    },
+    {
+      "id": "factory",
+      "kind": "graph",
+      "paper": "qthji",
+      "title": {
+        "en": "The AI factory pipeline",
+        "fr": "La chaîne de l’usine d’IA",
+        "es": "La cadena de producción de la fábrica de IA"
+      },
+      "blurb": {
+        "en": "Pronghorn ideation, then Nexus orchestration, then Velocity delivery. Agents flow across the line.",
+        "fr": "Idéation Pronghorn, puis orchestration Nexus, puis livraison Velocity.",
+        "es": "Ideación con Pronghorn, orquestación con Nexus y entrega con Velocity. Los agentes fluyen a lo largo de toda la línea."
+      },
+      "narrative": {
+        "en": "This scene draws the AI factory as a pipeline in three stages, with agents flowing left to right. The first stage is Pronghorn, where ideation turns a ministry's requirements into a live prototype, a four-level requirements map, and an architecture canvas. The second stage is Nexus, where each developer gets a secure cloud sandbox running many agent instances; work is containerized and published to Google Cloud behind a private endpoint, with every action observable and audited through the Bifrost gateway. The third stage is Velocity, where delivery is measured on a game board and enforced by the Reaper, with a leaderboard. Agents move through the line as design agents, build agents, oversight agents, and architect agents, while a human and the agents hand off turns.",
+        "fr": "Cette scène dessine l’usine d’IA comme une chaîne en trois étapes, avec des agents qui circulent de gauche à droite. La première étape est Pronghorn, où l’idéation transforme les exigences d’un ministère en un prototype vivant, en une carte des exigences à quatre niveaux et en un canevas d’architecture. La deuxième étape est Nexus, où chaque développeur reçoit un bac à sable infonuagique sécurisé exécutant de nombreuses instances d’agents; le travail est mis en conteneurs et publié dans Google Cloud derrière un point d’accès privé, chaque action étant observable et vérifiée par l’entremise de la passerelle Bifrost. La troisième étape est Velocity, où la livraison est mesurée sur un plateau de jeu et appliquée par le Faucheur, avec un classement. Les agents traversent la chaîne en tant qu’agents de conception, agents de construction, agents de supervision et agents d’architecture, tandis qu’un humain et les agents se passent le tour.",
+        "es": "Esta escena representa la fábrica de IA como una cadena de producción en tres etapas, con agentes que avanzan de izquierda a derecha. La primera etapa es Pronghorn, donde la ideación transforma los requisitos de un ministerio en un prototipo en vivo, un mapa de requisitos de cuatro niveles y un lienzo de arquitectura. La segunda etapa es Nexus, donde cada desarrollador cuenta con un entorno seguro en la nube que ejecuta múltiples instancias de agentes (de IA); el trabajo se conteneriza y se publica en Google Cloud detrás de un punto de acceso privado, con cada acción observable y auditada a través de la pasarela Bifrost. La tercera etapa es Velocity, donde la entrega se mide en un tablero de juego y es gestionada por el Reaper, con una tabla de clasificación. Los agentes avanzan por la línea como agentes de diseño, agentes de construcción, agentes de supervisión y agentes de arquitectura, mientras que una persona y los agentes se turnan en el trabajo."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "pg",
+            "label": {
+              "en": "Pronghorn · Ideation",
+              "fr": "Pronghorn · Idéation",
+              "es": "Pronghorn · Ideación"
+            },
+            "x": 40,
+            "y": 120,
+            "w": 300,
+            "h": 580,
+            "color": "#B23F15"
+          },
+          {
+            "id": "nx",
+            "label": {
+              "en": "Nexus · Orchestration",
+              "fr": "Nexus · Orchestration",
+              "es": "Nexus · Orquestación"
+            },
+            "x": 490,
+            "y": 120,
+            "w": 300,
+            "h": 580,
+            "color": "#2e6fa6"
+          },
+          {
+            "id": "vl",
+            "label": {
+              "en": "Velocity · Delivery",
+              "fr": "Velocity · Livraison",
+              "es": "Velocity · Entrega"
+            },
+            "x": 940,
+            "y": 120,
+            "w": 300,
+            "h": 580,
+            "color": "#1A3A6E"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "chat",
+            "type": "stage",
+            "label": {
+              "en": "Chat",
+              "fr": "Clavardage",
+              "es": "Chat"
+            },
+            "sub": {
+              "en": "live HTML prototype",
+              "fr": "prototype HTML en direct",
+              "es": "prototipo HTML en vivo"
+            },
+            "x": 95,
+            "y": 170,
+            "detail": {
+              "en": "A live prototype in the browser, from an idea to something you can click.",
+              "fr": "Un prototype en direct dans le navigateur, d’une idée à quelque chose sur quoi on peut cliquer.",
+              "es": "Un prototipo en vivo en el navegador, desde una idea hasta algo que usted puede pulsar."
+            }
+          },
+          {
+            "id": "reqs",
+            "type": "stage",
+            "label": {
+              "en": "Requirements",
+              "fr": "Exigences",
+              "es": "Requisitos"
+            },
+            "sub": {
+              "en": "Epic → Feature → Story",
+              "fr": "Épopée → Fonctionnalité → Récit",
+              "es": "Épica → Funcionalidad → Historia"
+            },
+            "x": 95,
+            "y": 330,
+            "detail": {
+              "en": "A four-level requirements map: Epic, Feature, User Story, Acceptance Criteria.",
+              "fr": "Une carte des exigences à quatre niveaux : épopée, fonctionnalité, récit utilisateur, critères d’acceptation.",
+              "es": "Un mapa de requisitos de cuatro niveles: Épica, Funcionalidad, Historia de usuario y Criterios de aceptación."
+            }
+          },
+          {
+            "id": "pcanvas",
+            "type": "stage",
+            "label": {
+              "en": "Architecture canvas",
+              "fr": "Canevas d’architecture",
+              "es": "Lienzo de arquitectura"
+            },
+            "sub": {
+              "en": "nodes & edges (React Flow)",
+              "fr": "nœuds et liens (React Flow)",
+              "es": "nodos y aristas (React Flow)"
+            },
+            "x": 95,
+            "y": 490,
+            "detail": {
+              "en": "The architecture drawn as nodes and edges that human and agents both author, then handed to the build.",
+              "fr": "L’architecture dessinée sous forme de nœuds et de liens que l’humain et les agents rédigent ensemble, puis remise à la construction.",
+              "es": "La arquitectura representada como nodos y aristas que tanto la persona como los agentes elaboran conjuntamente, y que luego se entrega al proceso de construcción."
+            }
+          },
+          {
+            "id": "vm",
+            "type": "agent",
+            "label": {
+              "en": "Developer VM",
+              "fr": "MV du développeur",
+              "es": "Máquina virtual del desarrollador"
+            },
+            "sub": {
+              "en": "many agent instances",
+              "fr": "de nombreuses instances d’agents",
+              "es": "múltiples instancias de agentes"
+            },
+            "x": 545,
+            "y": 170,
+            "detail": {
+              "en": "Each developer gets a secure Google Cloud sandbox running unlimited agent instances, every action observable.",
+              "fr": "Chaque développeur reçoit un bac à sable Google Cloud sécurisé exécutant un nombre illimité d’instances d’agents, chaque action étant observable.",
+              "es": "Cada desarrollador dispone de un entorno seguro en Google Cloud que ejecuta instancias de agentes sin límite, con cada acción observable."
+            }
+          },
+          {
+            "id": "containerize",
+            "type": "service",
+            "label": {
+              "en": "Containerize → GCloud",
+              "fr": "Mise en conteneurs → GCloud",
+              "es": "Contenerizar → GCloud"
+            },
+            "sub": {
+              "en": "publish behind private VPN",
+              "fr": "publier derrière un RPV privé",
+              "es": "publicar detrás de una VPN privada"
+            },
+            "x": 545,
+            "y": 330,
+            "detail": {
+              "en": "Publish-this-app containerizes and deploys to Google Cloud in minutes, behind a private endpoint.",
+              "fr": "La fonction « publier cette application » met en conteneurs et déploie vers Google Cloud en quelques minutes, derrière un point d’accès privé.",
+              "es": "«Publicar esta aplicación» la conteneriza y la despliega en Google Cloud en minutos, detrás de un punto de acceso privado."
+            }
+          },
+          {
+            "id": "observe",
+            "type": "gateway",
+            "label": {
+              "en": "Observe & audit",
+              "fr": "Observer et vérifier",
+              "es": "Observar y auditar"
+            },
+            "sub": "Bifrost · Ent Tools",
+            "x": 545,
+            "y": 490,
+            "detail": {
+              "en": "Every action observed and audited through the Bifrost gateway; agents even audit other agents.",
+              "fr": "Chaque action observée et vérifiée par l’entremise de la passerelle Bifrost; les agents vérifient même d’autres agents.",
+              "es": "Cada acción se observa y audita a través de la pasarela Bifrost; los agentes incluso se auditan entre sí."
+            }
+          },
+          {
+            "id": "board",
+            "type": "stage",
+            "label": {
+              "en": "Velocity game board",
+              "fr": "Plateau de jeu Velocity",
+              "es": "Tablero de juego Velocity"
+            },
+            "sub": {
+              "en": "8 stages, points for progress",
+              "fr": "8 étapes, des points pour le progrès",
+              "es": "8 etapas, puntos por avance"
+            },
+            "x": 995,
+            "y": 170,
+            "detail": {
+              "en": "Delivery measured on a snakes-and-ladders board: forward earns points, backsliding loses them.",
+              "fr": "La livraison mesurée sur un plateau de serpents et échelles : avancer rapporte des points, reculer en fait perdre.",
+              "es": "El avance en la entrega se mide en un tablero de serpientes y escaleras: avanzar suma puntos, retroceder los resta."
+            }
+          },
+          {
+            "id": "reaper",
+            "type": "agent",
+            "color": "#b1331a",
+            "label": {
+              "en": "The Reaper",
+              "fr": "Le Faucheur",
+              "es": "El Segador"
+            },
+            "sub": {
+              "en": "enforces; removes points",
+              "fr": "applique; retire des points",
+              "es": "aplica sanciones; resta puntos"
+            },
+            "x": 995,
+            "y": 330,
+            "detail": {
+              "en": "An enforcement agent that removes points when work slides back, at a 2x multiplier.",
+              "fr": "Un agent d’application qui retire des points lorsque le travail recule, avec un multiplicateur de 2×.",
+              "es": "Un agente (de IA) de control que resta puntos cuando el trabajo retrocede, con un multiplicador de 2x."
+            }
+          },
+          {
+            "id": "leader",
+            "type": "data",
+            "label": {
+              "en": "Leaderboard & audit",
+              "fr": "Classement et vérification",
+              "es": "Clasificación y auditoría"
+            },
+            "sub": {
+              "en": "human vs AI chess clock",
+              "fr": "horloge d’échecs humain contre IA",
+              "es": "tiempo humano frente a IA, reloj de ajedrez"
+            },
+            "x": 995,
+            "y": 490,
+            "detail": {
+              "en": "A leaderboard and audit reports; a chess clock splits human and AI time.",
+              "fr": "Un classement et des rapports de vérification; une horloge d’échecs répartit le temps de l’humain et de l’IA.",
+              "es": "Una tabla de clasificación e informes de auditoría; un reloj de ajedrez divide el tiempo entre humanos e IA."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "chat",
+            "to": "reqs",
+            "kind": "flow",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "reqs",
+            "to": "pcanvas",
+            "kind": "flow",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "pcanvas",
+            "to": "vm",
+            "kind": "flow",
+            "label": {
+              "en": "handoff",
+              "fr": "transfert",
+              "es": "traspaso"
+            },
+            "animated": true
+          },
+          {
+            "from": "vm",
+            "to": "containerize",
+            "kind": "flow",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "containerize",
+            "to": "observe",
+            "kind": "flow",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "observe",
+            "to": "board",
+            "kind": "flow",
+            "label": {
+              "en": "deliver",
+              "fr": "livrer",
+              "es": "entregar"
+            },
+            "animated": true
+          },
+          {
+            "from": "board",
+            "to": "reaper",
+            "kind": "ctrl",
+            "dir": "v"
+          },
+          {
+            "from": "board",
+            "to": "leader",
+            "kind": "data",
+            "dir": "v"
+          }
+        ]
+      }
+    },
+    {
+      "id": "velocity",
+      "kind": "graph",
+      "paper": "k3tc3",
+      "title": {
+        "en": "The Velocity delivery game",
+        "fr": "Le jeu de livraison Velocity",
+        "es": "El juego de entrega Velocity"
+      },
+      "blurb": {
+        "en": "Eight stages. Forward motion earns points; backsliding loses them permanently. The Reaper enforces.",
+        "fr": "Huit étapes. Avancer rapporte des points ; reculer en coûte.",
+        "es": "Ocho etapas. El avance suma puntos; el retroceso los pierde de forma permanente. El Segador aplica las sanciones."
+      },
+      "narrative": {
+        "en": "This scene is the Velocity delivery game, a snakes-and-ladders track of eight stages: requirements, planning, architecture, prototype, development, user testing, user acceptance, and deployment. A project token moves along the track. Forward motion earns points: starting a step earns ten, submitting for review earns twenty, completing a step earns one hundred. Backsliding loses them and the loss is permanent: a rejection costs thirty, sending work back a stage costs fifty per stage, reopening a completed step costs fifty. An enforcement agent called the Reaper removes the points. The board exists because old-style estimation fails once AI codes a hundred times faster, and the program target is a twentyfold acceleration of real delivery.",
+        "fr": "Cette scène présente le jeu de livraison Velocity, un parcours de serpents et échelles comptant huit étapes : exigences, planification, architecture, prototype, développement, tests utilisateurs, acceptation par l’utilisateur et déploiement. Un jeton de projet avance le long du parcours. Le mouvement vers l’avant rapporte des points : amorcer une étape rapporte dix points, la soumettre pour revue en rapporte vingt, la terminer en rapporte cent. Reculer en fait perdre, et la perte est permanente : un rejet coûte trente points, renvoyer le travail d’une étape coûte cinquante points par étape, rouvrir une étape terminée coûte cinquante points. Un agent d’application appelé le Faucheur retire les points. Le plateau existe parce que l’estimation à l’ancienne échoue dès que l’IA code cent fois plus vite, et la cible du programme est une accélération de la livraison réelle d’un facteur vingt.",
+        "es": "Esta escena representa el juego de entrega Velocity, un tablero de serpientes y escaleras con ocho etapas: requisitos, planificación, arquitectura, prototipo, desarrollo, pruebas con usuarios, aceptación por parte de los usuarios y despliegue. Una ficha de proyecto avanza por el tablero. El progreso suma puntos: iniciar un paso suma diez, enviarlo a revisión suma veinte, y completar un paso suma cien. El retroceso resta puntos de forma permanente: un rechazo cuesta treinta, devolver el trabajo una etapa cuesta cincuenta por etapa, y reabrir un paso completado cuesta cincuenta. Un agente (de IA) de control llamado el Segador aplica estas deducciones. El tablero existe porque la estimación tradicional pierde eficacia cuando la IA puede generar código cien veces más rápido, y el objetivo del programa es una aceleración de veinte veces en la entrega real."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "track",
+            "label": {
+              "en": "Delivery track · forward earns points",
+              "fr": "Parcours de livraison · avancer rapporte des points",
+              "es": "Seguimiento de entregas · el avance suma puntos"
+            },
+            "x": 24,
+            "y": 250,
+            "w": 1232,
+            "h": 150
+          }
+        ],
+        "nodes": [
+          {
+            "id": "s1",
+            "type": "stage",
+            "label": {
+              "en": "Requirements",
+              "fr": "Exigences",
+              "es": "Requisitos"
+            },
+            "metric": "01",
+            "x": 40,
+            "y": 290,
+            "w": 150,
+            "h": 66,
+            "detail": {
+              "en": "Stage 1. Skills are organized one per stage; tracking is at the step level within a module. Start +10, submit +20, complete +100.",
+              "fr": "Étape 1. Les compétences sont organisées une par étape; le suivi se fait au niveau du pas à l’intérieur d’un module. Amorcer +10, soumettre +20, terminer +100.",
+              "es": "Etapa 1. Las habilidades se organizan de a una por etapa; el seguimiento se realiza al nivel del paso dentro de un módulo. Inicio +10, envío +20, finalización +100."
+            }
+          },
+          {
+            "id": "s2",
+            "type": "stage",
+            "label": {
+              "en": "Planning",
+              "fr": "Planification",
+              "es": "Planificación"
+            },
+            "metric": "02",
+            "x": 192,
+            "y": 290,
+            "w": 150,
+            "h": 66,
+            "detail": {
+              "en": "Stage 2.",
+              "fr": "Étape 2.",
+              "es": "Etapa 2."
+            }
+          },
+          {
+            "id": "s3",
+            "type": "stage",
+            "label": {
+              "en": "Architecture",
+              "fr": "Architecture",
+              "es": "Arquitectura"
+            },
+            "metric": "03",
+            "x": 344,
+            "y": 290,
+            "w": 150,
+            "h": 66,
+            "detail": {
+              "en": "Stage 3.",
+              "fr": "Étape 3.",
+              "es": "Etapa 3."
+            }
+          },
+          {
+            "id": "s4",
+            "type": "stage",
+            "label": {
+              "en": "Prototype",
+              "fr": "Prototype",
+              "es": "Prototipo"
+            },
+            "metric": "04",
+            "x": 496,
+            "y": 290,
+            "w": 150,
+            "h": 66,
+            "detail": {
+              "en": "Stage 4.",
+              "fr": "Étape 4.",
+              "es": "Etapa 4."
+            }
+          },
+          {
+            "id": "s5",
+            "type": "stage",
+            "label": {
+              "en": "Development",
+              "fr": "Développement",
+              "es": "Desarrollo"
+            },
+            "metric": "05",
+            "x": 648,
+            "y": 290,
+            "w": 150,
+            "h": 66,
+            "detail": {
+              "en": "Stage 5.",
+              "fr": "Étape 5.",
+              "es": "Etapa 5."
+            }
+          },
+          {
+            "id": "s6",
+            "type": "stage",
+            "label": {
+              "en": "User Testing",
+              "fr": "Tests utilisateurs",
+              "es": "Pruebas con usuarios"
+            },
+            "metric": "06",
+            "x": 800,
+            "y": 290,
+            "w": 150,
+            "h": 66,
+            "detail": {
+              "en": "Stage 6.",
+              "fr": "Étape 6.",
+              "es": "Etapa 6."
+            }
+          },
+          {
+            "id": "s7",
+            "type": "stage",
+            "label": {
+              "en": "User Acceptance",
+              "fr": "Acceptation par l’utilisateur",
+              "es": "Aceptación por parte de los usuarios"
+            },
+            "metric": "07",
+            "x": 952,
+            "y": 290,
+            "w": 150,
+            "h": 66,
+            "detail": {
+              "en": "Stage 7.",
+              "fr": "Étape 7.",
+              "es": "Etapa 7."
+            }
+          },
+          {
+            "id": "s8",
+            "type": "stage",
+            "label": {
+              "en": "Deployment",
+              "fr": "Déploiement",
+              "es": "Despliegue"
+            },
+            "metric": "08",
+            "x": 1104,
+            "y": 290,
+            "w": 150,
+            "h": 66,
+            "detail": {
+              "en": "Stage 8. Projects auto-create a workspace with a folder per module.",
+              "fr": "Étape 8. Les projets créent automatiquement un espace de travail avec un dossier par module.",
+              "es": "Etapa 8. Los proyectos crean automáticamente un espacio de trabajo con una carpeta por módulo."
+            }
+          },
+          {
+            "id": "score",
+            "type": "data",
+            "label": {
+              "en": "Scoring",
+              "fr": "Pointage",
+              "es": "Puntuación"
+            },
+            "sub": {
+              "en": "+10 start · +100 complete",
+              "fr": "+10 amorcer · +100 terminer",
+              "es": "+10 al iniciar · +100 al completar"
+            },
+            "metric": "20×",
+            "x": 300,
+            "y": 560,
+            "w": 220,
+            "detail": {
+              "en": "Start +10, submit +20, complete +100; reject −30, send back −50 per stage, reopen −50. The program target is a 20x acceleration of real delivery.",
+              "fr": "Amorcer +10, soumettre +20, terminer +100; rejeter −30, renvoyer −50 par étape, rouvrir −50. La cible du programme est une accélération de la livraison réelle d’un facteur 20.",
+              "es": "Inicio +10, envío +20, finalización +100; rechazo −30, devolución −50 por etapa, reapertura −50. El objetivo del programa es una aceleración de 20x en la entrega real."
+            }
+          },
+          {
+            "id": "reaper",
+            "type": "agent",
+            "color": "#b1331a",
+            "label": {
+              "en": "The Reaper",
+              "fr": "Le Faucheur",
+              "es": "El Segador"
+            },
+            "sub": {
+              "en": "removes points, permanently",
+              "fr": "retire des points, de façon permanente",
+              "es": "resta puntos, de forma permanente"
+            },
+            "x": 760,
+            "y": 560,
+            "w": 200,
+            "detail": {
+              "en": "The enforcement agent. Removes points when work backslides, and removes them again at a 2x multiplier.",
+              "fr": "L’agent d’application. Retire des points lorsque le travail recule, et les retire de nouveau avec un multiplicateur de 2×.",
+              "es": "El agente (de IA) de control. Resta puntos cuando el trabajo retrocede, y los resta de nuevo con un multiplicador de 2x."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "s2",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "s2",
+            "to": "s3",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "s3",
+            "to": "s4",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "s4",
+            "to": "s5",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "s5",
+            "to": "s6",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "s6",
+            "to": "s7",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "s7",
+            "to": "s8",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "s6",
+            "to": "reaper",
+            "kind": "ctrl",
+            "label": {
+              "en": "send back −50",
+              "fr": "renvoyer −50",
+              "es": "devolución −50"
+            },
+            "dir": "v"
+          },
+          {
+            "from": "s3",
+            "to": "score",
+            "kind": "dep",
+            "dir": "v"
+          }
+        ]
+      }
+    },
+    {
+      "id": "antidrift",
+      "kind": "graph",
+      "paper": "of1cj",
+      "title": {
+        "en": "Keeping the work in sync",
+        "fr": "Garder le travail synchronisé",
+        "es": "Mantener el trabajo sincronizado"
+      },
+      "blurb": {
+        "en": "Observer harnesses watch a builder from outside, file tickets into a filesystem bus, and the builder clears them.",
+        "fr": "Des harnais observateurs surveillent un bâtisseur de l’extérieur et déposent des billets.",
+        "es": "Los arneses observadores vigilan a un agente constructor desde fuera, registran tickets en un bus del sistema de archivos y el constructor los resuelve."
+      },
+      "narrative": {
+        "en": "This scene shows the anti-drift harness keeping a long build in sync. A builder agent writes features and edits the chain of related artifacts, the fourteen links that run from requirements through schema, code, tests, and documentation. As a codebase grows, those links drift out of sync. Observer harnesses run as separate sessions outside the project and watch the chain: the anti-drift harness for chain drift, a security harness for vulnerabilities and secrets, a docs harness for stale documentation. When an observer finds a problem it drops a ticket into a filesystem bus, the tickets folder, and the builder reads those tickets at the start of each turn and clears them like any other work. The bus is just the filesystem, so a failure in one observer never breaks the builder.",
+        "fr": "Cette scène montre le harnais anti-dérive qui garde une longue construction synchronisée. Un agent bâtisseur écrit des fonctionnalités et modifie la chaîne d’artéfacts liés, les quatorze maillons qui vont des exigences jusqu’au schéma, au code, aux tests et à la documentation. À mesure qu’une base de code grossit, ces maillons se désynchronisent. Des harnais observateurs s’exécutent comme des sessions distinctes à l’extérieur du projet et surveillent la chaîne : le harnais anti-dérive pour la dérive de la chaîne, un harnais de sécurité pour les vulnérabilités et les secrets, un harnais de documentation pour la documentation périmée. Lorsqu’un observateur trouve un problème, il dépose un billet dans un bus du système de fichiers, le dossier des billets, et le bâtisseur lit ces billets au début de chaque tour et les règle comme n’importe quel autre travail. Le bus n’est que le système de fichiers, de sorte qu’une défaillance d’un observateur ne brise jamais le bâtisseur.",
+        "es": "Esta escena muestra el arnés anti-desviación que mantiene sincronizada una construcción prolongada. Un agente constructor escribe funcionalidades y edita la cadena de artefactos relacionados —los catorce eslabones que van desde los requisitos hasta el esquema, el código, las pruebas y la documentación. A medida que el código base crece, esos eslabones pierden la sincronía. Los arneses observadores se ejecutan como sesiones independientes fuera del proyecto y vigilan la cadena: el arnés anti-desviación detecta la desviación de la cadena; el arnés de seguridad, las vulnerabilidades y los secretos; el arnés de documentación, la documentación desactualizada. Cuando un observador detecta un problema, deposita un ticket en un bus del sistema de archivos —la carpeta de tickets— y el constructor lee esos tickets al inicio de cada turno y los resuelve como cualquier otra tarea. El bus es simplemente el sistema de archivos, por lo que un fallo en un observador nunca interrumpe al constructor."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "obs",
+            "label": {
+              "en": "Observer harnesses · separate sessions",
+              "fr": "Harnais observateurs · sessions distinctes",
+              "es": "Arneses observadores · sesiones independientes"
+            },
+            "x": 420,
+            "y": 120,
+            "w": 300,
+            "h": 560,
+            "color": "#B23F15"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "builder",
+            "type": "agent",
+            "label": {
+              "en": "Builder",
+              "fr": "Bâtisseur",
+              "es": "Constructor"
+            },
+            "sub": {
+              "en": "writes features",
+              "fr": "écrit les fonctionnalités",
+              "es": "escribe funcionalidades"
+            },
+            "x": 80,
+            "y": 320,
+            "detail": {
+              "en": "Writes application code and edits the chain. Reads tickets at the top of each turn and clears them like any other work.",
+              "fr": "Écrit le code de l’application et modifie la chaîne. Lit les billets au début de chaque tour et les règle comme n’importe quel autre travail.",
+              "es": "Escribe el código de la aplicación y edita la cadena. Lee los tickets al inicio de cada turno y los resuelve como cualquier otra tarea."
+            }
+          },
+          {
+            "id": "chain",
+            "type": "data",
+            "label": {
+              "en": "Chain of artifacts",
+              "fr": "Chaîne d’artéfacts",
+              "es": "Cadena de artefactos"
+            },
+            "sub": {
+              "en": "14 links: reqs → … → training",
+              "fr": "14 maillons : exigences → … → formation",
+              "es": "14 eslabones: requisitos → … → entrenamiento"
+            },
+            "x": 60,
+            "y": 540,
+            "w": 320,
+            "detail": {
+              "en": "Requirements, schema, migrations, controllers, code, docs, specs, training — the chain that drifts out of sync as the codebase grows.",
+              "fr": "Exigences, schéma, migrations, contrôleurs, code, documentation, spécifications, formation — la chaîne qui se désynchronise à mesure que la base de code grossit.",
+              "es": "Requisitos, esquema, migraciones, controladores, código, documentación, especificaciones, entrenamiento — la cadena que pierde sincronía a medida que crece el código base."
+            }
+          },
+          {
+            "id": "ad",
+            "type": "agent",
+            "color": "#B23F15",
+            "label": {
+              "en": "Anti-Drift harness",
+              "fr": "Harnais anti-dérive",
+              "es": "Arnés anti-desviación"
+            },
+            "sub": {
+              "en": "chain drift",
+              "fr": "dérive de la chaîne",
+              "es": "desviación de la cadena"
+            },
+            "x": 470,
+            "y": 170,
+            "detail": {
+              "en": "Watches the chain across the fourteen links, reads deterministic evidence, and files a drift ticket when a link falls out of sync.",
+              "fr": "Surveille la chaîne sur les quatorze maillons, lit les preuves déterministes et dépose un billet de dérive lorsqu’un maillon se désynchronise.",
+              "es": "Vigila la cadena a lo largo de los catorce eslabones, lee evidencia determinista y registra un ticket de desviación cuando un eslabón pierde la sincronía."
+            }
+          },
+          {
+            "id": "sec",
+            "type": "review",
+            "color": "#1f4f8f",
+            "label": {
+              "en": "Security harness",
+              "fr": "Harnais de sécurité",
+              "es": "Arnés de seguridad"
+            },
+            "sub": {
+              "en": "ASVS · secrets",
+              "fr": "ASVS · secrets",
+              "es": "ASVS · secretos"
+            },
+            "x": 470,
+            "y": 350,
+            "detail": {
+              "en": "Watches for vulnerabilities, secrets, and dependency risk on every change.",
+              "fr": "Surveille les vulnérabilités, les secrets et le risque lié aux dépendances à chaque modification.",
+              "es": "Vigila vulnerabilidades, secretos y riesgo en las dependencias en cada cambio."
+            }
+          },
+          {
+            "id": "docs",
+            "type": "review",
+            "color": "#b8860b",
+            "label": {
+              "en": "Docs harness",
+              "fr": "Harnais de documentation",
+              "es": "Arnés de documentación"
+            },
+            "sub": "README · OpenAPI",
+            "x": 470,
+            "y": 530,
+            "detail": {
+              "en": "Watches the README, OpenAPI, and training docs against the code and flags stale documentation.",
+              "fr": "Surveille le fichier README, OpenAPI et la documentation de formation par rapport au code et signale la documentation périmée.",
+              "es": "Vigila el README, la OpenAPI y la documentación de entrenamiento en relación con el código, y señala la documentación desactualizada."
+            }
+          },
+          {
+            "id": "tickets",
+            "type": "service",
+            "label": {
+              "en": "Tickets bus",
+              "fr": "Bus des billets",
+              "es": "Bus de tickets"
+            },
+            "sub": ".tickets/open/",
+            "metric": {
+              "en": "filesystem",
+              "fr": "système de fichiers",
+              "es": "sistema de archivos"
+            },
+            "x": 820,
+            "y": 350,
+            "detail": {
+              "en": "A passive filesystem inbox: observers append a markdown ticket, the builder consumes it. Crash-isolated; no observer shares context with the builder.",
+              "fr": "Une boîte de réception passive sur le système de fichiers : les observateurs ajoutent un billet en markdown, le bâtisseur le consomme. Isolé contre les pannes; aucun observateur ne partage de contexte avec le bâtisseur.",
+              "es": "Una bandeja de entrada pasiva en el sistema de archivos: los observadores añaden un ticket en markdown y el constructor lo consume. Con aislamiento ante fallos; ningún observador comparte contexto con el constructor."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "builder",
+            "to": "chain",
+            "kind": "flow",
+            "label": {
+              "en": "edits",
+              "fr": "modifie",
+              "es": "edita"
+            },
+            "dir": "v"
+          },
+          {
+            "from": "chain",
+            "to": "ad",
+            "kind": "dep",
+            "label": {
+              "en": "watch",
+              "fr": "surveille",
+              "es": "vigila"
+            },
+            "animated": true
+          },
+          {
+            "from": "chain",
+            "to": "sec",
+            "kind": "dep",
+            "animated": true
+          },
+          {
+            "from": "chain",
+            "to": "docs",
+            "kind": "dep",
+            "animated": true
+          },
+          {
+            "from": "ad",
+            "to": "tickets",
+            "kind": "flow",
+            "label": {
+              "en": "file ticket",
+              "fr": "déposer un billet",
+              "es": "registra ticket"
+            },
+            "animated": true
+          },
+          {
+            "from": "sec",
+            "to": "tickets",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "docs",
+            "to": "tickets",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "tickets",
+            "to": "builder",
+            "kind": "ctrl",
+            "label": {
+              "en": "read each turn",
+              "fr": "lire à chaque tour",
+              "es": "lee en cada turno"
+            },
+            "animated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "hierarchy",
+      "kind": "graph",
+      "paper": "eujjc",
+      "title": {
+        "en": "The inverted hierarchy",
+        "fr": "La hiérarchie inversée",
+        "es": "La jerarquía invertida"
+      },
+      "blurb": {
+        "en": "In an agentic hierarchy the ratio inverts: for every worker, many supervisors auditing the work.",
+        "fr": "Dans une hiérarchie agentique, le ratio s’inverse.",
+        "es": "En una jerarquía agéntica la proporción se invierte: por cada agente trabajador, hay muchos supervisores auditando el trabajo."
+      },
+      "narrative": {
+        "en": "This scene shows the inverted hierarchy from the compression problem. In a human organization there is roughly one manager for every eight staff. In an agentic hierarchy the ratio inverts: for every worker agent, you can reasonably run eight supervisor agents auditing and validating the work. The worker sits at the base, and above it sit the supervisors, each holding one concern: cybersecurity, quality assurance, change management, code review, infrastructure, communications, legal, and privacy. There can be one chef in the kitchen, surrounded by sub-agents each running its own continuous audit. The spatial picture is the point: the work of overseeing now outnumbers the work of producing, eight to one.",
+        "fr": "Cette scène montre la hiérarchie inversée issue du problème de compression. Dans une organisation humaine, il y a environ un gestionnaire pour huit employés. Dans une hiérarchie agentique, le ratio s’inverse : pour chaque agent ouvrier, on peut raisonnablement faire fonctionner huit agents superviseurs qui vérifient et valident le travail. L’ouvrier se trouve à la base, et au-dessus de lui se trouvent les superviseurs, chacun portant une seule préoccupation : cybersécurité, assurance qualité, gestion du changement, revue de code, infrastructure, communications, affaires juridiques et protection de la vie privée. Il peut y avoir un seul chef dans la cuisine, entouré de sous-agents qui mènent chacun leur propre vérification continue. L’image spatiale est l’essentiel : le travail de supervision dépasse désormais le travail de production, à huit contre un.",
+        "es": "Esta escena muestra la jerarquía invertida derivada del problema de compresión. En una organización humana existe, aproximadamente, un mando por cada ocho personas. En una jerarquía agéntica la proporción se invierte: por cada agente trabajador, es razonable contar con ocho agentes supervisores que auditan y validan el trabajo. El agente trabajador ocupa la base y, sobre él, se sitúan los supervisores, cada uno a cargo de una preocupación específica: ciberseguridad, garantía de calidad, gestión del cambio, revisión de código, infraestructura, comunicaciones, asuntos legales y privacidad. Puede haber un único responsable central, rodeado de subagentes que ejecutan cada uno su propia auditoría continua. La imagen espacial es lo esencial: el trabajo de supervisión supera ahora al trabajo de producción en una proporción de ocho a uno."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "sup",
+            "label": {
+              "en": "Supervisors · audit & validate",
+              "fr": "Superviseurs · vérifier et valider",
+              "es": "Supervisores · auditoría y validación"
+            },
+            "x": 40,
+            "y": 90,
+            "w": 1200,
+            "h": 380
+          }
+        ],
+        "nodes": [
+          {
+            "id": "cyber",
+            "type": "review",
+            "label": {
+              "en": "Cybersecurity",
+              "fr": "Cybersécurité",
+              "es": "Ciberseguridad"
+            },
+            "x": 70,
+            "y": 140,
+            "w": 160,
+            "h": 60,
+            "detail": {
+              "en": "Audits security continuously.",
+              "fr": "Vérifie la sécurité en continu.",
+              "es": "Audita la seguridad de forma continua."
+            }
+          },
+          {
+            "id": "qa",
+            "type": "review",
+            "label": {
+              "en": "QA",
+              "fr": "Assurance qualité",
+              "es": "QA"
+            },
+            "x": 290,
+            "y": 140,
+            "w": 160,
+            "h": 60,
+            "detail": {
+              "en": "Validates quality.",
+              "fr": "Valide la qualité.",
+              "es": "Valida la calidad."
+            }
+          },
+          {
+            "id": "change",
+            "type": "review",
+            "label": {
+              "en": "Change mgmt",
+              "fr": "Gestion du changement",
+              "es": "Gestión del cambio"
+            },
+            "x": 510,
+            "y": 140,
+            "w": 160,
+            "h": 60,
+            "detail": {
+              "en": "Tracks and manages change.",
+              "fr": "Suit et gère le changement.",
+              "es": "Registra y gestiona los cambios."
+            }
+          },
+          {
+            "id": "review",
+            "type": "review",
+            "label": {
+              "en": "Code review",
+              "fr": "Revue de code",
+              "es": "Revisión de código"
+            },
+            "x": 730,
+            "y": 140,
+            "w": 160,
+            "h": 60,
+            "detail": {
+              "en": "Reviews the worker's code with a fresh context.",
+              "fr": "Revoit le code de l’ouvrier avec un contexte neuf.",
+              "es": "Revisa el código del agente trabajador con una ventana de contexto nueva."
+            }
+          },
+          {
+            "id": "infra",
+            "type": "review",
+            "label": {
+              "en": "Infrastructure",
+              "fr": "Infrastructure",
+              "es": "Infraestructura"
+            },
+            "x": 180,
+            "y": 320,
+            "w": 160,
+            "h": 60,
+            "detail": {
+              "en": "Watches infrastructure and deployment.",
+              "fr": "Surveille l’infrastructure et le déploiement.",
+              "es": "Supervisa la infraestructura y el despliegue."
+            }
+          },
+          {
+            "id": "comms",
+            "type": "review",
+            "label": {
+              "en": "Communications",
+              "fr": "Communications",
+              "es": "Comunicaciones"
+            },
+            "x": 400,
+            "y": 320,
+            "w": 160,
+            "h": 60,
+            "detail": {
+              "en": "Handles communications.",
+              "fr": "S’occupe des communications.",
+              "es": "Gestiona las comunicaciones."
+            }
+          },
+          {
+            "id": "legal",
+            "type": "review",
+            "label": {
+              "en": "Legal",
+              "fr": "Affaires juridiques",
+              "es": "Legal"
+            },
+            "x": 620,
+            "y": 320,
+            "w": 160,
+            "h": 60,
+            "detail": {
+              "en": "Checks legal constraints.",
+              "fr": "Vérifie les contraintes juridiques.",
+              "es": "Verifica las restricciones legales."
+            }
+          },
+          {
+            "id": "privacy",
+            "type": "review",
+            "label": {
+              "en": "Privacy",
+              "fr": "Protection de la vie privée",
+              "es": "Privacidad"
+            },
+            "x": 840,
+            "y": 320,
+            "w": 160,
+            "h": 60,
+            "detail": {
+              "en": "Checks privacy and PII.",
+              "fr": "Vérifie la protection de la vie privée et les renseignements personnels.",
+              "es": "Verifica la privacidad y los datos de identificación personal."
+            }
+          },
+          {
+            "id": "worker",
+            "type": "agent",
+            "label": {
+              "en": "Worker agent",
+              "fr": "Agent ouvrier",
+              "es": "Agente ejecutor"
+            },
+            "sub": {
+              "en": "one chef in the kitchen",
+              "fr": "un seul chef dans la cuisine",
+              "es": "un cocinero en la cocina"
+            },
+            "metric": "1 : 8",
+            "x": 480,
+            "y": 620,
+            "w": 300,
+            "h": 80,
+            "detail": {
+              "en": "The single producing agent. For every worker, eight supervisors audit and validate. The ratio inverts the human one-to-eight.",
+              "fr": "Le seul agent producteur. Pour chaque ouvrier, huit superviseurs vérifient et valident. Le ratio inverse celui d’un humain pour huit.",
+              "es": "El único agente (de IA) que produce resultados. Por cada agente ejecutor, ocho supervisores auditan y validan. La proporción invierte la relación humana de uno a ocho."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "cyber",
+            "to": "worker",
+            "kind": "ctrl",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "qa",
+            "to": "worker",
+            "kind": "ctrl",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "change",
+            "to": "worker",
+            "kind": "ctrl",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "review",
+            "to": "worker",
+            "kind": "ctrl",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "infra",
+            "to": "worker",
+            "kind": "ctrl",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "comms",
+            "to": "worker",
+            "kind": "ctrl",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "legal",
+            "to": "worker",
+            "kind": "ctrl",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "privacy",
+            "to": "worker",
+            "kind": "ctrl",
+            "dir": "v",
+            "animated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "future",
+      "kind": "graph",
+      "paper": "offjm",
+      "title": {
+        "en": "Government 3.0, the future state",
+        "fr": "Gouvernement 3.0, l’état futur",
+        "es": "Gobierno 3.0, el estado futuro"
+      },
+      "blurb": {
+        "en": "A ministry's overlapping systems collapse into a few shared modules, built once, with no redundancy.",
+        "fr": "Les systèmes redondants d’un ministère se réduisent à quelques modules partagés.",
+        "es": "Los sistemas superpuestos de un ministerio se consolidan en unos pocos módulos compartidos, desarrollados una sola vez y sin redundancias."
+      },
+      "narrative": {
+        "en": "This scene shows the future state, where a ministry's tangle of overlapping systems collapses into a small set of shared, government-owned modules. In one Alberta ministry, one hundred eighty-five applications reduce to sixteen reusable modules, each built once with no redundancy, and complexity and attack surface fall by more than ninety percent. An AI rationalization pass reads the whole ministry at once, reverse-engineers what every system does, and clusters the findings into business capabilities. The shared services that emerge include payments, geospatial mapping, contract management, identity and access, build and release and observability, and an integration fabric. On the left, the overlapping legacy systems; on the right, the few modern modules they fold into.",
+        "fr": "Cette scène montre l’état futur, où l’enchevêtrement de systèmes qui se chevauchent d’un ministère se réduit à un petit ensemble de modules partagés appartenant au gouvernement. Dans un ministère de l’Alberta, cent quatre-vingt-cinq applications se réduisent à seize modules réutilisables, chacun construit une seule fois sans redondance, et la complexité ainsi que la surface d’attaque chutent de plus de quatre-vingt-dix pour cent. Une passe de rationalisation par l’IA lit tout le ministère d’un coup, rétro-conçoit ce que fait chaque système et regroupe les conclusions en capacités d’affaires. Les services partagés qui en émergent comprennent les paiements, la cartographie géospatiale, la gestion des contrats, l’identité et l’accès, la construction, la mise en production et l’observabilité, ainsi qu’un tissu d’intégration. À gauche, les systèmes hérités qui se chevauchent; à droite, les quelques modules modernes dans lesquels ils se regroupent.",
+        "es": "Esta escena muestra el estado futuro, en el que la maraña de sistemas superpuestos de un ministerio se consolida en un pequeño conjunto de módulos compartidos de titularidad gubernamental. En un ministerio de Alberta, ciento ochenta y cinco aplicaciones se reducen a dieciséis módulos reutilizables, cada uno desarrollado una sola vez y sin redundancias, de modo que la complejidad y la superficie de ataque disminuyen en más de un noventa por ciento. Un proceso de racionalización asistido por la IA lee todo el ministerio de una sola vez, analiza en sentido inverso lo que hace cada sistema y agrupa los hallazgos en capacidades de negocio. Los servicios compartidos que surgen incluyen pagos, cartografía geoespacial, gestión de contratos, identidad y acceso, construcción, despliegue y observabilidad, y un tejido de integración. A la izquierda, los sistemas heredados superpuestos; a la derecha, los pocos módulos modernos en los que se integran."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "leg",
+            "label": {
+              "en": "≈185 applications",
+              "fr": "≈185 applications",
+              "es": "≈185 aplicaciones"
+            },
+            "x": 40,
+            "y": 100,
+            "w": 360,
+            "h": 600,
+            "color": "#8a6d3b"
+          },
+          {
+            "id": "mod",
+            "label": {
+              "en": "16 shared modules",
+              "fr": "16 modules partagés",
+              "es": "16 módulos compartidos"
+            },
+            "x": 850,
+            "y": 80,
+            "w": 390,
+            "h": 660,
+            "color": "#2f7a3f"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "l1",
+            "type": "legacy",
+            "label": {
+              "en": "Permits",
+              "fr": "Permis",
+              "es": "Permisos"
+            },
+            "x": 70,
+            "y": 150,
+            "w": 150,
+            "h": 54,
+            "detail": {
+              "en": "One of ~185 overlapping legacy applications.",
+              "fr": "L’une des ~185 applications héritées qui se chevauchent.",
+              "es": "Una de las ~185 aplicaciones heredadas superpuestas."
+            }
+          },
+          {
+            "id": "l2",
+            "type": "legacy",
+            "label": {
+              "en": "Licensing",
+              "fr": "Octroi de licences",
+              "es": "Licencias"
+            },
+            "x": 235,
+            "y": 150,
+            "w": 150,
+            "h": 54,
+            "detail": {
+              "en": "Overlapping legacy application.",
+              "fr": "Application héritée qui se chevauche.",
+              "es": "Aplicación heredada superpuesta."
+            }
+          },
+          {
+            "id": "l3",
+            "type": "legacy",
+            "label": {
+              "en": "Inspections",
+              "fr": "Inspections",
+              "es": "Inspecciones"
+            },
+            "x": 70,
+            "y": 250,
+            "w": 150,
+            "h": 54,
+            "detail": {
+              "en": "Overlapping legacy application.",
+              "fr": "Application héritée qui se chevauche.",
+              "es": "Aplicación heredada superpuesta."
+            }
+          },
+          {
+            "id": "l4",
+            "type": "legacy",
+            "label": {
+              "en": "Case mgmt",
+              "fr": "Gestion des dossiers",
+              "es": "Gestión de casos"
+            },
+            "x": 235,
+            "y": 250,
+            "w": 150,
+            "h": 54,
+            "detail": {
+              "en": "Overlapping legacy application.",
+              "fr": "Application héritée qui se chevauche.",
+              "es": "Aplicación heredada superpuesta."
+            }
+          },
+          {
+            "id": "l5",
+            "type": "legacy",
+            "label": {
+              "en": "Registry",
+              "fr": "Registre",
+              "es": "Registro"
+            },
+            "x": 70,
+            "y": 350,
+            "w": 150,
+            "h": 54,
+            "detail": {
+              "en": "Overlapping legacy application.",
+              "fr": "Application héritée qui se chevauche.",
+              "es": "Aplicación heredada superpuesta."
+            }
+          },
+          {
+            "id": "l6",
+            "type": "legacy",
+            "label": {
+              "en": "Portal",
+              "fr": "Portail",
+              "es": "Portal"
+            },
+            "x": 235,
+            "y": 350,
+            "w": 150,
+            "h": 54,
+            "detail": {
+              "en": "Overlapping legacy application.",
+              "fr": "Application héritée qui se chevauche.",
+              "es": "Aplicación heredada superpuesta."
+            }
+          },
+          {
+            "id": "lmore",
+            "type": "legacy",
+            "label": {
+              "en": "+ 179 more",
+              "fr": "+ 179 autres",
+              "es": "+ 179 más"
+            },
+            "sub": {
+              "en": "redundant, overlapping",
+              "fr": "redondantes, qui se chevauchent",
+              "es": "redundantes y superpuestas"
+            },
+            "x": 150,
+            "y": 460,
+            "w": 160,
+            "h": 54,
+            "detail": {
+              "en": "The rest of the ~185 applications, with heavy redundancy and overlap.",
+              "fr": "Le reste des ~185 applications, avec une forte redondance et un fort chevauchement.",
+              "es": "El resto de las ~185 aplicaciones, con alta redundancia y superposición."
+            }
+          },
+          {
+            "id": "rat",
+            "type": "agent",
+            "label": {
+              "en": "AI Rationalization",
+              "fr": "Rationalisation par l’IA",
+              "es": "Racionalización con IA"
+            },
+            "sub": {
+              "en": "cluster into capabilities",
+              "fr": "regrouper en capacités",
+              "es": "agrupar en capacidades"
+            },
+            "metric": "−90%",
+            "x": 470,
+            "y": 360,
+            "detail": {
+              "en": "Reads ~200 repositories together, reverse-engineers each system, and clusters the findings into business capabilities. Complexity and attack surface fall by more than 90%.",
+              "fr": "Lit ~200 dépôts ensemble, rétro-conçoit chaque système et regroupe les conclusions en capacités d’affaires. La complexité et la surface d’attaque chutent de plus de 90 %.",
+              "es": "Lee ~200 repositorios de forma conjunta, analiza en sentido inverso cada sistema y agrupa los hallazgos en capacidades de negocio. La complejidad y la superficie de ataque disminuyen en más de un 90 %."
+            }
+          },
+          {
+            "id": "m1",
+            "type": "module",
+            "label": {
+              "en": "Payments",
+              "fr": "Paiements",
+              "es": "Pagos"
+            },
+            "x": 880,
+            "y": 120,
+            "w": 320,
+            "h": 54,
+            "detail": {
+              "en": "Shared service, built once, zero redundancy.",
+              "fr": "Service partagé, construit une seule fois, aucune redondance.",
+              "es": "Servicio compartido, desarrollado una sola vez, sin redundancias."
+            }
+          },
+          {
+            "id": "m2",
+            "type": "module",
+            "label": {
+              "en": "Geospatial mapping",
+              "fr": "Cartographie géospatiale",
+              "es": "Cartografía geoespacial"
+            },
+            "x": 880,
+            "y": 210,
+            "w": 320,
+            "h": 54,
+            "detail": {
+              "en": "Shared service.",
+              "fr": "Service partagé.",
+              "es": "Servicio compartido."
+            }
+          },
+          {
+            "id": "m3",
+            "type": "module",
+            "label": {
+              "en": "Contract management",
+              "fr": "Gestion des contrats",
+              "es": "Gestión de contratos"
+            },
+            "x": 880,
+            "y": 300,
+            "w": 320,
+            "h": 54,
+            "detail": {
+              "en": "Shared service.",
+              "fr": "Service partagé.",
+              "es": "Servicio compartido."
+            }
+          },
+          {
+            "id": "m4",
+            "type": "module",
+            "label": {
+              "en": "Identity & access",
+              "fr": "Identité et accès",
+              "es": "Identidad y acceso"
+            },
+            "x": 880,
+            "y": 390,
+            "w": 320,
+            "h": 54,
+            "detail": {
+              "en": "Shared service.",
+              "fr": "Service partagé.",
+              "es": "Servicio compartido."
+            }
+          },
+          {
+            "id": "m5",
+            "type": "module",
+            "label": {
+              "en": "Build / release / observability",
+              "fr": "Construction / mise en production / observabilité",
+              "es": "Construcción / despliegue / observabilidad"
+            },
+            "x": 880,
+            "y": 480,
+            "w": 320,
+            "h": 54,
+            "detail": {
+              "en": "Shared service.",
+              "fr": "Service partagé.",
+              "es": "Servicio compartido."
+            }
+          },
+          {
+            "id": "m6",
+            "type": "module",
+            "label": {
+              "en": "Integration fabric",
+              "fr": "Tissu d’intégration",
+              "es": "Capa de integración"
+            },
+            "x": 880,
+            "y": 570,
+            "w": 320,
+            "h": 54,
+            "detail": {
+              "en": "Shared service connecting the modules.",
+              "fr": "Service partagé qui relie les modules.",
+              "es": "Servicio compartido que conecta los módulos."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "l1",
+            "to": "rat",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "l4",
+            "to": "rat",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "lmore",
+            "to": "rat",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "rat",
+            "to": "m1",
+            "kind": "data",
+            "animated": true
+          },
+          {
+            "from": "rat",
+            "to": "m3",
+            "kind": "data",
+            "animated": true
+          },
+          {
+            "from": "rat",
+            "to": "m4",
+            "kind": "data",
+            "animated": true
+          },
+          {
+            "from": "rat",
+            "to": "m6",
+            "kind": "data",
+            "animated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "gov3",
+      "kind": "graph",
+      "paper": "zgym1",
+      "title": {
+        "en": "Government 3.0, at runtime",
+        "fr": "Gouvernement 3.0, à l’exécution",
+        "es": "Gobierno 3.0, en tiempo de ejecución"
+      },
+      "blurb": {
+        "en": "No application in the middle. Agents act on governed data through guardrails and generate the interface on demand.",
+        "fr": "Aucune application au milieu. Les agents agissent sur des données gouvernées et génèrent l’interface à la demande.",
+        "es": "Sin aplicación intermediaria. Los agentes actúan sobre datos gobernados a través de barreras de control y generan la interfaz según la demanda."
+      },
+      "narrative": {
+        "en": "This scene shows Government three point zero at runtime, the most radical of the four approaches. There is no application in the middle. A citizen or staff member asks for a service. An orchestrator agent interprets the request and works through the Bifrost guardrail layer, which enforces personal-information protection, access control, and an audit trail. It reads and writes the governed data, the single source of truth, and checks the request against policy, the legislation and regulation that govern it. Then it generates the interface the person needs in the moment, and disposes of it afterward. The application as a fixed artifact dissolves; what remains is governed data, policy, and agents that compose the experience on demand.",
+        "fr": "Cette scène montre le Gouvernement trois point zéro à l’exécution, la plus radicale des quatre approches. Il n’y a aucune application au milieu. Un citoyen ou un membre du personnel demande un service. Un agent orchestrateur interprète la demande et travaille à travers la couche de garde-fous Bifrost, qui applique la protection des renseignements personnels, le contrôle d’accès et une piste de vérification. Il lit et écrit les données gouvernées, la source unique de vérité, et confronte la demande à la politique, soit la législation et la réglementation qui la régissent. Puis il génère l’interface dont la personne a besoin au moment voulu, et l’élimine ensuite. L’application en tant qu’artéfact fixe se dissout; ce qui reste, ce sont des données gouvernées, des politiques et des agents qui composent l’expérience à la demande.",
+        "es": "Esta escena muestra el Gobierno 3.0 en tiempo de ejecución, el más radical de los cuatro enfoques. No hay ninguna aplicación intermediaria. Un ciudadano o miembro del personal solicita un servicio. Un agente orquestador interpreta la solicitud y opera a través de la capa de barreras de control Bifrost, que aplica la protección de información personal, el control de acceso y una pista de auditoría. Lee y escribe los datos gobernados —la fuente única de verdad— y contrasta la solicitud con la política: la legislación y la regulación que la rigen. A continuación, genera la interfaz que la persona necesita en ese momento y la descarta una vez concluida. La aplicación como artefacto fijo desaparece; lo que queda son los datos gobernados, la política y los agentes que componen la experiencia según la demanda."
+      },
+      "graph": {
+        "groups": [
+          {
+            "id": "rt",
+            "label": {
+              "en": "Government 3.0 runtime",
+              "fr": "Exécution du Gouvernement 3.0",
+              "es": "Tiempo de ejecución de Gobierno 3.0"
+            },
+            "x": 300,
+            "y": 110,
+            "w": 600,
+            "h": 540
+          }
+        ],
+        "nodes": [
+          {
+            "id": "citizen",
+            "type": "human",
+            "color": "#9a3412",
+            "label": {
+              "en": "Citizen / staff",
+              "fr": "Citoyen / personnel",
+              "es": "Ciudadano / personal"
+            },
+            "sub": {
+              "en": "asks for a service",
+              "fr": "demande un service",
+              "es": "solicita un servicio"
+            },
+            "x": 60,
+            "y": 360,
+            "detail": {
+              "en": "A person asks for a service in plain terms, with no app to learn.",
+              "fr": "Une personne demande un service en termes simples, sans application à apprendre.",
+              "es": "Una persona solicita un servicio en términos sencillos, sin necesidad de aprender a usar ninguna aplicación."
+            }
+          },
+          {
+            "id": "orch",
+            "type": "agent",
+            "label": {
+              "en": "Orchestrator agent",
+              "fr": "Agent orchestrateur",
+              "es": "Agente orquestador"
+            },
+            "sub": {
+              "en": "interprets the request",
+              "fr": "interprète la demande",
+              "es": "interpreta la solicitud"
+            },
+            "x": 360,
+            "y": 360,
+            "detail": {
+              "en": "Interprets the request and composes the response from governed data and policy.",
+              "fr": "Interprète la demande et compose la réponse à partir des données gouvernées et de la politique.",
+              "es": "Interpreta la solicitud y compone la respuesta a partir de los datos gobernados y la política."
+            }
+          },
+          {
+            "id": "policy",
+            "type": "service",
+            "label": {
+              "en": "Policy & rules",
+              "fr": "Politique et règles",
+              "es": "Política y normativa"
+            },
+            "sub": {
+              "en": "legislation · regulation",
+              "fr": "législation · réglementation",
+              "es": "legislación · regulación"
+            },
+            "x": 660,
+            "y": 160,
+            "detail": {
+              "en": "The legislation and regulation that govern the request; the model stays synchronized to it.",
+              "fr": "La législation et la réglementation qui régissent la demande; le modèle reste synchronisé avec elles.",
+              "es": "La legislación y la regulación que rigen la solicitud; el modelo se mantiene sincronizado con ellas."
+            }
+          },
+          {
+            "id": "bifrost",
+            "type": "gateway",
+            "label": {
+              "en": "Bifrost guardrails",
+              "fr": "Garde-fous Bifrost",
+              "es": "Barreras de control Bifrost"
+            },
+            "sub": {
+              "en": "PII · access · audit",
+              "fr": "RP · accès · vérification",
+              "es": "PII · acceso · auditoría"
+            },
+            "x": 660,
+            "y": 360,
+            "detail": {
+              "en": "Enforces personal-information protection, access control, and an audit trail on every action.",
+              "fr": "Applique la protection des renseignements personnels, le contrôle d’accès et une piste de vérification à chaque action.",
+              "es": "Aplica la protección de información personal, el control de acceso y una pista de auditoría en cada acción."
+            }
+          },
+          {
+            "id": "govdata",
+            "type": "data",
+            "label": {
+              "en": "Governed data",
+              "fr": "Données gouvernées",
+              "es": "Datos gobernados"
+            },
+            "sub": {
+              "en": "single source of truth",
+              "fr": "source unique de vérité",
+              "es": "fuente única de verdad"
+            },
+            "x": 660,
+            "y": 540,
+            "detail": {
+              "en": "The governed data, read and written only through the guardrail layer.",
+              "fr": "Les données gouvernées, lues et écrites uniquement par l’entremise de la couche de garde-fous.",
+              "es": "Los datos gobernados, leídos y escritos únicamente a través de la capa de barreras de control."
+            }
+          },
+          {
+            "id": "ui",
+            "type": "future",
+            "label": {
+              "en": "Generated interface",
+              "fr": "Interface générée",
+              "es": "Interfaz generada"
+            },
+            "sub": {
+              "en": "built in the moment, then disposed",
+              "fr": "construite sur le moment, puis éliminée",
+              "es": "creada en el momento y luego descartada"
+            },
+            "metric": {
+              "en": "no app",
+              "fr": "aucune application",
+              "es": "sin aplicación"
+            },
+            "x": 1000,
+            "y": 360,
+            "detail": {
+              "en": "The interface the person needs, generated on demand and disposed afterward. No fixed application as an artifact.",
+              "fr": "L’interface dont la personne a besoin, générée à la demande et éliminée ensuite. Aucune application fixe en tant qu’artéfact.",
+              "es": "La interfaz que la persona necesita, generada según la demanda y descartada una vez concluida. Ninguna aplicación fija como artefacto."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "citizen",
+            "to": "orch",
+            "kind": "flow",
+            "label": {
+              "en": "request",
+              "fr": "demande",
+              "es": "solicitud"
+            },
+            "animated": true
+          },
+          {
+            "from": "orch",
+            "to": "policy",
+            "kind": "dep"
+          },
+          {
+            "from": "orch",
+            "to": "bifrost",
+            "kind": "flow",
+            "animated": true
+          },
+          {
+            "from": "bifrost",
+            "to": "govdata",
+            "kind": "data",
+            "dir": "v",
+            "animated": true
+          },
+          {
+            "from": "policy",
+            "to": "ui",
+            "kind": "dep"
+          },
+          {
+            "from": "govdata",
+            "to": "ui",
+            "kind": "data",
+            "animated": true
+          },
+          {
+            "from": "bifrost",
+            "to": "ui",
+            "kind": "flow",
+            "label": {
+              "en": "generate UI",
+              "fr": "générer l’interface",
+              "es": "generar interfaz"
+            },
+            "animated": true
+          }
+        ]
+      }
+    }
+  ]
+}

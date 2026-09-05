@@ -1,0 +1,1163 @@
+{
+  "id": "m66qi",
+  "num": "22",
+  "sequence": "22 of 22",
+  "tier": "Policy & People",
+  "title": "Taking the Hill: Innovating on Procurement with AI Insights",
+  "subtitle": "Alberta will be the first government to release the entire digital capability map of government, built from the code, so industry can finally see the real shape of our estate and bid on opportunities with fidelity.",
+  "track": "Working with Industry",
+  "authors": [
+    "Janak Alford",
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-07-18",
+  "reading_min": 29,
+  "status": "Published",
+  "tags": [
+    "procurement",
+    "open-data",
+    "git-insights",
+    "industry-partnership",
+    "modernization"
+  ],
+  "repo": "https://github.com/GovAlta/GIT-INSIGHTS-HUB",
+  "abstract": "This paper leverages the data from Git Insights and stages the information in a first-ever government release of metadata that maps every repository in Alberta's code estate to its business capability, health score, tech stack, screens, workflows, and dependencies. The dataset will give industry a complete, three-dimensional view of the digital activities of government. At the Velocity Symposium on July 28th, 2026, Technology and Innovation will walk through the extraction process and the latest Git Insights scan, then open-source this first point-in-time snapshot. Industry will have two months to build meaningful responses before demonstrating them at 'Agency', our government AI innovation event to be hosted in October 2026. The paper explains why this release is necessary, how it addresses numerous procurement process challenges, and how it fulfills the Ministry's commitment to make procurement easier, faster, and more transparent while inviting genuine partnership with industry to deliver government-owned capabilities.",
+  "hero_image": {
+    "src": "public/images/m66qi/en/hero.jpg",
+    "alt": "A great gate in a long wall swinging open onto a vast, orderly mapped estate of systems, with industry partners invited across the threshold.",
+    "image_prompt": "An editorial illustration of a massive stone gate set in a long wall, swinging open for the first time. Beyond it lies a vast, orderly territory of thousands of small building-like repositories laid out on a clear grid stretching to the horizon. A group of figures representing industry partners is invited to step across the threshold into the light. A sense of an estate long kept closed now deliberately opened. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/en/m66qi.mp3",
+    "duration_sec": 1721,
+    "segments": [
+      {
+        "seg": "title",
+        "src": "public/audio/en/m66qi-seg/title.mp3",
+        "dur": 5,
+        "hash": "2fa5f8442a26",
+        "chars": 68
+      },
+      {
+        "seg": "subtitle",
+        "src": "public/audio/en/m66qi-seg/subtitle.mp3",
+        "dur": 13,
+        "hash": "48e9ec56681f",
+        "chars": 214
+      },
+      {
+        "seg": "abstract",
+        "src": "public/audio/en/m66qi-seg/abstract.mp3",
+        "dur": 68,
+        "hash": "1c02bbf7f62a",
+        "chars": 1047
+      },
+      {
+        "seg": "b1",
+        "src": "public/audio/en/m66qi-seg/b1.mp3",
+        "dur": 58,
+        "hash": "0a82dfc5a8d7",
+        "chars": 977
+      },
+      {
+        "seg": "b65",
+        "src": "public/audio/en/m66qi-seg/b65.mp3",
+        "dur": 65,
+        "hash": "fb60091f6033",
+        "chars": 1076
+      },
+      {
+        "seg": "b2",
+        "src": "public/audio/en/m66qi-seg/b2.mp3",
+        "dur": 2,
+        "hash": "7e48a5675ef6",
+        "chars": 27
+      },
+      {
+        "seg": "b3",
+        "src": "public/audio/en/m66qi-seg/b3.mp3",
+        "dur": 127,
+        "hash": "0efe31e6f900",
+        "chars": 2110
+      },
+      {
+        "seg": "b4",
+        "src": "public/audio/en/m66qi-seg/b4.mp3",
+        "dur": 8,
+        "hash": "49d96cfb1066",
+        "chars": 105
+      },
+      {
+        "seg": "b5",
+        "src": "public/audio/en/m66qi-seg/b5.mp3",
+        "dur": 31,
+        "hash": "f8941e07245b",
+        "chars": 505
+      },
+      {
+        "seg": "b7",
+        "src": "public/audio/en/m66qi-seg/b7.mp3",
+        "dur": 2,
+        "hash": "c6deffa65215",
+        "chars": 36
+      },
+      {
+        "seg": "b8",
+        "src": "public/audio/en/m66qi-seg/b8.mp3",
+        "dur": 64,
+        "hash": "f04426d12284",
+        "chars": 1101
+      },
+      {
+        "seg": "b9",
+        "src": "public/audio/en/m66qi-seg/b9.mp3",
+        "dur": 91,
+        "hash": "416920ee69a9",
+        "chars": 1497
+      },
+      {
+        "seg": "b10",
+        "src": "public/audio/en/m66qi-seg/b10.mp3",
+        "dur": 3,
+        "hash": "dd12f21ee06c",
+        "chars": 38
+      },
+      {
+        "seg": "b13",
+        "src": "public/audio/en/m66qi-seg/b13.mp3",
+        "dur": 58,
+        "hash": "6ed66e98f7cd",
+        "chars": 938
+      },
+      {
+        "seg": "b14",
+        "src": "public/audio/en/m66qi-seg/b14.mp3",
+        "dur": 76,
+        "hash": "5a62b3b9c563",
+        "chars": 1283
+      },
+      {
+        "seg": "b15",
+        "src": "public/audio/en/m66qi-seg/b15.mp3",
+        "dur": 2,
+        "hash": "723993354319",
+        "chars": 27
+      },
+      {
+        "seg": "b16",
+        "src": "public/audio/en/m66qi-seg/b16.mp3",
+        "dur": 26,
+        "hash": "b767f30f8d4f",
+        "chars": 426
+      },
+      {
+        "seg": "b17",
+        "src": "public/audio/en/m66qi-seg/b17.mp3",
+        "dur": 81,
+        "hash": "1594e952121d",
+        "chars": 1302
+      },
+      {
+        "seg": "b19",
+        "src": "public/audio/en/m66qi-seg/b19.mp3",
+        "dur": 65,
+        "hash": "1d548b7da057",
+        "chars": 1054
+      },
+      {
+        "seg": "b20",
+        "src": "public/audio/en/m66qi-seg/b20.mp3",
+        "dur": 3,
+        "hash": "9f6d73e4df9c",
+        "chars": 49
+      },
+      {
+        "seg": "b21",
+        "src": "public/audio/en/m66qi-seg/b21.mp3",
+        "dur": 56,
+        "hash": "0c42886e3bf7",
+        "chars": 930
+      },
+      {
+        "seg": "b22",
+        "src": "public/audio/en/m66qi-seg/b22.mp3",
+        "dur": 55,
+        "hash": "498ba106b361",
+        "chars": 876
+      },
+      {
+        "seg": "b23",
+        "src": "public/audio/en/m66qi-seg/b23.mp3",
+        "dur": 40,
+        "hash": "4bc731ab6ba2",
+        "chars": 643
+      },
+      {
+        "seg": "b26",
+        "src": "public/audio/en/m66qi-seg/b26.mp3",
+        "dur": 2,
+        "hash": "79a3ec95c7be",
+        "chars": 26
+      },
+      {
+        "seg": "b27",
+        "src": "public/audio/en/m66qi-seg/b27.mp3",
+        "dur": 58,
+        "hash": "4fa8e9c0a7ef",
+        "chars": 943
+      },
+      {
+        "seg": "b28",
+        "src": "public/audio/en/m66qi-seg/b28.mp3",
+        "dur": 47,
+        "hash": "bc3f650941d9",
+        "chars": 741
+      },
+      {
+        "seg": "b31",
+        "src": "public/audio/en/m66qi-seg/b31.mp3",
+        "dur": 50,
+        "hash": "ad33e9920e0a",
+        "chars": 765
+      },
+      {
+        "seg": "b37",
+        "src": "public/audio/en/m66qi-seg/b37.mp3",
+        "dur": 31,
+        "hash": "8bbdb08483ed",
+        "chars": 530
+      },
+      {
+        "seg": "b40",
+        "src": "public/audio/en/m66qi-seg/b40.mp3",
+        "dur": 45,
+        "hash": "4226f7924586",
+        "chars": 720
+      },
+      {
+        "seg": "b42",
+        "src": "public/audio/en/m66qi-seg/b42.mp3",
+        "dur": 3,
+        "hash": "60342da360b6",
+        "chars": 49
+      },
+      {
+        "seg": "b43",
+        "src": "public/audio/en/m66qi-seg/b43.mp3",
+        "dur": 40,
+        "hash": "5a9f27d33f7e",
+        "chars": 639
+      },
+      {
+        "seg": "b45",
+        "src": "public/audio/en/m66qi-seg/b45.mp3",
+        "dur": 46,
+        "hash": "ae8b0f1a398a",
+        "chars": 739
+      },
+      {
+        "seg": "b47",
+        "src": "public/audio/en/m66qi-seg/b47.mp3",
+        "dur": 3,
+        "hash": "25e0b8c5d25e",
+        "chars": 51
+      },
+      {
+        "seg": "b48",
+        "src": "public/audio/en/m66qi-seg/b48.mp3",
+        "dur": 41,
+        "hash": "9daf02eaa163",
+        "chars": 634
+      },
+      {
+        "seg": "b49",
+        "src": "public/audio/en/m66qi-seg/b49.mp3",
+        "dur": 58,
+        "hash": "161001fb6b98",
+        "chars": 912
+      },
+      {
+        "seg": "b51",
+        "src": "public/audio/en/m66qi-seg/b51.mp3",
+        "dur": 11,
+        "hash": "0e0e024379dd",
+        "chars": 164
+      },
+      {
+        "seg": "b52",
+        "src": "public/audio/en/m66qi-seg/b52.mp3",
+        "dur": 1,
+        "hash": "d2bcf98e4399",
+        "chars": 16
+      },
+      {
+        "seg": "b53",
+        "src": "public/audio/en/m66qi-seg/b53.mp3",
+        "dur": 52,
+        "hash": "605f85095063",
+        "chars": 845
+      },
+      {
+        "seg": "b54",
+        "src": "public/audio/en/m66qi-seg/b54.mp3",
+        "dur": 28,
+        "hash": "ac2188120f11",
+        "chars": 433
+      },
+      {
+        "seg": "b55",
+        "src": "public/audio/en/m66qi-seg/b55.mp3",
+        "dur": 50,
+        "hash": "11172932e1c6",
+        "chars": 877
+      },
+      {
+        "seg": "b57",
+        "src": "public/audio/en/m66qi-seg/b57.mp3",
+        "dur": 45,
+        "hash": "385b05bf620b",
+        "chars": 719
+      },
+      {
+        "seg": "b59",
+        "src": "public/audio/en/m66qi-seg/b59.mp3",
+        "dur": 3,
+        "hash": "99e6b23df7c7",
+        "chars": 48
+      },
+      {
+        "seg": "b60",
+        "src": "public/audio/en/m66qi-seg/b60.mp3",
+        "dur": 65,
+        "hash": "ca3828467410",
+        "chars": 1036
+      },
+      {
+        "seg": "b61",
+        "src": "public/audio/en/m66qi-seg/b61.mp3",
+        "dur": 7,
+        "hash": "81c84b3c3964",
+        "chars": 104
+      },
+      {
+        "seg": "b62",
+        "src": "public/audio/en/m66qi-seg/b62.mp3",
+        "dur": 40,
+        "hash": "b2d9d3564a3e",
+        "chars": 609
+      }
+    ]
+  },
+  "tldr_presentation": {
+    "id": "m66qi-tldr",
+    "title": "The paper, in brief",
+    "locale": "en",
+    "owner_id": "m66qi",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Taking the Hill",
+        "audio_file": "public/audio/en/m66qi-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Paper 22 · Taking the Hill",
+        "subcaption": "The metadata behind every system, released to industry.",
+        "text": "Taking the Hill. Procurement is the hill we have to take to modernize government, and for years it has favored the incumbent who already knows the undocumented shape of our code. So we are releasing, for the first time, the metadata behind every system we run, so industry can finally see the real shape of the work and bid on it with fidelity."
+      },
+      {
+        "id": "02",
+        "title": "Why bidding has been broken",
+        "audio_file": "public/audio/en/m66qi-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Four failures we have documented",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Narrow specs screen out innovators",
+              "desc": "Requirements written tightly enough that fewer than ten bidders are expected, and their names are often known in advance."
+            },
+            {
+              "label": "The bid documents are blind",
+              "desc": "The real rules live in millions of lines of undocumented code, so vendors attest rather than prove."
+            },
+            {
+              "label": "IT advice is ungrounded",
+              "desc": "Tribal knowledge and compressed memos travel up as broken telephone, with no fact you can audit."
+            },
+            {
+              "label": "Everything is a legacy dig",
+              "desc": "The rulebook of government lives in the code, and reading it used to take consultants months or years."
+            }
+          ]
+        },
+        "text": "Why bidding has been broken. Specs are written so narrowly that only a handful of known bidders can win. The documents are blind to the real state of our systems, so vendors attest rather than prove. Our own advice travels up as broken telephone with no auditable fact behind it. And the rulebook of government lives inside millions of lines of undocumented code that used to take consultants months or years to read."
+      },
+      {
+        "id": "03",
+        "title": "Git Insights, released as metadata",
+        "audio_file": "public/audio/en/m66qi-tldr/03.mp3",
+        "visual": "stat",
+        "caption": "The estate, mapped and de-identified",
+        "visual_config": {
+          "stat_value": "4,041 applications",
+          "stat_label": "Mapped to 2,182 capabilities across 40 domains, with no names attached"
+        },
+        "subcaption": "Health, tech stack, screens, workflows, and dependencies, released without naming the ministry or the app.",
+        "text": "Git Insights, released as metadata. The tool that read the whole estate now extracts a rich set of metadata for every repository: its business capability, its health, its tech stack, its screens and workflows and dependencies. We release four thousand and forty-one applications, mapped to more than two thousand one hundred capabilities across forty domains, with every name stripped away."
+      },
+      {
+        "id": "04",
+        "title": "A three-dimensional view",
+        "audio_file": "public/audio/en/m66qi-tldr/04.mp3",
+        "visual": "compare",
+        "caption": "One dataset, read from three directions",
+        "visual_config": {
+          "left": {
+            "label": "What industry can see",
+            "body": "Capability to code, code to capability, or by tech stack. 75,582 screens and 73,516 workflows, finally counted."
+          },
+          "right": {
+            "label": "How industry can bid",
+            "body": "Respond to whole capabilities at once, with realistic cost, mapped straight into the same shared matrix."
+          }
+        },
+        "text": "A three-dimensional view. Vendors can read the dataset from capability down to code, from code back to capability, or by tech stack. For the first time they can see the seventy-five thousand screens and seventy-three thousand workflows behind our systems, and bid on whole capabilities at once with realistic cost, mapping their solution straight into the same matrix we use to evaluate it."
+      },
+      {
+        "id": "05",
+        "title": "No slop, please",
+        "audio_file": "public/audio/en/m66qi-tldr/05.mp3",
+        "visual": "list",
+        "caption": "A high bar for proof over polish",
+        "visual_config": {
+          "items": [
+            {
+              "label": "A structured crosswalk",
+              "desc": "Every page of a bid maps back to the capability nodes, health scores, and metadata it claims to address."
+            },
+            {
+              "label": "A verifiable artifact",
+              "desc": "A working prototype slice, a harnessed agent workflow, or a reproducible build that proves real execution."
+            },
+            {
+              "label": "Full handover",
+              "desc": "Code, documentation, agent skills, and architecture, so Alberta owns and maintains the capability."
+            }
+          ]
+        },
+        "text": "No slop, please. Because AI makes it easy to generate a glossy proposal, we are raising the bar for proof. Every bid must map, page by page, back to the matrix through a machine-readable crosswalk, and carry a verifiable artifact that proves real execution against the data. We are looking for partners who hand over the code, the documentation, the agent skills, and the architecture, so Alberta owns the capability itself."
+      },
+      {
+        "id": "06",
+        "title": "From Symposium to Agency 2026",
+        "audio_file": "public/audio/en/m66qi-tldr/06.mp3",
+        "visual": "title",
+        "caption": "The invitation",
+        "subcaption": "Two months to build. Government-owned capabilities, built in partnership.",
+        "text": "The invitation. We open-source this first snapshot at the Velocity Symposium and give industry two months to build real responses before demonstrating them at Agency 2026. We expect the next one hundred to two hundred million dollars of procurement to follow this model. Modernizing procurement is the necessary foundation for modernizing government itself."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Key procurement challenges"
+    },
+    {
+      "n": "02",
+      "title": "The evidence gap and technical debt"
+    },
+    {
+      "n": "03",
+      "title": "The compression problem and IT's role"
+    },
+    {
+      "n": "04",
+      "title": "The legacy complexity trap"
+    },
+    {
+      "n": "05",
+      "title": "Git Insights as the ground truth for procurement"
+    },
+    {
+      "n": "06",
+      "title": "The open metadata release"
+    },
+    {
+      "n": "07",
+      "title": "How industry can bid with unprecedented fidelity"
+    },
+    {
+      "n": "08",
+      "title": "Structured bids, crosswalks, and the shared matrix"
+    },
+    {
+      "n": "09",
+      "title": "No slop, please"
+    },
+    {
+      "n": "10",
+      "title": "Procurement as the foundation for modernization"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "A critical step to fixing the technical estate of government is first addressing the broken procurement processes which inhibit sourcing the technologies and finding the partners we need to be successful. The best AI tools won't help if we can't buy them. Technology and Innovation staff and leadership often hear from many would-be vendors that the pathway to selling to government is just so difficult, so slow, and so confusing that it is often simply not worth the investment to even submit a bid. Small-to-medium-sized Canadian vendors specifically identify that they struggle to qualify in the face of steep requirements, especially for new and innovative products, and must take their products to foreign markets to win the first or even their tenth customer. Some of Canada's most successful companies do not even bother bidding on Canadian government procurements. From the outside, it appears that government procures the same standard set of products time and again.",
+      "bid": "b1",
+      "edit_count": 2,
+      "last_edited": "2026-07-20T00:32:26.658Z"
+    },
+    {
+      "type": "paragraph",
+      "bid": "b65",
+      "text": "As we dive into this paper, I wish to start with an introductory note. In any review of current process, a reasonable amount of critical self-reflection is helpful and valuable. However, such an analysis inherently runs the risk of sounding like a criticism of the people who have worked within this system for years or even decades. I will say clearly up front that I am deeply impressed by the professionalism and skill of our procurement team, our business partners, and the broader government supporting our procurement processes. Any failing in the system is my own. As Deputy Minister, I am fully accountable for any shortcomings in the organization, and work tirelessly to support our teams, to invest in our staff, and to build stronger processes. Growth requires self-reflection and being willing to recognize when there are new opportunities, and to have the courage to explore and try something new. I hope that the following proposals are seen as they are intended: as exciting new opportunities building upon all the decades of hard work of our team. Let's begin.",
+      "edit_count": 6,
+      "last_edited": "2026-07-24T02:50:52.277Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Key procurement challenges",
+      "bid": "b2",
+      "edit_count": 2,
+      "last_edited": "2026-07-24T02:56:12.103Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "There are several common complaints with respect to government procurement. The first critique centres around how requests for proposals and statements of work are scoped, which can often be seen as narrow, restrictive, or selective and which may result in the incumbent winning renewals. Practically, there is a lot of junk out there. Many businesses sell products that look good on paper but will fail to scale to the demands and complexity of government, and it is reasonable and legitimate to set a high bar to protect taxpayer dollars. Clear, tightly-scoped requirements in principle provide a high-pass filter to ensure that the buyer is not inundated with inferior quality content. \n\nPoor products are often paired with low-quality bid packages. It is easy for a vendor to bundle together every document, white paper, and brochure they've ever created and submit this corpus as evidence of meeting the procurement needs. This causes a significant burden on staff who work very hard to make things fair. When we receive a bid, we carry a legal obligation to review every single page of the package. Often the bids we receive run hundreds to thousands of pages long, have little to do with the actual requirement, but still require a full and detailed review. Large bid packages can extend the timelines for a procurement by months. As a defensive mechanism, procurements are written narrowly so as to typically keep the field to fewer than ten anticipated bidders. A procurement with hundreds of respondents is often seen as being too general, while those with one or two are seen as too restrictive. The format of the bid should never drive the outcome, but for practical reasons it can.\n\n\nFurther, vendors are frequently disqualified because they fail to meet one of the mandatory criteria. For bidders, it can be difficult to determine in advance whether their bid is fully compliant. A missing piece of evidence, or even a single omitted page or paragraph, can result in months of effort wasted, with bidders disqualified on a technicality and often left unaware as to why they never land the deal.  ",
+      "bid": "b3",
+      "edit_count": 4,
+      "last_edited": "2026-07-24T02:55:32.141Z"
+    },
+    {
+      "type": "pullquote",
+      "text": "Procurement is the hill to die on in the battle to win the modernization of government.",
+      "cite": "Paper 22 · Taking the Hill",
+      "bid": "b4"
+    },
+    {
+      "type": "paragraph",
+      "text": "While every procurement must carry fair and transparent requirements, the reality is that narrow specification operates as a defensive mechanism. The result is a system which due to its complexity benefits a small number of companies who are highly proficient at writing the response in exactly the way the document wants to be read. That proficiency comes from experience, and the complex process may screen out as many as ninety-nine percent of all other businesses from doing business with government. ",
+      "bid": "b5",
+      "edit_count": 2,
+      "last_edited": "2026-07-24T01:44:57.341Z"
+    },
+    {
+      "type": "keystat",
+      "label": "OF BUSINESSES SCREENED OUT BEFORE A FAIR CONTEST BEGINS",
+      "value": "up to 99%",
+      "body": "Narrow specification and high requirements act as a defensive filter against low-quality bids, and in doing so they quietly exclude the overwhelming majority of firms, including the innovators we most want to reach.",
+      "bid": "b6",
+      "edit_count": 1,
+      "last_edited": "2026-07-24T01:45:06.696Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "The evidence gap and technical debt",
+      "bid": "b7"
+    },
+    {
+      "type": "paragraph",
+      "text": "Procurement documents themselves significantly compress the reality of the challenge to fit within the format. \n\nGovernments often struggle to clearly articulate the complexity of their operating environments. What stays hidden from most vendors is how large an impact technical debt and legacy code have on our decision-making. \n\n\nHow business leads describe their objectives, and how those descriptions make their way into procurement 'speak', ties back to [the compression problem paper](/paper/eujjc) documented earlier. The technical state or requirements of an application is often so complex that it prevents leaders at any level from describing their objectives sufficiently. Many of our systems carry little documentation internally and almost none externally. The incumbent holds an outsized advantage because they can bid with slim contingency margins: they already know the shape and the look of the code, even though that shape is written down nowhere. Many of the innovations we want depend on two to five legacy systems that need integration, and those systems are undocumented as well.",
+      "bid": "b8",
+      "edit_count": 3,
+      "last_edited": "2026-07-24T03:01:24.279Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "The typical government bid document falls short in sharing both depth and insight around technical debt and integration requirements, which leaves vendors unable to bid effectively. There are no mechanisms for vendors to test their bid in advance to ensure it is compliant. And the procurement requirements lack sufficient depth to enable an evidence-driven bid. This is a failing of the bid documents themselves, both the requirements out and the proposals which return. Much of the content which comes in via the proposal is an attestation from vendors rather than proof. Government provides insufficient source material, such as code, for a vendor to really demonstrate a sound and integrated product. Governments put out abstract requirements, vendors respond with abstract proposals. The ground truth is highly compacted.\n\n\nNot all procurements describe real products which will work within the environment. Procurements can go out that describe things that cannot be achieved, written from the standpoint of an optimistic, all-encompassing wish list, or from a business owner who already holds a fixed, detailed image of what they want. They are describing a product they already know to exist. The buyer's preference is fair, but what is described is often a solution and not an outcome. Frequently, it precludes the opportunity for the vendor to introduce novel ways to solve the problem. The winner is the product the buyer already wanted but may result in the best outcome being missed. ",
+      "bid": "b9",
+      "edit_count": 2,
+      "last_edited": "2026-07-24T03:02:16.369Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "The compression problem and IT's role",
+      "bid": "b10"
+    },
+    {
+      "type": "paragraph",
+      "text": "In our efforts to support our business partners, IT struggles with this compression as well. Within Technology and Innovation, we also fall short of giving our ministries sufficient evidence to support our advice, because we often share tacit knowledge that has gone unvalidated. Within any large organization, there is a great deal of 'tribal knowledge' in circulation, a great many opinions on status and health, and a great many recommendations that are ungrounded or unanchored in reality. A game of 'broken telephone' runs between the technical front line, the management in IT, and to the business owners. Management often believes it is giving correct advice, and it has also suffered from the compression problem, so the recommendations that reach the business are frequently ones you could never audit back to a fact. Many government decisions are based on the high level detail and not the messier and more complex ground truth.",
+      "bid": "b13"
+    },
+    {
+      "type": "paragraph",
+      "text": "This includes the advice we give with respect to our costing and estimation. If we cannot see the ground truth of our technical domain, we necessarily struggle to estimate time, cost, and risk, and we lean on heuristics that are imprecise, inaccurate, or incomplete. That drives the business toward a vendor product, or away from one and toward a build, when either choice may have been inappropriate. The business is then left returning directly to the private sector, which is often able to sell a better vision than the public service can, because the public service lacks the engineering savvy, or at least the marketing team, to present it attractively and the evidence to demonstrate why one method is better than another. Often, the pitch ignores the messy realities of government and presents a highly compressed, polished vision. We must do more to present all parties, our business partner and our vendors, with the most comprehensive, evidence-based picture possible from the first meeting, and to drive toward a buy, build, or genuine alternative decision grounded in reality.\n\n\nDecision material is frequently compressed down to a four-page memo or a ten-slide deck. An application with thousands of screens and workflows can never be represented faithfully that way.\n\n\n",
+      "bid": "b14",
+      "edit_count": 1,
+      "last_edited": "2026-07-24T03:02:57.703Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "The legacy complexity trap",
+      "bid": "b15"
+    },
+    {
+      "type": "paragraph",
+      "text": "It is almost never the case that we buy or build in a greenfield. Government has been around for more than a century across Canada, and Alberta is a hundred and twenty-one years old this year. We have layered on systems and processes that extend back before Confederation. The forms from that era are gone, but the processes remain. This drives an enormous amount of complexity which is not visible from outside of government.",
+      "bid": "b16"
+    },
+    {
+      "type": "paragraph",
+      "text": "A government operates on legislation, regulation, and policy set by elected officials. This is known and auditable, if dynamic and grounded in human language. However, greater invisible complexity emerges through implementation. The public service introduces numerous layers of additional complexity that map out the business processes, and those processes are codified into internal software code and process documentation. Once an application is written, often the only place those rules are maintained is the code itself. If you wanted to understand a mainframe system responsible for a social benefit program, you would need to extract out many of the real rules which sit codified inside the application which were accrued one release at a time over 40 or more years. Additional process information is contained in spreadsheets, training materials, and forms. No one artifact holds the business rules in their entirety. \n\n\nGovernment's own human knowledge often lags behind where the private sector is currently innovating. When we define a procurement, we tend to define the product retrospectively, describing what we already know, not where technology or innovation are heading. Matching the complexity of government with the dynamism of the private sector can be itself a challenging prospect.",
+      "bid": "b17",
+      "edit_count": 1,
+      "last_edited": "2026-07-24T03:04:33.995Z"
+    },
+    {
+      "type": "keystat",
+      "label": "THE COMPLEXITY LIES HIDDEN",
+      "value": "10×",
+      "body": "Regulations run to tens of pages. Code runs to millions of lines, because layers of low-level decisions made by frontline staff, business owners, and IT people become the shadow policy of what actually happens. Vendors routinely discover roughly ten times more specificity buried in the code than any procurement document described, driving cost and time overruns.",
+      "bid": "b18",
+      "edit_count": 1,
+      "last_edited": "2026-07-23T02:26:50.905Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "When you put out an RFP, what you describe is an approximation of the final product rather than the actual product itself. In nearly no scenario do we share the code, or a clear enough description, of the current state product to correctly inform the bidder. Procurement requirements are vague and over-compressed, and vendors have to guess to win the contract, and to implement change order language which accrues to their benefit. When the winning vendor gets in the door, they may find something like ten times more specificity buried in the code. In the pre-AI era, recovering this detail was an archaeological extraction. It would typically take consultants months or years to detangle and vet these rules with knowledgeable business owners. Policy is why we do things, but how we do it must be unearthed from the millions of lines of code itself.\n\nBut what if we gave the vendors insight into our technical estate? What if we could show them that level of granularity from the outset and to really explain what government does at a technical level?",
+      "bid": "b19"
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Git Insights as the ground truth for procurement",
+      "bid": "b20"
+    },
+    {
+      "type": "paragraph",
+      "text": "Our proposed solution to addressing several of these problems builds directly on the processes introduced in the paper on [Git Insights](/paper/bbkac), the agentic tool that read the whole of Alberta's code estate and reported the ground truth of every repository. Since its creation, we constantly work to evolve that tool to drive ever greater insights and to assist in the kind of planning needed to fix these procurement problems. The latest version now extracts a large body of metadata from every repository across the estate, and that metadata becomes the backbone for the procurement solution this paper proposes. We are moving from understanding the shape of our code to using that understanding to change how we engage with industry. Detailed snapshots can be shared, along with the entire canvas of business capabilities representing hundreds of overlapping systems, as set out in [Git Insights Ministry](/paper/offjm).",
+      "bid": "b21"
+    },
+    {
+      "type": "paragraph",
+      "text": "The extraction from Git Insights captures an accurate snapshot of the real complexity of government systems, mapping code into a robust set of distinct business capabilities, and extracting out the technical information into a robust catalogue. Code is reviewed by AI agents which identify screens, workflows, and key logic which would inform the rebuilding or replacement of each system or capability. Every observation is reconciled into a single canonical, whole-of-government map, deduplicated by name and function. The capabilities are augmented with health and risk scores, test coverage percentages, and rebuild estimates which can be refreshed frequently. Across thousands of repos and hundreds of millions of lines of code, we generate these insights using both script and AI model, so identical inputs produce a repeatable result which can be audited back to source.",
+      "bid": "b22"
+    },
+    {
+      "type": "paragraph",
+      "text": "By extracting this detailed metadata into a multi-dimensional matrix of insights, we are doing something which we believe has never been done before. We are giving industry and potential vendors a high-fidelity snapshot view into the shape of government systems and the challenges we face. This view lets vendors bid with unprecedented insight and confidence, and it opens the door to modernizing the entire procurement process through AI-assisted, fair, and transparent evaluation. Code remains the ground truth. The metadata is the faithful projection of how government really operates and where there is the most opportunity for innovation.",
+      "bid": "b23"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.1",
+      "title": "One dataset, read from three directions",
+      "caption": "The metadata is a multi-dimensional matrix. The same nodes can be entered from capability down to code, from code back to capability, or by technology layer. A vendor reads whichever face fits the way they want to bid, and every face resolves to the same underlying application.",
+      "image": {
+        "src": "public/images/m66qi/en/fig-5-1.jpg",
+        "alt": "A large transparent three-dimensional lattice of glowing nodes, its three visible faces each ordering the same nodes a different way: capabilities, code repositories, and technology layers.",
+        "image_prompt": "An editorial illustration of a large, transparent three-dimensional lattice or cube floating in space, built from thousands of small glowing nodes. Three visible faces each read as a different ordering of the same nodes: one face grouped as business capabilities, one as code repositories, one as technology layers. Fine connecting threads show that any node can be reached from any face. A single dataset seen from three directions at once. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      },
+      "bid": "b24"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.2",
+      "title": "From code to a bid, end to end",
+      "caption": "The release turns the estate into a dataset industry can act on, and turns every response into something procurement can evaluate in the same frame.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Extract the metadata",
+            "desc": "Git Insights reads every repository and records its capability, health, tech stack, screens, workflows, dependencies, and cost bands."
+          },
+          {
+            "title": "De-identify and certify",
+            "desc": "Names, findings, and vulnerability detail are stripped; profiles are k-anonymized; the dataset is certified shareable before release."
+          },
+          {
+            "title": "Publish the matrix",
+            "desc": "The multi-dimensional matrix is open-sourced as a point-in-time snapshot. The first instance of this will be released at the Velocity Symposium."
+          },
+          {
+            "title": "Industry ingests it with AI",
+            "desc": "Vendors read the matrix from capability, code, or tech stack, and scope realistic responses to whole capabilities."
+          },
+          {
+            "title": "Bids map back to the matrix",
+            "desc": "Each response returns a machine-readable crosswalk that links every claim to the specific nodes it addresses."
+          },
+          {
+            "title": "AI-assisted evaluation",
+            "desc": "Procurement visualizes coverage, cost, and gaps across every bid in one shared frame."
+          }
+        ]
+      },
+      "bid": "b25"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "The open metadata release",
+      "bid": "b26"
+    },
+    {
+      "type": "paragraph",
+      "text": "This dataset will describe, with great fidelity, the work government does, while stopping short of releasing the entire code base itself. Our code, like all code, carries documented vulnerabilities as noted in [the cybersecurity paper](/paper/mwo98), so we cannot simply publish the code and let people bid on it openly, because that would hand attackers the insights they need to disrupt our systems and operations. Instead, what we can do is give industry something far more granular, and arguably far more useful, than we have historically shared while preserving confidentiality and security. This white paper introduces the first government release of a broad set of metadata that maps every repository, now more than four thousand of them, into a comprehensive business capability map. It describes the function of each repository, its health, its tech stack, and a large body of additional metadata, without ever naming the application.",
+      "bid": "b27"
+    },
+    {
+      "type": "paragraph",
+      "text": "The result is a complete view which abstracts hundreds of gigabytes of repositories, hundreds of millions of lines of code, into a clear stand-alone dataset. This dataset allows you to explore business capabilities, repos, and tech stacks, the core technologies that run these applications. Picture a three-dimensional view, released as an open dataset, that lets industry understand the full shape of government systems and the tens of thousands of screens and workflows they carry. This release removes the information asymmetry that has long favored incumbents, and it protects sensitive code and vulnerabilities at the same time. Each release of this data is a point-in-time snapshot, with future releases expected as our methods mature.",
+      "bid": "b28"
+    },
+    {
+      "type": "keystat",
+      "label": "The estate, mapped and released",
+      "value": "4,000+ applications",
+      "body": "Every application mapped to its business capabilities, health, and technology, then de-identified and certified shareable. Across the estate this resolves to 2,182 capabilities organized into 40 domain clusters.",
+      "bid": "b29"
+    },
+    {
+      "type": "table",
+      "title": "The estate at a glance",
+      "columns": [
+        "Dimension",
+        "Count"
+      ],
+      "rows": [
+        [
+          "Applications mapped",
+          "4,041"
+        ],
+        [
+          "Business capabilities",
+          "2,182"
+        ],
+        [
+          "Domain clusters",
+          "40"
+        ],
+        [
+          "Screens",
+          "75,582"
+        ],
+        [
+          "Workflows",
+          "73,516"
+        ],
+        [
+          "Business rules",
+          "206,224"
+        ],
+        [
+          "API endpoints",
+          "112,088"
+        ],
+        [
+          "Integration dependencies",
+          "23,966"
+        ]
+      ],
+      "caption": "The scale of the released snapshot. These are the screens, workflows, and rules that a four-page memo could never carry, now counted and open for industry to read.",
+      "source": "Git Insights metadata release, schema gov-metadata/1.0, fleet run 3.",
+      "bid": "b30"
+    },
+    {
+      "type": "paragraph",
+      "text": "Taken together, these figures paint a fuller picture of what the scan found. The 4,041 applications resolve into 2,182 business capabilities across 40 product domains. Behind them sit more than seventy thousand screens and a similar number of workflows, hundreds of thousands of business rules and API endpoints, and nearly twenty-four thousand software dependencies. This first snapshot does not yet cover the whole of government. Several major commercial platforms, such as our SAP-based 1GX system, are absent from this release, and further work is underway to bring the full set of capabilities we intend to modernize into the map. Future releases will keep widening this landscape until it captures all of the digital activity across the Government of Alberta.",
+      "bid": "b31"
+    },
+    {
+      "type": "table",
+      "title": "What the released metadata records for every application",
+      "columns": [
+        "Category",
+        "What it captures"
+      ],
+      "rows": [
+        [
+          "Business capability",
+          "The generic, proper-noun-free functions the application delivers, and the domain clusters it sits within."
+        ],
+        [
+          "Health and risk",
+          "Security posture reported as bands, dependency health, test coverage band, and an overall risk band. No vulnerability detail is included. Winning vendors gain access to code on project initiation."
+        ],
+        [
+          "Technology",
+          "Primary language, the full language breakdown, frameworks, architecture style, and deployment model."
+        ],
+        [
+          "Scale and complexity",
+          "Lines-of-code and file bands, and counts of screens, workflows, data entities, business rules, and API endpoints."
+        ],
+        [
+          "Integration",
+          "The count of database, external API, cloud, queue, and other integration dependencies."
+        ],
+        [
+          "Disposition and cost",
+          "Whether to maintain, remediate, retire and consolidate, or rebuild, with rebuild, remediate, and effort cost bands."
+        ]
+      ],
+      "caption": "One record per application, keyed by an opaque UUID. A proposal can cite a UUID, and the issuing government can map it back internally.",
+      "source": "gov-metadata/1.0 repos.json.",
+      "bid": "b33"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.1",
+      "title": "How the estate is made safe to share",
+      "caption": "The release is de-identified through defense in depth. Each gate removes a class of identifying detail while preserving the structural shape industry needs, and the deterministic sweep must come back clean before the dataset is certified.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Allowlist only",
+            "desc": "Only enumerated fields are emitted. Names, findings text, vulnerability ids, packages, attack paths, hosts, and file paths are never selected."
+          },
+          {
+            "title": "Deterministic sweep",
+            "desc": "Every emitted string is scanned for tokens, keys, emails, addresses, hostnames, connection strings, and distinctive names. This hard gate must be zero to certify."
+          },
+          {
+            "title": "k-anonymity",
+            "desc": "Structural profiles rarer than the threshold (k = 5) are generalized, so no application can be re-identified from its shape."
+          },
+          {
+            "title": "Frontier-model screen",
+            "desc": "Capability descriptions are reviewed in context and redacted wherever they still reveal identity."
+          },
+          {
+            "title": "Certify shareable",
+            "desc": "With the hard gate clean and the screen complete, the point-in-time snapshot is certified and released."
+          }
+        ]
+      },
+      "bid": "b35"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.2",
+      "title": "Sensitive detail held back, useful shape released",
+      "caption": "Raw code carries names, secrets, and the exact flaws an attacker would want. The release lifts all of that away and keeps the structural shape, so industry receives a faithful map of the work with none of the exposure.",
+      "image": {
+        "src": "public/images/m66qi/en/fig-6-1.jpg",
+        "alt": "Raw code documents travelling through a line of sieves and gates, identifying marks lifted away and replaced with blank opaque tokens, emerging as clean anonymous cards that carry shape but no identity.",
+        "image_prompt": "An editorial illustration of raw code documents travelling along a line through a sequence of fine sieves and gates. At each gate, identifying marks such as names and labels are lifted away and stamped over with blank opaque tokens. What emerges at the end is a clean set of anonymous cards that carry structure and shape but no identity. A sense of sensitive detail held back while the useful shape is released. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      },
+      "bid": "b36"
+    },
+    {
+      "type": "paragraph",
+      "text": "The capability map is the way in for vendors to bid on modernizing whole segments of government. The dataset organizes what government does into forty domain clusters, from Transportation and Roads through Financial Management to Justice and Courts, and within each cluster it lists the capabilities and the applications that deliver them. Repositories crosswalk to capabilities, and with this dataset it is the first time the functions of government have been drawn from the code up to the function, at this depth, and made open.",
+      "bid": "b37"
+    },
+    {
+      "type": "table",
+      "title": "The largest domains, by capability count",
+      "columns": [
+        "Domain cluster",
+        "Capabilities"
+      ],
+      "rows": [
+        [
+          "Transportation & Roads",
+          "129"
+        ],
+        [
+          "Software Delivery & Engineering",
+          "119"
+        ],
+        [
+          "Learning & Education Administration",
+          "112"
+        ],
+        [
+          "Data Integration & Interoperability",
+          "93"
+        ],
+        [
+          "Content & Web Publishing",
+          "92"
+        ],
+        [
+          "Justice & Courts",
+          "86"
+        ],
+        [
+          "Data Management & Governance",
+          "85"
+        ],
+        [
+          "Geospatial & Mapping Services",
+          "82"
+        ],
+        [
+          "Financial Management",
+          "80"
+        ],
+        [
+          "Case & Workflow Management",
+          "75"
+        ],
+        [
+          "Environment & Natural Resources",
+          "73"
+        ],
+        [
+          "Analytics, Reporting & Business Intelligence",
+          "70"
+        ],
+        [
+          "Document & Records Management",
+          "70"
+        ],
+        [
+          "Licensing, Permits & Registration",
+          "67"
+        ],
+        [
+          "Correspondence & Notifications",
+          "65"
+        ]
+      ],
+      "caption": "The fifteen largest of forty machine-derived domains; the full map holds 2,182 capabilities. Every capability name is a generic, proper-noun-free abstraction of what the software does.",
+      "source": "gov-metadata/1.0 capabilities.json.",
+      "bid": "b38"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.3",
+      "title": "A map of what government does, drawn from its code",
+      "caption": "A representative view of the map: domains of differing size, each densely filled with the capabilities its applications deliver, with faint threads linking capabilities that recur across domains. The full map spans 2,182 capabilities across 40 domains. This is the first open, code-grounded map of the functions of government.",
+      "image": {
+        "src": "public/images/m66qi/en/fig-6-2.jpg",
+        "alt": "A large map divided into distinct territories of differing sizes, each filled with small clustered nodes representing capabilities, with faint lines linking nodes across territories.",
+        "image_prompt": "An editorial illustration of a large map divided into many distinct territories of differing sizes, each territory densely filled with small clustered nodes representing capabilities, with the largest territory clearly holding the biggest cluster. Faint lines link related nodes across territories. A sense of a complete map of everything an institution does, drawn from its code up to its functions. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      },
+      "bid": "b39"
+    },
+    {
+      "type": "paragraph",
+      "text": "The release also carries a recommended disposition for every application, drawn from its health, its activity, and its complexity. The four dispositions map onto the four approaches to modernization set out in [an earlier paper](/paper/zgym1): maintain and monitor what is healthy, remediate in the AI Garage what is worth keeping and improving, retire and consolidate what is redundant, and rebuild in the AI Factory what needs to be replaced. Reading these across the estate lets procurement prioritize the domains where health runs low or a legacy tech stack demands rationalization, and it lets industry see, from the outset, which capabilities are open to consolidation and which are candidates for a clean rebuild.",
+      "bid": "b40"
+    },
+    {
+      "type": "table",
+      "title": "The estate by recommended disposition",
+      "columns": [
+        "Disposition",
+        "Applications",
+        "% of estate"
+      ],
+      "rows": [
+        [
+          "Maintain / Monitor",
+          "1,527",
+          "37.8%"
+        ],
+        [
+          "Remediate (AI Garage)",
+          "1,375",
+          "34.0%"
+        ],
+        [
+          "Retire / Consolidate",
+          "739",
+          "18.3%"
+        ],
+        [
+          "Rebuild (AI Factory)",
+          "400",
+          "9.9%"
+        ]
+      ],
+      "caption": "A recommended disposition for every application, computed from health, activity, and complexity. Together, retire-and-consolidate and rebuild account for more than a quarter of the estate, and mark where the largest opportunity for industry partnership sits.",
+      "source": "gov-metadata/1.0 repos.json.",
+      "bid": "b41"
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "How industry can bid with unprecedented fidelity",
+      "bid": "b42"
+    },
+    {
+      "type": "paragraph",
+      "text": "With this dataset in hand, industry can finally see the real shape of government systems and the tens of thousands of screens and workflows that sit behind them. Vendors can respond by supporting the modernization of an entire business capability, or several capabilities at once. They can calculate realistic costs by understanding exactly how many integrations will be needed, which tech stacks must be migrated, and how many screens and workflows must be ported. A serious bidder can use AI to analyze the data and generate a grounded proposal, in place of guessing at undocumented legacy systems and padding the price with contingency.",
+      "bid": "b43"
+    },
+    {
+      "type": "keystat",
+      "label": "Screens and workflows now visible to bidders",
+      "value": "75,582 / 73,516",
+      "body": "The count of screens and workflows across the estate, enumerated for the first time. A vendor proposing to replace a capability can now see how much work actually sits behind it, rather than estimating blind.",
+      "bid": "b44"
+    },
+    {
+      "type": "paragraph",
+      "text": "This invites the whole vendor community to reset the procurement relationship with us. COTS and SaaS vendors can map their products directly against the capability matrix. Service providers and AI-native firms can propose agent orchestration that delivers fully government-owned capabilities. A vendor could look at the map, understand the domain space of what government does with its code, and propose to replace tens or even hundreds of repositories with an enterprise platform, with the integration count, the migration path, and the screen and workflow counts all grounded in the data. The barrier to entry collapses, because the information advantage that once belonged to the incumbent now belongs to anyone willing to read the map.",
+      "bid": "b45"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.1",
+      "title": "From one plank at a time to the whole estate at once",
+      "caption": "The old model replaced a system one plank at a time, a centuries-long Ship of Theseus, with only the incumbent able to see the hull. The open matrix lets many teams survey and bid on entire capabilities at once, from the same shared map.",
+      "image": {
+        "src": "public/images/m66qi/en/fig-7-1.jpg",
+        "alt": "A split illustration: on the left one worker replacing a single plank on an enormous old ship seen through a narrow keyhole; on the right many teams surveying and bidding on whole sections of a lit, open harbour from a shared map.",
+        "image_prompt": "An editorial illustration split into two halves. On the left, the old way: a single narrow keyhole of light and one lone worker replacing a single plank on an enormous old ship, one plank at a time, the rest of the vessel dark and untouched. On the right, the new way: the whole ship and harbour lit and open, with many teams of builders surveying and bidding on entire sections at once from a large shared map. A sense of moving from one plank at a time to the whole estate at once. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      },
+      "bid": "b46"
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Structured bids, crosswalks, and the shared matrix",
+      "bid": "b47"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alongside the dataset, we are releasing a CLAUDE.md file that gives every bidder the exact recipe for a compliant response. It tells them how to read the JSON, how to map their solution into the capability matrix, and what structured artifacts they must return. Each bid must include a machine-readable crosswalk file that links every page or section of the narrative back to the specific capability nodes, health scores, or repository metadata it claims to address. An AI reviewer can then shred the entire package and extract the structured fields for cost, capability coverage, evidence citations, local support capacity, and risk.",
+      "bid": "b48",
+      "edit_count": 2,
+      "last_edited": "2026-07-23T02:41:59.914Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "This shared multi-dimensional matrix lets the government procurement team instantly visualize who has bid where, where costs are concentrated, and what bid types are on offer, whether COTS, SaaS, open source, custom-built, or agentic. Alberta is completely transparent about what we are requesting, and industry can be completely transparent about what it is offering. If a vendor proposes a solution with ten screens to replace one that has a thousand, that mismatch becomes immediately visible, in place of being hidden inside glossy brochures or compressed abstracts. We are no longer daunted by the number of bids, because every proposal arrives structured, auditable, and comparable in the same framework. Procurement can see coverage across the whole estate, spot the gaps, and prioritize the domains where application health runs low or a tech stack like COBOL or unsupported Java demands rationalization.",
+      "bid": "b49"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.1",
+      "title": "Every claim traced back to the evidence",
+      "caption": "A narrative bid arrives with a crosswalk that threads every page onto the same shared grid of capability nodes. The AI reviewer runs the package through, and the grid lights up to show exactly where each bidder claims coverage and where the gaps remain.",
+      "image": {
+        "src": "public/images/m66qi/en/fig-8-1.jpg",
+        "alt": "Vendor proposals threaded by fine lines onto a shared grid of capability nodes, with an AI reviewer at a calm console and the grid lighting up to show coverage and gaps.",
+        "image_prompt": "An editorial illustration of vendor proposals arriving as neat narrative documents, each threaded by fine lines that map every page onto the same shared grid of capability nodes. At a calm console, a single reviewer figure runs each package through, and the grid lights up to show exactly where each bidder has claimed coverage and where gaps remain. A sense of every claim being traced back to the evidence. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      },
+      "bid": "b50"
+    },
+    {
+      "type": "pullquote",
+      "text": "If a vendor proposes a solution with ten screens to replace one that has a thousand, that mismatch becomes immediately visible and worth a review.",
+      "cite": "Paper 22 · Taking the Hill",
+      "bid": "b51"
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "No slop, please",
+      "bid": "b52"
+    },
+    {
+      "type": "paragraph",
+      "text": "In making this process so transparent, so easy to understand, we also open up new challenges. In this era, anyone can point AI at the JSON data dump and generate a glossy, reasonable-looking proposal that carries little to no value against the real complexity of the work we are trying to do. We use AI ourselves, and we appreciate its power. We want the innovators and the disruptors to bid, and we expect every bid, and every product, to include AI. What we want to avoid is a flood of vibe-coded interfaces and unattached claims that simply sound good on paper, because that flood takes us straight back to the original problem: too many bids, and a legal obligation to read every page of each one. Because AI makes it easier to bid, we are raising our bar on the evidence needed to demonstrate that you hold the capability to meet our needs.",
+      "bid": "b53"
+    },
+    {
+      "type": "paragraph",
+      "text": "The onus will be on the vendors to prove that they have capacity to meet every single business capability they are addressing. This could be a working prototype slice, a harnessed agent workflow, or a reproducible build script that demonstrates real execution against the data. Industry must prove it has the capacity, and map every piece of evidence back to the business capability matrix, back to the tech stack, back to the APIs. ",
+      "bid": "b54"
+    },
+    {
+      "type": "paragraph",
+      "text": "The nature of what we are buying is also changing, and we are opening the door for builders to join us in pioneering the AI Factory and the next generation of AI-delivered products and solutions. In the AI era, we are less interested in another black-box COTS or SaaS product, because if a vendor can build it with agents, so can we. What we are looking for is partners who provide a roadmap for modernizing the length and breadth of our technology estate. And we are open to innovative ways to do this. Bidders can find and propose open-source code products, they can bring novel proprietary code where a component is genuinely one of a kind, and they can demonstrate how they will use agent orchestration, harnesses, skills, and standards to build to a Government of Alberta standard, described in [the harness paper](/paper/p7p2k) and [the AI Factory papers](/paper/qthji). ",
+      "bid": "b55"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.1",
+      "title": "A high-pass filter for proof over polish",
+      "caption": "Every bid runs the same path. Proposals arrive in many formats; a high-pass filter screens out the low-quality noise; an AI evaluation scores what remains on verifiability, relevance, and feasibility; and each surviving bid takes its place in the three-dimensional capability map, where the higher-quality, more capable proposals rise above the rest.",
+      "image": {
+        "src": "public/images/m66qi/en/fig-9-1.jpg",
+        "alt": "A four-step diagram: bid documents enter at left, pass through a high-pass filter, are scored by an AI evaluation on verifiability, relevance, and feasibility, then are plotted in a three-dimensional capability map by quality, capability area, and maturity, with higher-quality bids rising above the rest.",
+        "image_prompt": "An editorial illustration of a high pass filter for bids, where AI evaluates bid quality and maps it into a 3 dimensional business capability map structure for government. A sense of a high-pass filter that favours proof over polish. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+        "style_kind": "cover"
+      },
+      "bid": "b56"
+    },
+    {
+      "type": "paragraph",
+      "text": "We will open-source this first dataset and the structured bid format at the [Velocity Symposium](https://luma.com/yzd00tir) on July 28th, 2026, our first industry day since the launch of the Velocity White Papers on July 6th. Industry will have two months to digest the information, ask questions, and build meaningful responses before demonstrating them at our Agency AI innovation series in October. These demonstrations are an opportunity for show-and-tell: a chance for industry to bring what it has built and show how it has tackled the problems the dataset reveals. Shortly after, the government will open the next tranches of procurement for these kinds of solutions, prioritized against what industry showcases.",
+      "bid": "b57"
+    },
+    {
+      "type": "keystat",
+      "label": "Procurement we expect this model to enable",
+      "value": "$100–200M",
+      "body": "The next one hundred to two hundred million dollars of procurement in this space is expected to follow this evidence and data-driven model, with a refined dataset released before that tranche opens. Industry has two months between the Symposium and Agency 2026 to build.",
+      "bid": "b58"
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "Procurement as the foundation for modernization",
+      "bid": "b59"
+    },
+    {
+      "type": "paragraph",
+      "text": "This approach is an important step on the Ministry's mission to make procurement easier, faster, and more transparent. Releasing the metadata and requiring structured, evidence-mapped bids lowers the barrier to entry while holding a high bar for proof. Industry gains a clear view of the real challenges and can propose novel solutions that fit our operating model, rather than pressing us to accept a pre-packaged product. AI-enabled bids and evaluations will make it easier for proponents to use AI to demonstrate how they meet government requirements and to de-risk their applications. AI also supports the evaluator, so procurement staff can analyze and compare hundreds of proposals which address a variety of challenges easily and rapidly.  Submitting a successful bid should take hours instead of weeks, with AI tools to support compliance and validation. Through this competitive, open process, Alberta gains new vendors, renewed goals with existing partners, and government-owned capabilities built through genuine partnership.",
+      "bid": "b60"
+    },
+    {
+      "type": "pullquote",
+      "text": "Modernizing procurement is the necessary foundation for modernizing government itself.",
+      "cite": "Paper 22 · Taking the Hill",
+      "bid": "b61"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is a new way of doing procurement, one that is fair, rapid, and rich enough in insight to let industry propose novel solutions and government move faster. By releasing this first-ever open-source dataset, we invite industry to work along the path laid down in these Velocity White Papers, and we offer a pathway to long-term partnership. We move away from the bid-by-bid, one-plank-at-a-time replacement model to addressing the challenges of government at scale and with speed. Through the Velocity Symposium and Agency 2026, we hope industry will join us to take on the most critical challenges we face.",
+      "bid": "b62"
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "procurement",
+        "open-data",
+        "git-insights",
+        "industry-partnership"
+      ],
+      "bid": "b63"
+    },
+    {
+      "type": "related",
+      "bid": "b64"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "bbkac",
+    "offjm",
+    "eujjc",
+    "cux4h",
+    "mwo98"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation"
+  },
+  "field_edits": {
+    "subtitle": {
+      "edit_count": 4,
+      "last_edited": "2026-07-24T01:54:19.653Z"
+    },
+    "title": {
+      "edit_count": 2,
+      "last_edited": "2026-07-23T03:44:18.064Z"
+    },
+    "abstract": {
+      "edit_count": 4,
+      "last_edited": "2026-07-24T02:47:53.876Z"
+    }
+  }
+}

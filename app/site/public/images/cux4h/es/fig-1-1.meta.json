@@ -1,0 +1,17 @@
+{
+  "paper_id": "cux4h",
+  "locale": "es",
+  "slot": "fig-01",
+  "out_path": "public\\images\\cux4h\\es\\fig-1-1.jpg",
+  "bytes_jpg": 278315,
+  "bytes_png_source": 2971701,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-07T19:22:24.475Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial-quality flowchart diagram, hand-drawn line work on warm off-white paper background (#F7F4ED). Two-tone palette of deep Alberta navy (#1A3A6E) for primary nodes and rust orange (#C2491A) for accents and arrows. Boxes have subtle shadows; labels in clean sans-serif; arrows are slightly curved with arrowheads. Architectural, calm, technical but human. Wide editorial aspect. No photo realism, no people, no logos, no watermarks. All text labels in English.",
+  "image_prompt": "A Greek sailing ship, the famous Ship of Theseus of Jason and the Argonauts, but burdened, with rotting planks, riding low in grey seas, hull crusted with barnacles and patched with mismatched planks, the deck overloaded with stacked crates and ledgers. It still moves forward but sits deep in the water under the weight. Don't include legends. Add a label for \"El Barco del Gobierno\" All text labels in es. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: A Greek sailing ship, the famous Ship of Theseus of Jason and the Argonauts, but burdened, with rotting planks, riding low in grey seas, hull crusted with barnacles and patched with mismatched planks, the deck overloaded with stacked crates and ledgers. It still moves forward but sits deep in the water under the weight. Don't include legends. Add a label for \"El Barco del Gobierno\" All text labels in es. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\cux4h\\en\\fig-1-1.source.png"
+}

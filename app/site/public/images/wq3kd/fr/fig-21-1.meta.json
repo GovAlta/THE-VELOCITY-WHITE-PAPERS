@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-01",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-1.jpg",
+  "bytes_jpg": 145978,
+  "bytes_png_source": 2004790,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T03:54:36.574Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un diagramme de comparaison côte à côte. À gauche, une seule petite bulle de clavardage flottant au-dessus d’une boîte sombre fermée étiquetée Documents, avec un point d’interrogation et une ligne pointillée qui s’estompe, sous le titre La démonstration. À droite, un pipeline clair de gauche à droite composé de boîtes étiquetées reliées alimentant une grille structurée et ordonnée de fiches, sous le titre Le système. Étiquettes : La démonstration, Le système.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un diagramme de comparaison côte à côte. À gauche, une seule petite bulle de clavardage flottant au-dessus d’une boîte sombre fermée étiquetée Documents, avec un point d’interrogation et une ligne pointillée qui s’estompe, sous le titre La démonstration. À droite, un pipeline clair de gauche à droite composé de boîtes étiquetées reliées alimentant une grille structurée et ordonnée de fiches, sous le titre Le système. Étiquettes : La démonstration, Le système.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-1.source.png"
+}

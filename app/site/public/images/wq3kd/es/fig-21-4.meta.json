@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "es",
+  "slot": "fig-04",
+  "out_path": "public\\images\\wq3kd\\es\\fig-21-4.jpg",
+  "bytes_jpg": 105933,
+  "bytes_png_source": 2066439,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-07T21:47:26.294Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial-quality flowchart diagram, hand-drawn line work on warm off-white paper background (#F7F4ED). Two-tone palette of deep Alberta navy (#1A3A6E) for primary nodes and rust orange (#C2491A) for accents and arrows. Boxes have subtle shadows; labels in clean sans-serif; arrows are slightly curved with arrowheads. Architectural, calm, technical but human. Wide editorial aspect. No photo realism, no people, no logos, no watermarks. All text labels in English.",
+  "image_prompt": "A simple flowchart: a single PDF icon on the left, an arrow labelled renderizar cada página leading to a neat stack of page images numbered 1, 2, 3, and a small note reading 200 PPP, una imagen por página. All text labels in es. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A simple flowchart: a single PDF icon on the left, an arrow labelled renderizar cada página leading to a neat stack of page images numbered 1, 2, 3, and a small note reading 200 PPP, una imagen por página. All text labels in es. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-4.source.png"
+}

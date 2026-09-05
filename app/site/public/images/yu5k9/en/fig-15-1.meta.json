@@ -1,0 +1,17 @@
+{
+  "paper_id": "yu5k9",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\yu5k9\\en\\fig-15-1.jpg",
+  "bytes_jpg": 128090,
+  "bytes_png_source": 2450386,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-08T01:00:26.642Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Two measuring sticks stand side by side with tick marks. The shorter stick on the left is labelled COST SAVED. The much taller stick on the right is labelled CAPABILITY BUILT, reaching well above the first. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. Two measuring sticks stand side by side with tick marks. The shorter stick on the left is labelled COST SAVED. The much taller stick on the right is labelled CAPABILITY BUILT, reaching well above the first. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

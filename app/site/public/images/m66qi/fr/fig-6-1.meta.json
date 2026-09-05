@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\m66qi\\fr\\fig-6-1.jpg",
+  "bytes_jpg": 185950,
+  "bytes_png_source": 2424942,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-19T03:01:25.450Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "Une illustration éditoriale représentant des documents de code brut progressant le long d'une ligne à travers une série de tamis et de filtres fins. À chaque filtre, les marques identificatrices — comme les noms et les étiquettes — sont retirées et remplacées par des jetons opaques vides. Ce qui en émerge à la fin est un ensemble de fiches anonymes propres, qui conservent la structure et la forme mais aucune identité. Une impression de détails sensibles retenus tandis que la forme utile est diffusée. Palette de crème albertaine atténuée, accents marine et rouille, qualité d'impression d'archive, sans texte. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: Une illustration éditoriale représentant des documents de code brut progressant le long d'une ligne à travers une série de tamis et de filtres fins. À chaque filtre, les marques identificatrices — comme les noms et les étiquettes — sont retirées et remplacées par des jetons opaques vides. Ce qui en émerge à la fin est un ensemble de fiches anonymes propres, qui conservent la structure et la forme mais aucune identité. Une impression de détails sensibles retenus tandis que la forme utile est diffusée. Palette de crème albertaine atténuée, accents marine et rouille, qualité d'impression d'archive, sans texte. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\m66qi\\en\\fig-6-1.source.png"
+}

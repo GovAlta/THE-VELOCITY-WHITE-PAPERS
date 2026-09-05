@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-11",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-11.jpg",
+  "bytes_jpg": 203716,
+  "bytes_png_source": 1804626,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T04:05:12.878Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un diagramme en deux parties. À gauche, une seule fiche étiquetée Un article de l’Alberta avec un éventail de flèches atteignant dix petites fiches étiquetées Administrations pairs, chacune assortie d’un score, et les flèches passent par un entonnoir à quatre bandes étiqueté Quatre angles d’analyse de la paperasse, produisant une fiche étiquetée Constatation. À droite, une grille en carte de chaleur dont les lignes sont étiquetées comme des parties d’une loi et les colonnes comme des administrations, les cellules nuancées du clair au foncé.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un diagramme en deux parties. À gauche, une seule fiche étiquetée Un article de l’Alberta avec un éventail de flèches atteignant dix petites fiches étiquetées Administrations pairs, chacune assortie d’un score, et les flèches passent par un entonnoir à quatre bandes étiqueté Quatre angles d’analyse de la paperasse, produisant une fiche étiquetée Constatation. À droite, une grille en carte de chaleur dont les lignes sont étiquetées comme des parties d’une loi et les colonnes comme des administrations, les cellules nuancées du clair au foncé.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-11.source.png"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "yzuob",
+  "num": "15",
+  "sequence": "",
+  "tier": "Policy & People",
+  "category": "paper",
+  "title": "Gestión del cambio",
+  "subtitle": "Cómo conducir a la organización a través de la transición.",
+  "track": "Human and Change Management",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": null,
+  "status": "Draft",
+  "tags": [],
+  "repo": null,
+  "abstract": "Próximamente. Este documento forma parte del grupo de Gestión Humana y del Cambio de la colección. El contenido se redactará a partir de los materiales de origen.",
+  "hero_image": {
+    "src": "public/images/yzuob/es/hero.jpg",
+    "alt": "Imagen editorial para: Gestión del cambio",
+    "image_prompt": "An editorial cover image for the whitepaper titled \"Gestión del cambio\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/yzuob.mp3"
+  },
+  "tldr_presentation": {
+    "id": "yzuob-tldr",
+    "title": "El documento, en síntesis",
+    "locale": "es",
+    "owner_id": "yzuob",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Gestión del cambio",
+        "audio_file": "public/audio/es/yzuob-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Gestión Humana y del Cambio",
+        "subcaption": "",
+        "text": "Gestión del cambio. Contenido próximamente."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Descripción general"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Descripción general"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Contenido próximamente.</strong> La estructura ya está establecida. El contenido se redactará a partir de los materiales de origen, no se generará de forma automática."
+    }
+  ],
+  "_meta": {
+    "placeholder": true,
+    "written_by": "structural-stub",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    }
+  },
+  "related": [],
+  "translation_status": "draft",
+  "source_signature": "4251765436"
+}

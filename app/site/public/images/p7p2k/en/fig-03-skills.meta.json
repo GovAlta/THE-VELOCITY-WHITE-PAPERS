@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\wp-08\\en\\fig-03-skills.jpg",
+  "bytes_jpg": 134857,
+  "bytes_png_source": 2689956,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T10:50:53.554Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of a tall column of labelled drawers, drawn as thin rectangles stacked vertically. The drawers carry labels: BUILD, REVIEW, CYBER, A11Y, RELEASE, TRANSLATE, DOCUMENT. One drawer near the middle is pulled half open and a small stack of pages rises out of it, showing it is the one currently in use. The other drawers stay closed. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of a tall column of labelled drawers, drawn as thin rectangles stacked vertically. The drawers carry labels: BUILD, REVIEW, CYBER, A11Y, RELEASE, TRANSLATE, DOCUMENT. One drawer near the middle is pulled half open and a small stack of pages rises out of it, showing it is the one currently in use. The other drawers stay closed. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

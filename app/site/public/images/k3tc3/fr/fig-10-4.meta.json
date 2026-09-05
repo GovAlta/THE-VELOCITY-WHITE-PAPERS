@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "fr",
+  "slot": "fig-04",
+  "out_path": "public\\images\\k3tc3\\fr\\fig-10-4.jpg",
+  "bytes_jpg": 137679,
+  "bytes_png_source": 2359914,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:28:45.160Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial cycle diagram on warm cream paper, deep navy line work with small rust accents. A loop of four labelled boxes connected by arrows: ERREUR DÉTECTÉE SUR LE PLATEAU, then RÉTROSPECTIVE, then METTRE À JOUR LE HARNAIS, then POUSSER VERS LA BRANCHE PRINCIPALE, with a final arrow returning to a row of small robot tokens labelled CHAQUE AGENT DÉMARRE DU PLUS RÉCENT. To one side, a small document icon labelled RAPPORT D'AUDIT with a caption INSTANTANÉ DE CE QUI A FONCTIONNÉ. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial cycle diagram on warm cream paper, deep navy line work with small rust accents. A loop of four labelled boxes connected by arrows: ERREUR DÉTECTÉE SUR LE PLATEAU, then RÉTROSPECTIVE, then METTRE À JOUR LE HARNAIS, then POUSSER VERS LA BRANCHE PRINCIPALE, with a final arrow returning to a row of small robot tokens labelled CHAQUE AGENT DÉMARRE DU PLUS RÉCENT. To one side, a small document icon labelled RAPPORT D'AUDIT with a caption INSTANTANÉ DE CE QUI A FONCTIONNÉ. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\k3tc3\\en\\fig-10-4.source.png"
+}

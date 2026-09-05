@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-13",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-13.jpg",
+  "bytes_jpg": 141861,
+  "bytes_png_source": 2318218,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:48:45.279Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A radial diagram: at the centre a solid block labelled AI-ready substrate, built once; radiating outward, several small application icons each labelled with a different use such as red-tape benchmark, learning game, policy search, market research, compliance check. A caption reads Build the substrate once, build many tools on it.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A radial diagram: at the centre a solid block labelled AI-ready substrate, built once; radiating outward, several small application icons each labelled with a different use such as red-tape benchmark, learning game, policy search, market research, compliance check. A caption reads Build the substrate once, build many tools on it.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

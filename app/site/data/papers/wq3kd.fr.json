@@ -1,0 +1,542 @@
+{
+  "id": "wq3kd",
+  "num": "21",
+  "sequence": "21 sur 22",
+  "tier": "Technical",
+  "title": "La forme des données",
+  "subtitle": "Transformer l’information en connaissances structurées, interrogeables et vérifiables sur lesquelles une IA peut raisonner.",
+  "track": "Building the Systems",
+  "authors": [
+    "Janak Alford",
+    "ministère de la Technologie et de l’Innovation"
+  ],
+  "published": "2026-06-21",
+  "reading_min": 24,
+  "status": "Published",
+  "tags": [
+    "data-pipeline",
+    "rag",
+    "embeddings",
+    "benchmarking",
+    "open-data",
+    "ai-systems"
+  ],
+  "repo": null,
+  "abstract": "Passer de la démonstration d’IA au déploiement d’IA est une transition difficile pour la plupart des organisations. Le défi à relever consiste à préparer les données organisationnelles pour les rendre compatibles avec l’IA. Les systèmes d’IA efficaces, dignes de confiance et vérifiables exigent un pipeline de transformation des données qui convertit des documents ordinaires en connaissances structurées, interrogeables et vérifiables sur lesquelles un modèle peut raisonner. Ce livre blanc parcourt le pipeline étape par étape et expose comment un gouvernement peut rendre son vaste corpus public prêt pour l’IA une seule fois, pour quelques milliers de dollars, et laisser quiconque s’appuyer dessus.",
+  "hero_image": {
+    "src": "public/images/wq3kd/fr/hero.jpg",
+    "alt": "A loose stack of paper documents on the left transforming, as it moves right, into an orderly glowing lattice of connected, labelled nodes.",
+    "image_prompt": "A wide editorial illustration showing a loose stack of ordinary paper documents on the left that transforms, as the eye moves to the right, into an orderly glowing lattice of connected labelled cards and nodes. The left side is papery and disordered, the right side is crisp, structured, and luminous. Conveys raw information becoming machine-ready knowledge. Muted Alberta cream base with navy and rust accents. No text.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/wq3kd.mp3",
+    "duration_sec": 1643
+  },
+  "tldr_presentation": {
+    "id": "wq3kd-tldr",
+    "title": "Le pipeline en six minutes",
+    "locale": "fr",
+    "slides": [
+      {
+        "id": "01",
+        "title": "La forme des données",
+        "audio_file": "public/audio/fr/wq3kd-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Document 21 · Technique",
+        "subcaption": "Le robot conversationnel est la partie que tout le monde voit. Le pipeline est la partie qui compte.",
+        "text": "Un outil de conversation placé par-dessus vos documents semble impressionnant pendant cinq minutes, puis s’enlise dès qu’il s’agit d’un travail qui doit être exact, comparable et défendable. Les vrais systèmes reposent sur un pipeline qui convertit des documents ordinaires en connaissances structurées, interrogeables et vérifiables sur lesquelles un modèle peut raisonner. Ce livre blanc parcourt ce pipeline, en langage clair, et montre ce qu’il coûte."
+      },
+      {
+        "id": "02",
+        "title": "La démonstration et le système",
+        "audio_file": "public/audio/fr/wq3kd-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "Pourquoi les outils faciles ne suffisent pas",
+        "visual_config": {
+          "left": {
+            "label": "Un outil de conversation prêt à l’emploi",
+            "body": "Conserve quelques fichiers pour une seule séance. Répond dans une prose qu’on ne peut ni compter ni comparer. Ne dira pas quelle disposition, sur quelle page. Ne laisse rien derrière lui."
+          },
+          "right": {
+            "label": "Un véritable pipeline",
+            "body": "Contient un corpus entier. Répond dans une forme fixe et comparable. Trace chaque constatation jusqu’à la page. Bâtit un actif durable sur lequel d’autres peuvent s’appuyer."
+          }
+        },
+        "text": "Des outils comme Copilot et NotebookLM sont excellents, et l’Alberta les utilise, pour lire un rapport ou rédiger une note. Ils ont été conçus pour une seule personne et un petit ensemble temporaire de fichiers. Ils ne peuvent pas contenir un corpus entier, ne peuvent pas citer de façon fiable la disposition et la page, et ne laissent rien de structuré derrière eux. L’usage de l’IA par le gouvernement échoue précisément sur ces points."
+      },
+      {
+        "id": "03",
+        "title": "Le pipeline",
+        "audio_file": "public/audio/fr/wq3kd-tldr/03.mp3",
+        "visual": "list",
+        "caption": "La même machinerie, quel que soit le sujet",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Lire",
+              "desc": "Les documents deviennent des images de page, puis du texte structuré propre."
+            },
+            {
+              "label": "Structurer",
+              "desc": "Le texte est décomposé en une hiérarchie étiquetée, jamais réécrit."
+            },
+            {
+              "label": "Empreinte",
+              "desc": "Chaque morceau reçoit une empreinte numérique de son sens."
+            },
+            {
+              "label": "Rechercher et récupérer",
+              "desc": "Trouver le bon matériel par le sens, et non seulement par les mots."
+            },
+            {
+              "label": "Générer, de façon structurée",
+              "desc": "Le modèle répond dans une forme fixe et comparable."
+            },
+            {
+              "label": "Mémoriser et vérifier",
+              "desc": "Chaque exécution est consignée et peut être reproduite."
+            }
+          ]
+        },
+        "text": "Vous devez faire passer l’information à travers une suite fiable de transformations pour la rendre prête pour l’IA. Les documents deviennent des images de page, puis du texte propre, puis une structure étiquetée. Chaque morceau reçoit une empreinte numérique de son sens. La recherche et la récupération trouvent le bon matériel. Le modèle répond dans une forme fixe et structurée. Et chaque étape est consignée, de sorte que toute la chaîne peut être vérifiée et reproduite."
+      },
+      {
+        "id": "04",
+        "title": "2 500 $",
+        "audio_file": "public/audio/fr/wq3kd-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Un corpus public, rendu prêt pour l’IA",
+        "visual_config": {
+          "stat_value": "2 500 $",
+          "stat_label": "Pour rendre prêt pour l’IA le programme d’études de la maternelle à la 12e année d’une province"
+        },
+        "subcaption": "Le gouvernement le fait une fois. Ensuite, un parent, un enseignant ou un élève peut s’appuyer dessus en un après-midi.",
+        "text": "Le programme d’études de la maternelle à la 12e année de l’Alberta est publié librement et est utile à lire pour les gens. Sous cette forme, il est presque inutilisable pour une IA. Faire passer l’ensemble du programme à travers ce pipeline a coûté environ deux mille cinq cents dollars. Par-dessus le résultat, nous avons bâti un jeu d’apprentissage adapté au niveau scolaire, Age of Alberta, en une heure environ, parce que la partie difficile était déjà faite."
+      },
+      {
+        "id": "05",
+        "title": "1 059 constatations",
+        "audio_file": "public/audio/fr/wq3kd-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "Un organisme de réglementation qui réduit les démarches administratives",
+        "visual_config": {
+          "stat_value": "1 059 constatations",
+          "stat_label": "À partir de 31 lois, chacune traçable jusqu’à la page"
+        },
+        "subcaption": "La loi albertaine exige de chaque ministère qu’il repère et élimine les démarches administratives, sans affaiblir les protections.",
+        "text": "Un organisme de réglementation provincial doit réduire les démarches administratives en vertu de la loi. Nous avons fait passer 31 lois provenant de 14 administrations par le pipeline, comparé la loi de l’organisme lui-même clause par clause au reste du pays, et produit un peu plus de mille constatations. Chacune fournit à l’Alberta un point de référence par rapport à ses pairs, formule des recommandations et fait remonter ces suggestions jusqu’à la phrase dans les autres lois."
+      },
+      {
+        "id": "06",
+        "title": "Bâtir le substrat une seule fois",
+        "audio_file": "public/audio/fr/wq3kd-tldr/06.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Les métadonnées changent d’un ministère à l’autre. La machinerie reste la même.",
+          "cite": "Document 21 · La forme des données"
+        },
+        "text": "Nous avons bâti ce même pipeline des dizaines de fois au cours de la dernière année, pour la législation, les programmes d’études, les politiques et les études de marché. Le sujet change, mais la machinerie demeure intacte. Pour un dirigeant, la leçon est de cesser de se fier aux conversations clavardées et de commencer à bâtir des pipelines de données, parce que c’est la structure qui répond réellement à cette question et aux cent suivantes."
+      }
+    ],
+    "owner_id": "wq3kd"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Pourquoi les outils faciles ne suffisent pas"
+    },
+    {
+      "n": "02",
+      "title": "Ce que signifie être prêt pour l’IA"
+    },
+    {
+      "n": "03",
+      "title": "Faire ressortir les mots"
+    },
+    {
+      "n": "04",
+      "title": "Donner un sens aux mots"
+    },
+    {
+      "n": "05",
+      "title": "Mémoire et audit"
+    },
+    {
+      "n": "06",
+      "title": "Un organisme de réglementation qui réduit les démarches administratives"
+    },
+    {
+      "n": "07",
+      "title": "Bon pour les gens, pas pour l’IA"
+    },
+    {
+      "n": "08",
+      "title": "Construire des couches de traitement des données réutilisables"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "La plupart des démonstrations d’outils d’intelligence artificielle sont impressionnantes pendant environ cinq minutes. Quelqu’un téléverse un dossier de documents dans un outil de clavardage, pose une question en langage clair, et une réponse fluide revient en quelques secondes. L’auditoire est impressionné, et il devrait l’être, parce que les outils et les modèles qui font cela sont véritablement puissants. Les ennuis commencent dès l’instant où le travail doit être reproductible, exact plutôt que simplement fluide, comparable à travers des milliers d’éléments plutôt que traité un à la fois, et défendable des mois plus tard lorsque quelqu’un demande comment le système est arrivé à sa conclusion. C’est là le travail dont la majeure partie du gouvernement a réellement besoin, et ce n’est pas ce qu’un agent conversationnel doté d’une pile de fichiers peut accomplir."
+    },
+    {
+      "type": "paragraph",
+      "text": "Au cours de la dernière année, le ministère de la Technologie et de l’Innovation a bâti des systèmes qui accomplissent ce type de travail plus exigeant pour des ministères de toute l’Alberta. Ils lisent des bibliothèques entières de législation, l’intégralité du programme d’études provincial, et de vastes ensembles de politiques et de documentation technique, et ils transforment cette matière brute en connaissances sur lesquelles une IA peut raisonner de façon fiable, citer avec précision et dont elle peut rendre compte. Derrière chacun de ces systèmes se trouve la même machinerie : un pipeline qui prend des documents ordinaires et les rend, en un mot, prêts pour l’IA. Le présent document explique ce pipeline en langage clair, afin qu’un dirigeant qui n’écrira jamais une ligne de code puisse comprendre ce qu’il faut réellement pour bâtir un système d’IA digne de confiance, et puisse faire la différence entre une démonstration et un système fiable."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Pourquoi les outils faciles ne suffisent pas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les outils d’IA les plus couramment utilisés aujourd’hui sont des assistants conversationnels. Microsoft Copilot se trouve à l’intérieur des documents dans lesquels les gens travaillent déjà et rédige, résume et répond à des questions à leur sujet. NotebookLM de Google prend un ensemble de sources qu’une personne lui remet et lui permet d’interroger cet ensemble, et il narrera même un aperçu audio bien présenté. Ces outils sont excellents, et l’Alberta les utilise. Pour lire un long rapport, rédiger une note ou se familiariser avec une poignée de fichiers, ils font gagner un temps réel, et nous les recommandons précisément pour cela."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ils ont été conçus pour une personne travaillant avec un ensemble restreint et temporaire de documents, et c’est là la limite de leur conception. Ils ne conservent vos fichiers que le temps d’une séance, avec une quantité limitée de texte en vue à la fois, de sorte qu’ils ne peuvent pas garder à l’esprit le corpus entier d’un ministère. Ils répondent dans une prose fluide, qui se lit bien et ne peut être triée, dénombrée ni comparée à travers dix mille éléments. Ils résumeront une clause, mais ils ne vous diront pas de façon fiable de quelle clause, à quelle page, de quel document une réponse provient, et ils ne conservent aucune trace durable que vous pourriez auditer plus tard. Lorsque la séance se termine, la réponse s’évapore et rien n’est bâti, et aucun ensemble de connaissances partagé et structuré n’est laissé pour la personne suivante, ou l’outil suivant, sur lequel s’appuyer. Recréer une réponse exacte, ou sauvegarder la réflexion qui a mené à la réponse, est souvent impossible."
+    },
+    {
+      "type": "paragraph",
+      "text": "L’utilisation de l’IA pour des tâches gouvernementales complexes échoue lorsque nous ne pouvons pas auditer le travail. Une décision du Conseil des ministres doit remonter jusqu’à ses preuves. Un point de référence couvrant 14 administrations doit être défendable et ancré dans des principes rationnels et mesurables, sinon la comparaison ne signifie rien. Et la valeur doit perdurer au-delà d’une seule question ou interaction, parce que le prochain programme, et celui d’après, auront besoin du même ensemble de connaissances. Pour cela, les documents eux-mêmes doivent être reconstruits en quelque chose avec quoi une IA peut travailler à grande échelle. Cette reconstruction exige une approche systématique pour transformer l’information de formats incompatibles en renseignements lisibles par l’IA, et constitue une étape déterminante dans la création de tout produit fondé sur l’intelligence."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.1",
+      "title": "La démonstration et le système",
+      "caption": "Un outil de clavardage répond à une question à partir d’une pile fermée de fichiers, puis l’oublie. Un pipeline transforme les fichiers en connaissances structurées, interrogeables et auditables sur lesquelles d’autres outils peuvent être bâtis.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-1.jpg",
+        "alt": "À gauche : une petite bulle de clavardage au-dessus d’une boîte noire fermée de documents, avec une ligne pointillée qui s’estompe. À droite : un pipeline clair de gauche à droite alimentant une grille structurée de fiches.",
+        "image_prompt": "Un diagramme de comparaison côte à côte. À gauche, une seule petite bulle de clavardage flottant au-dessus d’une boîte sombre fermée étiquetée Documents, avec un point d’interrogation et une ligne pointillée qui s’estompe, sous le titre La démonstration. À droite, un pipeline clair de gauche à droite composé de boîtes étiquetées reliées alimentant une grille structurée et ordonnée de fiches, sous le titre Le système. Étiquettes : La démonstration, Le système.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Ce que veut dire « prêt pour l’IA »"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rendre l’information prête pour l’IA, c’est la faire passer par une séquence fixe d’étapes, dont chacune transforme le document brut ou lui ajoute des propriétés ou des structures qu’il ne possédait pas. Heureusement, nous pouvons utiliser une série commune de séquences pour presque chaque système sérieux que nous bâtissons, quel que soit le sujet. Un document, comme un PDF, un fichier Word ou une page web, est d’abord transformé en images statiques de ses pages, converti en texte propre et structuré, et découpé en une hiérarchie étiquetée qui reflète la façon dont le document est réellement organisé. Chaque élément de cette hiérarchie reçoit une empreinte numérique qui capte son sens. Les empreintes rendent le corpus entier interrogeable par le sens plutôt que par mot-clé. À travers des collections de documents, de sections, ou même de phrases, une recherche récupère les éléments les plus pertinents. Ces réponses structurées deviennent les intrants de systèmes agentiques qui peuvent interpréter ces données pour bâtir des tableaux de bord, des outils sur mesure, ainsi que le texte explicatif, les images et l’audio destinés à l’auditoire humain. Et chaque étape de cette transformation est consignée, de sorte que la chaîne entière peut être auditée et reproduite."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dit plus simplement, un véritable système d’IA a besoin de sept choses qu’un agent conversationnel ne fournit pas de lui-même : une **mémoire** durable de ce qu’il a vu, un moyen d’**extraire** une structure propre de sources désordonnées, un moyen de **récupérer** la bonne matière sur demande, les empreintes numériques, appelées **embeddings**, qui font fonctionner la récupération par le sens, une **recherche** bâtie sur celles-ci, une façon disciplinée de **générer** des sorties structurées, et une piste d’**audit** pour l’ensemble. Le système travaille avec des données structurées, et non du texte libre, ce qui aide à rendre chaque réponse comparable, dénombrable et traçable."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.2",
+      "title": "Le pipeline, de bout en bout",
+      "caption": "La même machinerie pour la législation, les programmes d’études, les politiques ou la recherche. Seuls les documents et les définitions de ce qui compte changent.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-2.jpg",
+        "alt": "Un large organigramme de gauche à droite avec des étapes : documents, images de page, texte propre, structure étiquetée, empreintes numériques, recherche, récupération, réponse structurée, outils et tableaux de bord, texte, images et audio, au-dessus d’une bande indiquant consigné et auditable.",
+        "image_prompt": "Un large organigramme de gauche à droite d’un pipeline de données de bout en bout, chaque étape étant une boîte étiquetée reliée par des flèches légèrement courbées : Documents (PDF, Word, Web), Images de page, Texte propre, Structure étiquetée, Empreintes numériques, Recherche, Récupération, Réponse structurée, Outils et tableaux de bord, Texte, images, audio. Une mince bande horizontale court sous toutes les étapes, étiquetée Consigné et auditable.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Extraire les mots"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le pipeline commence par rassembler les documents sources et par suivre la provenance de chacun. Chaque document consigne sa provenance, l’adresse exacte à laquelle il a été téléchargé, le moment où il a été téléchargé, sa taille, et une empreinte unique (le condensé MD5) de son contenu qui prouve que le fichier n’a pas été altéré durant le transfert. N’importe qui peut reconstruire la bibliothèque entière à partir de ce seul enregistrement et aboutir à l’ensemble identique de fichiers. Cette étape exige un jugement humain considérable pour établir les critères de sélection et valider que le jeu de données est complet. C’est ce que les gens veulent dire lorsqu’ils affirment qu’« il faut bien préparer les données » pour utiliser l’IA efficacement. Il n’y a pas de véritables raccourcis ici, car des experts humains doivent organiser ce contenu, et il constitue le fondement de tout ce qui suit."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.3",
+      "title": "Chaque fichier, avec la preuve de sa provenance",
+      "caption": "Une liste maîtresse pilote le téléchargement. Chaque fichier est sauvegardé avec un petit enregistrement de son adresse, du moment où il a été récupéré, de sa taille, et d’une empreinte qui prouve qu’il n’a pas été modifié.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-3.jpg",
+        "alt": "Un organigramme allant d’une liste maîtresse vers des sources officielles, puis vers un dossier de PDF, chaque PDF étant accompagné d’une petite fiche annexe énumérant l’adresse, le moment du téléchargement, la taille et l’empreinte.",
+        "image_prompt": "Un organigramme : une boîte liste maîtresse à gauche, une flèche vers un nuage étiqueté Sources officielles, une flèche descendant vers un dossier de fichiers PDF, et chaque PDF accompagné d’une petite fiche annexe affichant quatre courtes lignes : adresse, téléchargé le, taille, empreinte.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Une partie de ce processus consiste à convertir les centaines de formats de fichiers différents que nous utilisons en une structure fiable. Les présentations PowerPoint, les documents Word et les PDF sont difficiles à lire de façon fiable pour les machines. Le texte à l’intérieur d’un PDF est souvent verrouillé dans une mise en page qui est perdue ou brouillée lorsque des outils ordinaires tentent de l’extraire, et les pages à plusieurs colonnes, les tableaux, les notes de bas de page et les modifications estampillées se désagrègent. Les graphiques et les diagrammes sont eux aussi fréquemment perdus lors de l’extraction du contenu destiné à l’IA, ce qui fait disparaître le contexte et l’intention de la connaissance source. Nous traitons donc les données de la même façon qu’un humain le ferait, en visualisant et en interprétant le contenu littéral, hiérarchique et symbolique comme des images visuelles. Chaque page de la matière source est découpée en pièces séparées de la taille d’une bouchée (appelées segments), prêtes pour l’analyse par l’IA. Les documents sources, et les images qui en sont dérivées, demeurent disponibles comme vérité de référence pour consultation ou contestation futures."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.4",
+      "title": "Les pages deviennent des images",
+      "caption": "Chaque page est rendue sous forme d’image en haute résolution, une par page, de sorte que l’étape suivante lit une image fidèle de la page plutôt qu’une couche de texte brouillée.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-4.jpg",
+        "alt": "Un organigramme simple : une seule icône PDF, une flèche étiquetée rendre chaque page, et une pile soignée d’images de page numérotées avec une note indiquant une image par page.",
+        "image_prompt": "Un organigramme simple : une seule icône PDF à gauche, une flèche étiquetée rendre chaque page menant à une pile soignée d’images de page numérotées 1, 2, 3, et une petite note indiquant 200 PPP, une image par page.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque image de page est ensuite remise à un modèle d’IA évolué, dans notre cas Claude exécuté à l’intérieur de la Enterprise Agent Platform de Google, à qui l’on demande de lire la page et de renvoyer un texte propre et structuré qui préserve la structure à laquelle un examinateur tient : les titres, les numéros de section, les notes de bas de page, les marqueurs de page et toute mise en évidence. Ce format s’appelle le format Markdown et constitue l’un des deux formats de document importants que nous présenterons. Les documents portent un sens dans leurs structures et leurs relations, qui dépasse les mots sur la page. Cette lecture attentive et cette conversion au format Markdown coûtent davantage par page que l’extraction automatique de texte, plus simple et moins coûteuse (connue sous le nom de ROC), mais pour un texte juridique ou pédagogique dense, l’exactitude en vaut la peine, car chaque erreur introduite ici devient une reprise coûteuse en aval. La qualité doit être auditée à ce stade, et le pipeline évalué de près quant à sa qualité."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.5",
+      "title": "Une IA lit chaque page comme le ferait une personne",
+      "caption": "L’image de la page est transmise au modèle, qui la retranscrit en texte propre, en préservant les titres, les numéros de section et les notes de bas de page. L’image fait autorité; les extractions automatiques ne sont qu’une vérification.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-5.jpg",
+        "alt": "Un organigramme : une image de page, une flèche vers une boîte indiquant L’IA lit la page, une flèche vers un document de texte propre montrant un titre, un numéro de section et un appel de note de bas de page, avec une note en marge précisant que l’image fait autorité.",
+        "image_prompt": "Un organigramme : une image de page à gauche, une flèche vers une boîte étiquetée L’IA lit la page (Claude sur Vertex), une flèche vers un document de texte propre à droite qui montre un titre, un numéro de section et un appel de note de bas de page préservés. Une petite note en marge indique : l’image fait autorité, les extractions approximatives servent de vérification.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Le format Markdown préserve la mise en forme de la page, mais l’étape suivante interprète la forme du document lui-même. Les lois, les programmes d’études et les politiques ont tous leurs propres hiérarchies. Une loi se divise en parties, les parties en sections, les sections en articles, les articles en paragraphes et en alinéas, et enfin en phrases isolées. Pour comparer un élément de la législation de l’Alberta avec son équivalent dans une autre province, le système doit savoir quelle partie du document comparer. Et parce que chaque document est différent, et que chaque gouvernement utilise des formats et des normes différents, il est impossible de définir un gabarit rigide. Nous demandons à l’IA de comprendre et de définir une structure pour chaque document de façon dynamique. Le modèle lit le document en entier et décrit les conventions de rédaction logiques qu’il observe, puis balise le document niveau par niveau en ajoutant des étiquettes qui définissent chaque partie. Les documents sont délimités du plus général au plus précis, et chaque section est encore examinée et analysée plus en profondeur jusqu’à ce que même chaque phrase soit extraite individuellement et étiquetée au sein de cette hiérarchie. La comparaison devient possible entre les documents, leurs sections, leurs divisions et leurs articles, même lorsqu’ils ne se ressemblent en rien."
+    },
+    {
+      "type": "paragraph",
+      "text": "À chaque jonction, nous ajoutons des vérifications, en réassemblant le document fragmenté pour le reconstituer dans son ensemble, en veillant à ce que pas un seul caractère ne soit déplacé par rapport à son format d’origine. Retirez chaque étiquette, et le résultat doit être identique au texte original. C’est un test modeste mais important, aux conséquences importantes, car il signifie que la structure imposée par l’IA n’a jamais modifié en silence un seul mot du document."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.6",
+      "title": "Structure ajoutée, jamais un mot modifié",
+      "caption": "Le texte est décomposé en une hiérarchie étiquetée, de la loi jusqu’à la phrase. Retirez les étiquettes et le résultat est identique, caractère pour caractère, à la source.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-6.jpg",
+        "alt": "À gauche : une arborescence allant de Loi à Partie, à Section, à Division, à Article, à Paragraphe, à Phrase. À droite : une petite boucle montrant du texte balisé, une flèche retirer les étiquettes, un retour au texte original, avec un signe égal indiquant identique, octet pour octet.",
+        "image_prompt": "Un diagramme en deux moitiés. Moitié de gauche : une hiérarchie en arborescence étiquetée de haut en bas Loi, Partie, Section, Division, Article, Paragraphe, Phrase. Moitié de droite : une petite boucle montrant un bloc de texte balisé avec des marqueurs d’étiquettes, une flèche étiquetée retirer les étiquettes menant à un bloc de texte original, et un signe égal accompagné de la note identique, octet pour octet.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "Structure ajoutée, sans qu’un seul mot soit modifié",
+      "value": "100 % aligné",
+      "body": "Chaque document du corpus passe une vérification mécanique : retirez les étiquettes structurelles de l’IA, et le texte est identique, caractère pour caractère, à la source produite par le lecteur de pages. La structure n’est qu’une annotation qui donne du sens lors des étapes ultérieures."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Donner du sens aux mots"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le texte propre et structuré est lisible en entier ou en partie. Les mots sont prêts à être convertis en significations. L’étape suivante permet de rechercher et de comparer les documents et leurs fragments en fonction de leur sens et de la relation entre leurs concepts. Les fragments qui traitent de choses semblables se retrouvent avec des listes semblables, même lorsqu’ils ne partagent aucun vocabulaire, de sorte qu’un article portant sur « la protection de l’habitat aquatique » et un article portant sur « les eaux fréquentées par le poisson » se retrouvent l’un près de l’autre bien que les mots diffèrent. Nous utilisons un type particulier de modèle d’IA appelé « modèle d’embedding » pour convertir le sens en valeurs numériques qui sont stockées dans une base de données. Le système est configuré pour rechercher et trouver les correspondances les plus proches parmi des millions d’éléments presque instantanément. Pensez à chaque nombre comme à une empreinte numérique du sens de ce document ou d’une partie de celui-ci. Une fois calculées, ces valeurs sont statiques à moins que le texte lui-même ne change, ce qui rend la récupération et l’analyse rapides."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.7",
+      "title": "Chaque morceau reçoit une empreinte numérique",
+      "caption": "Chaque fragment de texte devient une longue liste de nombres qui capte son sens. Un sens semblable produit une empreinte numérique semblable, stockée dans une base de données conçue pour trouver rapidement les correspondances les plus proches.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-7.jpg",
+        "alt": "Un organigramme : trois courts extraits de texte, chacun avec une flèche vers une boîte qui construit une empreinte numérique, produisant des rangées de points qui s’écoulent vers un cylindre de base de données étiqueté index de similarité.",
+        "image_prompt": "Un organigramme : trois courts extraits de texte à gauche, chacun avec une flèche vers une boîte étiquetée L’IA construit une empreinte numérique, produisant des rangées de petits points disposés en vecteurs, s’écoulant vers un cylindre de base de données étiqueté index de similarité. Une petite note indique : sens semblable, empreinte semblable.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces empreintes numériques, appelées « embeddings » vectoriels, relations numériques et interrogeables entre les concepts, nous permettent de dépasser la recherche par mots-clés pour accéder à la recherche sémantique. Une personne peut saisir une expression comme « délais d’approbation discrétionnaires », et le système renvoie les fragments de l’ensemble de la bibliothèque dont les empreintes se situent le plus près de celle-ci, quels que soient les mots exacts qu’ils utilisent. Cela rend la récupération de l’information beaucoup plus humaine, puisque nos propres systèmes de mémoire sémantique fonctionnent de manière semblable. Cette étape de récupération est au cœur de ce que l’industrie appelle la génération augmentée par récupération (RAG). Au lieu de demander à un modèle de répondre à partir de sa mémoire générale, ce qui peut généralement produire des erreurs énoncées avec assurance, nous récupérons d’abord les passages précis et réels qui se rapportent à un sujet, puis nous les remettons au modèle comme point de départ. Les modèles d’IA sont très performants lorsque l’information de référence leur est fournie, et l’hallucination et les approximations disparaissent en grande partie."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.8",
+      "title": "Rechercher par le sens, pas seulement par les mots",
+      "caption": "Une expression de recherche devient une empreinte numérique, le système trouve les fragments les plus proches dans l’ensemble de la bibliothèque, et ce sont ces passages réels, et non la mémoire du modèle, qui deviennent la preuve à partir de laquelle il doit travailler.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-8.jpg",
+        "alt": "Un organigramme : une boîte de recherche affichant délais d’approbation discrétionnaires, une flèche transformer en une empreinte numérique, une flèche vers le cylindre de l’index de similarité, puis une courte liste classée de cartes de résultats avec des scores de proximité.",
+        "image_prompt": "Un organigramme : une boîte de recherche contenant l’expression délais d’approbation discrétionnaires à gauche, une flèche étiquetée transformer en une empreinte numérique, une flèche vers un cylindre de base de données étiqueté index de similarité, puis une flèche en sortie vers une courte liste classée de cartes de résultats provenant de différentes sources, chacune avec un score de proximité tel que 0,74, 0,71, 0,68.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Une fois les bonnes données ajoutées à l’invite comme contexte, on peut demander à un agent d’IA d’entreprendre une tâche complexe et structurée, et de convertir cette matière première en une forme hautement normalisée. Le système est contraint de répondre en utilisant un format de données structuré appelé JavaScript Object Notation, ou JSON, une norme de l’industrie pour la gestion de structures de données hiérarchiques et fiables. Une personne non spécialiste pourrait se le représenter comme un formulaire, où différents champs, appelés clés ou attributs, ne peuvent être remplis qu’avec des valeurs précises. Chaque réponse générée par l’IA revient avec les mêmes champs. De grandes quantités de tâches peuvent être confiées à l’IA, et le format de la réponse est toujours imposé. Parce que la forme est fixe, dix mille réponses peuvent être triées, comptées, filtrées et comparées. Cela dégage de véritables constats à partir de l’analyse, car les réponses aux questions peuvent être comparées et une analyse approfondie peut être effectuée par rapport à un vaste corpus de connaissances."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.9",
+      "title": "Une forme fixe, à chaque fois",
+      "caption": "Trois éléments entrent : l’article source, les meilleures correspondances entre pairs, et la définition de ce qu’il faut chercher. Un gabarit fixe en ressort, de sorte que chaque réponse a la même forme comparable.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-9.jpg",
+        "alt": "Un organigramme : trois boîtes d’entrée, article source, meilleures correspondances entre pairs, ce qu’il faut chercher, fusionnant dans une boîte qui remplit un gabarit fixe, produisant une carte structurée avec des champs étiquetés verdict, gravité, mots-clés, meilleur exemple, comparaison, suggestion, niveau de confiance.",
+        "image_prompt": "Un organigramme : trois boîtes d’entrée à gauche étiquetées Article source, Meilleures correspondances entre pairs, Ce qu’il faut chercher, avec des flèches fusionnant dans une boîte étiquetée L’IA remplit un gabarit fixe, produisant une carte structurée à droite avec des champs clairement étiquetés : verdict, gravité, mots-clés, meilleur exemple, comparaison, suggestion, niveau de confiance.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Les réponses structurées sont la matière première de tout ce qu’un humain examine en fin de compte. Ces sorties structurées de l’IA peuvent alimenter des tableaux de bord et des cartes thermiques, et peuvent classer l’information d’une manière qui permet la visualisation et l’examen. Elles fournissent aussi des formats prévisibles pour générer d’autres types de médias, comme du texte explicatif, des images générées et de l’audio narré, une analyse condensée qu’un cadre occupé peut assimiler. La machine assemble l’information en une structure claire et formule des recommandations. Ce sont toujours les personnes qui décident de ce que cela signifie."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Mémoire et audit"
+    },
+    {
+      "type": "paragraph",
+      "text": "Une fois nos connaissances rendues interrogeables et récupérables, chaque requête que nous envoyons à un modèle peut enregistrer un ensemble d’entrées auditables. Les questions répétées renvoient des sorties très semblables, car les entrées sont définies par les embeddings et les sorties sont définies par les schémas JSON. Les entrées déterministes fournies à l’IA sont stockées, de sorte que nous comprenons ce que nous avons demandé au système et que nous savons comment il a entamé sa tâche. Et ses sorties sont stockées dans un format structuré, ce qui signifie qu’elles peuvent être suivies et évaluées au fil du temps afin de surveiller la performance du système. Au lieu de sorties textuelles créatives et libres, l’IA remplit un rapport structuré et fournit la preuve des raisons pour lesquelles elle a pris une décision, formulé une recommandation ou réalisé une analyse."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette structure permet un audit approfondi de la performance de l’IA. Chaque exécution d’analyse enregistre le raisonnement de l’IA : les documents qu’elle a vus, le modèle qu’elle a utilisé, la version de l’instruction qu’elle a suivie et la date à laquelle elle a été exécutée. L’analyse peut être réexécutée de nombreuses fois sur le même sujet et auditée pour déceler une dérive ou une différence. Et elle permet la comparaison entre les documents et la sortie de l’IA à mesure que le corpus lui-même évolue. Un examinateur peut comparer deux versions d’une loi et observer comment les réponses de l’IA changent. Si quelqu’un demande, six mois plus tard, pourquoi le système a recommandé une action particulière, nous pouvons montrer les articles précis que l’IA a pris en compte, la manière dont ils ont été comparés, la formulation qui a mené à la conclusion, et le corpus de connaissances plus large dont toute réponse a été tirée. C’est ce qui rend une analyse par l’IA suffisamment défendable pour être présentée à un décideur."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.10",
+      "title": "Mémoire de travail et piste de vérification",
+      "caption": "Les requêtes identiques reçoivent une réponse gratuite à partir d’une mémoire cache. Chaque exécution est conservée intégralement et n’est jamais écrasée, et chaque conclusion remonte jusqu’au document, à la section et à la page qui la sous-tendent.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-10.jpg",
+        "alt": "Deux panneaux. À gauche, mémoire de travail : une requête, une empreinte numérique, une note indiquant que poser de nouveau la question reçoit une réponse gratuite. À droite, piste d’audit : une pile de cartes d’exécution immuables v1, v2, v3 portant chacune une icône de chaîne, et une flèche allant d’une conclusion vers source, section, page.",
+        "image_prompt": "Un diagramme en deux panneaux. Panneau de gauche intitulé Mémoire de travail : une boîte de requête, une icône d’empreinte numérique, et une note indiquant question posée de nouveau, réponse gratuite. Panneau de droite intitulé Piste d’audit : une pile de cartes d’exécution immuables étiquetées v1, v2, v3, chacune avec une petite icône de chaîne et une note indiquant documents, modèle, instruction, heure, et une flèche allant d’une seule carte de conclusion vers une étiquette indiquant source, section, page.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Un organisme de réglementation qui réduit les démarches administratives"
+    },
+    {
+      "type": "paragraph",
+      "text": "Prenons un organisme de réglementation provincial ayant l’obligation légale de réduire les démarches administratives tout en préservant l’intention et l’intégrité de ses lois et de ses règlements. En Alberta, chaque ministère a l’obligation de repérer et de supprimer les processus, les retards et les chevauchements inutiles sans affaiblir les protections que les règles existent pour assurer. Pour un organisme de réglementation qui approuve des projets en vertu d’une vaste loi environnementale, la question pratique est précise : où notre propre législation oblige-t-elle un demandeur à en faire plus, ou à attendre plus longtemps, que ne l’exigent les règles équivalentes dans d’autres parties du pays, sans bénéfice environnemental? Y répondre à la main signifierait lire une loi entière en regard des lois d’une douzaine d’autres administrations, article par article, un processus dont l’exécution manuelle pourrait prendre des mois, voire des années, à une équipe."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce défi représentait une excellente occasion pour un tel pipeline de transformation des données. La propre loi de l’organisme de réglementation et ses règlements sont devenus la référence de base, et les lois équivalentes de chaque autre province, des territoires et de la Couronne fédérale ont été acheminées à travers les mêmes étapes décrites ci-dessus, avec des dizaines de lois provenant de quatorze administrations structurées, dotées d’empreintes numériques et interrogeables côte à côte. Pour chacun des deux cent soixante-cinq articles de la loi de référence, le système a trouvé l’article correspondant le plus proche dans chacune des autres administrations, ce qui a produit un peu moins de huit mille comparaisons précalculées. Il a ensuite lu chaque article de l’Alberta en regard de ses pairs à travers quatre angles définis du fardeau administratif : si la règle dicte comment faire quelque chose plutôt que le résultat à atteindre, si une approbation repose sur un pouvoir discrétionnaire illimité sans critères ni délai publiés, si une décision est assortie d’un quelconque délai, et si l’Alberta exige son propre permis pour quelque chose déjà autorisé ailleurs."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le résultat a été un peu plus d’un millier d’observations, de conclusions et de recommandations structurées, chacune indiquant où l’Alberta est plus exigeante qu’un pair et, le cas échéant, nommant l’administration dont la formulation plus souple constitue le meilleur modèle, accompagnée d’une suggestion concrète sur la façon dont l’Alberta pourrait atteindre la même protection avec moins de frictions. Parce que l’IA produit des sorties structurées, les conclusions se regroupent dans une carte thermique qu’un examinateur peut lire d’un coup d’œil, par domaine, par angle, et selon l’administration pairesse qui revient le plus souvent comme exemple le plus net. Chaque conclusion remonte jusqu’à la page de la source dont elle provient, de sorte qu’une recommandation peut être évaluée et défendue jusqu’à l’article. Les angles ne recherchent que le fardeau sans bénéfice, et il est explicitement indiqué à l’analyse d’écarter tout cas où l’Alberta est simplement plus protectrice."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.11",
+      "title": "Une clause, mesurée à l’échelle du pays",
+      "caption": "Chaque article de l’Alberta est comparé à sa correspondance la plus proche dans chaque autre administration, examiné à travers quatre angles d’analyse de la paperasse, puis transformé en constatation. Les constatations se regroupent dans une carte de chaleur par domaine et par pair.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-11.jpg",
+        "alt": "À gauche : une fiche indiquant un article de l’Alberta avec un éventail de flèches vers dix petites fiches d’administrations pairs assorties de scores, passant par un entonnoir à quatre bandes étiqueté quatre angles d’analyse de la paperasse pour produire une fiche de constatation. À droite : une grille en carte de chaleur des parties d’une loi par administration.",
+        "image_prompt": "Un diagramme en deux parties. À gauche, une seule fiche étiquetée Un article de l’Alberta avec un éventail de flèches atteignant dix petites fiches étiquetées Administrations pairs, chacune assortie d’un score, et les flèches passent par un entonnoir à quatre bandes étiqueté Quatre angles d’analyse de la paperasse, produisant une fiche étiquetée Constatation. À droite, une grille en carte de chaleur dont les lignes sont étiquetées comme des parties d’une loi et les colonnes comme des administrations, les cellules nuancées du clair au foncé.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "Pour étalonner une loi par rapport au pays",
+      "value": "environ 200 $",
+      "body": "Faire passer 31 lois de quatorze administrations par l’ensemble du pipeline a coûté environ deux cents dollars en utilisation des modèles. Le même pipeline fonctionne pour d’autres sujets, comme la réglementation interprovinciale, la santé au travail, la protection de la vie privée ou le droit fiscal. Seuls les documents et les considérations changent."
+    },
+    {
+      "type": "paragraph",
+      "text": "À la suite de cette analyse, l’organisme de réglementation dispose maintenant d’une base de données probantes, constituée en quelques heures, qui transforme une question politique en constats étalonnés. Les produits des agents présentent les articles précis où l’Alberta pourrait exiger davantage des industries réglementées que ses pairs et présentent une gamme d’options de formulation et de processus que l’organisme de réglementation peut envisager. L’outil n’est pas propre à l’environnement. Remplacez le corpus et les objectifs par les documents et les définitions de la réussite d’un autre ministère, et le pipeline identique étalonne n’importe quel corps de droit. Nous avons appliqué ce modèle d’analyse approfondie et d’étalonnage des dizaines de fois au cours de la dernière année, sur des sujets très variés, pour éclairer la stratégie et donner aux dirigeants une base défendable pour une décision."
+    },
+    {
+      "type": "pullquote",
+      "text": "Les métadonnées changent d’un ministère à l’autre. Le pipeline reste le même.",
+      "cite": "Document 21 · La forme des données"
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Bon pour les gens, pas pour l’IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le programme d’études de la maternelle à la 12e année de l’Alberta est publié, ouvertement et bien, sur LearnAlberta.ca. Pour un parent qui en fait la lecture un mardi soir, un enseignant qui planifie un module ou un élève qui cherche un renseignement, c’est une ressource véritablement de qualité, organisée en pages claires qu’une personne peut parcourir. C’est exactement le genre d’information publique ouverte qu’un gouvernement devrait fournir. Mais sous sa forme publiée, il est presque inutilisable pour une IA. Le contenu est réparti sur des milliers de pages Web distinctes et des centaines de fichiers PDF, il est porté par deux cadres de programmes d’études différents qui organisent les mêmes matières de façons différentes, une grande partie est enfermée dans des documents, et rien de tout cela ne porte la structure ni les empreintes numériques dont une machine a besoin pour raisonner à son sujet. Il a été conçu pour qu’une personne en fasse la lecture, et un agent d’IA ne peut pas s’en servir tant qu’il n’est pas reconstruit."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous avons mis au point un agent chargé de parcourir ce programme d’études et de le faire passer par ce pipeline de traitement des données. Un agent robot d’indexation a recueilli systématiquement chaque page du programme et chaque document lié, plus de deux mille quatre cents fichiers en tout, et le lecteur de pages a transformé quarante-deux mille pages de PDF en texte propre. Le matériel a été étiqueté avec plus de cinquante mille « balises » de programme d’études, chacune étant un résultat d’apprentissage ou une partie de celui-ci, un ensemble de matières et un niveau scolaire. Le système public de gestion de l’apprentissage est devenu une base de données lisible par l’IA de matériels, d’objectifs et de résultats d’apprentissage, avec des ensembles de connaissances structurés et indexés qu’un outil d’IA peut interroger par matière, par niveau scolaire et sur l’ensemble de leur texte."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.12",
+      "title": "D’une ressource publique à un substrat, puis à une application",
+      "caption": "Des pages et des PDF éparpillés, conçus pour les gens, deviennent un seul substrat connecté de plus de cinquante mille résultats. Par-dessus, un jeu adapté au niveau scolaire a été construit en une heure environ.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-12.jpg",
+        "alt": "Un diagramme en trois étapes de gauche à droite : des pages Web et des PDF éparpillés étiquetés programme d’études public conçu pour les gens, une flèche étiquetée le pipeline menant à un graphe connecté soigné étiqueté substrat prêt pour l’IA cinquante mille résultats, une flèche vers un petit écran de jeu étiqueté Age of Alberta construit en une heure.",
+        "image_prompt": "Un diagramme en trois étapes de gauche à droite. Étape un : une grappe d’icônes éparpillées de pages Web et de PDF sous l’étiquette Programme d’études public, conçu pour les gens. Étape deux : une flèche étiquetée le pipeline menant à un graphe soigné de nœuds connectés sous l’étiquette Substrat prêt pour l’IA, plus de 50 000 résultats. Étape trois : une flèche vers une petite icône d’écran de jeu sous l’étiquette Age of Alberta, construit en une heure.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "Pour rendre le programme d’études d’une province prêt pour l’IA",
+      "value": "environ 2 500 $",
+      "body": "Transformer l’ensemble du programme d’études publié de la maternelle à la 12e année en un substrat prêt pour l’IA a coûté environ deux mille cinq cents dollars en utilisation des modèles. Un gouvernement peut le faire une seule fois, et ensuite n’importe quel Albertain, un parent, un enseignant, un élève, peut bâtir par-dessus."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le programme d’études étant déjà extrait, structuré et étiqueté par niveau scolaire et par matière, il devient possible de construire de nouveaux outils, ressources, plans de leçon et même de nouvelles applications entièrement alignés sur le programme en quelques minutes. Une fois les données traitées, il a fallu moins d’une heure pour commencer à construire de nouvelles solutions d’apprentissage par-dessus ce programme d’études lisible par machine. Le ministère de la Technologie et de l’Innovation a créé un petit jeu d’apprentissage adapté au niveau scolaire, appelé [Age of Alberta](https://ageofalberta.fun), qui offrait une expérience interactive ludifiée dans le style d’Age of Empires de Microsoft, où le jeu reposait sur des exercices de mathématiques, de lecture et de devoirs alignés sur le programme. Le jeu n’a pris qu’une heure à construire comme prototype parce que les données étaient prêtes à être interprétées par l’IA. Un gouvernement peut rendre un vaste corpus public prêt pour l’IA une seule fois, pour le prix d’un ordinateur portable modeste, et, ce faisant, remettre à chaque parent, enseignant et élève de la province la matière première pour construire ses propres outils par-dessus, en une après-midi. L’apprentissage est ancré dans les faits, axé sur les résultats du programme d’études et prêt pour les outils d’IA que les parents, les enseignants et les élèves utilisent déjà."
+    },
+    {
+      "type": "pullquote",
+      "text": "Parce que les données étaient prêtes pour l’IA, construire une expérience d’apprentissage personnalisée, alignée sur le programme d’études et adaptée à l’âge n’a pris qu’une heure et a été réalisé pour moins de 4 $.",
+      "cite": "Document 21 · La forme des données"
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Construire des couches de traitement des données réutilisables"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces deux systèmes semblent sans rapport, l’un un étalonnage juridique pour un régulateur et l’autre un programme d’études pour une salle de classe, mais en dessous, ils sont la même machine. Des documents entrent, de la structure et des empreintes numériques au milieu, des réponses structurées et auditées sortent, et un corps de connaissances durable est laissé derrière. Nous avons construit ce même pipeline pour la législation, pour les programmes d’études, pour les politiques, pour de vastes corps de documentation technique, et pour la recherche sur les marchés et la concurrence dans une gamme de secteurs, des dizaines de fois au cours de la dernière année. Chaque fois, le sujet change, et les définitions de ce qui compte changent, et le pipeline ne change pas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Une fois les données organisées, et pour peu de frais, il devient rapide de construire des outils et des constats utiles avec célérité. Mieux encore, ils sont construits pour presque aucun coût et ancrés dans des données réelles et fiables. Les solutions portent les données probantes nécessaires pour être contestées, auditées et pour amorcer des conversations sérieuses sur la façon d’introduire l’IA dans un ministère ou une profession donnés. Un prototype d’analyse réglementaire peut être réalisé en quelques heures pour un travail qui serait acquis et réalisé manuellement sur une année. Et le travail est auditable, parce que le pipeline de traitement des données montre exactement avec quoi l’IA a travaillé, et il peut être recréé et étalonné. Des pratiques rigoureuses de gestion des données sont nécessaires, mais les retombées sont profondes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour un dirigeant qui décide comment investir dans l’IA, la leçon est de cesser d’acheter des conversations clavardées et de commencer à construire des pipelines de données et des systèmes de mémoire. Un outil de clavardage répond rapidement à la question d’aujourd’hui, mais l’oublie tout aussi vite. Un pipeline transforme un corps d’information en un actif durable, structuré et auditable qui répond à cette question et aux cent suivantes, sur lequel d’autres outils peuvent être construits, et qui, lorsque l’information est publique, devient un bien public. L’agent conversationnel est la partie que tout le monde peut voir. Le pipeline est la partie qui compte, et il coûte bien moins cher à construire que la plupart ne le pensent. Voilà ce qu’il faut pour rendre l’information prête pour l’IA, et c’est à la portée de tout gouvernement, et de tout Albertain, disposé à le construire."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.13",
+      "title": "Bâtir le substrat une seule fois, y bâtir de nombreux outils",
+      "caption": "Le travail coûteux et durable, c’est le substrat prêt pour l’IA. Les applications par-dessus, un étalonnage, une recherche, un jeu d’apprentissage, une note de recherche, sont comparativement peu coûteuses et rapides.",
+      "image": {
+        "src": "public/images/wq3kd/fr/fig-21-13.jpg",
+        "alt": "Un bloc central plein étiqueté substrat prêt pour l’IA construit une fois, avec plusieurs petites icônes d’application rayonnant vers l’extérieur étiquetées étalonnage de la paperasse, jeu d’apprentissage, recherche de politiques, étude de marché, vérification de conformité.",
+        "image_prompt": "Un diagramme radial : au centre un bloc plein étiqueté Substrat prêt pour l’IA, construit une fois; rayonnant vers l’extérieur, plusieurs petites icônes d’application chacune étiquetée d’un usage différent comme étalonnage de la paperasse, jeu d’apprentissage, recherche de politiques, étude de marché, vérification de conformité. Une légende indique Construisez le substrat une fois, construisez de nombreux outils par-dessus.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "data-pipeline",
+        "rag",
+        "embeddings",
+        "benchmarking",
+        "open-data"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "cux4h",
+    "uwpxr",
+    "eujjc"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "translated_from": "en",
+    "written_by": "ministère de la Technologie et de l’Innovation"
+  },
+  "translation_status": "final"
+}

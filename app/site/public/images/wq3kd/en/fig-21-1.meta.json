@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-1.jpg",
+  "bytes_jpg": 147706,
+  "bytes_png_source": 2177706,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:39:02.907Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A side-by-side comparison diagram. On the left, a single small chat bubble floating over a closed dark box labelled Documents, with a question mark and a fading dotted line, under the heading The demonstration. On the right, a clear left-to-right pipeline of connected labelled boxes feeding a tidy structured grid of cards, under the heading The system. Labels: The demonstration, The system.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A side-by-side comparison diagram. On the left, a single small chat bubble floating over a closed dark box labelled Documents, with a question mark and a fading dotted line, under the heading The demonstration. On the right, a clear left-to-right pipeline of connected labelled boxes feeding a tidy structured grid of cards, under the heading The system. Labels: The demonstration, The system.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

@@ -1,0 +1,477 @@
+{
+  "id": "eujjc",
+  "num": "15",
+  "sequence": "15 sur 22",
+  "tier": "Policy & People",
+  "category": "paper",
+  "title": "Le problème de la compression",
+  "subtitle": "Comment doivent évoluer la hiérarchie, la communication et le rôle de supervision humaine à l’ère de l’intelligence artificielle.",
+  "track": "Human and Change Management",
+  "authors": [
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
+  ],
+  "published": null,
+  "reading_min": 25,
+  "status": "Published",
+  "tags": [
+    "compression",
+    "hierarchy",
+    "organizational-design",
+    "agents",
+    "context-window",
+    "human-in-the-loop",
+    "change-management"
+  ],
+  "repo": null,
+  "abstract": "Les organisations hiérarchiques existent pour gérer un problème d’information. Les réalités du terrain doivent remonter jusqu’à la direction pour aider à prendre des décisions. Mais en montant, l’information est filtrée, résumée et priorisée. Chaque niveau de gestion simplifie et réduit l’information selon ce qu’il juge important. Au final, seule une partie de l’information arrive aux décideurs. On peut voir la hiérarchie comme un système de compression de l’information, bien avant l’ère numérique. Mais cette compression fait perdre des détails.",
+  "hero_image": {
+    "src": "public/images/eujjc/fr/hero.jpg",
+    "alt": "Illustration de couverture éditoriale : une large base de code et de rapports denses se canalise vers le haut à travers une pyramide qui se rétrécit jusqu’à un point unique, d’où une fine ligne redescend et se déploie en de nombreuses branches, tracée en bleu marine profond de l’Alberta avec de petits accents rouille sur papier crème chaud.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A wide base of dense, fine lines suggesting code and reports funnels upward through a narrowing pyramid to a single point at the top, while a thin rust line runs from that point back downward and fans out into many branches at the base. The motion of compressing upward and contextualizing downward is the whole image. Calm, archival, abstract. Wide cover aspect. No text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/eujjc.mp3",
+    "duration_sec": 1259
+  },
+  "tldr_presentation": {
+    "id": "eujjc-tldr",
+    "title": "Le document, en bref",
+    "locale": "fr",
+    "owner_id": "eujjc",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Le problème de la compression",
+        "audio_file": "public/audio/fr/eujjc-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Document 14 · Gestion des personnes et du changement",
+        "subcaption": "Comment la hiérarchie, la communication et la supervision humaine doivent changer à l’ère de l’IA.",
+        "text": "Les organisations hiérarchiques existent pour résoudre un problème d’information. La réalité du terrain doit remonter jusqu’à la haute direction pour éclairer la prise de décision, et en chemin elle est compressée et divulguée de façon sélective. La pyramide est un algorithme de compression avec perte, antérieur au numérique. Ce document soutient que la compression, en montant la hiérarchie et en redescendant, est le défi déterminant pour les personnes comme pour l’IA, et que capter les gains de l’IA suppose de reconcevoir la hiérarchie, la séance d’information et la place de l’humain dans la boucle."
+      },
+      {
+        "id": "02",
+        "title": "La hiérarchie fonctionne dans les deux sens",
+        "audio_file": "public/audio/fr/eujjc-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "Pourquoi la pyramide existe",
+        "visual_config": {
+          "left": {
+            "label": "Compression, vers le haut",
+            "body": "Un millier de contributeurs ne peuvent pas accaparer chacun une heure de la journée d’un dirigeant. Chaque palier retranche les détails de moindre valeur pour que seul le signal atteigne le sommet."
+          },
+          "right": {
+            "label": "Contextualisation, vers le bas",
+            "body": "Une vision maintenue au sommet doit être traduite pour chaque unité, en répondant à une seule question : que faisons-nous différemment lundi matin?"
+          }
+        },
+        "text": "Les cadres intermédiaires opèrent la compression dans les deux sens. En montant, la réalité du terrain est regroupée par thème et réduite, afin que la direction ne lise pas un millier de pages par jour. En descendant, une vision large est contextualisée en tactiques précises pour chaque unité. Dans sa meilleure forme, les règles sont claires; dans une organisation dysfonctionnelle, des signaux importants se perdent en chemin."
+      },
+      {
+        "id": "03",
+        "title": "Ce que l’IA élimine",
+        "audio_file": "public/audio/fr/eujjc-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Les taxes qu’impose la hiérarchie",
+        "visual_config": {
+          "items": [
+            {
+              "label": "La taxe de temps",
+              "desc": "Un aller-retour qui prend un mois entre la direction et le terrain peut prendre quelques secondes entre des agents."
+            },
+            {
+              "label": "La taxe de verbosité",
+              "desc": "Une vaste fenêtre de contexte peut absorber un millier de rapports d’étape d’un coup et repérer le signal par filtrage de motifs."
+            },
+            {
+              "label": "Mémoire partagée",
+              "desc": "Les agents accèdent à la même réalité du terrain à tout niveau, sans jeu lent du téléphone arabe."
+            },
+            {
+              "label": "Parallélisme",
+              "desc": "Des dizaines ou des centaines d’agents différenciés travaillent simultanément, chacun menant son propre audit."
+            }
+          ]
+        },
+        "text": "Les agents d’IA fonctionnent fondamentalement différemment des personnes. Ils ont encore des limites, mais ils surmontent une grande partie de ce qu’impose la hiérarchie humaine : la taxe de temps d’un mois pour un aller-retour, le besoin de compresser à cause de la verbosité et le transfert humain avec perte. Les agents partagent une mémoire commune et s’exécutent en parallèle, de sorte qu’une demande qui prenait un mois peut prendre quelques secondes."
+      },
+      {
+        "id": "04",
+        "title": "Inverser la hiérarchie",
+        "audio_file": "public/audio/fr/eujjc-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Un seul chef, de multiples préoccupations",
+        "visual_config": {
+          "stat_value": "1 : 8",
+          "stat_label": "Dans une hiérarchie agentique, le ratio humain peut s’inverser : huit agents superviseurs auditant chaque travailleur"
+        },
+        "subcaption": "Cybersécurité, AQ, changement, revue de code, infrastructure, juridique, protection des renseignements personnels.",
+        "text": "Dans une hiérarchie humaine, on maximise les contributeurs et on minimise l’encadrement, soit environ un gestionnaire pour huit employés. Dans une hiérarchie agentique, il peut être avantageux d’inverser ce ratio. Un seul agent codeur peut être entouré d’un agent de cybersécurité, d’un agent d’AQ, d’un agent de gestion du changement, d’un agent de revue de code et d’autres encore, chacun ouvrant un billet lorsqu’il décèle une lacune. Il y a un seul chef en cuisine, ceinturé de sous-agents qui auditent en continu."
+      },
+      {
+        "id": "05",
+        "title": "La limite que les agents atteignent toujours",
+        "audio_file": "public/audio/fr/eujjc-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "La compression ne disparaît pas",
+        "visual_config": {
+          "stat_value": "466 M lignes",
+          "stat_label": "Bien plus de code qu’un seul agent ne peut retenir; la portée efficace se situe entre quarante mille et quatre cent mille caractères environ"
+        },
+        "subcaption": "Au-delà d’un million de jetons, même les meilleurs modèles se réinitialisent et résument.",
+        "text": "Les agents se heurtent toujours à une limite stricte. Un seul agent ne maintient une compréhension efficace que d’une quantité limitée d’information, et 466 millions de lignes de code dépassent largement cette quantité. Au-delà d’environ un million de jetons, même les meilleurs modèles se réinitialisent, compressent et résument, une forme d’amnésie d’ingénierie. La hiérarchie persiste donc pour la même raison que toujours, simplement fixée à une autre échelle : compresser le parc en un canevas de capacités d’affaires qu’un agent, et un humain, peut gouverner."
+      },
+      {
+        "id": "06",
+        "title": "La séance d’information et l’humain dans la boucle",
+        "audio_file": "public/audio/fr/eujjc-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Gérer le système, pas l’organisme",
+        "subcaption": "Déplacer la supervision de l’agent individuel vers le niveau du système.",
+        "text": "Un modèle d’IA parfait du gouvernement doit tout de même être compressé pour atteindre un humain, car le langage porte le sens à environ quarante bits par seconde tandis que l’IA travaille bien plus vite. La solution est d’élargir le canal : simulation, visualisation et interaction à la place de la note d’information dense, et supervision humaine au niveau de l’écosystème plutôt que de l’agent individuel. Un gain d’un facteur vingt n’est pas réalisable en conservant la hiérarchie que nous administrons aujourd’hui."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Le problème de la compression"
+    },
+    {
+      "n": "02",
+      "title": "Comment les hiérarchies se transposent à l’ère de l’IA"
+    },
+    {
+      "n": "03",
+      "title": "Inverser la hiérarchie"
+    },
+    {
+      "n": "04",
+      "title": "Les limites que les agents rencontrent toujours"
+    },
+    {
+      "n": "05",
+      "title": "Transformer la séance d’information"
+    },
+    {
+      "n": "06",
+      "title": "L’organisation de demain et l’humain dans la boucle"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Les agents d’IA fonctionnent différemment. Ils réduisent une grande partie du temps et des efforts nécessaires pour transmettre l’information à travers plusieurs niveaux. Ils ont toutefois leurs propres limites, notamment liées à la quantité d’information qu’ils peuvent traiter à la fois. Pour tirer parti de ces gains, les organisations doivent évoluer. Elles doivent repenser leur hiérarchie, passer de présentations écrites à des approches plus visuelles et interactives, et déplacer la supervision humaine de l’agent individuel vers l’ensemble du système."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Le problème de la compression"
+    },
+    {
+      "type": "paragraph",
+      "text": "C’est une nécessité. Dans une organisation avec un millier de personnes, si chacun produit un rapport d’une page, la direction devrait lire mille pages par jour, ce qui est impossible. L’information doit donc être résumée et priorisée en chemin. Les sujets moins importants sont réglés localement ou écartés, pour que la direction reçoive une version plus courte et structurée de la réalité, mais fortement simplifiée."
+    },
+    {
+      "type": "paragraph",
+      "text": "La hiérarchie fonctionne alors comme un système de compression de l’information, avec perte. Ses règles ne sont pas toujours explicites et son application peut varier.\nDans les organisations bien organisées, des règles claires permettent de bien filtrer l’information, et les gestionnaires savent ce qui est important. Dans les organisations moins efficaces, des éléments cruciaux peuvent se perdre, car tous ne partagent pas la même compréhension des priorités. En ce sens, la structure en pyramide est un ancien mécanisme de gestion de l’information, conçu pour aider à la prise de décision. Sans cette compression, un seul dirigeant devrait traiter directement l’information de centaines ou de milliers de personnes, ce qui ne serait pas réaliste."
+    },
+    {
+      "type": "pullquote",
+      "text": "La hiérarchie en forme de pyramide est un algorithme de compression de l’information antérieur au numérique, conçu pour appuyer la prise de décision.",
+      "cite": "Janak Alford, Sous-ministre, Ministère de la Technologie et de l’Innovation"
+    },
+    {
+      "type": "paragraph",
+      "text": "À l’inverse, la hiérarchie sert aussi à développer l’information. Dans l'[Académie d’IA de l’Alberta](/paper/dt725), nous employons le terme « hydratation » : une idée simple peut être enrichie et adaptée pour devenir concrète et utile pour chaque personne dans l’organisation. Par exemple, une vision comme « être centré sur l’humain » n’a pas le même sens pour tous. En service à la clientèle, cela peut vouloir dire plus d’écoute et d’empathie. En développement, cela peut mener à des produits personnalisés. En marketing, à des messages plus proches des clients. En finance, à accepter certains compromis pour rester cohérent avec les valeurs."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un dirigeant ne peut pas détailler cette vision pour chaque équipe. C’est le rôle des gestionnaires intermédiaires de la traduire en actions concrètes, adaptées à leur réalité, en répondant à la question : « qu’est‑ce qu’on fait différemment dès maintenant? »\nDans une organisation efficace, cette transformation fonctionne bien : la vision devient des actions précises. Dans une organisation moins performante, elle reste floue, et les équipes ne savent pas comment adapter leur travail."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 14.1",
+      "title": "La hiérarchie comme machine de compression à double sens",
+      "caption": "L’information du terrain est compressée à mesure qu’elle monte, de sorte que la granularité de milliers de rapports se perd. À l’inverse, la vision et la stratégie sont contextualisées en descendant, la direction se déployant en tactiques précises pour chaque unité. Dans les deux sens, il y a une perte.",
+      "image": {
+        "src": "public/images/eujjc/fr/fig-14-1.jpg",
+        "alt": "Une pyramide dessinée à la main, divisée en paliers. À gauche, de larges bandes de détails fins à la base se rétrécissent à mesure que des flèches montantes traversent des paliers de gestion étiquetés jusqu’à un point unique au sommet, légendées compression. À droite, une seule flèche quitte le sommet et se déploie vers le bas en s’élargissant en plusieurs cases d’unités étiquetées, légendées contextualisation.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A pyramid divided into horizontal layers labelled, bottom to top, CONTRIBUTEURS, GESTIONNAIRE, DIRECTEUR, DIRECTION. On the LEFT half, broad bands of fine detail at the base narrow as upward arrows pass through each layer, captioned COMPRESSION, with a small note near the apex reading RÉALITÉ DU TERRAIN, COMPRESSÉE. On the RIGHT half, a single arrow leaves the apex and fans out, widening downward into a row of labelled unit boxes FINANCE, OPÉRATIONS, SERVICE at the base, captioned CONTEXTUALISATION, with a small note reading QUE FAISONS-NOUS LUNDI. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Comment les hiérarchies se transposent à l’ère de l’IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "À mesure que les agents d’IA s’intègrent dans l’organisation, ils permettent de repenser le problème de la compression de l’information. Ils fonctionnent différemment des humains : même s’ils ont des limites, ils éliminent plusieurs contraintes propres aux structures hiérarchiques."
+    },
+    {
+      "type": "paragraph",
+      "text": "La première est le temps. Dans une organisation traditionnelle, une demande peut prendre des semaines ou des mois à descendre puis à remonter la hiérarchie. Ce délai dépend des réunions, des formats de communication, des validations et des transformations à chaque niveau. Avec des agents d’IA, ce délai peut être réduit à quelques secondes. Un agent peut interroger directement un autre agent et obtenir une réponse déjà adaptée à son besoin, sans passer par plusieurs intermédiaires."
+    },
+    {
+      "type": "paragraph",
+      "text": "La deuxième est la quantité d’information à traiter. Les humains doivent résumer fortement l’information pour la rendre transmissible. Les agents, eux, peuvent absorber beaucoup plus de contenu à la fois, analyser les données rapidement et en extraire les éléments les plus pertinents. L’information n’a donc plus besoin d’être autant compressée ni de transiter par plusieurs niveaux."
+    },
+    {
+      "type": "paragraph",
+      "text": "La troisième concerne la mémoire. Les humains ne partagent pas une mémoire commune : ils doivent convertir ce qu’ils savent en mots, ce qui introduit déjà une perte d’information. Les agents d’IA, eux, peuvent accéder directement aux mêmes données à tous les niveaux. Il n’est plus nécessaire de transformer et de retransmettre l’information de façon progressive."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cependant, il reste essentiel de différencier les agents. Un seul agent ne peut pas tout faire efficacement. Comme dans une organisation humaine, il est préférable d’avoir des rôles distincts : par exemple, un agent pour coder et un autre pour la sécurité. Cette séparation permet aussi le travail en parallèle, avec plusieurs agents qui avancent en même temps."
+    },
+    {
+      "type": "paragraph",
+      "text": "Enfin, un agent unique n’est pas toujours fiable pour évaluer son propre travail. Des agents spécialisés peuvent vérifier, corriger et compléter le travail des autres. Cette combinaison d’agents permet d’obtenir plus de vitesse, de qualité et de fiabilité qu’un seul agent polyvalent."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Inverser la hiérarchie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dans une organisation humaine, on cherche à maximiser le nombre de personnes qui produisent du travail tout en limitant le nombre de gestionnaires. Par exemple, on observe souvent un ratio d’environ un gestionnaire pour huit employés. Avec des agents d’IA, cette logique peut être inversée. Il peut être avantageux d’avoir plusieurs agents spécialisés qui surveillent, vérifient et valident le travail d’un seul agent producteur. Par exemple, un agent principal peut être accompagné de plusieurs agents chargés de l’audit, de la qualité ou de la sécurité. Ce renversement du ratio permet d’augmenter la fiabilité et la complétude du travail produit, en compensant les limites d’un agent individuel par une supervision automatisée et continue."
+    },
+    {
+      "type": "keystat",
+      "label": "Inverser le ratio",
+      "value": "1 : 8",
+      "body": "Dans une organisation humaine, on observe souvent un ratio d’environ un gestionnaire pour huit employés. Avec les agents d’IA, ce modèle peut être inversé : un seul agent producteur peut être entouré de plusieurs agents superviseurs chargés de vérifier et valider son travail. Par exemple, un agent codeur pourrait être accompagné d’agents spécialisés en cybersécurité, en assurance qualité, en gestion du changement, en revue de code, en infrastructure, en communications, en aspects juridiques et en protection des renseignements personnels. Chacun surveille un aspect précis et signale les problèmes lorsqu’ils apparaissent."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce modèle repose sur une séparation claire des responsabilités. Un agent principal se concentre sur la production, tandis que les autres assurent une supervision continue. Comme en cuisine, il n’y a qu’un seul chef pour produire le plat, mais plusieurs personnes s’occupent de la qualité, des ingrédients et du service. Dans cette approche, l’agent principal utilise le modèle le plus performant pour produire, tandis que les agents secondaires effectuent des vérifications rapides et ciblées. Ils détectent les écarts et signalent les incohérences au fur et à mesure."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce modèle permet de combiner vitesse et fiabilité : un agent construit, plusieurs autres vérifient en continu, ce qui donne un système plus robuste et mieux contrôlé, comme l’explique le [document Rouge, bleu, jaune et vert](/paper/l199t) et le [document sur le harnais anti-dérive](/paper/of1cj)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 14.2",
+      "title": "Un travailleur, huit superviseurs",
+      "caption": "Un seul agent codeur se trouve au centre, entouré d’agents spécialisés. Chacun porte une responsabilité précise et surveille le travail en continu, en ouvrant un billet dès qu’une lacune est détectée. Dans ce modèle, le ratio humain est inversé : la majorité des agents ne produisent pas directement, mais auditent, vérifient et valident le travail produit.",
+      "image": {
+        "src": "public/images/eujjc/fr/fig-14-2.jpg",
+        "alt": "Un diagramme en anneau dessiné à la main. Un seul jeton robot au centre étiqueté travailleur est entouré de huit jetons robots plus petits disposés en cercle, chacun étiqueté d’une préoccupation : cybersécurité, AQ, changement, revue de code, infrastructure, communications, juridique, protection des renseignements personnels. De petites flèches pointent vers l’intérieur, de chaque superviseur vers le centre, certaines portant une petite étiquette marquée billet.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single simple robot token at the centre inside a box labelled TRAVAILLEUR. Around it, eight smaller robot tokens arranged evenly in a ring, each labelled with one concern: CYBERSÉCURITÉ, AQ, CHANGEMENT, REVUE DE CODE, INFRASTRUCTURE, COMMUNICATIONS, JURIDIQUE, CONFIDENTIALITÉ. Thin arrows point inward from each ring token toward the centre, two of them carrying a small rust tag reading BILLET. A small caption below reads UN CHEF, HUIT AUDITEURS. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette approche transforme la hiérarchie dans un environnement agentique. Pour chaque agent producteur, plusieurs agents superviseurs peuvent être présents. La structure peut aussi évoluer vers un autre modèle : les problèmes qui ne peuvent pas être réglés localement sont escaladés avec toute l’information du terrain, puis traités en temps réel par un groupe ou un agent dédié. Cela permet d’éviter que l’exécution s’éloigne de la stratégie globale."
+    },
+    {
+      "type": "paragraph",
+      "text": "La hiérarchie et la spécialisation des rôles restent importantes, mais plusieurs caractéristiques des organisations humaines deviennent moins nécessaires. Le modèle devient différent : il conserve une certaine distinction entre les rôles, mais repose sur une mémoire partagée et un accès direct à l’information. Ainsi, plusieurs éléments classiques des hiérarchies traditionnelles peuvent disparaître, au profit d’un système plus direct, plus synchronisé et plus fluide."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Les limites que les agents rencontrent toujours"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les systèmes agentiques ont encore une limite importante. Même si un agent peut traiter beaucoup plus d’information qu’un humain en une seule interaction, cela ne supprime pas le problème : cela le repousse seulement à une échelle plus grande. Ce document s’ouvre sur « [Le navire de Thésée à deux milliards de dollars](/paper/cux4h) » et un système de 466 millions de lignes de code. À très grande échelle, comme dans un système contenant des centaines de millions de lignes de code, aucun agent unique ne peut tout comprendre. Un agent reste limité par la quantité d’information qu’il peut traiter efficacement à un moment donné, ce qu’on appelle sa fenêtre de contexte. En pratique, un agent peut travailler efficacement avec une quantité d’information relativement restreinte. Cela signifie qu’il ne peut maintenir une compréhension complète que d’une petite portion du système à la fois."
+    },
+    {
+      "type": "keystat",
+      "label": "La portée efficace d’un seul agent",
+      "value": "40 k–400 k",
+      "body": "Les agents individuels sont efficaces sur une quantité limitée d’information, bien inférieure à l’ensemble du système. Cela signifie que, même avec l’IA, une forme de hiérarchie demeure nécessaire, mais à une autre échelle."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour comprendre un système très vaste, comme des centaines de millions de lignes de code, il faut mobiliser de nombreux agents. Chacun analyse une partie du code, en comprend la fonction et la transforme en catégories plus générales, comme l’authentification, les flux de travail ou la gestion des données. Peu à peu, ces fonctions sont regroupées en thèmes et en composants communs."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce travail crée une abstraction du système : au lieu d’avoir des millions de lignes de code, on obtient une vue simplifiée sous forme de modules et de capacités d’affaires. Cette simplification est une forme de compression nécessaire, pour permettre à des agents de plus haut niveau — ou à des humains — de comprendre et de gouverner l’ensemble.\nMême dans un environnement agentique, des limites subsistent. Les agents ne peuvent pas tout conserver en mémoire en permanence. Ils passent donc par des cycles où l’information est résumée et retransmise, ce qui peut entraîner une perte de détail, un peu comme un humain qui reprend une tâche après une pause."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque transfert entre agents ressemble à une transmission de connaissance : l’état du travail est résumé pour permettre à un autre agent de continuer. Cela permet de maintenir une continuité, mais introduit aussi une forme de simplification.\nEn pratique, la compression de l’information reste nécessaire, même avec l’IA. Elle se fait simplement à une échelle plus grande et avec des outils différents. Pour gérer des systèmes complexes, il faut réduire l’information en structures compréhensibles, autant pour les agents que pour les humains."
+    },
+    {
+      "type": "paragraph",
+      "text": "Enfin, si l’on souhaite garder un humain dans la boucle — ce qui reste essentiel — l’information doit être encore simplifiée pour être compréhensible rapidement. La compression ne disparaît donc pas : elle change de forme, mais demeure au cœur du fonctionnement, même à l’ère de l’IA."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Transformer la séance d’information"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lorsqu’un humain et une IA travaillent ensemble pour transformer un grand nombre d’applications, l’information doit être fortement simplifiée pour être comprise par un décideur. Même si la documentation complète existe parfois sur des milliers de pages, elle dépasse largement ce qu’une personne peut lire ou analyser en pratique."
+    },
+    {
+      "type": "paragraph",
+      "text": "Traditionnellement, cette information est compressée sous forme de notes d’information. Elles présentent les idées principales, les risques et les mesures pour les atténuer, ainsi que des éléments de preuve pour rassurer la direction. Cette synthèse permet aux décideurs de comprendre rapidement et de justifier leurs décisions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cependant, cette approche atteint ses limites. La capacité humaine à traiter l’information est désormais beaucoup plus faible que celle de l’IA. Là où une IA pourrait analyser des milliers de pages, un décideur n’en lira souvent que quelques-unes. Cela crée un déséquilibre : des idées solides peuvent être rejetées simplement parce qu’elles sont trop difficiles à résumer correctement."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cela ouvre la porte à une autre façon de communiquer. Les formats écrits ou oraux exigent beaucoup de compression, ce qui nuit à la compréhension. En revanche, les humains comprennent beaucoup mieux l’information visuelle et spatiale."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ainsi, au lieu de produire uniquement des documents, une IA pourrait générer des simulations, des visualisations interactives ou même des expériences immersives. Par exemple, une transformation sur plusieurs années pourrait être montrée de façon animée et accélérée, permettant au décideur de voir concrètement les effets et les processus en jeu.\nEn changeant le format du texte vers des représentations visuelles, interactives ou auditives, on réduit le besoin de compression et on améliore la compréhension globale."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 14.3",
+      "title": "La note d’information par opposition à la simulation",
+      "caption": "À gauche, un décideur lit une note d’information : dense, linéaire et relativement lente à parcourir. À droite, ce même décideur explore une simulation interactive en 3D de la transformation, où il observe directement les agents reconstruire le système vers un état cible clair. Dans ce second cas, la compréhension passe par la perception visuelle et spatiale. Elle permet de saisir rapidement des relations, des dynamiques et des évolutions que le texte seul ne peut pas transmettre avec la même fidélité. Autrement dit, la simulation donne accès à une compréhension plus riche et plus intuitive, là où le format écrit reste limité par sa nature séquentielle et fortement compressée.",
+      "image": {
+        "src": "public/images/eujjc/fr/fig-14-3.jpg",
+        "alt": "Un diagramme dessiné à la main en deux moitiés contrastées. À gauche, un jeton-personne assis lit une seule page dense étiquetée note d’information, marquée à environ quarante bits par seconde. À droite, le même jeton-personne se tient debout dans une vaste simulation tridimensionnelle immersive : des blocs isométriques flottants et des lignes de connexion fluides, de nombreux petits jetons-agents transformant un système emmêlé en une grille ordonnée de modules étiquetée état final clarifié.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, divided into two contrasting halves by a thin vertical rule. On the LEFT half, a simple seated person token reads a single dense page labelled NOTE D'INFORMATION, its cramped horizontal text-lines suggesting a narrow channel, with a small rust tag ENVIRON 40 BITS/S. On the RIGHT half, the same simple person token stands inside a large, immersive three-dimensional simulation rendered in light isometric line work: floating volumetric blocks and flowing connection lines, with many tiny agent tokens at work transforming a tangled system into an orderly grid of modules at the far side labelled ÉTAT FINAL CLARIFIÉ; label the scene SIMULATION 3D INTERACTIVE. A small caption below reads ÉLARGIR LE CANAL, PAS SIMPLIFIER LA VÉRITÉ. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Le coût de l’erreur peut aussi diminuer fortement. Dans un projet traditionnel très coûteux, une décision doit être prise avec beaucoup de certitude, car les marges d’erreur sont faibles et les conséquences importantes. Avec l’IA, une partie de ce risque disparaît. Si une décision entraîne seulement un faible coût et un délai court, elle peut être testée comme une hypothèse. Le travail devient alors expérimental : on essaie, on observe les résultats rapidement, puis on ajuste. Par exemple, une initiative peut être lancée, évaluée en quelques jours, puis modifiée ou abandonnée sans conséquences majeures. Cela permet d’enchaîner les itérations à faible coût, plutôt que de miser sur une seule décision lourde et difficile à corriger. Cette approche change la gestion du risque : le danger diminue parce que le coût de l’échec est beaucoup plus bas et que les problèmes peuvent être corrigés au fur et à mesure. Cependant, sans adapter la façon de présenter et de comprendre l’information, les humains risquent de ne pas suivre. Même si l’IA peut analyser et produire des résultats complexes, les limites humaines demeurent. Il faut donc repenser les modes de communication et de compréhension, sinon l’écart entre ce que l’IA produit et ce que les décideurs peuvent réellement saisir continuera de freiner les décisions."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "L’organisation de demain et l’humain dans la boucle"
+    },
+    {
+      "type": "paragraph",
+      "text": "On parle souvent de la nécessité de garder un humain dans la boucle. Mais cette idée suppose que les structures actuelles, nos hiérarchies et nos façons de faire des séances d’information, resteraient valables à l’ère de l’IA. Or, ce n’est probablement pas le cas.\nCertaines organisations, comme Anthropic, soulignent déjà qu’au lieu de parler directement aux agents, il faudrait plutôt construire des processus qui les sollicitent pour nous. À mesure que les agents deviennent plus puissants, la relation directe entre une personne et un agent devient moins efficace. Elle limite l’IA au rythme humain, qui est beaucoup plus lent. Si un humain communique très lentement, alors que l’IA peut traiter l’information à une vitesse immense, on freine inutilement son potentiel. On l’oblige à fonctionner selon les limites humaines les plus faibles. C’est comme laisser une voiture de course au garage.\nEn plus, cela nous empêche de tirer parti de nos autres forces humaines, comme la compréhension visuelle, spatiale et auditive, qui peuvent transmettre beaucoup plus qu’un simple texte. Si le principe de l’humain dans la boucle doit continuer d’exister à long terme, il devra changer de forme. Il ne pourra plus reposer surtout sur le texte. Il devra passer par des simulations, des interactions et des expériences visuelles, spatiales et sensorielles, qui permettront aux humains de comprendre les décisions importantes sans devoir lire tous les détails techniques."
+    },
+    {
+      "type": "keystat",
+      "label": "Deux vitesses de communication",
+      "value": "40 c. 4 M bits/s",
+      "body": "Les humains transmettent le sens à environ quarante bits par seconde, alors qu’une IA peut traiter l’information à des vitesses des millions de fois plus élevées. Si l’on limite l’interaction à la vitesse humaine, on freine inutilement le potentiel de l’IA, comme laisser une Ferrari au garage au lieu de l’utiliser à pleine capacité."
+    },
+    {
+      "type": "pullquote",
+      "text": "Vous laissez la Ferrari au garage et vous ignorez nos millénaires d’évolution dans la compréhension visuelle, spatiale et auditive.",
+      "cite": "Janak Alford, Sous-ministre, Ministère de la Technologie et de l’Innovation"
+    },
+    {
+      "type": "paragraph",
+      "text": "On peut voir une organisation agentique comme un écosystème. Dans un jardin, des milliards d’organismes interagissent : plantes, bactéries, insectes, micro‑organismes. Dans le corps humain, des billions d’organismes composent le microbiome. On ne gère pas chaque élément individuellement. On ne contrôle pas chaque bactérie ou chaque plante une par une. On comprend plutôt le système global, on observe les signaux, et on intervient seulement lorsque quelque chose ne va pas. L’approche est semblable avec les agents d’IA. On ne pilote pas chaque agent en détail. On met en place les conditions globales de réussite, on observe les résultats, et on agit lorsqu’un déséquilibre apparaît. Chaque agent possède sa propre forme d’intelligence et opère dans son rôle. Le rôle humain devient alors celui d’un superviseur du système dans son ensemble, plutôt que celui d’un gestionnaire de chaque activité individuelle. En pratique, on ne gère plus les actions unitaires, mais la cohérence et la santé globale du système."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 14.4",
+      "title": "Gérer le système, pas l’organisme",
+      "caption": "Un jardinier ne dirige pas chaque bactérie du sol ni chaque plante du champ. Il observe les signes agrégés et intervient au niveau de l’ensemble du système. La supervision humaine des agents devrait évoluer de la même façon, de l’agent individuel vers le niveau du système.",
+      "image": {
+        "src": "public/images/eujjc/fr/fig-14-4.jpg",
+        "alt": "Un diagramme dessiné à la main en deux zones. La zone inférieure est un champ grouillant de nombreux petits jetons : petites plantes, feuilles et points évoquant des microbes et la vie du sol, aucun étiqueté individuellement. Au-dessus flotte un petit panneau de jauges agrégées et un seul jeton-observateur qui lit le panneau plutôt que le champ. Une légende indique gérer le système, pas l’organisme.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, arranged in two horizontal zones. The LOWER zone is a dense, teeming field of many tiny uniform tokens, small plants, leaves, worms, and scattered dots suggesting soil microbes, none individually labelled, captioned PROCESSUS DE BAS NIVEAU. The UPPER zone shows a small panel of three simple aggregate gauges labelled SANTÉ DU SYSTÈME, with a single simple observer token reading the panel, captioned NIVEAU MÉTA. A thin dashed line separates the zones, with a few summary arrows rising from the field to the gauges. A small caption below reads GÉRER LE SYSTÈME, PAS L'ORGANISME. Calm, architectural, legible labels. No logos, no people beyond a simple token. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Le rôle humain dans la boucle doit évoluer pour répondre au défi de la compression. Il ne s’agira plus de superviser chaque action d’un agent individuellement, mais de s’appuyer sur des mécanismes de compression et d’abstraction permettant de comprendre le système dans son ensemble, à un niveau méta, et de prendre des décisions à ce niveau.\nLe travail du contributeur humain est en train de changer profondément. À mesure que la sophistication augmente, on s’éloigne de l’exécution détaillée pour se rapprocher de la supervision de systèmes complets. Nous avançons vers une nouvelle forme d’expérience, où l’humain n’interagit plus avec chaque action, mais avec des représentations synthétiques et significatives de ces actions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dans ce contexte, la note d’information de demain ne sera plus un document texte traditionnel. Elle deviendra une démonstration de système. Plutôt que de faire confiance à une personne ou à un modèle unique, le décideur observera une preuve : un système simulé, en action, où la transformation est visible, accélérée et compréhensible.\nCette expérience devra correspondre à la façon dont les humains comprennent réellement le monde : par le visuel, le spatial et l’interactif. Elle devra permettre au décideur d’explorer, de poser des questions, de voir les effets des décisions, et de constater lui‑même que les résultats respectent les contrôles attendus. Dans un contexte où le coût d’expérimentation est faible, cette approche devient non seulement possible, mais préférable. Pour y parvenir, il faut attaquer directement le problème de la compression. Cela implique de transformer trois éléments fondamentaux : la structure de la hiérarchie, les modes de communication, et la façon dont l’humain intervient dans le système. L’humain ne disparaît pas, mais son rôle change : il devient un superviseur du système global plutôt qu’un validateur de chaque action. C’est seulement en réduisant cet écart entre la capacité humaine et celle de l’IA que l’on pourra réellement tirer parti de son potentiel."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si nous conservons les processus actuels, aucune quantité d’IA ne permettra d’atteindre les gains attendus. Le principal problème n’est pas le temps nécessaire pour faire le travail, mais le temps qui s’écoule entre les étapes du travail. C’est le temps entre les travaux. Rappelez-vous, d’après le [document Velocity](/paper/k3tc3), que le système suit désormais le temps qu’une tâche passe au niveau de l’étape ou du palier au sein d’un module et l’attribue au bon acteur. Si nous conservons les processus actuels, aucune quantité d’IA ne permettra d’atteindre les gains attendus. Le principal problème n’est pas le temps nécessaire pour faire le travail, mais le temps qui s’écoule entre les étapes du travail. Aujourd’hui, une organisation peut prendre un mois pour faire circuler une demande entre un contributeur et un cadre supérieur. L’IA peut accomplir une tâche en une heure, mais si la validation humaine prend une semaine et que la communication suit les rythmes habituels, l’impact réel reste minime. Même si le temps d’exécution du travail s’effondre, la durée globale peut à peine changer. Une initiative qui prenait trente jours peut n’en prendre que vingt‑neuf, parce que les pertes de temps se situent entre les étapes : lire et rédiger des documents, faire des allers‑retours par courriel, organiser des réunions et attendre les prochaines interactions. Ces délais sont causés par la façon dont les organisations fonctionnent : une communication lente, séquentielle, dépendante des disponibilités humaines et des structures existantes. Si rien ne change dans les modes de communication et dans la structure hiérarchique, l’IA restera bridée par ces limites humaines. Ce ne sont pas les capacités de l’IA qui manqueront, mais la façon dont l’organisation permet ou empêche l’information de circuler."
+    },
+    {
+      "type": "keystat",
+      "label": "Le prix, et la condition",
+      "value": "20×",
+      "body": "Une amélioration d’un facteur vingt de la vitesse de livraison n’est pas possible si l’on conserve exactement la même hiérarchie. La structure actuelle devient elle‑même un facteur limitant. Les organisations qui réussiront seront celles qui accepteront de réinventer leur façon de fonctionner en même temps qu’elles adoptent l’IA. Cette transformation mènera vers un modèle hybride qui combine le meilleur des deux mondes. L’IA prendra en charge le travail d’exécution rapide et détaillé, tandis que les humains se concentreront sur la supervision globale, le jugement stratégique et la compréhension des systèmes dans leur ensemble. La prise de décision ne se fera plus au niveau de chaque action ou de chaque agent, mais à l’échelle de l’écosystème complet."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dans ce modèle, les forces respectives sont complémentaires. L’IA excelle dans le traitement rapide, répétitif et à grande échelle. Les humains, eux, apportent une compréhension contextuelle, un raisonnement spatial, une intuition stratégique et une capacité à arbitrer dans l’incertitude. Le travail du terrain et le travail stratégique ne s’opposent plus : ils se renforcent. Cela représente un changement profond. Il ne s’agit pas seulement d’introduire de nouveaux outils, mais de repenser la façon dont une organisation prend ses décisions, communique et se structure. C’est ce qui rend ce défi déterminant. Pour atteindre des gains significatifs, il faut agir simultanément sur la technologie et sur le modèle organisationnel. Cette évolution ne sera pas ponctuelle, mais continue. C’est un chantier central, qui exige des ajustements constants à mesure que les capacités de l’IA progressent. C’est aussi une condition nécessaire pour capter pleinement les gains attendus : sans transformation de la hiérarchie, les bénéfices de l’IA resteront partiels. En bref, la performance recherchée ne viendra pas uniquement de l’IA elle‑même, mais de notre capacité à réorganiser le travail autour d’elle."
+    },
+    {
+      "type": "figure",
+      "title": "Explorez ceci comme un canevas interactif",
+      "caption": "Dans une hiérarchie agentique, le ratio s’inverse : pour chaque agent producteur, plusieurs agents superviseurs auditent et valident le travail en continu. Tiré du Canevas (document 18) : vous pouvez déplacer les éléments, zoomer et utiliser la fonction Écouter pour une présentation guidée.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "hierarchy",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "compression",
+        "hierarchy",
+        "organizational-design",
+        "human-in-the-loop",
+        "change-management"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "translation_status": "final",
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    },
+    "fr_review": {
+      "by": "Government of Alberta francophone reviewers",
+      "received": "2026-06-12",
+      "applied": "2026-06-15",
+      "method": "transpose .fr.md → JSON (scripts/fr-review/transpose.mjs), round-trip verified (verify.mjs), lexicon sweep (sweep.mjs)",
+      "standard": "docs/fr-style-guide.md + data/fr-lexicon.json"
+    },
+    "section_sigs": {
+      "00": "172206671",
+      "01": "610300678",
+      "02": "2750600650",
+      "03": "1732322970",
+      "04": "1983737798",
+      "05": "2218739665",
+      "06": "2241947284"
+    },
+    "fr_resync": {
+      "date": "2026-06-20",
+      "reason": "Harmonized FR with author EN edits; signatures re-baselined."
+    }
+  },
+  "related": [
+    "cux4h",
+    "uwpxr",
+    "k3tc3",
+    "dt725",
+    "p7p2k",
+    "xs7uh"
+  ],
+  "source_signature": "3459252024"
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "es",
+  "slot": "fig-10",
+  "out_path": "public\\images\\wq3kd\\es\\fig-21-10.jpg",
+  "bytes_jpg": 163136,
+  "bytes_png_source": 2068747,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:12:56.830Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.",
+  "image_prompt": "A diagram in two panels. Left panel headed Memoria de trabajo: a request box labelled SOLICITUD, a fingerprint icon, and a note reading preguntado de nuevo, respondido sin costo. Right panel headed Trazabilidad de auditoría: a stack of immutable run cards labelled FICHA DE EJECUCIÓN v1, v2, v3, each with a small chain icon and a note reading documentos, modelo, instrucción, hora, and an arrow from a single card labelled HALLAZGO down to a label reading fuente, sección, página. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.\n\nSubject: A diagram in two panels. Left panel headed Memoria de trabajo: a request box labelled SOLICITUD, a fingerprint icon, and a note reading preguntado de nuevo, respondido sin costo. Right panel headed Trazabilidad de auditoría: a stack of immutable run cards labelled FICHA DE EJECUCIÓN v1, v2, v3, each with a small chain icon and a note reading documentos, modelo, instrucción, hora, and an arrow from a single card labelled HALLAZGO down to a label reading fuente, sección, página. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-10.source.png"
+}

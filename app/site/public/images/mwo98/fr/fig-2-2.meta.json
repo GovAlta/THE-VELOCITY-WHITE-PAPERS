@@ -1,0 +1,17 @@
+{
+  "paper_id": "mwo98",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\mwo98\\fr\\fig-2-2.jpg",
+  "bytes_jpg": 256896,
+  "bytes_png_source": 2708839,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T06:19:01.166Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a branching tree of software dependencies, where a single node near the top glows with a poison mark and thin lines carry that mark down to dozens of systems below it. A sense of one compromise cascading to many. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a branching tree of software dependencies, where a single node near the top glows with a poison mark and thin lines carry that mark down to dozens of systems below it. A sense of one compromise cascading to many. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\mwo98\\en\\fig-2-2.source.png"
+}

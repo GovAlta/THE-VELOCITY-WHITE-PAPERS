@@ -1,0 +1,912 @@
+{
+  "id": "l5wsi",
+  "num": "17",
+  "sequence": "17 sur 22",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "Technique : anatomie d’un gabarit",
+  "subtitle": "Une visite complète du modèle d’application open source fourni avec le système de contrôle, qui montre en pratique pourquoi la meilleure façon de définir une solution est encore d’avoir un code qui fonctionne.",
+  "track": "Technical Appendix",
+  "authors": [
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
+  ],
+  "published": null,
+  "reading_min": 13,
+  "status": "Published",
+  "tags": [
+    "template",
+    "harness",
+    "security",
+    "owasp",
+    "open-source",
+    "authentication",
+    "specification-driven"
+  ],
+  "repo": null,
+  "abstract": "Le harnais bien construit inclut un gabarit d’application complet en code source ouvert, basé sur un seul dépôt. Il comprend une interface en Vue 3 et un serveur Node.js / Express avec une base de données PostgreSQL. Ce gabarit permet à un agent d’IA de créer rapidement des solutions fiables de niveau entreprise. Il inclut déjà les éléments essentiels comme la sécurité, la journalisation et des contrôles de base.",
+  "hero_image": {
+    "src": "public/images/l5wsi/fr/hero.jpg",
+    "alt": "Image éditoriale pour : Anatomie d’un gabarit",
+    "image_prompt": "An editorial cover image for the technical appendix titled \"Anatomie d'un gabarit\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/l5wsi.mp3",
+    "duration_sec": 862
+  },
+  "tldr_presentation": {
+    "id": "l5wsi-tldr",
+    "title": "Le document, en bref",
+    "locale": "fr",
+    "owner_id": "l5wsi",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Anatomie d’un gabarit",
+        "audio_file": "public/audio/fr/l5wsi-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Annexe technique · document 16",
+        "subcaption": "L’application livrée avec le harnais bien construit.",
+        "text": "Le harnais bien construit livre une application qui fonctionne, pas un dossier vide. Le gabarit est un projet pleine pile Vue 3, Express et Postgres qui se compile, authentifie les utilisateurs, dialogue avec une base de données, diffuse des mises à jour en direct et réussit ses tests et ses analyseurs de sécurité dès le jour où il est copié. Cette annexe explique son fonctionnement, de bout en bout."
+      },
+      {
+        "id": "02",
+        "title": "La meilleure spécification est du code",
+        "audio_file": "public/audio/fr/l5wsi-tldr/02.mp3",
+        "visual": "title",
+        "caption": "L’argument",
+        "subcaption": "Le code qui fonctionne prouve ce qu’un système fait; un document ne fait que le décrire.",
+        "text": "Demandez à une IA d’ajouter l’authentification et elle devra inventer un format de jeton, une durée de vie, un choix de stockage, une stratégie de renouvellement et un modèle de rôles. Chaque choix est une occasion de se tromper. Le gabarit a déjà fait ces choix, dans le code, selon une norme connue, de sorte que l’IA travaille à l’intérieur d’un système déjà décidé au lieu d’en inventer un, et l’application est conforme avant que l’IA n’écrive une seule ligne."
+      },
+      {
+        "id": "03",
+        "title": "Décidé une fois, centralisé",
+        "audio_file": "public/audio/fr/l5wsi-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Ce dont hérite l’IA",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Identité",
+              "desc": "Connexion par authentification unique, jetons RS256 dans des témoins httpOnly, rotation au renouvellement, accès fondé sur les rôles."
+            },
+            {
+              "label": "Sûreté",
+              "desc": "SQL paramétré, CSRF à double soumission, en-têtes de sécurité, un seul chemin d’erreur sûr."
+            },
+            {
+              "label": "Un seul client d’API",
+              "desc": "Chaque requête gère le renouvellement, le CSRF et les limites de débit à un seul endroit, de sorte qu’aucun écran ne peut se tromper."
+            },
+            {
+              "label": "Temps réel",
+              "desc": "Événements envoyés par le serveur (SSE) pour les mises à jour en direct, le point de terminaison de la liste faisant foi."
+            }
+          ]
+        },
+        "text": "Les décisions dangereuses sont prises une seule fois, dans le code, et centralisées afin qu’elles ne puissent pas être reprises de façon erronée. L’identité, le CSRF, le SQL paramétré, la forme de la réponse, la gestion des erreurs et la logique de réessai du client d’API sont des implémentations uniques et testées dont l’IA hérite plutôt qu’elle ne les rédige."
+      },
+      {
+        "id": "04",
+        "title": "Construit selon les normes, dès le départ",
+        "audio_file": "public/audio/fr/l5wsi-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Conforme avant la construction",
+        "visual_config": {
+          "stat_value": "773 / 0",
+          "stat_label": "tests réussis et échoués le jour où le gabarit est copié, en plus de six analyseurs de sécurité automatisés"
+        },
+        "subcaption": "Construit selon les normes OWASP ASVS niveau 2 et WCAG 2.1 AA que le harnais fait respecter.",
+        "text": "Chacun des dix principaux risques de l’OWASP est traité dans le code du gabarit, de sorte qu’une nouvelle application hérite de la défense. Le harnais vérifie ensuite, de façon mécanique, que le travail respecte toujours la norme à chaque changement."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Le serveur : le cycle de vie d’une requête"
+    },
+    {
+      "n": "02",
+      "title": "Identité : connexion, jetons et témoins"
+    },
+    {
+      "n": "03",
+      "title": "CSRF et sûreté entre sites"
+    },
+    {
+      "n": "04",
+      "title": "De la route à la base de données"
+    },
+    {
+      "n": "05",
+      "title": "Mises à jour en temps réel par SSE"
+    },
+    {
+      "n": "06",
+      "title": "Le client d’API unique"
+    },
+    {
+      "n": "07",
+      "title": "Routage et gardes de navigation"
+    },
+    {
+      "n": "08",
+      "title": "État, composables et formulaires"
+    },
+    {
+      "n": "09",
+      "title": "Interface, accessibilité et compilation"
+    },
+    {
+      "n": "10",
+      "title": "Les dix principaux risques de l’OWASP, traités d’entrée de jeu"
+    },
+    {
+      "n": "11",
+      "title": "Ce que le gabarit règle pour l’agent"
+    },
+    {
+      "n": "12",
+      "title": "Tout le gabarit, sur une seule page"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Fournir un bon gabarit à un agent d’IA est la façon la plus fiable d’échafauder une application de calibre entreprise. Un gabarit bien construit règle des centaines de décisions clés d’avance, de la sécurité à l’expérience utilisateur. Combiné à un [harnais bien construit](/paper/p7p2k), il donne à l’agent les moyens de transformer ce gabarit en application, rapidement et en toute sécurité."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le gabarit règle les principaux défis techniques dès le départ. Il définit tout, des choix de base comme le langage de programmation jusqu’aux éléments précis comme les protocoles de sécurité, la gestion des données et l’interface utilisateur. Cela représente des centaines de décisions déjà prises et adaptées à l’environnement cible. En fermant dès le début les failles de sécurité et les erreurs les plus courantes, le gabarit fournit aussi de bons modèles que l’agent peut suivre. En ce sens, un gabarit devient la meilleure forme de spécification : il guide le développement tout en maintenant la cohérence des choix de conception."
+    },
+    {
+      "type": "keystat",
+      "label": "Démarre au vert, pas à zéro",
+      "value": "773 / 0",
+      "body": "Le gabarit comprend 773 tests réussis, sans aucun échec, ainsi que six outils automatisés d’analyse de sécurité. Une application construite à partir de ce gabarit bénéficie dès le départ d’une base fiable, testée et conforme aux standards."
+    },
+    {
+      "type": "pullquote",
+      "text": "La meilleure spécification est du code. Donnez à l’IA une plateforme sécurisée, fondée sur des normes et accessible dès le départ, et elle est beaucoup moins susceptible de commettre une erreur. La solution est conforme avant même que l’IA commence à construire.",
+      "cite": ""
+    },
+    {
+      "type": "paragraph",
+      "text": "Il n’existe pas une seule bonne façon de créer un gabarit, mais il existe beaucoup de mauvaises façons de le faire. Les choix de conception dépendent de chaque organisation et de ses décisions globales. Le gabarit présenté ici est très précis et détaillé. Il est conçu pour éviter toute ambiguïté ou mauvaise interprétation. Cela dit, les mêmes principes et contrôles peuvent être appliqués à d’autres technologies."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Le serveur : le cycle de vie d’une requête"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le serveur est une application Express unique, développée en TypeScript. Chaque requête est traitée de façon cohérente, en passant par des couches de traitement dans un ordre logique et réfléchi : d’abord les protections simples et générales, puis, en dernier, la gestion de l’identité et des intentions."
+    },
+    {
+      "type": "table",
+      "title": "La chaîne d’intergiciels, dans l’ordre",
+      "columns": [
+        "Étape",
+        "Ce qu’elle fait"
+      ],
+      "rows": [
+        [
+          "trust proxy",
+          "Respecte l’adresse IP et le protocole du client transmis par le répartiteur de charge, afin que les limites de débit et les témoins sécurisés fonctionnent correctement derrière un mandataire."
+        ],
+        [
+          "En-têtes de sécurité (helmet)",
+          "Content-Security-Policy sans unsafe-eval, HSTS pendant un an et isolement entre origines."
+        ],
+        [
+          "Permissions-Policy",
+          "Désactive la caméra, le microphone, la géolocalisation, le paiement, l’USB et les capteurs de mouvement."
+        ],
+        [
+          "Compression",
+          "gzip ou brotli sur les réponses; ignorée pour les flux d’événements afin que les mises à jour en direct ne soient pas mises en tampon."
+        ],
+        [
+          "Fichiers statiques",
+          "En production, sert le client compilé avec un cache immuable d’un an, avant le CORS."
+        ],
+        [
+          "Liste d’autorisation CORS",
+          "N’autorise que les origines configurées, avec justificatifs, et un ensemble fixe de méthodes et d’en-têtes."
+        ],
+        [
+          "Limitation de débit",
+          "Plafonne l’API à 200 requêtes par 15 minutes, avec des limites plus strictes sur la connexion et les routes d’IA."
+        ],
+        [
+          "Vérification du Content-Type",
+          "Rejette les types de média inattendus sur POST, PUT et PATCH avec un code 415."
+        ],
+        [
+          "Analyse du corps",
+          "Accepte les corps JSON et de formulaire, plafonnés à un mégaoctet."
+        ],
+        [
+          "Témoins, identifiant de corrélation, journalisation",
+          "Analyse les témoins, appose un identifiant de corrélation, journalise chaque requête et avertit lorsqu’une requête dépasse une seconde."
+        ],
+        [
+          "Passport",
+          "Initialisé uniquement pour la connexion OAuth; aucune session côté serveur n’est utilisée."
+        ],
+        [
+          "CSRF (global)",
+          "Valide par défaut les requêtes qui modifient l’état, avec une courte liste d’exemptions documentée."
+        ],
+        [
+          "Routeurs, puis le gestionnaire d’erreurs",
+          "Routes versionnées sous /api/v1 (avec un alias /api); un gestionnaire final transforme toute erreur en réponse sûre."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, server/src/app.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.1",
+      "title": "Une requête traverse la chaîne d’intergiciels",
+      "caption": "La requête arrive par la gauche et passe par chaque étape une à une : d’abord les protections simples et générales, puis, en dernier, la vérification de l’identité et de l’intention, avant d’atteindre le gestionnaire principal. La réponse, elle, revient en passant par un point unique de gestion des erreurs, ce qui permet de traiter chaque problème de façon sécuritaire.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-01.jpg",
+        "alt": "Un pipeline horizontal : un jeton de requête entre et franchit des portes étiquetées pour le mandataire de confiance, les en-têtes de sécurité, la politique de permissions, la compression, le CORS, la limite de débit, le content-type, l’analyse du corps, les témoins et la journalisation, et le CSRF, puis atteint une boîte de gestionnaire, avec une flèche de réponse qui revient en boucle par un gestionnaire d’erreurs.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep Alberta navy line work with small rust accents, legible labels. A horizontal pipeline: a token labelled « REQUÊTE » on the far left flows right through a row of labelled gate boxes in order: « MANDATAIRE DE CONFIANCE », « EN-TÊTES HELMET », « PERMISSIONS-POLICY », « COMPRESSION », « LISTE CORS », « LIMITE DE DÉBIT », « CONTENT-TYPE », « ANALYSE DU CORPS », « TÉMOINS + JOURNAL », « CSRF », then into a larger box « GESTIONNAIRE DE ROUTE ». A return arrow labelled « RÉPONSE » loops back along the bottom through a box « GESTIONNAIRE D'ERREURS ». A small rust caption reads « VÉRIFS PEU COÛTEUSES D'ABORD, IDENTITÉ EN DERNIER ». Calm, architectural, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Identité : connexion, jetons et témoins"
+    },
+    {
+      "type": "paragraph",
+      "text": "La connexion est gérée par Google et Microsoft grâce à Passport et OpenID Connect. Le gabarit ne stocke aucun mot de passe. Une fois la connexion réussie, le serveur génère deux jetons JSON sécurisés, signés avec des clés asymétriques (RS256). Cela permet de vérifier les jetons sans garder d’information sensible qui pourrait servir à en créer de faux. Ces jetons sont stockés dans des témoins sécurisés (httpOnly), ce qui empêche les scripts du navigateur d’y accéder. Le système vérifie les requêtes grâce à un intergiciel d’authentification. Si le jeton d’accès est expiré, le serveur retourne une erreur 401 avec un code spécifique (TOKEN_EXPIRED), ce qui indique au client qu’il doit le renouveler.\nLes jetons de renouvellement sont stockés de façon sécurisée sous forme d’empreintes (SHA-256). Chaque utilisation génère un nouveau jeton, et chaque jeton peut être révoqué. Ainsi, même si un jeton est volé, sa durée de vie reste courte et il peut être désactivé rapidement."
+    },
+    {
+      "type": "table",
+      "title": "Jetons et témoins",
+      "columns": [
+        "Élément",
+        "Comment il est défini"
+      ],
+      "rows": [
+        [
+          "Jeton d’accès",
+          "JWT RS256, durée de vie de 15 minutes, témoin httpOnly et sameSite=lax. Porte l’identifiant d’utilisateur, le courriel et le rôle."
+        ],
+        [
+          "Jeton de renouvellement",
+          "JWT RS256, durée de vie de 7 jours, témoin httpOnly. Stocké côté serveur uniquement sous forme d’empreinte, en rotation à chaque utilisation, révocable."
+        ],
+        [
+          "Rôles",
+          "viewer, submitter, editor, manager, admin, super_admin. authorize() compare la position dans cet ordre; une contrainte CHECK de base de données reflète la même liste."
+        ],
+        [
+          "sameSite=lax",
+          "Lax, et non strict, afin que la redirection OAuth entre sites transporte encore le témoin au retour, tandis que les POST entre sites ne le font pas."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, utils/token.ts et utils/cookie-config.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.2",
+      "title": "Connexion, jetons et cycle de renouvellement",
+      "caption": "Le navigateur se connecte via Google ou Microsoft. Le serveur crée ensuite deux jetons : un jeton d’accès de courte durée et un jeton de renouvellement plus long, stockés comme témoins sécurisés (httpOnly). Il ne conserve qu’une empreinte du jeton de renouvellement. Lorsque le jeton d’accès expire, le client le renouvelle automatiquement, et un nouveau jeton de renouvellement est généré.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-02.jpg",
+        "alt": "Un schéma avec quatre boîtes : navigateur, fournisseur d’identité (Google et Microsoft), serveur et base de données. Des flèches montrent la redirection de connexion, le serveur émettant des jetons d’accès et de renouvellement comme témoins httpOnly au navigateur, un jeton de renouvellement haché stocké dans la base de données, et une flèche de renouvellement qui fait tourner le jeton lorsque le jeton d’accès expire.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Four labelled boxes: « NAVIGATEUR » (top left), « FOURNISSEUR D'IDENTITÉ · GOOGLE / MICROSOFT » (top right), « SERVEUR » (centre), and « BASE DE DONNÉES · refresh_token » (bottom right). Arrows: « NAVIGATEUR » to « FOURNISSEUR D'IDENTITÉ » labelled « CONNEXION SSO » and back; « SERVEUR » to « NAVIGATEUR » labelled « DÉFINIT TÉMOINS httpOnly : ACCÈS 15 min, RENOUV. 7 jours »; « SERVEUR » to « BASE DE DONNÉES » labelled « STOCKE EMPREINTE SHA-256 »; a dashed return arrow labelled « 401 TOKEN_EXPIRED » then a curved arrow « POST /auth/refresh — ROTATION ». Small caption « AUCUN MOT DE PASSE STOCKÉ ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "CSRF et sûreté entre sites"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les requêtes qui modifient des données, comme créer, mettre à jour ou supprimer, sont protégées par une vérification de sécurité en deux étapes. Le serveur crée d’abord un témoin sécurisé csrf_token, puis envoie aussi la valeur de ce jeton une seule fois dans la réponse de GET /auth/csrf-token. Le client garde ces informations seulement en mémoire, jamais dans le stockage du navigateur, puis renvoie la valeur du jeton dans l’en-tête X-CSRF-Token. L’intergiciel compare ensuite la valeur de l’en-tête avec celle du témoin à l’aide d’une méthode sécurisée, conçue pour éviter certaines fuites d’information.\nCette protection est activée globalement. Ainsi, toute nouvelle route est protégée par défaut, sans dépendre d’une action manuelle du développeur. Seules trois exceptions sont prévues : le démarrage OAuth, le rappel OAuth et le renouvellement de jeton. Chacune est exemptée pour une raison claire et documentée : le rappel est déjà protégé par les mécanismes state et nonce d’OAuth, tandis que le renouvellement de jeton est protégé par le témoin sameSite et par la rotation des jetons."
+    },
+    {
+      "type": "table",
+      "title": "La vérification à double soumission",
+      "columns": [
+        "Élément",
+        "Détail"
+      ],
+      "rows": [
+        [
+          "Témoin csrf_token",
+          "httpOnly; le navigateur le détient, mais les scripts ne peuvent pas le lire."
+        ],
+        [
+          "Jeton dans le corps",
+          "Retourné une fois par GET /auth/csrf-token; le client le conserve uniquement en mémoire."
+        ],
+        [
+          "En-tête X-CSRF-Token",
+          "Envoyé à chaque écriture; le serveur le compare au témoin avec une vérification à temps constant."
+        ],
+        [
+          "Montage global",
+          "Activé par défaut pour chaque route qui modifie l’état; une nouvelle route est protégée sans activation."
+        ],
+        [
+          "Exemptions",
+          "Démarrage OAuth, rappel OAuth (état + nonce) et renouvellement (sameSite + rotation), chacune documentée avec une raison."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, middleware/csrf.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.3",
+      "title": "CSRF à double soumission",
+      "caption": "Le serveur envoie le même jeton de deux façons : comme un témoin sécurisé (httpOnly) que le navigateur ne peut pas lire, et comme une valeur que le client garde en mémoire. Lorsqu’il fait une action (comme écrire ou modifier des données), le client envoie cette valeur dans un en-tête, et le serveur vérifie qu’elle correspond au témoin.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-03.jpg",
+        "alt": "Un schéma montrant le serveur émettant un jeton CSRF de deux façons : un témoin httpOnly vers le navigateur, et une valeur de jeton dans une réponse JSON que le client conserve en mémoire. À une requête d’écriture, le client envoie la valeur dans un en-tête X-CSRF-Token aux côtés du témoin, et une boîte de comparaison vérifie que l’en-tête est égal au témoin avant d’autoriser la requête.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Top: « SERVEUR » box issues a CSRF token along two arrows: one labelled « TÉMOIN httpOnly csrf_token » going to a « NAVIGATEUR » box, one labelled « JETON DANS LE CORPS JSON » going to a « CLIENT (EN MÉMOIRE) » box. Bottom: on a « REQUÊTE D'ÉCRITURE » the client sends « EN-TÊTE X-CSRF-TOKEN » plus the « TÉMOIN » into a diamond labelled « COMPARAISON À TEMPS CONSTANT », with two outputs « CORRESPOND » then « AUTORISE », and « DIFFÈRE » then « 403 ». A small caption reads « DOUBLE SOUMISSION, SÛR PAR DÉFAUT ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "De la route à la base de données"
+    },
+    {
+      "type": "paragraph",
+      "text": "L’application est organisée en couches : route, puis contrôleur, puis service, puis modèle. Le contrôleur reçoit la requête et prépare la réponse, le service applique les règles d’affaires, et le modèle gère les requêtes SQL.\nLes requêtes SQL utilisent toujours des paramètres comme $1, $2, etc. Les valeurs ne sont jamais ajoutées directement dans la requête, ce qui évite les injections SQL dès le départ. Le modèle est aussi la seule couche qui fait le lien entre les champs de l’API et les colonnes de la base de données. Cela permet de faire évoluer l’API et la base de données indépendamment. PostgreSQL est utilisé avec un simple pool de connexions, sans couche supplémentaire qui cacherait ce qui est réellement exécuté.\nToutes les réponses suivent le même format : soit un succès avec des données, soit une erreur avec un code et un message. Un seul gestionnaire d’erreurs traite toutes les situations. Il transforme les erreurs connues de PostgreSQL en codes HTTP appropriés, par exemple une violation de clé unique devient 409, et une violation de clé étrangère devient 400. En production, il retire aussi les détails techniques pour éviter de divulguer de l’information sensible."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les opérations asynchrones sont encadrées pour que toutes les erreurs soient capturées et envoyées au gestionnaire d’erreurs, plutôt que de faire planter l’application. Cela garantit une gestion uniforme des erreurs, des réponses cohérentes et une meilleure sécurité sur tous les points d’accès.\n### Le parcours d’une requête"
+    },
+    {
+      "type": "table",
+      "title": "Le parcours d’une requête",
+      "columns": [
+        "Couche",
+        "Responsabilité"
+      ],
+      "rows": [
+        [
+          "Route",
+          "Déclare l’URL et ses gardes : valider par rapport à un schéma, puis authentifier, puis autoriser selon le rôle."
+        ],
+        [
+          "Contrôleur",
+          "Traite la requête et façonne la réponse. Ne contient aucun SQL."
+        ],
+        [
+          "Service",
+          "Règles d’affaires et orchestration entre les modèles."
+        ],
+        [
+          "Modèle",
+          "Propriétaire du SQL. Requêtes paramétrées; le seul endroit où les noms de l’API sont associés aux colonnes de la base de données."
+        ],
+        [
+          "Postgres (réserve)",
+          "Atteint par une simple réserve de connexions. Aucune couche objet-relationnel."
+        ],
+        [
+          "Gestionnaire d’erreurs",
+          "Intercepte chaque erreur lancée, associe les erreurs de base de données à des codes HTTP sûrs et masque les éléments internes en production."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, routes, contrôleurs, services, modèles."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.4",
+      "title": "Route vers contrôleur vers service vers modèle",
+      "caption": "Une requête descend à travers quatre couches jusqu’à Postgres et revient sous la forme d’une seule enveloppe cohérente. La validation garde le sommet; le SQL paramétré garde le bas; un seul gestionnaire d’erreurs intercepte tout ce qui est lancé et retourne une réponse sûre.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-04.jpg",
+        "alt": "Un schéma vertical en couches : une requête entre par une porte de validation, puis descend à travers les boîtes route, contrôleur, service et modèle jusqu’à un cylindre Postgres, le modèle émettant une requête paramétrée. Une enveloppe de réponse remonte sur le côté, et une boîte de gestionnaire d’erreurs associe les erreurs de base de données à des codes HTTP.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A vertical stack of boxes top to bottom: « VALIDER (SCHÉMA) » gate, then « ROUTE », « CONTRÔLEUR », « SERVICE », « MODÈLE », then a database cylinder « POSTGRES ». From « MODÈLE » a small callout shows a query « SELECT ... WHERE id = $1 » labelled « PARAMÉTRÉ ». On the right, an upward arrow labelled « RÉPONSE { success, data } » returns to the top, and a box « GESTIONNAIRE D'ERREURS » maps « 23505 » to « 409 » and « 23503 » to « 400 », labelled « ERREURS SÛRES ». Small caption « UNE ENVELOPPE, UN SEUL CHEMIN D'ERREUR ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Mises à jour en temps réel par SSE"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les mises à jour en temps réel, comme les annonces de l’administrateur ou les nouvelles notifications, utilisent les événements envoyés par le serveur (SSE). C’est un flux HTTP simple, à sens unique, plus léger qu’un WebSocket et capable de se reconnecter automatiquement. Côté serveur, un gestionnaire maintient une liste des connexions ouvertes pour chaque utilisateur, avec un maximum de dix (une par onglet). Il envoie ensuite des événements de notification identifiés à chacun. Côté client, une fonction ouvre une connexion sécurisée (EventSource) qui inclut les informations d’authentification. Elle écoute des événements précis. Il est important de noter que les événements nommés ne déclenchent pas le gestionnaire par défaut, ce qui est une erreur fréquente.\nLe système fonctionne en mode tolérant : la source principale reste le service qui fournit la liste des notifications. Ainsi, même si un événement est manqué, aucune donnée n’est perdue. Enfin, la connexion est fermée lorsque la page est quittée et rouverte lorsqu’elle est affichée à nouveau. Cela permet de préserver les performances du navigateur, notamment avec le cache de navigation."
+    },
+    {
+      "type": "table",
+      "title": "Comment voyage une mise à jour en direct",
+      "columns": [
+        "Étape",
+        "Ce qui se passe"
+      ],
+      "rows": [
+        [
+          "Survenue de l’événement",
+          "Une diffusion d’administrateur ou une nouvelle notification est créée."
+        ],
+        [
+          "Gestionnaire de flux",
+          "Recherche les flux ouverts de l’utilisateur (un par onglet, plafonné à dix)."
+        ],
+        [
+          "Poussée",
+          "Écrit un événement de notification nommé à chaque connexion EventSource ouverte."
+        ],
+        [
+          "Client",
+          "useNotificationStream écoute l’événement nommé et met à jour le compteur et la liste."
+        ],
+        [
+          "Reconnexion",
+          "EventSource se reconnecte de lui-même; un court délai d’attente suit une fermeture brutale."
+        ],
+        [
+          "Source faisant foi",
+          "Le point de terminaison de la liste /notifications. Un événement perdu n’est jamais un enregistrement perdu."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, sse/notification-stream.ts et useNotificationStream.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.5",
+      "title": "Événements envoyés par le serveur vers chaque onglet ouvert",
+      "caption": "Le serveur maintient les connexions ouvertes de chaque utilisateur et envoie un événement nommé à chacun. Le client écoute cet événement précis et met l’information à jour immédiatement. La liste des notifications reste la source principale, ce qui permet de récupérer toute information si un événement est manqué.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-05.jpg",
+        "alt": "Un schéma avec une boîte de serveur contenant un gestionnaire de flux qui associe un identifiant d’utilisateur à deux connexions d’onglet de navigateur ouvertes. Une flèche d’événement étiquetée événement de notification nommé pousse vers les deux onglets. Un point de terminaison distinct de liste de notifications est marqué comme la source faisant foi, avec une note indiquant que le flux se reconnecte et fonctionne au mieux.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Centre-left: a « SERVEUR » box containing a smaller box « GESTIONNAIRE DE FLUX » showing « userId » then an arrow to a set of two connections « ONGLET 1 » and « ONGLET 2 ». An arrow labelled « événement : notification » pushes right to two « ONGLET DE NAVIGATEUR » boxes. Below, a separate box « GET /notifications LISTE » marked with a rust tag « SOURCE FAISANT FOI » connects to the tabs. Small captions « FLUX UNIDIRECTIONNEL », « RECONNEXION AUTOMATIQUE », « AU MIEUX ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Le client d’API unique"
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque appel du navigateur passe par une seule instance Axios déjà configurée. Elle envoie automatiquement les informations d’authentification pour que les témoins soient inclus, ajoute un identifiant de requête et, pour les actions d’écriture, le jeton CSRF. Elle gère aussi de façon centralisée les trois types d’erreurs que chaque écran devrait sinon traiter séparément. Comme toute cette logique est regroupée dans un seul fichier, aucune interface n’a à la recréer, ce qui évite les erreurs et assure un comportement uniforme. C’est un bon exemple de ce que le gabarit prend en charge pour simplifier le travail de l’IA."
+    },
+    {
+      "type": "table",
+      "title": "Ce que le client d’API unique gère pour chaque requête",
+      "columns": [
+        "Lorsque le serveur retourne",
+        "Ce que fait le client"
+      ],
+      "rows": [
+        [
+          "401, session expirée",
+          "Appelle /auth/refresh une fois, met en file d’attente toute requête concurrente derrière celle-ci, puis les rejoue. Si le renouvellement échoue, il émet un événement auth:expired et le signale aux fins de vérification."
+        ],
+        [
+          "403, CSRF manquant ou non concordant",
+          "Récupère de nouveau le jeton CSRF et réessaie la requête une fois, en mettant les écritures concurrentes en file d’attente derrière le renouvellement."
+        ],
+        [
+          "429, débit limité",
+          "Attend l’intervalle indiqué dans l’en-tête Retry-After, plafonné à dix secondes, et réessaie une fois."
+        ],
+        [
+          "Toute erreur, en production",
+          "Retourne un message générique choisi selon le code d’état, de sorte que les éléments internes du serveur n’atteignent jamais le navigateur."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, client/src/lib/api.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.6",
+      "title": "Un seul client pour chaque appel",
+      "caption": "Chaque écran passe par une seule instance Axios. Elle ajoute automatiquement les informations d’authentification, un identifiant de requête et le jeton CSRF. Elle gère aussi, à un seul endroit, le renouvellement des jetons, les réessais liés au CSRF et les limites de débit. Ainsi, aucun écran n’a à réimplémenter ces mécanismes et aucun ne peut se tromper.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-06.jpg",
+        "alt": "Un schéma en entonnoir : plusieurs boîtes d’écran à gauche alimentent toutes une seule boîte centrale de client axios, qui énumère ce qu’elle attache et comment elle gère les codes 401, 403 CSRF et 429, puis envoie une seule flèche vers l’API.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. On the left, four small boxes labelled « ÉCRAN » converge with arrows into one large central box labelled « CLIENT AXIOS ». Inside that box, a short list: « ATTACHE JUSTIFICATIFS, ID DE REQUÊTE, X-CSRF-TOKEN »; « 401 puis RENOUVELLE ET REJOUE »; « 403 CSRF puis RÉCUPÈRE ET RÉESSAIE »; « 429 puis ATTEND ET RÉESSAIE ». One arrow leaves the box to a box labelled « API ». A rust caption reads « UN SEUL ENDROIT, CHAQUE REQUÊTE ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Routage et gardes de navigation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le routeur du client utilise le mode historique et charge chaque page seulement lorsqu’elle est visitée, ce qui évite de télécharger tout le code à l’avance. Chaque route contient des informations comme le besoin d’être connecté, le rôle d’administrateur, l’accès invité, le type d’interface à utiliser et le titre de la page. Une seule fonction de contrôle gère la navigation. Elle charge l’utilisateur au besoin, redirige les personnes non connectées vers la page de connexion en gardant leur destination, empêche les non‑administrateurs d’accéder aux pages d’administration et empêche les utilisateurs déjà connectés de revenir à la page de connexion. Pour la sécurité, une fonction vérifie que les redirections ne pointent que vers des chemins internes, ce qui bloque les attaques de redirection. Enfin, le titre de la page est mis à jour automatiquement après chaque navigation."
+    },
+    {
+      "type": "table",
+      "title": "Métadonnées de route et la garde",
+      "columns": [
+        "Indicateur de métadonnées",
+        "Effet à la navigation"
+      ],
+      "rows": [
+        [
+          "requiresAuth",
+          "Les utilisateurs non authentifiés sont envoyés vers la connexion, la destination étant préservée."
+        ],
+        [
+          "requiresAdmin",
+          "Les non-administrateurs sont redirigés vers l’accueil."
+        ],
+        [
+          "guestOnly",
+          "Les utilisateurs connectés sont détournés de la page de connexion."
+        ],
+        [
+          "layout",
+          "Sélectionne l’habillage par défaut, admin ou vierge."
+        ],
+        [
+          "chargement différé",
+          "Chaque vue est son propre paquet, téléchargé seulement à la première visite."
+        ],
+        [
+          "sanitizeRedirect",
+          "Rejette toute cible de redirection qui n’est pas un simple chemin relatif."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, client/src/router/index.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.7",
+      "title": "La garde de navigation",
+      "caption": "Avant d’afficher une page, une seule fonction de contrôle vérifie les informations de la route et décide quoi faire : afficher la vue chargée, rediriger un utilisateur non connecté vers la page de connexion en gardant sa destination, ou bloquer l’accès à un utilisateur non administrateur. Les redirections sont aussi vérifiées pour s’assurer qu’elles sont sécuritaires.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-07.jpg",
+        "alt": "Un schéma de flux : une flèche de navigation atteint un losange de décision de garde qui vérifie requiresAuth et requiresAdmin. Les issues bifurquent vers : afficher un fragment de vue chargé en différé; rediriger vers la connexion en préservant la destination; ou rediriger vers l’accueil. Un petit filtre sur le paramètre de redirection est étiqueté assainir.",
+        "image_prompt": "An editorial flow diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a box « NAVIGUER VERS LA ROUTE » with a tag « MÉTA : requiresAuth / requiresAdmin / guestOnly / layout ». It flows into a diamond labelled « GARDE beforeEach ». Three branches: « AUTORISER » then « AFFICHER LA VUE CHARGÉE EN DIFFÉRÉ » (drawn as a small separate chunk box); « NON CONNECTÉ » then « REDIRIGER VERS CONNEXION (CONSERVER DESTINATION) »; « PAS ADMIN » then « REDIRIGER VERS ACCUEIL ». A small inline filter on the redirect arrow is labelled « sanitizeRedirect — CHEMINS RELATIFS SEULEMENT ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "État, composables et formulaires"
+    },
+    {
+      "type": "paragraph",
+      "text": "Il y a un seul magasin Pinia, dédié à l’authentification. Il gère l’utilisateur, les rôles associés et déconnecte automatiquement après 30 minutes d’inactivité. Il écoute aussi un événement qui signale l’expiration de l’authentification. Tout le reste passe par des composables, qui servent de modèle pour accéder aux données. Une fonction de base permet de faire des requêtes GET et de retourner les données, l’état de chargement, les erreurs et une fonction pour rafraîchir. Les autres composables suivent le même principe pour accéder à leurs services respectifs. Ainsi, les vues utilisent une structure uniforme au lieu d’appeler directement l’API. D’autres fonctions gèrent des besoins communs : le thème (clair ou sombre), l’installation et les mises à jour de l’application, les notifications et les mises à jour en temps réel. Le contenu HTML fourni par les utilisateurs est nettoyé avant affichage pour éviter les risques de sécurité. Les formulaires sont construits avec un outil commun et une configuration partagée, ce qui assure une validation et une apparence cohérentes dans toute l’application, sans devoir les recréer pour chaque écran."
+    },
+    {
+      "type": "table",
+      "title": "Blocs de construction du client",
+      "columns": [
+        "Composant",
+        "Rôle"
+      ],
+      "rows": [
+        [
+          "Magasin d’authentification Pinia",
+          "Le seul magasin : l’utilisateur, les fonctions d’assistance de rôle, une déconnexion après 30 minutes d’inactivité, et un écouteur pour auth:expired."
+        ],
+        [
+          "useFetch(url)",
+          "Enveloppe un GET et retourne data, loading, error et une fonction de rafraîchissement."
+        ],
+        [
+          "Composables de fonctionnalités",
+          "useServices, useResources, useForms, useFiles et les autres enveloppent leurs points de terminaison de la même façon, de sorte que les vues se lient à une forme uniforme."
+        ],
+        [
+          "FormKit",
+          "Tous les formulaires derrière une seule configuration thématisée; validation et style cohérents."
+        ],
+        [
+          "DOMPurify",
+          "Nettoie tout HTML fourni par l’utilisateur avant son affichage."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, client/src/stores et composables."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.8",
+      "title": "Vues, composables et le magasin unique",
+      "caption": "Les vues n’appellent jamais directement l’API. Elles passent par des composables qui encapsulent chaque point d’accès et retournent toujours la même structure : données, chargement, erreur et fonction de rafraîchissement. Un seul magasin Pinia gère la session. Les formulaires sont standardisés avec FormKit, et tout le contenu HTML provenant des utilisateurs est nettoyé avec DOMPurify.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-08.jpg",
+        "alt": "Un schéma : des boîtes de vue à gauche se lient à une colonne de composables (useFetch, useServices, useForms, useNotificationStream), qui appellent le client axios unique. Un magasin d’authentification Pinia distinct se trouve à côté; une porte DOMPurify nettoie le HTML utilisateur; FormKit gère les formulaires. Chaque composable est étiqueté avec data, loading, error, refresh.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left column: three boxes labelled « VUE ». They bind with arrows to a middle column of « COMPOSABLE » boxes: « useFetch », « useServices », « useForms », « useNotificationStream », each tagged « { data, loading, error, refresh } ». The composables point to a single box « CLIENT AXIOS » on the right. Above, a separate box « MAGASIN AUTH PINIA (utilisateur, rôles, déconnexion par inactivité) » connects to the views. A small gate labelled « DOMPURIFY » sits on a user-HTML arrow into a view, and a box « FORMKIT » feeds a form view. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Interface, accessibilité et compilation"
+    },
+    {
+      "type": "paragraph",
+      "text": "L’interface utilise PrimeVue 4 avec le thème Aura, combiné à Tailwind 4 pour le style. Les composants sont importés automatiquement, ce qui permet de n’inclure que ceux qui sont utilisés. Au démarrage, l’application configure Pinia, PrimeVue, FormKit et le routeur. Elle enregistre un gestionnaire d’erreurs global qui affiche des notifications, charge à l’avance les icônes pour accélérer l’affichage et ne démarre qu’après avoir récupéré la session utilisateur et le jeton CSRF. Le mode sombre est géré par une simple classe sur l’élément principal. L’accessibilité est intégrée dès le départ : un lien permet d’accéder directement au contenu, et les changements de page sont annoncés aux lecteurs d’écran. L’ensemble respecte les normes WCAG 2.1 AA. Pour la performance, le code est séparé en plusieurs parties (comme Vue, PrimeVue ou les graphiques) afin d’être mis en cache plus efficacement. En production, le code est optimisé et nettoyé des éléments de débogage. Les ressources sont servies avec une mise en cache longue durée. L’application est aussi une application web progressive (PWA) installable. Un service worker met en cache les éléments principaux, gère les routes du client et propose les mises à jour lorsqu’une nouvelle version est disponible. L’interface est conçue pour être responsive sur mobile, et le manifeste inclut une icône adaptée pour une installation propre sur l’écran d’accueil."
+    },
+    {
+      "type": "table",
+      "title": "Des composants à la livraison",
+      "columns": [
+        "Préoccupation",
+        "Comment elle est traitée"
+      ],
+      "rows": [
+        [
+          "Bibliothèque d’interface",
+          "PrimeVue 4 sur le thème Aura, importée automatiquement de sorte que seuls les composants utilisés sont livrés, par-dessus les utilitaires Tailwind 4."
+        ],
+        [
+          "Accessibilité",
+          "Lien d’accès au contenu, un annonceur de route aria-live, et la conformité WCAG 2.1 AA."
+        ],
+        [
+          "Empaquetage",
+          "Vite divise les fragments de fournisseurs (Vue, PrimeVue, graphiques, cartes); Terser minifie et supprime console en production."
+        ],
+        [
+          "Mise en cache",
+          "Les ressources compilées sont servies avec un cache immuable d’un an."
+        ],
+        [
+          "PWA",
+          "Un service worker préenregistre la coquille dans le cache, se rabat sur l’application mais jamais sur l’API, et invite à mettre à jour."
+        ],
+        [
+          "Mobile",
+          "Adaptatif par défaut, installable sur l’écran d’accueil avec une icône masquable."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, main.ts et vite.config.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.9",
+      "title": "Des composants à une application livrée",
+      "caption": "PrimeVue et Tailwind sont utilisés pour construire l’interface, avec l’accessibilité intégrée dès le départ. Vite découpe l’application en modules séparés, ce qui permet de les mettre en cache individuellement pour de meilleures performances. Un service worker transforme l’application en application web progressive installable, qui peut se mettre à jour lorsque l’utilisateur y est invité.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-09.jpg",
+        "alt": "Un schéma en deux parties. À gauche, l’interface : les composants PrimeVue Aura et les utilitaires Tailwind composent un écran, avec des étiquettes d’accessibilité pour un lien d’accès, aria-live et WCAG 2.1 AA. À droite, compilation et livraison : Vite empaquette en fragments de fournisseurs pour Vue, PrimeVue, graphiques et cartes, et un service worker préenregistre la coquille dans le cache pour une application web progressive installable.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels, split into two halves by a thin vertical rule. LEFT half titled « INTERFACE »: boxes « PRIMEVUE (AURA) » and « TAILWIND » combine into a « ÉCRAN » box, with small badges « LIEN D'ACCÈS », « ARIA-LIVE », « WCAG 2.1 AA ». RIGHT half titled « COMPILATION ET LIVRAISON »: a « VITE » box splits into four stacked chunk boxes « VUE », « PRIMEVUE », « GRAPHIQUES », « CARTES », then a « SERVICE WORKER » box precaches a « COQUILLE », leading to an « PWA INSTALLABLE » box with a small maskable icon and a tag « MISE À JOUR SUR INVITE ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "Les dix principaux risques de l’OWASP, traités d’entrée de jeu"
+    },
+    {
+      "type": "paragraph",
+      "text": "L’OWASP identifie les dix principaux risques en sécurité web, considérés comme les vulnérabilités les plus importantes. Le gabarit prend en charge chacun de ces risques directement dans son code. Il est conçu selon le niveau 2 de la norme de vérification de la sécurité des applications de l’OWASP, qui est aussi le niveau exigé par le système de contrôle."
+    },
+    {
+      "type": "table",
+      "title": "Comment le gabarit traite les dix principaux risques de l’OWASP (2021)",
+      "columns": [
+        "Risque",
+        "Comment le gabarit le traite"
+      ],
+      "rows": [
+        [
+          "A01 Contrôle d’accès défaillant",
+          "Chaque route protégée exécute authenticate puis authorize par rapport à la hiérarchie des rôles; les comptes inactifs sont refusés au renouvellement."
+        ],
+        [
+          "A02 Défaillances cryptographiques",
+          "Jetons signés RS256, jetons de renouvellement hachés SHA-256, témoins httpOnly et sécurisés, HTTPS forcé, et chiffrement de colonnes optionnel."
+        ],
+        [
+          "A03 Injection",
+          "Tout accès à la base de données est paramétré, et chaque requête est validée par rapport à un schéma avant utilisation."
+        ],
+        [
+          "A04 Conception non sécurisée",
+          "CSRF activé par défaut, rotation des jetons de renouvellement, limites de débit échelonnées, et un serveur qui refuse de démarrer avec des paramètres non sûrs."
+        ],
+        [
+          "A05 Mauvaise configuration de sécurité",
+          "En-têtes de sécurité stricts, configuration validée au démarrage, et erreurs dépouillées de leur détail interne en production."
+        ],
+        [
+          "A06 Composants vulnérables",
+          "Dépendances figées, avec remplacement des versions transitives connues comme défectueuses."
+        ],
+        [
+          "A07 Défaillances d’authentification",
+          "Jetons d’accès de courte durée, jetons de renouvellement en rotation, connexion à débit limité, et application monolocataire."
+        ],
+        [
+          "A08 Défaillances d’intégrité des données",
+          "Les signatures de jeton et l’état OAuth sont vérifiés, et les téléversements sont contrôlés selon le type déclaré et le contenu réel."
+        ],
+        [
+          "A09 Défaillances de journalisation et de surveillance",
+          "Journaux structurés avec identifiants de corrélation et une piste de vérification des actions sensibles."
+        ],
+        [
+          "A10 Falsification de requête côté serveur",
+          "Non applicable pour ce gabarit. "
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE, associé aux dix principaux risques de l’OWASP (2021)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.10",
+      "title": "Les dix principaux risques de l’OWASP, chacun couvert par un contrôle",
+      "caption": "Chaque classe de risque correspond à un contrôle concret déjà intégré dans le code du gabarit, conçu selon la norme OWASP ASVS niveau 2. Le risque A10, lié à la falsification de requêtes côté serveur, est volontairement signalé pour que l’application le traite explicitement.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-10.jpg",
+        "alt": "Un bouclier contenant une liste de vérification de dix lignes étiquetées de A01 à A10, chacune jumelée à une courte étiquette de contrôle telle que RBAC, RS256 plus hachage, SQL paramétré, CSRF par défaut, en-têtes stricts, dépendances figées, jetons courts, signatures vérifiées, journalisation de vérification, et SSRF signalé. Les neuf premières sont cochées; la dixième est marquée signalée.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A large shield outline containing a neat checklist of ten rows: « A01 CONTRÔLE D'ACCÈS — RBAC »; « A02 CRYPTO — RS256 + HACHAGE »; « A03 INJECTION — SQL PARAMÉTRÉ »; « A04 CONCEPTION NON SÉCURISÉE — CSRF PAR DÉFAUT »; « A05 MAUVAISE CONFIG — EN-TÊTES STRICTS »; « A06 COMPOSANTS — DÉPENDANCES FIGÉES »; « A07 AUTH — JETONS COURTS »; « A08 INTÉGRITÉ — SIGNATURES VÉRIFIÉES »; « A09 JOURNALISATION — PISTE DE VÉRIFICATION »; « A10 SSRF — SIGNALÉ ». Rows A01 through A09 each have a small navy check mark; A10 has a small rust tag reading « S.O. ». Title above the shield reads « DIX PRINCIPAUX RISQUES OWASP · ASVS NIVEAU 2 ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "11",
+      "title": "Ce que le gabarit règle pour l’agent"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pris dans son ensemble, le modèle est cohérent. Les décisions importantes et sensibles sont prises une seule fois dans le code et centralisées, pour éviter qu’elles soient mal réutilisées. Par exemple : l’authentification, la protection CSRF, les requêtes SQL sécurisées, le format des réponses, la gestion des erreurs, les mises à jour en temps réel et la logique de réessai sont chacun définis une seule fois, testés et réutilisés. On remet à l’IA un système conforme et on lui demande de l’étendre, et le harnais vérifie de façon mécanique qu’il tient toujours à chaque changement, la même discipline que le [harnais anti-dérive](/paper/of1cj) applique à mesure que la base de code grandit."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le gabarit ne couvre toutefois pas tout. Certaines fonctions, comme l’analyse antivirus des fichiers, la répartition de la charge ou la limitation du trafic, restent à compléter lorsqu’une infrastructure partagée est en place. Les limites connues ou les décisions reportées sont clairement documentées, et non cachées."
+    },
+    {
+      "type": "paragraph",
+      "text": "La solution repose entièrement sur des technologies open source, comme Vue, Express et PostgreSQL, avec des bibliothèques largement utilisées. Cela évite toute dépendance à un fournisseur unique et permet de bénéficier d’une communauté active pour les correctifs. C’est le niveau de base attendu pour une application gouvernementale accessible au public.\nQue vous utilisiez ce gabarit ou que vous en créiez un autre, ces principes peuvent vous aider, ainsi que votre agent d’IA, à rester sur la bonne voie."
+    },
+    {
+      "type": "table",
+      "title": "Décidé une fois, hérité partout",
+      "columns": [
+        "Préoccupation",
+        "L’implémentation unique dont l’agent hérite"
+      ],
+      "rows": [
+        [
+          "Identité",
+          "Connexion par authentification unique, jetons RS256 dans des témoins httpOnly, rotation au renouvellement, accès fondé sur les rôles."
+        ],
+        [
+          "Sûreté entre sites",
+          "CSRF global à double soumission, activé par défaut pour chaque écriture."
+        ],
+        [
+          "Accès à la base de données",
+          "Requêtes paramétrées, propriété de la couche modèle."
+        ],
+        [
+          "Réponses",
+          "Une seule enveloppe de succès ou d’erreur, avec association d’erreurs sûre."
+        ],
+        [
+          "Temps réel",
+          "Événements envoyés par le serveur (SSE), le point de terminaison de la liste faisant foi."
+        ],
+        [
+          "Appels du client",
+          "Un seul client axios gérant le renouvellement, le CSRF et les limites de débit."
+        ],
+        [
+          "Encore ouvert",
+          "Analyse antimaliciel des fichiers, un magasin de limite de débit partagé, et le A10 SSRF : documentés, et non cachés."
+        ]
+      ],
+      "source": "Gabarit du harnais commun AIDE."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.11",
+      "title": "Hériter, et non réinventer",
+      "caption": "Les décisions importantes sont déjà prises et testées. L’agent ajoute de nouvelles fonctionnalités à un système déjà conforme, plutôt que de revoir l’identité, la sécurité ou l’accès aux données. De son côté, le harnais vérifie automatiquement que cette base reste conforme à chaque changement.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-11.jpg",
+        "alt": "Un schéma : une pile de tuiles verrouillées étiquetées identité, CSRF, SQL paramétré, enveloppe de réponse, gestion des erreurs et client d’API à gauche est remise à un jeton d’agent d’IA au centre, qui ajoute de nouvelles boîtes de fonctionnalités à droite. Une porte étiquetée vérification du harnais estampille chaque nouveau changement.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a vertical stack of small tiles each drawn with a tiny padlock, labelled « IDENTITÉ », « CSRF », « SQL PARAMÉTRÉ », « ENVELOPPE DE RÉPONSE », « GESTION DES ERREURS », « CLIENT D'API », grouped under a heading « DÉCIDÉ DANS LE CODE ». A wide arrow carries them to a simple robot token labelled « AGENT D'IA » in the centre. From the agent, arrows add three boxes on the right labelled « NOUVELLE FONCTIONNALITÉ ». Between the agent and the new features sits a gate labelled « VÉRIFICATION DU HARNAIS ». A rust caption reads « HÉRITER, NE PAS RÉINVENTER ». No logos, no people beyond a simple token. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "12",
+      "title": "Tout le gabarit, sur une seule page"
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque élément présenté fait partie d’un système cohérent. Le schéma ci‑dessous les regroupe : le client Vue à gauche, le serveur Express au centre, et à droite la base de données Postgres ainsi que les fournisseurs d’identité. Autour, on retrouve les règles de sécurité et les normes qui s’appliquent à l’ensemble. Cette vue d’ensemble sert de repère pour les ingénieurs pendant le développement. C’est aussi la base que l’agent d’IA utilise et fait évoluer."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.12",
+      "title": "Le gabarit complet, de bout en bout",
+      "caption": "Une vue d’ensemble unique du gabarit : le client Vue (avec le routeur, les contrôles d’accès, les vues, les composables, le magasin d’authentification, le client d’API unique, ainsi que PrimeVue et Tailwind, et la PWA), le serveur Express (avec la chaîne d’intergiciels, de la route au contrôleur, au service puis au modèle, l’authentification et la gestion des événements en temps réel), la base de données Postgres avec ses tables, et les fournisseurs d’identité. Autour de l’ensemble, on retrouve les principales règles de sécurité et normes qui s’appliquent à tout le système.",
+      "image": {
+        "src": "public/images/l5wsi/fr/fig-12.jpg",
+        "alt": "Un grand napperon d’architecture détaillé en trois colonnes. À gauche, le client navigateur Vue : routeur et gardes, vues, composables, magasin d’authentification Pinia, un client axios, PrimeVue et Tailwind, et un service worker PWA. Au centre, le serveur Express : la chaîne d’intergiciels ordonnée, puis route vers contrôleur vers service vers modèle, plus l’authentification par témoin RS256 et le gestionnaire de flux SSE. À droite, une base de données Postgres avec des tables et les fournisseurs d’identité Google et Microsoft. Une bande de bordure nomme les décisions clés : témoins httpOnly, SQL paramétré, CSRF à double soumission, OWASP ASVS niveau 2, WCAG 2.1 AA, 773 tests, six analyseurs, code source ouvert.",
+        "image_prompt": "A large, highly detailed editorial architecture placemat on warm cream paper, deep Alberta navy line work with small rust accents, many small legible labels, orderly and dense, wide aspect. THREE COLUMNS joined by arrows. LEFT column titled « NAVIGATEUR · CLIENT VUE 3 » with stacked boxes: « ROUTEUR + GARDES », « VUES », « COMPOSABLES », « MAGASIN AUTH PINIA », « UN CLIENT AXIOS », « INTERFACE PRIMEVUE + TAILWIND », « SERVICE WORKER PWA », plus small a11y tags « LIEN D'ACCÈS » / « ARIA-LIVE » / « WCAG 2.1 AA ». MIDDLE column titled « SERVEUR · EXPRESS + TYPESCRIPT »: a vertical « CHAÎNE D'INTERGICIELS » box (helmet, CORS, limite de débit, corps, CSRF), then a flow « ROUTE » then « CONTRÔLEUR » then « SERVICE » then « MODÈLE », and to the side « AUTH · TÉMOINS httpOnly RS256 » and « GESTIONNAIRE DE FLUX SSE ». RIGHT column: a database cylinder « POSTGRES » listing tables « user_account », « refresh_token », « audit_log », and a box « FOURNISSEURS D'IDENTITÉ · GOOGLE / MICROSOFT ». Arrows: client « CLIENT AXIOS » to server over HTTPS with cookies; server « MODÈLE » to « POSTGRES » with parameterized queries; server « AUTH » to « FOURNISSEURS D'IDENTITÉ ». A BORDER STRIP around the whole diagram lists « DÉCISIONS CLÉS » : « TÉMOINS httpOnly », « SQL PARAMÉTRÉ », « CSRF À DOUBLE SOUMISSION », « OWASP ASVS N2 », « WCAG 2.1 AA », « 773 TESTS », « SIX ANALYSEURS », « CODE SOURCE OUVERT ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "template",
+        "harness",
+        "security",
+        "owasp",
+        "open-source"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    },
+    "fr_review": {
+      "by": "Government of Alberta francophone reviewers",
+      "received": "2026-06-12",
+      "applied": "2026-06-15",
+      "method": "transpose .fr.md → JSON (scripts/fr-review/transpose.mjs), round-trip verified (verify.mjs), lexicon sweep (sweep.mjs)",
+      "standard": "docs/fr-style-guide.md + data/fr-lexicon.json"
+    },
+    "section_sigs": {
+      "10": "333650068",
+      "11": "3583088609",
+      "12": "1441487463",
+      "00": "2712069963",
+      "01": "3881990732",
+      "02": "3606824864",
+      "03": "2002249284",
+      "04": "189451818",
+      "05": "4285016577",
+      "06": "3932093213",
+      "07": "1112859364",
+      "08": "3818541554",
+      "09": "1516316948"
+    },
+    "fr_resync": {
+      "date": "2026-06-20",
+      "reason": "Harmonized FR with author EN edits; signatures re-baselined."
+    }
+  },
+  "related": [
+    "p7p2k",
+    "l199t",
+    "of1cj",
+    "qxlzo",
+    "eujjc"
+  ],
+  "translation_status": "final",
+  "source_signature": "3244226999"
+}

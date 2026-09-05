@@ -1,0 +1,130 @@
+{
+  "_note": "About page content for one locale. The sibling .<other>.json holds the translation. Reader-visible strings here are editable in dev edit mode and saved back to this file.",
+  "eyebrow": "Acerca de esta colección",
+  "title_lead": "Código abierto por",
+  "title_em": "defecto.",
+  "lede": "Los libros blancos Velocity son un recurso de código abierto publicado por el Gobierno de Alberta. Este sitio se publica mediante GitHub Pages, y el repositorio completo puede clonarse y adaptarse.",
+  "disclaimer": "El contenido se ofrece bajo la Licencia MIT, con las siguientes exenciones de responsabilidad explícitas: no nos hacemos responsables de las decisiones tomadas, la responsabilidad legal ni los costos incurridos como resultado del uso de este contenido. El trabajo se comparte en un espíritu de colaboración nacional y los usuarios deben evaluar estas herramientas en su propio contexto. Consulte siempre con su organización de TI antes de tomar cualquier decisión. Los productos y servicios mencionados en este sitio no están respaldados por el Gobierno de Alberta.",
+  "audio": {
+    "src": "public/audio/es/about.mp3"
+  },
+  "created": {
+    "heading": "Cómo se elaboraron estos documentos",
+    "meta": "método · elaboración · honestidad",
+    "paras": [
+      "Las ideas presentadas en estos libros blancos se reunieron a lo largo de aproximadamente dieciocho meses, durante la creación del programa AI Maximalist, la Fábrica de IA y muchas de las soluciones descritas en estos documentos. La atención a la deuda técnica es una preocupación central para el Ministerio de Tecnología e Innovación. Estos libros blancos son el resultado de cientos de conversaciones con la industria, el personal, la alta dirección y los funcionarios electos, y sintetizan una serie de conceptos y enfoques que se están evaluando para su implementación futura.",
+      "La mayoría de estos documentos fueron dictados durante caminatas por el bosque en Edmonton. El autor principal de la primera serie de documentos, Janak Alford, narró y transcribió cada uno a lo largo de caminatas diarias junto al río North Saskatchewan. Las fotografías de esta página provienen de esas caminatas. Varios agentes de IA participaron y colaboraron con la transcripción y la discusión editorial. La mayoría de los documentos se elaboraron en dos, tres o cuatro sesiones, y luego se editaron para conformar un conjunto coherente de ideas. Hablar con libertad, capturar las ideas y darles forma más adelante resultó ser una manera eficaz de desarrollar estos documentos. Los árboles y el ejercicio favorecieron una exploración de mente abierta.",
+      "La IA colaboró en la edición e integración de estas transcripciones. Siguiendo las guías de estilo del proyecto, los agentes de IA ayudaron a precisar ideas dispersas, identificar los pasajes donde el autor había incurrido en imprecisiones o contradicho sus propias reglas, y eliminar contenido de escaso valor.",
+      "En algunos temas, el uso de la IA resultó contraproducente. La prosa generada por IA todavía tiende a lo que denominamos «trendslop»: texto que suena como redacción empresarial fluida, pero está cargado de jerga, carece de diferenciación y es difícil de leer, sin ninguna de las anécdotas, personalidad o color narrativo que aporta un autor humano. En particular, el documento sobre el problema de la compresión superó a los editores de IA (tras múltiples intentos con los principales proveedores de modelos de frontera), que seguían produciendo una prosa de apariencia plausible, pero vacía de sentido y valor. El documento completo tuvo que escribirse a mano desde cero. La transcripción original de la conversación entre el ser humano y la IA se incluye para su consulta.",
+      "Incluso los modelos actuales más capaces —Opus 4.8 entre ellos— son buenos editores, estilistas, resumidores y traductores, pero resultan insuficientes para la escritura original o creativa. La IA no ofrece atajos para desarrollar las propias ideas."
+    ],
+    "images_caption": "Dictated on foot, edited at the desk.",
+    "images": [
+      {
+        "src": "public/images/about/en/method-1.jpg",
+        "alt": "Un sendero de tierra que desciende entre abedules y álamos hacia el río North Saskatchewan, durante una de las caminatas diarias."
+      },
+      {
+        "src": "public/images/about/en/method-2.jpg",
+        "alt": "Un sendero de tierra angosto que serpentea hacia una ladera boscosa bajo un cielo luminoso."
+      },
+      {
+        "src": "public/images/about/en/method-3.jpg",
+        "alt": "Un sendero estrecho que atraviesa un bosque verde y denso con la luz solar filtrándose entre el follaje."
+      },
+      {
+        "src": "public/images/about/en/method-4.jpg",
+        "alt": "Un sendero entre arbustos bajos que se abre a una amplia vista del valle del río bajo un cielo despejado."
+      }
+    ]
+  },
+  "tools": {
+    "heading": "Herramientas y elaboración",
+    "meta": "qué dio forma a los materiales",
+    "paras": [
+      "Las imágenes que acompañan a cada libro blanco fueron generadas con GPT Image 2. La narración extensa y los resúmenes breves son leídos por un clon de voz del autor creado con ElevenLabs. La traducción se realizó principalmente con Claude Opus, con el apoyo de organizaciones colaboradoras para la revisión del bilingüismo; parte de ese trabajo se incorporará tras la publicación inicial."
+    ]
+  },
+  "platform": {
+    "heading": "La plataforma",
+    "meta": "desarrollado con Claude, publicado bajo MIT",
+    "paras": [
+      "El sitio está concebido para ser sencillo, rápido y accesible, y presenta los conceptos y argumentos aquí expuestos de la manera más clara posible. Se desarrolló con Claude Design y se trasladó a Claude Code. Lo que comenzó como HTML sencillo se convirtió en un sistema de gestión de contenidos pequeño pero sólido que centraliza la traducción, la generación de imágenes, la creación de contenidos, las revisiones editoriales y la aplicación de guías de estilo. Ese sistema se publica bajo la licencia MIT junto con los documentos, para que cualquier persona pueda descargarlo, reutilizarlo y construir sobre él."
+    ]
+  },
+  "use": {
+    "heading": "Cómo utilizar este sitio",
+    "meta": "lectura · medios · reutilización",
+    "paras": [
+      "La lectura secuencial es el recorrido recomendado. Cada documento se apoya en los anteriores, y la colección está numerada para que el orden sea claro. Los enlaces transversales entre documentos permiten pasar a una idea relacionada sin perder el hilo, y cada documento concluye con una breve lista de documentos relacionados para continuar la lectura.",
+      "Cada documento puede leerse, escucharse o revisarse por encima. Una narración extensa reproduce el documento completo en la voz clonada del autor, y un reproductor flotante mantiene la reproducción mientras el usuario desplaza la página o navega entre documentos. Una presentación breve de tipo TL;DR combina esa narración con unas pocas diapositivas visuales para una revisión rápida. Las figuras son imágenes generadas, y cada una cuenta con un inspector que muestra la instrucción exacta utilizada para producirla, de modo que nada sobre el proceso de creación de un material queda oculto.",
+      "Todos los documentos pueden descargarse en formato Markdown y JSON, para que los lectores puedan incorporarlos a sus propias herramientas de IA; además, el sitio completo puede clonarse desde GitHub. El sitio es bilingüe: el control de idioma cambia toda la interfaz y el contenido entre inglés y francés, y un glosario define el vocabulario utilizado en la colección.",
+      "El sitio utiliza una pequeña cookie para recordar qué documentos ha visitado usted y para indicar qué hay de nuevo desde su última visita; la página de Actualizaciones enumera los cambios realizados a lo largo del tiempo. También utiliza Google Analytics para ayudarnos a comprender el uso general del sitio, qué páginas se leen y cómo navegan las personas por la colección. No existe inicio de sesión y no se conserva ningún dato identificativo.",
+      "Las organizaciones que clonen el sitio heredan más que el contenido. El sistema de gestión de contenidos que produjo estos documentos viaja con él, de modo que otras organizaciones pueden traducir, generar imágenes y narración, y aplicar sus propias guías de estilo de la misma manera. No se promueve ningún proveedor ni producto, y todos los modelos o servicios utilizados en la producción se divulgan en aras de la transparencia."
+    ]
+  },
+  "living": {
+    "heading": "Un documento vivo",
+    "meta": "el camino por delante",
+    "paras": [
+      "Estas tecnologías no dejarán de evolucionar, y en un plazo mínimo de seis meses algunos de los métodos e ideas aquí expuestos podrían quedar obsoletos. Por eso la colección es una plataforma dinámica y no un PDF o documento Word estático.",
+      "Reconocemos abiertamente que nadie ha resuelto aún estos problemas. Consideramos que la evidencia respalda la dirección que estamos tomando, y compartimos estos documentos como punto de partida desde el cual otros puedan experimentar. Estamos abiertos a colaboraciones con otros autores, gobiernos, socios del sector privado y la ciudadanía. Seguiremos compartiendo lo que aprendamos.",
+      "Hay más por venir, entre ello Agency 2026 Fall en Edmonton y Calgary, una jornada con la industria y una serie continua de desafíos de adquisición abiertos a una amplia variedad de participantes en los meses y años venideros. Visítenos con frecuencia.",
+      "Siga construyendo."
+    ]
+  },
+  "also": {
+    "heading": "También en este sitio",
+    "meta": "accesos directos por el sitio",
+    "cards": [
+      {
+        "tag": "Glossary",
+        "title": "Vocabulario de la colección",
+        "href": "/glossary"
+      },
+      {
+        "tag": "Repositories",
+        "title": "Repositorios públicos complementarios",
+        "href": "/repos"
+      },
+      {
+        "tag": "Updates",
+        "title": "Qué ha cambiado",
+        "href": "/updates"
+      },
+      {
+        "tag": "Community",
+        "title": "Dónde hablar sobre el trabajo",
+        "href": "/community"
+      },
+      {
+        "tag": "Press",
+        "title": "Comunicado de prensa y contactos para medios",
+        "href": "/press"
+      },
+      {
+        "tag": "Resources",
+        "title": "Contexto y enlaces relacionados",
+        "href": "/resources"
+      },
+      {
+        "tag": "Media",
+        "title": "Vídeos y figuras de los documentos",
+        "href": "/gallery"
+      }
+    ]
+  },
+  "_meta": {
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx",
+      "applied_at": "2026-09-04"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "_note": "Resources page content for one locale. The sibling .<other>.json holds the translation. Set each item's href to the official URL; an empty href renders as 'link to be added'.",
+  "page": {
+    "eyebrow": "Recursos",
+    "title_lead": "Contexto y",
+    "title_em": "recursos.",
+    "lede": "Un conjunto breve y seleccionado de enlaces que sitúan este trabajo en su contexto más amplio — suficiente para comprender su lugar sin opacar la propia contribución de Alberta."
+  },
+  "groups": [
+    {
+      "heading": "Gobierno de Alberta",
+      "items": [
+        {
+          "title": "Ministerio de Tecnología e Innovación",
+          "desc": "El ministerio del Gobierno de Alberta respalda esta colección y lidera la agenda provincial en materia de tecnología, innovación, IA, centros de datos, ciberseguridad y gobierno digital.",
+          "href": "https://www.alberta.ca/technology-and-innovation"
+        },
+        {
+          "title": "Política de uso de la IA",
+          "desc": "Cómo el Gobierno de Alberta regula el uso de la inteligencia artificial en todo el servicio público, abarcando seguridad, privacidad, ética, sesgo y responsabilidad (PDF).",
+          "href": "https://manuals.alberta.ca/media/i5mjqsgw/artificial-intelligence-usage-policy.pdf"
+        },
+        {
+          "title": "Entorno de cómputo soberano (PQR)",
+          "desc": "La solicitud de precalificación de Tecnología e Innovación de Alberta para un entorno de cómputo soberano, mediante la cual se invita a proveedores a calificarse en cómputo soberano, soluciones de IA y analítica para apoyar la toma de decisiones del gobierno.",
+          "href": "https://purchasing.alberta.ca/posting/AB-2026-00655"
+        }
+      ]
+    },
+    {
+      "heading": "Gobierno de Canadá",
+      "items": [
+        {
+          "title": "IA para todos",
+          "desc": "La estrategia nacional de IA de Canadá, fundamentada en la confianza, la oportunidad y la soberanía, que establece objetivos para ampliar la adopción de la IA en toda la economía y desarrollar infraestructura soberana.",
+          "href": "https://ised-isde.canada.ca/site/ised/en/canadas-national-artificial-intelligence-strategy-ai-all"
+        },
+        {
+          "title": "Política de compra canadiense",
+          "desc": "Directriz federal de adquisiciones que prioriza a los proveedores, los contenidos y los socios comerciales de confianza de Canadá, con el fin de fortalecer la resiliencia económica del país.",
+          "href": "https://canadabuys.canada.ca/en/buy-canadian-policy"
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx",
+      "applied_at": "2026-09-04"
+    }
+  }
+}

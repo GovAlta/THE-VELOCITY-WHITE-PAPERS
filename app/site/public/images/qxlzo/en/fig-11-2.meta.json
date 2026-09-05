@@ -1,0 +1,17 @@
+{
+  "paper_id": "qxlzo",
+  "locale": "en",
+  "slot": "fig-02",
+  "out_path": "public\\images\\qxlzo\\en\\fig-11-2.jpg",
+  "bytes_jpg": 144785,
+  "bytes_png_source": 2546969,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T18:23:06.477Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A large rounded boundary labelled CANADA contains two boxes: CONTROLLED CLOUD captioned ENTERPRISE AGREEMENTS, GUARDRAILS, and ON-PREM CLUSTER, OFFLINE captioned PROTECTED C. Inside the boundary, a small flag-like motif labelled SOVEREIGN COMPUTE with a caption GROWING. Outside the boundary on the right, a box labelled US INFERENCE connects into the CANADA boundary by a dashed arrow labelled SOME WORKLOADS TODAY. Along the bottom edge, a row of four small chips labelled UNCLASSIFIED, PROTECTED A, PROTECTED B, PROTECTED C, with a small bracket under PROTECTED B reading AROUND 99 PERCENT AT MOST. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. A large rounded boundary labelled CANADA contains two boxes: CONTROLLED CLOUD captioned ENTERPRISE AGREEMENTS, GUARDRAILS, and ON-PREM CLUSTER, OFFLINE captioned PROTECTED C. Inside the boundary, a small flag-like motif labelled SOVEREIGN COMPUTE with a caption GROWING. Outside the boundary on the right, a box labelled US INFERENCE connects into the CANADA boundary by a dashed arrow labelled SOME WORKLOADS TODAY. Along the bottom edge, a row of four small chips labelled UNCLASSIFIED, PROTECTED A, PROTECTED B, PROTECTED C, with a small bracket under PROTECTED B reading AROUND 99 PERCENT AT MOST. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

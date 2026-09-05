@@ -1,0 +1,17 @@
+{
+  "paper_id": "qthji",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\qthji\\en\\fig-8-3.jpg",
+  "bytes_jpg": 134294,
+  "bytes_png_source": 2416804,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-05T23:33:17.660Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as a node graph. Labelled rounded nodes joined by curved labelled edges: CLOUD, FIREWALL, FRONT-END, SERVER, THIRD-PARTY API, DATABASE, and INTEGRATION, arranged in a connected layout. At the edge of the canvas, a small person token labelled HUMAN and a small robot token labelled AGENT, each with a thin line reaching onto the canvas to show they both author it. A small corner tag reads VERSIONED, TAKE AWAY. Calm, architectural, legible labels. No logos, no people beyond the small schematic tokens.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as a node graph. Labelled rounded nodes joined by curved labelled edges: CLOUD, FIREWALL, FRONT-END, SERVER, THIRD-PARTY API, DATABASE, and INTEGRATION, arranged in a connected layout. At the edge of the canvas, a small person token labelled HUMAN and a small robot token labelled AGENT, each with a thin line reaching onto the canvas to show they both author it. A small corner tag reads VERSIONED, TAKE AWAY. Calm, architectural, legible labels. No logos, no people beyond the small schematic tokens.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "oxj36",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\oxj36\\en\\fig-13-1.jpg",
+  "bytes_jpg": 140442,
+  "bytes_png_source": 2645139,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-07T23:21:12.683Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single pendulum hangs from a pivot and swings between two labelled posts: CENTRALIZE on the left and DECENTRALIZE on the right. Beneath CENTRALIZE, small captions read ECONOMY OF SCALE and BOTTLENECK. Beneath DECENTRALIZE, small captions read AUTONOMY and DUPLICATION. A faint arc shows the swing. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single pendulum hangs from a pivot and swings between two labelled posts: CENTRALIZE on the left and DECENTRALIZE on the right. Beneath CENTRALIZE, small captions read ECONOMY OF SCALE and BOTTLENECK. Beneath DECENTRALIZE, small captions read AUTONOMY and DUPLICATION. A faint arc shows the swing. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

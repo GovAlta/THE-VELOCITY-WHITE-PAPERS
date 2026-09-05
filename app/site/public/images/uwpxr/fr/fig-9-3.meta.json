@@ -1,0 +1,17 @@
+{
+  "paper_id": "uwpxr",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\uwpxr\\fr\\fig-9-3.jpg",
+  "bytes_jpg": 130966,
+  "bytes_png_source": 2190314,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:12:43.535Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial hub-and-spoke diagram on warm cream paper, deep navy line work with small rust accents. A central rounded box labelled ENT TOOLS, ENTERPRISE GATEWAY, with a small key icon labelled SSO at its left entrance. A single robot icon labelled AGENT connects to the key from the left. From the gateway, labelled spokes fan out to small boxes: BRAVE SEARCH, ELEVENLABS, CLOUD PROVIDER APIs, OPEN-SOURCE MODELS, PRIVATE COMPUTE, TIME WEATHER NEWS, and SOCIAL MEDIA. Below, a separate dashed-outline cluster labelled COMING SOON holds four small boxes: SHAREPOINT, SERVICENOW, 1GX ERP, MICROSOFT 365. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial hub-and-spoke diagram on warm cream paper, deep navy line work with small rust accents. A central rounded box labelled ENT TOOLS, ENTERPRISE GATEWAY, with a small key icon labelled SSO at its left entrance. A single robot icon labelled AGENT connects to the key from the left. From the gateway, labelled spokes fan out to small boxes: BRAVE SEARCH, ELEVENLABS, CLOUD PROVIDER APIs, OPEN-SOURCE MODELS, PRIVATE COMPUTE, TIME WEATHER NEWS, and SOCIAL MEDIA. Below, a separate dashed-outline cluster labelled COMING SOON holds four small boxes: SHAREPOINT, SERVICENOW, 1GX ERP, MICROSOFT 365. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\uwpxr\\en\\fig-9-3.source.png"
+}

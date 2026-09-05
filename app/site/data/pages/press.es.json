@@ -1,0 +1,85 @@
+{
+  "_note": "Press page content for one locale. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Prensa",
+    "title_lead": "Para la",
+    "title_em": "prensa.",
+    "lede": "Información de contexto y contactos de prensa para los libros blancos Velocity, la colección abierta del Gobierno de Alberta sobre la transformación de la tecnología gubernamental con IA."
+  },
+  "release": {
+    "heading": "Comunicado de prensa",
+    "meta": "6 de julio de 2026 · Gobierno de Alberta",
+    "title": "Alberta establece el estándar norteamericano en materia de IA",
+    "subhead": "Alberta está reconstruyendo su tecnología gubernamental de décadas de antigüedad en tiempo récord y comparte el manual de ejecución con el mundo de forma gratuita.",
+    "paras": [
+      "Alberta ha acelerado la reconstrucción de la tecnología —con décadas de antigüedad— que sustenta sus servicios públicos en una fracción del tiempo y el costo habituales. Mediante herramientas avanzadas de inteligencia artificial (IA) de empresas como Anthropic y Google, Alberta puede hacer en horas lo que antes llevaba años. Estas herramientas contribuyen a sostener y proteger servicios gubernamentales esenciales, desde programas sociales y registros hasta la respuesta a incendios forestales y la seguridad pública. Este trabajo ha convertido a Alberta en un referente en la adopción de la IA en el sector público en América del Norte.",
+      "En los últimos 18 meses, el Ministerio de Tecnología e Innovación ha desarrollado su propio conjunto de herramientas de IA para documentar y transformar tecnologías con décadas de antigüedad. Alberta construyó y desplegó un equipo de agentes de IA —software capaz de ejecutar tareas de forma autónoma— utilizando los modelos de IA Claude de Anthropic. En aproximadamente 20 horas, esos agentes revisaron más de 466 millones de líneas de código gubernamental, lo que proporcionó a Alberta su primer panorama completo sobre el estado y la seguridad de sus sistemas. Realizarlo de forma manual habría llevado años.",
+      "Alberta comparte todo lo aprendido en este proceso mediante la publicación de 21 documentos técnicos que describen un camino paso a paso para transformar el gobierno. Estos libros blancos Velocity se publican como recursos gratuitos y de código abierto, junto con herramientas avanzadas, simulaciones e instrucciones detalladas, para que otros gobiernos puedan seguir el mismo camino."
+    ],
+    "quote": {
+      "text": "Alberta spent decades building technology that worked for government. Now we are rebuilding it to work better for Albertans and doing it faster and for far less. The tools our team built are world-class, and we are sharing them openly because every government is stuck with the same aging systems we were. Alberta is not waiting to solve this problem. We are solving it, and we are showing others how.",
+      "by": "Nate Glubish, Minister of Technology and Innovation"
+    },
+    "closing": [
+      "En apoyo a un ministerio, ya está en marcha un plan para emplear agentes de IA que reemplacen 185 sistemas obsoletos con 16 aplicaciones modernas de plena propiedad gubernamental. Los agentes de IA han demostrado el potencial de multiplicar la cadencia de trabajo hasta 20 veces, al tiempo que reducen el tiempo necesario para modernizar sistemas críticos hasta en un 95 %. Además, estas herramientas refuerzan las protecciones de ciberseguridad que ya bloquean más de 189 millones de intentos de conexión al día, así como los intentos de fraude contra programas sociales que se bloquean en promedio cada minuto.",
+      "Este trabajo se apoya en la Academia de IA de Alberta, un recurso gratuito y abierto para ayudar a cada funcionario público a aprender a trabajar con IA. Desde su lanzamiento en septiembre de 2025, la Academia ha formado a más de 2 000 funcionarios públicos, desde personal de primera línea hasta líderes de alto nivel. Estos recursos, líderes en la industria, son completamente de código abierto y, hasta la fecha, más de 15 000 personas de todo Canadá han utilizado la plataforma, incluidos varios gobiernos provinciales y el gobierno federal. El trabajo de Alberta en este ámbito está siendo reconocido por algunas de las empresas de IA más destacadas del mundo."
+    ],
+    "endorsements_heading": "What partners are saying",
+    "endorsements": [
+      {
+        "text": "What Alberta built demonstrates something governments have long needed: a practical, documented approach to tackling technical debt and security exposure in decades of legacy code.",
+        "by": "Brian Peters, head of North America Government Affairs, Anthropic"
+      },
+      {
+        "text": "Alberta is emerging as the North Star in Canada's government transformation. Google Cloud is proud to power the agentic layer of this digital leap.",
+        "by": "Farsad Nasseri, country managing director, Google Cloud Canada"
+      },
+      {
+        "text": "The Velocity Papers are the first defensible, in-production blueprint for an agentic public service.",
+        "by": "Cole Cioran, managing partner, Canadian Public Sector, Info-Tech Research Group"
+      }
+    ],
+    "source": {
+      "label": "Lea el comunicado oficial en alberta.ca",
+      "href": "https://www.alberta.ca/release.cfm?xID=96456379DDC57-9F6B-FE7E-69C325AD64A91DCD"
+    }
+  },
+  "coverage": {
+    "heading": "En los medios",
+    "items": [
+      {
+        "source": "Anthropic",
+        "date": "6 de julio de 2026",
+        "title": "Government of Alberta Uses Claude to Find and Fix Cybersecurity Vulnerabilities",
+        "href": "https://www.anthropic.com/news/alberta-government-claude-cybersecurity",
+        "summary": "Cómo el Ministerio de Tecnología e Innovación de Alberta utilizó Claude Code para analizar 466 millones de líneas de código en 20 horas, generar correcciones y poner en marcha agentes de revisión de seguridad de equipo rojo y equipo azul en los 27 ministerios."
+      }
+    ]
+  },
+  "contacts": {
+    "heading": "Consultas de medios",
+    "items": [
+      {
+        "name": "Jonathan Gauthier",
+        "role": "Secretario de Prensa, Oficina del Ministro de Tecnología e Innovación",
+        "email": "jonathan.gauthier@gov.ab.ca"
+      },
+      {
+        "name": "Office of the Minister of Technology and Innovation",
+        "role": "Consultas ministeriales generales",
+        "email": "ti.minister@gov.ab.ca"
+      }
+    ],
+    "substack": {
+      "label": "Siga al ministro Glubish en Substack",
+      "href": "https://nateglubish.substack.com/"
+    }
+  },
+  "_meta": {
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    }
+  }
+}

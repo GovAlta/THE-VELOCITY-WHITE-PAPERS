@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-08",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-8.jpg",
+  "bytes_jpg": 127505,
+  "bytes_png_source": 2402705,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:44:41.016Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A flowchart: a search box containing the phrase discretionary approval timelines on the left, an arrow labelled turn into a fingerprint, an arrow into a database cylinder labelled similarity index, then an arrow out to a short ranked list of result cards from different sources, each with a closeness score such as 0.74, 0.71, 0.68.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A flowchart: a search box containing the phrase discretionary approval timelines on the left, an arrow labelled turn into a fingerprint, an arrow into a database cylinder labelled similarity index, then an arrow out to a short ranked list of result cards from different sources, each with a closeness score such as 0.74, 0.71, 0.68.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

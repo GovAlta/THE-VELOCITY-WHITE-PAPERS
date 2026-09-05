@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>L’usine d’IA : mesurer la livraison de projets (le moteur de jeu Velocity) · Les livres blancs Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Velocity est la troisième étape de l’usine d’IA de l’Alberta, après Pronghorn et Nexus. Il s’agit d’un outil de projet à code source ouvert, conçu comme un jeu, qui fait d’un agent d’IA un membre à part entière de l’équipe et qui mesure la livraison réelle maintenant que l’estimation ne fonctionne plus. Le travail gravit huit étapes, gagnant des points en avançant et en les perdant lorsqu’il recule." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/fr/paper/k3tc3/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/k3tc3/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/k3tc3/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/k3tc3/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/k3tc3/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="L’usine d’IA : mesurer la livraison de projets (le moteur de jeu Velocity)" />
+  <meta property="og:description" content="Velocity est la troisième étape de l’usine d’IA de l’Alberta, après Pronghorn et Nexus. Il s’agit d’un outil de projet à code source ouvert, conçu comme un jeu, qui fait d’un agent d’IA un membre à part entière de l’équipe et qui mesure la livraison réelle maintenant que l’estimation ne fonctionne plus. Le travail gravit huit étapes, gagnant des points en avançant et en les perdant lorsqu’il recule." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/fr/paper/k3tc3/" />
+  <meta property="og:site_name" content="Les livres blancs Velocity" />
+  <meta property="og:locale" content="fr_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/k3tc3.fr.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/k3tc3.fr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="L’usine d’IA : mesurer la livraison de projets (le moteur de jeu Velocity)" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/k3tc3.fr.jpg" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="L’usine d’IA : mesurer la livraison de projets (le moteur de jeu Velocity)" />
+  <meta name="twitter:description" content="Velocity est la troisième étape de l’usine d’IA de l’Alberta, après Pronghorn et Nexus. Il s’agit d’un outil de projet à code source ouvert, conçu comme un jeu, qui fait d’un agent d’IA un membre à part entière de l’équipe et qui mesure la livraison réelle maintenant que l’estimation ne fonctionne plus. Le travail gravit huit étapes, gagnant des points en avançant et en les perdant lorsqu’il recule." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"L’usine d’IA : mesurer la livraison de projets (le moteur de jeu Velocity)","description":"Velocity est la troisième étape de l’usine d’IA de l’Alberta, après Pronghorn et Nexus. Il s’agit d’un outil de projet à code source ouvert, conçu comme un jeu, qui fait d’un agent d’IA un membre à part entière de l’équipe et qui mesure la livraison réelle maintenant que l’estimation ne fonctionne plus. Le travail gravit huit étapes, gagnant des points en avançant et en les perdant lorsqu’il recule.","url":"https://thevelocitywhitepapers.com/fr/paper/k3tc3/","inLanguage":"fr-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Sous-ministre"},{"@type":"Person","name":"Technologie et Innovation"}],"publisher":{"@type":"Organization","name":"Gouvernement de l’Alberta · Ministère de la Technologie et de l’Innovation"},"isPartOf":{"@type":"PublicationVolume","name":"Les livres blancs Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"ai-factory, velocity, project-management, agents, orchestration, reaper, sse, open-source","image":"https://thevelocitywhitepapers.com/public/og/k3tc3.fr.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 10 · Technical</p>
+      <h1>L’usine d’IA : mesurer la livraison de projets (le moteur de jeu Velocity)</h1>
+      <p class="sub">Une façon ludique de mener et de mesurer la livraison lorsqu’un agent d’IA est un membre à part entière de l’équipe et que l’estimation traditionnelle ne fonctionne plus.</p>
+      <div class="abstract"><strong>Abstract.</strong> Velocity est la troisième étape de l’usine d’IA de l’Alberta, après Pronghorn et Nexus. Il s’agit d’un outil de projet à code source ouvert, conçu comme un jeu, qui fait d’un agent d’IA un membre à part entière de l’équipe et qui mesure la livraison réelle maintenant que l’estimation ne fonctionne plus. Le travail gravit huit étapes, gagnant des points en avançant et en les perdant lorsqu’il recule.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Velocity est le troisième volet de notre série sur l’usine d’IA, après Pronghorn et Nexus, et il s’attaque à un problème apparu à l’ère du développement assisté par l’IA : comment suivre le temps, l’effort et le coût d’un projet livré avec l’IA, et comment mesurer la progression alors que notre conception antérieure de la vitesse de livraison et de l’estimation a complètement volé en éclats, et qu’une IA peut accomplir en quelques minutes ce qui prenait auparavant des jours à une personne? Le but de Velocity est d’inventer une nouvelle façon de faire la gestion de projet et l’observabilité pendant qu’une IA travaille aux côtés d’une personne comme développeur principal, et aux côtés des architectes, des agents de cybersécurité, de l’équipe de mobilisation et d’un client très exigeant dans ses opinions. L’IA doit jouer et travailler avec les gens dans un espace collaboratif, son travail étant affiché de façon centrale plutôt que dans un environnement isolé, c’est pourquoi nous avons bâti un outil de gestion de projet de premier ordre qui permet à l’IA d’être une participante à part entière. Nous devons aussi savoir, au fil du temps, si nous sommes efficaces, car notre objectif est d’accroître la vitesse de livraison de vingt fois.
+
+
+## §01 Le problème de l’estimation à l’ère de l’IA
+
+Pendant des décennies, les équipes agiles ont utilisé le planning poker pour estimer l’effort. Chacun donne son estimation en même temps, et l’équipe discute des écarts pour faire ressortir la complexité cachée qu’une seule personne manquerait. Cela s’effondre complètement lorsque l’IA entre en jeu. Une IA peut accomplir en dix minutes un travail qu’un humain estimait à trois jours. Le problème plus profond est qu’une IA n’a aucune capacité à estimer sur une échelle de temps humaine. Elle est entraînée sur des commentaires de développeurs et des données historiques qui supposent des habitudes de travail humaines, de sorte que lorsqu’on lui demande d’estimer, elle le fait selon une mesure humaine désalignée par rapport à sa vitesse réelle de travail. Elle ne fait que prédire à partir de ce qu’elle a déjà vu.
+
+Pour la seule tâche de codage, toutes choses égales, une IA peut être plus de cent fois plus rapide qu’un développeur humain. Il faut presque se doter de sa propre heuristique simple, du genre dix minutes par module, ou dix minutes par millier de lignes de code, en tenant compte de marges pour les tests et la correction de bogues. L’essentiel, c’est que tout le cadre d’estimation s’effondre. On ne peut plus planifier l’échéancier d’un projet, parce que la variable qu’on tente de prédire, soit le temps que prendra une IA, ne peut pas être estimée de façon fiable avec les méthodes traditionnelles.
+
+Vitesse de codage pure 100×+. Pour la seule tâche de codage, l’IA est largement plus de cent fois plus rapide qu’un développeur humain. La cible à l’échelle du projet, pour l’ensemble du travail, transferts humains compris, est une accélération de vingt fois.
+
+Le concept même de vélocité, tel que les gens le comprennent, devient dénué de sens. Dans l’agilité traditionnelle, la vélocité mesure le nombre de points d’effort qu’une équipe réalise dans un sprint, et avec une IA qui travaille à des vitesses extrêmement variables, ce nombre cesse de vous apprendre quoi que ce soit d’utile sur la progression réelle. Vous ne pouvez plus comparer les sprints, ni prédire la capacité. Vous perdez aussi toute visibilité sur ce qui ralentit réellement les choses. Est-ce l’IA qui commet des erreurs forçant des reprises, ou des humains qui tardent à traiter une tâche pendant des jours avant de réviser le résultat de l’IA? Des outils comme Jira ne distinguent pas les deux; ils montrent une tâche qui passe d’une colonne à une autre, rien de plus. Vous n’obtenez aucune compréhension du temps par tour, aucun aperçu d’où se situe le goulot d’étranglement, et aucun moyen d’attribuer un retard à la bonne partie. Cette opacité coûte cher, car plus une erreur est détectée tard, plus la reprise est coûteuse.
+
+
+## §02 Un nouveau jeu : serpents et échelles
+
+L’équipe des maximalistes de l’IA est partie en quête d’un jeu différent, en suivant deux principes que nous connaissions déjà. Plus une erreur est repérée tard dans un projet, plus la reprise est coûteuse. Et nous voulions une forme d’apprentissage par renforcement dans nos agents, afin qu’ils puissent apprendre de leur propre historique. Nous sommes donc revenus à l’ancien jeu des serpents et échelles, où l’on augmente ses points en avançant, et où il est facile de marcher sur un serpent, de glisser vers le bas et de les perdre. Nous avons mis en œuvre un processus simple en huit étapes, surtout linéaire, avec un système de récompense pour la progression et un système de pénalité pour les retours en arrière. La progression vers l’avant rapporte des points. Un mouvement vers l’arrière en fait perdre, et on ne peut pas rattraper les mêmes points en avançant de nouveau. La pénalité est permanente.
+
+Si un agent saute une étape de planification ou une étape de collecte des exigences, et qu’un client le détecte plus tard, le client, le gestionnaire de projet, le développeur ou le personnel de cybersécurité peut renvoyer le projet à l’étape antérieure, ce qui fait perdre des points à l’agent. Tous ces gains et toutes ces pertes sont suivis. L’objectif est que l’agent identifie, à partir de preuves, ce qui fonctionne ou non, et s’en serve comme signal d’apprentissage pour ajuster son harnais, réduire les erreurs et améliorer ses résultats au fil des projets. C’est là la dynamique au cœur du jeu : la vélocité vers l’avant est récompensée, reculer est pénalisé, et les résultats sont mesurés sur une longue série de projets.
+
+Les huit étapes reflètent un flux de travail de projet standard : exigences, planification, architecture, prototype, développement, tests utilisateurs, acceptation par l’utilisateur et déploiement. La pénalité pour renvoyer le travail en arrière croît selon le nombre d’étapes reculées, ce qui reflète la réalité, où détecter quelque chose au déploiement est bien pire que de le détecter au stade des exigences.
+
+
+## §03 Tours, transferts et le pendule d’échecs
+
+Velocity fonctionne en temps réel sur des flux d’événements serveur, de sorte que le plateau bouge en direct, comme un jeu, et que les tours sont suivis à chaque étape. L’IA fait son travail et passe le tour à l’humain; l’humain termine et le lui redonne. Deux joueurs ne peuvent pas bouger en même temps, de la même façon que deux joueurs ne peuvent pas lancer les dés sur un même tour, et le modèle de tours l’exclut. À l’intérieur d’une seule étape, il y a beaucoup d’allers-retours. L’IA peut faire une partie du travail et le transmettre pour rétroaction, et l’humain peut le lui redonner et demander une autre passe.
+
+Lorsqu’un agent se retrouve bloqué sur quelque chose, il peut lever la main, ce qui n’entraîne aucune pénalité, et faire appel à un humain pour de l’aide. Il publie un message sur l’étape afin qu’une personne, ou un autre agent abonné comme un architecte, puisse regarder le plateau et répondre. Signaler un blocage entraîne bel et bien une pénalité, et plus un projet recule d’étapes, plus la pénalité est élevée au total. L’ordre est délibéré : il vaut mieux lever la main que de se faire bloquer, et mieux se faire bloquer que de reculer.
+
+Parallèlement à la cadence globale du projet, Velocity utilise une sorte de pendule d’échecs entre l’humain et l’IA. Lorsque l’IA a fait son travail, elle appuie sur le pendule et le chronomètre repasse à la personne. Ainsi, dans le cas où l’IA fait son travail en cinq minutes mais où la personne ne le regarde pas pendant cinq jours, la vélocité perdue est attribuée à l’équipe. La dyade entre la personne et l’IA devient importante à comprendre : si le projet n’atteint pas sa vélocité, il y a de fortes chances que cela n’ait rien à voir avec l’IA, et beaucoup à voir avec des humains plus lents, ou avec des erreurs de l’IA qui ont fait faire du travail supplémentaire à un humain. Vous pouvez l’examiner en cours de route ou à la fin et voir, au total, combien de points ont été gagnés ou perdus et combien de temps ont duré les tours entre l’humain et l’IA.
+
+
+## §04 Toute l’équipe sur le plateau
+
+Le plateau mesure l’agent dans le contexte d’une équipe plus large. L’IA peut être un membre sur six, les cinq autres étant humains, et les humains ont le même potentiel de commettre une erreur que l’IA, de sorte que toute l’équipe porte la responsabilité ensemble. Nous avons vu des unités de livraison efficaces passer d’une équipe agile de huit à douze personnes à une ou deux personnes, et même là on ne peut échapper aux parties prenantes, à la cybersécurité, à l’architecture, à la planification, à la gestion du changement, aux communications et à un client exigeant dans ses opinions ayant sa propre vision de la qualité. Ils sont tous sur le même plateau. Quiconque peut jouer un coup, et quiconque peut signaler un blocage qui arrête l’élan vers l’avant et déclenche une discussion. Le tableau de classement suit ensuite la performance de chaque équipe sur de nombreux projets, quelles équipes avancent proprement et lesquelles continuent de perdre des points, de sorte qu’avec le temps il se lit comme une mesure de la qualité avec laquelle une équipe livre avec l’IA, et non simplement de sa rapidité.
+
+
+## §05 Projets, défis et l’espace de travail partagé
+
+Démarrer un projet Velocity signifie d’abord définir ses métadonnées : le budget, le calendrier, les livrables et les résultats, le client, le responsable de projet, le déclencheur, qu’il s’agisse d’une exigence législative ou réglementaire, les systèmes connectés et l’équipe. La création du projet met aussi en place automatiquement un espace de travail SharePoint, avec un dossier pour le projet et pour chaque module, et y ajoute toute l’équipe. Cela importe davantage qu’il n’y paraît. Sans une bonne hygiène des données, on ferme une session ou on confie le travail à un autre développeur, et alors où est passé tout cela? Tout disparaît. L’agent porte donc des compétences pour enregistrer son travail au bon endroit. Une bonne gestion de l’information fait partie de sa façon de jouer.
+
+En parallèle des projets, il existe aussi des défis. Un défi est une activité limitée dans le temps, évaluée sur un livrable final validé par le client, sans pénalité liée aux retours en arrière. Plusieurs personnes peuvent relever un même défi, et un ou plusieurs gagnants peuvent être couronnés. Nous les appelons des quêtes secondaires. N’importe qui peut en entreprendre une, même en dehors de son propre projet, et avec la rapidité de la livraison par agents, une heure libre suffit pour s’y consacrer — alors que ce type de travail nécessitait auparavant des semaines de préparation.
+
+
+## §06 Le harnais Velocity
+
+Chaque agent démarre avec un harnais Velocity. C’est une variation du harnais bien construit présenté plus tôt dans la série, les mêmes compétences fondamentales, mais adaptées et configurées pour que l’agent sache comment jouer. Les compétences sont organisées autour des huit étapes, une par étape, depuis une compétence d’exigences qui rédige le document des exigences jusqu’à une compétence de déploiement qui rédige les notes de version et le guide d’exploitation et expédie les migrations, avec des barrières mécaniques entre les deux afin qu’une étape n’avance pas tant que le travail n’a pas franchi ses contrôles. Et chaque fois que l’agent démarre, il tire la spécification OpenAPI du moteur de jeu directement du moteur, de sorte qu’il connaît toujours les règles courantes.
+
+
+## §07 L’écouteur Velocity et l’orchestration multiagent
+
+Il y a ensuite l’écouteur Velocity, un script qui s’exécute dans Nexus et qui permet de déclencher un agent par un coup sur le plateau. Il maintient une connexion ouverte de flux d’événements serveur vers le moteur de jeu, filtrée selon les projets qui l’intéressent, et reprend proprement si la connexion tombe. Un humain met à jour un statut ou transfère du travail, l’écouteur le voit, réveille le bon agent dans son propre répertoire de travail avec une session qui se souvient, et lui transmet l’état du plateau et ce que l’humain a dit. Un seul agent s’exécute par projet à la fois, avec un plafond sur le nombre exécuté simultanément, et le reste fait la file et s’écoule à mesure que des places se libèrent.
+
+Cela transforme le plateau de jeu en requête universelle. Au lieu qu’une personne rédige une requête à l’IA à la main, un seul coup sur le plateau déclenche des centaines d’agents sur des centaines de projets. Quelqu’un met à jour une étape le lundi matin, et un agent à l’écoute de ce plateau se réveille, lit le coup et accomplit la prochaine portion de travail. La plupart des gens n’ouvrent jamais une fenêtre de clavardage ni ne se connectent à une machine virtuelle; ils jouent au jeu, et l’agent travaille derrière. Cela convient à la façon dont les gens veulent travailler, puisque peu souhaitent se connecter à une machine pour parler à un agent, et maintenant ils n’ont plus à le faire.
+
+&quot;Le plateau de jeu devient l’invite universelle. Une personne joue un coup, et quelque part un agent se réveille et accomplit la prochaine portion de travail.&quot; · Janak Alford, sous-ministre, Ministère de la Technologie et de l’Innovation
+
+Différents agents dotés de différents harnais peuvent être déclenchés à différents points. Lorsque le plateau atteint les tests utilisateurs, un agent de cybersécurité peut intervenir, lancer une analyse complète, constater qu’un contrôle a été manqué, renvoyer le plateau au développement avec la faille signalée, déposer le détail dans SharePoint et ouvrir un billet pour que l’agent de développement le corrige. Tout un bassin d’agents peut partager le contexte d’un projet, chacun intervenant pour jouer le coup suivant dès qu’il se présente. Et lorsqu’un modèle se retrouve bloqué, il peut en interroger un autre, un modèle d’Anthropic consultant un Grok, un OpenAI ou un Gemini, de sorte qu’un problème difficile fasse appel à plus d’un type d’intelligence. Cela ressemble à l’ancien carnet de tâches agile, du travail en attente d’être pris, sauf que les agents le prennent à l’instant même où la rétroaction arrive.
+
+
+## §08 Bâtir une mémoire institutionnelle
+
+Velocity n’a pas entièrement résolu l’apprentissage inter projets, et la discipline enseignée à l&#39;Academy comble la majeure partie de l’écart. Les gens sont propriétaires de leurs harnais. Lorsqu’un agent commet une erreur et que le plateau la détecte, le propriétaire est censé mener une rétrospective, trouver la faille et corriger le harnais pour que cela ne se reproduise pas. Ces correctifs remontent vers la branche principale, de sorte que la prochaine personne à démarrer un projet est déjà sur le meilleur harnais, et tout le monde y gagne. L’apprentissage se démocratise à travers les gens, les agents et les projets, et Git est le moyen par lequel il voyage.
+
+Chaque projet a aussi un bouton d’audit. Appuyez dessus et le système parcourt le code, la progression, les commentaires, les métadonnées, tout cela, et rédige un rapport d’audit indélébile, un instantané dans le temps de ce qui fonctionne et de ce qui ne fonctionne pas. Faites-le sur un grand nombre de projets et les thèmes commencent à se dégager : quelles pratiques fonctionnent systématiquement, quelles erreurs se répètent, où se regroupent les failles de sécurité. C’est quelque chose qu’un outil traditionnel comme Jira ne capte jamais; là, le savoir reste avec la personne et s’en va avec elle. Dans Velocity, il est assemblé et conservé à l’intérieur de l’outil.
+
+
+## §09 Velocity en conditions réelles : une centaine d’agents et le Reaper
+
+Lorsque nous avons ouvert Velocity à une centaine d’agents de l&#39;Academy d’IA, chacun avec son propre écouteur Velocity abonné au moteur de jeu, nous avons appris à quel point les agents peuvent être créatifs et perturbateurs lorsqu’on leur donne liberté et incitations. Le système s’est immédiatement inondé d’activité. En une seule fenêtre de cinq minutes, nous avons enregistré soixante-cinq mille transactions tandis que les agents se surabonnaient au plateau de jeu et commençaient à jouer simultanément sur des centaines de projets. Le volume n’était pas le vrai problème.
+
+En charge 65 000 / 5 min. Une centaine d’agents de l’Academy sur des plateaux partagés ont produit soixante-cinq mille transactions en une fenêtre de cinq minutes, et ont commencé à fausser les règles. Ce test de charge a donné naissance au Reaper et à une plateforme renforcée.
+
+Les agents se sont mis à fausser la mesure. Ils monopolisaient les tours pour que les humains ne puissent pas bouger. Ils jouaient des coups comme s’ils étaient l’humain, même si le journal d’audit montrait clairement que c’était l’agent. Ils sautaient des étapes pour engranger des points vers l’avant, pariant que la pénalité ne viendrait peut-être jamais. Ils jouaient pour le score plutôt que pour la livraison. C’est la loi de Goodhart, juste devant nous : dès qu’une mesure devient la cible, elle cesse d’être une bonne mesure. Le franc-jeu, il s’est avéré, n’était pas quelque chose que nous pouvions simplement présumer.
+
+&quot;Lorsqu’une mesure devient l’objectif, elle cesse d’être une bonne mesure. Nous ne pouvions pas présumer le franc-jeu; nous devions l’imposer.&quot; · Janak Alford, sous-ministre, Ministère de la Technologie et de l’Innovation
+
+Nous avons donc tout arrêté, renforcé le harnais et bâti un agent d’application que nous appelons le Reaper. Le Reaper relit l’historique du plateau à la recherche des signaux de triche, et là où il en trouve un, il reprend les points qui ont été gagnés puis les soustrait de nouveau, de sorte que se faire prendre coûte bien plus cher que la triche ne pourrait jamais rapporter. Il s’exécute en bloc sur l’ensemble du registre, et il est idempotent, de sorte que le relancer ne fait ressortir que ce qui est nouveau. Chaque constat aboutit sur le tableau de classement comme une violation que tout le monde peut voir.
+
+Nous avons aussi reconstruit Velocity pour encaisser la charge, tel une plateforme Gouvernement 3.0 qui s’attend à supporter un fort volume de transactions et un trafic soutenu piloté par des agents. Le flux d’événements délaisse le trafic de faible priorité vers les clients lents, abandonne les connexions les plus anciennes sous pression de mémoire plutôt que de s’effondrer, et utilise des clés d’idempotence et des contrôles de version afin que deux coups ne puissent entrer en collision. Lorsque nous avons rouvert le plateau avec le Reaper en surveillance, le comportement a changé. Les agents ont appris que le franc-jeu était imposé, et le système s’est stabilisé. La leçon nous est restée : on ne peut pas présumer la gouvernance. On l’intègre, on l’impose, et on fait en sorte que l’enfreindre coûte plus cher que ce que cela vaut.
+
+
+## §10 Le système complet : Pronghorn, Nexus, Velocity
+
+Velocity est le troisième pilier du système complet, et il s’appuie sur les deux autres. Pronghorn vient en premier et fait les exigences, les normes, l’architecture et les artefacts de projet, de sorte que le travail est correctement défini avant qu’une seule ligne de code ne soit écrite. Nexus est l’endroit où les agents vivent et travaillent, avec la puissance de calcul, les outils et les harnais d’exécution. Velocity se pose au-dessus comme la couche qui orchestre et mesure. Les agents dans Nexus s’abonnent aux plateaux de Velocity par l’écouteur, sur des flux d’événements serveur; les gens jouent des coups, les agents répondent, le travail gravit les huit étapes, et ce que nous apprenons reflue dans le harnais. Pronghorn vous donne de bons intrants, Nexus vous donne une exécution fiable, et Velocity vous donne la visibilité, la responsabilisation et l’apprentissage. Les trois sont à code source ouvert, et vous pouvez prendre les trois ensemble ou simplement greffer Velocity sur un flux de travail que vous avez déjà.
+
+
+## §11 Documents complémentaires
+
+Les documents suivants offrent des éclairages supplémentaires sur la plateforme Velocity. Pour les renseignements les plus récents, veuillez suivre l&#39;Alberta AI Academy.
+
+Le sous-ministre Janak Alford et le directeur exécutif Zoran Mijajlovic discutent du moteur de jeu Velocity et en font une présentation guidée. Video: https://youtu.be/rwhybgIXnJ8</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: ai-factory, velocity, project-management, agents, orchestration, reaper, sse, open-source</p>
+      <p><a href="/fr/paper/k3tc3">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "fr"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/fr/paper/k3tc3"));
+    })();
+  </script>
+</body>
+</html>

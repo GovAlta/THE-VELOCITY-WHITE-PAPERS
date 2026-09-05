@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-3.jpg",
+  "bytes_jpg": 151512,
+  "bytes_png_source": 2074098,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T03:57:38.421Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un organigramme : une boîte liste maîtresse à gauche, une flèche vers un nuage étiqueté Sources officielles, une flèche descendant vers un dossier de fichiers PDF, et chaque PDF accompagné d’une petite fiche annexe affichant quatre courtes lignes : adresse, téléchargé le, taille, empreinte.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un organigramme : une boîte liste maîtresse à gauche, une flèche vers un nuage étiqueté Sources officielles, une flèche descendant vers un dossier de fichiers PDF, et chaque PDF accompagné d’une petite fiche annexe affichant quatre courtes lignes : adresse, téléchargé le, taille, empreinte.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-3.source.png"
+}

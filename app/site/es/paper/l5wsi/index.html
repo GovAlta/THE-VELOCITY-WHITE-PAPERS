@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Técnico: anatomía de una plantilla · Los libros blancos Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="El arnés bien construido incluye una plantilla de aplicación monorepo de full-stack compuesta por un cliente frontend en Vue 3 y un servidor Node.js / Express respaldado por una base de datos PostgreSQL. Proporcionarle a un agente de IA una plantilla permite que este constrya con rapidez soluciones significativas de nivel empresarial. Esta plantilla básica contiene todo lo necesario para comenzar, incluidos seguridad, registro de actividad y controles básicos." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/es/paper/l5wsi/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/l5wsi/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/l5wsi/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/l5wsi/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/l5wsi/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Técnico: anatomía de una plantilla" />
+  <meta property="og:description" content="El arnés bien construido incluye una plantilla de aplicación monorepo de full-stack compuesta por un cliente frontend en Vue 3 y un servidor Node.js / Express respaldado por una base de datos PostgreSQL. Proporcionarle a un agente de IA una plantilla permite que este constrya con rapidez soluciones significativas de nivel empresarial. Esta plantilla básica contiene todo lo necesario para comenzar, incluidos seguridad, registro de actividad y controles básicos." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/es/paper/l5wsi/" />
+  <meta property="og:site_name" content="Los libros blancos Velocity" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/l5wsi.es.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/l5wsi.es.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Técnico: anatomía de una plantilla" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/l5wsi.es.jpg" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Técnico: anatomía de una plantilla" />
+  <meta name="twitter:description" content="El arnés bien construido incluye una plantilla de aplicación monorepo de full-stack compuesta por un cliente frontend en Vue 3 y un servidor Node.js / Express respaldado por una base de datos PostgreSQL. Proporcionarle a un agente de IA una plantilla permite que este constrya con rapidez soluciones significativas de nivel empresarial. Esta plantilla básica contiene todo lo necesario para comenzar, incluidos seguridad, registro de actividad y controles básicos." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Técnico: anatomía de una plantilla","description":"El arnés bien construido incluye una plantilla de aplicación monorepo de full-stack compuesta por un cliente frontend en Vue 3 y un servidor Node.js / Express respaldado por una base de datos PostgreSQL. Proporcionarle a un agente de IA una plantilla permite que este constrya con rapidez soluciones significativas de nivel empresarial. Esta plantilla básica contiene todo lo necesario para comenzar, incluidos seguridad, registro de actividad y controles básicos.","url":"https://thevelocitywhitepapers.com/es/paper/l5wsi/","inLanguage":"es","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Deputy Minister"},{"@type":"Person","name":"Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Gobierno de Alberta · Ministerio de Tecnología e Innovación"},"isPartOf":{"@type":"PublicationVolume","name":"Los libros blancos Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"template, harness, security, owasp, open-source, authentication, specification-driven","image":"https://thevelocitywhitepapers.com/public/og/l5wsi.es.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 17 · Technical</p>
+      <h1>Técnico: anatomía de una plantilla</h1>
+      <p class="sub">Un recorrido de extremo a extremo por la plantilla de aplicación de código abierto que se incluye con el arnés construido, y por qué la mejor especificación es el código funcional.</p>
+      <div class="abstract"><strong>Abstract.</strong> El arnés bien construido incluye una plantilla de aplicación monorepo de full-stack compuesta por un cliente frontend en Vue 3 y un servidor Node.js / Express respaldado por una base de datos PostgreSQL. Proporcionarle a un agente de IA una plantilla permite que este constrya con rapidez soluciones significativas de nivel empresarial. Esta plantilla básica contiene todo lo necesario para comenzar, incluidos seguridad, registro de actividad y controles básicos.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Proporcionarle a un agente de IA una plantilla sólida es la forma más fiable de estructurar una aplicación de nivel empresarial. Una plantilla bien construida resuelve desde el principio cientos de decisiones clave, desde la seguridad hasta la experiencia de usuario. Combinada con un arnés bien construido, que aporta las competencias necesarias para transformar la plantilla en una aplicación, el agente de IA puede avanzar con rapidez y de manera segura.
+
+Una plantilla resuelve desde el inicio los desafíos técnicos más críticos: desde los más básicos, como el lenguaje de programación, hasta los más específicos, como los protocolos de seguridad, el modelo de almacenamiento de datos, y la interfaz y experiencia de usuario. En su conjunto, representan cientos de decisiones y controles previos que deben ser técnicamente sólidos y compatibles con el entorno operativo de destino. La plantilla cierra desde el primer paso las vulnerabilidades y los errores potenciales más comunes y críticos, y ofrece al agente de IA patrones significativos que emular y adoptar. La plantilla constituye la mejor especificación, ya que el agente mantiene las decisiones de diseño mientras desarrolla la funcionalidad.
+
+Comienza en verde, no desde cero 773 / 0. La plantilla incluye 773 pruebas aprobadas y cero fallos, más seis analizadores de seguridad automatizados. Una aplicación construida a partir de ella hereda desde el primer día una base funcional, probada y conforme a los estándares.
+
+&quot;La mejor especificación es el código. Si se le proporciona a la IA una plataforma segura, basada en estándares y accesible desde el principio, es mucho menos probable que cometa errores. La solución cumple con los requisitos antes de que la IA comience a construir.&quot;
+
+No existe una única forma correcta de construir una plantilla. Sí existen muchas formas incorrectas. El diseño depende de la organización y de las decisiones empresariales más amplias que sean adecuadas para ella. La siguiente plantilla es muy definida, es decir, está altamente especificada y deja poco margen para interpretaciones erróneas o malentendidos. Sin embargo, los mismos controles pueden aplicarse a cualquier otro conjunto de tecnologías.
+
+
+## §01 El servidor: el ciclo de vida de una solicitud
+
+El servidor es una única aplicación Express en TypeScript. Cada solicitud se gestiona de manera muy uniforme, pasando por capas de middleware en un orden racional y deliberado: primero las protecciones amplias y de bajo costo, y al final la identidad y la intención.
+
+
+## §02 Identidad: inicio de sesión, tokens y cookies
+
+El inicio de sesión se delega a Google y Microsoft mediante Passport y OpenID Connect. La plantilla no almacena contraseñas. Tras un inicio de sesión exitoso, el servidor emite dos JSON Web Tokens firmados con RS256, un par de claves asimétricas, de modo que el servidor puede verificar un token sin conservar nada que pudiera falsificarlo, y los establece como cookies httpOnly que los scripts del navegador no pueden leer. El middleware de autenticación lee el token de acceso desde la cookie y, cuando ha expirado, devuelve 401 con el código TOKEN_EXPIRED, que es la señal para que el cliente solicite la renovación. Los tokens de renovación se almacenan únicamente como hashes SHA-256 en una tabla refresh_token; cada uso rota el token y cualquier token puede revocarse, de modo que un token de renovación robado tiene una vida útil breve y puede clausurarse.
+
+
+## §03 CSRF y seguridad entre sitios
+
+Las solicitudes que modifican el estado (como escritura, actualización y eliminación) están protegidas por una verificación de doble envío. El servidor establece una cookie httpOnly csrf_token y también devuelve el valor del token una sola vez, en el cuerpo de GET /auth/csrf-token. El cliente conserva estos valores únicamente en memoria, nunca en almacenamiento, y los incluye en un encabezado X-CSRF-Token. El middleware compara el encabezado con la cookie mediante una comparación en tiempo constante para evitar fugas por temporización. Está montado de forma global, de modo que una ruta recién añadida queda protegida por defecto, en lugar de depender de que el desarrollador recuerde habilitarlo. Las únicas excepciones son el inicio de OAuth, la devolución de llamada de OAuth y la renovación del token, cada una con una justificación explícita de por qué es segura: la devolución de llamada está protegida por el estado y el nonce de OAuth, y la renovación por la cookie sameSite junto con la rotación.
+
+
+## §04 De la ruta a la base de datos
+
+La lógica de la aplicación está organizada en capas: ruta, controlador, servicio y modelo. El controlador gestiona la solicitud y estructura la respuesta; el servicio contiene las reglas de negocio, y el modelo es propietario del SQL. Cada consulta está parametrizada con $1, $2, y así sucesivamente; los valores nunca se concatenan en la sentencia, lo que cierra la inyección SQL en el origen. El modelo es también la única capa que mapea los nombres de campo de la API a los nombres de columna de la base de datos, de modo que el formato de transmisión y el esquema pueden cambiar de forma independiente. Se accede a Postgres a través de un grupo de conexiones simple, sin ninguna capa objeto-relacional que oculte lo que realmente se ejecuta.
+
+Cada respuesta utiliza un único sobre: éxito con una carga de datos, o fallo con un objeto de error que incluye un código y un mensaje. Un único manejador de errores captura todo lo que se lanza, mapea los errores conocidos de Postgres a códigos HTTP seguros (una violación de clave única se convierte en 409, una violación de clave foránea en 400), y en producción elimina las trazas de pila y el SQL de la respuesta. Los manejadores asíncronos están envueltos para que una promesa rechazada llegue a ese manejador de errores en lugar de interrumpir el proceso. El resultado es que la estructura del error, los códigos de estado y el ocultamiento de información son uniformes en todos los puntos de acceso.
+
+
+## §05 Actualizaciones en tiempo real mediante SSE
+
+Para actualizaciones en tiempo real, mensajes de administrador o nuevas notificaciones, el sistema utiliza Server-Sent Events: un flujo HTTP unidireccional más ligero que un WebSocket y que se reconecta de forma automática. En el servidor, un pequeño gestor mantiene un mapa del identificador de usuario al conjunto de flujos abiertos de ese usuario —uno por pestaña del navegador, con un límite de diez— y les escribe eventos de notificación con nombre. En el cliente, useNotificationStream abre un EventSource con credenciales para que la cookie de autenticación viaje junto con él, y escucha el evento con nombre; el manejador de mensajes predeterminado no se activa para eventos con nombre, lo cual es un error frecuente. El flujo se trata como servicio de mejor esfuerzo: la fuente de verdad sigue siendo el endpoint de la lista de notificaciones, por lo que un evento perdido nunca supone un registro perdido. El flujo se cierra en pagehide y se vuelve a abrir en pageshow, de modo que una conexión abierta no impide que la página quede en la caché de avance y retroceso del navegador.
+
+
+## §06 El cliente de API único
+
+Toda llamada desde el navegador pasa por una única instancia de axios configurada. Esta instancia envía credenciales para que las cookies viajen, adjunta un identificador de solicitud y, en las operaciones de escritura, el token CSRF, y centraliza los tres tipos de error que de otro modo cada pantalla tendría que gestionar por separado. Como la lógica reside en un único archivo, ninguna vista la reimplementa ni puede hacerlo de forma incorrecta. Este es el ejemplo más claro de lo que la plantilla resuelve en nombre de la IA.
+
+
+## §07 Enrutamiento y guardias de navegación
+
+El enrutador del cliente utiliza el modo historial y carga de forma diferida cada vista como su propio paquete, de modo que el código de una página se descarga únicamente cuando se visita. Cada ruta lleva metadatos: si requiere un usuario autenticado, si requiere un administrador, si es solo para invitados, qué diseño usar (predeterminado, administrador o en blanco) y un título. Un único guardia beforeEach carga el usuario actual una sola vez si es necesario, redirige a los usuarios no autenticados a la página de inicio de sesión conservando el destino al que se dirigían, impide el acceso de usuarios no administradores a las rutas de administración y redirige a los usuarios ya autenticados fuera de la página de inicio de sesión. Una función auxiliar sanitizeRedirect rechaza cualquier destino de redirección que no sea una ruta relativa simple, lo que cierra los ataques de redirección abierta; afterEach establece el título del documento.
+
+
+## §08 Estado, componibles y formularios
+
+Existe un único almacén Pinia, dedicado a la autenticación. Guarda el usuario y los auxiliares de rol, cierra la sesión tras treinta minutos de inactividad y escucha el evento auth:expired que emite el cliente de API. Todo lo demás es un componible, que es el patrón de acceso a datos de la plantilla. useFetch(url) envuelve una petición GET y devuelve data, loading, error y una función refresh; los componibles de funcionalidad —useServices, useResources, useForms, useFiles y el resto— envuelven sus endpoints de la misma manera, de modo que una vista se enlaza a una forma uniforme en lugar de llamar a la API directamente. useTheme persiste el modo claro u oscuro en el almacenamiento local; usePwa gestiona los mensajes de instalación y actualización; useToast envuelve las notificaciones; y useNotificationStream alimenta el contador en tiempo real. El HTML proporcionado por el usuario pasa por DOMPurify antes de que se muestre en pantalla. Los formularios se construyen con FormKit mediante una única configuración compartida y con estilos uniformes, de modo que la validación y el aspecto visual son coherentes en lugar de implementarse manualmente en cada pantalla.
+
+
+## §09 Interfaz, accesibilidad y compilación
+
+La interfaz usa PrimeVue 4 con el tema Aura, con componentes importados automáticamente mediante un resolver para que solo se incluyan en el paquete los que se usan, sobre la capa de estilos de utilidades de Tailwind 4. El arranque de la aplicación configura Pinia, PrimeVue, FormKit y el enrutador, registra un manejador global de errores que muestra una notificación emergente, precarga la fuente de iconos para acortar el primer renderizado y monta la aplicación únicamente después de que se hayan obtenido la sesión del usuario y el token CSRF. El modo oscuro se activa mediante una clase en el elemento raíz.
+
+La accesibilidad está integrada: un enlace «saltar al contenido», una región activa que anuncia cada cambio de ruta a los lectores de pantalla y conformidad con el estándar WCAG 2.1 AA que el entorno exige. La compilación divide el código de proveedores externos en fragmentos separados —Vue, PrimeVue, gráficas y mapas— para que cada uno se almacene en caché de forma independiente; minifica y elimina las instrucciones console y debugger en producción; y sirve los recursos compilados con una caché inmutable de un año. La aplicación es una aplicación web progresiva instalable: un service worker precarga la estructura de la aplicación, redirige al cliente las rutas del cliente, pero nunca las de la API, y solicita al usuario que actualice cuando se publica una nueva compilación. El diseño es adaptable para dispositivos móviles de forma predeterminada, y el manifiesto incluye un icono enmascarable para una instalación limpia en la pantalla de inicio.
+
+
+## §10 El OWASP Top 10, abordado desde el principio
+
+El OWASP Top 10 es la lista del sector de la seguridad informática con las diez clases de vulnerabilidades web más graves. La plantilla aborda cada una de ellas en el código, construido según el Estándar de Verificación de Seguridad de Aplicaciones (ASVS) de OWASP en el Nivel 2, el estándar que el entorno exige al trabajo.
+
+
+## §11 Lo que la plantilla resuelve para el agente
+
+Leído de atrás hacia adelante, el patrón es coherente. Las decisiones críticas se toman una sola vez, en el código, y se centralizan para que no puedan tomarse de forma incorrecta: la identidad, el CSRF, el SQL parametrizado, el envoltorio de respuesta, el saneamiento de errores, el mecanismo alternativo de actualización en tiempo real y la lógica de reintento del cliente de API son, cada uno, una implementación única y probada que la IA hereda en lugar de escribir. A la IA se le entrega un sistema conforme y se le pide que lo amplíe, y el arnés verifica mecánicamente que sigue siendo válido en cada cambio. La misma disciplina que aplica el Arnés Anti-Deriva a medida que crece la base de código.
+
+La plantilla no lo resuelve todo. El análisis de archivos cargados en busca de malware y el balanceo de carga aún no están integrados; el estado de limitación de frecuencia se mantiene en memoria hasta que se configure un almacén compartido. Las brechas conocidas o las decisiones diferidas están documentadas, no ocultas. El conjunto de herramientas es de código abierto en su totalidad —Vue, Express, Postgres y sus bibliotecas con buen soporte—, por lo que no hay dependencia cerrada en un proveedor y una gran comunidad lo mantiene actualizado, que es el nivel mínimo que debe cumplir una aplicación gubernamental de cara al público antes de desplegarse.
+
+Ya sea que utilice esta plantilla o construya la suya propia, estos principios deberían ayudarle a usted —y a su agente— a mantenerse en el camino correcto.
+
+
+## §12 La plantilla completa, en una sola página
+
+Cada parte descrita anteriormente es una decisión dentro de un sistema único y coherente. El esquema que aparece a continuación las reúne todas: el cliente Vue a la izquierda, el servidor Express en el centro, Postgres y los proveedores de identidad a la derecha, y las decisiones de seguridad y estándares que aplican a todos ellos en el borde. Es el mapa que un ingeniero puede tener a su lado mientras construye, y la estructura que el agente extiende.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: template, harness, security, owasp, open-source, authentication, specification-driven</p>
+      <p><a href="/es/paper/l5wsi">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "es"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/es/paper/l5wsi"));
+    })();
+  </script>
+</body>
+</html>

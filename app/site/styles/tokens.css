@@ -1,0 +1,38 @@
+:root {
+  --paper:           #F7F4ED;
+  --paper-alt:       #EFEAD9;
+  --ink:             #0B0C0F;
+  --ink-70:          #3D3E45;
+  /* ink-50 darkened from #6A6B72 → #5E5F66 so 11px mono on paper-alt
+     clears WCAG 4.5:1 (was ~4.48:1, now ~5.16:1). */
+  --ink-50:          #5E5F66;
+  --rule:            #D8D1C2;
+  --rule-strong:     #B8AE99;
+  --accent:          #1A3A6E;
+  --accent-soft:     #2E5A9E;
+  /* highlight darkened from #C2491A → #B23F15 for small text on cream
+     (was ~4.53:1, now ~5.37:1). */
+  --highlight:       #B23F15;
+  /* For use on dark backgrounds where the rust on dark fails 4.5:1.
+     Amber gold reads cleanly on #1b1c1b at ~10:1. */
+  --highlight-on-dark: #FFC350;
+  --ok:              #356B4F;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --pad-page-x: 56px;
+  --pad-page-x-sm: 20px;
+
+  --rail-h: 58px;
+  --col-toc-w: 240px;
+  --doc-max-w: 760px;
+
+  /* iOS safe-area insets (zero on platforms that don't provide them).
+     Used by fixed-position elements (TOC fab, image-inspector bottom sheet)
+     so they clear the notch / home indicator. */
+  --safe-top:    env(safe-area-inset-top,    0px);
+  --safe-right:  env(safe-area-inset-right,  0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left,   0px);
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-04",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-4.jpg",
+  "bytes_jpg": 109001,
+  "bytes_png_source": 2117623,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T03:58:41.510Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un organigramme simple : une seule icône PDF à gauche, une flèche étiquetée rendre chaque page menant à une pile soignée d’images de page numérotées 1, 2, 3, et une petite note indiquant 200 PPP, une image par page.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un organigramme simple : une seule icône PDF à gauche, une flèche étiquetée rendre chaque page menant à une pile soignée d’images de page numérotées 1, 2, 3, et une petite note indiquant 200 PPP, une image par page.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-4.source.png"
+}

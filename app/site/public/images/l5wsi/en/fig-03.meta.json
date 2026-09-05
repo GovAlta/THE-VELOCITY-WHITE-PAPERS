@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\l5wsi\\en\\fig-03.jpg",
+  "bytes_jpg": 120629,
+  "bytes_png_source": 2324716,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:29:54.412Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Top: SERVER box issues a CSRF token along two arrows: one labelled httpOnly csrf_token COOKIE going to a BROWSER box, one labelled TOKEN IN JSON BODY going to a CLIENT (IN MEMORY) box. Bottom: on a WRITE REQUEST the client sends X-CSRF-TOKEN HEADER plus the COOKIE into a diamond labelled CONSTANT-TIME COMPARE, with two outputs MATCH then ALLOW, and MISMATCH then 403. A small caption reads DOUBLE-SUBMIT, SAFE BY DEFAULT. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Top: SERVER box issues a CSRF token along two arrows: one labelled httpOnly csrf_token COOKIE going to a BROWSER box, one labelled TOKEN IN JSON BODY going to a CLIENT (IN MEMORY) box. Bottom: on a WRITE REQUEST the client sends X-CSRF-TOKEN HEADER plus the COOKIE into a diamond labelled CONSTANT-TIME COMPARE, with two outputs MATCH then ALLOW, and MISMATCH then 403. A small caption reads DOUBLE-SUBMIT, SAFE BY DEFAULT. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "cux4h",
+  "locale": "es",
+  "slot": "fig-03",
+  "out_path": "public\\images\\cux4h\\es\\fig-1-3.jpg",
+  "bytes_jpg": 236543,
+  "bytes_png_source": 2938065,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-07T19:27:31.781Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial-quality flowchart diagram, hand-drawn line work on warm off-white paper background (#F7F4ED). Two-tone palette of deep Alberta navy (#1A3A6E) for primary nodes and rust orange (#C2491A) for accents and arrows. Boxes have subtle shadows; labels in clean sans-serif; arrows are slightly curved with arrowheads. Architectural, calm, technical but human. Wide editorial aspect. No photo realism, no people, no logos, no watermarks. All text labels in English.",
+  "image_prompt": "Una figura humana tranquila sentada en un escritorio, que trabaja junto a un gran abanico de pequeñas figuras de agentes idénticos que llevan herramientas, todos concentrados en la misma estructura grande. Transmite la idea de una sola persona que dirige muchas manos a la vez. All text labels in es. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: Una figura humana tranquila sentada en un escritorio, que trabaja junto a un gran abanico de pequeñas figuras de agentes idénticos que llevan herramientas, todos concentrados en la misma estructura grande. Transmite la idea de una sola persona que dirige muchas manos a la vez. All text labels in es. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\cux4h\\en\\fig-1-3.source.png"
+}

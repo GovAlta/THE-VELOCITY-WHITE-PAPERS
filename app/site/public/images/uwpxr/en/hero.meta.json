@@ -1,0 +1,17 @@
+{
+  "paper_id": "uwpxr",
+  "locale": "en",
+  "slot": "hero",
+  "out_path": "public\\images\\uwpxr\\en\\hero.jpg",
+  "bytes_jpg": 191695,
+  "bytes_png_source": 2882586,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-04T14:04:37.850Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust accents. A clean rounded enclosure, like a glass-walled control room, containing several small workstations each with a glowing screen and a tiny robot token at work. Above them, a single calm eye motif rendered in simple line work, watching. The enclosure sits within a larger rounded cloud boundary, sealed and observed. Wide cover aspect, calm and archival. No text, no logos, no people.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust accents. A clean rounded enclosure, like a glass-walled control room, containing several small workstations each with a glowing screen and a tiny robot token at work. Above them, a single calm eye motif rendered in simple line work, watching. The enclosure sits within a larger rounded cloud boundary, sealed and observed. Wide cover aspect, calm and archival. No text, no logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

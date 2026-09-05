@@ -1,0 +1,78 @@
+{
+  "_note": "Press page content for one locale. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Press",
+    "title_lead": "For the",
+    "title_em": "press.",
+    "lede": "Background and media contacts for the Velocity White Papers, the Government of Alberta's open collection on transforming government technology with AI."
+  },
+  "release": {
+    "heading": "News release",
+    "meta": "July 6, 2026 · Government of Alberta",
+    "title": "Alberta Sets North American Standard for AI",
+    "subhead": "Alberta is rebuilding decades-old government technology in record time, sharing the playbook with the world for free.",
+    "paras": [
+      "Alberta has accelerated the rebuilding of the decades-old technology behind its public services in a fraction of the usual time and cost. Using advanced artificial intelligence (AI) tools from companies like Anthropic and Google, Alberta can now do in hours what once took years. These tools are helping to support and protect critical government services, from social programs and registries to wildfire response and public safety. This work has made Alberta a leader in public service adoption of AI in North America.",
+      "Over the past 18 months, the Ministry of Technology and Innovation has built its own set of AI tools to document and transform decades-old technologies. Alberta built and deployed a team of AI agents, software that can work through tasks on its own, using Anthropic's Claude AI models. In about 20 hours, those agents reviewed more than 466 million lines of government code, giving Alberta its first complete picture of the health and security of its systems. By hand, that work would have taken years.",
+      "Alberta is sharing everything it has learned along the way with the publication of 21 technical papers which highlight a step-by-step way of transforming government. These Velocity White Papers are released as free and open-source resources, along with advanced tools, simulations, and step-by-step instructions, so other governments can follow the same path."
+    ],
+    "quote": {
+      "text": "Alberta spent decades building technology that worked for government. Now we are rebuilding it to work better for Albertans and doing it faster and for far less. The tools our team built are world-class, and we are sharing them openly because every government is stuck with the same aging systems we were. Alberta is not waiting to solve this problem. We are solving it, and we are showing others how.",
+      "by": "Nate Glubish, Minister of Technology and Innovation"
+    },
+    "closing": [
+      "Supporting one ministry, a plan is underway to leverage AI agents to replace 185 aging systems with 16 modern applications which the government owns outright. AI agents have demonstrated the potential of speeding up work by as much as 20 times while reducing the time to modernize critical systems by as much as 95 per cent. Further, these tools strengthen the cyber security protections that already block more than 189 million attempted connections daily, and fraud attempts against social programs that are blocked on average every minute.",
+      "This work builds on the Alberta AI Academy, a free and open resource to help every public servant learn to work with AI. Since it launched in September 2025, the Academy has trained more than 2,000 public servants, from front-line staff to senior leaders. These industry-leading resources are fully open-source, and to date more than 15,000 people from across Canada have trained on the platform, including several other provincial governments and the federal government. Alberta's work in this domain is being recognized by some of the world's leading AI companies."
+    ],
+    "endorsements_heading": "What partners are saying",
+    "endorsements": [
+      {
+        "text": "What Alberta built demonstrates something governments have long needed: a practical, documented approach to tackling technical debt and security exposure in decades of legacy code.",
+        "by": "Brian Peters, head of North America Government Affairs, Anthropic"
+      },
+      {
+        "text": "Alberta is emerging as the North Star in Canada's government transformation. Google Cloud is proud to power the agentic layer of this digital leap.",
+        "by": "Farsad Nasseri, country managing director, Google Cloud Canada"
+      },
+      {
+        "text": "The Velocity Papers are the first defensible, in-production blueprint for an agentic public service.",
+        "by": "Cole Cioran, managing partner, Canadian Public Sector, Info-Tech Research Group"
+      }
+    ],
+    "source": {
+      "label": "Read the official release on alberta.ca",
+      "href": "https://www.alberta.ca/release.cfm?xID=96456379DDC57-9F6B-FE7E-69C325AD64A91DCD"
+    }
+  },
+  "coverage": {
+    "heading": "In the news",
+    "items": [
+      {
+        "source": "Anthropic",
+        "date": "July 6, 2026",
+        "title": "Government of Alberta Uses Claude to Find and Fix Cybersecurity Vulnerabilities",
+        "href": "https://www.anthropic.com/news/alberta-government-claude-cybersecurity",
+        "summary": "How Alberta's Ministry of Technology and Innovation used Claude Code to scan 466 million lines of code in 20 hours, generate fixes, and stand up continuous red-team and blue-team security review agents across all 27 ministries."
+      }
+    ]
+  },
+  "contacts": {
+    "heading": "Media inquiries",
+    "items": [
+      {
+        "name": "Jonathan Gauthier",
+        "role": "Press Secretary, Office of the Minister of Technology and Innovation",
+        "email": "jonathan.gauthier@gov.ab.ca"
+      },
+      {
+        "name": "Office of the Minister of Technology and Innovation",
+        "role": "General ministerial inquiries",
+        "email": "ti.minister@gov.ab.ca"
+      }
+    ],
+    "substack": {
+      "label": "Follow Minister Glubish on Substack",
+      "href": "https://nateglubish.substack.com/"
+    }
+  }
+}

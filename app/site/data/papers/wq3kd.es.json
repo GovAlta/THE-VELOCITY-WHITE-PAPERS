@@ -1,0 +1,562 @@
+{
+  "id": "wq3kd",
+  "num": "21",
+  "sequence": "21 de 22",
+  "tier": "Technical",
+  "title": "La forma de los datos",
+  "subtitle": "Convertir la información en conocimiento estructurado, consultable y auditable sobre el que una IA pueda razonar.",
+  "track": "Building the Systems",
+  "authors": [
+    "Janak Alford",
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-06-21",
+  "reading_min": 24,
+  "status": "Published",
+  "tags": [
+    "data-pipeline",
+    "rag",
+    "embeddings",
+    "benchmarking",
+    "open-data",
+    "ai-systems"
+  ],
+  "repo": null,
+  "abstract": "La transición de una demostración de IA a un despliegue real es un proceso difícil para la mayoría de las organizaciones. El principal obstáculo es preparar los datos de la organización para que sean compatibles con la IA. Los sistemas de IA eficaces, confiables y auditables requieren una cadena de transformación de datos que convierta documentos ordinarios en conocimiento estructurado, consultable y auditable sobre el que un modelo pueda razonar. Este documento recorre esa cadena etapa por etapa y explica cómo un gobierno puede preparar su amplio acervo público para la IA una sola vez, por unos pocos miles de dólares, y permitir que cualquier persona construya sobre esa base.",
+  "hero_image": {
+    "src": "public/images/wq3kd/es/hero.jpg",
+    "alt": "Una pila desordenada de documentos en papel a la izquierda que se transforma, a medida que avanza hacia la derecha, en una retícula luminosa y ordenada de nodos conectados y etiquetados.",
+    "image_prompt": "A wide editorial illustration showing a loose stack of ordinary paper documents on the left that transforms, as the eye moves to the right, into an orderly glowing lattice of connected labelled cards and nodes. The left side is papery and disordered, the right side is crisp, structured, and luminous. Conveys raw information becoming machine-ready knowledge. Muted Alberta cream base with navy and rust accents. No text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/wq3kd.mp3",
+    "duration_sec": 1766
+  },
+  "tldr_presentation": {
+    "id": "wq3kd-tldr",
+    "title": "El proceso en seis minutos",
+    "locale": "es",
+    "slides": [
+      {
+        "id": "01",
+        "title": "La forma de los datos",
+        "audio_file": "public/audio/es/wq3kd-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Documento 21 · Técnico",
+        "subcaption": "El chatbot es la parte que todo el mundo ve. El proceso es la parte que importa.",
+        "text": "Una herramienta de chat colocada sobre sus documentos impresiona durante cinco minutos y luego se detiene ante trabajos que deben ser correctos, comparables y justificables. Los sistemas reales funcionan con un proceso que convierte documentos ordinarios en conocimiento estructurado, consultable y auditable sobre el que un modelo puede razonar. Este documento explica ese proceso en lenguaje claro y muestra lo que cuesta."
+      },
+      {
+        "id": "02",
+        "title": "La demostración y el sistema",
+        "audio_file": "public/audio/es/wq3kd-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "Por qué las herramientas sencillas no son suficientes",
+        "visual_config": {
+          "left": {
+            "label": "Una herramienta de chat estándar",
+            "body": "Almacena unos pocos archivos por sesión. Responde en prosa que no se puede cuantificar ni comparar. No indica qué cláusula ni en qué página. No deja nada."
+          },
+          "right": {
+            "label": "Un proceso real",
+            "body": "Almacena un corpus completo. Responde con un formato fijo y comparable. Remite cada hallazgo a la página correspondiente. Genera un activo duradero sobre el que otros pueden apoyarse."
+          }
+        },
+        "text": "Herramientas como Copilot y NotebookLM son excelentes, y Alberta las utiliza, para leer un informe o redactar un memorando. Fueron diseñadas para una sola persona y un conjunto pequeño y temporal de archivos. No pueden gestionar un corpus completo, no citan de forma fiable la cláusula y la página, y no dejan nada estructurado como resultado. El uso de la IA en el gobierno falla exactamente en esos puntos."
+      },
+      {
+        "id": "03",
+        "title": "El proceso",
+        "audio_file": "public/audio/es/wq3kd-tldr/03.mp3",
+        "visual": "list",
+        "caption": "La misma maquinaria, independientemente del tema",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Leer",
+              "desc": "Los documentos se convierten en imágenes de página y luego en texto estructurado limpio."
+            },
+            {
+              "label": "Estructurar",
+              "desc": "El texto se divide en una jerarquía etiquetada; no se reescribe ninguna palabra."
+            },
+            {
+              "label": "Identificar",
+              "desc": "Cada fragmento recibe una huella numérica de su significado."
+            },
+            {
+              "label": "Buscar y recuperar",
+              "desc": "Se encuentra el material adecuado por su significado, no solo por palabras clave."
+            },
+            {
+              "label": "Generar con estructura",
+              "desc": "El modelo responde con un formato fijo y comparable."
+            },
+            {
+              "label": "Registrar y auditar",
+              "desc": "Cada ejecución queda registrada y puede reproducirse."
+            }
+          ]
+        },
+        "text": "Para que la información esté lista para la IA, es necesario hacerla pasar por una secuencia fiable de transformaciones. Los documentos se convierten en imágenes de página, luego en texto limpio y después en una estructura etiquetada. Cada fragmento recibe una huella numérica de su significado. La búsqueda y la recuperación localizan el material adecuado. El modelo responde en un formato fijo y estructurado. Y cada paso queda registrado, de modo que toda la cadena puede auditarse y reproducirse."
+      },
+      {
+        "id": "04",
+        "title": "2 500 dólares",
+        "audio_file": "public/audio/es/wq3kd-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Un corpus público preparado para la IA",
+        "visual_config": {
+          "stat_value": "$2,500",
+          "stat_label": "Para preparar para la IA el currículo de educación primaria y secundaria de una provincia"
+        },
+        "subcaption": "El gobierno lo hace una vez. Luego, un padre, un docente o un estudiante puede construir sobre él en una tarde.",
+        "text": "El currículo de educación primaria y secundaria de Alberta está publicado de forma abierta y es accesible para las personas. En esa forma es casi inutilizable para una IA. Procesar todo el corpus a través de este sistema costó aproximadamente dos mil quinientos dólares. Sobre el resultado, desarrollamos un juego de aprendizaje adaptado al nivel del estudiante, Age of Alberta, en aproximadamente una hora, porque la parte más difícil ya estaba hecha."
+      },
+      {
+        "id": "05",
+        "title": "1 059 hallazgos",
+        "audio_file": "public/audio/es/wq3kd-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "Un organismo regulador reduciendo los trámites burocráticos",
+        "visual_config": {
+          "stat_value": "1,059 findings",
+          "stat_label": "A partir de 31 leyes, cada una trazable hasta la página"
+        },
+        "subcaption": "La legislación de Alberta exige a cada ministerio identificar y eliminar trámites burocráticos sin debilitar las protecciones existentes.",
+        "text": "Un organismo regulador provincial debe reducir los trámites burocráticos por mandato legal. Procesamos treinta y un leyes provenientes de catorce jurisdicciones, comparamos la propia ley del regulador cláusula por cláusula con el resto del país y obtuvimos poco más de mil hallazgos. Cada uno ofrece a Alberta un punto de referencia respecto a sus pares, incluye recomendaciones y traza esas sugerencias hasta la oración exacta en otras leyes."
+      },
+      {
+        "id": "06",
+        "title": "Construya la infraestructura base una sola vez",
+        "audio_file": "public/audio/es/wq3kd-tldr/06.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Los metadatos cambian de un ministerio a otro. La maquinaria permanece igual.",
+          "cite": "Papel 21 · La forma de los datos"
+        },
+        "text": "Hemos construido esta misma canalización de datos decenas de veces en el último año: para legislación, planes de estudio, políticas públicas e investigación de mercado. El tema cambia, pero la maquinaria permanece intacta. La lección para cualquier líder es dejar de depender de conversaciones en un chat y comenzar a construir canalizaciones de datos, porque la estructura es lo que realmente responde esta pregunta y las próximas cien."
+      }
+    ],
+    "owner_id": "wq3kd"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Por qué las herramientas sencillas no son suficientes"
+    },
+    {
+      "n": "02",
+      "title": "Qué significa estar preparado para la IA"
+    },
+    {
+      "n": "03",
+      "title": "Extraer las palabras"
+    },
+    {
+      "n": "04",
+      "title": "Dar significado a las palabras"
+    },
+    {
+      "n": "05",
+      "title": "Memoria y auditoría"
+    },
+    {
+      "n": "06",
+      "title": "Un organismo regulador que reduce la burocracia"
+    },
+    {
+      "n": "07",
+      "title": "Útil para las personas, no para la IA"
+    },
+    {
+      "n": "08",
+      "title": "Construcción de capas reutilizables de procesamiento de datos"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "La mayoría de las demostraciones de herramientas de inteligencia artificial resultan impresionantes por unos cinco minutos. Alguien carga una carpeta de documentos en una herramienta de conversación, plantea una pregunta en lenguaje cotidiano y recibe una respuesta fluida en cuestión de segundos. La sala queda impresionada, y con razón, porque las herramientas y los modelos que hacen esto son genuinamente potentes. El problema aparece en el momento en que el trabajo debe ser reproducible, correcto en lugar de meramente fluido, comparable entre miles de elementos en vez de responderse de uno en uno, y justificable meses después, cuando alguien pregunta cómo llegó el sistema a su conclusión. Eso es lo que la mayoría de los trabajos de gobierno realmente necesita, y no es lo que puede hacer un asistente conversacional con un montón de archivos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Durante el último año, el Ministerio de Tecnología e Innovación ha desarrollado sistemas que realizan este trabajo más exigente para ministerios de todo Alberta. Estos sistemas leen bibliotecas completas de legislación, el currículo provincial íntegro y grandes volúmenes de documentación de políticas y documentación técnica, y convierten ese material en bruto en conocimiento sobre el que una IA puede razonar de manera fiable, citar con precisión y rendir cuentas. Detrás de cada uno de estos sistemas se encuentra la misma infraestructura: una cadena de procesamiento que toma documentos ordinarios y los prepara, en una palabra, para la IA. Este documento explica esa cadena en lenguaje accesible, de modo que una persona directiva que nunca escribirá una línea de código pueda entender lo que realmente se necesita para construir un sistema de IA digno de confianza, y pueda distinguir entre una demostración y un sistema confiable."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Por qué las herramientas sencillas no son suficientes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las herramientas de IA más utilizadas hoy en día son los asistentes conversacionales. Microsoft Copilot se integra en los documentos con los que las personas ya trabajan y redacta, resume y responde preguntas sobre ellos. NotebookLM, de Google, toma un conjunto de fuentes que el usuario le proporciona y permite consultarlas, e incluso genera un resumen de audio ordenado. Estas herramientas son excelentes, y Alberta las utiliza. Para leer un informe extenso, redactar un memorando u orientarse en un puñado de archivos, ahorran tiempo real, y las recomendamos exactamente para eso."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estas herramientas fueron diseñadas para una persona que trabaja con un conjunto pequeño y temporal de documentos, y ese es el límite de su diseño. Conservan los archivos solo durante la duración de una sesión, con una cantidad limitada de texto visible a la vez, por lo que no pueden mantener en mente el acervo completo de un ministerio. Responden en prosa fluida, que se lee bien pero no puede ordenarse, contarse ni compararse entre diez mil elementos. Resumirán una cláusula, pero no indicarán de forma fiable qué cláusula, en qué página y de qué documento proviene la respuesta, y no conservan ningún registro duradero que pueda auditarse posteriormente. Cuando la sesión termina, la respuesta desaparece y nada queda construido; no se genera un acervo de conocimiento estructurado y compartido sobre el que pueda apoyarse la siguiente persona o la siguiente herramienta. Reproducir una respuesta exacta o preservar el razonamiento que la sustenta es con frecuencia imposible."
+    },
+    {
+      "type": "paragraph",
+      "text": "El uso de la IA para tareas gubernamentales complejas falla cuando no es posible auditar el trabajo. Una decisión de gabinete debe rastrearse hasta su evidencia. Un análisis comparativo entre catorce jurisdicciones debe ser justificable y estar fundamentado en principios racionales y medibles, o la comparación carece de valor. Y el valor debe perdurar más allá de una sola pregunta o interacción, porque el siguiente programa —y el que le siga— necesitará el mismo acervo de conocimiento. Para ello, los documentos en sí deben ser reorganizados en algo con lo que una IA pueda trabajar a escala. Esta reorganización requiere un enfoque sistemático para transformar la información de formatos incompatibles en perspectivas legibles por la IA, y es un paso esencial en la construcción de cualquier producto basado en inteligencia."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.1",
+      "title": "La demostración y el sistema",
+      "caption": "Una herramienta de conversación responde una pregunta sobre un conjunto cerrado de archivos y luego lo olvida. Una cadena de procesamiento convierte los archivos en conocimiento estructurado, consultable y auditable sobre el que pueden construirse otras herramientas.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-1.jpg",
+        "alt": "A la izquierda: un pequeño globo de conversación sobre una caja negra cerrada de documentos con una línea de puntos que se desvanece. A la derecha: una cadena de procesamiento clara de izquierda a derecha que alimenta una cuadrícula estructurada de tarjetas.",
+        "image_prompt": "A side-by-side comparison diagram. On the left, a single small chat bubble floating over a closed dark box labelled Documentos, with a question mark and a fading dotted line, under the heading La demostración. On the right, a clear left-to-right pipeline of connected labelled boxes (Ingesta, Procesamiento, Organización, Almacenamiento, Entrega) feeding a tidy structured grid of cards captioned Conocimiento estructurado y consultable, under the heading El sistema. Labels: La demostración, El sistema. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Qué significa estar preparado para la IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "Preparar información para la IA consiste en conducirla a través de una secuencia fija de pasos, cada uno de los cuales transforma el documento en bruto o le añade propiedades y estructuras que no tenía. Afortunadamente, podemos utilizar una serie común de secuencias para prácticamente todos los sistemas serios que construimos, independientemente de la materia. Un documento —como un PDF, un archivo de Word o una página web— se transforma primero en imágenes estáticas de sus páginas, luego se convierte en texto estructurado y limpio, y se divide en una jerarquía etiquetada que refleja la organización real del documento. Cada fragmento de esa jerarquía recibe una huella numérica que captura su significado. Estas huellas hacen que todo el acervo sea consultable por significado en lugar de por palabra clave. En colecciones de documentos, secciones o incluso oraciones, una búsqueda recupera las piezas más relevantes. Esas respuestas estructuradas se convierten en los insumos para los sistemas de IA agéntica, que pueden interpretar estos datos para construir paneles, herramientas personalizadas y el texto explicativo, las imágenes y el audio para la audiencia humana. Y cada paso de esta transformación queda registrado, de modo que toda la cadena puede auditarse y reproducirse."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dicho de manera más sencilla, un sistema de IA real necesita siete cosas que un asistente conversacional no proporciona por sí solo: una **memoria** duradera de lo que ha procesado, una forma de **extraer** estructura limpia de fuentes desordenadas, una forma de **recuperar** el material adecuado cuando se necesite, las huellas numéricas —llamadas **representaciones vectoriales** (embeddings)— que hacen posible la recuperación por significado, una **búsqueda** construida sobre ellas, una forma disciplinada de **generar** resultados estructurados y un **registro de auditoría** de todo el proceso. El sistema trabaja con datos estructurados, no con texto suelto, lo que contribuye a que cada respuesta sea comparable, cuantificable y trazable."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.2",
+      "title": "La cadena de procesamiento, de principio a fin",
+      "caption": "La misma infraestructura para legislación, currículo, políticas o investigación. Solo cambian los documentos y la definición de lo que importa.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-2.jpg",
+        "alt": "Un diagrama de flujo amplio de izquierda a derecha con las etapas: documentos, imágenes de páginas, texto limpio, estructura etiquetada, huellas numéricas, búsqueda, recuperación, respuesta estructurada, herramientas y paneles, texto e imágenes y audio, sobre una banda que indica «registrado y auditable».",
+        "image_prompt": "A wide left-to-right flowchart of an end-to-end data pipeline, each stage a labelled box connected by gently curved arrows: Documentos (PDF, Word, Web), Imágenes de páginas, Texto limpio, Estructura etiquetada, Huellas numéricas, Búsqueda, Recuperación, Respuesta estructurada, Herramientas y paneles, Texto, imágenes, audio. A thin horizontal band runs beneath all the stages labelled Registrado y auditable. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Extraer las palabras"
+    },
+    {
+      "type": "paragraph",
+      "text": "La cadena de procesamiento comienza por reunir los documentos fuente y registrar la procedencia de cada uno. Cada documento captura su origen: la dirección exacta desde la que fue descargado, el momento de la descarga, su tamaño y una huella única (el hash MD5) de su contenido, que demuestra que el archivo no fue alterado durante la transferencia. Cualquier persona puede reconstruir toda la biblioteca a partir de ese registro y llegar al conjunto idéntico de archivos. Este paso requiere un juicio humano significativo para establecer los criterios de selección y validar que el conjunto de datos está completo. A esto se refieren quienes dicen «es necesario tener los datos en orden» para usar la IA de manera efectiva. No existen atajos reales aquí, porque expertas y expertos humanos deben curar este contenido, que constituye el fundamento de todo lo que sigue."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.3",
+      "title": "Cada archivo, con prueba de su procedencia",
+      "caption": "Una lista maestra dirige la descarga. Cada archivo se guarda con un pequeño registro de su dirección, la hora de descarga, su tamaño y una huella que prueba que no fue modificado.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-3.jpg",
+        "alt": "Un diagrama de flujo que va desde una lista maestra hasta fuentes oficiales y llega a una carpeta de archivos PDF, cada PDF acompañado de una pequeña tarjeta de registro con dirección, fecha de descarga, tamaño y huella.",
+        "image_prompt": "A flowchart: a master list box on the left, an arrow to a cloud labelled Fuentes oficiales, an arrow down to a folder of PDF files, and each PDF paired with a small sidecar card showing four short lines: dirección, descargado el, tamaño, huella. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Parte de este proceso consiste en convertir los cientos de formatos de archivo distintos que utilizamos en una estructura confiable. Las presentaciones de PowerPoint, los documentos de Word y los PDF son difíciles de leer de manera fiable para las máquinas. El texto dentro de un PDF con frecuencia está encerrado en una maquetación que se pierde o se desordena cuando las herramientas convencionales intentan extraerlo, y las páginas de varias columnas, las tablas, las notas al pie y las enmiendas marcadas se desintegran. Los gráficos y las figuras también se pierden con frecuencia al extraer el contenido para la IA, lo que hace perder el contexto y la intención del conocimiento original. Por eso tratamos los datos de la misma manera en que lo haría una persona: visualizando e interpretando el contenido literal, jerárquico y simbólico como imágenes visuales. Cada página del material fuente se divide en fragmentos manejables (chunks), listos para el análisis por IA. Los documentos fuente y sus imágenes derivadas permanecen disponibles como referencia autorizada para consultas o impugnaciones futuras."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.4",
+      "title": "Las páginas se convierten en imágenes",
+      "caption": "Cada página se renderiza como una imagen de alta resolución, una por página, de modo que el paso siguiente lee una representación fiel de la página en lugar de una capa de texto desordenada.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-4.jpg",
+        "alt": "Un diagrama de flujo sencillo: un icono de PDF, una flecha etiquetada «renderizar cada página» y una pila ordenada de imágenes de página numeradas con una nota que indica «una imagen por página».",
+        "image_prompt": "A simple flowchart: a single PDF icon on the left, an arrow labelled renderizar cada página leading to a neat stack of page images numbered 1, 2, 3, and a small note reading 200 PPP, una imagen por página. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada imagen de página se entrega a continuación a un modelo de IA avanzado —en nuestro caso, Claude ejecutándose dentro de la plataforma Enterprise Agent de Google—, al que se le solicita que lea la página y devuelva texto estructurado y limpio que preserve la estructura que interesa a quien revisa: los encabezados, los números de sección, las notas al pie, los marcadores de página y cualquier énfasis. Este formato se denomina «markdown» y es uno de los dos formatos de documento importantes que presentaremos. Los documentos transmiten significado a través de sus estructuras y relaciones, que van más allá de las palabras en la página. Esta lectura cuidadosa y la conversión a markdown tienen un costo mayor por página que la extracción de texto automática más sencilla y económica (conocida como OCR), pero para texto legal o curricular denso la precisión lo justifica, porque cada error introducido aquí se convierte en retrabajos costosos más adelante. La calidad en este punto debe auditarse y la cadena de procesamiento evaluarse de cerca."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.5",
+      "title": "Una IA lee cada página como lo haría una persona",
+      "caption": "La imagen de la página se envía al modelo, que la transcribe como texto limpio preservando encabezados, números de sección y notas al pie. La imagen es la referencia autorizada; las extracciones automáticas son solo una verificación.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-5.jpg",
+        "alt": "Un diagrama de flujo: una imagen de página, una flecha hacia un recuadro que indica «la IA lee la página», una flecha hacia un documento de texto limpio que muestra un encabezado, un número de sección y una marca de nota al pie, con una nota lateral sobre la imagen como referencia autorizada.",
+        "image_prompt": "A flowchart: a page image on the left, an arrow into a box labelled La IA lee la página (Claude en Vertex), an arrow to a clean text document on the right that shows a heading, a section number, and a footnote mark preserved. A small side note reads: la imagen es la referencia autorizada, las extracciones automáticas son una verificación. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "El formato markdown preserva la maquetación de la página, pero el paso siguiente interpreta la estructura del propio documento. La legislación, los currículos y las políticas tienen cada uno su propia jerarquía. Una ley se divide en partes, las partes en divisiones, las divisiones en secciones, las secciones en subsecciones y párrafos y, finalmente, en oraciones individuales. Para comparar un artículo de la legislación de Alberta con el equivalente de otra provincia, el sistema debe saber qué parte del documento comparar. Y como cada documento es diferente, y cada gobierno utiliza formatos y estándares distintos, es imposible definir una plantilla rígida. Le pedimos a la IA que comprenda y defina dinámicamente una estructura para cada documento. El modelo lee el documento completo y describe las convenciones de redacción lógicas que identifica, luego marca el documento nivel por nivel añadiendo etiquetas que definen cada parte. Los documentos se analizan de lo general a lo particular, y cada sección se revisa y analiza con mayor profundidad hasta que incluso cada oración se extrae individualmente y se etiqueta dentro de esta jerarquía. La comparación es posible entre documentos, sus secciones, divisiones y cláusulas, incluso cuando tienen apariencias completamente distintas."
+    },
+    {
+      "type": "paragraph",
+      "text": "En cada punto de la cadena añadimos verificaciones: se rearma el documento fragmentado hasta reconstituirlo íntegramente, asegurándonos de que no haya un solo carácter fuera de lugar respecto a su formato original. Si se eliminan todas las etiquetas, el resultado debe ser idéntico al texto original. Es una prueba pequeña pero importante con una consecuencia de peso, porque significa que la estructura que impuso la IA nunca modificó silenciosamente ni una sola palabra del documento."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.6",
+      "title": "Se añade estructura, no se cambia ninguna palabra",
+      "caption": "El texto se divide en una jerarquía etiquetada, desde la ley hasta la oración. Al eliminar las etiquetas, el resultado es idéntico, carácter por carácter, al texto de origen.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-6.jpg",
+        "alt": "A la izquierda: un árbol que va de Ley a Parte, a División, a Sección, a Apartado, a Párrafo y a Oración. A la derecha: un pequeño bucle que muestra texto marcado, una flecha para eliminar las etiquetas, de vuelta al texto original, con un signo de igualdad que indica que es idéntico byte a byte.",
+        "image_prompt": "A diagram in two halves. Left half: a tree hierarchy labelled top to bottom Ley, Parte, División, Sección, Subsección, Párrafo, Oración. Right half: a small loop showing a marked-up text block headed TEXTO ETIQUETADO with tag markers, an arrow labelled quitar las etiquetas leading back to an original text block headed TEXTO ORIGINAL, and an equals sign with the note idéntico, byte a byte. The sample sentence inside both blocks reads «Todas las personas son iguales ante la ley.» All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "Se añade estructura, no se cambia ninguna palabra",
+      "value": "100 % alineados",
+      "body": "Todos los documentos del corpus pasan una verificación automática: al eliminar las etiquetas estructurales de la IA, el texto es idéntico, carácter por carácter, al texto de origen producido por el lector de páginas. La estructura es simplemente una anotación que aporta significado en los pasos siguientes."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Dar significado a las palabras"
+    },
+    {
+      "type": "paragraph",
+      "text": "El texto limpio y estructurado es legible en su totalidad o en parte. Las palabras están listas para convertirse en significados. El paso siguiente permite buscar y comparar documentos y sus fragmentos según su significado y la relación entre sus conceptos. Los fragmentos que tratan temas similares acaban con listas similares, aunque no compartan vocabulario: así, una cláusula sobre «proteger el hábitat acuático» y una cláusula sobre «aguas con peces» quedan próximas entre sí, aunque las palabras difieran. Se utiliza un tipo especial de modelo de IA denominado «modelo de incrustación» para convertir el significado en valores numéricos que se almacenan en una base de datos. El sistema está configurado para buscar y encontrar las coincidencias más cercanas entre millones de elementos de forma casi instantánea. Piense en cada número como una huella del significado de ese documento o de una parte de él. Una vez calculados, estos valores son estáticos salvo que el propio texto cambie, lo que hace que la recuperación y el análisis sean rápidos."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.7",
+      "title": "Cada fragmento recibe una huella numérica",
+      "caption": "Cada fragmento de texto se convierte en una larga lista de números que captura su significado. Un significado similar produce una huella similar, almacenada en una base de datos diseñada para encontrar rápidamente las coincidencias más cercanas.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-7.jpg",
+        "alt": "Un diagrama de flujo: tres fragmentos de texto breves, cada uno con una flecha hacia un cuadro que genera una huella numérica, produciendo filas de puntos que fluyen hacia un cilindro de base de datos etiquetado como índice de similitud.",
+        "image_prompt": "A flowchart: three short Spanish text snippets on the left under the heading FRAGMENTOS DE TEXTO («El veloz zorro marrón salta sobre el perro perezoso.», «Un zorro marrón rápido brinca sobre un perro dormido.», «Un ágil zorro pasa por encima de un perro que duerme.»), each with an arrow into a box labelled La IA genera una huella numérica, producing rows of small dots arranged as vectors under the heading HUELLAS NUMÉRICAS, labelled VECTOR 1, VECTOR 2, VECTOR 3, flowing into a database cylinder labelled ÍNDICE DE SIMILITUD. A small note reads: significado similar, huella similar. Spell every word exactly as given, in clean legible capitals. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Estas llamadas «incrustaciones vectoriales» — relaciones numéricas y buscables entre conceptos — permiten ir más allá de la búsqueda por palabras clave hacia la búsqueda semántica. Una persona puede escribir una frase como «plazos de aprobación discrecional» y el sistema devuelve los fragmentos de toda la biblioteca cuyas huellas están más próximas a ella, independientemente de las palabras exactas que utilicen. Esto hace que la recuperación de información sea mucho más natural, ya que nuestros propios sistemas de memoria semántica funcionan de manera similar. Este paso de recuperación es el núcleo de lo que la industria denomina generación aumentada por recuperación. En lugar de pedir al modelo que responda desde su memoria general —lo que puede producir errores con apariencia de certeza—, primero se recuperan los pasajes reales y específicos relacionados con un tema y luego se le entregan al modelo como punto de partida. Los modelos de IA ofrecen resultados muy buenos cuando se les proporciona la información de referencia, y las alucinaciones y las conjeturas desaparecen en gran medida."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.8",
+      "title": "Buscar por significado, no solo por palabras",
+      "caption": "Una frase de búsqueda se convierte en una huella; el sistema encuentra los fragmentos más cercanos en toda la biblioteca, y esos pasajes reales —no la memoria del modelo— se convierten en la evidencia a partir de la cual debe trabajar.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-8.jpg",
+        "alt": "Un diagrama de flujo: un cuadro de búsqueda con el texto «plazos de aprobación discrecional», una flecha que lo convierte en una huella, una flecha hacia el cilindro del índice de similitud y luego una breve lista ordenada de tarjetas de resultados con puntuaciones de proximidad.",
+        "image_prompt": "A flowchart: 1. CONSULTA DE BÚSQUEDA, a search box containing the phrase plazos de aprobación discrecional on the left; 2. an arrow labelled CONVERTIR EN UNA HUELLA to a fingerprint; 3. an arrow into a database cylinder labelled ÍNDICE DE SIMILITUD; 4. DEVOLVER RESULTADOS ORDENADOS (CON PUNTUACIÓN DE CERCANÍA), an arrow out to a short ranked list of result cards from different sources (Código municipal § 24-5.3, Directrices de la Comisión de Planificación, Manual de política de aprobaciones discrecionales), each with a closeness score such as 0,74, 0,71, 0,68. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Al añadir los datos correctos a la instrucción como contexto, se puede pedir a un agente de IA que realice una tarea compleja y estructurada, y que convierta ese material en bruto en una forma muy estandarizada. El sistema está configurado para responder utilizando un formato de datos estructurados llamado JavaScript Object Notation, o JSON, un estándar del sector para gestionar estructuras de datos jerárquicas y fiables. Una persona no especialista puede imaginarlo como un formulario en el que distintos campos, conocidos como claves o atributos, solo pueden rellenarse con valores específicos. Cada respuesta generada por la IA devuelve siempre los mismos campos. Es posible asignar grandes volúmenes de tareas a la IA, y el formato de la respuesta se aplica en todo momento. Al ser el formato fijo, diez mil respuestas pueden ordenarse, contarse, filtrarse y compararse. Esto genera perspectivas reales a partir del análisis, ya que las respuestas a las preguntas pueden compararse y realizarse análisis en profundidad sobre un corpus extenso de conocimiento."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.9",
+      "title": "Una estructura fija, siempre",
+      "caption": "Entran tres insumos: la cláusula de origen, las coincidencias más cercanas entre textos similares y la definición de qué buscar. Sale una plantilla fija, de modo que cada respuesta tiene la misma estructura comparable.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-9.jpg",
+        "alt": "Un diagrama de flujo: tres cuadros de entrada —cláusula de origen, mejores coincidencias entre textos similares, qué buscar— que convergen en un cuadro que completa una plantilla fija y produce una ficha estructurada con campos etiquetados: veredicto, gravedad, palabras clave, mejor ejemplo, comparación, sugerencia, confianza.",
+        "image_prompt": "A flowchart: three input boxes on the left labelled Cláusula fuente, Mejores coincidencias entre pares, Qué buscar, with arrows merging into a box labelled La IA rellena una plantilla fija, producing a structured card on the right headed FICHA ESTRUCTURADA with clearly labelled fields: VEREDICTO, GRAVEDAD, PALABRAS CLAVE, MEJOR EJEMPLO, COMPARACIÓN, SUGERENCIA, CONFIANZA. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Las respuestas estructuradas son la materia prima de todo lo que una persona revisa al final. Estos resultados de la IA en formato estructurado pueden alimentar tableros de control y mapas de calor, y permiten ordenar la información de una manera que facilita su visualización y revisión. También proporcionan formatos predecibles para generar otros tipos de contenido, como texto explicativo, imágenes generadas y audio narrado —un análisis condensado que un directivo ocupado puede asimilar fácilmente—. La máquina organiza la información en una estructura clara y formula recomendaciones. Las personas siguen siendo quienes deciden qué significa."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Memoria y auditoría"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una vez que nuestro conocimiento es indexable y recuperable, cada solicitud que enviamos a un modelo puede registrar un conjunto auditable de entradas. Las preguntas repetidas devuelven resultados muy similares porque las entradas están definidas por los vectores de representación y las salidas están definidas por los esquemas JSON. Las entradas deterministas que se envían a la IA quedan almacenadas, de modo que sabemos qué le pedimos al sistema y cómo inició su tarea. Sus resultados también se guardan en un formato estructurado, lo que permite rastrearlos y evaluarlos a lo largo del tiempo para supervisar el rendimiento del sistema. En lugar de generar texto libre y creativo, la IA completa un informe estructurado y proporciona la evidencia de por qué tomó una decisión, formuló una recomendación o realizó un análisis."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta estructura permite una auditoría profunda del desempeño de la IA. Cada análisis ejecutado registra el razonamiento de la IA: los documentos que consultó, el modelo que utilizó, la versión de la instrucción que siguió y la fecha en que se ejecutó. El análisis puede repetirse múltiples veces sobre el mismo tema y auditarse para detectar variaciones o diferencias. Además, permite comparar los documentos con los resultados de la IA a medida que el corpus mismo cambia. Una persona revisora puede comparar dos versiones de una ley y observar cómo varían las respuestas de la IA. Si alguien pregunta, seis meses después, por qué el sistema recomendó una acción determinada, podemos mostrar las cláusulas precisas que la IA consideró, cómo se compararon, la redacción que condujo a la conclusión y el cuerpo de conocimiento más amplio del que se extrajo la respuesta. Eso es lo que hace que un análisis de IA sea lo suficientemente defendible como para presentarlo ante quien toma decisiones."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.10",
+      "title": "Memoria de trabajo y trazabilidad de auditoría",
+      "caption": "Las solicitudes idénticas se responden sin costo adicional desde una caché. Cada ejecución se conserva íntegra y nunca se sobrescribe, y cada hallazgo remite al documento, la sección y la página de los que proviene.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-10.jpg",
+        "alt": "Dos paneles. A la izquierda, memoria de trabajo: una solicitud, una huella digital, una nota que indica que preguntar de nuevo se responde sin costo. A la derecha, trazabilidad de auditoría: una pila de fichas de ejecución inmutables v1, v2, v3, cada una con un icono de cadena, y una flecha desde un hallazgo hacia la fuente, la sección y la página.",
+        "image_prompt": "A diagram in two panels. Left panel headed Memoria de trabajo: a request box labelled SOLICITUD, a fingerprint icon, and a note reading preguntado de nuevo, respondido sin costo. Right panel headed Trazabilidad de auditoría: a stack of immutable run cards labelled FICHA DE EJECUCIÓN v1, v2, v3, each with a small chain icon and a note reading documentos, modelo, instrucción, hora, and an arrow from a single card labelled HALLAZGO down to a label reading fuente, sección, página. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Un organismo regulador que reduce la burocracia"
+    },
+    {
+      "type": "paragraph",
+      "text": "Considere un organismo regulador provincial con la obligación legal de reducir los trámites burocráticos sin menoscabar el propósito ni la integridad de sus leyes y reglamentos. En Alberta, cada ministerio tiene la obligación de identificar y eliminar procesos innecesarios, demoras y duplicaciones, sin debilitar las protecciones que las normas están destinadas a garantizar. Para un organismo regulador que aprueba proyectos bajo una extensa ley ambiental, la pregunta práctica es precisa: ¿en qué puntos nuestra propia legislación exige a quien solicita una aprobación hacer más, o esperar más tiempo, de lo que requieren normas equivalentes en otras partes del país, sin ningún beneficio ambiental? Responder esa pregunta de forma manual implicaría leer una ley completa cotejándola con las leyes de una docena de otras jurisdicciones, cláusula por cláusula. Este es un proceso que podría llevarle meses o años a un equipo de trabajo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este desafío fue una oportunidad excelente para aplicar un proceso de transformación de datos. La ley propia del organismo regulador y sus reglamentos se convirtieron en la línea de base, y las leyes equivalentes de todas las demás provincias, los territorios y la Corona federal se procesaron siguiendo los mismos pasos descritos anteriormente: decenas de leyes de catorce jurisdicciones, estructuradas, con huella digital y consultables de forma comparativa. Para cada una de las doscientas sesenta y cinco secciones de la ley de referencia, el sistema encontró la sección más similar en cada una de las otras jurisdicciones, lo que produjo cerca de ocho mil comparaciones precalculadas. A continuación, comparó cada sección de Alberta con sus equivalentes a través de cuatro criterios definidos de carga administrativa: si la norma prescribe cómo hacer algo en lugar del resultado que se debe alcanzar; si una aprobación depende de una discrecionalidad abierta sin criterios publicados ni plazos; si una decisión tiene algún límite temporal; y si Alberta exige su propio permiso para algo que ya está autorizado en otro lugar."
+    },
+    {
+      "type": "paragraph",
+      "text": "El resultado fue algo más de mil observaciones, hallazgos y recomendaciones estructurados, cada uno señalando dónde Alberta es más exigente que una jurisdicción comparable y, cuando lo es, identificando la jurisdicción cuya redacción menos gravosa es el mejor modelo, junto con una sugerencia concreta de cómo Alberta podría lograr la misma protección con menos trámites. Dado que la IA produce resultados estructurados, los hallazgos se consolidan en un mapa de calor que una persona revisora puede leer de un vistazo: por área temática, por criterio y por qué jurisdicción comparable aparece con mayor frecuencia como el ejemplo más claro. Cada hallazgo remite a la página de la fuente de la que proviene, de modo que una recomendación puede evaluarse y justificarse hasta la cláusula específica. Los criterios buscan únicamente cargas sin beneficio, y el análisis recibe instrucción explícita de dejar de lado cualquier caso en que Alberta simplemente ofrezca mayor protección."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.11",
+      "title": "Una cláusula medida frente al resto del país",
+      "caption": "Cada sección de Alberta se compara con su equivalente más cercano en todas las demás jurisdicciones, se analiza a través de cuatro criterios de burocracia y se convierte en un hallazgo. Los hallazgos se consolidan en un mapa de calor por tema y por jurisdicción comparable.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-11.jpg",
+        "alt": "A la izquierda: una ficha que representa una sección de Alberta con un abanico de flechas hacia diez fichas pequeñas de jurisdicciones comparables con puntuaciones, que pasan por un embudo de cuatro franjas etiquetado como cuatro criterios de burocracia para producir una ficha de hallazgo. A la derecha: una cuadrícula de mapa de calor con partes de la ley por jurisdicción.",
+        "image_prompt": "A diagram in two parts. On the left, under the heading 1. ANÁLISIS CON CUATRO LENTES DE TRÁMITES BUROCRÁTICOS, a single card labelled Una sección de Alberta with a fan of arrows reaching ten small cards labelled JURISDICCIONES PARES (Columbia Británica, Saskatchewan, Manitoba, Ontario, Quebec, Nuevo Brunswick, Nueva Escocia, Isla del Príncipe Eduardo, Terranova y Labrador, Yukón), each with a score, and the arrows pass through a four-stripe funnel labelled CUATRO LENTES (NECESIDAD, DISEÑO, EJECUCIÓN, IMPACTO), producing a card labelled HALLAZGO. On the right, under the heading 2. MAPA DE CALOR DE TRÁMITES POR PARTE DE LA LEY, a heat-map grid with rows labelled PARTES DE LA LEY (Parte 1 Preliminar, Parte 2 Marco regulatorio, Parte 3 Permisos y autorizaciones, Parte 4 Cumplimiento y aplicación, Parte 5 Apelaciones y revisiones, Parte 6 Disposiciones varias, Anexos) and columns labelled JURISDICCIONES, the cells shaded from light to dark, with a legend PUNTUACIÓN DE TRÁMITES (0–100) · MÁS ALTO = MÁS TRÁMITES. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "Para comparar una ley con el resto del país",
+      "value": "Alrededor de $200",
+      "body": "Procesar 31leyes de 14 jurisdicciones a través del proceso completo costó alrededor de $200 en uso del modelo. El mismo proceso funciona para otros temas, como la regulación interprovincial, la salud laboral, la privacidad o el derecho tributario. Solo cambian los documentos y los criterios de análisis."
+    },
+    {
+      "type": "paragraph",
+      "text": "A partir de este análisis, el organismo regulador dispone ahora de una base de evidencia, construida en pocas horas, que convierte una cuestión política en información comparativa. Los resultados de los agentes señalan cláusulas concretas en las que Alberta podría estar exigiendo más a los sectores regulados que sus pares, y presentan al organismo regulador una variedad de opciones en cuanto a redacción y proceso. La herramienta no es específica al ámbito medioambiental. Si se sustituyen el corpus y los objetivos por los documentos y los criterios de éxito de otro ministerio, el mismo proceso realiza comparativas sobre cualquier cuerpo normativo. A lo largo del último año hemos aplicado este modelo de análisis profundo y comparación en docenas de ocasiones, sobre temas muy diversos, para orientar la estrategia y ofrecer a los líderes una base sólida y justificable para tomar decisiones."
+    },
+    {
+      "type": "pullquote",
+      "text": "Los metadatos cambian de un ministerio a otro. El proceso permanece igual.",
+      "cite": "Documento 21 · La forma de los datos"
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Útil para las personas, no para la IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "El currículo de educación primaria y secundaria de Alberta está publicado de manera abierta y accesible en LearnAlberta.ca. Para un padre que consulta el sitio un martes por la noche, un docente que planifica una unidad didáctica o un estudiante que busca información, es un recurso genuinamente útil, organizado en páginas claras que cualquier persona puede navegar. Es exactamente el tipo de información pública abierta que un gobierno debería ofrecer. Sin embargo, en su forma publicada resulta casi inutilizable para una IA. El contenido está distribuido en miles de páginas web independientes y cientos de archivos PDF, se enmarca en dos sistemas curriculares distintos que organizan las mismas asignaturas de formas diferentes, gran parte está encerrada dentro de documentos, y ninguna parte lleva la estructura ni las características que una máquina necesita para razonar sobre él. Fue diseñado para que una persona lo leyera, y un agente de IA no puede trabajar con él hasta que se reconstruya."
+    },
+    {
+      "type": "paragraph",
+      "text": "Desarrollamos un agente para navegar por este currículo y procesarlo a través de este proceso de tratamiento de datos. Un agente rastreador recopiló de forma sistemática cada página del currículo y cada documento vinculado —más de dos mil cuatrocientos archivos en total—; el lector de páginas convirtió cuarenta y dos mil páginas de PDF en texto limpio. El material fue etiquetado con más de cincuenta mil «etiquetas» curriculares, cada una de ellas correspondiente a un resultado de aprendizaje o a una parte de uno, junto con un conjunto de asignaturas y un nivel de curso. El sistema público de gestión del aprendizaje se convirtió en una base de datos legible por IA de materiales, objetivos y resultados de aprendizaje, con conjuntos de conocimiento estructurados e indexados que una herramienta de IA puede consultar por asignatura, por curso y en su texto completo."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.12",
+      "title": "De recurso público a base, y de base a aplicación",
+      "caption": "Páginas dispersas y archivos PDF, diseñados para personas, se convierten en una base conectada de más de cincuenta mil resultados. Sobre ella, se desarrolló un juego adaptado al nivel del estudiante en aproximadamente una hora.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-12.jpg",
+        "alt": "Un diagrama de tres pasos de izquierda a derecha: páginas web y archivos PDF dispersos etiquetados como «currículo público diseñado para personas», una flecha etiquetada «el proceso» que conduce a un gráfico ordenado y conectado etiquetado «base preparada para la IA, cincuenta mil resultados», y una flecha hacia una pantalla de juego pequeña etiquetada «Age of Alberta, desarrollado en una hora».",
+        "image_prompt": "A three-step left-to-right diagram. Step one: a cluster of scattered web page and PDF icons under the label Currículo público, diseñado para personas. Step two: an arrow labelled El proceso leading into a tidy connected graph of nodes under the label Base preparada para la IA, 50 000+ resultados. Step three: an arrow to a small game-screen icon under the label Age of Alberta, desarrollado en una hora. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "Para preparar el currículo de una provincia para la IA",
+      "value": "Alrededor de $2 500",
+      "body": "Convertir todo el currículo de educación básica y media publicado en una base de datos lista para la IA costó aproximadamente dos mil quinientos dólares en uso del modelo. Un gobierno puede hacer esto una sola vez y, a partir de entonces, cualquier persona en Alberta —una madre o un padre, una persona docente, un estudiante— puede aprovecharla."
+    },
+    {
+      "type": "paragraph",
+      "text": "Con el currículo ya extraído, estructurado y etiquetado por curso y asignatura, es posible desarrollar nuevas herramientas, recursos, planes de lección e incluso nuevas aplicaciones completamente alineadas con el currículo en cuestión de minutos. Una vez procesados los datos, bastó menos de una hora para comenzar a construir nuevas soluciones de aprendizaje sobre este currículo legible por máquina. El Ministerio de Tecnología e Innovación creó un pequeño juego de aprendizaje adaptado al nivel del estudiante, llamado [Age of Alberta](https://ageofalberta.fun), que ofrece una experiencia interactiva y lúdica inspirada en el estilo de Age of Empires de Microsoft, donde las mecánicas de juego son ejercicios de matemáticas, lectura y tareas escolares alineados con el currículo. El juego tardó solo una hora en desarrollarse como prototipo porque los datos ya estaban listos para su interpretación por IA. Un gobierno puede preparar una vez un amplio corpus público para la IA —por el precio de un ordenador portátil modesto— y, al hacerlo, poner a disposición de cada padre, docente y estudiante de la provincia el material base para que desarrollen sus propias herramientas en una tarde. El aprendizaje se fundamenta en hechos, está orientado a los resultados del currículo y está listo para las herramientas de IA que padres, docentes y estudiantes ya utilizan."
+    },
+    {
+      "type": "pullquote",
+      "text": "Dado que los datos estaban preparados para la IA, desarrollar una experiencia de aprendizaje personalizada, alineada con el currículo y adecuada para la edad del estudiante tomó solo una hora y tuvo un costo inferior a 4 dólares.",
+      "cite": "Documento 21 · La forma de los datos"
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Construcción de capas reutilizables de procesamiento de datos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos dos sistemas parecen no tener relación —uno es una comparativa normativa para un organismo regulador y el otro es un currículo escolar—, pero en el fondo son la misma máquina. Documentos como entrada, estructura y características en el proceso intermedio, respuestas estructuradas y auditadas como salida, y un cuerpo de conocimiento duradero que queda disponible. Hemos construido este mismo proceso para legislación, para currículos, para políticas públicas, para grandes volúmenes de documentación técnica y para investigación de mercado y análisis competitivo en distintos sectores, en docenas de ocasiones durante el último año. Cada vez cambia el tema y cambian los criterios de lo que importa; el proceso no cambia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Una vez que los datos están curados, y con un costo reducido, es posible desarrollar herramientas e información valiosas de forma rápida. Lo mejor de todo es que se construyen con un costo casi nulo y se fundamentan en datos reales y fiables. Las soluciones incluyen la evidencia necesaria para ser cuestionadas, auditadas e iniciar conversaciones serias sobre cómo incorporar la IA en un ministerio o una profesión determinados. Un prototipo de análisis regulatorio puede completarse en horas, frente a un trabajo que, contratado y realizado de forma manual, llevaría un año. Además, el trabajo es auditable, porque el proceso de tratamiento de datos muestra exactamente con qué trabajó la IA y puede reproducirse y compararse. Se requieren prácticas rigurosas de gestión de datos, pero el beneficio es considerable."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para un líder que decide cómo invertir en IA, la lección es dejar de comprar conversaciones de chat y empezar a construir procesos de datos y sistemas de memoria. Una herramienta de chat responde rápidamente a la pregunta de hoy, pero olvida con la misma rapidez. Un proceso convierte un conjunto de información en un activo duradero, estructurado y auditable que responde a esta pregunta y a las cien siguientes, sobre el que se pueden construir otras herramientas, y que, cuando la información es pública, se convierte en un bien público. El chatbot es la parte que todo el mundo ve. El proceso es la parte que importa, y cuesta mucho menos construirlo de lo que la mayoría espera. Eso es lo que se necesita para que la información esté lista para la IA, y está al alcance de cualquier gobierno —y de cualquier persona en Alberta— que esté dispuesto a construirlo."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.13",
+      "title": "Construya la base una vez, desarrolle muchas herramientas sobre ella",
+      "caption": "El trabajo costoso y duradero es la base preparada para la IA. Las aplicaciones que se construyen sobre ella —una comparativa, un buscador, un juego de aprendizaje, un informe de investigación— son comparativamente económicas y rápidas.",
+      "image": {
+        "src": "public/images/wq3kd/es/fig-21-13.jpg",
+        "alt": "Un bloque central sólido etiquetado «base preparada para la IA, construida una vez», con varios iconos de aplicaciones que irradian hacia afuera etiquetados «comparativa de trámites burocráticos», «juego de aprendizaje», «búsqueda de políticas», «investigación de mercado», «verificación de cumplimiento».",
+        "image_prompt": "A radial diagram: at the centre a solid block labelled Base preparada para la IA, construida una vez; radiating outward, several small application icons each labelled with a different use such as Comparativa de trámites burocráticos, Juego de aprendizaje, Búsqueda de políticas, Investigación de mercado, Verificación de cumplimiento. A caption reads Construya la base una vez, desarrolle muchas herramientas sobre ella. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "data-pipeline",
+        "rag",
+        "embeddings",
+        "benchmarking",
+        "open-data"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "cux4h",
+    "uwpxr",
+    "eujjc"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "author_verbatim": false,
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 13 campos actualizados."
+      }
+    ]
+  },
+  "translation_status": "reviewed",
+  "source_signature": "2979295635"
+}

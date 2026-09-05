@@ -1,0 +1,363 @@
+{
+  "id": "yu5k9",
+  "num": "16",
+  "sequence": "16 de 22",
+  "tier": "Policy & People",
+  "category": "paper",
+  "title": "Medir el fracaso y el éxito",
+  "subtitle": "Por qué la medida correcta de un programa de IA es la capacidad construida, no los ahorros generados.",
+  "track": "Human and Change Management",
+  "authors": [
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": 6,
+  "status": "Published",
+  "tags": [
+    "measurement",
+    "success-criteria",
+    "readiness",
+    "system-health",
+    "cost",
+    "workforce",
+    "change-management"
+  ],
+  "repo": null,
+  "abstract": "En los últimos dieciocho meses, la provincia ha sido reconocida como uno de los adoptantes más innovadores del sector público en América del Norte. Este documento expone las tres medidas que Alberta utiliza para determinar si ese trabajo está teniendo éxito: la preparación, la salud del sistema y el costo, contabilizados en el conjunto del gobierno.",
+  "hero_image": {
+    "src": "public/images/yu5k9/es/hero.jpg",
+    "alt": "Ilustración de portada editorial: tres indicadores de aguja simples en fila con las agujas inclinadas hacia arriba, evocando medición y progreso, trazados con líneas en azul marino oscuro estilo Alberta y pequeños acentos en terracota sobre papel crema cálido.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. Three simple gauge dials sit in a row, their needles leaning upward to suggest measurement and progress, with fine tick marks around each dial. Calm, archival, abstract. Wide cover aspect. No text, no logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/yu5k9.mp3",
+    "duration_sec": 444
+  },
+  "tldr_presentation": {
+    "id": "yu5k9-tldr",
+    "title": "El documento, en síntesis",
+    "locale": "es",
+    "owner_id": "yu5k9",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Medir el fracaso y el éxito",
+        "audio_file": "public/audio/es/yu5k9-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Libro blanco 15 · Gestión del capital humano y del cambio",
+        "subcaption": "Capacidad construida, no dinero ahorrado.",
+        "text": "La mayoría de las organizaciones miden un programa de IA por el dinero que ahorra. Alberta lo mide por la capacidad. Hacer el mismo trabajo con menos personas sería un error; el objetivo es una fuerza laboral y un gobierno capaces de hacer más. Este libro blanco establece las tres medidas que usamos para determinar si eso está funcionando: preparación, salud del sistema y costo."
+      },
+      {
+        "id": "02",
+        "title": "Qué medimos",
+        "audio_file": "public/audio/es/yu5k9-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Tres medidas",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Preparación",
+              "desc": "¿Puede la organización asumir el cambio? Formación, seguridad, autosuficiencia, gobernanza."
+            },
+            {
+              "label": "Salud del sistema",
+              "desc": "¿Mejora el estado del parque tecnológico? Menos vulnerabilidades, menos trabajo pendiente, menos aplicaciones."
+            },
+            {
+              "label": "Costo",
+              "desc": "¿Crece el valor más rápido que el costo, en todo el gobierno?"
+            }
+          ]
+        },
+        "text": "Tres medidas, cada una elegida porque es difícil cuestionarla. La preparación pregunta si la organización puede asumir el cambio. La salud del sistema pregunta si el parque tecnológico mejora en lugar de deteriorarse. El costo pregunta si el valor crece más rápido que el gasto, contabilizado en todo el gobierno y no en un solo libro contable."
+      },
+      {
+        "id": "03",
+        "title": "Preparación",
+        "audio_file": "public/audio/es/yu5k9-tldr/03.mp3",
+        "visual": "title",
+        "caption": "¿Podemos asumir el cambio?",
+        "subcaption": "Educación, seguridad, autosuficiencia, gobernanza.",
+        "text": "La preparación tiene cuatro componentes. Una fuerza laboral educada y capaz de adaptarse, con la Academia de IA como vehículo. Control de ambos lados de la ecuación agéntica: construir de forma segura y defenderse de actores malintencionados. Autosuficiencia, para que crezcamos más fuertes en lugar de más dependientes de los proveedores. Y una gobernanza que ofrezca a las partes interesadas una confianza genuina."
+      },
+      {
+        "id": "04",
+        "title": "Salud del sistema",
+        "audio_file": "public/audio/es/yu5k9-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Invertir la tendencia",
+        "visual_config": {
+          "stat_value": "~600",
+          "stat_label": "Aplicaciones en la lista de pendientes de modernización"
+        },
+        "subcaption": "Métricas directas, difíciles de rebatir.",
+        "text": "El primer libro blanco describió un parque tecnológico que envejece más rápido de lo que puede renovarse. La salud del sistema plantea preguntas directas: ¿están disminuyendo las vulnerabilidades de ciberseguridad expuestas?, ¿está reduciéndose el trabajo pendiente de aproximadamente seiscientas aplicaciones?, ¿está bajando el número total de aplicaciones? Estas preguntas dejan poco margen para el debate."
+      },
+      {
+        "id": "05",
+        "title": "El costo, bien contabilizado",
+        "audio_file": "public/audio/es/yu5k9-tldr/05.mp3",
+        "visual": "title",
+        "caption": "Hacer más con menos",
+        "subcaption": "El libro contable de todo el gobierno.",
+        "text": "El costo tiene tres perspectivas. Nuestro costo directo como proveedor de TI, donde una entrega más rápida no debe simplemente cambiar una factura de licencias por una factura de IA. El rendimiento de los programas ministeriales que hacen posibles los mejores sistemas. Y la perspectiva más amplia: en un plazo de tres a cinco años, el tamaño y el costo del sector público en relación con la población a la que sirve. El mandato es hacer más con menos."
+      },
+      {
+        "id": "06",
+        "title": "El estándar",
+        "audio_file": "public/audio/es/yu5k9-tldr/06.mp3",
+        "visual": "title",
+        "caption": "El éxito y el fracaso, claramente reconocibles",
+        "subcaption": "Un gobierno capaz de más.",
+        "text": "En conjunto, las tres medidas describen el éxito: una fuerza laboral capaz, un parque tecnológico más saludable y un servicio público que hace más con menos. El fracaso es igualmente reconocible: una dependencia creciente, un trabajo pendiente que no disminuye, costos simplemente trasladados. Alberta continuará publicando los resultados para que cualquier gobierno pueda adoptar lo que funciona y aprender de lo que no."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "La métrica incorrecta"
+    },
+    {
+      "n": "02",
+      "title": "Preparación"
+    },
+    {
+      "n": "03",
+      "title": "Salud del sistema"
+    },
+    {
+      "n": "04",
+      "title": "El costo, contabilizado correctamente"
+    },
+    {
+      "n": "05",
+      "title": "El estándar y su difusión"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "En los últimos dieciocho meses, Alberta ha sido reconocida como uno de los adoptantes más innovadores de la IA en el sector público de América del Norte, a través de la Academia, la fuerza de trabajo agéntica y la fábrica de IA descritas en esta colección. Si bien impulsar la eficiencia es importante, en especial para abordar la deuda técnica, impulsar el rendimiento y la productividad resulta igualmente fundamental. La productividad de Canadá ha ido disminuyendo, la normalización de la IA en el lugar de trabajo parece ya inevitable, y la provincia tiene la intención de mantener a su personal preparado y a sus instituciones capaces. Avanzar a esa velocidad plantea una pregunta legítima, que nos formulan con frecuencia: ¿cómo saben si han tenido éxito?"
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "La métrica incorrecta"
+    },
+    {
+      "type": "paragraph",
+      "text": "Es tentador medir un programa de IA como lo hacen la mayoría de las organizaciones: por el dinero que ahorra. Esa medida es demasiado limitada y, por sí sola, induce a error. Seguir haciendo exactamente el mismo trabajo de hoy con menos personal sería un error: se obtiene un ahorro puntual y se renuncia al premio mayor, un servicio público capaz de hacer más y de hacer cosas que antes no podía. El objetivo de Alberta es desarrollar capacidad y contar con una fuerza de trabajo a la altura del desafío de transformar el patrimonio tecnológico del gobierno. Las tres medidas son la preparación, la salud del sistema y el costo, y cada una fue elegida porque es difícil rebatirla."
+    },
+    {
+      "type": "table",
+      "title": "Qué medimos",
+      "columns": [
+        "Medida",
+        "La pregunta que plantea",
+        "Qué examina"
+      ],
+      "rows": [
+        [
+          "Preparación",
+          "¿Puede la organización asumir el cambio?",
+          "Formación del personal, seguridad en ambos frentes, autosuficiencia, gobernanza."
+        ],
+        [
+          "Salud del sistema",
+          "¿Mejora el estado del parque tecnológico en lugar de deteriorarse?",
+          "Vulnerabilidades de ciberseguridad, el trabajo pendiente de aplicaciones, el número total de sistemas."
+        ],
+        [
+          "Costo",
+          "¿Crece el valor más rápido que el costo?",
+          "Costo directo de TI, rendimiento de los programas ministeriales, tamaño del servicio público en relación con la población."
+        ]
+      ],
+      "caption": "Tres medidas, contabilizadas en el conjunto del gobierno y no en un registro aislado. Cada una se elige para dejar poco margen al debate.",
+      "source": "Ministerio de Tecnología e Innovación."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.1",
+      "title": "Dos varas de medir",
+      "caption": "La mayoría de los programas se miden por el costo que eliminan. La medida más importante es la capacidad que añaden, que es la vara más larga y la que Alberta utiliza para evaluarse a sí misma.",
+      "image": {
+        "src": "public/images/yu5k9/es/fig-15-1.jpg",
+        "alt": "Diagrama dibujado a mano con dos reglas de medición una junto a la otra. La más corta está etiquetada como «costo ahorrado»; la mucho más larga está etiquetada como «capacidad construida».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. Two measuring sticks stand side by side with tick marks. The shorter stick on the left is labelled COSTO AHORRADO. The much taller stick on the right is labelled CAPACIDAD CONSTRUIDA, reaching well above the first. Calm, architectural, legible labels. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Preparación"
+    },
+    {
+      "type": "paragraph",
+      "text": "La preparación pregunta si la organización puede sostener este cambio, y tiene cuatro componentes.\n\nEl primero es la educación. Una fuerza de trabajo que comprende los fundamentos, los conceptos y los límites de estas tecnologías puede adaptarse a lo que venga; una que no los comprende será dependiente y frágil. La [Academia de IA](/paper/dt725) es el vehículo, y la medida es la preparación de la organización y su capacidad de adaptación al cambio.\n\nEl segundo componente es el control de ambos lados de la ecuación agéntica: los contratos necesarios para acceder a las herramientas adecuadas, la seguridad para desarrollar nuevas aplicaciones de forma segura y las defensas para resistir a los actores malintencionados que ahora utilizan las mismas herramientas —un equilibrio que el [Imperativo de Ciberseguridad](/paper/mwo98) aborda en detalle—.\n\nEl tercero es la autosuficiencia. A medida que crece la adopción, ¿nos estamos volviendo más fuertes y más capaces de liderar este trabajo por nuestra cuenta, o más débiles y más dependientes de proveedores externos, con nuestro control y autonomía reduciéndose en proporción al uso de la tecnología?\n\nEl cuarto es la gobernanza: que las reglas vigentes brinden a las partes interesadas una confianza genuina en el modo en que se utiliza la IA. Un programa puede avanzar rápido y aun así fallar en cualquiera de estos cuatro aspectos, razón por la cual la preparación se mide de forma independiente."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.2",
+      "title": "Preparación, en cuatro partes",
+      "caption": "Educación, seguridad en ambos lados de la ecuación agéntica, autosuficiencia y gobernanza. Un programa puede ser ágil y aun así estar poco preparado en cualquiera de ellos.",
+      "image": {
+        "src": "public/images/yu5k9/es/fig-15-2.jpg",
+        "alt": "Diagrama dibujado a mano con una cuadrícula de dos por dos bajo un encabezado que dice «preparación», con las cuatro celdas etiquetadas como «educación», «seguridad en ambos lados», «autosuficiencia» y «gobernanza».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A header at the top reads PREPARACIÓN. Beneath it a two-by-two grid of four equal cells, each labelled clearly: EDUCACIÓN, SEGURIDAD EN AMBOS LADOS, AUTOSUFICIENCIA, GOBERNANZA. Calm, architectural, legible labels. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Salud del sistema"
+    },
+    {
+      "type": "paragraph",
+      "text": "La salud del sistema orienta el programa hacia el problema identificado en el primer documento de esta colección, [el Barco de Teseo](/paper/cux4h): un parque tecnológico que envejece más rápido de lo que puede repararse. Las medidas aquí son directas y difíciles de cuestionar. ¿Están disminuyendo las vulnerabilidades de ciberseguridad? ¿Está reduciéndose el trabajo pendiente de aproximadamente seiscientas aplicaciones? ¿Está cayendo el número total de aplicaciones a medida que se consolidan los sistemas? En síntesis, ¿estamos invirtiendo la tendencia en lugar de simplemente resistirla?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Estas métricas importan porque dejan poco margen para el debate. Enmarcan la eliminación de la deuda técnica en cifras que suben o bajan, y un programa que funciona las moverá en una sola dirección con el tiempo. Uno que no funcione lo mostrará con claridad. No hay relato detrás del cual ocultarse cuando el trabajo pendiente es un único número que se reporta año tras año."
+    },
+    {
+      "type": "keystat",
+      "label": "El trabajo pendiente",
+      "value": "~600 aplicaciones",
+      "body": "Aproximadamente seiscientas aplicaciones aguardan en la lista de pendientes de modernización. Que ese número disminuya año tras año es uno de los indicios más claros de si el programa está funcionando."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.3",
+      "title": "Invertir la tendencia",
+      "caption": "Las vulnerabilidades y el trabajo pendiente de aplicaciones han crecido más rápido de lo que han podido resolverse. La salud del sistema pregunta si las líneas se inclinan hacia abajo y se mantienen así.",
+      "image": {
+        "src": "public/images/yu5k9/es/fig-15-3.jpg",
+        "alt": "Gráfico de líneas dibujado a mano donde una línea ascendente etiquetada «trabajo pendiente y vulnerabilidades» se dobla y desciende a mitad del recorrido, con una flecha etiquetada «invertir la tendencia» que apunta hacia abajo.",
+        "image_prompt": "An editorial line chart on warm cream paper, deep navy line work with small rust accents. A single line rises steeply from the lower left, labelled TRABAJO PENDIENTE + VULNERABILIDADES, then bends at a marked point and turns downward toward the right. A small rust arrow near the bend is labelled INVERTIR LA TENDENCIA. Simple axes, no gridlines. Calm, architectural, legible labels. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "El costo, contabilizado correctamente"
+    },
+    {
+      "type": "paragraph",
+      "text": "El costo es real y tiene más de un ángulo. El primero es nuestro costo directo como proveedor de tecnología del gobierno. La fábrica entrega con mayor rapidez, pero si producir el mismo resultado cuesta más que antes, hemos cambiado un problema por otro, del mismo modo que el mercado ha llevado a los clientes del software con licencia al SaaS y de ahí a la IA, con cada migración creando una nueva categoría de gasto. La rapidez que llega acompañada de un costo nuevo inaceptable no es un logro."
+    },
+    {
+      "type": "paragraph",
+      "text": "El segundo ángulo es más amplio. Gran parte del desempeño de un ministerio está condicionado, para bien o para mal, por la tecnología que lo sustenta; por ello, la pregunta es si mejores sistemas permiten a los ministerios ofrecer mejores programas. La IA trasciende la tecnología y se extiende a la prestación de servicios, la atención a la ciudadanía, el desarrollo de políticas y la evaluación comparativa. La contabilidad honesta es, por tanto, la del conjunto del gobierno, no la de un registro ministerial aislado."
+    },
+    {
+      "type": "paragraph",
+      "text": "El ángulo más amplio es el del propio servicio público. En un plazo de tres a cinco años, ¿su tamaño y costo, medidos en relación con la población a la que sirve, se mantendrán estables o disminuirán? El crecimiento sería difícil de justificar en este contexto. La indicación del ministro es hacer más con menos, y la expectativa es que el servicio público de Alberta se mantenga estable o disminuya en proporción a su población mientras presta más servicios, con la IA compensando la diferencia."
+    },
+    {
+      "type": "keystat",
+      "label": "El mandato",
+      "value": "Hacer más con menos",
+      "body": "La prueba del costo, establecida por el ministro: el servicio público debe mantenerse estable o reducirse en relación con la población a la que sirve, mientras ofrece más."
+    },
+    {
+      "type": "pullquote",
+      "text": "Seguir haciendo el mismo trabajo que hacemos hoy, simplemente con menos personal, sería un error.",
+      "cite": "Janak Alford, Viceministro, Ministerio de Tecnología e Innovación"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.4",
+      "title": "Hacer más con menos",
+      "caption": "La demanda de servicios digitales sigue creciendo. La medida del costo es si el servicio público puede responder a esa demanda mientras su tamaño, en relación con la población, se mantiene estable o disminuye, con la IA compensando la diferencia.",
+      "image": {
+        "src": "public/images/yu5k9/es/fig-15-4.jpg",
+        "alt": "Gráfico dibujado a mano con dos líneas a lo largo del tiempo. Una línea superior etiquetada «demanda» sube de forma sostenida; una línea inferior etiquetada «tamaño del servicio público» se mantiene constante. La brecha entre ambas está etiquetada como «la IA compensa la diferencia».",
+        "image_prompt": "Un gráfico de líneas editorial sobre papel crema cálido, trazos en azul marino profundo con pequeños acentos en óxido. Dos líneas discurren de izquierda a derecha sobre un eje temporal. La línea superior, etiquetada DEMANDA, sube de forma constante. La línea inferior, etiquetada TAMAÑO DEL SECTOR PÚBLICO, se mantiene plana. La brecha que se amplía entre ellas está sombreada suavemente en óxido y etiquetada LA IA CUBRE LA DIFERENCIA. Un pequeño pie de imagen indica HACER MÁS CON MENOS. Etiquetas serenas, arquitectónicas y legibles. Sin logotipos, sin personas. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "El estándar y su difusión"
+    },
+    {
+      "type": "paragraph",
+      "text": "En conjunto, las tres medidas describen cómo se ve el éxito: una fuerza laboral capaz y adaptable, un parque tecnológico que mejora en lugar de deteriorarse, y un servicio público que hace más con menos en todo el gobierno. El fracaso es igualmente reconocible. Una fuerza laboral cada vez más dependiente, un trabajo pendiente que no disminuye, costos simplemente trasladados de una categoría a otra. Nombrar ambos importa, porque una medida que no puede mostrar el fracaso tampoco puede mostrar el éxito."
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta continuará publicando estos resultados a medida que lleguen, con el mismo formato transparente y accesible que el resto de esta colección, para que cualquier gobierno pueda adoptar lo que funciona y aprender de lo que no. El objetivo es un gobierno capaz de más, construido de forma deliberada y evaluado con honestidad según medidas que pueden marcar la diferencia."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 15.5",
+      "title": "El cuadro de mando",
+      "caption": "Tres medidas, leídas en conjunto. Cada una puede subir o bajar, y un programa que funciona mueve las tres en la dirección correcta con el tiempo.",
+      "image": {
+        "src": "public/images/yu5k9/es/fig-15-5.jpg",
+        "alt": "Un cuadro de mando dibujado a mano con tres filas etiquetadas como preparación, salud del sistema y costo, cada una con un sencillo indicador de subida o bajada junto a ella, bajo un encabezado que dice el cuadro de mando.",
+        "image_prompt": "Un diagrama editorial sobre papel crema cálido, trazos en azul marino profundo con pequeños acentos en óxido. Un panel de cuadro de mando sencillo con un encabezado que dice EL CUADRO DE MANDO y tres filas apiladas etiquetadas PREPARACIÓN, SALUD DEL SISTEMA y COSTO. Junto a cada fila hay un pequeño indicador de flecha que apunta hacia arriba o hacia abajo. Etiquetas serenas, arquitectónicas y legibles. Sin logotipos, sin personas. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "measurement",
+        "readiness",
+        "system-health",
+        "cost",
+        "workforce"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "bespoke_scripts": [],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Transposed by Claude from the author's recorded stub.",
+    "author_verbatim": false,
+    "draft": "v1",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 4 campos actualizados."
+      }
+    ]
+  },
+  "related": [
+    "cux4h",
+    "dt725",
+    "mwo98",
+    "k3tc3",
+    "oxj36"
+  ],
+  "translation_status": "reviewed",
+  "source_signature": "2810671808"
+}

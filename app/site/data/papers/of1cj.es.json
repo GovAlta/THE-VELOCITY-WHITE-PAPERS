@@ -1,0 +1,796 @@
+{
+  "id": "of1cj",
+  "num": "18",
+  "sequence": "18 de 22",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "Técnico: El arnés anti-deriva",
+  "subtitle": "Cómo un conjunto de ayudantes automatizados mantiene en coherencia cada parte de una base de código en crecimiento mientras la IA la construye, explicado paso a paso.",
+  "track": "Technical Appendix",
+  "authors": [
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": 12,
+  "status": "Published",
+  "tags": [
+    "anti-drift",
+    "harness",
+    "agents",
+    "quality",
+    "observability",
+    "change-management"
+  ],
+  "repo": null,
+  "abstract": "A medida que las aplicaciones crecen en complejidad, los cambios en una parte del código pueden provocar fallos en otras. Las modificaciones en una función del frontend pueden desincronizarse con la API, los controladores, la base de datos, el modelo de seguridad y la documentación técnica. Los agentes de IA no son suficientemente diligentes por sí solos para comprender o prevenir estos fallos. Cuando estos artefactos se desincronizаn, podemos decir que se produce una «deriva». Este documento conceptual explica el «arnés anti- deriva», un conjunto de ayudantes automatizados que detectan la deriva y señalan los problemas al agente constructor en tiempo real.",
+  "hero_image": {
+    "src": "public/images/of1cj/es/hero.jpg",
+    "alt": "Imagen editorial para: El arnés contra la deriva",
+    "image_prompt": "An editorial cover image for the technical appendix titled \"El arnés contra la deriva\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/of1cj.mp3",
+    "duration_sec": 878
+  },
+  "tldr_presentation": {
+    "id": "of1cj-tldr",
+    "title": "El documento, en resumen",
+    "locale": "es",
+    "owner_id": "of1cj",
+    "slides": [
+      {
+        "id": "01",
+        "title": "El sistema antiderivación",
+        "audio_file": "public/audio/es/of1cj-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Apéndice técnico · documento 17",
+        "subcaption": "Mantener la coherencia entre todas las partes de un código en crecimiento mientras la IA lo construye.",
+        "text": "Un asistente de IA para programación realiza un buen trabajo en cada cambio. El problema es más silencioso y lento: a medida que el proyecto crece, las múltiples piezas de una funcionalidad —el requisito, la base de datos, las pantallas, el texto de ayuda— dejan de estar en concordancia entre sí. A esto lo llamamos derivación. El sistema antiderivación es un conjunto de herramientas automatizadas que la detectan mientras se trabaja y la señalan, en lugar de dejar que una persona la descubra más adelante."
+      },
+      {
+        "id": "02",
+        "title": "Funciona, ¿pero está bien construido?",
+        "audio_file": "public/audio/es/of1cj-tldr/02.mp3",
+        "visual": "stat",
+        "caption": "Dónde se esconde el costo oculto",
+        "visual_config": {
+          "stat_value": "7–10%",
+          "stat_label": "del trabajo se convierte en retrabajo que se acumula con el tiempo, principalmente por desviaciones entre elementos relacionados"
+        },
+        "subcaption": "El código de una IA puede ser correcto entre el 98 y el 100 % de los casos y funcionar, pero estar bien construido internamente solo en torno al 90 % de las veces.",
+        "text": "El código de una IA casi siempre funciona. Por debajo, suele estar bien construido, aunque no siempre. Esa brecha es el costo oculto, y en su mayor parte se debe a la falta de concordancia entre piezas relacionadas, más que a un error evidente. Cuando la IA modifica una pieza, actualiza una o dos vecinas y avanza; el resto queda en silencio desactualizado."
+      },
+      {
+        "id": "03",
+        "title": "Una funcionalidad es una cadena",
+        "audio_file": "public/audio/es/of1cj-tldr/03.mp3",
+        "visual": "title",
+        "caption": "Desde la solicitud hasta la capacitación",
+        "subcaption": "Cambie una pieza y el resto debe cambiar para seguir el paso.",
+        "text": "Una funcionalidad es una cadena de piezas conectadas: desde lo que se solicitó, pasando por la base de datos y el código, hasta las pantallas, la documentación y la capacitación del personal. Si se cambia una, el resto debe cambiar para seguir el paso. La derivación ocurre cuando no lo hacen, y se propaga tanto a lo largo de una funcionalidad como entre funcionalidades que comparten componentes."
+      },
+      {
+        "id": "04",
+        "title": "Siete formas de detectarla",
+        "audio_file": "public/audio/es/of1cj-tldr/04.mp3",
+        "visual": "list",
+        "caption": "Verificaciones simples, en su mayoría automáticas",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Seguir el cambio",
+              "desc": "Rastrear una edición hacia el exterior e informar dónde los elementos ya no coinciden (el Rastreador de Cadena)."
+            },
+            {
+              "label": "Mapear la actividad",
+              "desc": "Un mapa de calor de los archivos que están cambiando, para que las revisiones sepan dónde buscar (la Huella Digital)."
+            },
+            {
+              "label": "Pruebas automáticas pequeñas",
+              "desc": "Verificaciones rápidas de que un par de elementos todavía concuerda, y que crecen con el proyecto (las Evaluaciones)."
+            },
+            {
+              "label": "Notas, fichas, revisiones, un tablero",
+              "desc": "Notas de guardado estructuradas, fichas por archivo, una lista de verificación al final de cada paso y un panel compartido."
+            }
+          ]
+        },
+        "text": "Siete enfoques, desde seguir un único cambio hacia el exterior hasta un panel compartido de todo el proyecto. La mayor parte de la verificación se realiza con lógica fija y repetible; a la IA solo se le pide que evalúe cuando el juicio es genuinamente necesario."
+      },
+      {
+        "id": "05",
+        "title": "Monitores paralelos",
+        "audio_file": "public/audio/es/of1cj-tldr/05.mp3",
+        "visual": "title",
+        "caption": "No es un segundo constructor",
+        "subcaption": "Observan y dejan notas que el constructor recoge.",
+        "text": "Los observadores operan junto al proyecto, no dentro del constructor. Cada uno supervisa los archivos, ejecuta sus verificaciones cuando algo cambia y deja una nota en una carpeta compartida. El constructor lee las notas al inicio de su siguiente paso y las gestiona como cualquier otra tarea. Como las notas son simples archivos, el problema de un observador nunca interrumpe al constructor."
+      },
+      {
+        "id": "06",
+        "title": "Su lugar en el sistema",
+        "audio_file": "public/audio/es/of1cj-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Parte del conjunto",
+        "subcaption": "Bajo el arnés Well-Built; junto a los cuatro agentes de revisión.",
+        "text": "Este componente se encuentra bajo el arnés Well-Built y trabaja junto a los agentes de revisión rojo, verde, azul y amarillo. Responde a la misma presión que describe el Problema de Compresión: a medida que la escala crece, el detalle se pierde en cada transferencia. El arnés existe para que la verificación se ejecute por sí sola, con independencia de si alguien lo recuerda."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "El problema de la deriva"
+    },
+    {
+      "n": "02",
+      "title": "Una funcionalidad es una cadena"
+    },
+    {
+      "n": "03",
+      "title": "Control 1: Seguir el cambio (Recorredor de cadena)"
+    },
+    {
+      "n": "04",
+      "title": "Control 2: Registrar la actividad (Mapa de calor de huellas)"
+    },
+    {
+      "n": "05",
+      "title": "Control 3: Pruebas automáticas pequeñas (Evaluaciones de cadena)"
+    },
+    {
+      "n": "06",
+      "title": "Control 4: Hacer que la nota de guardado cuente (Columna vertebral de confirmaciones)"
+    },
+    {
+      "n": "07",
+      "title": "Control 5: Una ficha por archivo (Manifiesto de dependencias)"
+    },
+    {
+      "n": "08",
+      "title": "Control 6: Una lista de verificación al final de cada paso (Drift Sweep)"
+    },
+    {
+      "n": "09",
+      "title": "Control 7: El panel compartido (Tile Board)"
+    },
+    {
+      "n": "10",
+      "title": "Monitores paralelos"
+    },
+    {
+      "n": "11",
+      "title": "Cómo combinarlos y qué sigue abierto"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Las aplicaciones de software modular están compuestas por funcionalidades que a menudo abarcan decenas de archivos. Estos componentes suelen funcionar como «cadenas» de piezas conectadas que atraviesan el requisito escrito, el diseño de la base de datos, la lógica del programa, las interfaces de usuario, la documentación y los recursos de capacitación. Cuando una IA modifica una pieza, ese componente puede desincronizarse fácilmente con el resto de la base de código. Aunque los cambios individuales pueden ser correctos, la integridad de la aplicación empieza a erosionarse con cada modificación sucesiva. Para resolver este problema, construimos un arnés que contiene varios ayudantes automatizados con el fin de garantizar que las aplicaciones se mantengan íntegras a lo largo de una serie de ediciones."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "El problema de la deriva"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando se pide a la IA que implemente un cambio en un área determinada —como añadir un nuevo campo en un formulario—, el agente completará ese trabajo con rapidez. Sin embargo, puede que no compruebe el resto del código para ver qué más ha afectado ese cambio. Por ejemplo, si se añade un campo «Segundo nombre» a un formulario, esa información debe reflejarse en la base de datos, la lógica de negocio, la validación del formulario, la documentación e incluso en las capturas de pantalla utilizadas para la capacitación. Al estar centrado exclusivamente en la tarea encomendada, el agente de IA a menudo no realiza las verificaciones necesarias para garantizar que el código en su totalidad siga siendo coherente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un usuario experimentado de IA hará pausas cada cierto número de pasos e indicará al agente que compruebe todo. El agente lo hará y, con frecuencia, encontrará inconsistencias introducidas. Estas inconsistencias se conocen como «regresiones» o «deriva» en el dominio de la IA. Aunque el agente puede detectar esta deriva cuando se le solicita, requiere diligencia por parte del usuario, que debe recordar preguntarlo. Confiar en que el usuario lo recuerde, o en que la IA realice las comprobaciones de la misma manera cada vez, es arriesgado. Por eso introducimos un conjunto común de procedimientos para detectar la deriva y señalarla al agente de forma proactiva, independientemente de si alguien lo recuerda."
+    },
+    {
+      "type": "paragraph",
+      "text": "La deriva es fácil de pasar por alto. A menudo, el código modificado puede seguir funcionando. Lo que no es visible es el deterioro de la coherencia y la fidelidad de la aplicación. Además, esta deriva genera inconsistencias que empeoran con el tiempo. Si esa misma interfaz de usuario tiene un campo «Segundo nombre» pero la base de datos carece de él, este error puede no ser detectado de inmediato. Peor aún, el agente de IA revisará este código más adelante y puede encontrar la inconsistencia, pero sin una respuesta autoritativa que señale cuál archivo es el correcto. Los problemas comienzan a acumularse, y la IA puede incluso revertir un cambio porque detecta el error y lo atribuye de manera incorrecta. El código es en sí mismo un tipo de documentación, y cuando existen discrepancias, la deriva empeora de forma invisible."
+    },
+    {
+      "type": "pullquote",
+      "text": "El código que produce una IA es típicamente correcto desde el punto de vista funcional en un 98 a 100 por ciento —es decir, compila y se ejecuta—. Sin embargo, sus prácticas hacen que la deriva crezca de forma invisible con el tiempo y que la base de código se fragmente con cada revisión.",
+      "cite": ""
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Una funcionalidad es una cadena"
+    },
+    {
+      "type": "paragraph",
+      "text": "El código de aplicaciones modernas aspira a ser «modular», es decir, los componentes se construyen una vez y se reutilizan las veces que sea necesario, y «DRY», sigla de «Don't Repeat Yourself» (No te repitas). Estas prácticas garantizan que el código se cree una sola vez y que las aplicaciones sean fáciles de mantener. Sin embargo, también implica que las funcionalidades suelen dividirse en piezas pequeñas e interconectadas. Cuando un archivo requiere de otro archivo, lo llamamos una dependencia. Las funcionalidades pueden entonces estar compuestas por «cadenas» de dependencias. Cuando la IA cambia un eslabón de esa cadena, con frecuencia actualiza de manera fiable el eslabón o los dos inmediatamente adyacentes, porque las dependencias son evidentes, y luego se detiene. Más tarde, cuando el trabajo se retoma en otro lugar, la IA puede leer una parte diferente de la cadena, ahora desactualizada, y construir sobre ella. La cadena se deteriora un poco más cada vez. Si se elimina un campo de la base de datos, por ejemplo, ese cambio debe propagarse a la pantalla, la documentación y las notas de capacitación. La mayoría de las veces, no lo hace."
+    },
+    {
+      "type": "paragraph",
+      "text": "La deriva en las aplicaciones suele propagarse de dos maneras. Se propaga a lo largo de la cadena de una funcionalidad, eslabón por eslabón. También se propaga entre funcionalidades, cuando algo compartido —un componente renombrado o una biblioteca desactualizada— cambia en un lugar y silenciosamente causa fallos en otro. Un buen arnés detecta ambas situaciones, y las detecta mientras el trabajo está en curso, no en una limpieza meses después. Los siguientes siete controles contra la deriva proporcionan estrategias para identificar y mantener la integridad. Cada uno está construido a partir de partes pequeñas y reutilizables: archivos breves de instrucciones que sigue la IA (llamados habilidades), disparadores automáticos que se activan en momentos determinados (llamados ganchos) y verificaciones automatizadas rápidas (llamadas evaluaciones). Estos métodos trabajan junto al agente constructor y apoyan la auditoría del proceso de desarrollo."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Control 1: Seguir el cambio (Recorredor de cadena)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta primera función sigue el cambio hacia afuera a lo largo de la cadena de dependencias de una funcionalidad. En el momento en que la IA edita un archivo, el recorredor parte de ese archivo y avanza hacia sus vecinos en ambas direcciones: las piezas que lo alimentan y las piezas que dependen de él. En cada paso compara ambos extremos. ¿Coinciden los nombres, los campos, las promesas? Donde no coinciden, registra con exactitud qué ha dejado de estar alineado. Continúa recorriendo hasta una distancia establecida y produce un informe ordenado de lo que ha derivado. Su ventaja es el alcance: verifica toda la cadena en lugar de solo el eslabón o los dos adyacentes al cambio, y sus hallazgos son suficientemente específicos para que quien revise pueda ver con precisión qué ha dejado de ser coherente."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.1",
+      "title": "Un cambio se propaga un paso, luego la deriva se acumula",
+      "caption": "Los catorce eslabones de una funcionalidad mostrados como columnas. Un cambio llega y se propaga a sus vecinos inmediatos, y luego se detiene. Los eslabones que debería haber alcanzado, pero no alcanzó se señalan posteriormente como deriva, y el vigilante los marca y deja notas.",
+      "chart": {
+        "kind": "of1cj:chain"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Seguir el cambio, en términos sencillos",
+      "columns": [
+        "Aspecto",
+        "En términos sencillos"
+      ],
+      "rows": [
+        [
+          "Qué hace",
+          "Rastrea un cambio hacia el exterior a lo largo de la cadena e informa dónde los elementos ya no coinciden."
+        ],
+        [
+          "Cuándo se ejecuta",
+          "En el momento en que la IA guarda un cambio en un archivo, y una vez más al final de cada paso."
+        ],
+        [
+          "Qué deja como resultado",
+          "Un breve informe guardado junto al código, que enumera exactamente qué elementos se desviaron."
+        ],
+        [
+          "Más adecuado para",
+          "Detectar desviaciones en toda la cadena, con hallazgos específicos y verificables."
+        ],
+        [
+          "Tenga en cuenta",
+          "Realiza trabajo real en cada edición, por lo que tiene un coste; además, alguien debe definir qué significa «coincidir» para cada tipo de vínculo."
+        ]
+      ],
+      "source": "Inventario de acercamiento del Arnés Anti-Deriva."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Control 2: Registrar la actividad (Mapa de calor de huellas)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este método lleva un registro de dónde se está realizando el trabajo. Cada vez que la IA toca un archivo, añade un conteo. Un sencillo mapa de calor muestra el proyecto como una cuadrícula de celdas, con los archivos más activos iluminados con mayor intensidad y el cambio más reciente marcado. Por sí solo no detecta ninguna deriva. Lo que ofrece es un registro de dónde ha estado la actividad, para que los controles más avanzados sepan dónde buscar primero. Es económico, no requiere configuración y resulta útil desde el primer día."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.2",
+      "title": "Dónde ha estado ocurriendo el trabajo",
+      "caption": "Archivos agrupados por carpeta; cada celda brilla con más intensidad cuanto más se modifica. Las ediciones nuevas destellan y luego se estabilizan. Los archivos más activos se marcan como puntos calientes para que los demás controles los examinen primero.",
+      "chart": {
+        "kind": "of1cj:heatmap"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Registrar la actividad, en términos sencillos",
+      "columns": [
+        "Aspecto",
+        "En términos sencillos"
+      ],
+      "rows": [
+        [
+          "Qué hace",
+          "Mantiene un registro actualizado de los archivos que se están modificando y lo muestra como un mapa de calor."
+        ],
+        [
+          "Cuándo se ejecuta",
+          "De forma silenciosa, en cada edición; la imagen se genera cada vez que usted la solicita."
+        ],
+        [
+          "Qué deja como resultado",
+          "Un registro sencillo y una imagen compartible de dónde se realizó el trabajo."
+        ],
+        [
+          "Ideal para",
+          "Identificar los puntos de mayor actividad de un vistazo y orientar hacia ellos las demás verificaciones. Funciona desde el primer día."
+        ],
+        [
+          "Tenga en cuenta",
+          "Solo muestra actividad; no detecta desviaciones por sí solo, por lo que conviene combinarlo con una herramienta que sí lo haga."
+        ]
+      ],
+      "source": "Inventario de acercamiento del Arnés Anti-Deriva."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Control 3: Pruebas automáticas pequeñas (Evaluaciones de cadena)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este control realiza una prueba pequeña y automática para un tipo específico de discrepancia. ¿El diseño de la base de datos coincide con el script que la construye? ¿La interfaz publicada coincide con su documentación? Cada prueba lee ambos extremos e informa cualquier diferencia. Las pruebas residen junto al código y crecen con el proyecto: cuando aparece un nuevo tipo de enlace, se añade una prueba para él. Cada vez que la IA modifica un archivo, solo se ejecutan las pruebas que afectan a ese archivo. Son rápidas, dan la misma respuesta cada vez y, dado que el equipo las escribe, detectan exactamente los errores que este proyecto tiende a cometer."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.3",
+      "title": "Verificaciones pequeñas, ejecución tras ejecución",
+      "caption": "Cada fila es un par de piezas que deben coincidir; cada columna es una ejecución reciente. Verde indica que pasó, ámbar es una advertencia, rojo indica que falló. Una verificación fallida deja una nota.",
+      "chart": {
+        "kind": "of1cj:evals"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Pruebas automáticas pequeñas, en términos sencillos",
+      "columns": [
+        "Aspecto",
+        "En términos sencillos"
+      ],
+      "rows": [
+        [
+          "Qué hace",
+          "Ejecuta pruebas automáticas pequeñas, cada una de las cuales verifica que un par específico de elementos todavía concuerda."
+        ],
+        [
+          "Cuándo se ejecuta",
+          "De forma inmediata, cada vez que se modifica un archivo que esas pruebas supervisan."
+        ],
+        [
+          "Qué deja como resultado",
+          "Un resultado claro de aprobado o rechazado para cada verificación, guardado junto con el código."
+        ],
+        [
+          "Ideal para",
+          "Verificaciones rápidas y repetibles adaptadas a los errores más comunes del propio proyecto."
+        ],
+        [
+          "Tenga en cuenta",
+          "Alguien tiene que redactar las pruebas y mantenerlas al día a medida que el código evoluciona."
+        ]
+      ],
+      "source": "Inventario de acercamiento del Arnés Anti-Deriva."
+    },
+    {
+      "type": "pullquote",
+      "text": "El vigilante contra la deriva nunca escribe la aplicación en sí. Observa las acciones del constructor, lee la evidencia que producen las verificaciones automáticas, la confirma con el código y decide si algo merece ser señalado. Es el control del tráfico aéreo, no el piloto.",
+      "cite": "El arnés anti-deriva, nota de diseño"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Control 4: Hacer que la nota de guardado cuente (Columna vertebral de confirmaciones)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los desarrolladores ya guardan su trabajo en lotes, cada uno con una nota breve que lo describe (una confirmación). Este enfoque hace que esa nota cumpla una doble función. La nota sigue una plantilla establecida que indica qué piezas tocó el cambio y qué piezas relacionadas fueron verificadas. Cuando el desarrollador archiva el lote, una verificación automática se asegura de que la nota esté completa antes de permitir que continúe, y la IA redacta la nota a partir de lo que realmente modificó. Dado que esto ocurre en el momento en que el trabajo se archiva, el registro es confiable, y con el tiempo el historial del proyecto se convierte en un registro consultable de qué cambió y qué se mantuvo en sincronía."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.4",
+      "title": "Cada guardado, como registro de lo que se mantuvo en sincronía",
+      "caption": "Cada lote de trabajo guardado lista las piezas que tocó. Los marcadores se iluminan a medida que cada lote llega, y un conteo muestra qué parte de la cadena se ha mantenido en sincronía.",
+      "chart": {
+        "kind": "of1cj:commits"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Hacer que la nota de guardado cuente, en términos sencillos",
+      "columns": [
+        "Aspecto",
+        "En términos simples"
+      ],
+      "rows": [
+        [
+          "Qué hace",
+          "Convierte cada conjunto de trabajo guardado en una nota estructurada sobre qué cambió y qué se verificó."
+        ],
+        [
+          "Cuándo se ejecuta",
+          "En el momento en que un desarrollador registra un conjunto de trabajo (un commit)."
+        ],
+        [
+          "Qué deja como resultado",
+          "El historial ordinario del proyecto, convertido ahora en un registro consultable de lo que se mantuvo sincronizado."
+        ],
+        [
+          "Ideal para",
+          "Adopción casi sin coste; reutiliza un registro que los equipos ya conservan."
+        ],
+        [
+          "Tenga en cuenta",
+          "Registra lo que se pretendía en el momento del registro, no si cada elemento se actualizó realmente."
+        ]
+      ],
+      "source": "Inventario de acercamiento del Arnés Anti-Deriva."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Control 5: Una ficha por archivo (Manifiesto de dependencias)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este método asigna a cada archivo importante una pequeña ficha que lista qué lo alimenta y qué depende de él. La ficha se reconstruye cada vez que el archivo cambia, y una verificación rápida compara la ficha con el contenido real del archivo para detectar cualquier inconsistencia. Un pequeño diagrama muestra el archivo en el centro, con lo que fluye hacia él apilado arriba y lo que fluye desde él abajo, cada elemento marcado como saludable, desactualizado o roto. Como cada relación está escrita de forma clara, los demás controles pueden leer las fichas en lugar de releer todo el código."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.5",
+      "title": "Un archivo, qué lo alimenta y qué depende de él",
+      "caption": "El archivo modificado se sitúa en el centro, con lo que lo alimenta arriba y lo que depende de él abajo. Cada conexión se marca como saludable, desactualizada o rota; la rota recibe una nota.",
+      "chart": {
+        "kind": "of1cj:manifest"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Una ficha por archivo, en términos sencillos",
+      "columns": [
+        "Aspecto",
+        "En términos simples"
+      ],
+      "rows": [
+        [
+          "Qué hace",
+          "Asigna a cada archivo una ficha con aquello de lo que depende y lo que depende de él, y comprueba que la ficha se mantenga exacta."
+        ],
+        [
+          "Cuándo se ejecuta",
+          "Cada vez que se modifica un archivo."
+        ],
+        [
+          "Qué deja como resultado",
+          "Una ficha pequeña y legible por archivo, más una verificación del estado."
+        ],
+        [
+          "Ideal para",
+          "Una visión clara, archivo por archivo, de cómo se conectan las cosas, que sigue siendo legible a medida que el proyecto crece."
+        ],
+        [
+          "Tenga en cuenta",
+          "Las fichas pueden quedar desfasadas si se omite una relación; muchos archivos implican muchas fichas."
+        ]
+      ],
+      "source": "Inventario de acercamiento del Arnés Anti-Deriva."
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Control 6: Una lista de verificación al final de cada paso (Drift Sweep)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este control ejecuta automáticamente la lista de verificación de fin de paso, al término de cada etapa. Comprueba los aspectos evidentes: si la documentación coincide con la interfaz activa, si los campos de la base de datos aparecen donde corresponde, si las notas de capacitación describen las pantallas actuales. Genera un informe breve por cada paso. Si la divergencia es excesiva, puede detener la IA y exigir que se corrija antes de continuar. Se ejecuta una vez por paso y no en cada edición, por lo que su costo es predecible, y puede mantener el avance suspendido hasta que todo vuelva a estar en concordancia."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.6",
+      "title": "Un diagnóstico al final de cada paso",
+      "caption": "Al final de cada paso, los catorce vínculos se marcan como correctos, en advertencia o como bloqueo, con el historial apilado debajo. Un vínculo marcado como bloqueo debe corregirse antes de pasar al siguiente paso.",
+      "chart": {
+        "kind": "of1cj:sweep"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Una lista de verificación de fin de paso, en términos sencillos",
+      "columns": [
+        "Aspecto",
+        "En términos simples"
+      ],
+      "rows": [
+        [
+          "Qué hace",
+          "Ejecuta automáticamente la lista de verificación al final de cada paso y puede detener el trabajo hasta que se corrija cualquier desajuste."
+        ],
+        [
+          "Cuándo se ejecuta",
+          "Una vez al final de cada paso (cuando la IA se detiene)."
+        ],
+        [
+          "Qué deja como resultado",
+          "Un breve informe de estado para cada paso."
+        ],
+        [
+          "Ideal para",
+          "Adaptarse al ritmo que las personas ya utilizan, con un coste predecible y la capacidad de detener el proceso."
+        ],
+        [
+          "Tenga en cuenta",
+          "Detecta la desviación una vez completado el paso, y un umbral mal definido genera alertas innecesarias o permite que algo pase inadvertido."
+        ]
+      ],
+      "source": "Inventario de acercamiento del Arnés Anti-Deriva."
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Control 7: El panel compartido (Tile Board)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este es el panel de control para el ser humano y la IA. Representa el proyecto como una cuadrícula: las funcionalidades en un eje y los catorce vínculos en el otro, y colorea cada celda según lo que hayan detectado los demás controles. Es una página única que el equipo puede abrir para ver, de un vistazo, el estado de cada elemento. Además, puede mostrar los resultados de cualquiera de los otros enfoques sin modificarlos. La figura 17.7 lo muestra en funcionamiento en tiempo real: el constructor trabaja, el monitor anti-deriva recorre el proyecto y las notas marcadas se acumulan."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 17.7",
+      "title": "El panel compartido, con un constructor y un recorrido de verificación",
+      "caption": "Las funcionalidades aparecen en un eje y los catorce vínculos en el otro. El constructor avanza por varios pasos; luego el monitor recorre el proyecto, las celdas desactualizadas se iluminan y las notas se acumulan en la carpeta compartida.",
+      "chart": {
+        "kind": "of1cj:board"
+      }
+    },
+    {
+      "type": "table",
+      "title": "El panel compartido, en términos sencillos",
+      "columns": [
+        "Aspecto",
+        "En términos sencillos"
+      ],
+      "rows": [
+        [
+          "Qué hace",
+          "Muestra el proyecto completo en una cuadrícula con código de colores, alimentada por los resultados de las demás comprobaciones."
+        ],
+        [
+          "Cuándo se ejecuta",
+          "Se actualiza al final de cada paso o cada vez que usted lo abre."
+        ],
+        [
+          "Qué deja como resultado",
+          "Una página de panel de control compartible."
+        ],
+        [
+          "Ideal para",
+          "Ver el estado general de un vistazo; es la vista compartida del equipo."
+        ],
+        [
+          "Tenga en cuenta",
+          "Solo muestra información; necesita al menos una de las otras comprobaciones para ser útil."
+        ]
+      ],
+      "source": "Inventario de acercamiento del Arnés Anti-Deriva."
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "Monitores paralelos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos controles se incorporan al agente constructor. Un único agente de IA sobrecargado con todas las preocupaciones a la vez —derivación, seguridad, pruebas, documentación, estilo de escritura— se desborda, y sus instrucciones se expanden hasta dejar de ser útiles. El sistema anti-deriva aplica un enfoque de monitores o supervisores. El constructor mantiene su atención en construir. Los monitores se ejecutan de forma independiente, junto al proyecto, como agentes paralelos propios. Cada uno observa los archivos del proyecto, ejecuta sus propias verificaciones cuando algo cambia y deja una nota —un ticket— en una carpeta compartida para el constructor. El agente constructor lee esos tickets al inicio de su siguiente paso y los gestiona como cualquier otra tarea."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada monitor puede ejecutarse según su propio calendario, e incluso con una IA menos costosa para las verificaciones rutinarias, reservando el modelo más potente para las decisiones más exigentes. Incorporar una nueva preocupación significa añadir un nuevo monitor, no acumular más trabajo sobre el constructor. La figura 17.7 ilustra esta idea a pequeña escala: el monitor anti-deriva observa, recorre el proyecto y deja notas mientras el constructor trabaja."
+    },
+    {
+      "type": "table",
+      "title": "Cómo circula una nota",
+      "columns": [
+        "Etapa",
+        "Dónde se encuentra",
+        "Qué la hace avanzar"
+      ],
+      "rows": [
+        [
+          "Nueva",
+          "la carpeta «abierta»",
+          "Un monitor detecta algo y registra una nota."
+        ],
+        [
+          "Vista",
+          "la carpeta «reconocida»",
+          "El desarrollador la lee al inicio de un paso y la marca como en curso."
+        ],
+        [
+          "Resuelta",
+          "la carpeta «resuelta»",
+          "El desarrollador la corrige, describe cómo lo hizo y la archiva."
+        ],
+        [
+          "Archivada",
+          "un archivo con fecha",
+          "Una limpieza semanal traslada las notas resueltas antiguas fuera del área de trabajo."
+        ]
+      ],
+      "caption": "Cada nota es un pequeño archivo que registra qué cambió, la evidencia correspondiente, una corrección sugerida y qué monitor la generó.",
+      "source": "Patrón de observación del Arnés Anti-Deriva."
+    },
+    {
+      "type": "table",
+      "title": "Quién hace qué",
+      "columns": [
+        "Tarea",
+        "Quién la realiza"
+      ],
+      "rows": [
+        [
+          "Escribir la aplicación",
+          "El desarrollador"
+        ],
+        [
+          "Vigilar desviaciones entre componentes",
+          "El monitor antidesviación"
+        ],
+        [
+          "Ejectuar una revisión seguridad",
+          "El monitor de seguridad"
+        ],
+        [
+          "Detectar pruebas faltantes",
+          "El monitor de cobertura"
+        ],
+        [
+          "Mantener la documentación actualizada",
+          "El vigilante de documentación"
+        ],
+        [
+          "Aplicar el estilo de escritura",
+          "El vigilante de estilo"
+        ],
+        [
+          "Supervisar el rendimiento",
+          "El vigilante de rendimiento"
+        ],
+        [
+          "Trasladar las notas entre ellos",
+          "Una carpeta compartida en el proyecto"
+        ],
+        [
+          "Actuar sobre las notas",
+          "El constructor"
+        ]
+      ],
+      "caption": "El monitor antiderivación es uno entre varios. Los cuatro agentes de revisión que incluye se describen en el [documento sobre los Agentes rojos, azules, verdes y amarillos](/paper/l199t).",
+      "source": "Arnés Anti-Deriva, separación de responsabilidades."
+    },
+    {
+      "type": "section_heading",
+      "n": "11",
+      "title": "Cómo combinarlos y qué sigue abierto"
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos métodos son acumulativos y es posible que no necesite los siete. La combinación más sencilla y útil es el mapa de calor junto con el recorrido de fin de paso: uno muestra dónde se está trabajando y el otro ejecuta la lista de verificación en cada paso. Añada evaluaciones más rigurosas para reforzar el desarrollo y experimente con la ampliación de la cobertura mediante distintos controles de monitoreo."
+    },
+    {
+      "type": "table",
+      "title": "Combinaciones recomendadas",
+      "columns": [
+        "Objetivo",
+        "Usar juntos",
+        "Por qué"
+      ],
+      "rows": [
+        [
+          "El más fácil de comenzar",
+          "Mapa de calor + revisión al final de cada paso",
+          "Uno muestra dónde se realizó el trabajo; el otro ejecuta la lista de verificación al final de cada paso."
+        ],
+        [
+          "El más repetible",
+          "Pruebas automáticas pequeñas + panel de control",
+          "Las pruebas realizan la verificación de la misma manera cada vez; el panel de control muestra los resultados, sin intervención de la IA en el proceso."
+        ],
+        [
+          "La cobertura más amplia",
+          "Recorredor + fichas por archivo + panel de control",
+          "Las fichas proporcionan al recorredor un mapa rápido; el recorredor registra lo que se desvió; el panel de control lo muestra."
+        ],
+        [
+          "El más económico de adoptar",
+          "Guardar notas + mapa de calor",
+          "Disciplina en el momento de archivar, más un registro visual gratuito de lo ocurrido."
+        ]
+      ],
+      "source": "Combinaciones recomendadas del Arnés Anti-Deriva."
+    },
+    {
+      "type": "table",
+      "title": "Aspectos aún abiertos a discusión",
+      "columns": [
+        "Pregunta",
+        "La disyuntiva"
+      ],
+      "rows": [
+        [
+          "¿Dónde deben residir las reglas de coincidencia?",
+          "¿Adaptadas a cada proyecto o compartidas entre todos?"
+        ],
+        [
+          "¿Debe el recorredor basarse primero en reglas fijas o en el criterio de la IA?",
+          "Las reglas fijas son más económicas y menos intrusivas; el criterio es más flexible."
+        ],
+        [
+          "¿Cuánta desviación debe detener el proceso?",
+          "Si es demasiado sensible, resulta molesto; si es demasiado laxo, las cosas pasan inadvertidas."
+        ],
+        [
+          "¿Una ficha por archivo o un mapa general?",
+          "¿A partir de qué tamaño de proyecto resulta más conveniente un único mapa?"
+        ],
+        [
+          "¿Un panel de control nuevo en cada paso o uno en tiempo real?",
+          "Simplicidad frente a información siempre actualizada."
+        ]
+      ],
+      "source": "Preguntas abiertas del Arnés Anti-Deriva."
+    },
+    {
+      "type": "figure",
+      "title": "Explórelo como lienzo interactivo",
+      "caption": "Los monitores externos observan al constructor desde fuera, registran tickets en un sistema de archivos compartido y el constructor los resuelve. Parte de El lienzo (libro 19); arrastre los nodos, haga zoom y pulse Escuchar para una explicación en audio.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "antidrift",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "anti-drift",
+        "harness",
+        "agents",
+        "quality",
+        "observability"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/of1cj/_common.js",
+    "components/visuals/bespoke/of1cj/ChainDrift.js",
+    "components/visuals/bespoke/of1cj/Heatmap.js",
+    "components/visuals/bespoke/of1cj/EvalMatrix.js",
+    "components/visuals/bespoke/of1cj/CommitSpine.js",
+    "components/visuals/bespoke/of1cj/DepTreeCard.js",
+    "components/visuals/bespoke/of1cj/HealthPills.js",
+    "components/visuals/bespoke/of1cj/ObserverBoard.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v2",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 36 campos actualizados."
+      }
+    ]
+  },
+  "related": [
+    "p7p2k",
+    "l199t",
+    "eujjc",
+    "qxlzo",
+    "cux4h",
+    "xs7uh"
+  ],
+  "translation_status": "reviewed",
+  "source_signature": "4116171816"
+}

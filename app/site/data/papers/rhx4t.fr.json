@@ -1,0 +1,418 @@
+{
+  "id": "rhx4t",
+  "num": "11",
+  "sequence": "11 sur 22",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "Étude de cas de l’usine d’IA : de cinq mois à quatre jours",
+  "subtitle": "Une analyse chiffrée de ce que produit l’usine d’IA après six mois.",
+  "track": "Engineering the Solution",
+  "authors": [
+    "Chris Wright",
+    "Sheldon Bauld",
+    "Michelle Dias",
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-06-19",
+  "reading_min": 11,
+  "status": "Published",
+  "tags": [
+    "factory",
+    "delivery",
+    "applications",
+    "technical-debt",
+    "modernization"
+  ],
+  "repo": null,
+  "abstract": "L’équipe de l’usine d’IA a mis au point les processus tout en acquérant les compétences et les normes nécessaires à son bon fonctionnement. Deux études de cas sont présentées ci-dessous; elles illustrent des exemples concrets où le personnel a observé une amélioration de la vitesse de développement par un facteur de 25 et une baisse de 95 % des coûts de livraison. Ensemble, ces deux exemples montrent ce que l’usine produit en pratique, et ce que cela représente pour le coût de la modernisation du gouvernement à grande échelle. Le personnel a contribué à ce document dans ses propres mots, et ce texte est rédigé à la première personne.",
+  "hero_image": {
+    "src": "public/images/rhx4t/fr/hero.jpg",
+    "alt": "Une chaîne de montage moderne et épurée d’où sortent rapidement des applications gouvernementales terminées, avec en arrière-plan un calendrier qui passe des mois aux jours.",
+    "image_prompt": "An editorial cover illustration of a clean, modern software factory: a calm assembly line where finished application panels move along and roll off the end as complete products, with a small calendar or dial motif shifting from a span of months down to a span of days to suggest a dramatic speed-up. A sense of disciplined, repeatable production rather than a chaotic workshop. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/rhx4t.mp3",
+    "duration_sec": 797
+  },
+  "tldr_presentation": {
+    "id": "rhx4t-tldr",
+    "title": "Le document, en bref",
+    "locale": "fr",
+    "owner_id": "rhx4t",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Étude de cas de l’usine d’IA : de cinq mois à quatre jours",
+        "audio_file": "public/audio/fr/rhx4t-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Document 11 · Engineering the Solution",
+        "subcaption": "Ce que produit l’usine d’IA après six mois.",
+        "text": "Étude de cas de l’usine d’IA. L’équipe de l’usine a passé six mois à bâtir les compétences et les normes qui font tourner la chaîne. Deux réalisations concrètes montrent ce qu’elle produit aujourd’hui : une application de subvention qui prenait autrefois cinq mois, reconstruite en quatre jours, et la première application d’IA publique de calibre entreprise en Alberta, livrée en onze semaines. Voici un compte rendu chiffré, dans les mots mêmes de l’équipe."
+      },
+      {
+        "id": "02",
+        "audio_file": "public/audio/fr/rhx4t-tldr/02.mp3",
+        "visual": "stat",
+        "caption": "La reconstruction de l’allocation de chauffage en région éloignée",
+        "visual_config": {
+          "stat_value": "5 mois → 4 jours",
+          "stat_label": "Codée à la main en Java au début des années 2000, reconstruite au moyen de l’usine"
+        },
+        "subcaption": "La version reconstruite a ajouté un portail public que l’originale n’avait jamais eu.",
+        "text": "D’abord, une démonstration de capacité. Il y a vingt-cinq ans, un de nos directeurs a écrit à la main l’application d’allocation de chauffage en région éloignée, en Java. Cela a pris cinq mois. Il a fait passer la même application dans l’usine et l’a reconstruite en quatre jours, avec un nouveau portail destiné au public et la soumission directe de documents que l’originale n’avait jamais offerte. Comme il avait écrit la version d’origine, il pouvait vérifier le résultat par rapport à ce qu’elle devait accomplir, et la qualité a tenu."
+      },
+      {
+        "id": "03",
+        "audio_file": "public/audio/fr/rhx4t-tldr/03.mp3",
+        "visual": "stat",
+        "caption": "Le Portail d’information des salles de classe de l’Alberta",
+        "visual_config": {
+          "stat_value": "108 000 $ contre 1,9 M$",
+          "stat_label": "Livraison par l’usine comparée à une équipe de produit traditionnelle"
+        },
+        "subcaption": "Onze semaines au lieu de jusqu’à dix-huit mois, au même niveau d’exigence d’entreprise.",
+        "text": "Ensuite, une application entièrement nouvelle. Le Portail d’information des salles de classe de l’Alberta est la première application d’IA de calibre entreprise rendue publique par le gouvernement de l’Alberta, conçue pour les directions d’école et le personnel enseignant, avec des contrôles complets de protection de la vie privée, de sécurité et d’identité. Il a été mis en ligne le 1er juin. L’usine l’a livré en onze semaines pour environ cent huit mille dollars. Une équipe traditionnelle y aurait consacré entre un million trois cent mille et un million neuf cent mille dollars et aurait pris jusqu’à dix-huit mois."
+      },
+      {
+        "id": "04",
+        "audio_file": "public/audio/fr/rhx4t-tldr/04.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Il a fallu plus de travail pour créer l’usine que pour en faire sortir les applications. Mais maintenant, on peut prendre moins de personnes et produire plusieurs applications.",
+          "cite": "Chris Wright, Technologie et Innovation"
+        },
+        "text": "L’investissement est allé dans la chaîne, et non dans un produit en particulier. Plus d’efforts ont été consacrés à bâtir l’usine qu’à livrer les premières applications qui en sont sorties. Ce travail réalisé en amont est réutilisable et redéployable; il n’a donc jamais à être refait, et une petite équipe peut maintenant faire fonctionner plusieurs applications à la fois."
+      },
+      {
+        "id": "05",
+        "audio_file": "public/audio/fr/rhx4t-tldr/05.mp3",
+        "visual": "list",
+        "caption": "Pourquoi l’usine tient",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Fiable et réutilisable",
+              "desc": "Le harnais, les agents, le pipeline et les normes sont stables; une équipe restreinte mène plusieurs réalisations à la fois."
+            },
+            {
+              "label": "Bâtie sur la gestion des dossiers",
+              "desc": "Le modèle qui sous-tend la plupart des services gouvernementaux : un citoyen soumet un dossier, le personnel le traite tout au long d’un cycle de vie."
+            },
+            {
+              "label": "N’importe qui peut la faire fonctionner",
+              "desc": "Bien documentée et pédagogique, de sorte que de nouvelles personnes livrent en un jour ou deux."
+            },
+            {
+              "label": "La qualité est intégrée",
+              "desc": "Les contrôles atteignent le même niveau d’exigence que la livraison traditionnelle, à bien moins du dixième du coût."
+            }
+          ]
+        },
+        "subcaption": "Les gains s’étendent à tout l’arriéré de services qui partagent la même structure.",
+        "text": "Ce qui fait tenir l’usine, c’est que les parties difficiles sont résolues une seule fois. Elle est bâtie autour de la gestion des dossiers, la forme que prend la plupart du travail gouvernemental, où un citoyen soumet de l’information et le personnel la mène à travers un cycle de vie défini. Le harnais, les agents et les normes sont stables, le travail est bien documenté, et n’importe qui peut prendre le relais et livrer en un jour ou deux."
+      },
+      {
+        "id": "06",
+        "audio_file": "public/audio/fr/rhx4t-tldr/06.mp3",
+        "visual": "stat",
+        "caption": "Ce que cela représente à grande échelle",
+        "visual_config": {
+          "stat_value": "5 applications",
+          "stat_label": "en parallèle pour une seule équipe restreinte, avec quatre autres d’ici la fin d’août"
+        },
+        "subcaption": "À l’échelle de tout un parc gouvernemental, les économies se chiffrent en milliards.",
+        "text": "Le parc renferme un arriéré énorme que la livraison traditionnelle mettrait des décennies et des milliards à résorber. L’usine change ce calcul. La même équipe restreinte livre cinq applications en parallèle, avec quatre autres prévues d’ici la fin d’août, un travail jamais accompli à ce rythme au gouvernement. Comme le dit l’équipe, le meilleur reste à venir."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Ce que les fournisseurs ne nous disaient pas"
+    },
+    {
+      "n": "02",
+      "title": "L’application d’allocation de chauffage en région éloignée"
+    },
+    {
+      "n": "03",
+      "title": "Ce qui a changé pour moi"
+    },
+    {
+      "n": "04",
+      "title": "Le Portail d’information des salles de classe de l’Alberta"
+    },
+    {
+      "n": "05",
+      "title": "Ce que représente vraiment l’investissement dans l’usine"
+    },
+    {
+      "n": "06",
+      "title": "L’ampleur du problème et ce que cela signifie"
+    },
+    {
+      "n": "07",
+      "title": "Ce que représente vraiment cet investissement"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "La première est l’application d’allocation de chauffage en région éloignée, codée à l’origine à la main en Java il y a vingt-cinq ans, dont l’écriture avait pris cinq mois et qui a été reconstruite en quatre jours au moyen de l’usine. La seconde est le Portail d’information des salles de classe de l’Alberta (ACIP), la première application d’IA de calibre entreprise rendue publique par le gouvernement de l’Alberta, livrée en onze semaines pour environ 108 000 $, comparativement à une estimation de livraison traditionnelle de 1,3 à 1,9 million de dollars."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Ce que les fournisseurs ne nous disaient pas"
+    },
+    {
+      "type": "paragraph",
+      "text": "(Remarque : ce récit est de Chris Wright, qui occupe le jour le poste de directeur des services d’intégration, mais qui s’est joint à l’équipe de l’usine d’IA pour appuyer le projet Pronghorn en janvier 2026, il y a à peine cinq mois.)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Avant de me joindre au programme Pronghorn, je dirigeais une équipe chargée d’appuyer la résorption de la dette technique et les intégrations de systèmes. Dans bon nombre de mes échanges avec des fournisseurs, j’entendais un discours constant au sujet du traitement et de la remise à niveau de nos applications héritées : l’IA présente des limites importantes pour ce genre de travail."
+    },
+    {
+      "type": "paragraph",
+      "text": "J’étais sceptique devant cette position, mais je n’avais aucune preuve pour la vérifier ou la contredire. Je n’avais pas moi-même utilisé ces outils en profondeur. Je ne pouvais rien opposer de concret. Et pour être juste envers les fournisseurs : ce que nous sommes capables de faire aujourd’hui n’aurait pas été réalisable il y a douze mois. Les modèles n’en étaient pas là. La technologie a évolué plus vite que la plupart des organisations, y compris nos partenaires fournisseurs, ne pouvaient le suivre. L’Alberta investissait massivement dans son personnel par l’entremise de l’Académie de l’IA et bâtissait des capacités et des solutions à l’interne plutôt que d’attendre le marché, ce qui nous a donné l’avantage du premier arrivé."
+    },
+    {
+      "type": "paragraph",
+      "text": "C’est en partie pourquoi j’ai adhéré au projet Pronghorn, qui est devenu le modèle global de l’usine d’IA. Je voulais découvrir par moi-même ce qui était possible. L’Académie de l’IA de l’Alberta a renforcé cette base. Entre les deux, ma compréhension de ce que l’IA peut réellement faire a changé de façon substantielle, et avec elle ma capacité d’avoir un autre type de conversation avec les fournisseurs avec qui nous travaillons."
+    },
+    {
+      "type": "paragraph",
+      "text": "L’écart entre ce que les fournisseurs décrivaient comme les limites de l’IA et ce que les outils produisaient réellement en pratique s’est révélé important. Les deux applications décrites dans ce document témoignent de cet écart."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "L’application d’allocation de chauffage en région éloignée"
+    },
+    {
+      "type": "paragraph",
+      "text": "Il y a vingt-cinq ans, j’ai écrit l’application d’allocation de chauffage en région éloignée pour Alberta Agriculture. Je l’ai codée moi-même en Java. L’application gère un programme de subvention pour les Albertains qui vivent si loin du réseau de gaz naturel qu’ils chauffent leur domicile au mazout ou au propane. À l’époque, on ne s’attendait pas à ce que les gens de ces endroits aient accès à Internet, alors l’application a été bâtie uniquement comme un portail interne. Le personnel d’Agriculture reçoit par la poste les documents des demandeurs, les saisit dans le système et émet un chèque."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette application, avec les correctifs de sécurité appliqués au fil des ans, fonctionne encore aujourd’hui. Elle n’a pas été remplacée. C’est un exemple simple de la dette technique présente dans tout le parc gouvernemental : des systèmes fonctionnels, écrits à une autre époque, entretenus mais non modernisés."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pendant le programme Pronghorn, cette application est ressortie comme l’un des exemples à traiter. Je l’ai reconnue immédiatement. Je sais exactement ce qu’elle fait, ce qu’elle doit produire et combien de temps il a fallu pour la bâtir la première fois. Je l’ai fait passer dans l’usine. La reconstruction a pris quatre jours, et la nouvelle version comprend un portail en ligne destiné au public que l’originale n’avait jamais eu, ainsi que des fonctions supplémentaires, dont une option de soumission directe de documents qui remplace le processus d’envoi par la poste."
+    },
+    {
+      "type": "keystat",
+      "label": "Temps de livraison",
+      "value": "5 mois → 4 jours",
+      "body": "L’application d’allocation de chauffage en région éloignée avait pris cinq mois à bâtir à la main au début des années 2000. La même application, reconstruite avec des fonctions destinées au public ajoutées au moyen de l’usine d’IA, a pris quatre jours."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.1",
+      "title": "Vingt-cinq ans de dette technique, reconstruits en quatre jours",
+      "caption": "Une application de subvention codée à la main en Java au début des années 2000, maintenue en vie par des correctifs mais jamais modernisée, a été passée dans l’usine et reconstruite en quatre jours, avec un nouveau portail destiné au public que l’originale n’avait jamais eu.",
+      "image": {
+        "src": "public/images/rhx4t/fr/fig-11-1.jpg",
+        "alt": "Une vieille application sur terminal des années 1990, à gauche, se transforme, par-delà une flèche rouille, en un portail Web moderne et épuré sur un ordinateur portable, à droite, tous deux intitulés Application d’allocation de chauffage en région éloignée, avec à l’horizon une ferme isolée chauffée par un réservoir de propane, loin d’un gazoduc.",
+        "image_prompt": "A clean editorial before-and-after diagram of one government application, split left to right with a large rust arrow across the middle. LEFT HALF, labelled \"SYSTÈME HÉRITÉ\": a boxy 1990s beige desktop computer showing a plain text terminal screen, with a paper form and a sealed mailing envelope beside it. RIGHT HALF, labelled \"SYSTÈME MODERNE\": the same application reborn as a clean modern web portal on a slim laptop, with a small PDF document and an upward upload arrow beside it for direct document submission. Background across the top: a quiet rural scene with a small farmhouse and a propane tank, set far from a thin natural gas pipeline running along the horizon. Include ONLY these exact text labels, each spelled exactly and large enough to be perfectly legible: \"SYSTÈME HÉRITÉ\", \"SYSTÈME MODERNE\", and the application title \"Application d’allocation de chauffage en région éloignée\" shown once on each side. Do NOT add any other words, field labels, menu items, or body text anywhere; leave all form fields and screen lines as blank ruled lines or empty boxes so there is no risk of misspelled or garbled text. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "Cinq mois la première fois, quatre jours la seconde, et la version reconstruite en fait plus que l’originale.",
+      "cite": "Chris Wright, Technologie et Innovation"
+    },
+    {
+      "type": "paragraph",
+      "text": "La reconstruction de l’allocation de chauffage en région éloignée était un prototype. Sa valeur tient à la démonstration de capacité qu’elle offre. Comme j’avais écrit le code d’origine, je pouvais évaluer le résultat avec une connaissance directe de ce qu’il devait faire. La qualité a tenu. La vitesse de livraison était d’un tout autre ordre de grandeur."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Ce qui a changé pour moi"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quand j’ai commencé ce travail, ma compréhension de l’IA se limitait à ce que la plupart des gens en font l’expérience : une interface de clavardage qui peut aider à rédiger un document. C’est un outil utile."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce que je peux faire maintenant, c’est évaluer ce dont l’IA est véritablement capable et là où elle a de réelles limites. Je peux remettre en question les affirmations des fournisseurs avec des connaissances précises plutôt qu’avec de la méfiance. Je peux examiner un parc d’applications complexe et y voir un chemin de livraison concret plutôt qu’un mur de travail accumulé. Ce changement a pris du temps et a exigé de la pratique sur le terrain, mais il ne va que dans une seule direction. Je ne crois pas qu’il existe un poste dans ce ministère dont le travail ne devrait pas changer en raison de cette technologie."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Le Portail d’information des salles de classe de l’Alberta"
+    },
+    {
+      "type": "paragraph",
+      "text": "(Remarque : le reste du texte est rédigé par Chris Wright et Sheldon Bauld, avec l’appui de Michelle Dias.)"
+    },
+    {
+      "type": "paragraph",
+      "text": "L’ACIP est une nouvelle application, bâtie à partir de zéro selon les méthodes de l’usine, et elle a été mise en ligne le 1er juin 2026. Conçue pour les directions d’école et le personnel enseignant de tout l’Alberta, elle exigeait l’ensemble complet des contrôles d’entreprise : protections de la vie privée, examen de sécurité, gestion de l’identité et infrastructure de production."
+    },
+    {
+      "type": "paragraph",
+      "text": "Avant l’ACIP, l’Alberta avait offert au public des utilitaires assistés par l’IA, mais rien qui exigeait l’ensemble complet des protections de gouvernance, de sécurité et de protection de la vie privée d’une application d’entreprise. L’ACIP est la première. Ce n’est pas un outil que l’on pouvait se permettre de rater, et il a été livré au même standard que n’importe quelle application qui serait sortie d’une équipe de produit traditionnelle."
+    },
+    {
+      "type": "paragraph",
+      "text": "La différence tient au temps et au coût. Une équipe de produit traditionnelle aurait pris environ un an à un an et demi pour livrer une application de cette complexité. L’ACIP a été livré en onze semaines. Le coût de la réalisation par l’usine s’est élevé à environ 108 000 $. La livraison traditionnelle équivalente aurait coûté entre 1,3 et 1,9 million de dollars."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.2",
+      "title": "La première application d’IA publique de calibre entreprise",
+      "caption": "Le Portail d’information des salles de classe de l’Alberta, conçu pour les directions d’école et le personnel enseignant, comportait l’ensemble complet des contrôles d’entreprise (protection de la vie privée, examen de sécurité, gestion de l’identité, infrastructure de production) et a été mis en ligne le 1er juin 2026.",
+      "image": {
+        "src": "public/images/rhx4t/fr/fig-11-2.jpg",
+        "alt": "Un portail d’information des salles de classe épuré sur une tablette tenue par un éducateur, entouré de petits emblèmes de contrôles d’entreprise pour la protection de la vie privée, la sécurité et l’identité.",
+        "image_prompt": "An editorial illustration of a clean, modern classroom information portal shown on a tablet or screen held by an educator standing before a simple chalkboard and a few desks. Around the screen, a small ring of enterprise-control emblems is drawn: a privacy padlock, a security shield, an identity key, and a server for production infrastructure, each connected to the application by a thin line. A sense of a trustworthy public service built to a high bar. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "ACIP : livraison par l’usine comparée au traditionnel",
+      "value": "108 000 $ contre 1,9 M$",
+      "body": "Le Portail d’information des salles de classe de l’Alberta a été livré en onze semaines selon les méthodes de l’usine, pour un coût d’environ 108 000 $. La livraison traditionnelle d’une application équivalente aurait coûté entre 1,3 et 1,9 million de dollars et aurait pris jusqu’à dix-huit mois."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Ce que représente vraiment l’investissement dans l’usine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le travail consacré à bâtir l’usine a été considérable. Plus d’efforts ont été investis dans la création de l’usine que dans la livraison des premières applications qui en sont sorties. Cet investissement réalisé en amont est facile à remettre en question jusqu’à ce qu’on voie ce qu’il produit."
+    },
+    {
+      "type": "paragraph",
+      "text": "L’usine est désormais fiable. Le harnais, les agents, le pipeline et les normes sont assez stables pour que de petites équipes restreintes puissent faire fonctionner plusieurs applications en parallèle. L’infrastructure est réutilisable et redéployable. Le travail de fondation n’a pas à être refait pour chaque application, et c’est là que les économies pour le contribuable s’accumulent. Les contrôles de qualité sont intégrés. La refonte requise dans les premières réalisations a été faite. L’usine a été bâtie et éprouvée autour de la gestion des dossiers, le modèle qui sous-tend la majorité des services gouvernementaux. Presque tous les programmes que le gouvernement gère comportent le même problème à deux volets : un citoyen soumet de l’information pour créer ou mettre à jour un dossier, et le personnel traite ce dossier à travers un cycle de vie défini. Les prestations, l’application de la loi, la délivrance de permis et les subventions sont autant de variations de ce modèle. Bâtir l’usine autour de ce modèle signifie que les gains d’efficacité s’étendent à tout l’arriéré de services gouvernementaux qui partagent la même structure, et non seulement aux applications déjà livrées."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque application qui passe maintenant par l’usine profite de toutes les réalisations précédentes. Les modèles sont établis. Les problèmes courants ont été résolus. Ce qui exigeait autrefois un ajustement constant fonctionne maintenant de façon régulière. C’est tout l’intérêt d’une usine : l’investissement dans la chaîne se rentabilise sur tout ce qu’elle produit."
+    },
+    {
+      "type": "paragraph",
+      "text": "L’usine est aussi conçue pour que n’importe qui puisse la faire fonctionner. De nouvelles personnes peuvent prendre le relais et commencer à livrer des applications en un jour ou deux. Le travail est pédagogique et bien documenté. On ne dépend pas de la disponibilité d’une seule personne, et on ne repart pas de zéro lorsqu’une nouvelle personne arrive. Ce genre de souplesse en matière de personnel compte au gouvernement, où la continuité ne peut être tenue pour acquise et où le savoir institutionnel a tendance à s’en aller. C’est une grande partie de la raison pour laquelle le travail consacré à bâtir l’usine compte autant que n’importe quelle application qu’elle produit. La documentation, les normes et le savoir institutionnel sont consignés dans la chaîne elle-même plutôt que détenus dans la tête d’une seule personne; ainsi, lorsque quelqu’un passe à un autre ministère ou fait carrière à l’extérieur du gouvernement, la capacité demeure avec nous. L’objectif est de former les personnes les plus solides possible tout en gardant fermement entre nos mains le savoir qui fait tourner nos systèmes, afin de demeurer maîtres de ce que nous bâtissons."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.3",
+      "title": "L’investissement est dans la chaîne, et non dans le produit",
+      "caption": "L’essentiel de l’effort est allé à bâtir l’usine elle-même : le harnais, les agents, le pipeline et les normes. Réutilisable et redéployable, elle permet maintenant à une petite équipe de faire fonctionner plusieurs applications en parallèle, et le travail de fondation n’est jamais refait.",
+      "image": {
+        "src": "public/images/rhx4t/fr/fig-11-3.jpg",
+        "alt": "Une seule chaîne de production bien conçue, bâtie une fois, sur laquelle plusieurs applications progressent en parallèle, sur des voies distinctes, vers l’achèvement.",
+        "image_prompt": "An editorial illustration of a single, well-engineered production line shown as the centrepiece, built once and clearly solid. Several application products move along it on parallel tracks at the same time, each at a different stage of completion, tended by just one or two small figures. The emphasis is on the reusable line itself rather than any single product. A sense of front-loaded investment paying back across many outputs. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "Il a fallu plus de travail pour créer l’usine que pour en faire sortir les applications. Mais maintenant, on peut prendre moins de personnes et produire plusieurs applications.",
+      "cite": "Chris Wright, Technologie et Innovation"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "L’ampleur du problème et ce que cela signifie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le gouvernement de l’Alberta a un arriéré énorme d’applications à réécrire, à moderniser ou à remplacer. Résorber cet arriéré par la livraison traditionnelle prendrait des décennies et coûterait des milliards de dollars. Ce chemin ne mène nulle part d’utile."
+    },
+    {
+      "type": "paragraph",
+      "text": "L’usine change ce calcul. Des applications qui prendraient un an à une équipe de développement traditionnelle peuvent être livrées en quelques semaines. L’écart de coût entre la livraison par l’usine et la livraison traditionnelle, démontré dans l’ACIP, atteint un ordre de grandeur. À l’échelle de tout un parc gouvernemental, cela s’additionne."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si cette approche était étendue à l’ensemble des gouvernements fédéral et provinciaux au Canada, les économies se chiffreraient en dizaines de milliards de dollars. Ce chiffre est une extrapolation à partir de coûts déjà démontrés en production."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.4",
+      "title": "Un arriéré qui se mesure en décennies, résorbé en quelques semaines",
+      "caption": "Le parc renferme un arriéré énorme de systèmes à réécrire ou à remplacer. La livraison traditionnelle prendrait des décennies et des milliards de dollars; l’usine livre en quelques semaines à un coût inférieur d’un ordre de grandeur, et les gains s’étendent à tous les services qui partagent le modèle de gestion des dossiers.",
+      "image": {
+        "src": "public/images/rhx4t/fr/fig-11-4.jpg",
+        "alt": "Une pile imposante de vieilles caisses d’applications héritées, à gauche, alimente la chaîne de l’usine et ressort à droite sous la forme d’un petit ensemble ordonné d’applications modernes.",
+        "image_prompt": "An editorial illustration of a towering, leaning stack of old legacy application crates and binders on the left, labelled only by their worn, dated look, feeding into a compact modern factory line in the centre, and emerging on the right as a small, orderly row of clean modern applications. A sense of an overwhelming backlog being steadily and rapidly cleared. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Ce que représente vraiment cet investissement"
+    },
+    {
+      "type": "paragraph",
+      "text": "L’Alberta a fait un pari. La décision d’investir dans la construction de cette capacité à l’interne, plutôt que d’attendre que le marché des fournisseurs la livre, n’était ni un choix sûr ni un choix évident. La plupart des gouvernements ne l’ont pas fait. Le calcul de cette décision est maintenant visible : les économies de coûts sont réelles, les chiffres tiennent la route, et les applications fonctionnent en production comme un modèle de livraison démontré."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les équipes de produit traditionnelles comptent de cinq à neuf personnes, le plus souvent autour de sept. Pour de plus grands portefeuilles, on pourrait avoir quatre ou cinq de ces équipes travaillant en parallèle, avec un effectif et un budget qui grimpent vite. La livraison par l’usine d’IA change entièrement ce rapport. La même petite équipe qui mène actuellement Pronghorn livre cinq applications en parallèle."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les gains d’efficacité ne se font pas au détriment du résultat. Les normes intégrées à l’usine produisent des résultats qui atteignent le même niveau d’exigence que la livraison traditionnelle, à bien moins du dixième du coût."
+    },
+    {
+      "type": "paragraph",
+      "text": "La livraison technologique du gouvernement a connu trois époques. Les grands contrats de fournisseurs, ceux qui coûtaient des dizaines de millions de dollars, s’étiraient sur des années et ne rapportaient souvent que peu, ont cédé la place aux équipes de produit. Les équipes de produit ont réduit le temps et le coût d’environ la moitié et ont représenté une véritable amélioration. La livraison par l’usine d’IA marque un bond plus grand encore. Le gain d’efficacité est d’un tout autre ordre de grandeur, et la trajectoire est familière : chaque époque a semblé le plafond jusqu’à l’arrivée de la suivante."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.5",
+      "title": "Trois époques de la livraison gouvernementale",
+      "caption": "Les grands contrats de fournisseurs pluriannuels ont cédé la place aux équipes de produit, qui ont réduit le temps et le coût d’environ la moitié. La livraison par l’usine d’IA est le prochain bond, un changement d’un ordre de grandeur, et comme chaque époque avant elle, le plafond d’aujourd’hui est le plancher de demain.",
+      "image": {
+        "src": "public/images/rhx4t/fr/fig-11-5.jpg",
+        "alt": "Trois marches ascendantes : un lourd contrat de fournisseur pluriannuel, une équipe de produit de taille moyenne et une usine d’IA compacte et rapide, chacune livrant plus pour moins que la précédente.",
+        "image_prompt": "An editorial illustration of three ascending steps or tiers reading left to right as a progression. The lowest and largest step shows a heavy, slow multi-year vendor contract drawn as a massive ledger; the middle step shows a mid-size product team as a small cluster of figures; the highest step shows a compact, fast AI factory line. Each step is smaller in cost yet higher in output than the one before, suggesting an order-of-magnitude jump. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos, no people faces. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "Le meilleur reste à venir. En ce moment, nous voyons surtout les problèmes, les choses qui restent à régler. D’ici la fin d’août, Pronghorn aura lancé quatre applications de plus. C’est la même équipe restreinte, cinq applications en deux ou trois mois. Dans un contexte gouvernemental, de telles vitesses sont rarement atteintes.",
+      "cite": "Sheldon Bauld, Technologie et Innovation"
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "factory",
+        "delivery",
+        "applications",
+        "technical-debt",
+        "modernization"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "related": [
+    "zgym1",
+    "p7p2k",
+    "qthji",
+    "k3tc3",
+    "cux4h"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": "rhx4t.en.json"
+  },
+  "translation_status": "final"
+}

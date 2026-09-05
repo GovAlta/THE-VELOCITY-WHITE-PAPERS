@@ -1,0 +1,46 @@
+{
+  "_note": "Resources page content for one locale. The sibling .<other>.json holds the translation. Set each item's href to the official URL; an empty href renders as 'link to be added'.",
+  "page": {
+    "eyebrow": "Ressources",
+    "title_lead": "Contexte et",
+    "title_em": "ressources.",
+    "lede": "Un petit ensemble de liens sélectionnés qui situent ce travail dans son contexte plus large, juste assez pour comprendre où il se place sans éclipser la contribution propre de l’Alberta."
+  },
+  "groups": [
+    {
+      "heading": "Gouvernement de l’Alberta",
+      "items": [
+        {
+          "title": "Ministère de la Technologie et de l’Innovation",
+          "desc": "Le ministère du gouvernement de l’Alberta à l’origine de cette collection, qui dirige le programme provincial en matière de technologie, d’innovation, d’IA, de centres de données, de cybersécurité et de gouvernement numérique.",
+          "href": "https://www.alberta.ca/technology-and-innovation"
+        },
+        {
+          "title": "Politique d’utilisation de l’IA",
+          "desc": "Comment le gouvernement de l’Alberta encadre l’utilisation de l’intelligence artificielle dans l’ensemble de la fonction publique, couvrant la sécurité, la protection des renseignements, l’éthique, les biais et la responsabilisation. (PDF)",
+          "href": "https://manuals.alberta.ca/media/i5mjqsgw/artificial-intelligence-usage-policy.pdf"
+        },
+        {
+          "title": "Environnement de calcul souverain (PQR)",
+          "desc": "La demande de préqualification d’Alberta Technologie et Innovation pour un environnement de calcul souverain, invitant les fournisseurs à se qualifier en calcul souverain, en solutions d’IA et en analytique pour soutenir la prise de décision du gouvernement.",
+          "href": "https://purchasing.alberta.ca/posting/AB-2026-00655"
+        }
+      ]
+    },
+    {
+      "heading": "Gouvernement du Canada",
+      "items": [
+        {
+          "title": "« L’IA pour tous »",
+          "desc": "La stratégie nationale d’IA du Canada, ancrée dans la confiance, les possibilités et la souveraineté, qui fixe des objectifs pour élargir l’adoption de l’IA dans l’économie et bâtir une infrastructure souveraine.",
+          "href": "https://ised-isde.canada.ca/site/ised/en/canadas-national-artificial-intelligence-strategy-ai-all"
+        },
+        {
+          "title": "« Achetons canadien »",
+          "desc": "Orientation fédérale en matière d’approvisionnement qui privilégie les fournisseurs, le contenu canadien et les partenaires commerciaux de confiance afin de renforcer la résilience économique du Canada.",
+          "href": "https://canadabuys.canada.ca/en/buy-canadian-policy"
+        }
+      ]
+    }
+  ]
+}

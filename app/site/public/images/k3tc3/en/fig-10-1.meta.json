@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\k3tc3\\en\\fig-10-1.jpg",
+  "bytes_jpg": 159525,
+  "bytes_png_source": 2725009,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T19:24:01.353Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as a snakes-and-ladders board laid out as a single climbing path of eight labelled squares in order: REQUIREMENTS, PLANNING, ARCHITECTURE, PROTOTYPING, DEVELOPMENT, USER TESTING, USER ACCEPTANCE, DEPLOYMENT. A couple of small navy ladders rise forward between squares, captioned POINTS FORWARD. One rust snake slides from a late square back to an earlier one, captioned SENT BACK, COSTS MORE THE FURTHER IT GOES. A single small token sits mid-board. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, drawn as a snakes-and-ladders board laid out as a single climbing path of eight labelled squares in order: REQUIREMENTS, PLANNING, ARCHITECTURE, PROTOTYPING, DEVELOPMENT, USER TESTING, USER ACCEPTANCE, DEPLOYMENT. A couple of small navy ladders rise forward between squares, captioned POINTS FORWARD. One rust snake slides from a late square back to an earlier one, captioned SENT BACK, COSTS MORE THE FURTHER IT GOES. A single small token sits mid-board. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

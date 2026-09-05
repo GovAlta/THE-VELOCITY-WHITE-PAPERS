@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\k3tc3\\en\\fig-10-4.jpg",
+  "bytes_jpg": 136401,
+  "bytes_png_source": 2499036,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T19:27:10.283Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial cycle diagram on warm cream paper, deep navy line work with small rust accents. A loop of four labelled boxes connected by arrows: MISTAKE CAUGHT ON THE BOARD, then RETROSPECTIVE, then UPDATE THE HARNESS, then PUSH TO THE MAIN BRANCH, with a final arrow returning to a row of small robot tokens labelled EVERY AGENT STARTS FROM THE LATEST. To one side, a small document icon labelled AUDIT REPORT with a caption SNAPSHOT OF WHAT WORKED. Calm, architectural, legible labels. No logos, no people beyond simple tokens.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial cycle diagram on warm cream paper, deep navy line work with small rust accents. A loop of four labelled boxes connected by arrows: MISTAKE CAUGHT ON THE BOARD, then RETROSPECTIVE, then UPDATE THE HARNESS, then PUSH TO THE MAIN BRANCH, with a final arrow returning to a row of small robot tokens labelled EVERY AGENT STARTS FROM THE LATEST. To one side, a small document icon labelled AUDIT REPORT with a caption SNAPSHOT OF WHAT WORKED. Calm, architectural, legible labels. No logos, no people beyond simple tokens.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

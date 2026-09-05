@@ -1,0 +1,1177 @@
+{
+  "id": "m66qi",
+  "num": "22",
+  "sequence": "22 de 22",
+  "tier": "Policy & People",
+  "title": "Tomar la colina: innovar en la contratación pública con información basada en IA",
+  "subtitle": "Alberta será el primer gobierno en publicar el mapa completo de capacidades digitales del gobierno, elaborado a partir del código fuente, para que la industria pueda ver finalmente la forma real de nuestro patrimonio tecnológico y presentar ofertas con pleno conocimiento.",
+  "track": "Working with Industry",
+  "authors": [
+    "Janak Alford",
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-07-18",
+  "reading_min": 29,
+  "status": "Published",
+  "tags": [
+    "procurement",
+    "open-data",
+    "git-insights",
+    "industry-partnership",
+    "modernization"
+  ],
+  "repo": "https://github.com/GovAlta/GIT-INSIGHTS-HUB",
+  "abstract": "Este documento utiliza los datos de Git Insights y presenta, por primera vez en un gobierno, un conjunto de metadatos que mapea cada repositorio del parque tecnológico de Alberta con su capacidad de negocio, puntuación de salud, pila tecnológica, pantallas, flujos de trabajo y dependencias. El conjunto de datos ofrecerá a la industria una visión completa y tridimensional de las actividades digitales del gobierno. En el Simposio Velocity del 28 de julio de 2026, el Ministerio de Tecnología e Innovación explicará el proceso de extracción y el análisis más reciente de Git Insights, y publicará en código abierto esta primera instantánea del estado actual. La industria dispondrá de dos meses para elaborar propuestas sólidas antes de presentarlas en «Agency», nuestro evento gubernamental de innovación en IA que se celebrará en octubre de 2026. El documento explica por qué esta publicación es necesaria, cómo aborda los numerosos desafíos del proceso de contratación y cómo cumple el compromiso del Ministerio de hacer la contratación más fácil, rápida y transparente, al tiempo que invita a una verdadera colaboración con la industria para desarrollar capacidades de titularidad gubernamental.",
+  "hero_image": {
+    "src": "public/images/m66qi/es/hero.jpg",
+    "alt": "Una gran puerta en un largo muro que se abre hacia un vasto y ordenado parque tecnológico de sistemas, con socios de la industria invitados a cruzar el umbral.",
+    "image_prompt": "An editorial illustration of a massive stone gate set in a long wall, swinging open for the first time. Beyond it lies a vast, orderly territory of thousands of small building-like repositories laid out on a clear grid stretching to the horizon. A group of figures representing industry partners is invited to step across the threshold into the light. A sense of an estate long kept closed now deliberately opened. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/m66qi.mp3",
+    "duration_sec": 2012,
+    "segments": [
+      {
+        "seg": "title",
+        "src": "public/audio/es/m66qi-seg/title.mp3",
+        "dur": 7,
+        "hash": "2bd9f06cfb4c",
+        "chars": 90
+      },
+      {
+        "seg": "subtitle",
+        "src": "public/audio/es/m66qi-seg/subtitle.mp3",
+        "dur": 17,
+        "hash": "5974373680c8",
+        "chars": 272
+      },
+      {
+        "seg": "abstract",
+        "src": "public/audio/es/m66qi-seg/abstract.mp3",
+        "dur": 79,
+        "hash": "94a0b7f963ca",
+        "chars": 1209
+      },
+      {
+        "seg": "b1",
+        "src": "public/audio/es/m66qi-seg/b1.mp3",
+        "dur": 66,
+        "hash": "0eed297804a9",
+        "chars": 1106
+      },
+      {
+        "seg": "b65",
+        "src": "public/audio/es/m66qi-seg/b65.mp3",
+        "dur": 74,
+        "hash": "481630e7a57e",
+        "chars": 1223
+      },
+      {
+        "seg": "b2",
+        "src": "public/audio/es/m66qi-seg/b2.mp3",
+        "dur": 2,
+        "hash": "c0ad54044633",
+        "chars": 42
+      },
+      {
+        "seg": "b3",
+        "src": "public/audio/es/m66qi-seg/b3.mp3",
+        "dur": 151,
+        "hash": "755992401290",
+        "chars": 2443
+      },
+      {
+        "seg": "b4",
+        "src": "public/audio/es/m66qi-seg/b4.mp3",
+        "dur": 8,
+        "hash": "9f2b35903e7c",
+        "chars": 125
+      },
+      {
+        "seg": "b5",
+        "src": "public/audio/es/m66qi-seg/b5.mp3",
+        "dur": 31,
+        "hash": "7f5a7b325d8a",
+        "chars": 512
+      },
+      {
+        "seg": "b7",
+        "src": "public/audio/es/m66qi-seg/b7.mp3",
+        "dur": 3,
+        "hash": "acd7a55cb31c",
+        "chars": 42
+      },
+      {
+        "seg": "b8",
+        "src": "public/audio/es/m66qi-seg/b8.mp3",
+        "dur": 78,
+        "hash": "5cd995240a27",
+        "chars": 1285
+      },
+      {
+        "seg": "b9",
+        "src": "public/audio/es/m66qi-seg/b9.mp3",
+        "dur": 103,
+        "hash": "3f185a876f29",
+        "chars": 1669
+      },
+      {
+        "seg": "b10",
+        "src": "public/audio/es/m66qi-seg/b10.mp3",
+        "dur": 3,
+        "hash": "dd56bb68e840",
+        "chars": 46
+      },
+      {
+        "seg": "b13",
+        "src": "public/audio/es/m66qi-seg/b13.mp3",
+        "dur": 60,
+        "hash": "24061f39f5a2",
+        "chars": 996
+      },
+      {
+        "seg": "b14",
+        "src": "public/audio/es/m66qi-seg/b14.mp3",
+        "dur": 87,
+        "hash": "cfdba7fe9f69",
+        "chars": 1446
+      },
+      {
+        "seg": "b15",
+        "src": "public/audio/es/m66qi-seg/b15.mp3",
+        "dur": 2,
+        "hash": "2c825d54a632",
+        "chars": 37
+      },
+      {
+        "seg": "b16",
+        "src": "public/audio/es/m66qi-seg/b16.mp3",
+        "dur": 27,
+        "hash": "bef181939c38",
+        "chars": 407
+      },
+      {
+        "seg": "b17",
+        "src": "public/audio/es/m66qi-seg/b17.mp3",
+        "dur": 91,
+        "hash": "421755efc7fa",
+        "chars": 1450
+      },
+      {
+        "seg": "b19",
+        "src": "public/audio/es/m66qi-seg/b19.mp3",
+        "dur": 75,
+        "hash": "3c5bca810ec5",
+        "chars": 1201
+      },
+      {
+        "seg": "b20",
+        "src": "public/audio/es/m66qi-seg/b20.mp3",
+        "dur": 3,
+        "hash": "df597c225603",
+        "chars": 64
+      },
+      {
+        "seg": "b21",
+        "src": "public/audio/es/m66qi-seg/b21.mp3",
+        "dur": 67,
+        "hash": "8ef63e5db6f6",
+        "chars": 1127
+      },
+      {
+        "seg": "b22",
+        "src": "public/audio/es/m66qi-seg/b22.mp3",
+        "dur": 61,
+        "hash": "8ca34b67db0d",
+        "chars": 966
+      },
+      {
+        "seg": "b23",
+        "src": "public/audio/es/m66qi-seg/b23.mp3",
+        "dur": 45,
+        "hash": "71c19ec1e60c",
+        "chars": 712
+      },
+      {
+        "seg": "b26",
+        "src": "public/audio/es/m66qi-seg/b26.mp3",
+        "dur": 2,
+        "hash": "df8d84e5caf5",
+        "chars": 37
+      },
+      {
+        "seg": "b27",
+        "src": "public/audio/es/m66qi-seg/b27.mp3",
+        "dur": 69,
+        "hash": "c13adf63460e",
+        "chars": 1102
+      },
+      {
+        "seg": "b28",
+        "src": "public/audio/es/m66qi-seg/b28.mp3",
+        "dur": 57,
+        "hash": "19fdaf20b74a",
+        "chars": 912
+      },
+      {
+        "seg": "b31",
+        "src": "public/audio/es/m66qi-seg/b31.mp3",
+        "dur": 53,
+        "hash": "955ef64758e7",
+        "chars": 839
+      },
+      {
+        "seg": "b37",
+        "src": "public/audio/es/m66qi-seg/b37.mp3",
+        "dur": 40,
+        "hash": "bbf638128303",
+        "chars": 636
+      },
+      {
+        "seg": "b40",
+        "src": "public/audio/es/m66qi-seg/b40.mp3",
+        "dur": 57,
+        "hash": "0a9e808042df",
+        "chars": 888
+      },
+      {
+        "seg": "b42",
+        "src": "public/audio/es/m66qi-seg/b42.mp3",
+        "dur": 4,
+        "hash": "3bbcc44a3a85",
+        "chars": 76
+      },
+      {
+        "seg": "b43",
+        "src": "public/audio/es/m66qi-seg/b43.mp3",
+        "dur": 45,
+        "hash": "2f886f4b779d",
+        "chars": 735
+      },
+      {
+        "seg": "b45",
+        "src": "public/audio/es/m66qi-seg/b45.mp3",
+        "dur": 55,
+        "hash": "668b8544c684",
+        "chars": 889
+      },
+      {
+        "seg": "b47",
+        "src": "public/audio/es/m66qi-seg/b47.mp3",
+        "dur": 5,
+        "hash": "f9921da2e70a",
+        "chars": 72
+      },
+      {
+        "seg": "b48",
+        "src": "public/audio/es/m66qi-seg/b48.mp3",
+        "dur": 50,
+        "hash": "6a5f7ca799ba",
+        "chars": 736
+      },
+      {
+        "seg": "b49",
+        "src": "public/audio/es/m66qi-seg/b49.mp3",
+        "dur": 69,
+        "hash": "333eb2c36532",
+        "chars": 1058
+      },
+      {
+        "seg": "b51",
+        "src": "public/audio/es/m66qi-seg/b51.mp3",
+        "dur": 13,
+        "hash": "c272ba9e4d5e",
+        "chars": 185
+      },
+      {
+        "seg": "b52",
+        "src": "public/audio/es/m66qi-seg/b52.mp3",
+        "dur": 2,
+        "hash": "b00a16d02d70",
+        "chars": 36
+      },
+      {
+        "seg": "b53",
+        "src": "public/audio/es/m66qi-seg/b53.mp3",
+        "dur": 67,
+        "hash": "f45cb72f672e",
+        "chars": 988
+      },
+      {
+        "seg": "b54",
+        "src": "public/audio/es/m66qi-seg/b54.mp3",
+        "dur": 33,
+        "hash": "87a8acb6eaf7",
+        "chars": 495
+      },
+      {
+        "seg": "b55",
+        "src": "public/audio/es/m66qi-seg/b55.mp3",
+        "dur": 63,
+        "hash": "f0b8f5f7e4a6",
+        "chars": 1037
+      },
+      {
+        "seg": "b57",
+        "src": "public/audio/es/m66qi-seg/b57.mp3",
+        "dur": 54,
+        "hash": "6c04a97a0862",
+        "chars": 831
+      },
+      {
+        "seg": "b59",
+        "src": "public/audio/es/m66qi-seg/b59.mp3",
+        "dur": 3,
+        "hash": "641fac637b16",
+        "chars": 46
+      },
+      {
+        "seg": "b60",
+        "src": "public/audio/es/m66qi-seg/b60.mp3",
+        "dur": 78,
+        "hash": "ccf10ee527a8",
+        "chars": 1228
+      },
+      {
+        "seg": "b61",
+        "src": "public/audio/es/m66qi-seg/b61.mp3",
+        "dur": 8,
+        "hash": "ca2deec34f6b",
+        "chars": 113
+      },
+      {
+        "seg": "b62",
+        "src": "public/audio/es/m66qi-seg/b62.mp3",
+        "dur": 45,
+        "hash": "a7a7338af95d",
+        "chars": 680
+      }
+    ]
+  },
+  "tldr_presentation": {
+    "id": "m66qi-tldr",
+    "title": "El documento, en síntesis",
+    "locale": "es",
+    "owner_id": "m66qi",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Tomar la colina",
+        "audio_file": "public/audio/es/m66qi-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Documento 22 · Tomar la colina",
+        "subcaption": "Los metadatos de cada sistema, publicados para la industria.",
+        "text": "Tomar la colina. La contratación pública es el desafío que debemos superar para modernizar el gobierno y, durante años, ha favorecido al proveedor establecido que ya conoce la forma no documentada de nuestro código. Por eso publicamos, por primera vez, los metadatos de cada sistema que operamos, para que la industria pueda ver finalmente la forma real del trabajo y presentar ofertas con pleno conocimiento."
+      },
+      {
+        "id": "02",
+        "title": "Por qué el proceso de licitación ha estado quebrado",
+        "audio_file": "public/audio/es/m66qi-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Cuatro fallas que hemos documentado",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Las especificaciones estrechas excluyen a los innovadores",
+              "desc": "Los requisitos se redactan con tanta precisión que se espera menos de diez oferentes, y sus nombres suelen conocerse de antemano."
+            },
+            {
+              "label": "Los documentos de licitación son opacos",
+              "desc": "Las reglas reales están en millones de líneas de código no documentado, por lo que los proveedores declaran en lugar de demostrar."
+            },
+            {
+              "label": "El asesoramiento en TI carece de fundamento",
+              "desc": "El conocimiento acumulado y los memorandos resumidos ascienden deformados, sin ningún dato verificable."
+            },
+            {
+              "label": "Todo es una excavación en sistemas heredados",
+              "desc": "El reglamento del gobierno vive en el código y, hasta ahora, leerlo podía llevar meses o años a los consultores."
+            }
+          ]
+        },
+        "text": "Por qué el proceso de licitación ha estado quebrado. Las especificaciones se redactan con tanta estrechez que solo un puñado de oferentes conocidos puede ganar. Los documentos ignoran el estado real de nuestros sistemas, de modo que los proveedores declaran en lugar de demostrar. Nuestro propio asesoramiento asciende deformado, sin ningún dato verificable. Y el reglamento del gobierno vive dentro de millones de líneas de código no documentado que antes llevaba meses o años leer a los consultores."
+      },
+      {
+        "id": "03",
+        "title": "Git Insights, publicado como metadatos",
+        "audio_file": "public/audio/es/m66qi-tldr/03.mp3",
+        "visual": "stat",
+        "caption": "El patrimonio tecnológico, mapeado y anonimizado",
+        "visual_config": {
+          "stat_value": "4 041 aplicaciones",
+          "stat_label": "Mapeado a 2 182 capacidades en 40 dominios, sin nombres asociados"
+        },
+        "subcaption": "Salud, pila tecnológica, pantallas, flujos de trabajo y dependencias, publicados sin identificar el ministerio ni la aplicación.",
+        "text": "Git Insights, publicado como metadatos. La herramienta que leyó todo el patrimonio tecnológico extrae ahora un conjunto rico de metadatos por cada repositorio: su capacidad de negocio, su salud, su pila tecnológica, sus pantallas, flujos de trabajo y dependencias. Publicamos cuatro mil cuarenta y una aplicaciones, mapeadas a más de dos mil cien capacidades en cuarenta dominios, con todos los nombres suprimidos."
+      },
+      {
+        "id": "04",
+        "title": "Una visión tridimensional",
+        "audio_file": "public/audio/es/m66qi-tldr/04.mp3",
+        "visual": "compare",
+        "caption": "Un solo conjunto de datos, leído desde tres direcciones",
+        "visual_config": {
+          "left": {
+            "label": "Lo que la industria puede ver",
+            "body": "De la capacidad al código, del código a la capacidad, o por pila tecnológica. 75 582 pantallas y 73 516 flujos de trabajo, por fin contabilizados."
+          },
+          "right": {
+            "label": "Cómo puede licitar la industria",
+            "body": "Responder a capacidades completas a la vez, con costos realistas, mapeados directamente en la misma matriz compartida."
+          }
+        },
+        "text": "Una visión tridimensional. Los proveedores pueden leer el conjunto de datos desde la capacidad hasta el código, del código de vuelta a la capacidad, o por pila tecnológica. Por primera vez pueden ver las setenta y cinco mil pantallas y los setenta y tres mil flujos de trabajo de nuestros sistemas, y licitar por capacidades completas a la vez con costos realistas, proyectando su solución directamente en la misma matriz que usamos para evaluarla."
+      },
+      {
+        "id": "05",
+        "title": "Sin relleno, por favor",
+        "audio_file": "public/audio/es/m66qi-tldr/05.mp3",
+        "visual": "list",
+        "caption": "Un estándar exigente: pruebas sobre apariencia",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Una correspondencia estructurada",
+              "desc": "Cada página de una oferta se vincula a los nodos de capacidad, puntuaciones de salud y metadatos que dice abordar."
+            },
+            {
+              "label": "Un artefacto verificable",
+              "desc": "Un prototipo funcional parcial, un flujo de trabajo de agente de IA con arnés, o una compilación reproducible que demuestre ejecución real."
+            },
+            {
+              "label": "Traspaso completo",
+              "desc": "Código, documentación, habilidades de agente y arquitectura, de modo que Alberta sea propietaria de la capacidad y la mantenga."
+            }
+          ]
+        },
+        "text": "Sin relleno, por favor. Como la IA facilita generar una propuesta vistosa, estamos elevando el estándar de la prueba. Cada oferta debe vincularse, página por página, con la matriz mediante una tabla de correspondencias legible por máquina, y aportar un artefacto verificable que demuestre una ejecución real sobre los datos. Buscamos socios que entreguen el código, la documentación, las habilidades de agente y la arquitectura, de modo que Alberta sea propietaria de la propia capacidad."
+      },
+      {
+        "id": "06",
+        "title": "Del Simposio a Agency 2026",
+        "audio_file": "public/audio/es/m66qi-tldr/06.mp3",
+        "visual": "title",
+        "caption": "La invitación",
+        "subcaption": "Dos meses para construir. Capacidades de titularidad gubernamental, desarrolladas en colaboración.",
+        "text": "La invitación. Publicamos como código abierto esta primera instantánea en el Simposio Velocity y damos a la industria dos meses para construir respuestas reales antes de demostrarlas en Agency 2026. Esperamos que los próximos cien a doscientos millones de dólares de contratación pública sigan este modelo. Modernizar la contratación pública es la base necesaria para modernizar el propio gobierno."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Desafíos clave de la contratación pública"
+    },
+    {
+      "n": "02",
+      "title": "La brecha de evidencia y la deuda técnica"
+    },
+    {
+      "n": "03",
+      "title": "El problema de la compresión y el papel de TI"
+    },
+    {
+      "n": "04",
+      "title": "La trampa de la complejidad heredada"
+    },
+    {
+      "n": "05",
+      "title": "Git Insights como fuente de verdad para la contratación pública"
+    },
+    {
+      "n": "06",
+      "title": "La publicación de metadatos abiertos"
+    },
+    {
+      "n": "07",
+      "title": "Cómo puede la industria presentar ofertas con una precisión sin precedentes"
+    },
+    {
+      "n": "08",
+      "title": "Ofertas estructuradas, tablas de correspondencia y la matriz compartida"
+    },
+    {
+      "n": "09",
+      "title": "Sin contenido de relleno, por favor"
+    },
+    {
+      "n": "10",
+      "title": "La contratación como base de la modernización"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Un paso crítico para corregir el patrimonio tecnológico del gobierno es abordar primero los procesos de contratación pública deficientes que impiden adquirir las tecnologías y encontrar los socios que necesitamos para tener éxito. Las mejores herramientas de IA no servirán de nada si no podemos comprarlas. El personal y la dirección de Tecnología e Innovación escuchan con frecuencia a numerosos proveedores potenciales decir que el camino para venderle al gobierno es tan difícil, tan lento y tan confuso que a menudo no vale la pena ni siquiera presentar una oferta. Los proveedores canadienses pequeños y medianos señalan específicamente que les cuesta calificar frente a requisitos muy exigentes, sobre todo cuando se trata de productos nuevos e innovadores, y que deben llevar sus productos a mercados extranjeros para conseguir su primer cliente, o incluso el décimo. Algunas de las empresas más exitosas de Canadá ni siquiera se molestan en participar en las licitaciones del gobierno canadiense. Desde fuera, parece que el gobierno adquiere una y otra vez el mismo conjunto estándar de productos.",
+      "bid": "b1",
+      "edit_count": 2,
+      "last_edited": "2026-07-20T00:32:26.658Z"
+    },
+    {
+      "type": "paragraph",
+      "bid": "b65",
+      "text": "Antes de adentrarnos en este documento, deseo comenzar con una nota introductoria. En cualquier revisión de los procesos actuales, una dosis razonable de autocrítica es útil y valiosa. Sin embargo, un análisis de este tipo corre inevitablemente el riesgo de sonar como una crítica a las personas que han trabajado dentro de este sistema durante años o incluso décadas. Quiero decir con claridad, desde el principio, que me impresionan profundamente el profesionalismo y la competencia de nuestro equipo de contratación, de nuestros socios de negocio y del conjunto del gobierno que respalda nuestros procesos de contratación. Cualquier falla del sistema es responsabilidad mía. Como viceministro, soy plenamente responsable de cualquier deficiencia de la organización, y trabajo sin descanso para apoyar a nuestros equipos, invertir en nuestro personal y construir procesos más sólidos. Crecer exige autorreflexión, estar dispuestos a reconocer cuándo surgen nuevas oportunidades y tener el valor de explorar y probar algo nuevo. Espero que las propuestas que siguen se reciban tal como están pensadas: como nuevas y estimulantes oportunidades que se construyen sobre décadas de arduo trabajo de nuestro equipo. Comencemos.",
+      "edit_count": 6,
+      "last_edited": "2026-07-24T02:50:52.277Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Desafíos clave de la contratación pública",
+      "bid": "b2",
+      "edit_count": 2,
+      "last_edited": "2026-07-24T02:56:12.103Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "Existen varias quejas comunes con respecto a la contratación pública. La primera crítica se centra en cómo se delimitan las solicitudes de propuestas y los enunciados de trabajo, que a menudo pueden percibirse como estrechos, restrictivos o selectivos, y que pueden llevar a que el proveedor establecido gane las renovaciones. En la práctica, hay mucho producto de mala calidad en el mercado. Muchas empresas venden productos que se ven bien sobre el papel pero que no lograrán escalar a la demanda y la complejidad del gobierno, y es razonable y legítimo fijar un estándar alto para proteger el dinero de los contribuyentes. Unos requisitos claros y estrictamente delimitados ofrecen, en principio, un filtro de alta selección para que el comprador no se vea inundado de contenido de calidad inferior.\n\nLos productos deficientes suelen ir acompañados de paquetes de oferta de baja calidad. Es fácil que un proveedor agrupe todos los documentos, libros blancos y folletos que ha producido alguna vez y presente ese corpus como evidencia de que cumple las necesidades de la contratación. Esto supone una carga considerable para el personal, que trabaja con gran esfuerzo para que el proceso sea justo. Cuando recibimos una oferta, tenemos la obligación legal de revisar cada una de las páginas del paquete. Con frecuencia, las ofertas que recibimos tienen cientos o miles de páginas, guardan poca relación con el requisito real y, aun así, exigen una revisión completa y detallada. Los paquetes de oferta voluminosos pueden alargar los plazos de una contratación durante meses. Como mecanismo defensivo, las contrataciones se redactan de forma estrecha para limitar el campo, por lo general, a menos de diez oferentes previstos. Una contratación con cientos de respuestas suele considerarse demasiado general, mientras que una con una o dos se considera demasiado restrictiva. El formato de la oferta nunca debería determinar el resultado, pero por razones prácticas puede hacerlo.\n\nAdemás, los proveedores quedan descalificados con frecuencia porque no cumplen uno de los criterios obligatorios. Para los oferentes puede ser difícil determinar de antemano si su oferta es plenamente conforme. Una pieza de evidencia que falta, o incluso una sola página o un párrafo omitido, puede traducirse en meses de esfuerzo desperdiciado, con oferentes descalificados por un tecnicismo y, a menudo, sin llegar a saber por qué nunca consiguen el contrato.",
+      "bid": "b3",
+      "edit_count": 4,
+      "last_edited": "2026-07-24T02:55:32.141Z"
+    },
+    {
+      "type": "pullquote",
+      "text": "La contratación pública es la colina que hay que tomar en la batalla por la modernización del gobierno.",
+      "cite": "Documento 22 · Tomar la colina",
+      "bid": "b4"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aunque toda contratación debe incluir requisitos justos y transparentes, la realidad es que la especificación estrecha funciona como un mecanismo defensivo. El resultado es un sistema que, por su complejidad, beneficia a un pequeño número de empresas muy competentes en redactar la respuesta exactamente como el documento quiere ser leído. Esa competencia proviene de la experiencia, y el proceso complejo puede excluir hasta al noventa y nueve por ciento de las demás empresas de hacer negocios con el gobierno.",
+      "bid": "b5",
+      "edit_count": 2,
+      "last_edited": "2026-07-24T01:44:57.341Z"
+    },
+    {
+      "type": "keystat",
+      "label": "Empresas excluidas antes de que comience una competencia justa",
+      "value": "Hasta el 99 %",
+      "body": "La especificación estrecha y los requisitos elevados actúan como un filtro defensivo contra las ofertas de baja calidad y, al hacerlo, excluyen silenciosamente a la inmensa mayoría de las empresas, incluidas las innovadoras a las que más queremos llegar.",
+      "bid": "b6",
+      "edit_count": 1,
+      "last_edited": "2026-07-24T01:45:06.696Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "La brecha de evidencia y la deuda técnica",
+      "bid": "b7"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los propios documentos de contratación comprimen de forma significativa la realidad del desafío para ajustarla al formato.\n\nLos gobiernos suelen tener dificultades para articular con claridad la complejidad de sus entornos operativos. Lo que permanece oculto para la mayoría de los proveedores es el enorme impacto que la deuda técnica y el código heredado tienen en nuestra toma de decisiones.\n\nLa forma en que los responsables de negocio describen sus objetivos, y la forma en que esas descripciones se trasladan a la «jerga» de la contratación, se conecta con [el documento sobre el problema de la compresión](/paper/eujjc) publicado anteriormente. El estado técnico o los requisitos de una aplicación suelen ser tan complejos que impiden a los líderes de cualquier nivel describir sus objetivos de manera suficiente. Muchos de nuestros sistemas tienen poca documentación interna y casi ninguna externa. El proveedor establecido cuenta con una ventaja desproporcionada porque puede ofertar con márgenes de contingencia muy ajustados: ya conoce la forma y el aspecto del código, aunque esa forma no esté escrita en ninguna parte. Muchas de las innovaciones que queremos dependen de dos a cinco sistemas heredados que requieren integración, y esos sistemas tampoco están documentados.",
+      "bid": "b8",
+      "edit_count": 3,
+      "last_edited": "2026-07-24T03:01:24.279Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "El documento de licitación gubernamental típico no logra transmitir ni la profundidad ni la perspectiva necesarias sobre la deuda técnica y los requisitos de integración, lo que deja a los proveedores sin capacidad para ofertar con eficacia. No existen mecanismos para que los proveedores prueben su oferta por adelantado y comprueben que es conforme. Y los requisitos de la contratación carecen de la profundidad suficiente para permitir una oferta basada en evidencia. Se trata de una falla de los propios documentos de licitación, tanto de los requisitos que salen como de las propuestas que regresan. Gran parte del contenido que llega en las propuestas es una declaración de los proveedores, no una prueba. El gobierno aporta material fuente insuficiente, como el código, para que un proveedor pueda demostrar realmente un producto sólido e integrado. Los gobiernos publican requisitos abstractos y los proveedores responden con propuestas abstractas. La realidad de fondo queda muy comprimida.\n\nNo todas las contrataciones describen productos reales que funcionarán dentro del entorno. Pueden publicarse contrataciones que describen cosas imposibles de lograr, redactadas desde la perspectiva de una lista de deseos optimista y omnímoda, o de un responsable de negocio que ya tiene una imagen fija y detallada de lo que quiere. Describen un producto que ya saben que existe. La preferencia del comprador es legítima, pero lo que se describe suele ser una solución y no un resultado. Con frecuencia, esto impide que el proveedor proponga formas novedosas de resolver el problema. Gana el producto que el comprador ya quería, pero puede perderse el mejor resultado.",
+      "bid": "b9",
+      "edit_count": 2,
+      "last_edited": "2026-07-24T03:02:16.369Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "El problema de la compresión y el papel de TI",
+      "bid": "b10"
+    },
+    {
+      "type": "paragraph",
+      "text": "En nuestro esfuerzo por apoyar a nuestros socios de negocio, TI también sufre esta compresión. Dentro de Tecnología e Innovación, tampoco logramos dar a nuestros ministerios evidencia suficiente para respaldar nuestros consejos, porque a menudo compartimos conocimiento tácito que no ha sido validado. En cualquier organización grande circula una gran cantidad de «conocimiento tribal», muchísimas opiniones sobre el estado y la salud de los sistemas, y muchísimas recomendaciones sin fundamento ni anclaje en la realidad. Entre la primera línea técnica, la dirección de TI y los responsables de negocio se juega al «teléfono descompuesto». La dirección suele creer que da el consejo correcto, pero también ha sufrido el problema de la compresión, de modo que las recomendaciones que llegan al negocio son con frecuencia imposibles de rastrear hasta un hecho comprobable. Muchas decisiones de gobierno se basan en el detalle de alto nivel y no en la realidad de fondo, más desordenada y compleja.",
+      "bid": "b13"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto incluye el consejo que damos sobre nuestros costos y estimaciones. Si no podemos ver la realidad de fondo de nuestro ámbito técnico, necesariamente nos cuesta estimar el tiempo, el costo y el riesgo, y nos apoyamos en heurísticas imprecisas, inexactas o incompletas. Eso empuja al negocio hacia un producto de proveedor, o lo aleja de él y lo lleva hacia un desarrollo propio, cuando cualquiera de las dos opciones puede haber sido inadecuada. El negocio termina acudiendo directamente al sector privado, que a menudo es capaz de vender una visión mejor que la del servicio público, porque este carece de la pericia de ingeniería, o al menos del equipo de marketing, para presentarla de forma atractiva, y de la evidencia para demostrar por qué un método es mejor que otro. Con frecuencia, la propuesta comercial ignora las realidades desordenadas del gobierno y presenta una visión muy comprimida y pulida. Debemos hacer más para ofrecer a todas las partes, a nuestros socios de negocio y a nuestros proveedores, la imagen más completa y basada en evidencia posible desde la primera reunión, y avanzar hacia una decisión de comprar, construir o buscar una alternativa genuina que esté anclada en la realidad.\n\nEl material de decisión se comprime con frecuencia en una nota de cuatro páginas o una presentación de diez diapositivas. Una aplicación con miles de pantallas y flujos de trabajo nunca puede representarse fielmente de esa manera.",
+      "bid": "b14",
+      "edit_count": 1,
+      "last_edited": "2026-07-24T03:02:57.703Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "La trampa de la complejidad heredada",
+      "bid": "b15"
+    },
+    {
+      "type": "paragraph",
+      "text": "Casi nunca compramos o construimos en un terreno virgen. El gobierno existe desde hace más de un siglo en todo Canadá, y Alberta cumple este año ciento veintiún años. Hemos superpuesto sistemas y procesos que se remontan a antes de la Confederación. Los formularios de aquella época desaparecieron, pero los procesos permanecen. Esto genera una enorme complejidad que no es visible desde fuera del gobierno.",
+      "bid": "b16"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un gobierno opera con base en la legislación, la regulación y las políticas que fijan los funcionarios electos. Esto es conocido y auditable, aunque dinámico y expresado en lenguaje humano. Sin embargo, en la implementación surge una complejidad invisible mucho mayor. El servicio público introduce numerosas capas adicionales de complejidad que trazan los procesos de negocio, y esos procesos quedan codificados en el código interno del software y en la documentación de procesos. Una vez escrita una aplicación, a menudo el único lugar donde se mantienen esas reglas es el propio código. Si quisiera comprender un sistema de mainframe responsable de un programa de prestaciones sociales, tendría que extraer muchas de las reglas reales que están codificadas dentro de la aplicación y que se acumularon versión tras versión a lo largo de 40 años o más. Hay información adicional sobre los procesos en hojas de cálculo, materiales de formación y formularios. Ningún artefacto contiene las reglas de negocio en su totalidad.\n\nEl conocimiento humano del propio gobierno suele ir por detrás de donde el sector privado está innovando en la actualidad. Cuando definimos una contratación, tendemos a definir el producto de manera retrospectiva, describiendo lo que ya conocemos, y no hacia dónde se dirigen la tecnología o la innovación. Conjugar la complejidad del gobierno con el dinamismo del sector privado puede ser, en sí mismo, un reto considerable.",
+      "bid": "b17",
+      "edit_count": 1,
+      "last_edited": "2026-07-24T03:04:33.995Z"
+    },
+    {
+      "type": "keystat",
+      "label": "La complejidad permanece oculta",
+      "value": "10×",
+      "body": "Las regulaciones ocupan decenas de páginas. El código ocupa millones de líneas, porque capas de decisiones de bajo nivel tomadas por el personal de primera línea, los responsables de negocio y la gente de TI se convierten en la política en la sombra de lo que realmente ocurre. Los proveedores descubren de forma rutinaria alrededor de diez veces más especificidad enterrada en el código de la que describía cualquier documento de contratación, lo que provoca sobrecostos y retrasos.",
+      "bid": "b18",
+      "edit_count": 1,
+      "last_edited": "2026-07-23T02:26:50.905Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando se publica una solicitud de propuestas, lo que se describe es una aproximación del producto final, y no el producto real. Prácticamente en ningún caso compartimos el código, ni una descripción suficientemente clara del producto en su estado actual, para informar correctamente al oferente. Los requisitos de contratación son vagos y están sobrecomprimidos, y los proveedores tienen que adivinar para ganar el contrato y para introducir cláusulas de órdenes de cambio que juegan a su favor. Cuando el proveedor ganador entra por la puerta, puede encontrarse con algo así como diez veces más especificidad enterrada en el código. En la era anterior a la IA, recuperar ese detalle era una extracción arqueológica. Por lo general, los consultores tardaban meses o años en desenredar y validar esas reglas con responsables de negocio conocedores. La política explica por qué hacemos las cosas, pero cómo las hacemos debe desenterrarse de los propios millones de líneas de código.\n\nPero ¿y si diéramos a los proveedores una visión de nuestro patrimonio tecnológico? ¿Y si pudiéramos mostrarles ese nivel de granularidad desde el principio y explicar realmente lo que hace el gobierno a nivel técnico?",
+      "bid": "b19"
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Git Insights como fuente de verdad para la contratación pública",
+      "bid": "b20"
+    },
+    {
+      "type": "paragraph",
+      "text": "La solución que proponemos para abordar varios de estos problemas se basa directamente en los procesos presentados en el libro blanco sobre [Git Insights](/paper/bbkac), la herramienta agéntica que leyó la totalidad del patrimonio tecnológico de código de Alberta y reportó el estado real de cada repositorio. Desde su creación, trabajamos continuamente para hacer evolucionar esa herramienta, generar conocimientos cada vez más profundos y apoyar el tipo de planificación necesaria para resolver estos problemas de contratación. La versión más reciente extrae ahora un amplio conjunto de metadatos de cada repositorio del parque tecnológico, y esos metadatos se convierten en la columna vertebral de la solución de contratación que propone este libro blanco. Estamos pasando de entender la forma de nuestro código a utilizar ese entendimiento para cambiar la manera en que nos relacionamos con la industria. Es posible compartir instantáneas detalladas, junto con el panorama completo de capacidades de negocio que representan cientos de sistemas interconectados, tal como se describe en [Git Insights Ministry](/paper/offjm).",
+      "bid": "b21"
+    },
+    {
+      "type": "paragraph",
+      "text": "La extracción de Git Insights captura una instantánea precisa de la complejidad real de los sistemas de gobierno, asignando el código a un conjunto robusto de capacidades de negocio diferenciadas y extrayendo la información técnica en un catálogo completo. Agentes de IA revisan el código para identificar pantallas, flujos de trabajo y lógica clave que orientarían la reconstrucción o sustitución de cada sistema o capacidad. Cada observación se integra en un mapa canónico único para todo el gobierno, sin duplicidades por nombre ni por función. Las capacidades se enriquecen con puntuaciones de salud y riesgo, porcentajes de cobertura de pruebas y estimaciones de reconstrucción que pueden actualizarse con frecuencia. En miles de repositorios y cientos de millones de líneas de código, generamos estos conocimientos mediante tanto scripts como modelos de IA, de modo que entradas idénticas producen un resultado reproducible que puede auditarse hasta su origen.",
+      "bid": "b22"
+    },
+    {
+      "type": "paragraph",
+      "text": "Al extraer estos metadatos detallados en una matriz multidimensional de conocimientos, estamos haciendo algo que creemos que no se había hecho antes. Ofrecemos a la industria y a los posibles proveedores una visión de alta fidelidad sobre la forma de los sistemas de gobierno y los desafíos que enfrentamos. Esta visión permite a los proveedores presentar ofertas con una comprensión y una confianza sin precedentes, y abre la puerta a modernizar todo el proceso de contratación mediante una evaluación asistida por la IA, justa y transparente. El código sigue siendo la fuente de verdad. Los metadatos son la proyección fiel de cómo funciona realmente el gobierno y dónde existe mayor oportunidad de innovación.",
+      "bid": "b23"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.1",
+      "title": "Un conjunto de datos, leído desde tres dimensiones",
+      "caption": "Los metadatos forman una matriz multidimensional. Los mismos nodos pueden explorarse desde las capacidades hasta el código, desde el código hasta las capacidades, o por capa tecnológica. Cada proveedor accede por la cara que mejor se adapta a la forma en que desea presentar su oferta, y cada cara remite a la misma aplicación subyacente.",
+      "image": {
+        "src": "public/images/m66qi/es/fig-5-1.jpg",
+        "alt": "Una gran red tridimensional y transparente de nodos luminosos, cuyas tres caras visibles ordenan los mismos nodos de manera diferente: capacidades, repositorios de código y capas tecnológicas.",
+        "image_prompt": "An editorial illustration of a large, transparent three-dimensional lattice or cube floating in space, built from thousands of small glowing nodes. Three visible faces each read as a different ordering of the same nodes: one face grouped as «Capacidades de negocio», one as «Repositorios de código», one as «Capas tecnológicas». Fine connecting threads show that any node can be reached from any face. A single dataset seen from three directions at once. Muted Alberta cream palette, navy and rust accents, archival print quality. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b24"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.2",
+      "title": "Del código a la oferta, de principio a fin",
+      "caption": "La publicación convierte el patrimonio tecnológico en un conjunto de datos sobre el que la industria puede actuar, y transforma cada respuesta en algo que la contratación puede evaluar en un mismo marco.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Extraer los metadatos",
+            "desc": "Git Insights lee cada repositorio y registra su capacidad, salud, pila tecnológica, pantallas, flujos de trabajo, dependencias y bandas de coste."
+          },
+          {
+            "title": "Anonimizar y certificar",
+            "desc": "Se eliminan nombres, hallazgos y detalles de vulnerabilidades; los perfiles se someten a k-anonimización; el conjunto de datos se certifica como compartible antes de su publicación."
+          },
+          {
+            "title": "Publicar la matriz",
+            "desc": "La matriz multidimensional se publica como código abierto en forma de instantánea en un momento determinado. La primera versión se publicará en el Velocity Symposium."
+          },
+          {
+            "title": "La industria la procesa con IA",
+            "desc": "Los proveedores leen la matriz desde la capacidad, el código o la pila tecnológica, y delimitan respuestas realistas a capacidades completas."
+          },
+          {
+            "title": "Las ofertas se vinculan de nuevo a la matriz",
+            "desc": "Cada respuesta devuelve una tabla de correspondencias legible por máquina que vincula cada afirmación a los nodos específicos que aborda."
+          },
+          {
+            "title": "Evaluación asistida por la IA",
+            "desc": "La contratación visualiza la cobertura, el coste y las brechas de todas las ofertas en un mismo marco compartido."
+          }
+        ]
+      },
+      "bid": "b25"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "La publicación de metadatos abiertos",
+      "bid": "b26"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este conjunto de datos describirá, con gran fidelidad, el trabajo que realiza el gobierno, sin llegar a publicar la totalidad del código fuente. Nuestro código, como todo código, presenta vulnerabilidades documentadas, tal como se señala en [el libro blanco sobre ciberseguridad](/paper/mwo98); por ello no podemos simplemente publicar el código y permitir que cualquiera presente ofertas de forma abierta, ya que eso proporcionaría a los atacantes la información que necesitan para perturbar nuestros sistemas y operaciones. En cambio, lo que podemos hacer es ofrecer a la industria algo mucho más detallado y, podría decirse, mucho más útil que lo que hemos compartido históricamente, preservando al mismo tiempo la confidencialidad y la seguridad. Este libro blanco presenta la primera publicación gubernamental de un amplio conjunto de metadatos que mapea cada repositorio —ahora más de cuatro mil— en un mapa integral de capacidades de negocio. Describe la función de cada repositorio, su salud, su pila tecnológica y un amplio cuerpo de metadatos adicionales, sin identificar nunca la aplicación.",
+      "bid": "b27"
+    },
+    {
+      "type": "paragraph",
+      "text": "El resultado es una visión completa que abstrae cientos de gigabytes de repositorios y cientos de millones de líneas de código en un conjunto de datos claro e independiente. Este conjunto de datos permite explorar capacidades de negocio, repositorios y pilas tecnológicas —las tecnologías centrales que sustentan estas aplicaciones—. Imagine una vista tridimensional, publicada como conjunto de datos abierto, que permite a la industria comprender la forma completa de los sistemas de gobierno y las decenas de miles de pantallas y flujos de trabajo que contienen. Esta publicación elimina la asimetría de información que durante mucho tiempo ha favorecido a los proveedores ya establecidos, y al mismo tiempo protege el código sensible y las vulnerabilidades. Cada publicación de estos datos es una instantánea en un momento determinado, y se esperan publicaciones futuras a medida que nuestros métodos maduren.",
+      "bid": "b28"
+    },
+    {
+      "type": "keystat",
+      "label": "El patrimonio tecnológico, mapeado y publicado",
+      "value": "Más de 4 000 aplicaciones",
+      "body": "Cada aplicación mapeada con sus capacidades de negocio, salud y tecnología, luego anonimizada y certificada como compartible. En el conjunto del parque tecnológico, esto se traduce en 2 182 capacidades organizadas en 40 agrupaciones de dominio.",
+      "bid": "b29"
+    },
+    {
+      "type": "table",
+      "title": "El patrimonio tecnológico de un vistazo",
+      "columns": [
+        "Dimensión",
+        "Cantidad"
+      ],
+      "rows": [
+        [
+          "Aplicaciones mapeadas",
+          "4,041"
+        ],
+        [
+          "Capacidades de negocio",
+          "2,182"
+        ],
+        [
+          "Agrupaciones de dominio",
+          "40"
+        ],
+        [
+          "Pantallas",
+          "75,582"
+        ],
+        [
+          "Flujos de trabajo",
+          "73,516"
+        ],
+        [
+          "Reglas de negocio",
+          "206,224"
+        ],
+        [
+          "Puntos de conexión de API",
+          "112,088"
+        ],
+        [
+          "Dependencias de integración",
+          "23,966"
+        ]
+      ],
+      "caption": "La magnitud de la instantánea publicada. Estas son las pantallas, flujos de trabajo y reglas que un memorando de cuatro páginas nunca podría contener, ahora contabilizadas y abiertas para que la industria las consulte.",
+      "source": "Publicación de metadatos de Git Insights, esquema gov-metadata/1.0, ejecución de flota 3.",
+      "bid": "b30"
+    },
+    {
+      "type": "paragraph",
+      "text": "En conjunto, estas cifras ofrecen una imagen más completa de lo que encontró el análisis. Las 4 041 aplicaciones se traducen en 2 182 capacidades de negocio repartidas en 40 dominios de producto. Detrás de ellas se encuentran más de setenta mil pantallas y un número similar de flujos de trabajo, cientos de miles de reglas de negocio y puntos de conexión de API, y casi veinticuatro mil dependencias de software. Esta primera instantánea no cubre todavía la totalidad del gobierno. Varias plataformas comerciales importantes, como nuestro sistema 1GX basado en SAP, están ausentes de esta publicación, y se está trabajando para incorporar al mapa el conjunto completo de capacidades que se pretende modernizar. Las publicaciones futuras seguirán ampliando este panorama hasta que refleje toda la actividad digital del Gobierno de Alberta.",
+      "bid": "b31"
+    },
+    {
+      "type": "table",
+      "title": "Lo que los metadatos publicados registran de cada aplicación",
+      "columns": [
+        "Categoría",
+        "Qué registra"
+      ],
+      "rows": [
+        [
+          "Capacidad de negocio",
+          "Las funciones genéricas, sin nombres propios, que ofrece la aplicación, y los grupos de dominio en los que se encuadra."
+        ],
+        [
+          "Salud y riesgo",
+          "Postura de seguridad expresada en bandas, salud de las dependencias, banda de cobertura de pruebas y banda de riesgo global. No se incluye ningún detalle de vulnerabilidades. Los proveedores seleccionados acceden al código al inicio del proyecto."
+        ],
+        [
+          "Tecnología",
+          "Lenguaje principal, desglose completo de lenguajes, marcos de trabajo, estilo de arquitectura y modelo de despliegue."
+        ],
+        [
+          "Escala y complejidad",
+          "Bandas de líneas de código y de archivos, y recuentos de pantallas, flujos de trabajo, entidades de datos, reglas de negocio y puntos de acceso de API."
+        ],
+        [
+          "Integración",
+          "El número de dependencias de integración: bases de datos, API externas, nube, colas y otras."
+        ],
+        [
+          "Disposición y coste",
+          "Si la aplicación se mantiene, se sanea, se retira y consolida o se reconstruye, con bandas de coste de reconstrucción, saneamiento y esfuerzo."
+        ]
+      ],
+      "caption": "Un registro por aplicación, identificado mediante un UUID opaco. Una propuesta puede citar un UUID y el gobierno emisor puede rastrearlo internamente.",
+      "source": "gov-metadata/1.0 repos.json.",
+      "bid": "b33"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.1",
+      "title": "Cómo se protege el parque tecnológico para su divulgación",
+      "caption": "La publicación elimina la información identificable mediante una estrategia de defensa en profundidad. Cada nivel suprime una categoría de datos identificadores y preserva la estructura que el sector necesita; además, el análisis determinista debe dar resultado limpio antes de que el conjunto de datos se certifique.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Solo lista de campos permitidos",
+            "desc": "Únicamente se emiten los campos enumerados. Nombres, textos de hallazgos, identificadores de vulnerabilidades, paquetes, rutas de ataque, hosts y rutas de archivo nunca se seleccionan."
+          },
+          {
+            "title": "Análisis determinista",
+            "desc": "Cada cadena emitida se examina en busca de tokens, claves, correos electrónicos, direcciones, nombres de host, cadenas de conexión y nombres distintivos. Esta comprobación obligatoria debe arrojar cero resultados para certificar el conjunto de datos."
+          },
+          {
+            "title": "k-anonimato",
+            "desc": "Los perfiles estructurales menos frecuentes que el umbral (k = 5) se generalizan, de modo que ninguna aplicación pueda reidentificarse a partir de su estructura."
+          },
+          {
+            "title": "Revisión con modelo de frontera",
+            "desc": "Las descripciones de capacidades se revisan en contexto y se suprimen allí donde aún revelan información identificadora."
+          },
+          {
+            "title": "Certificar como publicable",
+            "desc": "Con la comprobación obligatoria limpia y la revisión completada, la instantánea en el tiempo se certifica y se publica."
+          }
+        ]
+      },
+      "bid": "b35"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.2",
+      "title": "Los datos sensibles se retienen; la estructura útil se publica",
+      "caption": "El código fuente contiene nombres, secretos y las fallas exactas que un atacante querría explotar. La publicación elimina todo eso y conserva la estructura, de modo que el sector recibe un mapa fiel del trabajo sin ninguna exposición.",
+      "image": {
+        "src": "public/images/m66qi/es/fig-6-1.jpg",
+        "alt": "Documentos de código fuente que pasan por una serie de tamices y compuertas: los datos identificadores se van retirando y se reemplazan con tokens opacos en blanco, hasta quedar como tarjetas anónimas y limpias que conservan la estructura pero no la identidad.",
+        "image_prompt": "An editorial illustration of raw code documents travelling along a line through a sequence of fine sieves and gates. At each gate, identifying marks such as names and labels are lifted away and stamped over with blank opaque tokens. What emerges at the end is a clean set of anonymous cards that carry structure and shape but no identity. A sense of sensitive detail held back while the useful shape is released. Muted Alberta cream palette, navy and rust accents, archival print quality. Every label is in Spanish: DATOS EN BRUTO under the incoming document stack; above the three gates IDENTIFICADORES (nombres, correos, usuarios), DETALLES SENSIBLES (direcciones IP, ubicaciones, dispositivos), SEÑALES DE COMPORTAMIENTO (patrones de actividad, frecuencia de uso, historial); under the gates PRIMER TAMIZ, SEGUNDO TAMIZ, TERCER TAMIZ with ELIMINADO and SUSTITUIDO; and SALIDA ANÓNIMA ESTRUCTURADA under the clean cards. No English words anywhere. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b36"
+    },
+    {
+      "type": "paragraph",
+      "text": "El mapa de capacidades es la vía de entrada para que los proveedores presenten ofertas de modernización de segmentos completos del gobierno. El conjunto de datos organiza las funciones del gobierno en cuarenta grupos de dominio —desde Transporte y Vialidad, pasando por Gestión Financiera, hasta Justicia y Tribunales— y dentro de cada grupo enumera las capacidades y las aplicaciones que las ejercen. Los repositorios se vinculan a las capacidades y, con este conjunto de datos, es la primera vez que las funciones del gobierno se han trazado desde el código hasta la función, con esta profundidad, y se han publicado de forma abierta.",
+      "bid": "b37"
+    },
+    {
+      "type": "table",
+      "title": "Los dominios más grandes, por número de capacidades",
+      "columns": [
+        "Grupo de dominio",
+        "Capacidades"
+      ],
+      "rows": [
+        [
+          "Transporte y Vialidad",
+          "129"
+        ],
+        [
+          "Entrega de Software e Ingeniería",
+          "119"
+        ],
+        [
+          "Aprendizaje y Administración Educativa",
+          "112"
+        ],
+        [
+          "Integración de Datos e Interoperabilidad",
+          "93"
+        ],
+        [
+          "Contenido y publicación web",
+          "92"
+        ],
+        [
+          "Justicia y tribunales",
+          "86"
+        ],
+        [
+          "Gestión y gobernanza de datos",
+          "85"
+        ],
+        [
+          "Servicios geoespaciales y cartográficos",
+          "82"
+        ],
+        [
+          "Gestión financiera",
+          "80"
+        ],
+        [
+          "Gestión de expedientes y flujos de trabajo",
+          "75"
+        ],
+        [
+          "Medio ambiente y recursos naturales",
+          "73"
+        ],
+        [
+          "Analítica, informes e inteligencia empresarial",
+          "70"
+        ],
+        [
+          "Gestión de documentos y registros",
+          "70"
+        ],
+        [
+          "Licencias, permisos y registro",
+          "67"
+        ],
+        [
+          "Correspondencia y notificaciones",
+          "65"
+        ]
+      ],
+      "caption": "Los quince dominios más grandes de un total de cuarenta derivados por máquina; el mapa completo contiene 2 182 capacidades. Cada nombre de capacidad es una abstracción genérica, sin nombres propios, de lo que hace el software.",
+      "source": "gov-metadata/1.0 capabilities.json.",
+      "bid": "b38"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.3",
+      "title": "Un mapa de lo que hace el gobierno, extraído de su código",
+      "caption": "Una vista representativa del mapa: dominios de distintos tamaños, cada uno densamente poblado con las capacidades que ofrecen sus aplicaciones, con tenues hilos que conectan las capacidades que se repiten entre dominios. El mapa completo abarca 2 182 capacidades en 40 dominios. Este es el primer mapa abierto, basado en código, de las funciones del gobierno.",
+      "image": {
+        "src": "public/images/m66qi/es/fig-6-2.jpg",
+        "alt": "Un gran mapa dividido en territorios bien diferenciados de distintos tamaños, cada uno repleto de pequeños nodos agrupados que representan capacidades, con líneas tenues que conectan nodos entre territorios.",
+        "image_prompt": "An editorial illustration of a large map divided into many distinct territories of differing sizes, each territory densely filled with small clustered nodes representing capabilities, with the largest territory clearly holding the biggest cluster. Faint lines link related nodes across territories. A sense of a complete map of everything an institution does, drawn from its code up to its functions. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b39"
+    },
+    {
+      "type": "paragraph",
+      "text": "El conjunto de datos también incluye una disposición recomendada para cada aplicación, determinada a partir de su estado, su actividad y su complejidad. Las cuatro disposiciones corresponden a los cuatro enfoques de modernización descritos en [un documento anterior](/paper/zgym1): mantener y supervisar lo que está en buen estado, remediar en el AI Garage lo que vale la pena conservar y mejorar, dar de baja y consolidar lo que es redundante, y reconstruir en la AI Factory lo que necesita ser reemplazado. Leer estas disposiciones a lo largo de todo el parque tecnológico permite que la contratación pública priorice los dominios donde el estado de salud es bajo o donde una pila tecnológica heredada exige racionalización, y permite que la industria identifique desde el principio qué capacidades están abiertas a consolidación y cuáles son candidatas a una reconstrucción desde cero.",
+      "bid": "b40"
+    },
+    {
+      "type": "table",
+      "title": "El parque tecnológico por disposición recomendada",
+      "columns": [
+        "Disposición",
+        "Aplicaciones",
+        "% del parque tecnológico"
+      ],
+      "rows": [
+        [
+          "Mantener / Supervisar",
+          "1,527",
+          "37.8%"
+        ],
+        [
+          "Remediar (AI Garage)",
+          "1,375",
+          "34.0%"
+        ],
+        [
+          "Dar de baja / Consolidar",
+          "739",
+          "18.3%"
+        ],
+        [
+          "Reconstruir (AI Factory)",
+          "400",
+          "9.9%"
+        ]
+      ],
+      "caption": "Una disposición recomendada para cada aplicación, calculada a partir del estado, la actividad y la complejidad. En conjunto, las opciones de dar de baja y consolidar, y de reconstruir, representan más de una cuarta parte del parque tecnológico, y señalan dónde se concentra la mayor oportunidad de colaboración con la industria.",
+      "source": "gov-metadata/1.0 repos.json.",
+      "bid": "b41"
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Cómo puede la industria presentar ofertas con una precisión sin precedentes",
+      "bid": "b42"
+    },
+    {
+      "type": "paragraph",
+      "text": "Con este conjunto de datos disponible, la industria puede por fin ver la estructura real de los sistemas de gobierno y las decenas de miles de pantallas y flujos de trabajo que hay detrás de ellos. Los proveedores pueden responder apoyando la modernización de una capacidad de negocio completa, o de varias capacidades a la vez. Pueden calcular costos realistas al comprender exactamente cuántas integraciones serán necesarias, qué pilas tecnológicas deben migrarse y cuántas pantallas y flujos de trabajo deben trasladarse. Un oferente serio puede usar la IA para analizar los datos y generar una propuesta fundamentada, en lugar de hacer conjeturas sobre sistemas heredados sin documentar y añadir márgenes de contingencia al precio.",
+      "bid": "b43"
+    },
+    {
+      "type": "keystat",
+      "label": "Pantallas y flujos de trabajo ahora visibles para los oferentes",
+      "value": "75 582 / 73 516",
+      "body": "El recuento de pantallas y flujos de trabajo en todo el parque tecnológico, enumerados por primera vez. Un proveedor que proponga reemplazar una capacidad puede ver ahora cuánto trabajo hay realmente detrás de ella, en lugar de estimarlo a ciegas.",
+      "bid": "b44"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto invita a toda la comunidad de proveedores a replantear la relación de contratación con nosotros. Los proveedores de soluciones COTS y SaaS pueden mapear sus productos directamente en la matriz de capacidades. Los proveedores de servicios y las empresas nativas de IA pueden proponer la orquestación de agentes que ofrezca capacidades de plena titularidad gubernamental. Un proveedor podría analizar el mapa, comprender el espacio de dominio de lo que el gobierno hace con su código y proponer reemplazar decenas o incluso cientos de repositorios con una plataforma empresarial, con el número de integraciones, la ruta de migración y el recuento de pantallas y flujos de trabajo, todo fundamentado en los datos. La barrera de entrada desaparece, porque la ventaja informativa que antes correspondía al proveedor establecido ahora está al alcance de cualquiera dispuesto a leer el mapa.",
+      "bid": "b45"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.1",
+      "title": "De renovar una pieza a la vez a abordar todo el parque tecnológico de una vez",
+      "caption": "El modelo anterior reemplazaba un sistema pieza a pieza, en una renovación que podría prolongarse indefinidamente, y solo el proveedor establecido podía ver el conjunto. La matriz abierta permite que múltiples equipos analicen y presenten ofertas sobre capacidades completas a la vez, a partir del mismo mapa compartido.",
+      "image": {
+        "src": "public/images/m66qi/es/fig-7-1.jpg",
+        "alt": "Una ilustración dividida en dos partes: a la izquierda, un trabajador reemplazando una sola tabla en un enorme barco antiguo visto a través de una pequeña mirilla; a la derecha, múltiples equipos analizando y presentando ofertas sobre secciones enteras de un puerto iluminado y abierto, a partir de un mapa compartido.",
+        "image_prompt": "An editorial illustration split into two halves. On the left, the old way: a single narrow keyhole of light and one lone worker replacing a single plank on an enormous old ship, one plank at a time, the rest of the vessel dark and untouched. On the right, the new way: the whole ship and harbour lit and open, with many teams of builders surveying and bidding on entire sections at once from a large shared map. A sense of moving from one plank at a time to the whole estate at once. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b46"
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Ofertas estructuradas, tablas de correspondencia y la matriz compartida",
+      "bid": "b47"
+    },
+    {
+      "type": "paragraph",
+      "text": "Junto con el conjunto de datos, publicamos un archivo CLAUDE.md que proporciona a cada oferente la guía exacta para formular una respuesta conforme. Explica cómo leer el JSON, cómo mapear la solución en la matriz de capacidades y qué artefactos estructurados deben entregarse. Cada oferta debe incluir un archivo de correspondencia legible por máquina que vincule cada página o sección del documento narrativo con los nodos de capacidad específicos, las puntuaciones de estado o los metadatos del repositorio que afirma abordar. Un revisor asistido por IA puede entonces analizar el paquete completo y extraer los campos estructurados relativos a costo, cobertura de capacidades, citas de evidencia, capacidad de soporte local y riesgo.",
+      "bid": "b48",
+      "edit_count": 2,
+      "last_edited": "2026-07-23T02:41:59.914Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta matriz multidimensional compartida permite al equipo de contratación pública visualizar de inmediato quién ha presentado ofertas y en qué áreas, dónde se concentran los costos y qué tipos de oferta están disponibles, ya sean COTS, SaaS, de código abierto, desarrolladas a medida o basadas en agentes de IA. Alberta es completamente transparente respecto a lo que solicita, y la industria puede ser completamente transparente respecto a lo que ofrece. Si un proveedor propone una solución con diez pantallas para reemplazar una que tiene mil, esa discrepancia se hace inmediatamente visible, en lugar de quedar oculta en folletos elaborados o resúmenes escuetos. Ya no nos preocupa el número de ofertas, porque cada propuesta llega estructurada, auditable y comparable dentro del mismo marco. La contratación pública puede ver la cobertura de todo el parque tecnológico, identificar las brechas y priorizar los dominios donde el estado de salud de las aplicaciones es bajo o donde una pila tecnológica como COBOL o Java sin soporte exige racionalización.",
+      "bid": "b49"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.1",
+      "title": "Cada afirmación vinculada a su evidencia",
+      "caption": "Una oferta narrativa llega con una tabla de correspondencias que conecta cada página a la misma cuadrícula compartida de nodos de capacidad. El revisor de IA procesa el paquete y la cuadrícula se ilumina para mostrar exactamente dónde cada licitante afirma tener cobertura y dónde quedan las brechas.",
+      "image": {
+        "src": "public/images/m66qi/es/fig-8-1.jpg",
+        "alt": "Propuestas de proveedores conectadas por líneas finas a una cuadrícula compartida de nodos de capacidad, con un revisor de IA en una consola tranquila y la cuadrícula iluminándose para mostrar la cobertura y las brechas.",
+        "image_prompt": "An editorial illustration of vendor proposals arriving as neat narrative documents, each threaded by fine lines that map every page onto the same shared grid of capability nodes. At a calm console, a single reviewer figure runs each package through, and the grid lights up to show exactly where each bidder has claimed coverage and where gaps remain. A sense of every claim being traced back to the evidence. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b50"
+    },
+    {
+      "type": "pullquote",
+      "text": "Si un proveedor propone una solución con diez pantallas para reemplazar una que tiene mil, esa discrepancia se vuelve inmediatamente visible y merece una revisión.",
+      "cite": "Documento 22 · Taking the Hill",
+      "bid": "b51"
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Sin contenido de relleno, por favor",
+      "bid": "b52"
+    },
+    {
+      "type": "paragraph",
+      "text": "Al hacer este proceso tan transparente y fácil de entender, también abrimos nuevos desafíos. En esta era, cualquiera puede dirigir la IA hacia el volcado de datos en JSON y generar una propuesta atractiva y aparentemente razonable que aporta poco o ningún valor frente a la complejidad real del trabajo que intentamos realizar. Nosotros mismos usamos la IA y apreciamos su potencia. Queremos que los innovadores y los agentes de cambio presenten ofertas, y esperamos que cada oferta y cada producto incorporen IA. Lo que queremos evitar es una avalancha de interfaces generadas sin rigor y de afirmaciones sin respaldo que simplemente suenan bien sobre el papel, porque esa avalancha nos lleva directamente al problema original: demasiadas ofertas y la obligación legal de leer cada página de cada una. Dado que la IA facilita la presentación de ofertas, elevamos el listón en cuanto a la evidencia necesaria para demostrar que usted posee la capacidad de satisfacer nuestras necesidades.",
+      "bid": "b53"
+    },
+    {
+      "type": "paragraph",
+      "text": "La responsabilidad recaerá en los proveedores de demostrar que tienen capacidad para cubrir cada una de las capacidades de negocio que abordan. Esto podría ser un fragmento de prototipo funcional, un flujo de trabajo de agentes (de IA) con arnés, o un script de compilación reproducible que demuestre una ejecución real sobre los datos. La industria debe probar que tiene esa capacidad y vincular cada pieza de evidencia a la matriz de capacidades de negocio, a la pila tecnológica y a las APIs.",
+      "bid": "b54"
+    },
+    {
+      "type": "paragraph",
+      "text": "La naturaleza de lo que compramos también está cambiando, y estamos abriendo la puerta para que los desarrolladores se unan a nosotros en la construcción pionera de la Fábrica de IA y la próxima generación de productos y soluciones impulsados por la IA. En la era de la IA, nos interesa menos otro producto COTS o SaaS de caja negra, porque si un proveedor puede construirlo con agentes (de IA), nosotros también podemos. Lo que buscamos son socios que ofrezcan una hoja de ruta para modernizar la totalidad de nuestro patrimonio tecnológico. Y estamos abiertos a formas innovadoras de lograrlo. Los licitantes pueden encontrar y proponer productos de código abierto, pueden aportar código propietario novedoso cuando un componente sea genuinamente único, y pueden demostrar cómo utilizarán la orquestación de agentes, los arneses, las habilidades y los estándares para construir conforme al estándar del Gobierno de Alberta, descrito en [el documento sobre arneses](/paper/p7p2k) y [los documentos sobre la Fábrica de IA](/paper/qthji).",
+      "bid": "b55"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.1",
+      "title": "Un filtro de alta selección: la evidencia por encima de la apariencia",
+      "caption": "Cada oferta recorre el mismo camino. Las propuestas llegan en múltiples formatos; un filtro de alta selección elimina el ruido de baja calidad; una evaluación de IA puntúa lo que queda según verificabilidad, pertinencia y viabilidad; y cada oferta que supera el filtro ocupa su lugar en el mapa tridimensional de capacidades, donde las propuestas de mayor calidad y capacidad se destacan sobre el resto.",
+      "image": {
+        "src": "public/images/m66qi/es/fig-9-1.jpg",
+        "alt": "Un diagrama de cuatro pasos: los documentos de oferta entran por la izquierda, pasan por un filtro de alta selección, son puntuados por una evaluación de IA según verificabilidad, pertinencia y viabilidad, y luego se grafican en un mapa tridimensional de capacidades por calidad, área de capacidad y madurez, con las ofertas de mayor calidad destacándose sobre el resto.",
+        "image_prompt": "An editorial illustration of a high pass filter for bids, where AI evaluates bid quality and maps it into a 3 dimensional business capability map structure for government. A sense of a high-pass filter that favours proof over polish. Muted Alberta cream palette, navy and rust accents, archival print quality. All labels are in Spanish: 1. LICITACIONES ENTRANTES (Muchas licitaciones. Diferentes formatos.); 2. FILTRO DE ALTA SELECCIÓN (Favorece la prueba sobre la presentación. Filtra las licitaciones de baja calidad.); 3. EVALUACIÓN CON IA (La IA evalúa la calidad de las licitaciones en todas sus dimensiones.); 4. MAPA 3D DE CAPACIDADES DE NEGOCIO; a panel DIMENSIONES DE EVALUACIÓN listing VERIFICABILIDAD, RELEVANCIA, FACTIBILIDAD; axes CALIDAD, ÁREA DE CAPACIDAD, NIVEL DE MADUREZ; a bottom strip PRINCIPIO DEL FILTRO DE ALTA SELECCIÓN with BAJA CALIDAD (Filtrada), CALIDAD MEDIA (Conservada), ALTA CALIDAD (Elevada). The filter is always called «Filtro de Alta Selección»; never write «Filtro Paso Alto». All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b56"
+    },
+    {
+      "type": "paragraph",
+      "text": "Publicaremos como código abierto este primer conjunto de datos y el formato estructurado de ofertas en el [Simposio Velocity](https://luma.com/yzd00tir) el 28 de julio de 2026, nuestro primer día de la industria desde el lanzamiento de los libros blancos Velocity el 6 de julio. La industria tendrá dos meses para analizar la información, formular preguntas y construir respuestas significativas antes de presentarlas en nuestra serie de innovación en IA para agencias en octubre. Estas presentaciones son una oportunidad de demostración práctica: una ocasión para que la industria muestre lo que ha construido y cómo ha abordado los problemas que revela el conjunto de datos. Poco después, el gobierno abrirá los siguientes tramos de contratación para este tipo de soluciones, priorizados en función de lo que la industria exhiba.",
+      "bid": "b57"
+    },
+    {
+      "type": "keystat",
+      "label": "Contratación que este modelo permitirá",
+      "value": "100–200 millones de dólares",
+      "body": "Se espera que los próximos cien a doscientos millones de dólares en contratación en este ámbito sigan este modelo basado en evidencia y datos, con un conjunto de datos refinado publicado antes de que se abra ese tramo. La industria dispone de dos meses entre el Simposio y Agency 2026 para desarrollar sus soluciones.",
+      "bid": "b58"
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "La contratación como base de la modernización",
+      "bid": "b59"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este enfoque es un paso importante en la misión del Ministerio de hacer la contratación más fácil, más rápida y más transparente. Publicar los metadatos y exigir ofertas estructuradas y respaldadas por evidencia reduce la barrera de entrada sin bajar el listón de la demostración. La industria obtiene una visión clara de los desafíos reales y puede proponer soluciones novedosas que se ajusten a nuestro modelo operativo, en lugar de presionarnos para que aceptemos un producto preempaquetado. Las ofertas y evaluaciones asistidas por la IA facilitarán que los proponentes utilicen la IA para demostrar cómo cumplen los requisitos del gobierno y para reducir el riesgo de sus solicitudes. La IA también apoya al evaluador, de modo que el personal de contratación puede analizar y comparar cientos de propuestas que abordan una variedad de desafíos de forma fácil y rápida. Presentar una oferta exitosa debería llevar horas en lugar de semanas, con herramientas de IA que apoyen el cumplimiento y la validación. A través de este proceso competitivo y abierto, Alberta gana nuevos proveedores, objetivos renovados con los socios existentes y capacidades de titularidad gubernamental construidas mediante una colaboración genuina.",
+      "bid": "b60"
+    },
+    {
+      "type": "pullquote",
+      "text": "Modernizar la contratación es la base necesaria para modernizar el gobierno en su conjunto.",
+      "cite": "Documento 22 · Taking the Hill",
+      "bid": "b61"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta es una nueva forma de contratar: equitativa, ágil y con información suficiente para que la industria proponga soluciones novedosas y el gobierno avance con mayor rapidez. Al publicar este primer conjunto de datos de código abierto, invitamos a la industria a trabajar siguiendo el camino trazado en estos libros blancos Velocity y ofrecemos una vía hacia una colaboración a largo plazo. Abandonamos el modelo de reemplazo oferta por oferta, un elemento a la vez, para abordar los desafíos del gobierno a escala y con velocidad. A través del Simposio Velocity y Agency 2026, esperamos que la industria se una a nosotros para afrontar los desafíos más críticos que enfrentamos.",
+      "bid": "b62"
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "procurement",
+        "open-data",
+        "git-insights",
+        "industry-partnership"
+      ],
+      "bid": "b63"
+    },
+    {
+      "type": "related",
+      "bid": "b64"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "bbkac",
+    "offjm",
+    "eujjc",
+    "cux4h",
+    "mwo98"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Se tradujeron al español las secciones 01 a 05 y las diapositivas 5 y 6, que habían quedado en inglés tras la revisión editorial del original."
+      }
+    ],
+    "updated": "2026-09-04"
+  },
+  "field_edits": {
+    "subtitle": {
+      "edit_count": 4,
+      "last_edited": "2026-07-24T01:54:19.653Z"
+    },
+    "title": {
+      "edit_count": 2,
+      "last_edited": "2026-07-23T03:44:18.064Z"
+    },
+    "abstract": {
+      "edit_count": 4,
+      "last_edited": "2026-07-24T02:47:53.876Z"
+    }
+  },
+  "translation_status": "draft",
+  "source_signature": "1770272174"
+}

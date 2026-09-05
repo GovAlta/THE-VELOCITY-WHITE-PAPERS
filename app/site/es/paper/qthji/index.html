@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>La fábrica de IA: diseño e ideación (Pronghorn) · Los libros blancos Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Una aplicación de calidad construida con IA requiere requisitos, estándares y arquitecturas claramente definidos. Estos artefactos esenciales se omiten con frecuencia en el proceso de desarrollo asistido por la IA, ya que el personal suele pasar de inmediato a crear los componentes de experiencia de usuario de una aplicación, dejando decisiones significativas en materia de seguridad y aspectos técnicos en manos de la IA. Sin una dirección clara, los agentes de IA omiten con frecuencia funciones y controles esenciales. Alberta desarrolló el Proyecto Pronghorn para que el personal técnico y no técnico pudiera colaborar en la definición de supuestos claros, prototipos funcionales, requisitos de negocio y un lienzo interactivo de diseño de arquitectura. Estos artefactos sientan bases sólidas para la entrega basada en IA, garantizan la coherencia a lo largo del proceso y proporcionan un punto de referencia para evaluar el producto final." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/es/paper/qthji/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/qthji/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/qthji/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/qthji/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/qthji/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="La fábrica de IA: diseño e ideación (Pronghorn)" />
+  <meta property="og:description" content="Una aplicación de calidad construida con IA requiere requisitos, estándares y arquitecturas claramente definidos. Estos artefactos esenciales se omiten con frecuencia en el proceso de desarrollo asistido por la IA, ya que el personal suele pasar de inmediato a crear los componentes de experiencia de usuario de una aplicación, dejando decisiones significativas en materia de seguridad y aspectos técnicos en manos de la IA. Sin una dirección clara, los agentes de IA omiten con frecuencia funciones y controles esenciales. Alberta desarrolló el Proyecto Pronghorn para que el personal técnico y no técnico pudiera colaborar en la definición de supuestos claros, prototipos funcionales, requisitos de negocio y un lienzo interactivo de diseño de arquitectura. Estos artefactos sientan bases sólidas para la entrega basada en IA, garantizan la coherencia a lo largo del proceso y proporcionan un punto de referencia para evaluar el producto final." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/es/paper/qthji/" />
+  <meta property="og:site_name" content="Los libros blancos Velocity" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/qthji.es.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/qthji.es.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="La fábrica de IA: diseño e ideación (Pronghorn)" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/qthji.es.jpg" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="La fábrica de IA: diseño e ideación (Pronghorn)" />
+  <meta name="twitter:description" content="Una aplicación de calidad construida con IA requiere requisitos, estándares y arquitecturas claramente definidos. Estos artefactos esenciales se omiten con frecuencia en el proceso de desarrollo asistido por la IA, ya que el personal suele pasar de inmediato a crear los componentes de experiencia de usuario de una aplicación, dejando decisiones significativas en materia de seguridad y aspectos técnicos en manos de la IA. Sin una dirección clara, los agentes de IA omiten con frecuencia funciones y controles esenciales. Alberta desarrolló el Proyecto Pronghorn para que el personal técnico y no técnico pudiera colaborar en la definición de supuestos claros, prototipos funcionales, requisitos de negocio y un lienzo interactivo de diseño de arquitectura. Estos artefactos sientan bases sólidas para la entrega basada en IA, garantizan la coherencia a lo largo del proceso y proporcionan un punto de referencia para evaluar el producto final." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"La fábrica de IA: diseño e ideación (Pronghorn)","description":"Una aplicación de calidad construida con IA requiere requisitos, estándares y arquitecturas claramente definidos. Estos artefactos esenciales se omiten con frecuencia en el proceso de desarrollo asistido por la IA, ya que el personal suele pasar de inmediato a crear los componentes de experiencia de usuario de una aplicación, dejando decisiones significativas en materia de seguridad y aspectos técnicos en manos de la IA. Sin una dirección clara, los agentes de IA omiten con frecuencia funciones y controles esenciales. Alberta desarrolló el Proyecto Pronghorn para que el personal técnico y no técnico pudiera colaborar en la definición de supuestos claros, prototipos funcionales, requisitos de negocio y un lienzo interactivo de diseño de arquitectura. Estos artefactos sientan bases sólidas para la entrega basada en IA, garantizan la coherencia a lo largo del proceso y proporcionan un punto de referencia para evaluar el producto final.","url":"https://thevelocitywhitepapers.com/es/paper/qthji/","inLanguage":"es","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Ministry of Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Gobierno de Alberta · Ministerio de Tecnología e Innovación"},"isPartOf":{"@type":"PublicationVolume","name":"Los libros blancos Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"ai-factory, pronghorn, design, requirements, canvas, architecture, open-source","image":"https://thevelocitywhitepapers.com/public/og/qthji.es.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 08 · Technical</p>
+      <h1>La fábrica de IA: diseño e ideación (Pronghorn)</h1>
+      <p class="sub">El Proyecto Pronghorn es la primera de las tres etapas de la fábrica. Las herramientas de IA transforman los requisitos del Ministerio en prototipos, artefactos, lienzos visuales y documentos de proyecto antes de que comience el proceso de construcción.</p>
+      <div class="abstract"><strong>Abstract.</strong> Una aplicación de calidad construida con IA requiere requisitos, estándares y arquitecturas claramente definidos. Estos artefactos esenciales se omiten con frecuencia en el proceso de desarrollo asistido por la IA, ya que el personal suele pasar de inmediato a crear los componentes de experiencia de usuario de una aplicación, dejando decisiones significativas en materia de seguridad y aspectos técnicos en manos de la IA. Sin una dirección clara, los agentes de IA omiten con frecuencia funciones y controles esenciales. Alberta desarrolló el Proyecto Pronghorn para que el personal técnico y no técnico pudiera colaborar en la definición de supuestos claros, prototipos funcionales, requisitos de negocio y un lienzo interactivo de diseño de arquitectura. Estos artefactos sientan bases sólidas para la entrega basada en IA, garantizan la coherencia a lo largo del proceso y proporcionan un punto de referencia para evaluar el producto final.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">A finales de 2025, el equipo Maximalista de IA de Tecnología e Innovación había desarrollado «por intuición» varios cientos de aplicaciones prototipo en plataformas como Lovable. A medida que los modelos se volvían más capaces y el personal adquiría más experiencia, el desarrollo y la creación de prototipos de aplicaciones se aceleró. Sin embargo, los agentes de IA se centraban habitualmente en la experiencia de usuario y tomaban decisiones arquitectónicas sin documentar, lo que repercutía negativamente en la seguridad, el despliegue y la idoneidad para las cargas de trabajo gubernamentales. Estas plataformas también imponían opciones tecnológicas específicas (como el uso de Supabase y otras plataformas de software como servicio) que no formaban parte de nuestros estándares y que, si se implementaban de forma incorrecta, podían introducir fácilmente nuevos riesgos de seguridad.
+
+Para ser claros, estas deficiencias no tienen nada que ver con las capacidades de los modelos en sí, sino con la forma en que se utilizan. El personal no parece implementar controles de seguridad sólidos desde el principio, y la entrega de soluciones de backend era no planificada, inconsistente e improvisada en su implementación. Quedó claro que Alberta necesitaba herramientas que fueran fáciles de usar para cualquier persona y suficientemente potentes para crear una imagen integrada de lo que se estaba construyendo **antes** de que comenzara el desarrollo. Se necesitan nuevos procesos para formalizar estos pasos y garantizar que no se omitan. En noviembre de 2025, el equipo Maximalista de IA comenzó a desarrollar una solución para abordar estos desafíos, que se convertiría en el Proyecto Pronghorn.
+
+
+## §01 El pronghorn entra en escena
+
+El pronghorn era la mascota adecuada para esta iniciativa. El pronghorn, o antílope americano, es el segundo animal terrestre más rápido del mundo y el más veloz de América del Norte, originario de Alberta, con un amplio campo visual y la resistencia para correr durante horas. Queríamos una herramienta con las mismas cualidades: rápida, con visión amplia y capaz de mantener un alto ritmo a lo largo de una gran distancia. La ambición inicial era que Pronghorn se convirtiera en una solución única e integral que resolviera todo el proceso de construcción de extremo a extremo, desde los requisitos y la creación de prototipos hasta la arquitectura, la base de datos y el despliegue. La versión inicial cumplió este objetivo de forma moderadamente eficaz, permitiendo nuestra primera construcción de extremo a extremo dentro de una plataforma común. Sin embargo, a medida que la tecnología evolucionó y las plataformas de programación agéntica como Claude Code, GitHub Copilot y Perplexity Computer maduraron, redujimos el alcance de Pronghorn para centrarnos más específicamente en transformar ideas y requisitos en prototipos, arquitecturas y artefactos necesarios para iniciar un proyecto. Este era, y sigue siendo, un paso subatendido y pasado por alto en el proceso de desarrollo. Así pues, hicimos un giro y mantuvimos la agilidad (como un pronghorn): la plataforma se orientó con mayor precisión hacia la primera de las tres etapas de lo que denominamos una fábrica de IA.
+
+
+## §02 La fábrica de IA en tres etapas
+
+El concepto de la fábrica de IA consiste en aprovechar al máximo la IA agéntica para liderar el desarrollo de aplicaciones desde la ideación hasta la entrega. El objetivo de Alberta es aprovechar la IA al máximo para aumentar la calidad y la velocidad, al tiempo que se reducen los costos. Para lograrlo de manera efectiva, concebimos el proceso dividido en tres etapas diferenciadas.
+
+
+La primera etapa reúne el material en bruto: requisitos, dependencias, transcripciones, y procesos y flujos de trabajo actuales. La IA apoya esta etapa transformando estos artefactos en prototipos claros, diseños, requisitos, especificaciones y documentos de proyecto tales como casos de negocio, actas constitutivas y diseños arquitectónicos claros y bien documentados. La segunda etapa construye. La tercera mide.
+
+
+Pronghorn sirve a esta primera etapa, donde se definen los elementos comunes, los componentes, las especificaciones y la arquitectura, y donde se decide qué es exactamente lo que se quiere construir.
+
+
+## §03 La fábrica de automóviles, una analogía útil
+
+La fábrica de automóviles es una analogía útil para comprender el proceso de diseño de aplicaciones en la era de la IA.
+
+Muchos diseños de automóviles comienzan con un bloque de arcilla, modelado por un artista que tiene sentido estético y un conjunto de restricciones estrictas: la forma debe ser aerodinámica, atractiva, segura en la carretera y estar dentro de los límites de altura libre, altura total, ventanas y puertas. La arcilla es solo la apariencia, y eso es suficiente para empezar. Una vez esculpida, se escanea, se digitaliza en un modelo 3D y se refina en software hasta obtener algo más sólido. Luego vienen las especificaciones. En Canadá, Transport Canada establece los requisitos que debe cumplir un automóvil para circular legalmente en la carretera: un exhaustivo conjunto de normas de seguridad. Después, vienen las piezas: un diseño se convierte en decenas de miles de componentes distintos, cada uno prefabricado y catalogado con su propio diseño, materiales y ficha técnica, y ensamblados primero dentro de un ordenador. El software de validación garantiza que nada colisione y que cada pieza pueda instalarse y retirarse en secuencia con herramientas comunes.
+
+El desarrollo de software tradicional (anterior a la IA) sigue procesos similares al diseño de automóviles. Se crean prototipos visuales y esquemas para validar los supuestos fundamentales. Se integran la identidad visual y los estilos. Se toman decisiones arquitectónicas y se incorporan los estándares empresariales a los planes. Se definen y aprueban los requisitos funcionales (lo que el usuario ve y hace) y los no funcionales (cómo funciona y está protegida la aplicación), con la firma de diversas partes interesadas. Los costos se desglosan por componentes y funcionalidades, y se establece y aprueba un calendario y un presupuesto.
+
+El desarrollo de aplicaciones basado en IA omite por defecto muchos, si no la mayoría, de estos pasos, pasando directamente a la interfaz de usuario y al flujo de trabajo. Esto proporciona una satisfacción visual inmediata, pero posterga esas decisiones. Extendiendo la analogía: se ve la carrocería del automóvil, pero los frenos, el motor, los ejes y el chasis están ausentes. Visualmente atractivo, pero no listo ni seguro para circular.
+
+
+## §04 Automatización vs. elaboración artesanal
+
+La fábrica apunta hacia donde queremos llegar en materia de estandarización.
+
+Las personas también tienen dificultades para mantener la coherencia entre aplicaciones. Sin un estándar claramente definido, dos desarrolladores distintos tomarán diversas decisiones que condicionen la experiencia. Para un producto de software específico, esa singularidad puede ser un activo. En el ámbito gubernamental es, en su mayor parte, un pasivo. El gobierno valora mucho una experiencia de usuario positiva y la creatividad que resuelve un problema nuevo; sin embargo, la repetibilidad, la seguridad, la usabilidad y la accesibilidad importan mucho más que una apariencia distintiva y personalizada. En miles de servicios de cara al público, apartarse de la apariencia común resulta desconcertante en lugar de atractivo.
+
+A lo largo de décadas de desarrollo y de distintos ministerios, la experiencia de usuario ha ido cambiando. Las aplicaciones individuales aspiran a la coherencia dentro de su base de código, pero en todo el patrimonio tecnológico existe una diversidad significativa que resulta desconcertante para los usuarios. Para alguien que busca servicios sociales y utiliza un lector de pantalla u otra tecnología de asistencia, esa falta de coherencia es la diferencia entre obtener ayuda y rendirse. El estándar debe ir a encontrarse con el público donde este se encuentra.
+
+La entrega asistida por la IA puede agravar el problema, ya que cada prototipo desarrollado por intuición tiende a ser diferente si no se introduce un estándar claro desde el primer paso. Sin embargo, la IA también puede resolver eficazmente este problema definiendo estándares universales que siga cada agente de IA. Esto requiere un repositorio central, legible por máquina, de estándares, plantillas y ejemplos de código (como una biblioteca de componentes reutilizables comunes) que se definan y apliquen a lo largo de todo el proceso de construcción. El Arnés Bien Construido es un ejemplo de cómo pueden aplicarse estos estándares.
+
+Alberta busca eliminar esta complejidad mediante una implementación impulsada por la IA. Con nuestro enfoque basado en estándares, estamos racionalizando esta complejidad en un conjunto claro y común de estándares legibles por la IA. Esto garantiza una alta usabilidad, asegura la accesibilidad y mantiene una experiencia coherente en cada interfaz que una persona deba utilizar. Al ejecutar Los Cuatro Enfoques para la Modernización con IA, armonizamos esta experiencia en los enfoques que allí se ofrecen. Estos estándares y enfoques se aplican en el primer paso de la fábrica a través de la plataforma Pronghorn.
+
+
+## §05 Pronghorn entra en escena
+
+Alberta desarrolló la primera versión de Pronghorn (conocida como Pronghorn Red) como una aplicación de código abierto en React y Supabase. Inicialmente estaba alojada en Lovable e integrada con Render.com y proveedores de nube de terceros para la integración de bases de datos. Admite una variedad de modelos de Google, Anthropic y SpaceXAI, y ofrece un conjunto de herramientas asistidas por la IA que apoyan el ciclo de vida del desarrollo de aplicaciones.
+
+
+Más recientemente, Alberta colaboró con Microsoft Canada para portar Pronghorn Blue a una versión refactorizada más alineada con los entornos empresariales. Esta versión incorpora compatibilidad con modelos de OpenAI y aprovecha componentes nativos de Azure, como bases de datos y despliegues en contenedores. Pronghorn Blue se mantiene en colaboración entre Microsoft y el Gobierno de Alberta, y se desarrollará y mantendrá a lo largo del próximo año para añadir funcionalidades adicionales. Red sigue siendo una buena arquitectura de referencia, pero ya no está en desarrollo activo. Ambas versiones están disponibles para que cualquier organización las despliegue en su propio entorno de nube privada o pública. Ambas se publican bajo la licencia MIT de código abierto para su uso sin restricciones.
+
+
+## §06 De una idea a una especificación
+
+Un proyecto en Pronghorn comienza con algunos metadatos y una selección de modelos, y avanza rápidamente hacia una conversación con la IA más reciente. La conversación es familiar, pero incorpora una capacidad de creación rápida de prototipos. Las aplicaciones descritas aparecen de inmediato en el cuerpo del chat, de modo que las ideas pueden desarrollarse con mayor rapidez. Una persona sin conocimientos técnicos, y sin un lugar donde alojar una aplicación, puede describir lo que desea y ver aparecer en tiempo real una maqueta funcional, lista para compartir con un cliente y obtener sus reacciones. Es posible mantener un número ilimitado de conversaciones en hilos, clonar conversaciones y descargar toda la conversación. A modo de apunte, reiteramos habitualmente que cualquier plataforma que no permita exportar el contenido de las conversaciones tiene una falla intrínseca. El contenido es propiedad intelectual del usuario, quien debe poder conservarlo, organizarlo y entregarlo a un agente. Pronghorn lo hace posible.
+
+A continuación se encuentra el espacio de Artefactos, donde Pronghorn ofrece una funcionalidad profunda, porque un agente es tan bueno como el contexto que se le proporciona. Los proyectos suelen iniciarse con una variedad de artefactos, tales como presentaciones de diapositivas, PDF, documentos de Word y páginas web, y el espacio de artefactos los incorpora todos, indexados y listos para que la IA los utilice. Pronghorn permite generar y analizar imágenes, de modo que una maqueta de interfaz de usuario puede crearse con un modelo de imagen y refinarse en el mismo lugar. Es posible editar cualquier artefacto de forma colaborativa con un editor de IA que mantiene un historial inmutable de cada cambio, de manera que un documento de cualquier tipo puede redactarse e iterarse con rapidez, con control de versiones real, procesamiento de imágenes y PDF, y una gestión de archivos ordenada.
+
+A partir de las conversaciones y los artefactos, Pronghorn construye los requisitos de negocio. Se le indica el material y recorre una jerarquía estructurada y ágil: épicas en el nivel superior, luego las funcionalidades dentro de ellas, después las historias de usuario y los criterios de aceptación que determinan cuándo cada historia está completa. El resultado es un mapa de cuatro niveles que se puede desarrollar, hacer seguimiento y transferir, fundamentado en los documentos desde los que realmente se inició el proyecto y no en el recuerdo que alguien tiene de una reunión.
+
+
+## §07 El lienzo de arquitectura
+
+La funcionalidad que más nos entusiasma a largo plazo es un lienzo visual compartido, construido sobre React Flow, donde se arrastran y sueltan los componentes de la arquitectura de una aplicación y se trabaja en ellos junto a agentes de IA que pueden tanto leer el lienzo como dibujar sobre él. Una aplicación moderna tiene muchas capas: la nube en la que se ejecuta, el cortafuegos, el front-end, el servidor, las API de terceros, las bases de datos y las integraciones internas. Representado como una arquitectura funcional, eso equivale a docenas o cientos de componentes vinculados en un único diagrama. En Pronghorn se puede generar una arquitectura provisional al inicio, consolidarla y mantener copias versionadas que describan toda la aplicación antes de que exista ningún código.
+
+Esto importa porque es otra forma de evitar que una interfaz se desarrolle únicamente por intuición. En lugar de la salida larga y verbosa de un modelo de lenguaje, el lienzo es una descripción compacta y precisa: una jerarquía clara de nodos unidos por aristas etiquetadas, con metadatos en cada uno que indican qué hace y cómo se conecta. Ese es el punto de partida adecuado para la construcción, y puede descargarse y entregarse directamente a un agente de programación. La forma de una aplicación empresarial es una decisión que debe tomarse de manera deliberada y desde el principio, en lugar de dejarse en manos de las elecciones que un modelo impredecible va tomando sobre la marcha. El lienzo es la arquitectura funcional, que es en sí misma un requisito: uno no funcional. Combinar los requisitos funcionales de la sección de requisitos con la arquitectura del lienzo proporciona una especificación completa que indica con claridad cómo debe funcionar la aplicación.
+
+
+## §08 Agentes que preparan el proyecto
+
+Pronghorn incluye un conjunto de agentes de IA que preparan un proyecto para su aprobación y para la fase de construcción. Un redactor de casos de negocio, un redactor de contratos y solicitudes de propuesta (RFP), un planificador de proyectos y un constructor de cronogramas leen sus conversaciones, sus artefactos y sus lienzos, y producen un plan de proyecto listo para presentar a un cliente y obtener su respaldo. Puede modificar estos agentes, crear los suyos propios y organizarlos en un flujo de trabajo que desarrolle una idea inicial hasta obtener el conjunto completo de artefactos que un proyecto necesita para comenzar.
+
+Pronghorn también incluye agentes de codificación y un agente de base de datos —formas ágiles de escalar una idea—: importación de datos en formato JSON o CSV, conexión con una variedad de bases de datos y trabajo sobre una base de datos Postgres alojada en Azure, Render, AWS u otros entornos, con despliegue simplificado en Azure y render.com en la edición Red. Esas funciones de construcción y despliegue residen ahora de forma más completa en la siguiente etapa de la fábrica, Nexus, que añade los controles de seguridad y la observabilidad de agentes que Pronghorn nunca tuvo como objetivo incorporar.
+
+
+## §09 El primer tercio de la fábrica
+
+Pronghorn es la primera fase crítica: investigación e ideación, desarrollo arquitectónico y mapeo de requisitos. Junto con los propios requisitos, documentos y transcripciones de reuniones del cliente, fundamenta una aplicación empresarial en un conjunto claro de artefactos que un agente de codificación de IA puede leer de forma nativa. Pronghorn expone esas conexiones en ambas direcciones. Un escucha en Claude Code puede detectar cambios en un proyecto de Pronghorn, y una API permite que cualquier plataforma de codificación agéntica escriba de vuelta en él, de modo que un agente puede ser un colaborador de primera clase que añada elementos a la arquitectura, los requisitos y los artefactos. Desde Nexus, ambos se vinculan en las dos direcciones, y el desarrollo se conduce desde allí.
+
+Una nota para nuestros equipos de desarrollo. En el desarrollo agéntico, la tentación es comenzar a construir la aplicación de inmediato. Eso es satisfactorio, permite probar una idea rápidamente y también es la forma de terminar con una arquitectura desalineada con la pila tecnológica en la que habrá que vivir. Pronghorn es el lugar donde el personal técnico y no técnico acuerda el alcance, los planes y los requisitos antes de que eso ocurra. Nada en él queda bloqueado; los artefactos se extraen con facilidad y pasan directamente a la fase de construcción. Omitir este paso tiene consecuencias: se entregarán aplicaciones que tienen buen aspecto, siguen los estándares comunes y aun así ofrecen una experiencia irregular e inconsistente por dentro, especialmente en la capa de API, donde la prestación de servicios en el modelo Gobierno 3.0 descrito en los cuatro enfoques se gana o se pierde. El siguiente artículo muestra dónde se integran y se ejecutan estas especificaciones, en el entorno Nexus, por los agentes que realizan la construcción.
+
+El viceministro Janak Alford presenta Pronghorn. Video: https://youtu.be/KGfDzqwuVMk</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: ai-factory, pronghorn, design, requirements, canvas, architecture, open-source</p>
+      <p><a href="/es/paper/qthji">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "es"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/es/paper/qthji"));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Git Insights Ministry · Les livres blancs Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Git Insights nous a permis de comprendre la situation, dépôt par dépôt. Mais identifier les problèmes ne suffit pas pour savoir comment reconstruire. Git Insights Ministry apporte une deuxième perspective. Cet outil analyse l’ensemble du code d’un ministère d’un seul coup, soit environ 200 dépôts, pour déterminer concrètement ce que font les systèmes. L’IA propose ensuite une nouvelle architecture, basée sur des modules modernes, tous propriété du gouvernement, chacun construit une seule fois, sans duplication. Par exemple, dans un ministère de l’Alberta, 185 applications peuvent être regroupées en seulement 16 modules réutilisables. Ce document explique comment l’outil fonctionne, ce qu’il apporte aux décideurs et comment il permet de reconstruire une architecture gouvernementale partagée." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/fr/paper/offjm/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/offjm/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/offjm/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/offjm/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/offjm/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Git Insights Ministry" />
+  <meta property="og:description" content="Git Insights nous a permis de comprendre la situation, dépôt par dépôt. Mais identifier les problèmes ne suffit pas pour savoir comment reconstruire. Git Insights Ministry apporte une deuxième perspective. Cet outil analyse l’ensemble du code d’un ministère d’un seul coup, soit environ 200 dépôts, pour déterminer concrètement ce que font les systèmes. L’IA propose ensuite une nouvelle architecture, basée sur des modules modernes, tous propriété du gouvernement, chacun construit une seule fois, sans duplication. Par exemple, dans un ministère de l’Alberta, 185 applications peuvent être regroupées en seulement 16 modules réutilisables. Ce document explique comment l’outil fonctionne, ce qu’il apporte aux décideurs et comment il permet de reconstruire une architecture gouvernementale partagée." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/fr/paper/offjm/" />
+  <meta property="og:site_name" content="Les livres blancs Velocity" />
+  <meta property="og:locale" content="fr_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/offjm.fr.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/offjm.fr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Git Insights Ministry" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/offjm.fr.jpg" />
+  <meta property="article:published_time" content="2026-06-16" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Git Insights Ministry" />
+  <meta name="twitter:description" content="Git Insights nous a permis de comprendre la situation, dépôt par dépôt. Mais identifier les problèmes ne suffit pas pour savoir comment reconstruire. Git Insights Ministry apporte une deuxième perspective. Cet outil analyse l’ensemble du code d’un ministère d’un seul coup, soit environ 200 dépôts, pour déterminer concrètement ce que font les systèmes. L’IA propose ensuite une nouvelle architecture, basée sur des modules modernes, tous propriété du gouvernement, chacun construit une seule fois, sans duplication. Par exemple, dans un ministère de l’Alberta, 185 applications peuvent être regroupées en seulement 16 modules réutilisables. Ce document explique comment l’outil fonctionne, ce qu’il apporte aux décideurs et comment il permet de reconstruire une architecture gouvernementale partagée." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Git Insights Ministry","description":"Git Insights nous a permis de comprendre la situation, dépôt par dépôt. Mais identifier les problèmes ne suffit pas pour savoir comment reconstruire. Git Insights Ministry apporte une deuxième perspective. Cet outil analyse l’ensemble du code d’un ministère d’un seul coup, soit environ 200 dépôts, pour déterminer concrètement ce que font les systèmes. L’IA propose ensuite une nouvelle architecture, basée sur des modules modernes, tous propriété du gouvernement, chacun construit une seule fois, sans duplication. Par exemple, dans un ministère de l’Alberta, 185 applications peuvent être regroupées en seulement 16 modules réutilisables. Ce document explique comment l’outil fonctionne, ce qu’il apporte aux décideurs et comment il permet de reconstruire une architecture gouvernementale partagée.","url":"https://thevelocitywhitepapers.com/fr/paper/offjm/","inLanguage":"fr-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Ministère de la Technologie et de l’Innovation"}],"publisher":{"@type":"Organization","name":"Gouvernement de l’Alberta · Ministère de la Technologie et de l’Innovation"},"datePublished":"2026-06-16","isPartOf":{"@type":"PublicationVolume","name":"Les livres blancs Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"git-insights, modernization, architecture, shared-services, agents","image":"https://thevelocitywhitepapers.com/public/og/offjm.fr.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 04 · Technical</p>
+      <h1>Git Insights Ministry</h1>
+      <p class="sub">De la compréhension du parc à sa reconstruction : transformer des milliers d’observations en une architecture modulaire unique, entièrement maîtrisée par le gouvernement.</p>
+      <div class="abstract"><strong>Abstract.</strong> Git Insights nous a permis de comprendre la situation, dépôt par dépôt. Mais identifier les problèmes ne suffit pas pour savoir comment reconstruire. Git Insights Ministry apporte une deuxième perspective. Cet outil analyse l’ensemble du code d’un ministère d’un seul coup, soit environ 200 dépôts, pour déterminer concrètement ce que font les systèmes. L’IA propose ensuite une nouvelle architecture, basée sur des modules modernes, tous propriété du gouvernement, chacun construit une seule fois, sans duplication. Par exemple, dans un ministère de l’Alberta, 185 applications peuvent être regroupées en seulement 16 modules réutilisables. Ce document explique comment l’outil fonctionne, ce qu’il apporte aux décideurs et comment il permet de reconstruire une architecture gouvernementale partagée.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Git Insights a constitué la première étape. Il a analysé chaque dépôt et chaque application pour fournir des informations concrètes et exploitables. Tous les constats n’étaient pas faciles à accepter, ni à traiter. Le parc nécessitait des correctifs, et ces analyses ont permis de corriger, et de continuer à corriger les problèmes les plus critiques. Mais comprendre la situation n’est qu’un début. On ne peut pas toujours réparer les systèmes existants petit à petit. Parfois, il faut aller plus loin et reconstruire complètement.
+
+
+## §01 De la connaissance à la reconstruction
+
+Là où Git Insights lit un dépôt à la fois et évalue son état de santé, son outil complémentaire, Git Insights Ministry (G.I.M.), analyse l’ensemble du code applicatif d’un ministère en une seule fois et en tire un plan global. Il repère des motifs qui ne sont visibles qu’à grande échelle, comme le même système de connexion recréé des dizaines de fois ou des rapports produits de multiples façons différentes. À partir de ces constats, il propose une architecture modulaire, réutilisable et entièrement maîtrisée par le gouvernement, afin de remplacer les redondances et la complexité actuelle.
+
+Dépôts lus ensemble, par ministère ~200. Certains ministères reposent sur des centaines d’applications et de dépôts. Git Insights Ministry les regroupe et les analyse comme un seul ensemble, ce qui permet de faire ressortir des motifs qui seraient invisibles autrement.
+
+
+## §02 Une lecture en profondeur
+
+L’analyse va beaucoup plus loin qu’un simple indicateur de santé. G.I.M. clone chaque dépôt et reconstruit, par rétro‑ingénierie, toutes les capacités des systèmes. Chaque écran, chaque flux de travail, chaque intégration d’API, chaque point de terminaison, ainsi que les schémas et tables de bases de données, les règles d’affaires et les dépendances sont examinés et documentés. À partir de ces informations, l’outil crée un dossier complet pour chaque système, suffisamment détaillé pour pouvoir reconstruire toutes ses fonctions à neuf.
+
+
+## §03 Comment fonctionne Git Insights Ministry
+
+G.I.M. fonctionne par étapes. Certaines sont déterministes : ce sont des analyses réalisées par des programmes classiques qui comptent, clonent et calculent sans interprétation possible. Ces étapes sont rapides et fiables, mais peuvent parfois produire des faux positifs. Les étapes suivantes font appel à l’IA et à son jugement. Les réponses qu’elle fournit sont strictement encadrées et toujours appuyées par des preuves tirées directement du code. Chaque conclusion peut ainsi être retracée précisément jusqu’au fichier qui l’a produite.
+
+Le plan de consolidation est réalisé en deux temps. D’abord, l’outil regroupe les constats issus de chaque dépôt pour identifier les activités concrètes du ministère. Ensuite, il conçoit les modules correspondants : chaque fonction distincte reste dans un module distinct, tandis que les éléments communs sont regroupés dans une plateforme partagée, afin d’être construits une seule fois plutôt que plusieurs.
+
+Ce travail est entièrement traçable. Chaque capacité identifiée est reliée aux systèmes et aux flux de travail d’origine, ce qui permet de remonter directement au code source. L’estimation des systèmes de remplacement repose sur des mesures concrètes, comme le nombre d’écrans, d’API, de tables de bases de données et de flux de travail. Ces calculs sont faits automatiquement à partir de paramètres fixes, ce qui les rend vérifiables en détail. Les modèles utilisent Claude via Google Enterprise Agent Platform et fonctionnent en parallèle, en traitant un dépôt ou un module à la fois.
+
+
+## §04 La vision de synthèse : un gouvernement reconstruit
+
+À partir de l’analyse détaillée de chaque système, l’outil regroupe toutes les fonctions en un ensemble clair des capacités d’affaires réellement exercées par le ministère. Il conçoit ensuite une architecture cible composée de modules simples, sans duplication ni chevauchement. Ainsi, des centaines d’applications, chacune avec sa propre connexion, son téléversement de fichiers et ses rapports, sont remplacées par un petit nombre de modules, où chaque capacité est développée une seule fois et partagée.
+
+Un ministère, après synthèse 185 → 16. Dans un cas, 185 applications ont été regroupées en seulement 16 modules distincts. La redondance que l’outil observe dans l’ensemble des systèmes est ainsi éliminée dès la conception lors de la reconstruction.
+
+Chaque module est construit sur une seule pile technologique moderne, et c’est un point essentiel. Cela signifie que nous ne sommes plus liés à un fournisseur dont il est difficile de se détacher. La surface d’attaque est réduite au minimum. Chaque module repose sur des technologies à code source ouvert, adaptées pour répondre à nos exigences. De plus, les équipes humaines comme agentiques gardent la maîtrise et les connaissances nécessaires pour maintenir ces systèmes dans le temps.
+
+
+## §05 Motifs de réutilisation dans tout le gouvernement
+
+Les motifs les plus utiles sont ceux qui se répètent. D’un ministère à l’autre, on retrouve souvent les mêmes capacités. Par exemple, des fonctions comme les paiements, la cartographie géospatiale ou la gestion des contrats ne sont pas propres à un seul ministère. Plutôt que de les reconstruire chaque fois, elles sont créées une seule fois sous forme de services partagés, que tous les ministères peuvent utiliser.
+
+En cartographiant précisément les fonctions du gouvernement, nous pouvons créer des modules réutilisables dans tous les ministères. L’Alberta devient ainsi propriétaire de chaque module, tout en réduisant la complexité et la surface d’attaque de son infrastructure de plus de 90 %. Conçus à l’aide de l’IA et selon des normes claires, ces modules sont aussi plus faciles à entretenir et à faire évoluer.
+
+Les économies viennent aussi de là. Comme les modules sont conçus et développés par l’IA sous supervision humaine, le délai entre l’idéation et l’exécution est volontairement réduit. L’ensemble du cycle de développement logiciel est refondu. La construction et les tests sont largement automatisés, tandis que les décisions qui demandent du jugement comme la sécurité, la protection des renseignements personnels et la compréhension des besoins du public restent entre les mains des personnes.
+
+
+## §06 Ce que voit la haute direction
+
+G.I.M. produit des résultats directement utilisables pour la prise de décision, et non une masse d’analyse difficile à exploiter. Le tableau de bord présente une vue d’ensemble du ministère, appuyée par des preuves concrètes. À partir de cette même source, un rapport en langage clair est également généré pour la haute direction.
+
+G.I.M. fait le lien entre la compréhension du parc existant et sa reconstruction. Il transforme les constats issus de Git Insights en un plan clair et défendable : une architecture plus simple, modulaire, entièrement maîtrisée par le gouvernement, où les fonctions communes sont construites une seule fois et partagées. Les différentes façons de mettre en œuvre cette reconstruction de la correction progressive jusqu’à la refonte complète sont présentées dans le prochain document : **Les quatre approches de la modernisation par l’IA **.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: git-insights, modernization, architecture, shared-services, agents</p>
+      <p><a href="/fr/paper/offjm">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "fr"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/fr/paper/offjm"));
+    })();
+  </script>
+</body>
+</html>

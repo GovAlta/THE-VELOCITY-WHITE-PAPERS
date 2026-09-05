@@ -1,0 +1,40 @@
+{
+  "_note": "Community channels and contribution paths for one locale. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Comunidad",
+    "title_lead": "Dónde conversar sobre",
+    "title_em": "este trabajo.",
+    "lede": "Escríbanos o abra un informe público. La conversación sobre la modernización no ocurre a puerta cerrada.",
+    "open": "Open →",
+    "soon": "Coming soon"
+  },
+  "channels": [
+    {
+      "id": "email",
+      "kind": "email",
+      "href": "mailto:TI.Velocity@gov.ab.ca",
+      "available": true,
+      "label": "TI.Velocity@gov.ab.ca",
+      "blurb": "El buzón para contactar directamente al equipo Velocity. Preguntas, comentarios, colaboración o una solicitud para hablar sobre cómo aplicar este enfoque en su organización."
+    },
+    {
+      "id": "github-issues",
+      "kind": "issues",
+      "href": "https://github.com/GovAlta/the-velocity-white-papers/issues",
+      "available": true,
+      "label": "GitHub Issues",
+      "blurb": "Errores de software, correcciones de contenido, revisión de la traducción al francés, hallazgos de accesibilidad. Público."
+    }
+  ],
+  "contributing": {
+    "title": "Cómo contribuir",
+    "body": "El sitio tiene licencia MIT y el contenido se publica de forma abierta. Las solicitudes de incorporación de cambios (pull requests) al repositorio público son bienvenidas. El proceso de contribución es el siguiente: abra primero un informe para alinear la dirección; envíe una solicitud pequeña y bien delimitada; supere el conjunto de evaluaciones; cite las fuentes de cualquier nueva afirmación."
+  },
+  "_meta": {
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    }
+  }
+}

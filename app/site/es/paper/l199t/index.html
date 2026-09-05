@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Agentes rojos, azules, verdes y amarillos · Los libros blancos Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Los agentes de IA necesitan herramientas y métodos claramente definidos para evaluar la calidad de su trabajo y del código existente. Dentro del arnés se han agrupado cuatro conjuntos de habilidades de aseguramiento de la calidad, cada uno identificado con un color. El verde verifica la calidad e higiene del código. El amarillo revisa el contenido escrito en busca de señales de texto generado por IA. El rojo analiza una aplicación activa como lo haría un actor malicioso. El azul evalúa el código frente a estándares internacionales de seguridad y elabora planes de ataque sofisticados —denominados cadenas de eliminación— como paso fundamental hacia la remediación. Estas habilidades funcionan como controles y contrapesos obligatorios dentro del arnés, garantizando coherencia, cumplimiento y seguridad sin interrumpir el flujo de desarrollo." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/es/paper/l199t/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/l199t/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/l199t/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/l199t/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/l199t/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Agentes rojos, azules, verdes y amarillos" />
+  <meta property="og:description" content="Los agentes de IA necesitan herramientas y métodos claramente definidos para evaluar la calidad de su trabajo y del código existente. Dentro del arnés se han agrupado cuatro conjuntos de habilidades de aseguramiento de la calidad, cada uno identificado con un color. El verde verifica la calidad e higiene del código. El amarillo revisa el contenido escrito en busca de señales de texto generado por IA. El rojo analiza una aplicación activa como lo haría un actor malicioso. El azul evalúa el código frente a estándares internacionales de seguridad y elabora planes de ataque sofisticados —denominados cadenas de eliminación— como paso fundamental hacia la remediación. Estas habilidades funcionan como controles y contrapesos obligatorios dentro del arnés, garantizando coherencia, cumplimiento y seguridad sin interrumpir el flujo de desarrollo." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/es/paper/l199t/" />
+  <meta property="og:site_name" content="Los libros blancos Velocity" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/l199t.es.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/l199t.es.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Agentes rojos, azules, verdes y amarillos" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/l199t.es.jpg" />
+  <meta property="article:published_time" content="2026-06-16" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Agentes rojos, azules, verdes y amarillos" />
+  <meta name="twitter:description" content="Los agentes de IA necesitan herramientas y métodos claramente definidos para evaluar la calidad de su trabajo y del código existente. Dentro del arnés se han agrupado cuatro conjuntos de habilidades de aseguramiento de la calidad, cada uno identificado con un color. El verde verifica la calidad e higiene del código. El amarillo revisa el contenido escrito en busca de señales de texto generado por IA. El rojo analiza una aplicación activa como lo haría un actor malicioso. El azul evalúa el código frente a estándares internacionales de seguridad y elabora planes de ataque sofisticados —denominados cadenas de eliminación— como paso fundamental hacia la remediación. Estas habilidades funcionan como controles y contrapesos obligatorios dentro del arnés, garantizando coherencia, cumplimiento y seguridad sin interrumpir el flujo de desarrollo." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Agentes rojos, azules, verdes y amarillos","description":"Los agentes de IA necesitan herramientas y métodos claramente definidos para evaluar la calidad de su trabajo y del código existente. Dentro del arnés se han agrupado cuatro conjuntos de habilidades de aseguramiento de la calidad, cada uno identificado con un color. El verde verifica la calidad e higiene del código. El amarillo revisa el contenido escrito en busca de señales de texto generado por IA. El rojo analiza una aplicación activa como lo haría un actor malicioso. El azul evalúa el código frente a estándares internacionales de seguridad y elabora planes de ataque sofisticados —denominados cadenas de eliminación— como paso fundamental hacia la remediación. Estas habilidades funcionan como controles y contrapesos obligatorios dentro del arnés, garantizando coherencia, cumplimiento y seguridad sin interrumpir el flujo de desarrollo.","url":"https://thevelocitywhitepapers.com/es/paper/l199t/","inLanguage":"es","author":[{"@type":"Person","name":"Ministry of Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Gobierno de Alberta · Ministerio de Tecnología e Innovación"},"datePublished":"2026-06-16","isPartOf":{"@type":"PublicationVolume","name":"Los libros blancos Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"security, agents, harness, red-team, quality","image":"https://thevelocitywhitepapers.com/public/og/l199t.es.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 07 · Technical</p>
+      <h1>Agentes rojos, azules, verdes y amarillos</h1>
+      <p class="sub">Las habilidades y herramientas integradas permiten a los agentes de IA aplicar con éxito las normas y estándares del gobierno sin sacrificar la cadencia.</p>
+      <div class="abstract"><strong>Abstract.</strong> Los agentes de IA necesitan herramientas y métodos claramente definidos para evaluar la calidad de su trabajo y del código existente. Dentro del arnés se han agrupado cuatro conjuntos de habilidades de aseguramiento de la calidad, cada uno identificado con un color. El verde verifica la calidad e higiene del código. El amarillo revisa el contenido escrito en busca de señales de texto generado por IA. El rojo analiza una aplicación activa como lo haría un actor malicioso. El azul evalúa el código frente a estándares internacionales de seguridad y elabora planes de ataque sofisticados —denominados cadenas de eliminación— como paso fundamental hacia la remediación. Estas habilidades funcionan como controles y contrapesos obligatorios dentro del arnés, garantizando coherencia, cumplimiento y seguridad sin interrumpir el flujo de desarrollo.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Los artículos anteriores de esta serie presentaron oportunidades para que la entrega de software asistida por la IA aborde el envejecimiento del parque tecnológico y las crecientes presiones en materia de ciberseguridad. También introdujeron varias estrategias para reconstruir nuestros sistemas de gobierno digital, los cuales dependerán en gran medida de la colaboración entre agentes de IA y trabajadores humanos para desarrollar soluciones conforme a un conjunto claro de especificaciones. Sin embargo, a medida que los agentes de IA asumen más trabajo técnico para acelerar la entrega, ¿cómo podemos verificar sus resultados de manera confiable? ¿Quién —o qué— puede verificar la calidad y la integridad de los productos? Cuatro habilidades de revisión están integradas en el arnés bien construido, las cuales inspeccionan cada aplicación en cuanto a calidad, coherencia y seguridad.
+
+
+## §01 Quién supervisa a la IA
+
+Como se señaló anteriormente, los agentes de IA no son testigos confiables de sus propios resultados. Hablan con demasiada confianza sobre su trabajo reciente y con frecuencia declaran que han completado un objetivo, a menudo sin pruebas. Como cualquier trabajador, necesitan retroalimentación de alguien con una perspectiva externa y una mirada crítica que sondee, cuestione y evalúe. En pocas palabras, necesitan ser puestos a prueba.
+
+Un experto humano en la materia desempeña bien este papel y, juntos, esta dupla puede avanzar rápidamente en problemas complejos, cuestionando y probando las ideas del otro. Pero a veces, debido a factores como el volumen de tareas, la velocidad o la configuración del agente, eso no resulta práctico. Un escenario habitual es cuando una persona opera decenas o cientos de agentes simultáneamente y no puede «supervisarlos de cerca», por así decirlo. Generalmente, basta con que otro agente de IA desempeñe esta función. Aunque pueden compartir el mismo modelo fundacional de IA, varios agentes de IA pueden adoptar distintos roles, como programador, arquitecto de soluciones y especialista en ciberseguridad, dentro de su propia jerarquía organizativa. Las habilidades adecuadas indican al agente cómo ejecutar estas tareas con fidelidad y eficacia. Para obtener perspectivas genuinas, también necesitan herramientas capaces de identificar y presentar evidencia de posibles deficiencias —indicadores que llevan al agente a profundizar en el análisis.
+
+Como extensión del arnés bien construido, existen cuatro habilidades clave que permiten al agente de IA adoptar el rol de un adversario o convertirse en crítico de su propio trabajo. Inspirándonos en ejercicios de seguridad y defensa, creamos estos agentes como equipos **rojo** y **azul**. En un entorno de confrontación, el equipo rojo actúa como atacante y antagonista: identifica brechas, cuestiona y presenta sus hallazgos. El equipo azul actúa como defensor. Bajo ambos agentes opera un pequeño conjunto de verificaciones programadas de tipo determinista (es decir, basadas en lógica), que detectan posibles problemas mediante comparación de patrones. Posteriormente ampliamos estas habilidades para incluir las habilidades de agente «verde» para el reconocimiento y «amarillo» para el aseguramiento de la calidad. Cada color representa un agente distinto que puede examinar el trabajo desde ángulos únicos. Un desarrollador o el mismo agente utiliza cada agente a lo largo del ciclo de desarrollo y en cada hito del proyecto. El agente además interioriza muchas de estas habilidades en su práctica activa, lo que significa que se aplican de manera continua durante el proceso generativo.
+
+Estos cuatro se dividen intencionalmente entre trabajo mecánico y trabajo de criterio. Los verdes y amarillos son completamente deterministas: si se les proporciona el mismo código, devuelven los mismos hallazgos en cada ocasión. El reconocimiento activo de los rojos también es determinista, pero incorpora un paso de análisis ejecutivo que utiliza Claude para planificar cómo se desarrollaría un ataque e interpretar los resultados de sus sondeos. Los azules operan principalmente con criterio, recogen las señales de las otras tres habilidades de agente y aportan la clase de experiencia y pensamiento creativo que podría ofrecer un desarrollador sénior o un profesional de la ciberseguridad.
+
+La incorporación de estas habilidades produjo una mejora inmediata y notable en la calidad de las prácticas de codificación con IA, al detectar y corregir problemas de forma temprana y frecuente. Aplicadas en el contexto de una plantilla segura, estas habilidades permiten al agente revisar automáticamente su trabajo, programar verificaciones periódicas y generar la evidencia necesaria para avanzar una aplicación hacia producción.
+
+
+## §02 Verde: calidad e higiene
+
+Un agente verde ejecuta un conjunto crítico de pruebas rápidas y transfiere sus resultados a los demás agentes. Es el primero en ejecutarse. Lee el código e informa con datos concretos sobre los aspectos más relevantes. Verifica las dependencias en fuentes en línea para identificar cuáles pueden presentar vulnerabilidades conocidas, si alguna contraseña o clave ha sido confirmada en el código fuente, si existen patrones peligrosos y qué proporción del código está efectivamente cubierta por las pruebas. Trabaja en dos rondas: la primera lee el código sin ejecutarlo; la segunda ejecuta las pruebas existentes y observa lo que ocurre, incluidas las partes del código que las pruebas nunca alcanzan.
+
+Dado que un verde es determinista, el mismo código siempre produce los mismos hallazgos. Eso es lo que lo convierte en la base de evidencia sobre la que construyen los demás agentes. No especula: verifica y contabiliza. Cuando señala un archivo con cobertura de pruebas casi nula, o una credencial expuesta en el código fuente, ese hallazgo es un hecho y no una opinión, y puede verificarse de la misma manera dos veces. En cuestión de segundos, detecta problemas que pueden abordarse de forma proactiva en cada etapa del proceso de desarrollo.
+
+
+## §03 Amarillo: cómo se lee el contenido
+
+Un agente amarillo lee el contenido de la aplicación. El software gubernamental contiene mucho texto: documentación, el contenido de la interfaz de usuario, notas de versión, contenido informativo y los mensajes que los ciudadanos realmente ven. Cuando la IA redacta ese texto, deja «indicios» —giros y expresiones que identifican el texto como generado por una máquina y que erosionan silenciosamente la confianza. Estos indicios suelen denominarse «olor a IA». Un amarillo aplica doce reglas a cada texto del proyecto y señala cada indicio con la línea infractora, una reescritura sencilla y una breve nota sobre por qué parece escrito por una máquina.
+
+Estas son las mismas reglas que rigen los artículos que usted está leyendo ahora. Entre los ejemplos se encuentran la raya —em dash—, los clichés habituales, el abuso de la negación del tipo «no es A, sino B» y los adjetivos excesivamente grandilocuentes. Todos estos elementos socavan la confianza. Si el público va a leerlo, debería parecer escrito por una persona: claro, directo y accesible. Los seres humanos tampoco son inmunes a estos patrones de escritura, por lo que esta habilidad evita que ambas partes caigan en la trivialidad.
+
+
+## §04 Rojo: el atacante
+
+El agente rojo es el atacante. Examina una aplicación terminada como lo haría alguien externo con malas intenciones, de afuera hacia adentro. Mapea el dominio y sus subdominios, analiza los puertos abiertos, verifica el cifrado y los encabezados de seguridad, e identifica las tecnologías en uso. Ese reconocimiento aplica métodos estándar del sector para detectar posibles problemas, y proporciona al agente las herramientas de higiene básica en ciberseguridad para que realice su propio análisis.
+
+Un rojo realiza la parte que antes requería un especialista. Analiza todo lo que encuentra y planifica cómo se produciría una intrusión, proponiendo vías de ataque concretas: eludir un inicio de sesión, encadenar un exploit remoto, extraer datos por una vía secundaria. En esa etapa de planificación, el agente revisa la evidencia y desarrolla el razonamiento. Un rojo únicamente actúa sobre los sistemas del propio gobierno que han sido autorizados para pruebas. Su función es encontrar la vulnerabilidad antes que cualquier otra persona, y entregar al siguiente agente un mapa de cómo se desarrollaría realmente un ataque.
+
+
+## §05 Azul: el defensor
+
+Un agente azul es el defensor y se ejecuta al final porque lee todo lo que encontraron los demás. Construye un mapa de la aplicación, clasifica el nivel de sensibilidad de cada parte y elabora un modelo de amenazas. Luego recorre cada requisito del Estándar de Verificación de Seguridad de Aplicaciones OWASP Nivel 2 —la referencia internacional para una aplicación web de nivel exigente— y registra cada uno como aprobado, reprobado o no aplicable, con la evidencia que respalda la decisión. Verifica el mismo código frente al estándar de arquitectura de ciberseguridad de Alberta, integra el reconocimiento del agente rojo en una descripción paso a paso de cómo se desarrollaría un ataque y redacta pruebas de seguridad para validar que la superficie de ataque ha sido minimizada.
+
+Un azul concluye elaborando una página web de resumen ejecutivo integral con los hallazgos clasificados por nivel de gravedad. Señala los estándares cumplidos e incumplidos, junto con un plan de remediación que el agente puede ejecutar de forma directa.
+
+Controles de seguridad principales integrados en la plantilla segura ~95. Los cuatro agentes de revisión verifican estos aspectos y más. Una pasada completa ejecuta más de cuatrocientas comprobaciones individuales: 285 requisitos ASVS Nivel 2, 62 reglas de seguridad en la nube de Alberta, además de las comprobaciones de los agentes verde, amarillo y rojo.
+
+Cada uno de estos agentes es útil por sí solo y puede tardar desde unos pocos segundos hasta casi una hora en ejecutarse por completo. Juntos funcionan de manera cohesionada como un sistema de controles y contrapesos. El trabajo se distribuye entre varios subagentes y se reintegra al final en un análisis integral.
+
+Algunas notas importantes. Estos agentes no sustituyen a los conjuntos de gestión de seguridad más completos, ni están concebidos para ello. En cambio, proporcionan perspectivas tempranas, frecuentes y significativas desde la etapa más inicial del ciclo de desarrollo, detectando cientos de los problemas y preocupaciones más comunes que pueden influir en las decisiones de diseño del sistema. Es fundamental que estos asuntos se aborden lo antes posible en el proceso para evitar retrabajos y retrasos más adelante. Sin duda, es posible construir o adquirir un conjunto de controles y contrapesos más completo. Sin embargo, aplicadas con frecuencia, estas habilidades agénticas logran lo que la mayoría de los equipos nunca podría alcanzar: situar la ciberseguridad en el centro de todas las decisiones de codificación y diseño, y poner perspectivas de seguridad significativas al alcance tanto de desarrolladores como de personas no especialistas. Puede que no haga que su código sea perfecto, pero utilizar la IA para operar estas verificaciones es una inversión trivial en términos de tiempo y costo (literalmente céntimos) para robustecer el código de su aplicación rápidamente. Para la primera reunión con su equipo de ciberseguridad, usted debería estar en plena conformidad con los requisitos de ciberseguridad, alineado con las mejores prácticas y con los comprobantes en la mano. El avance hacia producción debería ser un trámite formal, y con la automatización adecuada, este ocurre como parte del proceso de despliegue automatizado.
+
+En ese escenario, el Constructor no técnico que presentamos en un artículo posterior puede generar ideas de manera eficaz utilizando el arnés, equipado con las habilidades necesarias, y llevar una idea a la realidad cumpliendo plenamente con los requisitos más actuales de ciberseguridad y técnicos.
+
+
+## §06 Un ecosistema creciente de controles y contrapesos
+
+Estos agentes constituyen un plan director para usar de forma eficaz controles y contrapesos fiables que permitan al agente de IA y al revisor humano identificar errores críticos y potencialmente graves de manera temprana y frecuente. Aunque ofrecen un conjunto de herramientas capaz y significativo, deben considerarse únicamente como un punto de partida sobre el que seguir construyendo. Empleando los mismos métodos descritos anteriormente, conviene crear habilidades y herramientas adicionales para que el agente verifique la accesibilidad, compruebe la coherencia arquitectónica, genere materiales de capacitación y garantice la integridad de toda la aplicación por sí solo o dentro de un entorno más amplio. Cada uno de estos ámbitos tiene sus propios estándares y formas de trabajo que pueden codificarse en habilidades reutilizables, elevando la inteligencia del sistema en su conjunto.
+
+Desarrollar habilidades propias requiere investigación y mucho ensayo. Estándares del sector como OWASP, NIST e ITSG son excelentes puntos de partida para obtener conocimientos sólidos que pueden transformarse en habilidades agénticas. De hecho, si trabaja en cualquier ámbito donde despliega agentes en el que los requisitos legales, normativos y de cumplimiento son relevantes, puede usar habilidades personalizadas para identificar y subsanar de inmediato las deficiencias en su enfoque. Comience por identificar los materiales de referencia que le resulten más relevantes y, a continuación, codifíquelos en archivos en formato markdown. Pida al agente que aplique estas habilidades y observe en qué medida los resultados cumplen sus expectativas y en qué aspectos se queda corto. Luego perfeccione las instrucciones y las aplicaciones de estos estándares hasta estar satisfecho de que el agente funciona al nivel necesario para resolver sus propios problemas de forma fiable o para señalarlos proactivamente a la revisión humana. Se trata de un proceso recursivo que conocemos bien. Todo nuestro sistema educativo se fundamenta en métodos similares: identificar la verdad, enseñar, evaluar, proporcionar retroalimentación y orientar hacia la excelencia.
+
+Sin estas habilidades, deja las decisiones de la IA libradas al azar, confiando en sus funciones internas indefinidas y probabilísticas para realizar su trabajo. Aunque se gana velocidad, se pierde fidelidad y una comprensión clara de cómo se está ejecutando el trabajo. No es posible ser responsable de procesos que no están definidos. Las habilidades integradas se convierten en los procedimientos operativos estándar —el manual de instrucciones— que definen cómo se ve un trabajo bien hecho. Al trabajar con IA, es importante codificar sus propios procesos como habilidades adicionales, lo que le ahorrará tiempo considerable y mejorará la calidad de sus resultados. A mayor escala, su creciente plantilla de agentes de IA puede seguir sus pasos, lo que le permite ejercer su función esencial como supervisor y coordinador humano. Escalado horizontalmente sobre un equipo, sus aprendizajes elevan el nivel de toda la organización.
+
+
+Con el arnés y sus agentes de revisión en funcionamiento, podemos empezar a construir el entorno que los pone a trabajar en cada proceso de construcción. Los próximos libros blancos presentan esta fábrica de IA, donde las aplicaciones se diseñan y especifican, donde los agentes las construyen y prueban bajo estos mismos controles, y donde el trabajo se registra y mide.
+
+
+## §07 Apéndice A: Claude, el SDK de agentes y Google Enterprise Agent Platform
+
+Los scripts y las habilidades presentados en este documento se ejecutan como software de código abierto en el equipo del desarrollador. Los agentes deterministas —verdes, amarillos y el reconocimiento de los rojos— utilizan scripts de Node JS y Python con sus propias dependencias, pero no requieren agentes de IA para funcionar. Las partes del proceso que requieren inferencia y juicio de la IA, como el planificador de ataques del agente rojo y la evaluación completa del azul, están desarrolladas con el SDK de agentes de Claude, que permite que una sesión de Claude Code coordine una serie de subagentes para realizar el trabajo repetitivo de análisis de código en una o más aplicaciones. Mediante una clave de API en Google Enterprise Agent Platform, AWS Bedrock o Azure AI Foundry, es posible monitorizar el costo y el rendimiento de tokens de cada subagente.
+
+Estos métodos no están limitados a un único modelo de IA, y puede resultar ventajoso desplegar diferentes versiones de este proceso frente a varios modelos para obtener el conjunto más amplio posible de respuestas. Distintos modelos identificarán perspectivas diferentes que, en conjunto, pueden abordar un mayor número de vulnerabilidades de seguridad.
+
+Los propios archivos de habilidades pueden convertirse en vectores de ataque. Utilizados de forma descuidada y sin una auditoría o revisión adecuadas, dichos agentes pueden omitir pasos o incluso filtrar información. Es importante tratar estos agentes como propiedad intelectual de la organización y mantenerlos y mejorarlos continuamente a medida que los estándares evolucionan. Las habilidades de terceros no verificadas también pueden introducir código malicioso que una IA podría ejecutar. Trate la cadena de suministro de sus agentes y habilidades con el mismo cuidado que cualquier otro producto de ciberseguridad o digital.
+
+
+## §08 Apéndice B: el inventario completo de verificaciones
+
+A continuación, se presenta el inventario completo de verificaciones y controles. Cada aplicación parte de una plantilla segura que incorpora aproximadamente noventa y cinco controles de seguridad principales (véase Anatomía de una plantilla). Los cuatro agentes de revisión verifican esa plantilla y mucho más. La ejecución completa abarca más de cuatrocientas verificaciones individuales. La mayor parte corresponde a las dos revisiones de estándares: 285 requisitos del Nivel 2 de OWASP ASVS y 62 reglas de seguridad en la nube de Alberta. Consulte las tablas a continuación para ver el inventario completo.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: security, agents, harness, red-team, quality</p>
+      <p><a href="/es/paper/l199t">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "es"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/es/paper/l199t"));
+    })();
+  </script>
+</body>
+</html>

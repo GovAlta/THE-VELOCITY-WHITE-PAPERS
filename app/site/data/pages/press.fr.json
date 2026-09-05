@@ -1,0 +1,78 @@
+{
+  "_note": "Press page content for one locale. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Presse",
+    "title_lead": "Pour la",
+    "title_em": "presse.",
+    "lede": "Contexte et personnes-ressources des médias pour les Livres blancs Velocity, la collection ouverte du gouvernement de l’Alberta sur la transformation des technologies gouvernementales grâce à l’IA."
+  },
+  "release": {
+    "heading": "Communiqué de presse",
+    "meta": "6 juillet 2026 · Gouvernement de l’Alberta",
+    "title": "L’Alberta établit la norme nord-américaine en matière d’IA",
+    "subhead": "L’Alberta reconstruit en un temps record des technologies gouvernementales vieilles de plusieurs décennies, et partage gratuitement sa méthode avec le monde entier.",
+    "paras": [
+      "L’Alberta a accéléré la reconstruction des technologies vieilles de plusieurs décennies qui soutiennent ses services publics, à une fraction du temps et du coût habituels. Grâce à des outils d’intelligence artificielle (IA) avancés provenant d’entreprises comme Anthropic et Google, l’Alberta peut désormais accomplir en quelques heures ce qui prenait autrefois des années. Ces outils aident à soutenir et à protéger des services gouvernementaux essentiels, des programmes sociaux et des registres jusqu’à l’intervention en cas de feux de forêt et à la sécurité publique. Ce travail fait de l’Alberta un chef de file de l’adoption de l’IA dans la fonction publique en Amérique du Nord.",
+      "Au cours des 18 derniers mois, le ministère de la Technologie et de l’Innovation a conçu son propre ensemble d’outils d’IA pour documenter et transformer des technologies vieilles de plusieurs décennies. L’Alberta a créé et déployé une équipe d’agents d’IA — des logiciels capables d’exécuter des tâches de façon autonome — à l’aide des modèles d’IA Claude d’Anthropic. En une vingtaine d’heures, ces agents ont analysé plus de 466 millions de lignes de code gouvernemental, ce qui a donné à l’Alberta un premier portrait complet de l’état et de la sécurité de ses systèmes. Fait à la main, ce travail aurait pris des années.",
+      "L’Alberta partage tout ce qu’elle a appris en cours de route avec la publication de 21 documents techniques qui présentent une façon, étape par étape, de transformer l’appareil gouvernemental. Ces livres blancs Velocity sont diffusés comme des ressources gratuites et à code source ouvert, accompagnés d’outils avancés, de simulations et d’instructions détaillées, afin que d’autres gouvernements puissent emprunter le même chemin."
+    ],
+    "quote": {
+      "text": "Alberta spent decades building technology that worked for government. Now we are rebuilding it to work better for Albertans and doing it faster and for far less. The tools our team built are world-class, and we are sharing them openly because every government is stuck with the same aging systems we were. Alberta is not waiting to solve this problem. We are solving it, and we are showing others how.",
+      "by": "Nate Glubish, ministre de la Technologie et de l’Innovation"
+    },
+    "closing": [
+      "Pour un seul ministère, un plan est en cours afin de tirer parti d’agents d’IA pour remplacer 185 systèmes vieillissants par 16 applications modernes dont le gouvernement est pleinement propriétaire. Les agents d’IA ont démontré qu’ils peuvent accélérer le travail jusqu’à 20 fois, tout en réduisant jusqu’à 95 % le temps nécessaire pour moderniser des systèmes essentiels. De plus, ces outils renforcent les protections de cybersécurité qui bloquent déjà plus de 189 millions de tentatives de connexion par jour, ainsi que les tentatives de fraude contre les programmes sociaux, bloquées en moyenne chaque minute.",
+      "Ce travail s’appuie sur l’Académie de l’IA de l’Alberta, une ressource gratuite et ouverte qui aide chaque fonctionnaire à apprendre à travailler avec l’IA. Depuis son lancement en septembre 2025, l’Académie a formé plus de 2 000 fonctionnaires, du personnel de première ligne aux cadres supérieurs. Ces ressources de premier plan sont entièrement à code source ouvert et, à ce jour, plus de 15 000 personnes de partout au Canada s’y sont formées, y compris plusieurs autres gouvernements provinciaux et le gouvernement fédéral. Le travail de l’Alberta dans ce domaine est reconnu par certaines des plus grandes entreprises d’IA au monde."
+    ],
+    "endorsements_heading": "Ce qu’en disent les partenaires",
+    "endorsements": [
+      {
+        "text": "What Alberta built demonstrates something governments have long needed: a practical, documented approach to tackling technical debt and security exposure in decades of legacy code.",
+        "by": "Brian Peters, chef des affaires gouvernementales pour l’Amérique du Nord, Anthropic"
+      },
+      {
+        "text": "Alberta is emerging as the North Star in Canada's government transformation. Google Cloud is proud to power the agentic layer of this digital leap.",
+        "by": "Farsad Nasseri, directeur général pays, Google Cloud Canada"
+      },
+      {
+        "text": "The Velocity Papers are the first defensible, in-production blueprint for an agentic public service.",
+        "by": "Cole Cioran, associé directeur, secteur public canadien, Info-Tech Research Group"
+      }
+    ],
+    "source": {
+      "label": "Lire le communiqué officiel sur alberta.ca",
+      "href": "https://www.alberta.ca/release.cfm?xID=96456379DDC57-9F6B-FE7E-69C325AD64A91DCD"
+    }
+  },
+  "coverage": {
+    "heading": "Dans les médias",
+    "items": [
+      {
+        "source": "Anthropic",
+        "date": "6 juillet 2026",
+        "title": "Government of Alberta Uses Claude to Find and Fix Cybersecurity Vulnerabilities",
+        "href": "https://www.anthropic.com/news/alberta-government-claude-cybersecurity",
+        "summary": "Comment le ministère de la Technologie et de l’Innovation de l’Alberta a utilisé Claude Code pour analyser 466 millions de lignes de code en 20 heures, générer des correctifs et mettre en place des agents de révision de sécurité en continu — des équipes rouges et bleues — dans l’ensemble des 27 ministères."
+      }
+    ]
+  },
+  "contacts": {
+    "heading": "Demandes des médias",
+    "items": [
+      {
+        "name": "Jonathan Gauthier",
+        "role": "Attaché de presse, Cabinet du ministre de la Technologie et de l’Innovation",
+        "email": "jonathan.gauthier@gov.ab.ca"
+      },
+      {
+        "name": "Cabinet du ministre de la Technologie et de l’Innovation",
+        "role": "Demandes ministérielles générales",
+        "email": "ti.minister@gov.ab.ca"
+      }
+    ],
+    "substack": {
+      "label": "Suivre le ministre Glubish sur Substack",
+      "href": "https://nateglubish.substack.com/"
+    }
+  }
+}

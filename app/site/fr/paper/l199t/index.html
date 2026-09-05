@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Les agents rouge, bleu, vert et jaune · Les livres blancs Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Les agents d’IA ont besoin d’outils et de méthodes clairement définis pour évaluer la qualité de leur travail et celle du code existant. Quatre ensembles de compétences d’assurance qualité sont intégrés au harnais, chacun désigné par une couleur. Le vert vérifie la qualité et l’hygiène du code. Le jaune examine le texte rédigé à la recherche des tics propres à l’IA. Le rouge sonde une application en service comme le ferait un acteur malveillant. Le bleu évalue le code au regard des normes de sécurité internationales tout en élaborant des plans d’attaque sophistiqués, appelés chaînes d’attaque, une étape essentielle vers la correction. Ces compétences servent de mécanismes de contrôle obligatoires dans le harnais et favorisent la cohérence, la conformité et la sécurité sans interrompre le rythme du développement." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/fr/paper/l199t/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/l199t/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/l199t/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/l199t/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/l199t/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Les agents rouge, bleu, vert et jaune" />
+  <meta property="og:description" content="Les agents d’IA ont besoin d’outils et de méthodes clairement définis pour évaluer la qualité de leur travail et celle du code existant. Quatre ensembles de compétences d’assurance qualité sont intégrés au harnais, chacun désigné par une couleur. Le vert vérifie la qualité et l’hygiène du code. Le jaune examine le texte rédigé à la recherche des tics propres à l’IA. Le rouge sonde une application en service comme le ferait un acteur malveillant. Le bleu évalue le code au regard des normes de sécurité internationales tout en élaborant des plans d’attaque sophistiqués, appelés chaînes d’attaque, une étape essentielle vers la correction. Ces compétences servent de mécanismes de contrôle obligatoires dans le harnais et favorisent la cohérence, la conformité et la sécurité sans interrompre le rythme du développement." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/fr/paper/l199t/" />
+  <meta property="og:site_name" content="Les livres blancs Velocity" />
+  <meta property="og:locale" content="fr_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/l199t.fr.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/l199t.fr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Les agents rouge, bleu, vert et jaune" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/l199t.fr.jpg" />
+  <meta property="article:published_time" content="2026-06-16" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Les agents rouge, bleu, vert et jaune" />
+  <meta name="twitter:description" content="Les agents d’IA ont besoin d’outils et de méthodes clairement définis pour évaluer la qualité de leur travail et celle du code existant. Quatre ensembles de compétences d’assurance qualité sont intégrés au harnais, chacun désigné par une couleur. Le vert vérifie la qualité et l’hygiène du code. Le jaune examine le texte rédigé à la recherche des tics propres à l’IA. Le rouge sonde une application en service comme le ferait un acteur malveillant. Le bleu évalue le code au regard des normes de sécurité internationales tout en élaborant des plans d’attaque sophistiqués, appelés chaînes d’attaque, une étape essentielle vers la correction. Ces compétences servent de mécanismes de contrôle obligatoires dans le harnais et favorisent la cohérence, la conformité et la sécurité sans interrompre le rythme du développement." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Les agents rouge, bleu, vert et jaune","description":"Les agents d’IA ont besoin d’outils et de méthodes clairement définis pour évaluer la qualité de leur travail et celle du code existant. Quatre ensembles de compétences d’assurance qualité sont intégrés au harnais, chacun désigné par une couleur. Le vert vérifie la qualité et l’hygiène du code. Le jaune examine le texte rédigé à la recherche des tics propres à l’IA. Le rouge sonde une application en service comme le ferait un acteur malveillant. Le bleu évalue le code au regard des normes de sécurité internationales tout en élaborant des plans d’attaque sophistiqués, appelés chaînes d’attaque, une étape essentielle vers la correction. Ces compétences servent de mécanismes de contrôle obligatoires dans le harnais et favorisent la cohérence, la conformité et la sécurité sans interrompre le rythme du développement.","url":"https://thevelocitywhitepapers.com/fr/paper/l199t/","inLanguage":"fr-CA","author":[{"@type":"Person","name":"Ministère de la Technologie et de l’Innovation"}],"publisher":{"@type":"Organization","name":"Gouvernement de l’Alberta · Ministère de la Technologie et de l’Innovation"},"datePublished":"2026-06-16","isPartOf":{"@type":"PublicationVolume","name":"Les livres blancs Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"security, agents, harness, red-team, quality","image":"https://thevelocitywhitepapers.com/public/og/l199t.fr.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 07 · Technical</p>
+      <h1>Les agents rouge, bleu, vert et jaune</h1>
+      <p class="sub">Des compétences et des outils intégrés permettent aux agents d’IA d’appliquer fidèlement les règles et les normes du gouvernement sans sacrifier la vitesse.</p>
+      <div class="abstract"><strong>Abstract.</strong> Les agents d’IA ont besoin d’outils et de méthodes clairement définis pour évaluer la qualité de leur travail et celle du code existant. Quatre ensembles de compétences d’assurance qualité sont intégrés au harnais, chacun désigné par une couleur. Le vert vérifie la qualité et l’hygiène du code. Le jaune examine le texte rédigé à la recherche des tics propres à l’IA. Le rouge sonde une application en service comme le ferait un acteur malveillant. Le bleu évalue le code au regard des normes de sécurité internationales tout en élaborant des plans d’attaque sophistiqués, appelés chaînes d’attaque, une étape essentielle vers la correction. Ces compétences servent de mécanismes de contrôle obligatoires dans le harnais et favorisent la cohérence, la conformité et la sécurité sans interrompre le rythme du développement.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Les documents précédents de cette série ont présenté les possibilités qu’offre une livraison logicielle pilotée par l’IA pour s’attaquer au parc vieillissant et aux pressions croissantes en cybersécurité. Ils ont aussi présenté plusieurs stratégies de reconstruction de nos systèmes gouvernementaux numériques, qui reposeront en grande partie sur la collaboration entre des agents d’IA et des travailleurs humains afin de bâtir selon un ensemble clair de spécifications. Mais à mesure que les agents d’IA assument une part grandissante du travail technique pour accélérer la livraison, comment vérifier leurs résultats et leur faire confiance de façon fiable ? Qui, ou quoi, peut vérifier la qualité et l’exhaustivité des produits ? Quatre compétences de révision sont intégrées au harnais bien conçu et inspectent chaque application sur les plans de la qualité, de la cohérence et de la sécurité.
+
+
+## §01 Qui vérifie l’IA
+
+Comme nous l’avons déjà souligné, les agents d’IA sont des témoins peu fiables de leurs propres résultats. Ils parlent de leur travail récent avec trop d’assurance et déclarent souvent un objectif atteint sans en faire la preuve. Comme tout travailleur, ils ont besoin de la rétroaction d’une personne dotée d’un regard extérieur et d’un esprit critique, qui va sonder, critiquer et évaluer. En somme, ils doivent être mis au défi.
+
+Un expert humain du domaine joue bien ce rôle, et ensemble ce duo peut traverser rapidement des problèmes complexes en confrontant et en éprouvant les idées de l’autre. Mais parfois, en raison de facteurs comme le volume de tâches, la vitesse ou la configuration de l’agent, ce n’est pas réaliste. Un cas fréquent survient lorsqu’une seule personne pilote des dizaines ou des centaines d’agents en parallèle et ne peut pas « regarder par-dessus leur épaule », pour ainsi dire. Il suffit souvent qu’un autre agent d’IA remplisse cette fonction. Même s’ils partagent le même modèle d’IA de base, plusieurs agents d’IA peuvent jouer différents rôles, comme développeur, architecte de solutions et spécialiste de la cybersécurité, dans leur propre forme de hiérarchie organisationnelle. Les bonnes compétences indiquent à l’agent comment accomplir ces tâches de façon fidèle et efficace. Pour obtenir de véritables constats, il leur faut aussi des outils solides pour trouver et présenter des preuves de lacunes potentielles, des indices qui amènent l’agent à creuser davantage.
+
+Le harnais bien conçu est prolongé par quatre compétences clés qui permettent à l’agent d’IA d’endosser la persona d’un adversaire ou de devenir le critique de son propre travail. Inspirés des exercices de sécurité et de défense militaire, nous avons conçu ces agents comme des équipes **rouge** et **bleue**. Dans un environnement contradictoire, l’équipe rouge joue l’attaquant et l’antagoniste : elle conteste et repère les lacunes, critique et présente ses constats. La compétence de l’équipe bleue joue le défenseur. Sous ces deux agents se trouve un petit arsenal de vérifications scriptées déterministes (c’est-à-dire fondées sur la logique) qui font ressortir les problèmes potentiels par appariement de motifs. Nous avons ensuite élargi ces compétences pour y ajouter les compétences d’agent « vert » de reconnaissance et « jaune » d’assurance qualité. Chaque couleur représente un agent distinct qui peut examiner le travail sous des angles uniques. Un développeur, ou l’agent lui-même, fait appel à chaque agent tout au long du cycle de développement et à chaque jalon du projet. L’agent intègre en outre bon nombre de ces compétences dans sa pratique active, ce qui signifie qu’elles s’appliquent continuellement au fil du processus génératif.
+
+Ces quatre compétences sont réparties à dessein entre le travail mécanique et le travail de jugement. Le vert et le jaune sont entièrement déterministes : présentez-leur le même code et ils renvoient les mêmes constats chaque fois. La reconnaissance active du rouge est déterministe elle aussi, mais elle ajoute une étape décisionnelle qui s’appuie sur Claude pour planifier le déroulement d’une attaque et interpréter les résultats de ses sondages. Le bleu relève surtout du jugement : il capte les signaux des trois autres compétences d’agent et apporte le discernement et la créativité dont feraient preuve un développeur chevronné ou un professionnel de la cybersécurité.
+
+L’introduction de ces compétences a entraîné une amélioration immédiate et remarquable de la qualité de la posture de codage de l’IA, en détectant et en corrigeant les problèmes tôt et souvent. Appliquées dans le contexte d’un gabarit sécurisé, ces compétences permettent à l’agent de vérifier automatiquement son travail, de planifier l’exécution périodique de contrôles et de constituer les preuves nécessaires pour faire passer une application en production.
+
+
+## §02 Vert : qualité et hygiène
+
+Le vert effectue un ensemble crucial de tests rapides et transmet ses résultats aux autres. Il s’exécute en premier. Il lit le code et rapporte les faits bruts sur des points d’intérêt critiques. Il compare les dépendances à des sources en ligne pour repérer celles qui présentent des vulnérabilités connues. Il vérifie si un mot de passe ou une clé a été versé dans le code source. Il détecte la présence de motifs dangereux. Il mesure la part du code réellement couverte par les tests. Il travaille en deux passes : la première lit le code sans l’exécuter, la seconde lance les tests existants et observe ce qui se produit, y compris les parties du code que les tests ne touchent jamais.
+
+Parce que le vert est déterministe, le même code produit toujours les mêmes constats. C’est ce qui en fait la base de preuves sur laquelle s’appuient tous les autres agents. Il ne devine pas : il vérifie et il compte. Lorsqu’il signale un fichier presque sans couverture de tests, ou un secret laissé dans le code source, ce constat est un fait plutôt qu’une opinion, et il peut être vérifié deux fois de la même façon. Il fait ressortir en quelques secondes des problèmes qui peuvent être traités de façon proactive à chaque étape du processus de développement.
+
+
+## §03 Jaune : la façon dont le contenu se lit
+
+Le jaune lit le contenu de l’application. Les logiciels gouvernementaux comportent beaucoup de texte : documentation, libellés de l’interface utilisateur, notes de version, contenu promotionnel et messages que voit réellement la population. Lorsque l’IA rédige ce texte, elle laisse des « tics » : des tournures qui trahissent un texte produit par une machine et qui érodent discrètement la confiance. On parle souvent d’« odeur d’IA ». Le jaune applique douze règles à chaque texte du projet et signale chaque tic en indiquant la ligne fautive, une réécriture en langage clair et une courte note expliquant pourquoi le passage semble écrit par une machine.
+
+Ce sont les mêmes règles qui régissent les documents que vous lisez en ce moment. On y trouve par exemple le tiret cadratin, les clichés tout faits, l’abus de la négation du type « ce n’est pas A, c’est B » et les adjectifs exagérément grandiloquents. Tous ces éléments minent la confiance. Si la population doit le lire, le texte doit donner l’impression qu’une personne l’a écrit, et être clair, simple et facile à assimiler. Les humains ne sont pas à l’abri de ces habitudes d’écriture; cette compétence empêche donc les deux parties de sombrer dans le remplissage.
+
+
+## §04 Rouge : l’attaquant
+
+Le rouge est l’attaquant. Il examine une application terminée comme le ferait un individu mal intentionné de l’extérieur, du dehors vers le dedans. Il cartographie le domaine et ses sous-domaines, recherche les ports ouverts, vérifie le chiffrement et les en-têtes de sécurité, et détermine quelles technologies sont utilisées. Cette reconnaissance applique des méthodes reconnues de l’industrie pour détecter les problèmes potentiels, donnant à l’agent les outils d’une hygiène cybernétique de base pour mener sa propre analyse.
+
+Le rouge accomplit la partie qui exigeait autrefois un spécialiste. Il raisonne sur tout ce qu’il trouve et planifie la façon dont il s’introduirait, en proposant des chemins d’attaque concrets : contourner une authentification, enchaîner un exploit à distance, soutirer des données par une porte dérobée. À cette étape de planification, l’agent examine les preuves et fait le travail de réflexion. Le rouge ne s’exécute jamais que contre les systèmes du gouvernement qui ont été autorisés à des fins de test. Son rôle est de trouver la faille avant que quelqu’un d’autre ne le fasse, et de remettre à l’agent suivant une carte du déroulement réel d’une attaque.
+
+
+## §05 Bleu : le défenseur
+
+Le bleu est le défenseur, et il s’exécute en dernier parce qu’il lit tout ce que les autres ont trouvé. Il dresse une carte de l’application, classe le degré de sensibilité de chaque partie et rédige un modèle de menaces. Il parcourt ensuite chaque exigence de la norme OWASP de vérification de la sécurité des applications (ASVS) au niveau 2, la référence internationale pour une application Web sérieuse, et consigne chacune comme réussie, échouée ou sans objet, avec la preuve à l’appui. Il évalue le même code au regard de la norme d’architecture de cybersécurité de l’Alberta, intègre la reconnaissance du rouge dans une représentation étape par étape du déroulement d’une attaque, et rédige des tests de sécurité pour valider que la surface d’attaque a été réduite au minimum.
+
+Le bleu termine en créant une page Web de sommaire exécutif complet, où les constats sont classés par gravité. Il signale les normes respectées et celles qui ne le sont pas, avec un plan de correction que l’agent peut mettre en œuvre.
+
+Contrôles de sécurité intégrés au gabarit par rapport auquel les agents vérifient ~95. Les quatre agents vérifient chaque application par rapport à ce référentiel à chaque passage.
+
+Chacun de ces agents est utile à lui seul et peut prendre de quelques secondes à près d’une heure pour s’exécuter en entier. Ensemble, ils forment un système cohérent de mécanismes de contrôle. Le travail est réparti entre plusieurs sous-agents puis recombiné à la fin en un constat global.
+
+Quelques remarques importantes. Ces agents ne remplacent pas des suites de gestion de la sécurité plus complètes. Ce n’est pas leur but. Ils fournissent plutôt des constats précoces, fréquents et utiles dès la toute première étape du cycle de développement, en signalant des centaines des problèmes et des préoccupations les plus courants qui peuvent influer sur les décisions de conception du système. Il est important de traiter ces questions le plus tôt possible dans le processus afin d’éviter les reprises et les retards en aval. Sans aucun doute, il est possible de concevoir ou d’acheter un ensemble de mécanismes de contrôle plus complet. Mais, appliquées fréquemment, ces compétences agentiques accomplissent ce que la plupart des équipes ne pourraient jamais réaliser : placer la cybersécurité au cœur de toutes les décisions de codage et de conception, et mettre des constats de sécurité utiles entre les mains des développeurs comme des non-spécialistes. Cela ne rendra peut-être pas votre code parfait, mais utiliser l’IA pour exécuter ces contrôles représente un investissement négligeable en temps et en argent (quelques sous, littéralement) pour renforcer rapidement le code de votre application. Dès la première rencontre avec votre équipe de cybersécurité, vous devriez être pleinement conforme, aligné sur les pratiques exemplaires, preuves en main. Le passage en production devrait être une formalité, qui, avec la bonne automatisation, s’effectue dans le cadre du processus de déploiement automatisé.
+
+Dans un tel monde, le bâtisseur non technique que nous présentons dans un document ultérieur peut concevoir efficacement à l’aide du harnais, doté des compétences, et faire passer une idée à la réalité tout en étant pleinement conforme aux dernières exigences en matière de cybersécurité et de technique.
+
+
+## §06 Un écosystème grandissant de mécanismes de contrôle
+
+Ces agents constituent un modèle pour utiliser efficacement des mécanismes de contrôle fiables qui permettent à l’agent d’IA et au réviseur humain de signaler tôt et souvent les erreurs critiques et potentiellement catastrophiques. Bien qu’ils offrent un ensemble d’outils utile et étoffé, il faut les voir uniquement comme un point de départ sur lequel bâtir. Selon les mêmes méthodes que celles démontrées ci-dessus, on devrait créer des compétences et des outils additionnels pour que l’agent vérifie l’accessibilité, valide son alignement architectural, génère du matériel de formation et assure l’intégrité de l’ensemble de l’application, seule ou au sein d’un environnement plus vaste. Chacun de ces domaines possède ses propres normes et façons de faire, qui peuvent être codifiées en compétences réutilisables, ce qui élève l’intelligence de l’ensemble du système.
+
+Développer ses propres compétences demande de la recherche et beaucoup d’essais et d’efforts. Des normes de l’industrie comme OWASP, NIST et ITSG sont d’excellents points de départ pour acquérir des connaissances solides qu’on peut transformer en compétences agentiques. En fait, si vous œuvrez dans un domaine où vous déployez des agents et où les exigences juridiques, réglementaires et de conformité comptent, vous pouvez utiliser des compétences personnalisées pour repérer et combler immédiatement les lacunes de votre approche. Commencez par rassembler les documents de référence qui comptent pour vous, puis codifiez-les dans des fichiers Markdown. Demandez à l’agent d’appliquer ces compétences et observez où les résultats répondent à vos attentes et où ils restent en deçà. Affinez ensuite les instructions et l’application de ces normes jusqu’à ce que vous soyez convaincu que l’agent atteint le niveau requis pour résoudre ses propres problèmes de façon fiable ou les signaler de façon proactive en vue d’une révision humaine. C’est un processus récursif, que nous connaissons bien. Tout notre système d’éducation repose sur de telles méthodes : trouver la vérité, enseigner, évaluer, donner de la rétroaction et accompagner vers l’excellence.
+
+Sans ces compétences, vous laissez les décisions de l’IA au hasard, en vous fiant à ses fonctions internes indéfinies et probabilistes pour faire votre travail à votre place. Vous gagnez en vitesse, mais vous perdez en fidélité et en compréhension claire de la façon dont le travail se fait. On ne peut pas être responsable de processus qui ne sont pas définis. Les compétences intégrées deviennent les procédures opérationnelles normalisées, le manuel d’instructions qui définit à quoi ressemble un travail bien fait. À mesure que vous travaillez avec l’IA, il importe de codifier vos propres processus sous forme de compétences additionnelles, ce qui vous fera gagner un temps considérable et augmentera la qualité de vos productions. À grande échelle, votre effectif grandissant d’agents d’IA peut suivre vos traces, ce qui vous permet d’exercer votre fonction essentielle de superviseur et d’orchestrateur humain. Déployées à l’échelle d’une équipe, vos connaissances rehaussent la barre pour toute l’organisation.
+
+Le harnais et ses agents de révision étant en place, nous pouvons maintenant commencer à bâtir l’environnement qui les met au travail à chaque construction. Les prochains documents présentent cette usine d’IA, où les applications sont conçues et spécifiées, où des agents les construisent et les testent sous ces mêmes contrôles, et où le travail est suivi et mesuré.
+
+
+## §07 Annexe A : Claude, le Agent SDK et Google Enterprise Agent Platform
+
+Les scripts et les compétences présentés dans ce document s’exécutent comme du code à source ouverte sur la machine du développeur. Les agents déterministes — le vert, le jaune et la reconnaissance du rouge — utilisent des scripts Node JS et Python qui ont leurs propres dépendances, mais ne nécessitent aucun agent d’IA pour s’exécuter. Les parties du processus qui exigent l’inférence et le jugement de l’IA, comme le planificateur d’attaque du rouge et l’évaluation complète du bleu, sont bâties avec le Claude Agent SDK, qui permet à une session de Claude Code d’orchestrer une série de sous-agents pour réaliser le travail répétable d’analyse de code sur une ou plusieurs applications. À l’aide d’une clé d’API sur Google Enterprise Agent Platform, AWS Bedrock ou Azure AI Foundry, chaque sous-agent peut être suivi pour ses coûts et son débit de jetons.
+
+Ces méthodes ne se limitent pas à un seul modèle d’IA, et il peut y avoir des avantages à en déployer différentes versions sur divers modèles afin d’obtenir l’éventail de réponses le plus large possible. Différents modèles signaleront des constats distincts qui, mis ensemble, peuvent corriger davantage de vulnérabilités de sécurité.
+
+Vos fichiers de compétences peuvent eux-mêmes devenir des vecteurs d’attaque. Utilisés sans précaution, et sans audit ni révision appropriés, de tels agents peuvent sauter des étapes ou même exfiltrer de l’information. Il importe de traiter ces agents comme la propriété intellectuelle de votre organisation et de les entretenir et les améliorer continuellement à mesure que les normes évoluent. Des compétences tierces non vérifiées peuvent aussi introduire du code malveillant qu’une IA pourrait suivre. Traitez la chaîne d’approvisionnement de vos agents et de vos compétences avec le même soin que tout autre produit cybernétique ou numérique.
+
+
+## §08 Annexe B : l’inventaire complet des vérifications
+
+L’inventaire complet des contrôles et des vérifications est présenté ci-dessous. Chaque application part d’un gabarit sécurisé qui intègre environ quatre-vingt-quinze grands contrôles de sécurité (voir Anatomie d’un gabarit). Les quatre agents de révision vérifient ce gabarit et bien plus encore. La passe complète exécute plus de quatre cents vérifications individuelles. La plus grande part revient aux deux parcours de normes : 285 exigences OWASP ASVS niveau 2 et 62 règles de sécurité infonuagique de l’Alberta. Consultez les tableaux ci-dessous pour un inventaire complet.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: security, agents, harness, red-team, quality</p>
+      <p><a href="/fr/paper/l199t">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "fr"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/fr/paper/l199t"));
+    })();
+  </script>
+</body>
+</html>

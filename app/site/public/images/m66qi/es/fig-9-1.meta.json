@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "es",
+  "slot": "fig-06",
+  "out_path": "public\\images\\m66qi\\es\\fig-9-1.jpg",
+  "bytes_jpg": 179541,
+  "bytes_png_source": 2102394,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:08:33.074Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a high pass filter for bids, where AI evaluates bid quality and maps it into a 3 dimensional business capability map structure for government. A sense of a high-pass filter that favours proof over polish. Muted Alberta cream palette, navy and rust accents, archival print quality. All labels are in Spanish: 1. LICITACIONES ENTRANTES (Muchas licitaciones. Diferentes formatos.); 2. FILTRO DE ALTA SELECCIÓN (Favorece la prueba sobre la presentación. Filtra las licitaciones de baja calidad.); 3. EVALUACIÓN CON IA (La IA evalúa la calidad de las licitaciones en todas sus dimensiones.); 4. MAPA 3D DE CAPACIDADES DE NEGOCIO; a panel DIMENSIONES DE EVALUACIÓN listing VERIFICABILIDAD, RELEVANCIA, FACTIBILIDAD; axes CALIDAD, ÁREA DE CAPACIDAD, NIVEL DE MADUREZ; a bottom strip PRINCIPIO DEL FILTRO DE ALTA SELECCIÓN with BAJA CALIDAD (Filtrada), CALIDAD MEDIA (Conservada), ALTA CALIDAD (Elevada). The filter is always called «Filtro de Alta Selección»; never write «Filtro Paso Alto». All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a high pass filter for bids, where AI evaluates bid quality and maps it into a 3 dimensional business capability map structure for government. A sense of a high-pass filter that favours proof over polish. Muted Alberta cream palette, navy and rust accents, archival print quality. All labels are in Spanish: 1. LICITACIONES ENTRANTES (Muchas licitaciones. Diferentes formatos.); 2. FILTRO DE ALTA SELECCIÓN (Favorece la prueba sobre la presentación. Filtra las licitaciones de baja calidad.); 3. EVALUACIÓN CON IA (La IA evalúa la calidad de las licitaciones en todas sus dimensiones.); 4. MAPA 3D DE CAPACIDADES DE NEGOCIO; a panel DIMENSIONES DE EVALUACIÓN listing VERIFICABILIDAD, RELEVANCIA, FACTIBILIDAD; axes CALIDAD, ÁREA DE CAPACIDAD, NIVEL DE MADUREZ; a bottom strip PRINCIPIO DEL FILTRO DE ALTA SELECCIÓN with BAJA CALIDAD (Filtrada), CALIDAD MEDIA (Conservada), ALTA CALIDAD (Elevada). The filter is always called «Filtro de Alta Selección»; never write «Filtro Paso Alto». All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\m66qi\\en\\fig-9-1.source.png"
+}

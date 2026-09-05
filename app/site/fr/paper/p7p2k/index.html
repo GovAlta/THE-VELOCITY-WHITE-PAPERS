@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Le harnais bien conçu · Les livres blancs Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Les outils de codage comme Cursor, Lovable et Claude Code génèrent des applications qui ne respectent pas toujours les contrôles requis dans la fonction publique. De plus, les agents d’IA ne sont pas toujours fiables pour évaluer leur propre performance. Pour pallier ces difficultés, il faut des consignes claires, des tests et des modèles. L’Alberta a mis au point et publié une série de fichiers appelée « harnais ». Cet ensemble précise les attentes envers l’IA et permet d’obtenir des résultats de qualité entreprise, à une vitesse comparable au « codage à l’instinct »." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/fr/paper/p7p2k/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/p7p2k/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/p7p2k/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/p7p2k/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/p7p2k/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Le harnais bien conçu" />
+  <meta property="og:description" content="Les outils de codage comme Cursor, Lovable et Claude Code génèrent des applications qui ne respectent pas toujours les contrôles requis dans la fonction publique. De plus, les agents d’IA ne sont pas toujours fiables pour évaluer leur propre performance. Pour pallier ces difficultés, il faut des consignes claires, des tests et des modèles. L’Alberta a mis au point et publié une série de fichiers appelée « harnais ». Cet ensemble précise les attentes envers l’IA et permet d’obtenir des résultats de qualité entreprise, à une vitesse comparable au « codage à l’instinct »." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/fr/paper/p7p2k/" />
+  <meta property="og:site_name" content="Les livres blancs Velocity" />
+  <meta property="og:locale" content="fr_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/p7p2k.fr.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/p7p2k.fr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Le harnais bien conçu" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/p7p2k.fr.jpg" />
+  <meta property="article:published_time" content="2026-06-16" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Le harnais bien conçu" />
+  <meta name="twitter:description" content="Les outils de codage comme Cursor, Lovable et Claude Code génèrent des applications qui ne respectent pas toujours les contrôles requis dans la fonction publique. De plus, les agents d’IA ne sont pas toujours fiables pour évaluer leur propre performance. Pour pallier ces difficultés, il faut des consignes claires, des tests et des modèles. L’Alberta a mis au point et publié une série de fichiers appelée « harnais ». Cet ensemble précise les attentes envers l’IA et permet d’obtenir des résultats de qualité entreprise, à une vitesse comparable au « codage à l’instinct »." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Le harnais bien conçu","description":"Les outils de codage comme Cursor, Lovable et Claude Code génèrent des applications qui ne respectent pas toujours les contrôles requis dans la fonction publique. De plus, les agents d’IA ne sont pas toujours fiables pour évaluer leur propre performance. Pour pallier ces difficultés, il faut des consignes claires, des tests et des modèles. L’Alberta a mis au point et publié une série de fichiers appelée « harnais ». Cet ensemble précise les attentes envers l’IA et permet d’obtenir des résultats de qualité entreprise, à une vitesse comparable au « codage à l’instinct ».","url":"https://thevelocitywhitepapers.com/fr/paper/p7p2k/","inLanguage":"fr-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Sous-ministre"},{"@type":"Person","name":"Technologie et Innovation"}],"publisher":{"@type":"Organization","name":"Gouvernement de l’Alberta · Ministère de la Technologie et de l’Innovation"},"datePublished":"2026-06-16","isPartOf":{"@type":"PublicationVolume","name":"Les livres blancs Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"velocity, harness, claude-code, agents, skills, hooks, cyber, open-source","image":"https://thevelocitywhitepapers.com/public/og/p7p2k.fr.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 06 · Technical</p>
+      <h1>Le harnais bien conçu</h1>
+      <p class="sub">Comment la fonction publique peut‑elle concevoir et livrer rapidement des applications logicielles de qualité entreprise, sans diminuer ses exigences.</p>
+      <div class="abstract"><strong>Abstract.</strong> Les outils de codage comme Cursor, Lovable et Claude Code génèrent des applications qui ne respectent pas toujours les contrôles requis dans la fonction publique. De plus, les agents d’IA ne sont pas toujours fiables pour évaluer leur propre performance. Pour pallier ces difficultés, il faut des consignes claires, des tests et des modèles. L’Alberta a mis au point et publié une série de fichiers appelée « harnais ». Cet ensemble précise les attentes envers l’IA et permet d’obtenir des résultats de qualité entreprise, à une vitesse comparable au « codage à l’instinct ».</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Les grands modèles de langage (GML) sont désormais très performants pour développer du code. Dès le début du programme Maximaliste en IA en 2025, le personnel de Technologie et Innovation a testé ces outils pour voir comment les utiliser dans un contexte gouvernemental. Plusieurs outils de codage agentique ont été évalués, dont Cursor, Lovable, Gemini CLI et Claude Code.
+
+Ces outils ont accéléré le développement pour les experts et rendu la création d’applications accessible même aux non‑spécialistes. Le temps nécessaire pour passer d’une idée à un prototype fonctionnel est passé d’environ 6 semaines à parfois seulement 30 minutes. Ces gains ont transformé le travail des équipes.
+Les experts métier peuvent maintenant participer directement à la conception, donner leur avis et valider en temps réel. Cela réduit fortement les échanges longs et complexes (courriels, captures d’écran, maquettes) et permet souvent de tout faire en une seule séance. Cependant, ces essais ont aussi montré des limites importantes lorsqu’on demande à ces agents de créer des applications sécurisées, reproductibles et conformes. Plusieurs enjeux devaient être réglés avant une utilisation courante dans les services gouvernementaux.
+
+
+## §01 S’aligner avec les agents d’IA
+
+Malgré les gains de vitesse, les Maximalistes en IA de l’Alberta ont relevé plusieurs défis importants.
+
+D’abord, il était difficile de reproduire exactement la même application. Comme l’IA est probabiliste, chaque interaction produisait un résultat différent (apparence, mise en page, fonctionnalités). Cette variabilité complique son utilisation en contexte gouvernemental. Elle réduit aussi la confiance des partenaires et ralentit le travail, car les équipes ne peuvent pas facilement reprendre ou partager du travail quand les solutions générées diffèrent.
+
+Ensuite, ces outils privilégient souvent l’expérience utilisateur, mais négligent les exigences de sécurité. Même si les prototypes sont créés rapidement, il faut souvent beaucoup d’efforts pour corriger les failles de sécurité, d’accessibilité ou de mobilité. Comme pour l’interface, ces corrections sont souvent incohérentes et difficiles à reproduire. Ainsi, le temps gagné à l’avant peut être perdu à l’arrière pour ajouter les contrôles nécessaires à la sécurité. Pour être clair, ces problèmes ne venaient pas de la technologie d’IA elle-même, mais de la façon dont elle était utilisée.
+
+Enfin, un autre problème majeur est l’excès de confiance des agents d’IA. Ils affirment souvent que leur code est complet, alors qu’il contient encore des lacunes importantes. Ils ne sont donc pas fiables pour évaluer la qualité de leurs propres résultats. Cela rend difficile, surtout pour le personnel non technique, d’évaluer le niveau réel de maturité d’une application. Faire confiance à ces résultats sans vérification indépendante peut entraîner des erreurs, notamment lors des audits de sécurité.
+
+Face à ces limites, l’équipe a progressivement cherché des solutions par essais, expérimentation et approche ludique.
+
+
+## §02 Expérimentation et jeu
+
+Depuis le lancement du programme Maximaliste en IA en mars 2025 jusqu’en mai 2026, le Ministère a créé plus de 1 000 applications. La plupart sont des prototypes, mais plusieurs dizaines sont passées en production et apportent une valeur concrète.
+
+Ces prototypes reposent sur une approche d’exploration, d’expérimentation et même de jeu. Cette dimension de jeu est essentielle pour apprendre à comprendre les limites des modèles et à bien les utiliser. Même si cela peut sembler étonnant en contexte gouvernemental, c’est ainsi que les humains apprennent le mieux : dans un environnement sécuritaire, stimulant et motivant.
+
+En développant ces nombreuses applications, l’équipe a pu identifier les limites réelles de l’IA. Chaque constat a permis d’améliorer les méthodes de travail, en corrigeant ces lacunes avec de meilleures consignes, de meilleurs scripts et de meilleurs tests. L’objectif est d’exploiter pleinement le potentiel de l’IA tout en tenant compte de ses faiblesses.
+
+Au fil du temps, cette phase d’expérimentation a permis de créer une sorte de guide pratique sur les bonnes façons de travailler avec l’IA.
+
+Un autre point important est la variabilité entre les utilisateurs. Deux personnes peuvent obtenir des résultats très différents avec le même outil pour une même tâche. La manière de formuler une demande, de donner du contexte ou des instructions influence beaucoup le résultat. Dans un environnement où la qualité et la reproductibilité sont essentielles, ces différences peuvent poser problème.
+
+L’utilisation efficace de l’IA nécessite donc un cadre clair et des règles précises.
+
+
+## §03 Présentation du « harnais » d’IA
+
+Pour obtenir des résultats reproductibles, il faut utiliser des modèles et des styles qui augmentent les chances que l’IA exécute correctement les tâches. Comme les grands modèles de langage fonctionnent avec du texte, ces règles sont définies sous forme d’instructions. Ces instructions, appelées « invites », décrivent clairement ce qu’on attend de l’IA. Si on veut encourager la créativité, on donne des consignes générales axées sur le résultat. Si on veut être plus précis, on fournit des étapes détaillées et des règles à suivre.
+
+Avec le temps, l’Alberta a regroupé des milliers de ces invites en « compétences » d’IA : des instructions qui expliquent les méthodes à utiliser et les résultats attendus. Ces compétences sont très directives, ce qui laisse peu de place à l’interprétation. Elles sont aussi rédigées de façon concise pour ne pas surcharger la capacité d’attention de l’IA. Trouver cet équilibre demande de la pratique. Par essais et erreurs, les équipes ont aussi défini des étapes pour améliorer la qualité et la cohérence du code généré. Elles ont commencé par de petites parties d’application (comme une page d’accueil ou une API), puis ont créé des instructions précises que l’IA devait suivre. Ces règles limitent l’incertitude et rendent les résultats plus cohérents. Ces normes, appelées « fichiers de compétences », sont fournies à l’agent dès le début d’une tâche. Une bonne 
+spécification réduit l’ambiguïté et améliore la qualité du résultat.
+
+L’ensemble de ces instructions est regroupé dans une collection appelée « harnais ».
+
+
+## §04 Concevoir des harnais
+
+Concevoir des harnais est complexe et demande beaucoup de rigueur. Il s’agit de structurer des compétences qu’un humain développe normalement sur 10 à 20 ans.
+
+On ne peut pas créer un harnais à l’instinct. Utiliser l’IA pour le faire peut entraîner un effet de « photocopie », où chaque version dérivée perd en qualité, ce qui peut causer des erreurs imprévisibles. Il faut donc prendre le temps de réfléchir à chaque fonctionnalité et tester chaque version à répétition pour s’assurer que le résultat correspond réellement au besoin. Il est essentiel d’éviter toute production de mauvaise qualité.
+
+Il faut aussi montrer clairement à l’IA ce qu’est un travail de qualité. En technologie, cela signifie fournir un exemple d’application aussi parfait que possible, qui servira de modèle. C’est comparable à l’apprentissage des arts : les élèves étudient et reproduisent les œuvres des grands maîtres pour s’en approcher le plus possible.
+
+Ces modèles de haute qualité sont essentiels pour guider efficacement l’IA.
+
+&quot;En m’inspirant de la troisième loi d’Arthur C. Clarke, selon laquelle toute technologie suffisamment avancée est indiscernable de la magie, je dirais que tout modèle suffisamment avancé est indiscernable du code. Le meilleur harnais, c’est du code.&quot; · Janak Alford, Sous-ministre, Ministère de la Technologie et de l’Innovation
+
+Un harnais est formé de quelques éléments qui travaillent ensemble. Avec Claude Code, le point d’entrée vers ces compétences est un fichier appelé CLAUDE.md. D’autres agents de codage utilisent des fichiers équivalents, souvent appelés agent.md. L’agent lit ce fichier au début de chaque session et s’en sert comme règles du projet. Ce fichier est court et clair : il décrit le projet, ses utilisateurs, les normes à respecter, ce que l’agent peut modifier et ce qu’il ne doit jamais changer.
+
+C’est aussi l’endroit où sont définies les décisions importantes du projet, afin que l’agent, ainsi que toute nouvelle personne, commencent avec la même compréhension de base.
+
+Pour Claude Code, les compétences sont stockées dans un dossier nommé .claude/skills. Chaque compétence agit comme un petit guide pour un type de tâche : structurer des exigences, écrire une migration de base de données, faire un audit de sécurité ou encore réviser un texte.
+L’agent ne charge pas toutes les compétences en même temps. Au départ, il ne lit que leur nom et une courte description, juste assez pour savoir quand les utiliser. Il ne consulte le contenu complet d’une compétence que lorsqu’elle est pertinente pour la tâche en cours.
+Les compétences sont donc utilisées au besoin, comme un professionnel qui choisit l’outil précis dont il a besoin pour accomplir son travail.
+
+Le modèle est le « chef‑d’œuvre » sur lequel repose le harnais. Il impose des choix technologiques clairs et assumés. La pile est fixe et open source : Vue JS avec Vite pour le frontal, Node JS avec Express pour le dorsal, Postgres 18 pour les données, et l’authentification unique pour gérer les identités.
+Il est fourni sous forme d’un ensemble complet et fonctionnel, comprenant un client et un serveur, avec les problèmes techniques complexes déjà réglés dès le départ.
+
+Ainsi, plus d’une centaine de décisions essentielles pour un système public, comme l’authentification des utilisateurs, la validation des données, la gestion des secrets, la journalisation, la sécurité, ou encore l’accessibilité sont prises une seule fois, avant même le début des projets.
+
+Les compétences, les normes, le modèle et des exigences claires déterminent le résultat.
+Les exigences définissent ce qu’il faut construire. Les compétences expliquent comment le faire, en guidant chaque étape : des exigences à la planification, puis à l’architecture, au développement, aux tests et au déploiement. Chaque étape doit être complétée avant de passer à la suivante.
+Les normes décrivent ce qu’est un travail de qualité. Le modèle, lui, intègre déjà tous ces éléments ensemble, de sorte que l’agent retrouve les mêmes règles et préférences partout.
+C’est aussi ce qui permet à une personne non technique de réussir : elle ajoute simplement le contenu dont son service a besoin sur une base déjà approuvée. Ainsi, seule la partie qui doit réellement changer varie d’un projet à l’autre.
+
+En parallèle des compétences de construction, quatre agents de révision, identifiés par des couleurs, interviennent pendant la création des applications pour en vérifier la qualité, la cohérence et la sécurité. L’agent Vert s’assure de la qualité du code et de la chaîne d’approvisionnement, l’agent Jaune se concentre sur la rédaction, l’agent Rouge effectue des tests d’attaque depuis l’extérieur, tandis que l’agent Bleu réalise une révision défensive. Ces agents sont intégrés au harnais et feront l’objet d’une description plus détaillée dans le prochain document, Les agents rouge, bleu, vert et jaune.
+
+Une grande partie de nos agents reposent actuellement sur Claude, au moyen de leur agent de codage et de leur trousse de développement logiciel (SDK). Les tâches d’envergure, comme la planification, l’architecture ou la modélisation des menaces, sont réalisées avec Claude Opus, capable d’exécuter l’ensemble d’un cycle de livraison, souvent dans la fenêtre de contexte d’un million de jetons d’une seule session. Les nombreuses tâches plus petites, exécutées en parallèle, comme les analyses approfondies et les révisions, sont prises en charge par Claude Sonnet, comparativement plus économique et plus rapide, par l’intermédiaire de l’Agent SDK. Ces agents légers peuvent être orchestrés pour accomplir rapidement de nombreuses tâches en parallèle, à partir d’un ensemble partagé d’outils et de ressources.
+
+Cependant, les compétences et les normes ne dépendent pas d’un modèle précis et peuvent être utilisées avec n’importe quelle IA moderne, qu’elle soit avancée ou open source. Ce qui fait vraiment la différence, ce n’est pas le modèle lui‑même, mais la propriété intellectuelle du harnais.
+Toute personne, équipe ou organisation peut créer et partager ces compétences, ce qui améliore les capacités de tous. Ainsi, chacun peut accéder aux meilleures pratiques en codage, en définition des exigences, en planification de projets et en sécurité. Ces compétences fonctionnent comme des outils dans une boîte à outils agentique. Il reste cependant nécessaire d’apprendre à bien les utiliser.
+
+
+## §05 Appliquer le harnais à grande échelle
+
+L’Alberta a mis en place un programme pour former ses fonctionnaires, appelé l’Académie d’IA de l’Alberta. Ce programme sera présenté plus en détail dans un autre document, mais on peut déjà dire que des milliers d’employés et plus de dix mille personnes du public ont utilisé la plateforme AlbertaAIAcademy.com pour apprendre à utiliser efficacement l’IA, de la création d’invites jusqu’à la livraison de produits.
+Le personnel apprend en « cohortes », des groupes de 60 à 600 personnes, répartis sur trois niveaux de formation.
+
+La cohorte la plus récente de niveau 3 s’est déroulée sur six jours. Les participants y ont adopté une approche de développement basée sur le harnais. Ils venaient d’horizons et de niveaux variés : parmi eux, trois des cinq sous-ministres adjoints du ministère, ainsi que des directeurs exécutifs, des gestionnaires, des employés et des stagiaires. Peu se considéraient comme des ingénieurs logiciels au départ.
+Cependant, tous étaient prêts à devenir des bâtisseurs, en travaillant avec l’IA selon une approche guidée par le harnais.
+
+Au cours de ces six jours, la cohorte a produit plus de **cinq cent soixante applications fonctionnelles**. Pour obtenir le diplôme de niveau 3, l’application de chaque étudiant a franchi la révision de cybersécurité, la vérification d’accessibilité et la norme d’apparence dès la première livraison.
+
+Résultat de la cohorte de niveau 3 560 / 100. Plus de 560 applications ont été créées par une centaine d’étudiants en seulement six jours.
+Le dernier jour, l’équipe de cybersécurité a analysé toutes les réalisations avec ses propres outils. Les meilleures applications ont obtenu des résultats parfaits : aucune vulnérabilité connue, aucune erreur d’accessibilité et une conformité complète aux normes gouvernementales.
+
+Une grande partie des bonnes pratiques en cybersécurité était déjà intégrée dans les harnais utilisés par les étudiants. Ainsi, la sécurité était prise en compte dès le départ. À chaque étape du projet, il est possible d’exécuter ces agents pour réaliser plus de 95 vérifications.
+
+Les applications sont donc livrées avec un état de santé clair et des preuves à l’appui. Au moment de l’approbation, les enjeux de sécurité sont déjà réglés, ce qui permet d’obtenir des applications cohérentes, faciles à comprendre et conformes aux exigences dès le début.
+
+&quot;Nous avons fait entrer l’équipe de cybersécurité dans la tente. Nous leur avons demandé de bâtir l’agent de révision le plus rigoureux qu’ils pouvaient imaginer. 
+Puis nous l’avons intégré au harnais.&quot; · Janak Alford, Sous-ministre, Ministère de la Technologie et de l’Innovation
+
+
+## §06 Leçons apprises
+
+Après 16 mois d’apprentissage dans le cadre des programmes Maximalistes en IA, plusieurs constats importants se dégagent :
+
+Il est important de se donner du temps pour expérimenter. Ces méthodes ne sont pas simples ni immédiates à maîtriser. Offrir au personnel le temps nécessaire pour apprendre, créer et améliorer ces pratiques est donc un investissement qui en vaut la peine.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: velocity, harness, claude-code, agents, skills, hooks, cyber, open-source</p>
+      <p><a href="/fr/paper/p7p2k">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "fr"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/fr/paper/p7p2k"));
+    })();
+  </script>
+</body>
+</html>

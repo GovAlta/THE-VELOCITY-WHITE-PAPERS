@@ -1,0 +1,437 @@
+{
+  "id": "rhx4t",
+  "num": "11",
+  "sequence": "11 de 22",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "Estudio de caso de la Fábrica de IA: de cinco meses a cuatro días",
+  "subtitle": "Un análisis cuantitativo de lo que produce la Fábrica de IA a los seis meses de operación.",
+  "track": "Engineering the Solution",
+  "authors": [
+    "Chris Wright",
+    "Sheldon Bauld",
+    "Michelle Dias",
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-06-19",
+  "reading_min": 11,
+  "status": "Published",
+  "tags": [
+    "factory",
+    "delivery",
+    "applications",
+    "technical-debt",
+    "modernization"
+  ],
+  "repo": null,
+  "abstract": "El equipo de la Fábrica de IA ha ido trazando los procesos a medida que desarrollaba las habilidades y los estándares necesarios para que la fábrica funcione. A continuación, se presentan dos estudios de caso que ilustran, con ejemplos reales, cómo el personal logró una mejora de velocidad de 25 veces y una reducción del 95 % en los costos de entrega. Ambos ejemplos muestran lo que la fábrica produce en la práctica y lo que eso significa para el costo de modernizar el gobierno a gran escala. El personal ha contribuido a este documento con sus propias palabras, y el texto está redactado en primera persona.",
+  "hero_image": {
+    "src": "public/images/rhx4t/es/hero.jpg",
+    "alt": "Una línea de ensamblaje moderna y ordenada donde las aplicaciones gubernamentales terminadas salen rápidamente, con un calendario al fondo que pasa de meses a días.",
+    "image_prompt": "An editorial cover illustration of a clean, modern software factory: a calm assembly line where finished application panels move along and roll off the end as complete products, with a small calendar or dial motif shifting from a span of months down to a span of days to suggest a dramatic speed-up. A sense of disciplined, repeatable production rather than a chaotic workshop. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/rhx4t.mp3",
+    "duration_sec": 871
+  },
+  "tldr_presentation": {
+    "id": "rhx4t-tldr",
+    "title": "El documento, en síntesis",
+    "locale": "es",
+    "owner_id": "rhx4t",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Caso práctico de la fábrica de IA: de cinco meses a cuatro días",
+        "audio_file": "public/audio/es/rhx4t-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Documento 11 · Ingeniería de la solución",
+        "subcaption": "Lo que produce la fábrica de IA, seis meses después de su puesta en marcha.",
+        "text": "Caso práctico de la fábrica de IA. El equipo de la fábrica ha dedicado seis meses a desarrollar las habilidades y los estándares que hacen funcionar la línea. Dos proyectos reales ilustran lo que produce ahora: una solicitud de subsidio que antes llevaba cinco meses, reconstruida en cuatro días, y la primera aplicación pública de IA a nivel empresarial en Alberta, entregada en once semanas. Este es un relato basado en datos, en palabras del propio equipo."
+      },
+      {
+        "id": "02",
+        "audio_file": "public/audio/es/rhx4t-tldr/02.mp3",
+        "visual": "stat",
+        "caption": "La reconstrucción del sistema de Subsidio de Calefacción para Zonas Remotas",
+        "visual_config": {
+          "stat_value": "5 mo → 4 days",
+          "stat_label": "Codificado a mano en Java a principios de la década de 2000, reconstruido mediante la fábrica"
+        },
+        "subcaption": "La versión reconstruida añadió un portal público que el original nunca tuvo.",
+        "text": "Primero, una prueba de capacidad. Hace veinticinco años, uno de nuestros directores escribió a mano en Java la aplicación del Subsidio de Calefacción para Zonas Remotas. Le llevó cinco meses. Pasó la misma aplicación por la fábrica y la reconstruyó en cuatro días, con un nuevo portal de acceso público y envío directo de documentos que el original nunca tuvo. Como él mismo había escrito el original, pudo verificar el resultado frente a lo que debía hacer, y la calidad se mantuvo."
+      },
+      {
+        "id": "03",
+        "audio_file": "public/audio/es/rhx4t-tldr/03.mp3",
+        "visual": "stat",
+        "caption": "El Portal de Información para las Aulas de Alberta",
+        "visual_config": {
+          "stat_value": "$108K vs $1.9M",
+          "stat_label": "Entrega mediante la fábrica frente a un equipo de producto tradicional"
+        },
+        "subcaption": "Once semanas en lugar de hasta dieciocho meses, con el mismo nivel empresarial.",
+        "text": "Segundo, una aplicación completamente nueva. El Portal de Información para las Aulas de Alberta es la primera aplicación de IA de nivel empresarial publicada por el Gobierno de Alberta, desarrollada para directores y docentes, con plenos controles de privacidad, seguridad e identidad. Entró en funcionamiento el primero de junio. La fábrica la entregó en once semanas por alrededor de ciento ocho mil dólares. Un equipo tradicional habría invertido entre un millón trescientos mil y un millón novecientos mil dólares y habría tardado hasta dieciocho meses."
+      },
+      {
+        "id": "04",
+        "audio_file": "public/audio/es/rhx4t-tldr/04.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "Se invirtió más trabajo en crear la fábrica que en sacar las aplicaciones por el otro extremo. Pero ahora se puede hacer más con menos personas y producir múltiples aplicaciones.",
+          "cite": "Chris Wright, Tecnología e Innovación"
+        },
+        "text": "La inversión se realizó en la línea, no en ningún producto concreto. Se dedicó más esfuerzo a construir la fábrica que a sacar las primeras aplicaciones de ella. Ese trabajo inicial es reutilizable y redistribuible, por lo que no tiene que repetirse nunca, y un equipo pequeño puede ahora gestionar varias aplicaciones a la vez."
+      },
+      {
+        "id": "05",
+        "audio_file": "public/audio/es/rhx4t-tldr/05.mp3",
+        "visual": "list",
+        "caption": "Por qué el modelo es sostenible",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Fiable y reutilizable",
+              "desc": "El arnés, los agentes, el proceso y los estándares son estables; un equipo reducido gestiona varias compilaciones a la vez."
+            },
+            {
+              "label": "Basado en la gestión de expedientes",
+              "desc": "El patrón subyacente en la mayoría de los servicios públicos: un ciudadano presenta un registro y el personal lo tramita a lo largo de su ciclo de vida."
+            },
+            {
+              "label": "Cualquiera puede operarlo",
+              "desc": "Está bien documentado y es didáctico, por lo que las personas nuevas comienzan a entregar en uno o dos días."
+            },
+            {
+              "label": "La calidad está integrada",
+              "desc": "Los controles cumplen el mismo nivel que la entrega tradicional, a menos de una décima parte del coste."
+            }
+          ]
+        },
+        "subcaption": "Los beneficios se extienden a toda la lista de pendientes de servicios que comparten la misma estructura.",
+        "text": "El modelo es sostenible porque las partes más complejas se resuelven una sola vez. Se basa en la gestión de casos, que es la forma que adopta la mayor parte del trabajo gubernamental: un ciudadano presenta información y el personal la tramita a lo largo de un ciclo de vida definido. El arnés, los agentes y los estándares son estables, el trabajo está bien documentado y cualquier persona puede incorporarse y comenzar a entregar resultados en uno o dos días."
+      },
+      {
+        "id": "06",
+        "audio_file": "public/audio/es/rhx4t-tldr/06.mp3",
+        "visual": "stat",
+        "caption": "Lo que esto significa a escala",
+        "visual_config": {
+          "stat_value": "5 apps",
+          "stat_label": "en paralelo desde un equipo reducido, con cuatro más previstos para finales de agosto"
+        },
+        "subcaption": "En todo el patrimonio tecnológico de un gobierno completo, los ahorros ascienden a miles de millones.",
+        "text": "El patrimonio tecnológico acumula una enorme cantidad de trabajo pendiente que la entrega tradicional tardaría décadas y miles de millones en resolver. El modelo cambia esa aritmética. El mismo equipo reducido está desarrollando cinco aplicaciones en paralelo, con cuatro más previstas para finales de agosto — un ritmo que nunca se había alcanzado en el sector público. Como dice el equipo: lo mejor está por venir."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Lo que los proveedores no nos decían"
+    },
+    {
+      "n": "02",
+      "title": "La solicitud de Subsidio de Calefacción para Zonas Remotas"
+    },
+    {
+      "n": "03",
+      "title": "Lo que cambió para mí"
+    },
+    {
+      "n": "04",
+      "title": "El Portal de Información de Aulas de Alberta"
+    },
+    {
+      "n": "05",
+      "title": "Lo que realmente significa la inversión en la fábrica"
+    },
+    {
+      "n": "06",
+      "title": "La magnitud del problema y lo que esto significa para él"
+    },
+    {
+      "n": "07",
+      "title": "Lo que realmente significa esta inversión"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Primero fue la solicitud de Subsidio de Calefacción para Zonas Remotas, originalmente codificada a mano en Java hace veinticinco años, que tardó cinco meses en desarrollarse y fue reconstruida en cuatro días usando la fábrica. Luego, el Portal de Información de Aulas de Alberta (ACIP), la primera aplicación de IA de nivel empresarial publicada por el Gobierno de Alberta, entregada en once semanas por aproximadamente 108 000 dólares, frente a una estimación de entrega tradicional de entre 1,3 millones y 1,9 millones de dólares."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Lo que los proveedores no nos decían"
+    },
+    {
+      "type": "paragraph",
+      "text": "(Nota: esta narración es de Chris Wright, quien es Director de Servicios de Integración, y que se incorporó al equipo de la Fábrica de IA para apoyar el Proyecto Pronghorn en enero de 2026, hace apenas cinco meses.)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Antes de unirme al programa Pronghorn, gestionaba un equipo de apoyo a la reducción de deuda técnica y las integraciones de sistemas. En muchas de mis conversaciones con proveedores, escuché un relato recurrente sobre cómo abordar y sanear nuestras aplicaciones heredadas: la IA tiene limitaciones significativas para este tipo de trabajo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esa postura me generaba escepticismo, pero no tenía evidencia con la cual ponerla a prueba o contradecirla. No había usado estas herramientas en profundidad. No podía rebatirles nada concreto. Y siendo justos con los proveedores: lo que somos capaces de hacer hoy no habría sido posible doce meses atrás. Los modelos no estaban listos. La tecnología avanzó más rápido de lo que la mayoría de las organizaciones, incluidos nuestros socios proveedores, podían seguir. Alberta invertía intensamente en su personal a través de la Academia de IA y desarrollaba capacidades y soluciones internamente en lugar de esperar al mercado, lo que nos dio una ventaja de primer entrante."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esa fue parte de la razón por la que me sumé al Proyecto Pronghorn, que se convirtió en el modelo general de la Fábrica de IA. Quería descubrir de primera mano qué era posible. La Academia de IA de Alberta aportó a esa base. Entre ambas experiencias, mi comprensión de lo que la IA puede hacer realmente cambió de manera sustancial, y con ella mi capacidad de mantener un tipo diferente de conversación con los proveedores con quienes trabajamos."
+    },
+    {
+      "type": "paragraph",
+      "text": "La brecha entre lo que los proveedores describían como los límites de la IA y lo que las herramientas producían efectivamente en la práctica resultó ser significativa. Las dos aplicaciones descritas en este documento son la evidencia de esa brecha."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "La solicitud de Subsidio de Calefacción para Zonas Remotas"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hace veinticinco años, desarrollé la solicitud de Subsidio de Calefacción para Zonas Remotas para Alberta Agriculture. La codifiqué personalmente en Java. La aplicación gestiona un programa de subsidios para los albertanos que viven tan lejos de la red de gas natural que calientan sus hogares con petróleo o propano. En aquel entonces, no se esperaba que las personas en esas ubicaciones tuvieran acceso a internet, por lo que la aplicación se construyó únicamente como un portal interno. El personal de Agriculture recibe la documentación enviada por correo postal de los solicitantes, la ingresa al sistema y emite un cheque."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esa aplicación, a la que se le han aplicado parches de seguridad a lo largo de los años, sigue funcionando hoy. No ha sido reemplazada. Es un ejemplo claro de la deuda técnica que existe en todo el patrimonio tecnológico del gobierno: sistemas funcionales, escritos en una época anterior; mantenidos, pero no modernizados."
+    },
+    {
+      "type": "paragraph",
+      "text": "Durante el programa Pronghorn, esta aplicación surgió como uno de los ejemplos a trabajar. La reconocí de inmediato. Sé exactamente qué hace, qué debe producir y cuánto tardó construirla por primera vez. La puse en marcha en la fábrica. La reconstrucción tomó cuatro días, y la nueva versión incluye un portal en línea de acceso público que el original no tenía, además de funcionalidades adicionales, incluida una opción de envío directo de documentos que reemplaza el proceso por correo postal."
+    },
+    {
+      "type": "keystat",
+      "label": "Tiempo de entrega",
+      "value": "5 meses → 4 días",
+      "body": "La solicitud del Subsidio de Calefacción para Zonas Remotas tardó cinco meses en construirse a mano a principios de la década de 2000. La misma aplicación, reconstruida con funcionalidad adicional orientada al público a través de la fábrica de IA, se realizó en cuatro días."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.1",
+      "title": "Veinticinco años de deuda técnica, reconstruidos en cuatro días",
+      "caption": "Una solicitud de subsidio codificada a mano en Java a principios de los años 2000, mantenida con parches, pero nunca modernizada, fue procesada en la fábrica y reconstruida en cuatro días, con un nuevo portal de acceso público que el original nunca tuvo.",
+      "image": {
+        "src": "public/images/rhx4t/es/fig-11-1.jpg",
+        "alt": "Una antigua aplicación de terminal de los años noventa a la izquierda se transforma, a través de una flecha en color óxido, en un portal web moderno y ordenado en una computadora portátil a la derecha; ambos llevan el título «Solicitud de Subsidio de Calefacción para Zonas Remotas», con una granja remota calefaccionada por un tanque de propano, lejos de un gasoducto que recorre el horizonte.",
+        "image_prompt": "A clean editorial before-and-after diagram of one government application, split left to right with a large rust arrow across the middle. LEFT HALF, labelled \"SISTEMA HEREDADO\": a boxy 1990s beige desktop computer showing a plain text terminal screen, with a paper form and a sealed mailing envelope beside it. RIGHT HALF, labelled \"SISTEMA MODERNO\": the same application reborn as a clean modern web portal on a slim laptop, with a small PDF document and an upward upload arrow beside it for direct document submission. Background across the top: a quiet rural scene with a small farmhouse and a propane tank, set far from a thin natural gas pipeline running along the horizon. Include ONLY these exact text labels, each spelled exactly and large enough to be perfectly legible: \"SISTEMA HEREDADO\", \"SISTEMA MODERNO\", and the application title \"Solicitud de Subsidio de Calefacción para Zonas Remotas\" shown once on each side. Do NOT add any other words, field labels, menu items, or body text anywhere; leave all form fields and screen lines as blank ruled lines or empty boxes so there is no risk of misspelled or garbled text. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "Cinco meses la primera vez, cuatro días la segunda, y la versión reconstruida hace más que el original.",
+      "cite": "Chris Wright, Tecnología e Innovación"
+    },
+    {
+      "type": "paragraph",
+      "text": "La reconstrucción del Subsidio de Calefacción para Zonas Remotas fue un prototipo. Su valor reside en ser una prueba de capacidad. Como yo mismo escribí el código original, pude evaluar el resultado con conocimiento directo de lo que debía hacer. La calidad se sostuvo. La velocidad de entrega fue de un orden de magnitud diferente."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Lo que cambió para mí"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando comencé con este trabajo, mi comprensión de la IA se limitaba a lo que experimenta la mayoría de las personas: una interfaz de chat que puede ayudar con un documento. Es una herramienta útil."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lo que ahora puedo hacer es evaluar de qué es genuinamente capaz la IA y dónde tiene límites reales. Puedo cuestionar las afirmaciones de los proveedores con conocimiento específico, no solo con suspicacia. Puedo analizar un patrimonio tecnológico complejo y ver un camino de entrega concreto en lugar de un muro de trabajo acumulado. Ese cambio llevó tiempo y requirió práctica directa, pero su dirección es clara. No creo que haya ninguna función en este departamento cuyo trabajo no deba transformarse por esta tecnología."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "El Portal de Información de Aulas de Alberta"
+    },
+    {
+      "type": "paragraph",
+      "text": "(Nota: el resto del texto está redactado por Chris Wright y Sheldon Bauld, con el apoyo de Michelle Dias.)"
+    },
+    {
+      "type": "paragraph",
+      "text": "ACIP es una aplicación nueva, construida desde cero mediante los métodos de la fábrica, y se puso en marcha el 1 de junio de 2026. Desarrollada para directores y docentes de toda Alberta, requirió el conjunto completo de controles empresariales: protecciones de privacidad, revisión de seguridad, gestión de identidades e infraestructura de producción."
+    },
+    {
+      "type": "paragraph",
+      "text": "Antes de ACIP, Alberta había publicado utilidades asistidas por la IA, pero ninguna que requiriera las protecciones completas de gobernanza, seguridad y privacidad propias de una aplicación empresarial. ACIP es la primera. No se trata de una herramienta que pudiera permitirse errores, y fue entregada con el mismo estándar que cualquier aplicación que hubiera salido de un equipo de producto tradicional."
+    },
+    {
+      "type": "paragraph",
+      "text": "La diferencia está en el tiempo y el costo. Un equipo de producto tradicional habría tardado aproximadamente un año o un año y medio en entregar una aplicación de esta complejidad. ACIP se entregó en once semanas. El costo de la construcción en la fábrica ascendió a aproximadamente 108 000 dólares. La entrega tradicional equivalente habría costado entre 1,3 millones y 1,9 millones de dólares."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.2",
+      "title": "La primera aplicación de IA pública de nivel empresarial",
+      "caption": "El Portal de Información de Aulas de Alberta, desarrollado para directores y docentes, incorporó los controles empresariales completos (privacidad, revisión de seguridad, gestión de identidades, infraestructura de producción) y se puso en marcha el 1 de junio de 2026.",
+      "image": {
+        "src": "public/images/rhx4t/es/fig-11-2.jpg",
+        "alt": "Un educador sostiene una tableta en la que se ve un portal de información de aulas moderno y ordenado, rodeado de pequeños emblemas de controles empresariales de privacidad, seguridad e identidad.",
+        "image_prompt": "An editorial illustration of a clean, modern classroom information portal shown on a tablet or screen held by an educator standing before a simple chalkboard and a few desks. Around the screen, a small ring of enterprise-control emblems is drawn: a privacy padlock, a security shield, an identity key, and a server for production infrastructure, each connected to the application by a thin line. A sense of a trustworthy public service built to a high bar. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "ACIP: entrega en la fábrica vs. entrega tradicional",
+      "value": "$108K vs. $1,9M",
+      "body": "El Portal de Información de Aulas de Alberta fue entregado en once semanas mediante los métodos de la fábrica, con un coste aproximado de 108 000 dólares. La entrega tradicional de una aplicación equivalente habría costado entre 1,3 millones y 1,9 millones de dólares y habría requerido hasta 18 meses."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Lo que realmente significa la inversión en la fábrica"
+    },
+    {
+      "type": "paragraph",
+      "text": "El trabajo que supuso construir la fábrica fue considerable. Se dedicó más esfuerzo a crear la fábrica que a sacar las primeras aplicaciones por el otro extremo. Esa inversión inicial es fácil de cuestionar hasta que se ven los resultados que produce."
+    },
+    {
+      "type": "paragraph",
+      "text": "La fábrica es ahora fiable. El arnés, los agentes de IA, el flujo de trabajo y los estándares son lo suficientemente estables como para que equipos pequeños y ágiles puedan gestionar varias aplicaciones en paralelo. La infraestructura es reutilizable y redistribuible. El trabajo fundacional no tiene que repetirse para cada aplicación, y ahí es donde se acumulan los ahorros para el erario público. Los controles de calidad están integrados. El refactorizado necesario en las primeras versiones ya se ha realizado. La fábrica se ha construido y probado en torno a la gestión de expedientes, el patrón que subyace a la mayoría de los servicios gubernamentales. Casi todos los programas que ejecuta el gobierno implican el mismo problema, que tiene dos caras: un ciudadano envía información para crear o actualizar un expediente, y el personal lo tramita a lo largo de un ciclo de vida definido. Las prestaciones, la fiscalización, las licencias y las subvenciones son variaciones de este esquema. Construir la fábrica en torno a ese patrón significa que las ganancias de eficiencia se extienden a toda la lista de pendientes de servicios gubernamentales que comparten la misma estructura, no solo a las aplicaciones ya entregadas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada aplicación que pasa por la fábrica ahora se beneficia de todas las versiones anteriores. Los patrones están establecidos. Los problemas comunes ya han sido resueltos. Lo que antes requería ajustes constantes ahora funciona de manera consistente. Ese es el propósito de una fábrica: la inversión en la línea de producción se recupera con todo lo que produce."
+    },
+    {
+      "type": "paragraph",
+      "text": "La fábrica también está diseñada para que cualquiera pueda operarla. Personas nuevas pueden incorporarse y comenzar a entregar aplicaciones en uno o dos días. El trabajo es didáctico y está bien documentado. No se depende de que ninguna persona específica esté disponible, y no se parte de cero cuando alguien nuevo se une. Este tipo de flexibilidad en la dotación de personal es importante en el sector público, donde la continuidad no puede darse por sentada y el conocimiento institucional tiende a perderse cuando alguien se va. Esta es una razón de peso por la que el trabajo de construir la fábrica importa tanto como cualquier aplicación individual que produce. La documentación, los estándares y el conocimiento institucional quedan capturados en la línea misma, y no en la memoria de ninguna persona en particular, de modo que cuando alguien se traslada a otro departamento o desarrolla su carrera fuera del sector público, la capacidad permanece con nosotros. El objetivo es desarrollar a las personas más capaces que podamos, manteniendo al mismo tiempo el conocimiento que sustenta nuestros sistemas firmemente en nuestras propias manos, para que sigamos controlando lo que construimos."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.3",
+      "title": "La inversión está en la línea, no en el producto",
+      "caption": "La mayor parte del esfuerzo se dedicó a construir la fábrica en sí: el arnés, los agentes de IA, el flujo de trabajo y los estándares. Reutilizable y redistribuible, ahora permite que un equipo pequeño gestione varias aplicaciones en paralelo, sin necesidad de repetir el trabajo fundacional.",
+      "image": {
+        "src": "public/images/rhx4t/es/fig-11-3.jpg",
+        "alt": "Una línea de producción bien diseñada, construida una sola vez, con varios productos de aplicación avanzando en paralelo hacia su finalización.",
+        "image_prompt": "An editorial illustration of a single, well-engineered production line shown as the centrepiece, built once and clearly solid. Several application products move along it on parallel tracks at the same time, each at a different stage of completion, tended by just one or two small figures. The emphasis is on the reusable line itself rather than any single product. A sense of front-loaded investment paying back across many outputs. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "Se dedicó más trabajo a crear la fábrica que a sacar las aplicaciones por el otro extremo. Pero ahora se puede hacer más con menos personas y producir varias aplicaciones a la vez.",
+      "cite": "Chris Wright, Ministerio de Tecnología e Innovación"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "La magnitud del problema y lo que esto significa para él"
+    },
+    {
+      "type": "paragraph",
+      "text": "El Gobierno de Alberta tiene una enorme lista de pendientes de aplicaciones que deben reescribirse, modernizarse o reemplazarse. Abordar esa lista mediante los métodos de entrega tradicionales llevaría décadas y costaría miles de millones de dólares. Ese camino no conduce a ningún lugar útil."
+    },
+    {
+      "type": "paragraph",
+      "text": "La fábrica cambia ese cálculo. Las aplicaciones que un equipo de desarrollo tradicional tardaría un año en entregar pueden desarrollarse en semanas. La diferencia de costos entre la entrega por fábrica y la entrega tradicional, demostrada en ACIP, es de un orden de magnitud. Aplicada a todo el parque tecnológico del gobierno, la suma es considerable."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si este enfoque se extendiera a los gobiernos federal y provinciales de Canadá, los ahorros ascenderían a decenas de miles de millones de dólares. La cifra es una extrapolación de los costos ya demostrados en producción."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.4",
+      "title": "Una lista de pendientes que se medía en décadas, resuelta en semanas",
+      "caption": "El parque tecnológico acumula una enorme lista de sistemas pendientes de reescritura o sustitución. La entrega tradicional llevaría décadas y miles de millones de dólares; la fábrica entrega en semanas a un costo un orden de magnitud menor, y las ganancias se extienden a todos los servicios que comparten el patrón de gestión de expedientes.",
+      "image": {
+        "src": "public/images/rhx4t/es/fig-11-4.jpg",
+        "alt": "Una enorme pila de cajas de aplicaciones antiguas y heredadas a la izquierda entra en la línea de la fábrica y emerge a la derecha como un conjunto pequeño y ordenado de aplicaciones modernas.",
+        "image_prompt": "An editorial illustration of a towering, leaning stack of old legacy application crates and binders on the left, labelled only by their worn, dated look, feeding into a compact modern factory line in the centre, and emerging on the right as a small, orderly row of clean modern applications. A sense of an overwhelming backlog being steadily and rapidly cleared. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Lo que realmente significa esta inversión"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta tomó una decisión arriesgada. Optar por invertir en desarrollar esta capacidad internamente, en lugar de esperar a que el mercado de proveedores la ofreciera, no fue una decisión segura ni evidente. La mayoría de los gobiernos no la han tomado. El resultado de esa decisión es ahora visible: los ahorros son reales, los números se sostienen y las aplicaciones están funcionando en producción como modelo de entrega demostrado."
+    },
+    {
+      "type": "paragraph",
+      "text": "Los equipos de producto tradicionales tienen entre cinco y nueve personas, más comúnmente alrededor de siete. Para carteras más grandes, puede haber cuatro o cinco de esos equipos trabajando en paralelo, con el número de personas y el presupuesto aumentando rápidamente. La entrega mediante la fábrica de IA cambia por completo esa proporción. El mismo equipo pequeño que gestiona actualmente Pronghorn está entregando cinco aplicaciones en paralelo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Las ganancias de eficiencia no se obtienen a expensas del resultado. Los estándares integrados en la fábrica producen resultados que cumplen el mismo nivel de calidad que la entrega tradicional, a un costo bien por debajo de una décima parte."
+    },
+    {
+      "type": "paragraph",
+      "text": "La entrega de tecnología en el sector público ha atravesado tres etapas. Los grandes contratos con proveedores —del tipo que cuesta decenas de millones de dólares, se extiende durante años y a menudo rinde poco— dieron paso a los equipos de producto. Los equipos de producto redujeron el tiempo y el costo aproximadamente a la mitad y supusieron una mejora real. La entrega mediante la fábrica de IA representa un salto mayor. La ganancia de eficiencia es de un orden de magnitud diferente, y la trayectoria es familiar: cada etapa parecía ser el límite máximo hasta que llegó la siguiente."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 11.5",
+      "title": "Tres etapas de la entrega gubernamental",
+      "caption": "Los grandes contratos plurianuales con proveedores dieron paso a los equipos de producto, que redujeron el tiempo y el costo aproximadamente a la mitad. La entrega mediante la fábrica de IA es el siguiente salto —un cambio de orden de magnitud— y, como en cada etapa anterior, el techo de hoy es el piso de mañana.",
+      "image": {
+        "src": "public/images/rhx4t/es/fig-11-5.jpg",
+        "alt": "Tres peldaños ascendentes: un pesado contrato plurianual con un proveedor, un equipo de producto de tamaño medio y una fábrica de IA compacta y ágil, cada uno entregando más por menos que el anterior.",
+        "image_prompt": "An editorial illustration of three ascending steps or tiers reading left to right as a progression. The lowest and largest step shows a heavy, slow multi-year vendor contract drawn as a massive ledger; the middle step shows a mid-size product team as a small cluster of figures; the highest step shows a compact, fast AI factory line. Each step is smaller in cost yet higher in output than the one before, suggesting an order-of-magnitude jump. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos, no people faces. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "Lo mejor está por venir. Ahora mismo vemos sobre todo los problemas, las cosas que aún necesitan corrección. Para finales de agosto, Pronghorn habrá lanzado cuatro aplicaciones más. Es el mismo equipo ágil: cinco aplicaciones en dos o tres meses. En el contexto del sector público, estas velocidades rara vez se alcanzan.",
+      "cite": "Sheldon Bauld, Ministerio de Tecnología e Innovación"
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "factory",
+        "delivery",
+        "applications",
+        "technical-debt",
+        "modernization"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "related": [
+    "zgym1",
+    "p7p2k",
+    "qthji",
+    "k3tc3",
+    "cux4h"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 15 campos actualizados."
+      }
+    ]
+  },
+  "translation_status": "reviewed",
+  "source_signature": "1554538916"
+}

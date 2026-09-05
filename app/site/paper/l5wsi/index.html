@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Technical: Anatomy of a Template · The Velocity White Papers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="The Well-Built Harness ships with a full-stack monorepo application template consisting of a Vue 3 frontend client and a Node.js / Express server supported by a PostgreSQL database. Providing an AI agent with a template allows it to rapidly build meaningful enterprise-grade solutions. This basic template contains everything you need to get started, including security, logging, and basic controls." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/en/paper/l5wsi/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/l5wsi/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/l5wsi/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/l5wsi/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/l5wsi/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Technical: Anatomy of a Template" />
+  <meta property="og:description" content="The Well-Built Harness ships with a full-stack monorepo application template consisting of a Vue 3 frontend client and a Node.js / Express server supported by a PostgreSQL database. Providing an AI agent with a template allows it to rapidly build meaningful enterprise-grade solutions. This basic template contains everything you need to get started, including security, logging, and basic controls." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/en/paper/l5wsi/" />
+  <meta property="og:site_name" content="The Velocity White Papers" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/l5wsi.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/l5wsi.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Technical: Anatomy of a Template" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/l5wsi.jpg" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Technical: Anatomy of a Template" />
+  <meta name="twitter:description" content="The Well-Built Harness ships with a full-stack monorepo application template consisting of a Vue 3 frontend client and a Node.js / Express server supported by a PostgreSQL database. Providing an AI agent with a template allows it to rapidly build meaningful enterprise-grade solutions. This basic template contains everything you need to get started, including security, logging, and basic controls." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Technical: Anatomy of a Template","description":"The Well-Built Harness ships with a full-stack monorepo application template consisting of a Vue 3 frontend client and a Node.js / Express server supported by a PostgreSQL database. Providing an AI agent with a template allows it to rapidly build meaningful enterprise-grade solutions. This basic template contains everything you need to get started, including security, logging, and basic controls.","url":"https://thevelocitywhitepapers.com/en/paper/l5wsi/","inLanguage":"en-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Deputy Minister"},{"@type":"Person","name":"Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Government of Alberta · Ministry of Technology and Innovation"},"isPartOf":{"@type":"PublicationVolume","name":"The Velocity White Papers","url":"https://thevelocitywhitepapers.com/"},"keywords":"template, harness, security, owasp, open-source, authentication, specification-driven","image":"https://thevelocitywhitepapers.com/public/og/l5wsi.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../styles/base.css" />
+  <link rel="stylesheet" href="../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 17 · Technical</p>
+      <h1>Technical: Anatomy of a Template</h1>
+      <p class="sub">A back-to-front walkthrough of the open-source application template that ships with the Well-Built Harness, and why the best specification is working code.</p>
+      <div class="abstract"><strong>Abstract.</strong> The Well-Built Harness ships with a full-stack monorepo application template consisting of a Vue 3 frontend client and a Node.js / Express server supported by a PostgreSQL database. Providing an AI agent with a template allows it to rapidly build meaningful enterprise-grade solutions. This basic template contains everything you need to get started, including security, logging, and basic controls.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Providing an AI agent with a solid template is the most reliable way of scaffolding up an enterprise-grade application. A well-built template resolves hundreds of key decisions up front, from security to user experience. And paired with a Well Built Harness which provides the skills necessary to transform the template into an application, an AI agent can move quickly and safely forward.
+
+A template solves the most critical technical challenges up front, from the most basic, like the coding language, to the most specific, like the security protocols, the data storage model, and the user interface and user experience. In their totality, these represent hundreds of upfront decisions and controls which must be technically sound and compatible with their target operating environment. The template closes the most common and critical vulnerabilities and potential mistakes from step one and provides the AI agent meaningful patterns to emulate and adopt. The template is the best specification as the agent maintains the design decisions while building out functionality.
+
+Starts green, not from zero 773 / 0. The template ships with 773 passing tests and zero failures, plus six automated security scanners. An application built from it inherits a working, tested, standards-compliant baseline on its first day.
+
+&quot;The best specification is code. Give the AI a secure, standards-driven, accessible platform from the beginning, and it is far less likely to make a mistake. The solution is compliant before the AI even begins to build.&quot;
+
+There is no right way to build a template. There are plenty of wrong ways. The design is up to the organization and the broader enterprise decisions that are right for them. The following template is highly opinionated meaning it is highly specified and leaves little space for misinterpretation or misunderstanding. However, you can apply the same controls to any other set of technologies.
+
+
+## §01 The server: the request lifecycle
+
+The server is a single Express application in TypeScript. Every request is handled in a highly consistent way, passing through layers of middleware in a rational and deliberate order: cheap, broad protections first, identity and intent last.
+
+
+## §02 Identity: sign-in, tokens, and cookies
+
+Sign-in is delegated to Google and Microsoft through Passport and OpenID Connect. The template stores no passwords. On sign-on success, the server issues two JSON Web Tokens signed with RS256, an asymmetric key pair, so the server can verify a token without holding anything that could forge one, and sets them as httpOnly cookies that scripts in the browser cannot read. The authenticate middleware reads the access token from the cookie and, when it has expired, returns 401 with the code TOKEN_EXPIRED, which is the client&#39;s signal to refresh. Refresh tokens are stored only as SHA-256 hashes in a refresh_token table; every use rotates the token and any token can be revoked, so a stolen refresh token has a short and closable life.
+
+
+## §03 CSRF and cross-site safety
+
+State-changing requests, (such as write, update, delete), are protected by a double-submit check. The server sets an httpOnly csrf_token cookie and also returns the token value once, in the body of GET /auth/csrf-token. The client holds these values in memory only, never in storage, and echoes it in an X-CSRF-Token header. The middleware compares header to cookie with a constant-time comparison to avoid timing leaks. It is mounted globally, so a newly added route is protected by default rather than only when a developer remembers to opt in. The only exemptions are the OAuth start, the OAuth callback, and token refresh, each carrying a written reason it is safe: the callback is protected by the OAuth state and nonce, and refresh by the sameSite cookie plus rotation.
+
+
+## §04 From the route to the database
+
+Application logic is layered: route, then controller, then service, then model. The controller handles the request and shapes the reply, the service holds the business rules, and the model owns the SQL. Every query is parameterized with $1, $2, and so on; values are never concatenated into the statement, which closes SQL injection at the source. The model is also the only layer that maps API field names to database column names, so the wire format and the schema can change independently. Postgres is reached through a plain connection pool, with no object-relational layer hiding what actually runs.
+
+Every response uses one envelope: success with a data payload, or failure with an error object carrying a code and a message. A single error handler catches everything thrown, maps known Postgres errors to safe HTTP codes (a unique-key violation becomes 409, a foreign-key violation 400), and in production strips stack traces and SQL from the reply. Async handlers are wrapped so a rejected promise reaches that error handler instead of crashing the process. The result is that error shape, status codes, and information hiding are uniform across every endpoint.
+
+
+## §05 Real-time updates over SSE
+
+Live updates, an admin broadcast or a new notification, use Server-Sent Events, a one-way HTTP stream that is lighter than a WebSocket and reconnects on its own. On the server, a small manager keeps a map of user id to the set of that user&#39;s open streams, one per browser tab and capped at ten, and writes named notification events to them. On the client, useNotificationStream opens an EventSource with credentials so the auth cookie rides along, and listens for the named event; the default message handler does not fire for named events, which is a common trap. The stream is treated as best-effort: the source of truth stays the notifications list endpoint, so a dropped event is never a lost record. The stream closes on pagehide and reopens on pageshow, so an open connection does not disqualify the page from the browser&#39;s back-forward cache.
+
+
+## §06 The single API client
+
+Every call from the browser goes through one configured axios instance. It sends credentials so cookies travel, attaches a request id and, on writes, the CSRF token, and centralises the three failures that every screen would otherwise have to handle alone. Because the logic lives in one file, no view reimplements it and no view can get it wrong. This is the clearest example of what the template settles on the AI&#39;s behalf.
+
+
+## §07 Routing and navigation guards
+
+The client router uses history mode and lazy-loads every view as its own bundle, so a page&#39;s code downloads only when it is visited. Each route carries metadata: whether it requires a signed-in user, whether it requires an admin, whether it is for guests only, which layout to use (default, admin, or blank), and a title. A single beforeEach guard loads the current user once if needed, sends unauthenticated users to sign-in while preserving where they were headed, keeps non-admins out of admin routes, and turns signed-in users away from the sign-in page. A sanitizeRedirect helper rejects any redirect target that is not a plain relative path, closing open-redirect attacks, and afterEach sets the document title.
+
+
+## §08 State, composables, and forms
+
+There is one Pinia store, for authentication. It holds the user and the role helpers, signs out after thirty minutes idle, and listens for the auth:expired event the API client emits. Everything else is a composable, which is the template&#39;s data-access pattern. useFetch(url) wraps a GET and returns data, loading, error, and a refresh function; the feature composables, useServices, useResources, useForms, useFiles, and the rest, wrap their endpoints the same way, so a view binds to a uniform shape instead of calling the API directly. useTheme persists light or dark mode in local storage, usePwa drives the install and update prompts, useToast wraps notifications, and useNotificationStream feeds the live counter. User-supplied HTML is run through DOMPurify before it is ever rendered. Forms are built with FormKit behind one shared, themed configuration, so validation and styling are consistent rather than hand-rolled per screen.
+
+
+## §09 Interface, accessibility, and the build
+
+The interface is PrimeVue 4 on the Aura theme, with components auto-imported by a resolver so only the ones used are bundled, over Tailwind 4 utility styling. Application start-up wires Pinia, PrimeVue, FormKit, and the router, registers a global error handler that surfaces a toast, preloads the icon font to shorten the first render, and mounts the app only after the user session and CSRF token are fetched. Dark mode is a class on the root element.
+
+Accessibility is built: a skip-to-content link, a live region that announces each route change to screen readers, and conformance to the WCAG 2.1 AA standard the harness enforces. The build splits vendor code into separate chunks, Vue, PrimeVue, charts, and maps, so each is cached on its own; it minifies and drops console and debugger statements in production; and it serves built assets with a one-year immutable cache. The application is an installable progressive web app: a service worker precaches the shell, falls back to the app for client routes but never for the API, and prompts the user to update when a new build ships. The layout is responsive on mobile by default, and the manifest includes a maskable icon for a clean home-screen install.
+
+
+## §10 The OWASP Top 10, addressed up front
+
+The OWASP Top 10 is the security industry&#39;s list of the ten most serious classes of web vulnerability. The template addresses each one in code, built to the OWASP Application Security Verification Standard at Level 2, the standard the harness holds the work to.
+
+
+## §11 What the template solves for the agent
+
+Read back to front, the pattern is consistent. The dangerous decisions are made once, in code, and centralised so they cannot be re-made wrongly: identity, CSRF, parameterized SQL, the response envelope, error sanitization, the live-update fallback, and the API client&#39;s retry logic are each a single, tested implementation the AI inherits rather than writes. The AI is handed a compliant system and asked to extend it, and the harness checks mechanically that it still holds on every change, the same discipline the Anti-Drift Harness applies as the codebase grows.
+
+The template does not solve everything. Malware scanning of uploaded files and load balancing are not yet built in; rate-limiting state is held in memory until a shared store is configured. Known gaps or deferred decisions are documented, not hidden. The stack is open source throughout, Vue, Express, Postgres and their well-supported libraries, so there is no vendor lock-in and a large community keeps it patched, which is the baseline a public-facing government application must meet before it ships.
+
+
+Whether you use this template, or build your own, these principles should help keep you, and your agent, on the right track.
+
+
+## §12 The whole template, on one page
+
+Every part above is one decision in a single, coherent system. The placemat below puts them together: the Vue client on the left, the Express server in the middle, Postgres and the identity providers on the right, and the security and standards decisions that hold across all of them around the edge. It is the map an engineer can keep beside them while building, and the shape the agent extends.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: template, harness, security, owasp, open-source, authentication, specification-driven</p>
+      <p><a href="/en/paper/l5wsi">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "en"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/en/paper/l5wsi"));
+    })();
+  </script>
+</body>
+</html>

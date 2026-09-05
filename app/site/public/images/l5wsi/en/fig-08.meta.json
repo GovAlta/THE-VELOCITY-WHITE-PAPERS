@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-08",
+  "out_path": "public\\images\\l5wsi\\en\\fig-08.jpg",
+  "bytes_jpg": 130566,
+  "bytes_png_source": 2418831,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:34:46.803Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left column: three boxes labelled VIEW. They bind with arrows to a middle column of COMPOSABLE boxes: useFetch, useServices, useForms, useNotificationStream, each tagged { data, loading, error, refresh }. The composables point to a single box AXIOS CLIENT on the right. Above, a separate box PINIA AUTH STORE (user, roles, idle logout) connects to the views. A small gate labelled DOMPURIFY sits on a user-HTML arrow into a view, and a box FORMKIT feeds a form view. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left column: three boxes labelled VIEW. They bind with arrows to a middle column of COMPOSABLE boxes: useFetch, useServices, useForms, useNotificationStream, each tagged { data, loading, error, refresh }. The composables point to a single box AXIOS CLIENT on the right. Above, a separate box PINIA AUTH STORE (user, roles, idle logout) connects to the views. A small gate labelled DOMPURIFY sits on a user-HTML arrow into a view, and a box FORMKIT feeds a form view. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

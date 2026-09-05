@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "es",
+  "slot": "fig-04",
+  "out_path": "public\\images\\l5wsi\\es\\fig-04.jpg",
+  "bytes_jpg": 110276,
+  "bytes_png_source": 1837871,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-07T21:29:59.964Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial-quality flowchart diagram, hand-drawn line work on warm off-white paper background (#F7F4ED). Two-tone palette of deep Alberta navy (#1A3A6E) for primary nodes and rust orange (#C2491A) for accents and arrows. Boxes have subtle shadows; labels in clean sans-serif; arrows are slightly curved with arrowheads. Architectural, calm, technical but human. Wide editorial aspect. No photo realism, no people, no logos, no watermarks. All text labels in English.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A vertical stack of boxes top to bottom: VALIDAR (ESQUEMA) gate, then RUTA, CONTROLADOR, SERVICIO, MODELO, then a database cylinder POSTGRES. From MODELO a small callout shows a query SELECT ... WHERE id = $1 labelled PARAMETRIZADA. On the right, an upward arrow labelled RESPUESTA { success, data } returns to the top, and a box MANEJADOR DE ERRORES maps 23505 to 409 and 23503 to 400, labelled ERRORES SEGUROS. Small caption UN SOBRE, UNA RUTA DE ERROR. No logos, no people. All text labels in es. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A vertical stack of boxes top to bottom: VALIDAR (ESQUEMA) gate, then RUTA, CONTROLADOR, SERVICIO, MODELO, then a database cylinder POSTGRES. From MODELO a small callout shows a query SELECT ... WHERE id = $1 labelled PARAMETRIZADA. On the right, an upward arrow labelled RESPUESTA { success, data } returns to the top, and a box MANEJADOR DE ERRORES maps 23505 to 409 and 23503 to 400, labelled ERRORES SEGUROS. Small caption UN SOBRE, UNA RUTA DE ERROR. No logos, no people. All text labels in es. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\l5wsi\\en\\fig-04.source.png"
+}

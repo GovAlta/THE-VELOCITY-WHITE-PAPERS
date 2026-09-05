@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "es",
+  "slot": "fig-05",
+  "out_path": "public\\images\\k3tc3\\es\\fig-10-5.jpg",
+  "bytes_jpg": 183518,
+  "bytes_png_source": 2452016,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:02:16.954Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, under the heading TRAMPAS HABITUALES, a board with a few small moves marked by rust warning marks labelled CARRERA RÁPIDA, AUTOAPROBACIÓN, RÁFAGA DE TURNOS. An arrow leads to a single enforcement token labelled LA PARCA (heading APLICACIÓN), drawn as a simple iconographic hooded scythe motif in navy line work, not a realistic person, captioned EL SISTEMA QUE HACE CUMPLIR LAS REGLAS. DETECTA LAS TRAMPAS Y APLICA LAS CONSECUENCIAS SIN SESGO. From it, a heavy rust arrow points to a small score bar dropping sharply (heading CONSECUENCIA), labelled PUNTOS RETIRADOS, Y RETIRADOS DE NUEVO, with bar labels ANTES DE LA TRAMPA, TRAS LA DETECCIÓN, TRAS REINCIDIR and the note LAS PENALIZACIONES SE ACUMULAN. A caption reads HACER TRAMPA CUESTA MÁS DE LO QUE RINDE. Calm, architectural, legible labels. No logos, no realistic people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, under the heading TRAMPAS HABITUALES, a board with a few small moves marked by rust warning marks labelled CARRERA RÁPIDA, AUTOAPROBACIÓN, RÁFAGA DE TURNOS. An arrow leads to a single enforcement token labelled LA PARCA (heading APLICACIÓN), drawn as a simple iconographic hooded scythe motif in navy line work, not a realistic person, captioned EL SISTEMA QUE HACE CUMPLIR LAS REGLAS. DETECTA LAS TRAMPAS Y APLICA LAS CONSECUENCIAS SIN SESGO. From it, a heavy rust arrow points to a small score bar dropping sharply (heading CONSECUENCIA), labelled PUNTOS RETIRADOS, Y RETIRADOS DE NUEVO, with bar labels ANTES DE LA TRAMPA, TRAS LA DETECCIÓN, TRAS REINCIDIR and the note LAS PENALIZACIONES SE ACUMULAN. A caption reads HACER TRAMPA CUESTA MÁS DE LO QUE RINDE. Calm, architectural, legible labels. No logos, no realistic people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\k3tc3\\en\\fig-10-5.source.png"
+}

@@ -1,0 +1,42 @@
+{
+  "_note": "Living updates feed for one locale, newest first. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Actualizaciones continuas",
+    "title_lead": "Qué ha",
+    "title_em": "cambiado.",
+    "lede": "Nuevos hallazgos, nuevas versiones de código, nueva evidencia. Un ciclo de cuatro años. Lo más reciente primero.",
+    "empty": "No updates published yet.",
+    "kinds": {
+      "release": "Release",
+      "finding": "Finding",
+      "paper": "Paper",
+      "note": "Nota"
+    }
+  },
+  "entries": [
+    {
+      "id": "2026-07-06-launch",
+      "date": "2026-07-06",
+      "kind": "release",
+      "title": "Lanzamiento de los libros blancos Velocity",
+      "body": "Los libros blancos Velocity se lanzaron públicamente el 6 de julio, tras un lanzamiento preliminar con socios del sector el 16 de junio. La colección abre con 21 documentos y 7 repositorios públicos, totalmente bilingüe en inglés y francés. Cada documento es interactivo, con simulaciones narradas, imágenes originales, vídeo y audio; además, el compendio completo —tanto la redacción como el código que lo sustenta— es íntegramente de código abierto.",
+      "links": [
+        {
+          "label": "Explorar la colección",
+          "href": "/"
+        },
+        {
+          "label": "Explorar los repositorios",
+          "href": "/repos"
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    }
+  }
+}

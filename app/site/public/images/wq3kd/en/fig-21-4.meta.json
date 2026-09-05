@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-4.jpg",
+  "bytes_jpg": 106027,
+  "bytes_png_source": 2212644,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:41:26.067Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A simple flowchart: a single PDF icon on the left, an arrow labelled render every page leading to a neat stack of page images numbered 1, 2, 3, and a small note reading 200 DPI, one image per page.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A simple flowchart: a single PDF icon on the left, an arrow labelled render every page leading to a neat stack of page images numbered 1, 2, 3, and a small note reading 200 DPI, one image per page.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

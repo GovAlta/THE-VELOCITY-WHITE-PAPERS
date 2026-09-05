@@ -1,0 +1,17 @@
+{
+  "paper_id": null,
+  "locale": "fr",
+  "slot": "ad-hoc",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration of a clean, modern software factory: a calm assembly line where finished application panels move along and roll off the end as complete products, with a small calendar or dial motif shifting from a span of months down to a span of days to suggest a dramatic speed-up. A sense of disciplined, repeatable production rather than a chaotic workshop. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration of a clean, modern software factory: a calm assembly line where finished application panels move along and roll off the end as complete products, with a small calendar or dial motif shifting from a span of months down to a span of days to suggest a dramatic speed-up. A sense of disciplined, repeatable production rather than a chaotic workshop. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\rhx4t\\en\\hero.source.png",
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-24T01:31:42.710Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 137390,
+  "bytes_png_source": 2330608,
+  "generated_by": "gen-image.mjs"
+}

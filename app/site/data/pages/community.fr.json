@@ -1,0 +1,33 @@
+{
+  "_note": "Community channels and contribution paths for one locale. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Communauté",
+    "title_lead": "Où parler de",
+    "title_em": "tout ceci.",
+    "lede": "Écrivez-nous ou ouvrez un ticket public. La conversation sur la modernisation ne se tient pas en privé.",
+    "open": "Ouvrir →",
+    "soon": "À venir"
+  },
+  "channels": [
+    {
+      "id": "email",
+      "kind": "courriel",
+      "href": "mailto:TI.Velocity@gov.ab.ca",
+      "available": true,
+      "label": "TI.Velocity@gov.ab.ca",
+      "blurb": "La boîte de réception pour joindre directement l’équipe Vélocité. Questions, rétroaction, collaboration, ou demande d’échange sur l’adoption de cette approche dans votre organisation."
+    },
+    {
+      "id": "github-issues",
+      "kind": "issues",
+      "href": "https://github.com/GovAlta/the-velocity-white-papers/issues",
+      "available": true,
+      "label": "Tickets GitHub",
+      "blurb": "Rapports de bogues, corrections de contenu, révision de la traduction française, constats d’accessibilité. Public."
+    }
+  ],
+  "contributing": {
+    "title": "Contribuer",
+    "body": "Le site est sous licence MIT et le contenu est publié librement. Les pull requests sur le dépôt public sont bienvenues. Marche à suivre : ouvrir un ticket d’abord pour s’aligner sur la direction ; soumettre un PR ciblé et de taille raisonnable ; faire passer la suite d’évaluations ; citer les sources de toute nouvelle affirmation."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "yu5k9",
+  "locale": "fr",
+  "slot": "fig-04",
+  "out_path": "public\\images\\yu5k9\\fr\\fig-15-4.jpg",
+  "bytes_jpg": 102442,
+  "bytes_png_source": 2251861,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T08:09:56.019Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial line chart on warm cream paper, deep navy line work with small rust accents. Two lines run left to right over a time axis. The upper line, labelled \"DEMANDE\", rises steadily. The lower line, labelled \"TAILLE DE LA FONCTION PUBLIQUE\", stays flat. The widening gap between them is shaded lightly in rust and labelled \"L'IA COMBLE LA DIFFÉRENCE\". A small caption reads \"FAIRE PLUS AVEC MOINS\". Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial line chart on warm cream paper, deep navy line work with small rust accents. Two lines run left to right over a time axis. The upper line, labelled \"DEMANDE\", rises steadily. The lower line, labelled \"TAILLE DE LA FONCTION PUBLIQUE\", stays flat. The widening gap between them is shaded lightly in rust and labelled \"L'IA COMBLE LA DIFFÉRENCE\". A small caption reads \"FAIRE PLUS AVEC MOINS\". Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\yu5k9\\en\\fig-15-4.source.png"
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Red, Blue, Green, and Yellow Agents · The Velocity White Papers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="AI agents need clearly defined tools and methods to evaluate the quality of their work and that of existing code. Four quality assurance skillsets have been bundled inside the harness, each nicknamed for a colour. Green checks code quality and hygiene. Yellow checks the written copy for AI tells. Red probes a live application the way a threat actor would. Blue evaluates the code against international security standards while building sophisticated attack plans, known as kill chains, as a critical step toward remediation. These skills serve as mandatory checks and balances in the harness, driving consistency, compliance, and security without interrupting the development flow." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/en/paper/l199t/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/l199t/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/l199t/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/l199t/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/l199t/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Red, Blue, Green, and Yellow Agents" />
+  <meta property="og:description" content="AI agents need clearly defined tools and methods to evaluate the quality of their work and that of existing code. Four quality assurance skillsets have been bundled inside the harness, each nicknamed for a colour. Green checks code quality and hygiene. Yellow checks the written copy for AI tells. Red probes a live application the way a threat actor would. Blue evaluates the code against international security standards while building sophisticated attack plans, known as kill chains, as a critical step toward remediation. These skills serve as mandatory checks and balances in the harness, driving consistency, compliance, and security without interrupting the development flow." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/en/paper/l199t/" />
+  <meta property="og:site_name" content="The Velocity White Papers" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/l199t.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/l199t.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Red, Blue, Green, and Yellow Agents" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/l199t.jpg" />
+  <meta property="article:published_time" content="2026-06-16" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Red, Blue, Green, and Yellow Agents" />
+  <meta name="twitter:description" content="AI agents need clearly defined tools and methods to evaluate the quality of their work and that of existing code. Four quality assurance skillsets have been bundled inside the harness, each nicknamed for a colour. Green checks code quality and hygiene. Yellow checks the written copy for AI tells. Red probes a live application the way a threat actor would. Blue evaluates the code against international security standards while building sophisticated attack plans, known as kill chains, as a critical step toward remediation. These skills serve as mandatory checks and balances in the harness, driving consistency, compliance, and security without interrupting the development flow." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Red, Blue, Green, and Yellow Agents","description":"AI agents need clearly defined tools and methods to evaluate the quality of their work and that of existing code. Four quality assurance skillsets have been bundled inside the harness, each nicknamed for a colour. Green checks code quality and hygiene. Yellow checks the written copy for AI tells. Red probes a live application the way a threat actor would. Blue evaluates the code against international security standards while building sophisticated attack plans, known as kill chains, as a critical step toward remediation. These skills serve as mandatory checks and balances in the harness, driving consistency, compliance, and security without interrupting the development flow.","url":"https://thevelocitywhitepapers.com/en/paper/l199t/","inLanguage":"en-CA","author":[{"@type":"Person","name":"Ministry of Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Government of Alberta · Ministry of Technology and Innovation"},"datePublished":"2026-06-16","isPartOf":{"@type":"PublicationVolume","name":"The Velocity White Papers","url":"https://thevelocitywhitepapers.com/"},"keywords":"security, agents, harness, red-team, quality","image":"https://thevelocitywhitepapers.com/public/og/l199t.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../styles/base.css" />
+  <link rel="stylesheet" href="../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 07 · Technical</p>
+      <h1>Red, Blue, Green, and Yellow Agents</h1>
+      <p class="sub">Integrated skills and tools enable AI agents to successfully apply the rules and standards of government without sacrificing speed. </p>
+      <div class="abstract"><strong>Abstract.</strong> AI agents need clearly defined tools and methods to evaluate the quality of their work and that of existing code. Four quality assurance skillsets have been bundled inside the harness, each nicknamed for a colour. Green checks code quality and hygiene. Yellow checks the written copy for AI tells. Red probes a live application the way a threat actor would. Blue evaluates the code against international security standards while building sophisticated attack plans, known as kill chains, as a critical step toward remediation. These skills serve as mandatory checks and balances in the harness, driving consistency, compliance, and security without interrupting the development flow.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">The earlier papers in this series introduced opportunities for AI-driven software delivery to address the aging estate and rising cyber pressures. The papers also introduced several strategies on how to rebuild our digital government systems which will rely heavily on AI agents and human workers collaborating to build to a clear set of specifications. But as AI agents take on more of the technical work to accelerate delivery, how can we reliably check and trust their outputs? Who, or what, can check the quality and completeness of the products? Four review skills are bundled inside the Well-Built Harness which inspect every application for quality, consistency, and security. 
+
+
+## §01 Who checks the AI
+
+As previously noted, AI agents are unreliable witnesses of their own outputs. They speak with too much confidence in their recent work and frequently pronounce completion of a goal often without proof. Like any worker, they need feedback from someone with an outside perspective and a critical eye who will probe, critique, and evaluate. Quite simply, they need to be challenged.
+
+A human domain expert plays this role well, and together this pair can move through tough problems rapidly, challenging and testing each other&#39;s ideas. But sometimes, due to factors such as the task volume, speed, or how the agent is configured, that is not practical. One common scenario is when one person is operating dozens or hundreds of agents concurrently and cannot &#39;look over their shoulders&#39; so to speak. Often it is sufficient to have another AI agent perform this function. Although they may share the same foundational AI model, multiple AI agents can roleplay as different personas such as coder, solution architect, and cyber security specialist in their own kind of organizational hierarchy. The correct skills tell the agent how to perform these tasks faithfully and effectively. To gain true insights, they also need capable tools to find and present evidence of potential deficiencies, indicators which induce the agent to look deeper.  
+
+Extending the Well-Built Harness are four key skills which allow the AI agent to don the persona of an adversary or become a critic of its own work. Inspired by security and military defence drills, we created these agents as **red** and **blue** teams. In an adversarial environment, a red team serves as the attacker and antagonist. It challenges and identifies gaps, critiques and presents its findings. The blue team skill serves as the defender. Under both agents sit a small arsenal of deterministic (meaning logic-based) scripted checks which raise up potential issues through pattern matching. We subsequently expanded these skills to include &#39;green&#39; reconnaissance and &#39;yellow&#39; quality assurance agent skills. Each colour represents a separate agent which can look at the work from unique angles. A developer or the agent itself employs each agent throughout the development lifecycle process and at every milestone in the project. The agent further internalizes many of these skills in its active practice, meaning that they are being applied continually through the generative process.
+
+
+These four are split on purpose between mechanical and judgment work. Green and Yellow are fully deterministic: give them the same code and they return the same findings every time. Red&#39;s active reconnaissance is deterministic too but layers an executive step that uses Claude to plan how an attack would go and to interpret the results of its probing. Blue is mostly judgment, picking up the signals from the other three agent skills, and bringing the kind of wisdom and creative thinking a senior developer or cyber professional might bring. 
+
+The introduction of these skills caused an immediate and remarkable improvement in the quality of the AI coding posture by catching and correcting issues early and often. Applied within the context of a secure template, these skills allow the agent to automatically vet its work, to schedule checks to run periodically, and to develop the evidence needed to advance an application for production.
+
+
+## §02 Green: quality and hygiene
+
+Green performs a critical set of quick tests and passes its results onto the others. It runs first. It reads the code and reports the plain facts on critical insights. It checks dependencies against online sources to check which may carry known vulnerabilities. Whether a password or key has been committed into the source. Whether dangerous patterns are present. How much of the code the tests actually cover. It works in two rounds: the first reads the code without running it, the second runs any existing tests and watches what happens, including which parts of the code the tests never touch.
+
+Because Green is deterministic, the same code always produces the same findings. That is what makes it the evidence base every other agent builds on. It does not guess; it checks and counts. When it flags a file with almost no test coverage, or a secret sitting in the source, that finding is a fact rather than an opinion, and it can be checked the same way twice. It surfaces in seconds issues which can be proactively addressed throughout every step of the development process.
+
+
+## §03 Yellow: how the content reads
+
+Yellow reads the application content. Government software carries a lot of prose: documentation, the copy inside the user interface, release notes, marketing content, and the messages a citizen actually sees. When AI writes that prose it leaves &#39;tells&#39;, the turns of phrase that mark text as machine-made and quietly erode trust. These tells are often called &#39;AI smell&#39;. Yellow walks twelve rules across every piece of writing in the project and flags each tell with the offending line, a plain rewrite, and a short note on why it reads as a machine wrote it.
+
+These are the same rules that govern the papers you are reading now. Examples of this include the &#39;em dash&#39;, stock clichés, the overuse of negation such as &quot;it is not A, it is B&quot;, and excessively grand adjectives. These are all elements which undermine trust. If the public is going to read it, it should read like a person wrote it, and be clear, straightforward, and consumable. Humans are not immune to these patterns of writing, and so this skill keeps both parties from drifting into drivel.
+
+
+## §04 Red: the attacker
+
+Red is the attacker. It looks at a finished application the way an outsider with bad intentions would, from the outside in. It maps the domain and its subdomains, scans for open ports, checks the encryption and the security headers, and works out which technologies are in use. That reconnaissance applies industry standard methods for detecting potential issues, giving the tools for basic cyber hygiene to the agent to perform its own analysis. 
+
+Red does the part that used to need a specialist. It reasons over everything it finds and plans how it would break in, proposing concrete attack paths: slipping past a login, chaining a remote exploit, drawing data out a side door. In that planning step, the agent reviews the evidence and does the thinking. Red only ever runs against the government&#39;s own systems which have been authorized for testing. Its job is to find the hole before someone else does, and to hand the next agent a map of how an attack would actually unfold. 
+
+
+## §05 Blue: the defender
+
+Blue is the defender, and it runs last because it reads everything the others found. It builds a map of the application, classifies how sensitive each part is, and writes a threat model. Then it walks every requirement in the OWASP Level 2 Application Security Verification Standard, the international baseline for a serious web application, and records each one as pass, fail, or not applicable, with the evidence behind the call. It checks the same code against Alberta&#39;s cybersecurity architecture standard, folds Red&#39;s reconnaissance into a step-by-step picture of how an attack would play out, and writes security tests to validate that the attack surface has been minimized.
+
+Blue concludes by creating a comprehensive executive summary webpage with findings ranked by severity. It flags the standards met and missed, with a remediation plan that is actionable by the agent. 
+
+Major security controls built into the secure template ~95. The four review agents verify these and more. A complete pass runs over four hundred individual checks: 285 ASVS Level 2 requirements, 62 Alberta cloud-security rules, plus the Green, Yellow, and Red checks.
+
+Each one of these agents is useful on its own and may take a few seconds to nearly an hour to run in their entirety. Together they work cohesively as a system of checks and balances. The work is divided up across multiple sub agents and recombined at the end into a comprehensive insight. 
+
+
+A few important notes. These agents do not replace more comprehensive security management suites. They are not intended to. Instead, they provide early, frequent, and meaningful insights from the earliest stage of the development cycle, flagging hundreds of the most common issues and concerns which can impact system design decisions. It is important that these matters are addressed as early in the process as possible to prevent rework and delay down the line. Without a doubt, it is possible to build or buy a more comprehensive set of checks and balances. But applied frequently, these agentic skills do what most teams could never achieve, which is to place cybersecurity at the forefront of all coding and design decisions, and to provide meaningful security insights into the hands of both developers and laypeople. It might not make your code perfect, but using AI to operate these checks is a trivial investment of time and cost (literally pennies) to harden your application code rapidly. By the first meeting with your cyber team, you should be fully cyber compliant, aligned to best practices, with receipts in hand. Progressing to production should be a formality, and one which with the correct automation happens as part of the automated deploy process.
+
+
+In such a world, the non-technical Builder which we introduce in a later paper can effectively ideate using the harness, equipped with the skills, and move an idea into reality while being fully compliant to the latest cyber security and technical requirements.   
+
+
+## §06 A growing ecosystem of checks and balances
+
+These agents form a blueprint for effectively using reliable checks and balances to enable the AI agent and the human reviewer to flag critical and potentially catastrophic errors early and often. While they provide a capable and meaningful toolset, they should be viewed only as a starting point upon which to build. Using the same methods demonstrated above, additional skills and tools should be created for the agent to check accessibility, to verify its architectural alignment, to generate training materials, and to ensure the integrity of the whole application on its own or within a larger environment. Each of these domains have their own standards and ways of working which can be codified into reusable skills, raising the intelligence of the overall system.
+
+Growing your own skills requires research and a lot of trial and effort. Industry standards like OWASP, NIST, and ITSG are excellent starting points to gain grounded insights which can be transformed into agentic skills. In fact, if you work in any area where you are deploying agents where legal, regulatory, and compliance requirements matter, you can use custom skills to immediately flag and address gaps in your approach. Start by sourcing the ground truth materials that matter to you and then codifying them into markdown files. Ask the agent to employ these skills and observe where the outcomes meet your expectations and where it falls short. Then refine the instructions and the applications of these standards until you&#39;re satisfied it is performing at the level it needs to reliably resolve its own issues or proactively flag them for human review. This is a recursive process, and one we know well. Our entire educational system is grounded on such methods of sourcing truth, teaching, testing, providing feedback, and coaching toward excellence. 
+
+Without these skills, you are leaving the decisions of the AI to chance, relying on its undefined and probabilistic internal functions to do your job for you. While you gain speed, you lose fidelity and a firm understanding of how the work is happening. You cannot be accountable for processes which are not defined. The integrated skills become the standard operating procedures, the instruction manual, which defined what a good job looks like. As you work with AI, it is important to codify your own processes as additional skills which will save you significant time and increase the quality of your productions. Scaled out, your growing workforce of AI agents can follow in your footsteps, allowing you to perform your critical function as the human overseer and orchestrator. Scaled horizontally over a team, your insights raise the bar for the entire organization.
+
+
+With the harness and its review agents in place, we can now begin to build the environment that puts them to work on every build. The next papers introduce this AI factory, where applications are designed and specified, where agents build and test them under these same controls, and where the work is tracked and measured.
+
+
+## §07 Appendix A: Claude, the Agent SDK, and Google Enterprise Agent Platform
+
+The scripts and skills presented in this paper run as open-source code on the developer&#39;s machine. The deterministic agents, Green, Yellow, and Red&#39;s reconnaissance use Node JS and Python scripts which have their own dependencies but require no AI agents to run them. The parts of the process which require AI inference and judgement, such as Red&#39;s attack planner and Blue&#39;s whole assessment, are built with the Claude Agent SDK, which allows a Claude Code session to orchestrate a series of sub agents to perform the repeatable code analysis work for one or more applications. Using an API key on Google Enterprise Agent Platform, AWS Bedrock, or Azure AI Foundry, each sub agent can be monitored for cost and token throughput.
+
+These methods are not limited to a single AI model, and there may be some advantages to deploy different versions of this against various models to gain as wide a set of responses as possible. Different models will flag distinct insights which, in their aggregate, may address more security vulnerabilities. 
+
+
+Your skill files themselves can become vectors for attack. Used carelessly, and without proper audit or review, such agents can miss steps or even exfiltrate information. It is important to treat such agents as your organization&#39;s intellectual property and to maintain and enhance them continually as standards change. Unvetted third-party skills can also introduce malicious code which an AI may follow. Treat the supply chain of your agents and skills with the same care you would any other cyber or digital product.  
+
+
+## §08 Appendix B: the complete inventory of checks
+
+The full inventory of checks and controls are listed below. Every application starts from a secure template that builds in about ninety-five major security controls (see Anatomy of a Template). The four review agents verify that template and a great deal more. The complete pass runs more than four hundred individual checks. The largest share is the two standards walks: 285 OWASP ASVS Level 2 requirements and 62 Alberta cloud-security rules. View the tables below for a full inventory.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: security, agents, harness, red-team, quality</p>
+      <p><a href="/en/paper/l199t">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "en"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/en/paper/l199t"));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Técnico: El arnés anti-deriva · Los libros blancos Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="A medida que las aplicaciones crecen en complejidad, los cambios en una parte del código pueden provocar fallos en otras. Las modificaciones en una función del frontend pueden desincronizarse con la API, los controladores, la base de datos, el modelo de seguridad y la documentación técnica. Los agentes de IA no son suficientemente diligentes por sí solos para comprender o prevenir estos fallos. Cuando estos artefactos se desincronizаn, podemos decir que se produce una «deriva». Este documento conceptual explica el «arnés anti- deriva», un conjunto de ayudantes automatizados que detectan la deriva y señalan los problemas al agente constructor en tiempo real." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/es/paper/of1cj/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/of1cj/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/of1cj/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/of1cj/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/of1cj/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Técnico: El arnés anti-deriva" />
+  <meta property="og:description" content="A medida que las aplicaciones crecen en complejidad, los cambios en una parte del código pueden provocar fallos en otras. Las modificaciones en una función del frontend pueden desincronizarse con la API, los controladores, la base de datos, el modelo de seguridad y la documentación técnica. Los agentes de IA no son suficientemente diligentes por sí solos para comprender o prevenir estos fallos. Cuando estos artefactos se desincronizаn, podemos decir que se produce una «deriva». Este documento conceptual explica el «arnés anti- deriva», un conjunto de ayudantes automatizados que detectan la deriva y señalan los problemas al agente constructor en tiempo real." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/es/paper/of1cj/" />
+  <meta property="og:site_name" content="Los libros blancos Velocity" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/of1cj.es.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/of1cj.es.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Técnico: El arnés anti-deriva" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/of1cj.es.jpg" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Técnico: El arnés anti-deriva" />
+  <meta name="twitter:description" content="A medida que las aplicaciones crecen en complejidad, los cambios en una parte del código pueden provocar fallos en otras. Las modificaciones en una función del frontend pueden desincronizarse con la API, los controladores, la base de datos, el modelo de seguridad y la documentación técnica. Los agentes de IA no son suficientemente diligentes por sí solos para comprender o prevenir estos fallos. Cuando estos artefactos se desincronizаn, podemos decir que se produce una «deriva». Este documento conceptual explica el «arnés anti- deriva», un conjunto de ayudantes automatizados que detectan la deriva y señalan los problemas al agente constructor en tiempo real." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Técnico: El arnés anti-deriva","description":"A medida que las aplicaciones crecen en complejidad, los cambios en una parte del código pueden provocar fallos en otras. Las modificaciones en una función del frontend pueden desincronizarse con la API, los controladores, la base de datos, el modelo de seguridad y la documentación técnica. Los agentes de IA no son suficientemente diligentes por sí solos para comprender o prevenir estos fallos. Cuando estos artefactos se desincronizаn, podemos decir que se produce una «deriva». Este documento conceptual explica el «arnés anti- deriva», un conjunto de ayudantes automatizados que detectan la deriva y señalan los problemas al agente constructor en tiempo real.","url":"https://thevelocitywhitepapers.com/es/paper/of1cj/","inLanguage":"es","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Deputy Minister"},{"@type":"Person","name":"Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Gobierno de Alberta · Ministerio de Tecnología e Innovación"},"isPartOf":{"@type":"PublicationVolume","name":"Los libros blancos Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"anti-drift, harness, agents, quality, observability, change-management","image":"https://thevelocitywhitepapers.com/public/og/of1cj.es.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 18 · Technical</p>
+      <h1>Técnico: El arnés anti-deriva</h1>
+      <p class="sub">Cómo un conjunto de ayudantes automatizados mantiene en coherencia cada parte de una base de código en crecimiento mientras la IA la construye, explicado paso a paso.</p>
+      <div class="abstract"><strong>Abstract.</strong> A medida que las aplicaciones crecen en complejidad, los cambios en una parte del código pueden provocar fallos en otras. Las modificaciones en una función del frontend pueden desincronizarse con la API, los controladores, la base de datos, el modelo de seguridad y la documentación técnica. Los agentes de IA no son suficientemente diligentes por sí solos para comprender o prevenir estos fallos. Cuando estos artefactos se desincronizаn, podemos decir que se produce una «deriva». Este documento conceptual explica el «arnés anti- deriva», un conjunto de ayudantes automatizados que detectan la deriva y señalan los problemas al agente constructor en tiempo real.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Las aplicaciones de software modular están compuestas por funcionalidades que a menudo abarcan decenas de archivos. Estos componentes suelen funcionar como «cadenas» de piezas conectadas que atraviesan el requisito escrito, el diseño de la base de datos, la lógica del programa, las interfaces de usuario, la documentación y los recursos de capacitación. Cuando una IA modifica una pieza, ese componente puede desincronizarse fácilmente con el resto de la base de código. Aunque los cambios individuales pueden ser correctos, la integridad de la aplicación empieza a erosionarse con cada modificación sucesiva. Para resolver este problema, construimos un arnés que contiene varios ayudantes automatizados con el fin de garantizar que las aplicaciones se mantengan íntegras a lo largo de una serie de ediciones.
+
+
+## §01 El problema de la deriva
+
+Cuando se pide a la IA que implemente un cambio en un área determinada —como añadir un nuevo campo en un formulario—, el agente completará ese trabajo con rapidez. Sin embargo, puede que no compruebe el resto del código para ver qué más ha afectado ese cambio. Por ejemplo, si se añade un campo «Segundo nombre» a un formulario, esa información debe reflejarse en la base de datos, la lógica de negocio, la validación del formulario, la documentación e incluso en las capturas de pantalla utilizadas para la capacitación. Al estar centrado exclusivamente en la tarea encomendada, el agente de IA a menudo no realiza las verificaciones necesarias para garantizar que el código en su totalidad siga siendo coherente.
+
+Un usuario experimentado de IA hará pausas cada cierto número de pasos e indicará al agente que compruebe todo. El agente lo hará y, con frecuencia, encontrará inconsistencias introducidas. Estas inconsistencias se conocen como «regresiones» o «deriva» en el dominio de la IA. Aunque el agente puede detectar esta deriva cuando se le solicita, requiere diligencia por parte del usuario, que debe recordar preguntarlo. Confiar en que el usuario lo recuerde, o en que la IA realice las comprobaciones de la misma manera cada vez, es arriesgado. Por eso introducimos un conjunto común de procedimientos para detectar la deriva y señalarla al agente de forma proactiva, independientemente de si alguien lo recuerda.
+
+La deriva es fácil de pasar por alto. A menudo, el código modificado puede seguir funcionando. Lo que no es visible es el deterioro de la coherencia y la fidelidad de la aplicación. Además, esta deriva genera inconsistencias que empeoran con el tiempo. Si esa misma interfaz de usuario tiene un campo «Segundo nombre» pero la base de datos carece de él, este error puede no ser detectado de inmediato. Peor aún, el agente de IA revisará este código más adelante y puede encontrar la inconsistencia, pero sin una respuesta autoritativa que señale cuál archivo es el correcto. Los problemas comienzan a acumularse, y la IA puede incluso revertir un cambio porque detecta el error y lo atribuye de manera incorrecta. El código es en sí mismo un tipo de documentación, y cuando existen discrepancias, la deriva empeora de forma invisible.
+
+&quot;El código que produce una IA es típicamente correcto desde el punto de vista funcional en un 98 a 100 por ciento —es decir, compila y se ejecuta—. Sin embargo, sus prácticas hacen que la deriva crezca de forma invisible con el tiempo y que la base de código se fragmente con cada revisión.&quot;
+
+
+## §02 Una funcionalidad es una cadena
+
+El código de aplicaciones modernas aspira a ser «modular», es decir, los componentes se construyen una vez y se reutilizan las veces que sea necesario, y «DRY», sigla de «Don&#39;t Repeat Yourself» (No te repitas). Estas prácticas garantizan que el código se cree una sola vez y que las aplicaciones sean fáciles de mantener. Sin embargo, también implica que las funcionalidades suelen dividirse en piezas pequeñas e interconectadas. Cuando un archivo requiere de otro archivo, lo llamamos una dependencia. Las funcionalidades pueden entonces estar compuestas por «cadenas» de dependencias. Cuando la IA cambia un eslabón de esa cadena, con frecuencia actualiza de manera fiable el eslabón o los dos inmediatamente adyacentes, porque las dependencias son evidentes, y luego se detiene. Más tarde, cuando el trabajo se retoma en otro lugar, la IA puede leer una parte diferente de la cadena, ahora desactualizada, y construir sobre ella. La cadena se deteriora un poco más cada vez. Si se elimina un campo de la base de datos, por ejemplo, ese cambio debe propagarse a la pantalla, la documentación y las notas de capacitación. La mayoría de las veces, no lo hace.
+
+La deriva en las aplicaciones suele propagarse de dos maneras. Se propaga a lo largo de la cadena de una funcionalidad, eslabón por eslabón. También se propaga entre funcionalidades, cuando algo compartido —un componente renombrado o una biblioteca desactualizada— cambia en un lugar y silenciosamente causa fallos en otro. Un buen arnés detecta ambas situaciones, y las detecta mientras el trabajo está en curso, no en una limpieza meses después. Los siguientes siete controles contra la deriva proporcionan estrategias para identificar y mantener la integridad. Cada uno está construido a partir de partes pequeñas y reutilizables: archivos breves de instrucciones que sigue la IA (llamados habilidades), disparadores automáticos que se activan en momentos determinados (llamados ganchos) y verificaciones automatizadas rápidas (llamadas evaluaciones). Estos métodos trabajan junto al agente constructor y apoyan la auditoría del proceso de desarrollo.
+
+
+## §03 Control 1: Seguir el cambio (Recorredor de cadena)
+
+Esta primera función sigue el cambio hacia afuera a lo largo de la cadena de dependencias de una funcionalidad. En el momento en que la IA edita un archivo, el recorredor parte de ese archivo y avanza hacia sus vecinos en ambas direcciones: las piezas que lo alimentan y las piezas que dependen de él. En cada paso compara ambos extremos. ¿Coinciden los nombres, los campos, las promesas? Donde no coinciden, registra con exactitud qué ha dejado de estar alineado. Continúa recorriendo hasta una distancia establecida y produce un informe ordenado de lo que ha derivado. Su ventaja es el alcance: verifica toda la cadena en lugar de solo el eslabón o los dos adyacentes al cambio, y sus hallazgos son suficientemente específicos para que quien revise pueda ver con precisión qué ha dejado de ser coherente.
+
+
+## §04 Control 2: Registrar la actividad (Mapa de calor de huellas)
+
+Este método lleva un registro de dónde se está realizando el trabajo. Cada vez que la IA toca un archivo, añade un conteo. Un sencillo mapa de calor muestra el proyecto como una cuadrícula de celdas, con los archivos más activos iluminados con mayor intensidad y el cambio más reciente marcado. Por sí solo no detecta ninguna deriva. Lo que ofrece es un registro de dónde ha estado la actividad, para que los controles más avanzados sepan dónde buscar primero. Es económico, no requiere configuración y resulta útil desde el primer día.
+
+
+## §05 Control 3: Pruebas automáticas pequeñas (Evaluaciones de cadena)
+
+Este control realiza una prueba pequeña y automática para un tipo específico de discrepancia. ¿El diseño de la base de datos coincide con el script que la construye? ¿La interfaz publicada coincide con su documentación? Cada prueba lee ambos extremos e informa cualquier diferencia. Las pruebas residen junto al código y crecen con el proyecto: cuando aparece un nuevo tipo de enlace, se añade una prueba para él. Cada vez que la IA modifica un archivo, solo se ejecutan las pruebas que afectan a ese archivo. Son rápidas, dan la misma respuesta cada vez y, dado que el equipo las escribe, detectan exactamente los errores que este proyecto tiende a cometer.
+
+&quot;El vigilante contra la deriva nunca escribe la aplicación en sí. Observa las acciones del constructor, lee la evidencia que producen las verificaciones automáticas, la confirma con el código y decide si algo merece ser señalado. Es el control del tráfico aéreo, no el piloto.&quot; · El arnés anti-deriva, nota de diseño
+
+
+## §06 Control 4: Hacer que la nota de guardado cuente (Columna vertebral de confirmaciones)
+
+Los desarrolladores ya guardan su trabajo en lotes, cada uno con una nota breve que lo describe (una confirmación). Este enfoque hace que esa nota cumpla una doble función. La nota sigue una plantilla establecida que indica qué piezas tocó el cambio y qué piezas relacionadas fueron verificadas. Cuando el desarrollador archiva el lote, una verificación automática se asegura de que la nota esté completa antes de permitir que continúe, y la IA redacta la nota a partir de lo que realmente modificó. Dado que esto ocurre en el momento en que el trabajo se archiva, el registro es confiable, y con el tiempo el historial del proyecto se convierte en un registro consultable de qué cambió y qué se mantuvo en sincronía.
+
+
+## §07 Control 5: Una ficha por archivo (Manifiesto de dependencias)
+
+Este método asigna a cada archivo importante una pequeña ficha que lista qué lo alimenta y qué depende de él. La ficha se reconstruye cada vez que el archivo cambia, y una verificación rápida compara la ficha con el contenido real del archivo para detectar cualquier inconsistencia. Un pequeño diagrama muestra el archivo en el centro, con lo que fluye hacia él apilado arriba y lo que fluye desde él abajo, cada elemento marcado como saludable, desactualizado o roto. Como cada relación está escrita de forma clara, los demás controles pueden leer las fichas en lugar de releer todo el código.
+
+
+## §08 Control 6: Una lista de verificación al final de cada paso (Drift Sweep)
+
+Este control ejecuta automáticamente la lista de verificación de fin de paso, al término de cada etapa. Comprueba los aspectos evidentes: si la documentación coincide con la interfaz activa, si los campos de la base de datos aparecen donde corresponde, si las notas de capacitación describen las pantallas actuales. Genera un informe breve por cada paso. Si la divergencia es excesiva, puede detener la IA y exigir que se corrija antes de continuar. Se ejecuta una vez por paso y no en cada edición, por lo que su costo es predecible, y puede mantener el avance suspendido hasta que todo vuelva a estar en concordancia.
+
+
+## §09 Control 7: El panel compartido (Tile Board)
+
+Este es el panel de control para el ser humano y la IA. Representa el proyecto como una cuadrícula: las funcionalidades en un eje y los catorce vínculos en el otro, y colorea cada celda según lo que hayan detectado los demás controles. Es una página única que el equipo puede abrir para ver, de un vistazo, el estado de cada elemento. Además, puede mostrar los resultados de cualquiera de los otros enfoques sin modificarlos. La figura 17.7 lo muestra en funcionamiento en tiempo real: el constructor trabaja, el monitor anti-deriva recorre el proyecto y las notas marcadas se acumulan.
+
+
+## §10 Monitores paralelos
+
+Estos controles se incorporan al agente constructor. Un único agente de IA sobrecargado con todas las preocupaciones a la vez —derivación, seguridad, pruebas, documentación, estilo de escritura— se desborda, y sus instrucciones se expanden hasta dejar de ser útiles. El sistema anti-deriva aplica un enfoque de monitores o supervisores. El constructor mantiene su atención en construir. Los monitores se ejecutan de forma independiente, junto al proyecto, como agentes paralelos propios. Cada uno observa los archivos del proyecto, ejecuta sus propias verificaciones cuando algo cambia y deja una nota —un ticket— en una carpeta compartida para el constructor. El agente constructor lee esos tickets al inicio de su siguiente paso y los gestiona como cualquier otra tarea.
+
+Cada monitor puede ejecutarse según su propio calendario, e incluso con una IA menos costosa para las verificaciones rutinarias, reservando el modelo más potente para las decisiones más exigentes. Incorporar una nueva preocupación significa añadir un nuevo monitor, no acumular más trabajo sobre el constructor. La figura 17.7 ilustra esta idea a pequeña escala: el monitor anti-deriva observa, recorre el proyecto y deja notas mientras el constructor trabaja.
+
+
+## §11 Cómo combinarlos y qué sigue abierto
+
+Estos métodos son acumulativos y es posible que no necesite los siete. La combinación más sencilla y útil es el mapa de calor junto con el recorrido de fin de paso: uno muestra dónde se está trabajando y el otro ejecuta la lista de verificación en cada paso. Añada evaluaciones más rigurosas para reforzar el desarrollo y experimente con la ampliación de la cobertura mediante distintos controles de monitoreo.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: anti-drift, harness, agents, quality, observability, change-management</p>
+      <p><a href="/es/paper/of1cj">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "es"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/es/paper/of1cj"));
+    })();
+  </script>
+</body>
+</html>

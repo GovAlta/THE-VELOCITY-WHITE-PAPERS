@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-12",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-12.jpg",
+  "bytes_jpg": 154428,
+  "bytes_png_source": 2306404,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:48:03.946Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A three-step left-to-right diagram. Step one: a cluster of scattered web page and PDF icons under the label Public curriculum, built for people. Step two: an arrow labelled the pipeline leading into a tidy connected graph of nodes under the label AI-ready substrate, 50,000+ outcomes. Step three: an arrow to a small game-screen icon under the label Age of Alberta, built in an hour.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A three-step left-to-right diagram. Step one: a cluster of scattered web page and PDF icons under the label Public curriculum, built for people. Step two: an arrow labelled the pipeline leading into a tidy connected graph of nodes under the label AI-ready substrate, 50,000+ outcomes. Step three: an arrow to a small game-screen icon under the label Age of Alberta, built in an hour.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

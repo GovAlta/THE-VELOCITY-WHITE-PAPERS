@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "es",
+  "slot": "fig-08",
+  "out_path": "public\\images\\wq3kd\\es\\fig-21-8.jpg",
+  "bytes_jpg": 134641,
+  "bytes_png_source": 2297473,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:11:52.534Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.",
+  "image_prompt": "A flowchart: 1. CONSULTA DE BÚSQUEDA, a search box containing the phrase plazos de aprobación discrecional on the left; 2. an arrow labelled CONVERTIR EN UNA HUELLA to a fingerprint; 3. an arrow into a database cylinder labelled ÍNDICE DE SIMILITUD; 4. DEVOLVER RESULTADOS ORDENADOS (CON PUNTUACIÓN DE CERCANÍA), an arrow out to a short ranked list of result cards from different sources (Código municipal § 24-5.3, Directrices de la Comisión de Planificación, Manual de política de aprobaciones discrecionales), each with a closeness score such as 0,74, 0,71, 0,68. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.\n\nSubject: A flowchart: 1. CONSULTA DE BÚSQUEDA, a search box containing the phrase plazos de aprobación discrecional on the left; 2. an arrow labelled CONVERTIR EN UNA HUELLA to a fingerprint; 3. an arrow into a database cylinder labelled ÍNDICE DE SIMILITUD; 4. DEVOLVER RESULTADOS ORDENADOS (CON PUNTUACIÓN DE CERCANÍA), an arrow out to a short ranked list of result cards from different sources (Código municipal § 24-5.3, Directrices de la Comisión de Planificación, Manual de política de aprobaciones discrecionales), each with a closeness score such as 0,74, 0,71, 0,68. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-8.source.png"
+}

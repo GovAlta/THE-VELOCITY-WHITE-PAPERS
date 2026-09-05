@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\l5wsi\\fr\\fig-03.jpg",
+  "bytes_jpg": 123396,
+  "bytes_png_source": 2234775,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T08:15:01.337Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Top: « SERVEUR » box issues a CSRF token along two arrows: one labelled « TÉMOIN httpOnly csrf_token » going to a « NAVIGATEUR » box, one labelled « JETON DANS LE CORPS JSON » going to a « CLIENT (EN MÉMOIRE) » box. Bottom: on a « REQUÊTE D'ÉCRITURE » the client sends « EN-TÊTE X-CSRF-TOKEN » plus the « TÉMOIN » into a diamond labelled « COMPARAISON À TEMPS CONSTANT », with two outputs « CORRESPOND » then « AUTORISE », and « DIFFÈRE » then « 403 ». A small caption reads « DOUBLE SOUMISSION, SÛR PAR DÉFAUT ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Top: « SERVEUR » box issues a CSRF token along two arrows: one labelled « TÉMOIN httpOnly csrf_token » going to a « NAVIGATEUR » box, one labelled « JETON DANS LE CORPS JSON » going to a « CLIENT (EN MÉMOIRE) » box. Bottom: on a « REQUÊTE D'ÉCRITURE » the client sends « EN-TÊTE X-CSRF-TOKEN » plus the « TÉMOIN » into a diamond labelled « COMPARAISON À TEMPS CONSTANT », with two outputs « CORRESPOND » then « AUTORISE », and « DIFFÈRE » then « 403 ». A small caption reads « DOUBLE SOUMISSION, SÛR PAR DÉFAUT ». No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\l5wsi\\en\\fig-03.source.png"
+}

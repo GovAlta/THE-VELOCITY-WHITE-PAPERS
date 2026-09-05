@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Establishing a Builder Culture · The Velocity White Papers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Governments across Canada are moving toward centralized IT delivery to drive efficiency and economies of scale. This model provides savings of tens of millions of dollars but also introduces the potential for a bottleneck in delivery if teams cannot keep up with the demands of each ministry. Agentic AI opens a third option: keep core functions of cybersecurity, identity, networking, and data central and open the building of solutions back out to the people who know the work. This paper sets out how to enable a builder culture, where domain experts can create their own governed and audited systems and avoid non-compliant shadow IT and AI implementations." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/en/paper/oxj36/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/oxj36/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/oxj36/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/oxj36/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/oxj36/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Establishing a Builder Culture" />
+  <meta property="og:description" content="Governments across Canada are moving toward centralized IT delivery to drive efficiency and economies of scale. This model provides savings of tens of millions of dollars but also introduces the potential for a bottleneck in delivery if teams cannot keep up with the demands of each ministry. Agentic AI opens a third option: keep core functions of cybersecurity, identity, networking, and data central and open the building of solutions back out to the people who know the work. This paper sets out how to enable a builder culture, where domain experts can create their own governed and audited systems and avoid non-compliant shadow IT and AI implementations." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/en/paper/oxj36/" />
+  <meta property="og:site_name" content="The Velocity White Papers" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/oxj36.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/oxj36.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Establishing a Builder Culture" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/oxj36.jpg" />
+  <meta property="article:section" content="Policy &amp; People" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Establishing a Builder Culture" />
+  <meta name="twitter:description" content="Governments across Canada are moving toward centralized IT delivery to drive efficiency and economies of scale. This model provides savings of tens of millions of dollars but also introduces the potential for a bottleneck in delivery if teams cannot keep up with the demands of each ministry. Agentic AI opens a third option: keep core functions of cybersecurity, identity, networking, and data central and open the building of solutions back out to the people who know the work. This paper sets out how to enable a builder culture, where domain experts can create their own governed and audited systems and avoid non-compliant shadow IT and AI implementations." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Establishing a Builder Culture","description":"Governments across Canada are moving toward centralized IT delivery to drive efficiency and economies of scale. This model provides savings of tens of millions of dollars but also introduces the potential for a bottleneck in delivery if teams cannot keep up with the demands of each ministry. Agentic AI opens a third option: keep core functions of cybersecurity, identity, networking, and data central and open the building of solutions back out to the people who know the work. This paper sets out how to enable a builder culture, where domain experts can create their own governed and audited systems and avoid non-compliant shadow IT and AI implementations.","url":"https://thevelocitywhitepapers.com/en/paper/oxj36/","inLanguage":"en-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Deputy Minister"},{"@type":"Person","name":"Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Government of Alberta · Ministry of Technology and Innovation"},"isPartOf":{"@type":"PublicationVolume","name":"The Velocity White Papers","url":"https://thevelocitywhitepapers.com/"},"keywords":"builder-culture, democratization, governance, agents, shadow-it, operating-model, change-management","image":"https://thevelocitywhitepapers.com/public/og/oxj36.jpg","about":"Policy & People"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 14 · Policy &amp; People</p>
+      <h1>Establishing a Builder Culture</h1>
+      <p class="sub">How agentic AI democratizes the building of government systems, while the fortress stays central.</p>
+      <div class="abstract"><strong>Abstract.</strong> Governments across Canada are moving toward centralized IT delivery to drive efficiency and economies of scale. This model provides savings of tens of millions of dollars but also introduces the potential for a bottleneck in delivery if teams cannot keep up with the demands of each ministry. Agentic AI opens a third option: keep core functions of cybersecurity, identity, networking, and data central and open the building of solutions back out to the people who know the work. This paper sets out how to enable a builder culture, where domain experts can create their own governed and audited systems and avoid non-compliant shadow IT and AI implementations.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Every few years, governments change their mind about how to deliver technology. They centralize until the bottlenecks become intolerable, then decentralize until the duplication and the sprawl become unsustainable. Alberta, and other governments in Canada including the federal government, run a shared services IT delivery model. This model offers a range of benefits, including economies of scale, skills alignment, stronger cyber security, and common platform standards. But pressure remains for teams across the government to innovate, and &#39;shadow IT&#39; frequently emerges as teams with great ideas are eager to contribute to driving solutions. And with AI emerging, non-technical teams can often drive the most innovative solutions through their deep understanding of the business opportunity in their organization. How can we safely enable that creativity in a way that prevents government from falling into the sins of the past, with unchecked technical sprawl, technical divergence, and runaway costs? Standards-driven development built on AI harnesses, the AI Factory, and common skills creates the opportunity for laypeople to innovate with AI rapidly and securely. When we give those innovators a safe way to build, we create a strong builder culture.
+
+
+## §01 The pendulum governments keep swinging
+
+Centralization and decentralization each solve the other&#39;s problem. A central IT function buys economy of scale and a consistent method, and it cleans up the accumulated flaws that emerge when many teams are each doing things their own way. The price of centralization is the delivery bottleneck, the queue every ministry waits in. Decentralization buys autonomy and flexibility, and its price is duplication, uneven security, and the loss of every economy of scale. Neither stays right for long, which is why governments frequently alternate, trading one set of problems for the other.
+
+Alberta began planning the consolidation of its IT function in 2016, formalized it closer to 2019, and in 2022 created the Ministry of Technology and Innovation, joining the government&#39;s central IT mandate to economic development mandates, including Alberta Innovates. Today this Ministry serves as the common IT backbone for the whole of government (healthcare IT aside). Alberta runs one of the leanest IT organizations relative to the size of government in Canada, and there have been numerous and significant payoffs as the department continues to do more for less. But this introduces the dreaded IT bottleneck, where high-priority activities, government mandates, and legislative changes dominate nearly all capacity. So how can you let ministries explore and build, while keeping the castle-and-fortress protection that government requires, standing firm against runaway costs and the rising cyber threat? AI introduces an enticing third option: a hybrid, AI-first delivery model that enables the creative builders present in each organization without sacrificing quality, privacy, and security.
+
+Saved by scale Tens of $M. Recent savings from a single estate and hard supplier negotiation, the benefit centralization is meant to deliver, and a reason the protective core stays central.
+
+
+## §02 A third model
+
+Artificial intelligence introduces a third option the old pendulum never offered. Delivery itself can be augmented by AI, which lets the work split cleanly in two. The functions that must stay uniform to keep government safe, cybersecurity, identity and access, networking, databases, licensing, operating systems, telephony, and end-user compute, remain central. The central gateways that allow agents to access systems, and the policies that control that access, become a dependable assurance layer that maintains and meets every privacy and information management policy. However, the act of building value-added insights, interactions, and experiences through custom agents and lightweight applications opens back up to the business users within ministries. A ministry with no IT department of its own can use the platforms built for the AI Factory, such as Pronghorn, Nexus, and Velocity, to design, run, and measure its own solutions safely. Quality assurance is assisted through common skills and templates. Deploying to production can be gated, with strong checks and balances ensuring that only quality code and solutions go forward.
+
+What a ministry builds need not be an application in the old sense. Increasingly, all that ministry teams need are well-configured agents with sufficient access. The team may need an agentic workflow, an autonomous agent with delegated access wired into the Microsoft 365 or Google environment. On a user&#39;s behalf, the agent can read the documentation, safely retrieve data, or even present a user experience that exists only as a temporary interface for a brief period and then can safely disappear. The pattern is similar to business intelligence dashboards, where giving non-technical staff direct access to their own data through Power BI or Tableau produced real operational insight. The agentic era reaches much further than mere insights, as the tools can now build complex, sophisticated interactions, workflows, analysis, and reports, where before they only drew the charts.
+
+
+## §03 What makes it safe to build
+
+Before enabling a builder culture, we must put two critical elements in place. The first is delegated access. Through an agent gateway governed by identity and access management, a public servant can lend their own permissions to an agent: their email, calendar, and Teams, the 1GX ERP, ServiceNow, SharePoint, the open web, and the bespoke systems of their ministry. An agent acting on that delegation can do anything an existing user or application could, without a line of new code, and only ever within the access the person already holds through Entra ID or other identity access products. Provide the gateway and the identity controls, and a ministry can build its own solutions on top of the government&#39;s API and data layers.
+
+The second is specification-driven development. A non-technical specialist can describe a system they imagine, its interface, its workflows, and its controls, and have it built today by &#39;vibe-coding&#39; it. While visually attractive, such prototypes are typically flawed and difficult to actually move into production. Instead of third-party tools like Lovable, a ministry can use the governed tools and the well-built harness, then pass the result back to Technology and Innovation through automated checks. The gates that traditionally keep an application out of production, the red and blue security agents, information management, and proper identity and access management, can be cleared by a non-technical builder when the controls of the AI factory are enforced. Quality control becomes something the system verifies, not something only a central team can perform.
+
+
+## §04 From centralizing delivery to centralizing governance
+
+This shifts the center&#39;s job. In this future model, a centralized IT function like Technology and Innovation may stop being the place where all software is delivered and become the place where all software is enabled and governed. An audit-based control plane watches the estate: an agent is assigned to every application, reading every log, surfacing issues earlier and remediating or blocking them as they appear. All standards controls, across hundreds of metrics, are enforced. The risk of an agent running amok, or of a careless build reaching production, falls below the current risk of shadow IT delivery.
+
+Yet proliferation can also cause future technical debt. When the cost of a new application falls far enough, the estate can swell from 1,400 systems to fourteen thousand or a hundred and forty thousand, and a new kind of technical debt sets in. Alberta already knows the shape of this. The government carries no fewer than 18,000 SharePoint sites, some with little value and none easy to retire; when the on-premises platform reached end of life, it cost millions to migrate their contents, because cleaning them up first was harder than carrying them forward. We are poor at going back to tidy data, and poorer still at tagging it well to begin with.
+
+The same automation that creates the sprawl can clear it. Picture agents that index every file as it is written and dispose of it by rule, so a document left in a folder, and in time the folder and the site around it, simply ages out under an automated policy. A forest works this way. A fallen tree would pile up forever if nothing consumed it, until the ground was nothing but trunks; instead bacteria break the fibers down over years and return them to the soil, and growth and decay hold a rough balance. An estate of systems can be built to the same balance, with disposition rules tightened by weeks or months whenever growth runs ahead of cost. The deeper fix, moving how data is classified away from rigid folders and toward metadata, belongs to a separate discussion of intelligent digital systems; here it is enough that creation and removal can be brought back into step.
+
+The sprawl to design against 18,000. SharePoint sites the government already carries, most of little value and none easy to retire. When a new application costs almost nothing to make, unmanaged growth is the failure mode to plan for.
+
+&quot;Our mode shifts from centralizing IT delivery to centralizing IT governance. AI enables a builder culture where staff creativity can be linked with best practices through quality-assured, standards-driven development practices.&quot; · Janak Alford, Deputy Minister, Ministry of Technology and Innovation
+
+
+## §05 The builder
+
+A builder culture is the deliberate enablement of non-technical people to create solutions and keep them in the hands of the people who use them. It extends the third level of the Alberta AI Academy, where staff learn to drive Pronghorn, Nexus, and Velocity to build to an enterprise standard. Give those graduates a governed way to deploy and monitor what they build, with security and privacy woven into the tools and audited through production. When this is done well, there is little reason left to forbid a non-technical specialist from building their own application. The technical bottleneck that defined the old model begins to disappear.
+
+For decades, software was a kind of mystical art, too complex to approach without a degree and years of practice, and so the right to build was held by a few. It is worth asking who that serves in the AI era. No one benefits from a world in which only the finance branch is allowed a spreadsheet. A current frontier model is already a stronger full-stack developer, database administrator, and security specialist in one than any single person. People in aggregate are more creative, and a named specialist still outperforms the model within their own domain, yet few individuals hold all of those skills at once the way the model does. With proper constraints, described previously, IT can delegate its processes into the hands of AI to support a layperson&#39;s exploration of systems, data, and new solutions. The task now is to put the tool within reach of every team.
+
+Equipped with training and an understanding of the capabilities and limitations of AI, everyday users can become builders. The builder in this sense is a person with deep knowledge of a domain, finance, public safety, wildfire, or agriculture, who sees a problem that technology could solve and is given a safe place to experiment and develop custom solutions with AI. Given the speed of AI, they often need little to no project funding, incur no measurable cost beyond the tokens they spend, and generate good ideas and solutions that pay for themselves quickly in time saved and waste eliminated.
+
+Following the principles set out in a clear training program like the Academy paper, we gain a stronger security posture, faster delivery, and real cost containment while opening the creative work back to the specialists who understand the problem best.
+
+
+## §06 The inevitable model, or shadow IT
+
+Some version of this is coming whether or not it is sanctioned. If central IT cannot deliver at the speed ministries need, AI becomes the fastest available way to build, and it will be used, with none of the controls described here. Vibe-coded applications will appear outside the fence, exposing government, and they will be blamed on the technology. The danger is a misattribution: the models are highly capable, and most of the risk lies in how people use them, without the security, privacy, and data discipline that safe use requires. A backlash against AI built on that confusion would be aimed at the wrong target.
+
+The low cost of AI tools, their enormous capability, and the needs of a business team make it trivial for shadow IT, or shadow AI, to emerge in an organization. Standards and policies matter, but humans have demonstrated a willingness to trade speed and capability for risk, and shadow AI tools, subscriptions, and solutions are already here, whether organizations wish to admit it or not. Instead of limiting access, every shared service organization has a responsibility to make the sanctioned version, with the right controls, so easy, so fast, and so smooth that users move naturally into the right way of doing things. If people are as water, as the saying goes, we need to remove the blockers and let the creativity flow, while providing the secure channels to do so.
+
+Ungoverned shadow AI will open new threat vectors that we have not yet imagined. That same speed can easily be turned against governments, growing our cyber risk. Exposed solutions, or exposed datasets, become a new sort of technical debt and risk, and will open new issues. A well-supported public service, trained on the correct use of these tools through the AI Academy, and given the controls necessary to safeguard, but not inhibit, their forward velocity, will allow us to build new capabilities while also sunsetting legacy systems that offer less value than the exposure they carry. Extending the academy into a builder culture is how Alberta means to keep velocity high and cost contained while keeping the building inside the fence, where the controls can keep the fortress safe.
+
+
+## §07 A consultancy model, and an invitation
+
+The likely shape of this is a consultancy model in place of a delivery one. AI does the implementing. Technology and Innovation provides the fortress, the governance of technology, the management of vendors, and the controls, and it works alongside ministries as a consultancy: helping design solutions and architectures, finding novel uses for the models, and overseeing how the newest models enter the environment safely. The creativity comes from the ministry partners who know the work; the center keeps it sound.
+
+With a strong internal consultancy model, Technology and Innovation staff can guide the development of AI systems through coaching, consulting, and co-design, while the AI agents themselves, and their properly constructed and curated standards, skills, and templates, make it safe and consistent. This will enable our business partners, who possess the deep domain knowledge, to move quickly and to solve some of the decades-long challenges facing their teams, or to introduce new capabilities that were always out of reach due to cost, priority, or capacity.
+
+This fits the decentralized hybrid model Alberta is already adopting elsewhere, governance held at the center with delivery on the spokes, in how the province handles data and procurement, and it is reasonable to expect AI to let us enable technical delivery in a similar way. We anticipate piloting early access into this &#39;builder culture&#39; mode of doing things in 2026, and we will publish what we learn. Ministry partners who want to explore it with us, and other governments weighing the same shift, are warmly invited to take part.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: builder-culture, democratization, governance, agents, shadow-it, operating-model, change-management</p>
+      <p><a href="/en/paper/oxj36">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "en"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/en/paper/oxj36"));
+    })();
+  </script>
+</body>
+</html>

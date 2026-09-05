@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-13",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-13.jpg",
+  "bytes_jpg": 144228,
+  "bytes_png_source": 2173830,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T04:08:31.735Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un diagramme radial : au centre un bloc plein étiqueté Substrat prêt pour l’IA, construit une fois; rayonnant vers l’extérieur, plusieurs petites icônes d’application chacune étiquetée d’un usage différent comme étalonnage de la paperasse, jeu d’apprentissage, recherche de politiques, étude de marché, vérification de conformité. Une légende indique Construisez le substrat une fois, construisez de nombreux outils par-dessus.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un diagramme radial : au centre un bloc plein étiqueté Substrat prêt pour l’IA, construit une fois; rayonnant vers l’extérieur, plusieurs petites icônes d’application chacune étiquetée d’un usage différent comme étalonnage de la paperasse, jeu d’apprentissage, recherche de politiques, étude de marché, vérification de conformité. Une légende indique Construisez le substrat une fois, construisez de nombreux outils par-dessus.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-13.source.png"
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-11",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-11.jpg",
+  "bytes_jpg": 197773,
+  "bytes_png_source": 1806750,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:47:14.276Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A diagram in two parts. On the left, a single card labelled One Alberta section with a fan of arrows reaching ten small cards labelled peer jurisdictions, each with a score, and the arrows pass through a four-stripe funnel labelled four red-tape lenses, producing a card labelled finding. On the right, a heat-map grid with rows labelled as parts of an act and columns labelled as jurisdictions, the cells shaded from light to dark.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A diagram in two parts. On the left, a single card labelled One Alberta section with a fan of arrows reaching ten small cards labelled peer jurisdictions, each with a score, and the arrows pass through a four-stripe funnel labelled four red-tape lenses, producing a card labelled finding. On the right, a heat-map grid with rows labelled as parts of an act and columns labelled as jurisdictions, the cells shaded from light to dark.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

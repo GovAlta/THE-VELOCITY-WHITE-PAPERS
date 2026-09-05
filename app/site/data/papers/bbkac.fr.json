@@ -1,0 +1,685 @@
+{
+  "id": "bbkac",
+  "num": "03",
+  "sequence": "3 sur 22",
+  "tier": "Technical",
+  "title": "Git Insights",
+  "subtitle": "Nous avons utilisé l’IA pour analyser l’ensemble du parc de code du gouvernement de l’Alberta afin d’en établir une vision précise de la réalité. Voici comment cette démarche fonctionne et ce qu’elle a permis de révéler.",
+  "track": "Defining the Problem",
+  "authors": [
+    "Janak Alford",
+    "Ministère de la Technologie et de l’Innovation"
+  ],
+  "published": "2026-06-16",
+  "reading_min": 18,
+  "status": "Published",
+  "tags": [
+    "git-insights",
+    "code-analysis",
+    "agents",
+    "technical-debt",
+    "cybersecurity"
+  ],
+  "repo": "https://github.com/GovAlta/GIT-INSIGHTS",
+  "abstract": "L’Alberta stocke son code dans GitHub Enterprise, mais avec le temps, cet environnement est devenu désorganisé : des prototypes se retrouvaient mêlés aux systèmes en production, sans lien clair entre les ensembles de données. La haute direction n’avait pas de vision précise de ce qui était réellement exploité ni de l’état des systèmes. Pour répondre à ce manque, Git Insights a été développé : un outil basé sur des agents d’IA capable de parcourir l’ensemble du parc de code et d’en dresser un état fidèle. Environ cinquante agents ont analysé 466 millions de lignes de code en une vingtaine d’heures, permettant de cartographier l’écosystème numérique et les capacités du gouvernement. Ce document explique le problème, détaille le fonctionnement de l’outil et présente les principales découvertes, comme la diversité réelle des langages et des technologies utilisés, l’absence de tests ou de documentation dans plusieurs dépôts, certaines pratiques de développement qui affaiblissent la sécurité, ainsi qu’un premier point de comparaison concret entre les performances de l’IA et celles des humains sur le code gouvernemental.",
+  "hero_image": {
+    "src": "public/images/bbkac/fr/hero.jpg",
+    "alt": "Un cartographe-éclaireur dressant la carte d’un vaste territoire tentaculaire de dépôts de code depuis un point d’observation élevé.",
+    "image_prompt": "An editorial illustration of a lone scout or cartographer on a high ridge, mapping a vast sprawling territory below made of thousands of small buildings and repositories stretching to the horizon, drawing the true map for the first time. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/bbkac.mp3",
+    "duration_sec": 1148
+  },
+  "tldr_presentation": {
+    "id": "bbkac-tldr",
+    "title": "Le document, en bref",
+    "locale": "fr",
+    "owner_id": "bbkac",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Git Insights",
+        "audio_file": "public/audio/fr/bbkac-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Document 3 · Git Insights",
+        "subcaption": "La vérité de terrain pour l’ensemble du parc.",
+        "text": "Git Insights. Le parc de code de l’Alberta avait dégénéré en un bourbier où les prototypes côtoyaient la production, et personne ne pouvait obtenir de réponse définitive sur ce que nous exploitons ni sur son état de santé. Nous avons donc bâti un éclaireur : un outil agentique qui lit chaque dépôt et rend compte de la vérité de terrain."
+      },
+      {
+        "id": "02",
+        "title": "466 millions de lignes, en une vingtaine d’heures",
+        "audio_file": "public/audio/fr/bbkac-tldr/02.mp3",
+        "visual": "stat",
+        "caption": "Le balayage",
+        "visual_config": {
+          "stat_value": "466 M de lignes",
+          "stat_label": "Lues par une cinquantaine d’agents en une vingtaine d’heures"
+        },
+        "subcaption": "Un balayage de l’ensemble du parc qu’aucun mandat de consultants n’aurait pu égaler en temps ni en coût.",
+        "text": "Le balayage. Une cinquantaine d’agents ont lu quatre cent soixante-six millions de lignes de code à travers l’ensemble du parc en une vingtaine d’heures, un balayage qu’aucun mandat de consultants n’aurait pu égaler en temps ni en coût."
+      },
+      {
+        "id": "03",
+        "title": "Deux paliers : déterministe, puis probabiliste",
+        "audio_file": "public/audio/fr/bbkac-tldr/03.mp3",
+        "visual": "compare",
+        "caption": "Comment cela fonctionne, et pourquoi on peut s’y fier",
+        "visual_config": {
+          "left": {
+            "label": "Code déterministe",
+            "body": "Dresse la liste des fichiers et repère les motifs reconnus comme mauvais. Exact, et incapable d’inventer un résultat."
+          },
+          "right": {
+            "label": "Jugement de l’IA",
+            "body": "Évalue la santé et explique chaque problème, et doit pointer le fichier et la ligne exacts."
+          }
+        },
+        "text": "Comment cela fonctionne, en deux paliers. Le travail exact et dénombrable, dresser la liste des fichiers et repérer les motifs reconnus comme mauvais, est accompli par du code ordinaire incapable d’inventer un résultat. On ne demande à l’IA que du jugement, et lorsqu’elle signale un problème, elle doit nommer le fichier et la ligne exacts, de sorte que chaque affirmation puisse être vérifiée par rapport au code réel."
+      },
+      {
+        "id": "04",
+        "title": "Ce qu’il a découvert",
+        "audio_file": "public/audio/fr/bbkac-tldr/04.mp3",
+        "visual": "list",
+        "caption": "Le parc, mesuré",
+        "visual_config": {
+          "items": [
+            {
+              "label": "73,9 % n’avaient aucun pipeline CI/CD",
+              "desc": "Aucun moyen automatisé de bâtir et de déployer le code."
+            },
+            {
+              "label": "49,6 % n’avaient aucun test automatisé",
+              "desc": "La moitié du parc ne pouvait être modifiée en toute sécurité."
+            },
+            {
+              "label": "39,2 % n’avaient aucune documentation",
+              "desc": "Les 1 280 README manquants ont alors été rédigés par les agents."
+            }
+          ]
+        },
+        "text": "Ce qu’il a découvert. Près des trois quarts des dépôts n’avaient aucun pipeline de construction automatisé, la moitié n’avait aucun test, et un tiers n’avait aucune documentation, que les agents ont alors rédigée."
+      },
+      {
+        "id": "05",
+        "title": "Le tout premier point de référence du genre",
+        "audio_file": "public/audio/fr/bbkac-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "Le travail humain, mesuré à grande échelle",
+        "visual_config": {
+          "stat_value": "948 571",
+          "stat_label": "Validations mesurées, auprès de 8 178 contributeurs sur 8 ans"
+        },
+        "subcaption": "Aucune analyse du travail logiciel humain à cette échelle n’avait été réalisée auparavant.",
+        "text": "Et une première. Nous avons mesuré le travail réel de plus de huit mille personnes sur huit ans, près d’un million de validations à travers trois mille quatre cents dépôts. Aucune analyse du travail logiciel humain à cette échelle n’avait été réalisée auparavant. C’est le point de référence à partir duquel nous pouvons désormais comparer l’IA, avec certitude plutôt qu’avec l’intuition."
+      },
+      {
+        "id": "06",
+        "title": "Ce qui s’en vient",
+        "audio_file": "public/audio/fr/bbkac-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Du parc au ministère",
+        "subcaption": "Connaître le parc n’est qu’un début. Vient ensuite la reconstruction à l’échelle du ministère.",
+        "text": "Connaître le parc n’est qu’un début. Le prochain document élève Git Insights d’un cran, à l’échelle du ministère, où des centaines de systèmes qui se chevauchent sont lus ensemble et regroupés en un ensemble plus restreint de capacités modernes et reconstruites, assorties d’un plan chiffré."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Les données que nous ne pouvions pas voir"
+    },
+    {
+      "n": "02",
+      "title": "Bâtir un éclaireur"
+    },
+    {
+      "n": "03",
+      "title": "Comment fonctionne Git Insights"
+    },
+    {
+      "n": "04",
+      "title": "À quoi ressemblait réellement le parc"
+    },
+    {
+      "n": "05",
+      "title": "Nous mesurer nous-mêmes"
+    },
+    {
+      "n": "06",
+      "title": "Humain + IA : partenariat"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Comme dans bien des grandes organisations, GitHub Enterprise est la plateforme principale pour gérer le code. Elle offre déjà des outils puissants d’analyse, comme CodeQL pour l’examen du code, ainsi que des intégrations avec NPM et Maven pour détecter les vulnérabilités dans les dépendances. Les secrets sont automatiquement repérés et bloqués, et l’équipe de cybersécurité dispose de mécanismes de contrôle intégrés. Toutefois, ces outils reposent surtout sur des règles fixes, ce qui entraîne un nombre élevé de faux positifs. Surtout, ils ne couvrent pas des éléments essentiels comme l’absence de documentation, de processus automatisés de déploiement ou de tests unitaires. Enfin, ils ne permettent pas d’obtenir une vue d’ensemble fiable de la santé globale des systèmes. Pour comprendre réellement l’état de la technologie gouvernementale, il fallait donc aller plus loin et analyser le code en profondeur."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Les données que nous ne pouvions pas voir"
+    },
+    {
+      "type": "paragraph",
+      "text": "Reconstituer une vue d’ensemble d’une grande organisation peut être très difficile. Dans leur état actuel, nos principaux systèmes officiels ne pouvaient pas être reliés entre eux. Les informations sur les dépendances provenant de GitHub n’étaient pas intégrées à notre base de données de gestion des configurations. Cette base, hébergée dans ServiceNow, était mise à jour manuellement et contenait plus de 100 000 entrées liées à ces applications. Les renseignements concernant nos applications étaient dispersés dans plusieurs outils et emplacements : GitHub, des billets Jira, Confluence, des outils de suivi des incidents, de la documentation SharePoint et de nombreux fichiers Excel. Comme ces données non structurées n’avaient aucune clé commune pour les relier entre elles, il était jusque-là pratiquement impossible de les regrouper."
+    },
+    {
+      "type": "keystat",
+      "label": "Entrées de la CMDB tenues à jour manuellement",
+      "value": "100 000+",
+      "body": "Conservées dans ServiceNow sans aucun lien automatisé avec GitHub, les données suivaient une structure logique allant du ministère au projet ou programme, puis à l’application et au dépôt, avant de se décliner en sprints, en entrées de CMDB, en billets et en documentation. Toutefois, aucun de ces éléments n’était réellement connecté aux autres."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le résultat était clair : aux niveaux de la haute direction, comme ceux du sous‑ministre et du sous‑ministre adjoint, il était impossible d’obtenir des réponses fiables à partir des outils existants. De leur côté, les équipes avaient de la difficulté à produire des constats précis. GitHub lui-même risquait de devenir un environnement confus, où des prototypes côtoyaient des systèmes en production sans distinction claire. Nous ne pouvions pas dire avec certitude ce que nous exploitions, dans quel état c’était, ni où se situaient réellement les risques. Nous avons donc décidé d’agir."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Bâtir un éclaireur"
+    },
+    {
+      "type": "paragraph",
+      "text": "En utilisant Claude Code comme agent de développement, les modèles Opus et Sonnet pour l’analyse, et Google Enterprise Agent Platform comme couche agentique, l’Alberta a créé un outil nommé **Git Insights**. Cet outil, basé sur des agents d’IA, parcourt de façon systématique l’ensemble du parc GitHub. Il agit comme un éclaireur : il inspecte chaque dépôt pour rapporter ce qu’il contient réellement. Dans ce contexte, le code devient la source la plus fiable pour comprendre la réalité sur le terrain."
+    },
+    {
+      "type": "keystat",
+      "label": "Lues par les agents en une vingtaine d’heures",
+      "value": "466 millions de lignes",
+      "body": "Un balayage complet du parc, qu’aucun mandat de consultation n’aurait pu réaliser aussi rapidement ni à un coût comparable. Un tiers des dépôts ne contenait aucune documentation ; les agents l’ont donc générée, et toutes les dépendances ont été identifiées."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le moment de cette analyse était crucial. L’Alberta a observé une augmentation importante des vulnérabilités connues dans l’ensemble de ses systèmes. Dans les outils de suivi, on voit clairement une hausse marquée qui coïncide avec l’arrivée de modèles plus avancés comme Mythos d’Anthropic, les nouvelles versions d’Opus, ainsi que GPT‑5.4 et 5.5 d’OpenAI. La même capacité qui permet à un outil comme Git Insights d’analyser en profondeur le code est aussi celle qui permet à des acteurs malveillants de repérer les failles plus facilement, un enjeu détaillé dans le [document sur la cybersécurité](/paper/mwo98). Dans les quatre semaines suivant la sortie de Mythos, l’Alberta a donc conçu ses propres outils et méthodes pour mener ce type d’analyse de façon rapide et structurée."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Comment fonctionne Git Insights"
+    },
+    {
+      "type": "paragraph",
+      "text": "Git Insights fonctionne de manière assez simple. Il repose sur deux niveaux. D’abord, un ensemble d’agents parcourt tout le parc de code en une seule fois. Ensuite, à l’intérieur de chaque dépôt, chaque agent suit la même méthode. Un moteur de règles analyse le code pour repérer des éléments connus qui nécessitent une analyse plus approfondie. Puis, l’agent d’IA intervient pour examiner ces éléments et porter un jugement. Tous les constats sont enregistrés et peuvent être vérifiés par une personne, jusqu’à la ligne de code qui les justifie."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.1",
+      "title": "Comment se déroule un balayage complet",
+      "caption": "Git Insights fonctionne en repérant chaque dépôt, puis en les répartissant entre une flotte d’agents qui travaillent en parallèle. Les résultats sont ensuite rassemblés dans une base de données unique, que les dirigeants peuvent consulter pour obtenir une vue complète.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Repérer chaque dépôt",
+            "desc": "Git Insights dresse la liste de chaque dépôt de notre GitHub, de façon récursive, sans rien omettre."
+          },
+          {
+            "title": "Les remettre à une flotte d’agents",
+            "desc": "Une cinquantaine d’agents travaillent en parallèle, chacun prenant un dépôt à la fois pour qu’aucun ne se chevauche jamais."
+          },
+          {
+            "title": "Analyser chaque dépôt",
+            "desc": "Chaque agent exécute la même routine fixe sur son dépôt, illustrée dans la figure ci-dessous."
+          },
+          {
+            "title": "Écrire dans une seule base de données partagée",
+            "desc": "Des milliers de constats distincts s’additionnent en un portrait unique et interrogeable de l’ensemble du parc."
+          },
+          {
+            "title": "Répondre aux questions sur un tableau de bord",
+            "desc": "Les dirigeants explorent la santé, le risque et les recommandations, et exportent des rapports."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Les agents s’exécutent sur Google Enterprise Agent Platform. Google a travaillé en étroite collaboration avec l’Alberta pour assurer une capacité de traitement élevée, atteignant jusqu’à 25 millions de jetons par minute, afin d’accélérer l’analyse. L’outil a aussi été conçu pour être robuste. Si une analyse échoue ou atteint une limite, elle est mise en attente puis relancée, pendant que les autres continuent. Et si l’ensemble du processus est interrompu, il reprend exactement là où il s’était arrêté. C’est cette capacité qui permet à Git Insights d’analyser 466 millions de lignes de code, réparties sur des milliers de dépôts, en environ vingt heures, en poussant au maximum les capacités de traitement disponibles."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.2",
+      "title": "Une flotte qui balaie le parc",
+      "caption": "Une cinquantaine d’agents se déploient simultanément à travers l’ensemble du parc. Chacun analyse un dépôt et renvoie un ensemble structuré de constats vers une base centrale unique, transformant ainsi des milliers d’analyses individuelles en une vision d’ensemble cohérente.",
+      "image": {
+        "src": "public/images/bbkac/fr/fig-3-2.jpg",
+        "alt": "Une flotte de figures d’agents se déployant à travers un champ de dépôts de code et rapportant des fiches de constats structurées vers un point de collecte central.",
+        "image_prompt": "An editorial illustration of a large fleet of small identical agent figures fanning out across a vast field of code repositories, each one inspecting a repository and carrying a neat report card back to a single central collection point. A sense of organized parallel reconnaissance returning structured findings. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.3",
+      "title": "À l’intérieur du balayage d’un seul dépôt",
+      "caption": "Les mêmes six étapes sont appliquées à chaque dépôt. Le travail précis et vérifiable est effectué par du code classique, tandis que l’IA est sollicitée uniquement pour porter un jugement. Lorsqu’elle signale un problème, elle doit toujours indiquer le fichier et la ligne exacts qui le démontrent.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Le copier et lire son historique",
+            "desc": "L’agent clone le dépôt et lit chaque modification jamais apportée, hors ligne. C’est rapide et cela ne sollicite pas GitHub. Les fichiers sont traités localement dans un conteneur virtuel."
+          },
+          {
+            "title": "Vérifier les fondamentaux",
+            "desc": "Y a-t-il de la documentation? Y a-t-il des tests? Existe-t-il un moyen automatisé de bâtir et de déployer le code? Y a-t-il une licence? De simples vérifications par oui ou non, faites par du code."
+          },
+          {
+            "title": "Fouiller chaque fichier à la recherche de failles connues",
+            "desc": "Du code fouille tous les fichiers à la recherche de motifs reconnus comme mauvais, les erreurs précises qui causent de réelles failles de sécurité, comme des contrôles de sécurité désactivés ou des requêtes de base de données dangereuses."
+          },
+          {
+            "title": "Laisser l’IA lire les fichiers qui comptent",
+            "desc": "L’IA lit les fichiers les plus importants plutôt que chaque ligne. Cette sélectivité est ce qui maintient un balayage de cette ampleur abordable. Les résultats sont regroupés en lots pouvant atteindre 100 000 jetons à la fois et analysés par la légion d’agents d’IA."
+          },
+          {
+            "title": "Évaluer la santé et énumérer chaque problème",
+            "desc": "L’IA note le dépôt selon une liste de contrôle fixe et énumère chaque problème avec son fichier et sa ligne exacts, sa gravité et la façon de le corriger."
+          },
+          {
+            "title": "Classifier et combler les lacunes",
+            "desc": "Elle recommande quoi faire du système, conserver, investir, migrer ou retirer, et là où la documentation manquait, elle la rédige. "
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Une question importante est de savoir dans quelle mesure on peut se fier aux résultats de l’IA. Trois éléments assurent sa fiabilité. D’abord, le travail répétitif et mesurable, comme recenser les fichiers ou détecter des motifs connus est fait par du code classique, qui ne peut pas inventer de résultats. Ensuite, les conclusions de l’IA ne sont jamais acceptées sans preuve : pour chaque problème, elle doit identifier précisément l’endroit dans le code, expliquer la gravité et proposer une correction, afin qu’un développeur puisse vérifier. Enfin, chaque dépôt est évalué selon une grille fixe couvrant la sécurité, la qualité du code, l’architecture, la documentation, les tests, la maintenabilité et la santé des dépendances. Cela garantit que les évaluations sont cohérentes d’un dépôt à l’autre. Tous les constats sont enregistrés dans une base de données et peuvent être vérifiés directement dans le code. Cette base permet ensuite d’effectuer des analyses globales, notamment par d’autres agents utilisés par les équipes de cybersécurité et de livraison, afin d’identifier des tendances et des problèmes communs à l’ensemble du parc."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.4",
+      "title": "Deux paliers : déterministe, puis probabiliste",
+      "caption": "Le niveau inférieur est déterministe : du code classique exécute les tâches précises et mesurables, sans possibilité d’inventer des résultats. Le niveau supérieur est probabiliste : l’IA analyse et interprète ce que le niveau inférieur a identifié, en portant un jugement appuyé sur des preuves, en citant toujours le fichier et la ligne exacts. Chacun intervient là où il est le plus efficace.",
+      "image": {
+        "src": "public/images/bbkac/fr/fig-3-4.jpg",
+        "alt": "Deux paliers superposés : une rangée d’inspecteurs mécaniques précis en dessous alimentant une seule figure réfléchie qui juge au-dessus.",
+        "image_prompt": "An editorial illustration of two stacked tiers of work. The lower tier is a neat row of precise, mechanical inspectors stamping exact checkmarks across code, dependable and literal. The upper tier is a single thoughtful figure weighing and judging what the lower tier surfaced and pointing back to specific lines. The exact work below feeds the judgment above. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque balayage permet de révéler les technologies anciennes encore présentes, comme le COBOL, l’ASP classique ou des versions de Dot NET et de Java qui ne sont plus supportées. Il permet aussi d’identifier à quel ministère ces systèmes appartiennent. Toutes les dépendances sont recensées, constituant enfin un inventaire précis que la base de gestion des configurations n’avait jamais pu fournir. L’outil signale également les dépôts contenant des renseignements personnels sensibles, rendant visibles des risques auparavant cachés. Pour les 1 280 dépôts sans documentation, l’agent l’a générée automatiquement à partir du code, tout en vérifiant et en améliorant les README existants. Pour la première fois, l’ensemble du parc est ainsi entièrement documenté."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les balayages ont un double rôle : ils montrent à la fois comment chaque système fonctionne et ce qu’il fait concrètement pour les citoyens. Les fonctions d’affaires de chaque application sont cartographiées dans une hiérarchie claire de capacités, ce qui permet de classer les systèmes par leur utilité réelle. Chaque dépôt dispose ainsi d’une fiche beaucoup plus détaillée que tout ce qui existait auparavant. Cette vue d’ensemble met aussi en évidence les redondances, que l’on peut ensuite cibler pour les éliminer. Comme cela sera abordé dans le document suivant, l’objectif est de réduire fortement le code dupliqué, parfois jusqu’à un facteur de dix, en standardisant les fonctions communes grâce à l’IA."
+    },
+    {
+      "type": "table",
+      "title": "Ce que Git Insights consigne pour chaque dépôt",
+      "columns": [
+        "Catégorie",
+        "Ce qu’il capte"
+      ],
+      "rows": [
+        [
+          "Notes de santé (sur 10)",
+          "Globale, plus des notes distinctes pour la qualité du code, l’architecture, la sécurité, les tests, la documentation, la maintenabilité et la santé des dépendances."
+        ],
+        [
+          "Vérifications d’ingénierie",
+          "README, tests, pipeline CI/CD, définition de conteneur, licence, fichier d’environnement d’exemple, guide de contribution et journal des modifications, chacun marqué présent ou absent."
+        ],
+        [
+          "Cadriciels et pile technologique",
+          "Les cadriciels en usage, la pile technologique complète détectée par l’IA, et les outils de construction."
+        ],
+        [
+          "Dépendances",
+          "Dépendances de production et dépendances de développement, chacune répertoriée."
+        ],
+        [
+          "Jugements narratifs",
+          "Forces, faiblesses, zones de risque et recommandations concrètes."
+        ],
+        [
+          "Canevas des capacités d’affaires",
+          "Les sujets d’affaires qu’il couvre, les douze capacités gouvernementales standard, toute capacité additionnelle, et ses dépendances d’intégration."
+        ],
+        [
+          "Classification",
+          "Le type de composant dont il s’agit, sa complexité, et la disposition recommandée : conserver, investir, migrer ou retirer."
+        ],
+        [
+          "Effort et problèmes",
+          "Une estimation assistée par l’IA de l’effort requis pour le moderniser, et une liste complète et détaillée des problèmes de code."
+        ]
+      ],
+      "caption": "Chaque dépôt revient avec cette fiche complète, le tout interrogeable aux côtés de chaque autre dépôt.",
+      "source": "Balayage approfondi et balayage des capacités de Git Insights."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les résultats de l’analyse réalisée par Git Insights sont regroupés dans une seule base de données et présentés dans un tableau de bord destiné à la direction. On y trouve une vue d’ensemble de la santé des systèmes et des risques, une grille à neuf cases qui positionne chaque système selon son niveau d’activité et son état de santé, des fiches détaillées par dépôt, des profils de contributeurs ainsi qu’une répartition des différents constats. Toutes ces données peuvent être exportées en document, en feuille de calcul ou en données brutes. L’analyse plus poussée entre plusieurs dépôts — où des centaines de systèmes qui se chevauchent dans un même ministère sont regroupés en un ensemble plus restreint de capacités reconstruites, repose sur un moteur distinct et fait l’objet d’un document séparé; voir [Git Insights Ministère](/paper/offjm)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 3.5",
+      "title": "Un seul tableau de bord, une seule source de vérité",
+      "caption": "Des milliers de constats structurés sont regroupés dans un seul tableau de bord que les dirigeants peuvent consulter facilement : ils obtiennent en un coup d’œil l’état de santé de chaque système, au lieu de devoir naviguer entre de multiples outils de suivi, billets et feuilles de calcul dispersés.",
+      "image": {
+        "src": "public/images/bbkac/fr/fig-3-5.jpg",
+        "alt": "Des hauts fonctionnaires debout devant un seul tableau de bord clair sur la santé d’un parc, laissant derrière eux des classeurs et des feuilles de calcul éparpillés.",
+        "image_prompt": "An editorial illustration of a calm control room where two senior officials stand before one large, clear dashboard showing the health of a whole estate of systems at a glance. Behind them, a wall of scattered binders, tickets, and spreadsheets is fading away. A sense of clarity replacing chaos. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "pullquote",
+      "text": "Pour la première fois, un sous-ministre pouvait poser une question sur le parc et obtenir une réponse ancrée dans le code lui-même.",
+      "cite": "Document 3 · Git Insights"
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "À quoi ressemblait réellement le parc"
+    },
+    {
+      "type": "paragraph",
+      "text": "Une fois le balayage terminé, nous avons enfin pu mesurer ce que nous n’avions jusque-là qu’estimé. Le périmètre cartographié par Git Insights s’est révélé beaucoup plus vaste que ce que quiconque avait réussi à dénombrer auparavant."
+    },
+    {
+      "type": "table",
+      "title": "Un domaine que nous n’avions jamais mesuré",
+      "columns": [
+        "Dimension",
+        "Nombre"
+      ],
+      "rows": [
+        [
+          "Langages",
+          "25"
+        ],
+        [
+          "Environnements d’exécution",
+          "6"
+        ],
+        [
+          "Cadriciels",
+          "32"
+        ],
+        [
+          "Architectures",
+          "5"
+        ]
+      ],
+      "caption": "Les technologies en usage actif à travers le parc, telles que cartographiées par Git Insights.",
+      "source": "Balayage des capacités de Git Insights."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les lacunes structurelles étaient encore plus frappantes. Sur environ 3 400 dépôts, les bonnes pratiques essentielles pour rendre le code fiable et facile à modifier étaient souvent absentes plutôt que présentes."
+    },
+    {
+      "type": "table",
+      "title": "Déficiences structurelles à travers le portefeuille",
+      "columns": [
+        "Pratique manquante",
+        "Dépôts touchés",
+        "% du portefeuille"
+      ],
+      "rows": [
+        [
+          "Aucun README ni documentation",
+          "1 280",
+          "39,2 %"
+        ],
+        [
+          "Aucun test automatisé",
+          "1 617",
+          "49,6 %"
+        ],
+        [
+          "Aucun pipeline CI/CD",
+          "2 410",
+          "73,9 %"
+        ],
+        [
+          "Aucun Docker ni conteneurisation",
+          "3 098",
+          "95,0 %"
+        ],
+        [
+          "Aucun fichier de licence",
+          "3 078",
+          "94,4 %"
+        ]
+      ],
+      "caption": "Près des trois quarts du parc n’avaient aucun pipeline automatisé de construction et de déploiement, et presque aucun n’était conteneurisé. À travers le parc, ces lacunes sont la norme.",
+      "source": "Balayage approfondi de Git Insights."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chaque dépôt a reçu une note sur 10 pour évaluer sa santé globale, en tenant compte de la qualité du code, de la sécurité, des tests et de la documentation. À l’échelle de l’ensemble du parc, la moyenne s’est révélée faible, notamment en raison du manque de tests, de pipelines automatisés et de documentation, déjà relevé plus tôt."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Nous mesurer nous-mêmes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous avons aussi analysé les contributions de code de notre personnel et de nos sous-traitants. Nous l’avons fait pour repérer où la variabilité humaine ordinaire érode nos contrôles de sécurité et nos normes, afin de savoir où la formation et de meilleurs outils aideront le plus. Une analyse rétrospective au moyen d’un outil comme Git Insights ne peut pas connaître le contexte derrière une décision prise par une personne un jour donné. Ce qu’elle fait, c’est révéler les tendances, agrégées à grande échelle et de façon anonymisée. Sur plus de huit mille cent contributeurs et huit ans d’historique, ces tendances étaient claires."
+    },
+    {
+      "type": "table",
+      "title": "Risque lié aux contributeurs à travers le parc",
+      "columns": [
+        "Signal",
+        "Nombre"
+      ],
+      "rows": [
+        [
+          "Contributeurs analysés",
+          "8 178"
+        ],
+        [
+          "Contributeurs à risque critique ou élevé (valident des vulnérabilités à répétition)",
+          "109"
+        ],
+        [
+          "Contributeurs à risque moyen (valident occasionnellement des vulnérabilités)",
+          "1 261"
+        ],
+        [
+          "Activité de comptes en double",
+          "47"
+        ],
+        [
+          "Modifications contournant la révision plus de la moitié du temps",
+          "80"
+        ]
+      ],
+      "caption": "Posture agrégée seulement. Les noms individuels et les dépôts sont conservés sous accès restreint et ne sont pas publiés.",
+      "source": "Balayages des contributeurs et des RP de Git Insights."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les plus grands écarts observés concernaient la cohérence et l’adhésion aux normes. À noter, il ne s’agit pas d’une critique d’un travailleur ou d’un groupe, ni d’un signe de mauvaise intention. Les développeurs contributeurs forment, dans l’ensemble, un groupe compétent et travaillant, et la plus grande partie du code applicatif qu’ils ont produit était solide à l’époque. Les problèmes que les données ont révélés étaient systémiques. En huit ans, plus de huit mille personnes, dont beaucoup ont été recrutées comme sous-traitants individuels dans des ministères distincts, ont travaillé selon des normes souvent non documentées, communiquées de façon inégale, et passées sous silence dans les contrats eux-mêmes. Beaucoup de ces normes sont aspirationnelles et fondées sur des principes plutôt que prescriptives et précises, ce qui laisse un écart entre l’intention de l’auteur et l’interprétation et l’application qu’en fait le lecteur. Lorsque les règles ne sont pas définies, il est normal, et presque inévitable, que des personnes compétentes fassent leurs propres choix et suivent la voie de la moindre résistance. C’est ce qui mène au type de dérive observé dans l’analyse Git. Les normes évoluent aussi avec le temps. De nouvelles pratiques comme la conteneurisation et les chaînes de construction automatisées n’ont jamais atteint le code plus ancien, et sur un parc aussi vaste, il n’existait aucun moyen pratique de vérifier l’adhésion aux normes. Ce dernier manque, l’incapacité de voir les tendances de l’ensemble, est celui que l’IA agentique a maintenant comblé."
+    },
+    {
+      "type": "paragraph",
+      "text": "Vu sous cet angle, le parc avait grandi comme une ville médiévale. Chaque structure a été érigée pour répondre au besoin de son époque, solide à ses propres conditions, mais l’ensemble est devenu dense et difficile à parcourir après coup. Une analyse fondée sur des règles comme Git Insights trace des lignes droites à travers cette croissance organique. Le précédent le plus proche est le plan de Paris du baron Haussmann, dont les larges boulevards ont été percés dans le tissu médiéval pour imposer ordre et connexion après des siècles de construction non planifiée. Il en résulte la ville à deux couches que nous connaissons aujourd’hui : une croissance organique mariée à un plan rationnel posé par-dessus. Il serait injuste de juger déficient ce que huit mille développeurs ont bâti en huit ans. Mais il serait tout aussi faux de présumer qu’il faut simplement le reproduire. Il nous reste un problème difficile, et le résoudre rapidement exigera des gestes structurants et délibérés, à cette échelle. Pour relever un défi d’une telle ampleur, nous devons adopter de nouvelles façons de travailler."
+    },
+    {
+      "type": "table",
+      "title": "Ce que Git Insights consigne sur l’ensemble agrégé des commits GitHub",
+      "columns": [
+        "Catégorie",
+        "Ce qu’il capte"
+      ],
+      "rows": [
+        [
+          "Activité",
+          "Dépôts touchés, commits, lignes modifiées, et demandes de tirage créées, fusionnées et révisées."
+        ],
+        [
+          "Tendances dans le temps",
+          "Volume mensuel d’activité à travers tous les dépôts, et une ventilation du travail par type : fonctionnalités, correctifs, remaniements, documentation et tests."
+        ],
+        [
+          "Volume et télémétrie",
+          "Communication, volume de code, constance, équilibre et qualité de la révision."
+        ],
+        [
+          "Pile technologique",
+          "Produits, normes et technologies appliqués dans les projets."
+        ]
+      ],
+      "caption": "Les aperçus agrégés sont établis à partir de 8 178 contributeurs.",
+      "source": "Balayage des contributeurs de Git Insights."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Humain + IA : partenariat"
+    },
+    {
+      "type": "paragraph",
+      "text": "Une grande partie des critiques envers l’IA porte sur ses erreurs. On insiste beaucoup sur ses hallucinations et ses biais. Mais cette critique reflète souvent un biais de perception : on retient facilement une mauvaise réponse, alors que des milliers de bonnes passent inaperçues. Surtout, ces critiques oublient un point essentiel : elles ne comparent pas la performance de l’IA à celle des humains dans des situations équivalentes.\n\n\nNos constats sont clairs : avec les contrôles appropriés décrits dans [le document sur le harnais](/paper/p7p2k), les plus récents outils de codage par IA peuvent aider à accroître la cohérence des tâches de codage et d’analyse, au sein d’une même application comme à l’échelle de tout le parc."
+    },
+    {
+      "type": "paragraph",
+      "text": "Git Insights nous a donné le point de repère nécessaire pour appuyer cette affirmation avec des preuves. Les métadonnées recueillies dans GitHub ont permis de réaliser, pour la première fois en Alberta, une étude de grande envergure et sur plusieurs années de la performance technique humaine. Nous avons analysé le travail réel de plus de 8 000 personnes sur une période de huit ans : chaque validation, chaque demande de tirage et l’état du code produit, à l’échelle de tout le parc. Cela nous a donné une base concrète pour mesurer, dans l’avenir, les effets de nos investissements en IA sur la vitesse, la qualité, la sécurité et les processus."
+    },
+    {
+      "type": "table",
+      "title": "Le tout premier point de référence du genre",
+      "columns": [
+        "Mesure",
+        "Nombre"
+      ],
+      "rows": [
+        [
+          "Dépôts",
+          "3 400"
+        ],
+        [
+          "Contributeurs",
+          "8 178"
+        ],
+        [
+          "Années d’historique",
+          "8"
+        ],
+        [
+          "Validations",
+          "948 571"
+        ],
+        [
+          "Demandes de tirage",
+          "145 486"
+        ],
+        [
+          "Lignes de code",
+          "466 792 649"
+        ]
+      ],
+      "caption": "L’ampleur de la fiche humaine que Git Insights a mesurée. C’est le point de référence à partir duquel l’IA peut désormais être comparée, avec certitude plutôt qu’avec l’intuition.",
+      "source": "Git Insights."
+    },
+    {
+      "type": "paragraph",
+      "text": "Avant l’application des outils fondés sur l’IA, Technologie et Innovation a évalué avec quelle constance les équipes de développement respectaient 100 % des normes à la première livraison de l’application. L’adhésion complète aux normes n’était atteinte que dans quarante pour cent des cas à la première livraison, ce qui exigeait des reprises et des versions ultérieures pour finaliser, en raison d’échéances serrées et de l’absence d’une approche fondée sur les normes."
+    },
+    {
+      "type": "keystat",
+      "label": "Produits respectant chaque norme à la première livraison",
+      "value": "40 %",
+      "body": "De nombreuses nouvelles applications nécessitent des reprises modérées à importantes pour respecter toutes les normes, un taux inacceptablement bas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Comparez ce chiffre à une usine automobile. Nous n’accepterions pas un monde où seulement quarante pour cent des véhicules quitteraient l’usine en satisfaisant aux normes de sécurité. Ce qui fait d’une usine automobile moderne une prouesse d’ingénierie, c’est l’effort consacré à lever l’ambiguïté et à amener chaque unité vers le même résultat élevé, sécuritaire et reproductible. Un système informatique ne devrait pas être tenu à une norme inférieure. Dans un monde numérique, préserver la confidentialité des renseignements des personnes que nous servons est primordial, et l’intégrité de nos institutions et de notre économie dépend désormais de l’intégrité de notre technologie. Les conséquences d’une défaillance informatique peuvent être aussi dommageables que celles d’une défaillance mécanique."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette analogie de l’usine nous donne un plan d’ensemble raisonnable pour accroître la qualité et la cohérence. La créativité et le jugement humains s’appliquent au début, dans la conception et l’idéation, et à la fin, dans le service, le soutien et les relations humaines. Au milieu se trouvent l’outillage, les processus et les contrôles qui transforment les bonnes idées et les bonnes conceptions en produits constamment sécuritaires. Conçu en partenariat avec l’IA, ce milieu devient une « chaîne de production » pour le logiciel : des normes appliquées de la même façon chaque fois, sûres en matière de cybersécurité, accessibles et vérifiables par défaut. Ce concept nous donne un modèle pour ce que nous appelons l’« usine d’IA », que les documents ultérieurs déploient étape par étape, à commencer par [la conception et l’idéation](/paper/qthji)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les humains comme l’IA font des erreurs, et les deux sont des résolveurs de problèmes créatifs. La leçon de cette analyse, c’est que les outils changent. Les personnes qui travaillent de façon créative avec l’IA obtiennent de meilleurs résultats à mesure qu’elles appliquent de nouvelles stratégies et méthodes qui résolvent ces problèmes. À mesure que l’IA prend en charge une plus grande part du codage courant, l’effort humain se déplace vers l’architecture, la stratégie, la créativité, la conception et le travail d’accompagnement mutuel à travers le changement. La créativité humaine demeure inégalée et au centre du processus. Aucune IA n’a imaginé Git Insights; cela était entièrement humain. Ce que l’IA a rendu possible, c’est l’analyse d’un vaste parc numérique pour presque rien, moins de deux mille dollars, en quelques heures. Dans un partenariat bien formé entre une personne et un agent d’IA, les erreurs sont repérées aussitôt, résolues rapidement, et la vitesse d’avancement augmente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cela recadre la question que ce document s’était posée. Il n’a jamais été raisonnable d’attendre de plus de huit mille personnes qu’elles tiennent une seule norme de qualité par la seule volonté, encore moins une norme non définie et mouvante sous leurs pieds. La question est maintenant de savoir quoi faire de ce savoir. Grâce à son vaste contexte et à sa rapidité, l’IA peut lire l’ensemble du parc et aider la direction à voir les deux côtés du registre à la fois : là où nos gens excellent, dans la créativité, le lien humain, l’idéation, la perspicacité, l’expérience et le jugement, et là où le système dérive. L’IA peut intervenir pour aider à l’application constante des normes, au suivi des processus et à la vérification des endroits où ils ont été manqués. La rétroaction peut être recueillie, à grande échelle, et mise à profit pour améliorer les résultats. Utilisés ainsi, ces outils nous permettent de protéger la qualité et la sécurité des systèmes dont dépendent les Albertains, sans demander à quiconque d’être moins humain."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce qui s’étend ici, c’est le champ des possibles. Le document suivant pousse Git Insights d’un cran, à l’échelle du ministère, où des centaines de systèmes qui se chevauchent sont analysés ensemble et regroupés en un plus petit ensemble de capacités modernes et reconstruites, accompagnées d’un plan chiffré. Voir [Git Insights Ministère](/paper/offjm)."
+    },
+    {
+      "type": "figure",
+      "title": "Explorez ceci sous forme de canevas interactif",
+      "caption": "La reconnaissance agentique analyse l’ensemble du parc GitHub, dépôt par dépôt, pour en révéler la réalité concrète. Ce contenu fait partie du Canevas (document 18) : vous pouvez déplacer les éléments, zoomer et lancer une visite guidée en appuyant sur Écouter.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "estate",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "git-insights",
+        "code-analysis",
+        "agents",
+        "technical-debt"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "offjm",
+    "p7p2k",
+    "mwo98",
+    "xs7uh",
+    "qthji"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-08T00:00:00.000Z"
+    },
+    "fr_review": {
+      "by": "Government of Alberta francophone reviewers",
+      "received": "2026-06-12",
+      "applied": "2026-06-15",
+      "method": "transpose .fr.md → JSON (scripts/fr-review/transpose.mjs), round-trip verified (verify.mjs), lexicon sweep (sweep.mjs)",
+      "standard": "docs/fr-style-guide.md + data/fr-lexicon.json"
+    },
+    "section_sigs": {
+      "00": "3282077517",
+      "01": "3507079833",
+      "02": "916734378",
+      "03": "418597638",
+      "04": "423196786",
+      "05": "3382398058",
+      "06": "2162645961"
+    },
+    "fr_resync": {
+      "date": "2026-06-19",
+      "reason": "Terminology rename Google Agent Platform -> Google Enterprise Agent Platform, applied in lockstep to EN and FR; signatures re-baselined."
+    }
+  },
+  "translation_status": "final",
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "source_signature": "45649235"
+}

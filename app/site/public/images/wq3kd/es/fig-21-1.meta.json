@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "es",
+  "slot": "fig-01",
+  "out_path": "public\\images\\wq3kd\\es\\fig-21-1.jpg",
+  "bytes_jpg": 150609,
+  "bytes_png_source": 2069571,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:10:17.110Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.",
+  "image_prompt": "A side-by-side comparison diagram. On the left, a single small chat bubble floating over a closed dark box labelled Documentos, with a question mark and a fading dotted line, under the heading La demostración. On the right, a clear left-to-right pipeline of connected labelled boxes (Ingesta, Procesamiento, Organización, Almacenamiento, Entrega) feeding a tidy structured grid of cards captioned Conocimiento estructurado y consultable, under the heading El sistema. Labels: La demostración, El sistema. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.\n\nSubject: A side-by-side comparison diagram. On the left, a single small chat bubble floating over a closed dark box labelled Documentos, with a question mark and a fading dotted line, under the heading La demostración. On the right, a clear left-to-right pipeline of connected labelled boxes (Ingesta, Procesamiento, Organización, Almacenamiento, Entrega) feeding a tidy structured grid of cards captioned Conocimiento estructurado y consultable, under the heading El sistema. Labels: La demostración, El sistema. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-1.source.png"
+}

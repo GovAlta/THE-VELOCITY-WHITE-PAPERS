@@ -1,0 +1,17 @@
+{
+  "paper_id": "yu5k9",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\yu5k9\\fr\\fig-15-3.jpg",
+  "bytes_jpg": 96439,
+  "bytes_png_source": 2321350,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T08:08:40.612Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial line chart on warm cream paper, deep navy line work with small rust accents. A single line rises steeply from the lower left, labelled \"ARRIÉRÉ + VULNÉRABILITÉS\", then bends at a marked point and turns downward toward the right. A small rust arrow near the bend is labelled \"RENVERSER LA TENDANCE\". Simple axes, no gridlines. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial line chart on warm cream paper, deep navy line work with small rust accents. A single line rises steeply from the lower left, labelled \"ARRIÉRÉ + VULNÉRABILITÉS\", then bends at a marked point and turns downward toward the right. A small rust arrow near the bend is labelled \"RENVERSER LA TENDANCE\". Simple axes, no gridlines. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\yu5k9\\en\\fig-15-3.source.png"
+}

@@ -1,0 +1,33 @@
+{
+  "_note": "Community channels and contribution paths for one locale. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Community",
+    "title_lead": "Where to talk about",
+    "title_em": "this work.",
+    "lede": "Email us or open a public issue. The modernization conversation does not happen behind a closed door.",
+    "open": "Open →",
+    "soon": "Coming soon"
+  },
+  "channels": [
+    {
+      "id": "email",
+      "kind": "email",
+      "href": "mailto:TI.Velocity@gov.ab.ca",
+      "available": true,
+      "label": "TI.Velocity@gov.ab.ca",
+      "blurb": "The inbox to reach the Velocity team directly. Questions, feedback, collaboration, or a request to talk about bringing this approach to your organization."
+    },
+    {
+      "id": "github-issues",
+      "kind": "issues",
+      "href": "https://github.com/GovAlta/the-velocity-white-papers/issues",
+      "available": true,
+      "label": "GitHub Issues",
+      "blurb": "Bug reports, content corrections, French translation review, accessibility findings. Public."
+    }
+  ],
+  "contributing": {
+    "title": "Contributing",
+    "body": "The site is MIT-licensed and the content is openly published. Pull requests against the public repository are welcome. The contribution path: open an issue first to align on direction; submit a small, focused PR; pass the eval suite; cite sources for any new claim."
+  }
+}

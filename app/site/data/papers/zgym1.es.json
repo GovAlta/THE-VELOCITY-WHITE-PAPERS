@@ -1,0 +1,552 @@
+{
+  "id": "zgym1",
+  "num": "05",
+  "sequence": "5 de 22",
+  "tier": "Conceptual",
+  "category": "paper",
+  "title": "Los cuatro enfoques para la modernización con IA",
+  "subtitle": "Desde la reparación de un sistema a la vez hasta la eliminación completa de la capa de aplicaciones: las cuatro vías mediante las cuales un gobierno reconstruye su patrimonio digital con rapidez.",
+  "track": "Defining the Problem",
+  "authors": [
+    "Janak Alford",
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-06-16",
+  "reading_min": 13,
+  "status": "Published",
+  "tags": [
+    "modernization",
+    "architecture",
+    "ai-factory",
+    "government-3-0",
+    "strategy"
+  ],
+  "repo": null,
+  "abstract": "Conocemos el patrimonio digital y sabemos que no puede repararse como siempre se ha hecho. La pregunta que responde este documento es cómo lograrlo. Existen cuatro formas de modernizar un sistema gubernamental con IA, y cada una supone una mayor ambición que la anterior. El Taller de IA repara y reemplaza sistemas de uno en uno. La Fábrica de IA construye aplicaciones totalmente nuevas de plena propiedad gubernamental. La Racionalización con IA reduce todo el conjunto de sistemas superpuestos de un ministerio a un número reducido de módulos modernos. Y el Gobierno 3.0 elimina la aplicación como tal, permitiendo que los agentes de IA trabajen directamente sobre datos gobernados y generen la interfaz que cada persona necesita en cada momento. Ningún enfoque por sí solo lo abarca todo, por lo que necesitamos los cuatro. En conjunto, constituyen el camino para que un gobierno alcance una reducción de aproximadamente el 95 % en el coste y el tiempo de sus implementaciones de software, reconstruyendo sus sistemas centrales en el transcurso de un solo mandato en lugar de hacerlo a lo largo de casi un siglo.",
+  "hero_image": {
+    "src": "public/images/zgym1/es/hero.jpg",
+    "alt": "Cuatro rutas divergentes que ascienden desde un único edificio reparado hasta un entorno de agentes autónomos que trabajan sobre un núcleo de datos depurado.",
+    "image_prompt": "An editorial cover illustration of four diverging paths or routes that climb in ambition: the first leading to a single building being repaired, the second to a clean factory producing modular buildings, the third to many buildings collapsing into a few, and the fourth to a field of small autonomous agents working around a glowing data core with no buildings at all. A sense of an escalating ladder of transformation. Muted Alberta cream palette, navy and rust accents, archival print quality, no text, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/zgym1.mp3",
+    "duration_sec": 915
+  },
+  "tldr_presentation": {
+    "id": "zgym1-tldr",
+    "title": "El documento, en síntesis",
+    "locale": "es",
+    "owner_id": "zgym1",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Los cuatro enfoques para la modernización con IA",
+        "audio_file": "public/audio/es/zgym1-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Documento 5 · Definición del problema",
+        "subcaption": "Cuatro rutas hacia la modernización, de menor a mayor ambición.",
+        "text": "Los cuatro enfoques para la modernización con IA. Conocemos el parque tecnológico y sabemos que no puede remediarse de la manera tradicional. Existen cuatro formas de modernizar un sistema gubernamental con IA. Van de menor a mayor ambición, desde la intervención más leve hasta la reconstrucción más completa, y ninguna por sí sola lo abarca todo. Necesitamos las cuatro."
+      },
+      {
+        "id": "02",
+        "title": "El Garaje de IA",
+        "audio_file": "public/audio/es/zgym1-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Enfoque uno · El Garaje de IA",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Reparar",
+              "desc": "Corregir una vulnerabilidad, actualizar una biblioteca obsoleta, añadir una prueba que falta."
+            },
+            {
+              "label": "Remediar",
+              "desc": "Atender primero la exposición de seguridad, comenzando por los sistemas más expuestos."
+            },
+            {
+              "label": "Reproducir",
+              "desc": "Reconstruir sobre una plataforma moderna que funcione exactamente igual que el sistema original."
+            }
+          ]
+        },
+        "text": "En primer lugar, el más ligero. El Garaje de IA repara un sistema a la vez, igual que se lleva un coche al taller. Corrige una vulnerabilidad, remedia una exposición de seguridad o reemplaza el sistema antiguo con una reconstrucción moderna que funciona exactamente igual. Es el de menor riesgo y trata los síntomas más que la causa raíz."
+      },
+      {
+        "id": "03",
+        "title": "La Fábrica de IA",
+        "audio_file": "public/audio/es/zgym1-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Enfoque dos · La Fábrica de IA",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Un equipo de agentes",
+              "desc": "Arquitecto, desarrollador, responsable de pruebas y responsable de seguridad, trabajando con una misma especificación compartida."
+            },
+            {
+              "label": "Modular",
+              "desc": "Componentes pequeños, cada uno de alrededor de mil líneas, verificables de forma independiente."
+            },
+            {
+              "label": "De propiedad gubernamental",
+              "desc": "Bases de código abierto, sin dependencia de ningún proveedor del que no se pueda prescindir."
+            },
+            {
+              "label": "Sin sistemas heredados",
+              "desc": "Construido desde cero, sin las dependencias obsoletas del sistema anterior."
+            }
+          ]
+        },
+        "text": "En segundo lugar, construir desde cero. La Fábrica de IA es una línea de producción de software: un equipo de agentes especializados que diseñan, construyen, prueban y aseguran una nueva aplicación de forma conjunta. Todo lo que produce es modular, propiedad del gobierno y libre de dependencias antiguas. El funcionamiento de la Fábrica es el tema de los tres próximos documentos."
+      },
+      {
+        "id": "04",
+        "title": "185 aplicaciones convertidas en 16 módulos",
+        "audio_file": "public/audio/es/zgym1-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Enfoque tres · Racionalización",
+        "visual_config": {
+          "stat_value": "185 → 16",
+          "stat_label": "Aplicaciones consolidadas en módulos compartidos, en un solo ministerio"
+        },
+        "subcaption": "Una ciudad que creció sin un plan, a la que por fin se le dota de infraestructura compartida.",
+        "text": "En tercer lugar, la racionalización. Examina todo un ministerio de una sola vez, como una ciudad que creció sin un plan, donde cada aplicación construyó su propio sistema de acceso y su propio módulo de informes. Traza un mapa de lo que el ministerio hace realmente y construye las partes compartidas una sola vez. En un ministerio, ciento ochenta y cinco aplicaciones se redujeron a dieciséis módulos, en semanas o meses en lugar de años."
+      },
+      {
+        "id": "05",
+        "title": "Gobierno 3.0",
+        "audio_file": "public/audio/es/zgym1-tldr/05.mp3",
+        "visual": "compare",
+        "caption": "Enfoque cuatro · Gobierno 3.0",
+        "visual_config": {
+          "left": {
+            "label": "Hoy",
+            "body": "Miles de aplicaciones independientes, cada una con su propio mantenimiento, actualizaciones y medidas de seguridad."
+          },
+          "right": {
+            "label": "Gobierno 3.0",
+            "body": "Datos gobernados, reglas escritas una sola vez como código e interfaces que un agente de IA construye según la demanda."
+          }
+        },
+        "text": "En cuarto lugar, y el más radical, el Gobierno 3.0. Aquí la aplicación misma desaparece en gran medida. Los datos están gobernados y las reglas se escriben una sola vez como código, extraídas directamente de la legislación. Los agentes de IA trabajan sobre esos datos y construyen la interfaz que una persona necesita en el momento. Es el modelo más rápido y rentable, y es la dirección hacia la que se dirige el trabajo."
+      },
+      {
+        "id": "06",
+        "title": "Los cuatro enfoques y lo que viene después",
+        "audio_file": "public/audio/es/zgym1-tldr/06.mp3",
+        "visual": "stat",
+        "caption": "Las cuatro juntas, y lo que viene después",
+        "visual_config": {
+          "stat_value": "~95%",
+          "stat_label": "Reducción prevista en el costo y el tiempo del software gubernamental"
+        },
+        "subcaption": "Cada sistema se dirige al enfoque que le corresponde: tolerar, invertir, migrar o eliminar.",
+        "text": "No se elige una sola opción. Cada sistema se dirige al enfoque que mejor se adapta a él. En conjunto, las cuatro apuntan a una reducción de aproximadamente el 95 % en el costo y el tiempo del software gubernamental, dentro de un único mandato. Esto lleva a la siguiente pregunta: si la IA realiza una parte tan grande del trabajo, ¿cómo garantizamos que lo haga bien y con seguridad? Ese es el marco de control, y el tema del próximo libro blanco."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Cuatro rutas de avance"
+    },
+    {
+      "n": "02",
+      "title": "El Taller de IA"
+    },
+    {
+      "n": "03",
+      "title": "La Fábrica de IA"
+    },
+    {
+      "n": "04",
+      "title": "Racionalización con IA"
+    },
+    {
+      "n": "05",
+      "title": "Gobierno 3.0"
+    },
+    {
+      "n": "06",
+      "title": "Los cuatro enfoques y lo que viene después"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Los documentos anteriores de esta colección midieron el patrimonio tecnológico y explicaron por qué no puede repararse como siempre se ha hecho. Sabemos qué sistemas operamos, conocemos su estado y sabemos que, al ritmo al que el gobierno ha trabajado históricamente, el plazo de reparación se mide en décadas. Este documento trata de lo que hacemos con ese conocimiento. Existen cuatro formas principales de modernizar un sistema gubernamental con IA. Cada una supone una mayor ambición que la anterior, desde la intervención más ligera hasta la reconstrucción más completa, y ninguna de ellas abarca todo por sí sola. Un patrimonio gubernamental real necesita las cuatro."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Cuatro rutas de avance"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los cuatro enfoques son el **Taller de IA**, la **Fábrica de IA**, la **Racionalización con IA** y el **Gobierno 3.0**. El Taller repara un sistema en el lugar donde se encuentra. La Fábrica construye uno nuevo para reemplazarlo. La Racionalización reduce todo un conjunto de sistemas superpuestos a unos pocos módulos modernos. El Gobierno 3.0 elimina la aplicación por completo y permite que los agentes de IA trabajen directamente sobre datos gobernados. Cada enfoque es adecuado para un tipo diferente de sistema, y cada uno exige más a la organización que el anterior."
+    },
+    {
+      "type": "paragraph",
+      "text": "El enfoque que se aplica a cada sistema depende de su estado. El Ministerio decide mediante una prueba sencilla de cuatro opciones, aplicada a un sistema a la vez: tolerarlo, invertir en él, migrarlo o eliminarlo. Un sistema en buen estado puede tolerarse y actualizarse con parches menores. Un sistema sólido sobre tecnología obsoleta debe migrarse a una nueva implementación. Un conjunto enredado de sistemas superpuestos es candidato a la racionalización. Un sistema sin necesidad funcional vigente se elimina. Esta prueba es lo que mantiene el esfuerzo orientado hacia los sistemas donde realmente vale la pena, y es lo que convierte a los cuatro enfoques en un plan director y no en un simple menú de opciones."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "El Taller de IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "El primer enfoque es el más ligero. Se toma un sistema a la vez, como se lleva un vehículo al taller, y se repara lo que está fallando. Una persona clona el código, la IA lo analiza y realiza la reparación, la persona verifica el resultado y el cambio se incorpora de nuevo. A esto lo llamamos el Taller. Es el enfoque de menor riesgo y el más cercano a la forma en que los equipos ya trabajan, al tiempo que ofrece el retorno sobre la inversión más inmediato."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Taller realiza tres tipos de trabajo. La elección del más adecuado depende del sistema que se tenga delante. Repara: la IA corrige una falla conocida, actualiza una biblioteca desactualizada o escribe una prueba que faltaba. Remedia: las exposiciones de seguridad son remediadas con prioridad mientras se avanza por el conjunto de sistemas en orden de riesgo: primero los sistemas de cara al público y luego los de administración interna. Y reconstruye: cuando la tecnología subyacente de un sistema ha llegado al final de su vida útil pero su funcionamiento sigue siendo válido, la IA sustituye sus componentes por unos cimientos modernos que se comportan exactamente igual que los originales. Las pantallas y los datos aparecen donde el usuario los espera. Solo se reemplaza la tecnología subyacente obsoleta, de modo que un sistema al que antes se accedía mediante una solución provisional de Citrix se convierte en una aplicación ordinaria en un navegador moderno, integrada de nuevo en un ciclo de soporte vigente."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Taller tiene un límite deliberado. Trata los síntomas y no la enfermedad. Un sistema reparado sigue siendo el mismo sistema antiguo, y una reconstrucción equivalente sigue siendo el mismo flujo de trabajo sobre componentes más nuevos. Para muchos sistemas eso es exactamente lo correcto, porque funcionan, las personas dependen de ellos y lo único que necesitan es ser seguros y estar respaldados. Para otros no es suficiente, porque el problema reside en el propio sistema. Los tres enfoques siguientes van más lejos."
+    },
+    {
+      "type": "table",
+      "title": "Los tres modos del Taller",
+      "columns": [
+        "Modo",
+        "Qué hace la IA",
+        "Más adecuado para"
+      ],
+      "rows": [
+        [
+          "Reparar",
+          "Corrige vulnerabilidades, actualiza bibliotecas obsoletas y escribe las pruebas y la documentación que faltan.",
+          "Un sistema en funcionamiento con defectos concretos y subsanables."
+        ],
+        [
+          "Remediar",
+          "Atiende primero la exposición de seguridad, comenzando por los sistemas más graves y más expuestos.",
+          "Sistemas con vulnerabilidades conocidas; primero los que tienen orientación al público."
+        ],
+        [
+          "Reconstruir",
+          "Reconstruye el sistema sobre una plataforma moderna que funciona exactamente igual que el original.",
+          "Flujos de trabajo sólidos atrapados en tecnología que ha llegado al fin de su vida útil."
+        ]
+      ],
+      "caption": "De a un sistema a la vez, el menor riesgo posible y el más cercano a la forma en que los equipos ya trabajan. El Taller hace que un sistema sea seguro y esté respaldado sin cambiar lo que hace.",
+      "source": "Ministerio de Tecnología e Innovación."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.1",
+      "title": "Un sistema a la vez",
+      "caption": "El Taller recibe un sistema antiguo individual, lo repara o lo adapta, y lo devuelve al servicio. El trabajo es familiar y de bajo riesgo, y es la única respuesta inmediata viable para muchos sistemas.",
+      "image": {
+        "src": "public/images/zgym1/es/fig-5-1.jpg",
+        "alt": "Una sola aplicación antigua, representada como un vehículo viejo elevado en un elevador dentro de un taller de reparación ordenado, mientras se le instala un motor moderno.",
+        "image_prompt": "An editorial illustration of a single aging application drawn as an old vehicle raised on a lift inside a clean, orderly repair garage, with a modern engine and new parts being fitted while the body stays the same. A sense of one-at-a-time careful repair. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "La Fábrica de IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "El segundo enfoque construye desde cero. En lugar de reparar un sistema antiguo, construimos uno nuevo de principio a fin, diseñado tal como lo haríamos hoy. Lo construimos en lo que denominamos la Fábrica de IA. La fábrica está hecha de software, no de maquinaria. Dentro de ella, un equipo de agentes de IA especializados trabaja como lo haría un equipo de entrega consolidado. Un agente diseña la arquitectura. Otro escribe el código. Otros se encargan de la base de datos, las pruebas, la revisión de seguridad, la accesibilidad y la documentación. Trabajan conjuntamente sobre una misma especificación, verificándose y corrigiéndose mutuamente hasta que la aplicación está terminada."
+    },
+    {
+      "type": "paragraph",
+      "text": "La Fábrica tiene criterios definidos de forma deliberada. Cada aplicación que produce se construye de la misma manera moderna, sobre los mismos cimientos, de modo que la calidad proviene de la propia automatización y no del cuidado de ninguna persona en particular. La especificación es el contrato. Los agentes construyen conforme a ella, el trabajo se verifica frente a ella y una persona permanece en el proceso para aceptar o rechazar lo que los agentes producen. Dos características distinguen una aplicación construida por la Fábrica de lo que reemplaza. Es modular, ensamblada a partir de componentes pequeños —ninguno mucho mayor de mil líneas de código—, cada uno del tamaño suficiente para leerse y verificarse de forma independiente. Y el Gobierno es propietario de todo, construido sobre cimientos de código abierto, sin ninguna licencia de la que no se pueda salir y sin ningún proveedor del que no se pueda prescindir."
+    },
+    {
+      "type": "paragraph",
+      "text": "Construir desde cero también permite empezar sin cargas: libre de las dependencias obsoletas y de los supuestos de hace décadas del sistema que reemplaza. Este es el enfoque para un sistema cuya tecnología ya no tiene solución, y para un servicio completamente nuevo que no tiene ningún sistema heredado, uno de los muchos nuevos requerimientos que siguen llegando mientras el trabajo más antiguo todavía está en curso."
+    },
+    {
+      "type": "paragraph",
+      "text": "La Fábrica es el más desarrollado de los cuatro enfoques y tiene tres componentes en movimiento, cada uno objeto de su propio documento. El trabajo se define y especifica en un [entorno de diseño](/paper/qthji), donde una solicitud en lenguaje sencillo se convierte en un plan ejecutable sobre el que los agentes pueden trabajar. Los agentes construyen, prueban y despliegan la aplicación dentro de un [entorno seguro](/paper/uwpxr) bajo controles empresariales. Y todo el esfuerzo se [registra y evalúa](/paper/k3tc3) en un sistema que hace visible el progreso y permite que enfoques competidores se comparen sobre el mismo trabajo. Este documento presenta el enfoque. Esos tres documentos muestran cómo funciona la Fábrica en la práctica."
+    },
+    {
+      "type": "table",
+      "title": "Qué es una aplicación construida por la Fábrica",
+      "columns": [
+        "Propiedad",
+        "Qué significa"
+      ],
+      "rows": [
+        [
+          "Con criterio definido",
+          "Construido siempre de la misma forma moderna, sobre una base estándar única."
+        ],
+        [
+          "Modular",
+          "Ensamblado a partir de componentes pequeños, ninguno de mucho más de mil líneas, verificables de forma independiente."
+        ],
+        [
+          "De propiedad gubernamental",
+          "El código es nuestro, sobre bases de código abierto, sin ningún proveedor del que no podamos desvincularnos."
+        ],
+        [
+          "Moderno por defecto",
+          "Una interfaz web actual, un servidor de soporte vigente, datos gobernados e identidad normalizada."
+        ],
+        [
+          "Libre de sistemas heredados",
+          "Sin dependencias obsoletas ni bibliotecas sin soporte del sistema que reemplaza."
+        ],
+        [
+          "Cumplidora por defecto",
+          "Los estándares de seguridad y arquitectura incorporados desde la primera línea, no añadidos en el momento de la auditoría."
+        ]
+      ],
+      "caption": "La Fábrica construye reemplazos y servicios nuevos desde cero, conforme a un único estándar moderno del que el gobierno es propietario de extremo a extremo.",
+      "source": "Ministerio de Tecnología e Innovación."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.2",
+      "title": "Un equipo de entrega formado por agentes",
+      "caption": "La Fábrica es una línea de producción de software. Un equipo de agentes de IA especializados que cubre diseño, construcción, pruebas y seguridad, trabaja conjuntamente sobre una única especificación y produce una aplicación moderna y terminada de la que el gobierno es propietario.",
+      "image": {
+        "src": "public/images/zgym1/es/fig-5-2.jpg",
+        "alt": "Un equipo de agentes de IA especializados y diferenciados que colaboran en torno a un espacio de trabajo compartido donde una aplicación moderna toma forma en pantalla.",
+        "image_prompt": "An editorial illustration of a software factory shown as a coordinated team of distinct specialist figures working around one large shared board or screen on which a clean modern application is taking shape. The specialists read as an architect with a blueprint, a builder, a tester, a security reviewer, and a data specialist, drawn as stylized agents rather than literal people, with lines of collaboration linking them to the shared board. A sense of an entire delivery team working in concert, made of software rather than a physical assembly line. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Racionalización con IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "El tercer enfoque da un paso atrás respecto al sistema individual y observa todo un ministerio a la vez. Imagine una ciudad que creció sin planificación. Cada edificio cavó su propio pozo, puso en marcha su propio generador y trazó su propio camino hasta la puerta. El software gubernamental creció de la misma manera. Casi todas las aplicaciones construyeron su propio acceso, su propio sistema de carga de archivos, su propio módulo de informes, una y otra vez, sin que dos fueran exactamente iguales. La racionalización consiste en mapear lo que el ministerio hace realmente y luego construir la infraestructura compartida una sola vez, de modo que cada necesidad común se implemente una única vez y sea utilizada por todos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este es el enfoque que [Git Insights Ministry](/paper/offjm) hace ejecutable. Esta herramienta lee el código de todo un ministerio de una sola vez y propone una arquitectura objetivo. La racionalización es el acto de llevar esa visión a la práctica. El patrón se repite dondequiera que se aplica: cientos de aplicaciones superpuestas dentro de un ministerio se reducen a un conjunto pequeño de módulos bien estructurados, con los elementos comunes construidos una sola vez y compartidos. Como la IA realiza el análisis más intensivo y la mayor parte de la construcción, un programa que antes duraba entre cinco y ocho años puede ejecutarse en semanas o meses."
+    },
+    {
+      "type": "paragraph",
+      "text": "La racionalización ofrece la mayor ganancia a corto plazo de cualquiera de los enfoques en términos de coste, velocidad y calidad, y también es la que más exige a las personas. Reconstruir los sistemas de todo un ministerio supone un cambio real para el personal que ha organizado sus hábitos de trabajo en torno a las herramientas antiguas, y ese cambio debe planificarse con tanto cuidado como la propia reconstrucción. La tecnología es la mitad más fácil del problema. La mitad más difícil es llevar a las personas en ese camino."
+    },
+    {
+      "type": "pullquote",
+      "text": "El mismo acceso, reconstruido en decenas de aplicaciones, se convierte en un inicio de sesión único compartido. La racionalización identifica cada duplicación de este tipo y la construye una sola vez, para todos.",
+      "cite": "Libro 5 · Los cuatro enfoques para la modernización con IA"
+    },
+    {
+      "type": "table",
+      "title": "Lo que la racionalización reduce, en un ministerio",
+      "columns": [
+        "Antes: proliferación de sistemas heredados",
+        "Después: racionalizado"
+      ],
+      "rows": [
+        [
+          "185 aplicaciones independientes",
+          "16 módulos modernos"
+        ],
+        [
+          "Un acceso integrado en casi cada aplicación",
+          "Un inicio de sesión único compartido para todas"
+        ],
+        [
+          "Carga de archivos, informes y auditoría reconstruidos en numerosas ocasiones",
+          "Cada elemento común construido una sola vez y compartido"
+        ],
+        [
+          "La misma capacidad duplicada entre ministerios",
+          "Servicios compartidos a disposición de cualquier ministerio"
+        ],
+        [
+          "Un programa de sustitución de cinco a ocho años",
+          "Una reconstrucción medida en semanas o meses"
+        ]
+      ],
+      "caption": "La racionalización trabaja sobre todo el conjunto de sistemas a la vez. La redundancia que el análisis mide es la redundancia que la reconstrucción elimina.",
+      "source": "Arquitectura objetivo de Git Insights."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.3",
+      "title": "Construir la infraestructura compartida una sola vez",
+      "caption": "La racionalización trata a un ministerio como una ciudad que creció sin planificación. En lugar de que cada aplicación gestione su propio acceso, su propia carga de archivos y sus propios informes, las necesidades comunes se mapean y se construyen una sola vez, y luego se comparten en todo el conjunto de sistemas.",
+      "image": {
+        "src": "public/images/zgym1/es/fig-5-3.jpg",
+        "alt": "Una ciudad isométrica: a la izquierda, cada edificio tiene su propio pozo, generador y camino de tierra; a la derecha, los mismos edificios comparten una torre de agua, una central eléctrica y una red de calles en buen estado.",
+        "image_prompt": "Ilustración editorial isométrica de una pequeña ciudad dividida en un antes y un después. A la izquierda, edificios dispersos cada uno con su propio pozo, su propio generador y su propio camino de tierra: una imagen de infraestructura privada duplicada. A la derecha, los mismos edificios conectados a una única torre de agua compartida, una central eléctrica compartida y una red de calles compartidas en buen estado. La sensación de una infraestructura redundante por edificio sustituida por una infraestructura compartida construida una sola vez y utilizada por todos. Paleta crema apagada de Alberta, acentos en azul marino y óxido, calidad de impresión de archivo, sin texto. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.4",
+      "title": "",
+      "caption": "",
+      "chart": {
+        "kind": "sim:foundry",
+        "sim": "rationalize"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Gobierno 3.0"
+    },
+    {
+      "type": "paragraph",
+      "text": "El cuarto enfoque es el más radical y cuestiona si realmente necesitamos aplicaciones tradicionales. En este modelo, los datos permanecen donde están, pero se gestionan adecuadamente y se exponen a través de una interfaz limpia y bien documentada que un agente de IA puede leer. Sobre esos datos gobernados se sitúa una capa de agentes. No hay ninguna aplicación fija en el centro. Cuando una persona necesita realizar algo, el agente ensambla la interfaz para esa tarea, esa persona y ese momento, y la retira al terminar el trabajo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dos ideas hacen posible este modelo. En primer lugar, las reglas de negocio se escriben una sola vez, como código, extraídas directamente de la legislación, la regulación y la política. Cuando la ley cambia, las reglas cambian, y cada interacción sigue la nueva norma el mismo día. En segundo lugar, la IA se convierte en la usuaria de los datos. En lugar de mil pantallas que acceden a la base de datos cada una a su manera, los agentes leen y escriben a través de una única interfaz gobernada y auditada. Los miles de interfaces de usuario que el gobierno mantiene hoy, cada una construida, parcheada y asegurada por separado, desaparecen en gran medida, y con ellas la mayor parte del código que hay que mantener activo. En el [documento sobre Simulación](/paper/g3sim) puede encontrarse una visualización de este enfoque."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este es potencialmente el modelo más rentable y rápido de los cuatro, porque lo más costoso del software gubernamental —construir y mantener el código mismo— prácticamente desaparece. También es el más exigente. Depende de que los datos estén genuinamente bien gobernados, de que las reglas estén fielmente codificadas y de que cada acción de un agente sea observable y atribuible a una persona concreta. Todavía no hemos llegado a ese punto. Pero es la dirección hacia la que apunta el trabajo, y las decisiones que tomamos ahora están pensadas para ser compatibles con él. Es, como decimos aquí en Canadá, para donde va el disco de hockey."
+    },
+    {
+      "type": "paragraph",
+      "text": "Conviene ver la trayectoria completa. El Gobierno 1.0 era papel y ventanillas. El Gobierno 2.0 fueron los formularios digitales y los sitios web, más rápidos que el papel pero aún lentos. El Gobierno 3.0 es el servicio público trabajando con agentes de IA como trabajadores de pleno derecho, con responsabilidad en cada paso, donde una solicitud que antes tardaba días se resuelve en minutos."
+    },
+    {
+      "type": "table",
+      "title": "Del presente al Gobierno 3.0",
+      "columns": [
+        "Hoy",
+        "Gobierno 3.0"
+      ],
+      "rows": [
+        [
+          "Miles de aplicaciones fijas, cada una mantenida de forma independiente",
+          "Interfaces generadas en el momento preciso, adaptadas a la tarea y a la persona"
+        ],
+        [
+          "Reglas de negocio sepultadas en el código de cada sistema",
+          "Reglas escritas una sola vez como código, derivadas de la legislación y la política"
+        ],
+        [
+          "Cada aplicación accede a los datos a su propia manera",
+          "Los agentes leen y escriben a través de una interfaz gobernada y auditada"
+        ],
+        [
+          "Las personas operan el software",
+          "Los agentes realizan el trabajo, con responsabilidad ante una persona designada"
+        ],
+        [
+          "Un cambio en la ley implica meses de revisión",
+          "La norma cambia y todas las interacciones la aplican de inmediato"
+        ]
+      ],
+      "caption": "El Gobierno 3.0 disuelve la aplicación. Los datos gobernados y las reglas codificadas permanecen; las pantallas estáticas dejan paso a interfaces que un agente construye bajo demanda.",
+      "source": "Marco del Gobierno 3.0."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.4",
+      "title": "La aplicación se disuelve",
+      "caption": "En el modelo de IA agéntica, los datos gobernados ocupan el centro y los agentes trabajan directamente sobre ellos. La interfaz ya no es un componente de software permanente; se ensambla para la persona en el momento y se disuelve cuando la tarea concluye.",
+      "image": {
+        "src": "public/images/zgym1/es/fig-5-4.jpg",
+        "alt": "Un núcleo de datos limpio y bien organizado en el centro, rodeado de pequeños agentes de IA, con una interfaz ligera que se ensambla ante una persona y luego se disuelve.",
+        "image_prompt": "Ilustración editorial de un único núcleo de datos limpio y bien organizado que brilla en el centro, rodeado de pequeños agentes de IA trabajando a su alrededor, con una interfaz ligera que se ensambla bajo demanda ante una sola persona y se disuelve parcialmente de nuevo en luz. La sensación de un software que cede el paso a agentes que trabajan sobre datos gobernados. Paleta crema apagada de Alberta, acentos en azul marino y óxido, calidad de impresión de archivo, sin texto. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Los cuatro enfoques y lo que viene después"
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos cuatro enfoques son compatibles dentro de una misma organización. No es necesario elegir solo uno. El parque tecnológico de un gobierno es demasiado variado para eso. Algunos sistemas se toleran y se parchan levemente en el Garaje. Otros se reconstruyen desde cero en la Fábrica. Otros se integran en una consolidación mayor mediante la Racionalización. Y, con el tiempo, cada vez más trabajo se desplaza hacia el modelo de IA agéntica del Gobierno 3.0. La prueba de los cuatro criterios —tolerar, invertir, migrar o eliminar— orienta cada sistema hacia el enfoque que le corresponde, de modo que el esfuerzo se concentra donde produce mayor valor. Los cuatro son necesarios para modernizar un gobierno con rapidez."
+    },
+    {
+      "type": "keystat",
+      "label": "El objetivo al que apuntan los cuatro enfoques",
+      "value": "~95 %",
+      "body": "Una reducción de aproximadamente el 95 % en el costo y el tiempo de construcción y mantenimiento del software gubernamental. Esa es la diferencia entre renovar el patrimonio tecnológico en un solo mandato de gobierno y demorarse casi un siglo al ritmo convencional."
+    },
+    {
+      "type": "paragraph",
+      "text": "En conjunto, los cuatro enfoques son la manera de alcanzar ese objetivo. Ahora tenemos una imagen clara de cómo puede reconstruirse el gobierno. Eso plantea la siguiente pregunta. Si la IA va a realizar una parte tan significativa del trabajo —reparar, construir, consolidar y, con el tiempo, operar los sistemas en los que funciona el gobierno—, ¿cómo nos aseguramos de que lo haga bien, de forma segura y con un estándar que podamos defender? La respuesta está en la estructura que construimos alrededor de la propia IA.\n\n\nLlamamos a esa estructura el arnés, y es el tema del próximo documento: **[El arnés bien construido](/paper/p7p2k)**."
+    },
+    {
+      "type": "figure",
+      "title": "Explore esto como un lienzo interactivo",
+      "caption": "Cuatro formas de modernizar, desde la intervención más leve a la reconstrucción más completa. Un parque tecnológico real necesita las cuatro. Parte de El Lienzo (libro 19); arrastre los nodos, haga zoom y pulse Escuchar para obtener una guía narrada.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "approaches",
+        "audio": true
+      }
+    },
+    {
+      "type": "figure",
+      "title": "Explore esto como un lienzo interactivo",
+      "caption": "Ninguna aplicación en el centro. Los agentes actúan sobre datos gobernados a través de salvaguardas y generan la interfaz bajo demanda. Parte de El Lienzo (libro 19); arrastre los nodos, haga zoom y pulse Escuchar para obtener una guía narrada.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "gov3",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "modernization",
+        "ai-factory",
+        "government-3-0",
+        "strategy"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "related": [
+    "offjm",
+    "p7p2k",
+    "qthji",
+    "bbkac",
+    "xs7uh"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 25 campos actualizados."
+      }
+    ]
+  },
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js",
+    "components/visuals/bespoke/sim/_common.js",
+    "components/visuals/bespoke/sim/Foundry.js"
+  ],
+  "translation_status": "reviewed",
+  "source_signature": "1306143425"
+}

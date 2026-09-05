@@ -1,0 +1,89 @@
+# ============================================================
+#  SECRETS — never commit. Contains the Vertex service-account
+#  private key, OpenAI / ElevenLabs keys, DB strings, tokens.
+# ============================================================
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+# ...but keep the committed template (no real secrets in it):
+!.env.example
+
+# ============================================================
+#  SENSITIVE INTERNAL MATERIAL
+#  Classified "Sensitive — Internal Use Only" with real
+#  vulnerability and PII figures. Excluded so it cannot be
+#  pushed to GitHub. If this repository is PRIVATE and you
+#  intend to track it, delete the line below.
+# ============================================================
+technical-reference/sensitive-facts.md
+
+# ------------------------------------------------------------
+#  INTERNAL SOURCE / WORKING MATERIAL — not committed.
+#  Authoring source, not the published site (includes a
+#  third-party doc, an audio recording, and internal
+#  transcripts). Excluded per author's instruction.
+# ------------------------------------------------------------
+technical-reference/
+video-transcripts/
+style-guide/janak-transcripts/
+original-transcripts/
+hiking/
+_archive/
+whitepaper-raw-materials.md
+
+# Claude Code per-directory runtime state (locks, local settings) at the repo root.
+/.claude/
+
+# ============================================================
+#  Dependencies
+# ============================================================
+node_modules/
+**/node_modules/
+
+# ============================================================
+#  Local backups & scratch (not part of the site)
+# ============================================================
+.backups/
+**/.backups/
+scratch/
+**/scratch/
+
+# ============================================================
+#  Deploy-swap transient + logs
+# ============================================================
+app/site/index.dev.html.bak
+**/index.dev.html.bak
+*.log
+
+# ============================================================
+#  OS / editor cruft
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+.shots/
+app/site/public/images/sims/**/*.src.png
+threejs-skills/
+french-translation/
+
+# ============================================================
+#  P21 sim: local build scratch + screenshots (never publish third-party / shots)
+# ============================================================
+app/site/.shots-*/
+app/site/data/sims/_research/
+
+# ============================================================
+#  Image regeneration cache — the .source.png saved next to each
+#  generated .jpg is used only to condition FR image regeneration.
+#  It is never served (the site renders the .jpg). Kept locally so
+#  regeneration still works; not pushed (it was ~570 MB of the repo).
+# ============================================================
+app/site/public/images/**/*.source.png
+
+# Nested companion code repos (own .git, published separately to GovAlta/*). Never part of the site snapshot.
+repos/

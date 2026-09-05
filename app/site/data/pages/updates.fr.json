@@ -1,0 +1,35 @@
+{
+  "_note": "Living updates feed for one locale, newest first. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Mises à jour vivantes",
+    "title_lead": "Ce qui a",
+    "title_em": "changé.",
+    "lede": "Nouveaux constats, nouvelles versions logicielles, nouvelles preuves. Quatre ans de cycle. Du plus récent au plus ancien.",
+    "empty": "Aucune mise à jour publiée pour le moment.",
+    "kinds": {
+      "release": "Mise en service",
+      "finding": "Constat",
+      "paper": "Livre",
+      "note": "Note"
+    }
+  },
+  "entries": [
+    {
+      "id": "2026-07-06-launch",
+      "date": "2026-07-06",
+      "kind": "release",
+      "title": "Lancement des livres blancs Velocity",
+      "body": "Les livres blancs Velocity ont été lancés publiquement le 6 juillet, après un lancement en douceur auprès de partenaires de l’industrie le 16 juin. La collection s’ouvre avec 21 livres et 7 dépôts publics, entièrement bilingue en français et en anglais. Chaque livre est interactif, avec des simulations narrées, des images originales, de la vidéo et de l’audio, et l’ensemble de la collection, les textes comme le code, est entièrement à code source ouvert.",
+      "links": [
+        {
+          "label": "Parcourir la collection",
+          "href": "/"
+        },
+        {
+          "label": "Explorer les dépôts",
+          "href": "/repos"
+        }
+      ]
+    }
+  ]
+}

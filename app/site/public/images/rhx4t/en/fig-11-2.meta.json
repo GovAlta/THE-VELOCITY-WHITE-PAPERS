@@ -1,0 +1,17 @@
+{
+  "paper_id": "rhx4t",
+  "locale": "en",
+  "slot": "fig-02",
+  "out_path": "public\\images\\rhx4t\\en\\fig-11-2.jpg",
+  "bytes_jpg": 245543,
+  "bytes_png_source": 2979145,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-18T18:59:40.925Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration of a clean, modern classroom information portal shown on a tablet or screen held by an educator standing before a simple chalkboard and a few desks. Around the screen, a small ring of enterprise-control emblems is drawn: a privacy padlock, a security shield, an identity key, and a server for production infrastructure, each connected to the application by a thin line. A sense of a trustworthy public service built to a high bar. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration of a clean, modern classroom information portal shown on a tablet or screen held by an educator standing before a simple chalkboard and a few desks. Around the screen, a small ring of enterprise-control emblems is drawn: a privacy padlock, a security shield, an identity key, and a server for production infrastructure, each connected to the application by a thin line. A sense of a trustworthy public service built to a high bar. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

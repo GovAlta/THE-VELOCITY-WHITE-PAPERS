@@ -1,0 +1,17 @@
+{
+  "paper_id": "qthji",
+  "locale": "fr",
+  "slot": "fig-04",
+  "out_path": "public\\images\\qthji\\fr\\fig-8-3.jpg",
+  "bytes_jpg": 135995,
+  "bytes_png_source": 2065081,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:05:04.280Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as a node graph. Labelled rounded nodes joined by curved labelled edges: « NUAGE », « PARE-FEU », « FRONTAL », « SERVEUR », « API TIERCE », « BASE DE DONNÉES » and « INTÉGRATION », arranged in a connected layout. At the edge of the canvas, a small person token labelled « HUMAIN » and a small robot token labelled « AGENT », each with a thin line reaching onto the canvas to show they both author it. A small corner tag reads « VERSIONNÉ, À EMPORTER ». Calm, architectural, legible labels. No logos, no people beyond the small schematic tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial architecture diagram on warm cream paper, deep navy line work with small rust accents, drawn as a node graph. Labelled rounded nodes joined by curved labelled edges: « NUAGE », « PARE-FEU », « FRONTAL », « SERVEUR », « API TIERCE », « BASE DE DONNÉES » and « INTÉGRATION », arranged in a connected layout. At the edge of the canvas, a small person token labelled « HUMAIN » and a small robot token labelled « AGENT », each with a thin line reaching onto the canvas to show they both author it. A small corner tag reads « VERSIONNÉ, À EMPORTER ». Calm, architectural, legible labels. No logos, no people beyond the small schematic tokens. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\qthji\\en\\fig-8-3.source.png"
+}

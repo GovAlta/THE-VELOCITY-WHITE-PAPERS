@@ -1,0 +1,461 @@
+{
+  "id": "eujjc",
+  "num": "15",
+  "sequence": "15 de 22",
+  "tier": "Policy & People",
+  "category": "paper",
+  "title": "El problema de la compresión",
+  "subtitle": "Cómo deben cambiar la jerarquía, la comunicación y la supervisión humana en la era de la IA.",
+  "track": "Human and Change Management",
+  "authors": [
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": 25,
+  "status": "Published",
+  "tags": [
+    "compression",
+    "hierarchy",
+    "organizational-design",
+    "agents",
+    "context-window",
+    "human-in-the-loop",
+    "change-management"
+  ],
+  "repo": null,
+  "abstract": "Las organizaciones jerárquicas existen para resolver un problema de información. La información de base debe fluir hacia la alta dirección para apoyar la toma de decisiones, y a lo largo de ese recorrido se comprime y se divulga de forma selectiva. La pirámide es un algoritmo de compresión con pérdida, anterior a la era digital. Los agentes de IA funcionan de manera diferente y eliminan gran parte del costo en tiempo y en verborrea que impone la jerarquía humana, aunque se enfrentan a sus propios límites de compresión, establecidos por la capacidad finita de la ventana de contexto. Para aprovechar estos beneficios, las organizaciones deben rediseñar la jerarquía, desplazar los informes del texto hacia la simulación y la interacción visual, y trasladar la supervisión humana del agente individual al nivel del sistema.",
+  "hero_image": {
+    "src": "public/images/eujjc/es/hero.jpg",
+    "alt": "Ilustración editorial de portada: una base amplia de código denso e informes que se estrecha hacia arriba a través de una pirámide hasta un único punto, con una línea delgada que desde ese punto desciende y se ramifica en múltiples ramas; trazos en azul marino oscuro de Alberta con pequeños detalles en óxido sobre papel crema cálido.",
+    "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A wide base of dense, fine lines suggesting code and reports funnels upward through a narrowing pyramid to a single point at the top, while a thin rust line runs from that point back downward and fans out into many branches at the base. The motion of compressing upward and contextualizing downward is the whole image. Calm, archival, abstract. Wide cover aspect. No text, no logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/eujjc.mp3",
+    "duration_sec": 1746
+  },
+  "tldr_presentation": {
+    "id": "eujjc-tldr",
+    "title": "El documento, en síntesis",
+    "locale": "es",
+    "owner_id": "eujjc",
+    "slides": [
+      {
+        "id": "01",
+        "title": "El problema de la compresión",
+        "audio_file": "public/audio/es/eujjc-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Documento 14 · Gestión humana y del cambio",
+        "subcaption": "Cómo deben transformarse la jerarquía, la comunicación y la supervisión humana en la era de la IA.",
+        "text": "Las organizaciones jerárquicas existen para resolver un problema de información. La realidad del terreno debe llegar a la alta dirección para que pueda tomar decisiones y, en ese trayecto, se comprime y se divulga de forma selectiva. La pirámide es un algoritmo de compresión con pérdida, anterior a la era digital. Este documento sostiene que la compresión —hacia arriba en la jerarquía y de vuelta hacia abajo— es el desafío central tanto para las personas como para la IA, y que aprovechar los beneficios de la IA implica rediseñar la jerarquía, el documento de información y la función humana de supervisión."
+      },
+      {
+        "id": "02",
+        "title": "La jerarquía funciona en ambas direcciones",
+        "audio_file": "public/audio/es/eujjc-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "Por qué existe la pirámide",
+        "visual_config": {
+          "left": {
+            "label": "Compresión, hacia arriba",
+            "body": "Un millar de colaboradores no puede ocupar una hora del día de un solo directivo. Cada nivel elimina los detalles de menor valor para que solo la señal relevante llegue a la cúspide."
+          },
+          "right": {
+            "label": "Contextualización, hacia abajo",
+            "body": "Una visión definida en la cúspide debe traducirse para cada unidad, respondiendo a una sola pregunta: ¿qué hacemos de forma diferente el lunes por la mañana?"
+          }
+        },
+        "text": "La dirección intermedia gestiona la compresión en dos sentidos. Hacia arriba, la realidad del terreno se agrupa temáticamente y se reduce para que la alta dirección no tenga que leer mil páginas al día. Hacia abajo, una visión amplia se contextualiza en tácticas concretas para cada unidad. En su mejor expresión, las reglas son claras; en una organización disfuncional, las señales importantes se pierden por el camino."
+      },
+      {
+        "id": "03",
+        "title": "Lo que la IA elimina",
+        "audio_file": "public/audio/es/eujjc-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Los costos que impone la jerarquía",
+        "visual_config": {
+          "items": [
+            {
+              "label": "El costo del tiempo",
+              "desc": "Un ciclo que puede tardar un mes entre la alta dirección y la realidad del terreno puede completarse en segundos entre agentes de IA."
+            },
+            {
+              "label": "El costo de la verbosidad",
+              "desc": "Una ventana de contexto amplia puede procesar mil informes de situación a la vez e identificar la señal relevante mediante reconocimiento de patrones."
+            },
+            {
+              "label": "Memoria compartida",
+              "desc": "Los agentes de IA acceden a la misma información de terreno en cualquier nivel, por lo que no existe el lento juego del teléfono descompuesto."
+            },
+            {
+              "label": "Paralelismo",
+              "desc": "Decenas o centenares de agentes diferenciados trabajan de forma simultánea, cada uno ejecutando su propia auditoría."
+            }
+          ]
+        },
+        "text": "Los agentes de IA funcionan de manera fundamentalmente distinta a las personas. Siguen teniendo límites, pero superan gran parte de lo que impone la jerarquía humana: el costo de tiempo de un mes que implica una consulta de ida y vuelta, la necesidad de comprimir la información por su extensión, y la pérdida que conlleva el traspaso entre personas. Los agentes comparten una memoria común y operan en paralelo, de modo que una solicitud que antes tardaba un mes puede resolverse en segundos."
+      },
+      {
+        "id": "04",
+        "title": "Invertir la jerarquía",
+        "audio_file": "public/audio/es/eujjc-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Un responsable, múltiples tareas",
+        "visual_config": {
+          "stat_value": "1 : 8",
+          "stat_label": "En una jerarquía de agentes de IA, la proporción puede invertirse: ocho agentes supervisores auditando a cada trabajador"
+        },
+        "subcaption": "Ciberseguridad, control de calidad, gestión de cambios, revisión de código, infraestructura, asuntos legales, privacidad.",
+        "text": "En una jerarquía humana se maximiza el número de colaboradores y se minimiza el de gestores, a razón aproximada de un gestor por cada ocho personas. En una jerarquía agéntica puede resultar conveniente invertir esa proporción. Un único agente de codificación puede estar acompañado de un agente de ciberseguridad, un agente de control de calidad, un agente de gestión de cambios, un agente de revisión de código y otros, cada uno de los cuales genera incidencias cuando detecta una deficiencia. Hay un solo responsable central, rodeado de subagentes que realizan auditorías de forma continua."
+      },
+      {
+        "id": "05",
+        "title": "El límite que los agentes aún encuentran",
+        "audio_file": "public/audio/es/eujjc-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "La compresión no desaparece",
+        "visual_config": {
+          "stat_value": "466M lines",
+          "stat_label": "Mucho más código del que cualquier agente individual puede abarcar; el alcance efectivo es de aproximadamente cuarenta a cuatrocientos mil caracteres"
+        },
+        "subcaption": "Tras un millón de tokens, incluso los mejores modelos reinician y resumen.",
+        "text": "Los agentes siguen enfrentando un límite infranqueable. Un único agente mantiene una comprensión efectiva de solo una cierta cantidad de información, y 466 millones de líneas de código están muy por encima de esa capacidad. Después de aproximadamente un millón de tokens, incluso los mejores modelos reinician, comprimen y resumen —una forma de amnesia diseñada—. La jerarquía persiste, por tanto, por el mismo motivo de siempre, solo que a una escala diferente: hay que reducir el patrimonio tecnológico hasta un mapa de capacidades de negocio que un agente —y una persona— puedan gestionar."
+      },
+      {
+        "id": "06",
+        "title": "La sesión informativa y la supervisión humana",
+        "audio_file": "public/audio/es/eujjc-tldr/06.mp3",
+        "visual": "title",
+        "caption": "Gestionar el sistema, no el organismo",
+        "subcaption": "Trasladar la supervisión del agente individual al nivel del sistema.",
+        "text": "Incluso un modelo de IA perfecto del gobierno debe comprimirse para llegar a una persona, porque el lenguaje transmite significado a aproximadamente cuarenta bits por segundo, mientras que la IA opera a una velocidad muy superior. La solución está en ampliar el canal: simulación, visualización e interacción en lugar de la nota informativa densa, y supervisión humana a nivel del ecosistema en lugar del agente individual. Una mejora de veinte veces no es alcanzable si se mantiene la jerarquía que hoy administramos."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "El problema de la compresión"
+    },
+    {
+      "n": "02",
+      "title": "Cómo se transforma la jerarquía en la era de la IA"
+    },
+    {
+      "n": "03",
+      "title": "Invertir la jerarquía"
+    },
+    {
+      "n": "04",
+      "title": "Los límites que aún enfrentan los agentes"
+    },
+    {
+      "n": "05",
+      "title": "Transformar el documento de información"
+    },
+    {
+      "n": "06",
+      "title": "La organización del futuro y la persona en el circuito"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Las organizaciones jerárquicas existen para resolver un problema de información. La información de base debe fluir hacia la alta dirección para apoyar la toma de decisiones, pero a lo largo de ese recorrido debe priorizarse y divulgarse de forma selectiva según su importancia. Cada nivel de la dirección intermedia comprime y reduce aún más la información en función de la experiencia y el criterio de cada responsable, de modo que solo lo que se considera más relevante llega a quienes toman las decisiones. A lo largo de este proceso, los directivos individuales discriminan por pertinencia y agrupan los datos en temas y principios comunes."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "El problema de la compresión"
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto es una necesidad. Si una organización cuenta con mil colaboradores, cada uno de los cuales presenta un informe escrito de una página sobre los problemas que enfrenta, la dirección tendría que leer mil páginas de documentación cada día, lo cual no es posible. Por eso, la información que circula por ese recorrido debe comprimirse: los conceptos se agrupan temáticamente, los asuntos de menor prioridad y menor valor se resuelven en el nivel local o se omiten, de modo que cuando la información llega a la alta dirección tiene una extensión y una estructura similares a las de la información de base, aunque altamente condensada."
+    },
+    {
+      "type": "paragraph",
+      "text": "La jerarquía actúa como un algoritmo de compresión con pérdida, con reglas no escritas y una aplicación inconsistente. En su mejor versión, existen procedimientos operativos estándar y los directivos comprenden con claridad qué es importante y qué no lo es. En una organización disfuncional, es razonable esperar que señales importantes se pierdan porque los responsables intermedios tienen una comprensión inconsistente de la visión estratégica y de lo que constituye un asunto relevante. La jerarquía en forma de pirámide es un algoritmo de compresión de información anterior a la era digital, concebido para apoyar la toma de decisiones. Si no fuera así, las jerarquías organizacionales serían planas, con un único líder al que reportarán directamente mil colaboradores individuales."
+    },
+    {
+      "type": "pullquote",
+      "text": "La jerarquía en forma de pirámide es un algoritmo de compresión de información anterior a la era digital, concebido para apoyar la toma de decisiones.",
+      "cite": "Janak Alford, viceministro, Ministerio de Tecnología e Innovación"
+    },
+    {
+      "type": "paragraph",
+      "text": "A la inversa, las organizaciones jerárquicas también funcionan como un algoritmo de descompresión de información. En la [Academia de IA de Alberta](/paper/dt725) utilizamos el término «hidratación»: una pequeña cantidad de información, como un enunciado de visión, puede expandirse y contextualizarse hasta resultar pertinente para cada uno de los mil colaboradores individuales. Imagine un enunciado de visión en el que el líder afirma que la organización será «extremadamente centrada en las personas». Ese enunciado significa cosas distintas para cada área funcional. En atención al cliente puede implicar capacitar al personal para mantener conversaciones significativas y empáticas. En desarrollo de productos puede significar crear soluciones altamente personalizables según la fisiología o la psicología de cada usuario. En mercadeo, los equipos pueden centrarse en contar historias que conecten con los clientes a nivel personal. En finanzas, podría sugerir sacrificar algo de rentabilidad para sostener la imagen de marca y mantener principios en la forma de prestar los servicios. Todo esto requiere el contexto de cada unidad, y un líder puede no tener tiempo de redactar un enunciado de visión específico para cada empleado."
+    },
+    {
+      "type": "paragraph",
+      "text": "La dirección intermedia toma una orientación o estrategia y, gracias a su mayor conocimiento y proximidad a las unidades que supervisa, contextualiza esa visión y responde a la pregunta esencial: ¿qué cambios a la rutina del día a día trae esta visión? Una organización funcional lo hace con eficacia, transformando la visión en tácticas concretas. Una organización disfuncional deja esos enunciados en la ambigüedad y genera confusión e incertidumbre entre los colaboradores sobre qué cambios se esperan en sus procedimientos operativos y en sus tácticas."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 14.1",
+      "title": "La jerarquía como máquina de compresión bidireccional",
+      "caption": "La información de base se comprime al ascender, por lo que la granularidad de los mil informes se pierde. A la inversa, la visión y la estrategia se contextualizan al descender: la orientación se expande en tácticas específicas para cada unidad. Ambas direcciones conllevan pérdida.",
+      "image": {
+        "src": "public/images/eujjc/es/fig-14-1.jpg",
+        "alt": "Una pirámide dibujada a mano, dividida en capas. En el lado izquierdo, franjas amplias de detalle fino en la base se estrechan a medida que las flechas ascendentes atraviesan capas de gestión etiquetadas hasta llegar a un único punto en la cima, con el texto «compresión». En el lado derecho, una sola flecha parte desde la cima y se abre hacia abajo en varios recuadros de unidades etiquetadas, con el texto «contextualización».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A pyramid divided into horizontal layers labelled, bottom to top, COLABORADORES, RESPONSABLE, DIRECTOR, DIRECCIÓN. On the LEFT half, broad bands of fine detail at the base narrow as upward arrows pass through each layer, captioned COMPRESIÓN, with a small note near the apex reading INFORMACIÓN DE BASE, COMPRIMIDA. On the RIGHT half, a single arrow leaves the apex and fans out, widening downward into a row of labelled unit boxes FINANZAS, OPERACIONES, SERVICIO at the base, captioned CONTEXTUALIZACIÓN, with a small note reading ¿QUÉ HACEMOS EL LUNES? Calm, architectural, legible labels. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Cómo se transforma la jerarquía en la era de la IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "A medida que los agentes de IA se incorporan a la organización, ofrecen la oportunidad de abordar este problema de compresión. Funcionan de manera fundamentalmente diferente a las personas. Siguen enfrentando retos relacionados con el contexto, pero superan muchos de los problemas específicos que surgen dentro de una organización jerárquica."
+    },
+    {
+      "type": "paragraph",
+      "text": "El primero es el costo en tiempo. Es habitual que una organización tarde un mes en transmitir una solicitud desde la alta dirección hasta la información de base, formular una respuesta y devolverla a través de los niveles de la jerarquía. Con un fuerte sentido de urgencia esto puede ocurrir en horas, pero en condiciones normales el ciclo completo lleva semanas o meses. Esto depende del ritmo de las reuniones, el método de comunicación, el tiempo necesario para asimilar un mensaje y transformarlo, y la necesidad de que cada nivel lo estructure, lo valide, lo difunda de manera diferente en cada unidad, reúna y revise la respuesta de los colaboradores, y la devuelva a través de los controles editoriales y de calidad. Ese mes de demora es un costo en tiempo y productividad para cualquier asunto. Los agentes de IA organizados en jerarquía no sufren este costo. Dada su velocidad y su capacidad de compartir un recuerdo exacto y común de lo que se solicita, una petición en una jerarquía de agentes podría resolverse en segundos. Un agente supervisor le pide a un agente subordinado que responda y recibe la información de base, contextualizada, en instantes. El problema de velocidad de la jerarquía desaparece."
+    },
+    {
+      "type": "paragraph",
+      "text": "El segundo es la verborrea. La extensión y el detalle de la información de base ya no requieren el mismo nivel de compresión. Una IA con una ventana de contexto de un millón de tokens podría absorber y retener los informes de situación de mil colaboradores en una sola instrucción y determinar, mediante el reconocimiento de patrones, qué señales son más relevantes. Podría guardar esta información, escribir secuencias de instrucciones deterministas para procesarla y extraer las etiquetas más pertinentes, y analizar recursivamente los datos y las conclusiones a lo largo de una amplia gama de categorías temáticas; un proceso que lleva segundos. La IA no enfrenta los mismos requisitos de compresión que las personas, por lo que los datos no necesitan transitar por capas intermedias ni contextualizarse de la misma manera."
+    },
+    {
+      "type": "paragraph",
+      "text": "El tercero concierne a la propia estructura de la memoria. Las personas se comunican como lo hacen porque no comparten un banco de memoria común. Lo que sé debe convertirse en palabras y transmitirse lentamente, escribiendo a aproximadamente una palabra por segundo o, mediante comunicación oral, a unos cuarenta bits por segundo. Lo que he observado y comprendido pasa por un nivel de compresión humana con pérdida antes de que pueda compartirlo. Los agentes de IA no tienen esta limitación, porque pueden acceder a la misma información de base en cualquier nivel de la jerarquía. El tránsito y la transformación de datos, la compresión y la contextualización, no son necesarios. Un agente envía una señal indicando que existen ciertos datos, y otro agente los selecciona y los lee en tiempo real, sincronizado con el propio agente, y ofrece retroalimentación según su función."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sigue siendo necesaria la diferenciación entre agentes, y este es un punto clave. Los agentes pueden compartir la misma fuente de memoria común, pero un agente bien configurado con su propio arnés y su propio contexto desempeñará una función diferente. La literatura especializada muestra que no es posible construir un único agente que lo haga todo. Es necesario separar las competencias, de manera similar a como las personas ocupan roles específicos. Un agente de programación y un agente de ciberseguridad, separados y sin compartir exactamente el mismo contexto, superarán en rendimiento a un único agente que concentre la totalidad de las habilidades. La diferenciación también permite el paralelismo. Dos agentes separados pueden abordar diferentes partes del trabajo de forma simultánea, mientras que un único agente solo puede dar un paso a la vez. Cuantos más agentes se incorporen, mayor será el procesamiento en paralelo; es habitual tener decenas o centenares de agentes procesando de forma concurrente en una misma iniciativa, ya que cada uno ejecuta su propia auditoría y revisión."
+    },
+    {
+      "type": "paragraph",
+      "text": "Otra razón para la separación es que un agente de IA individual no es un testigo fiable de su propio rendimiento. Cuando se le solicita, suele cometer errores y afirmar con exceso de confianza que ha completado su trabajo. Otro agente, con su propia ventana de contexto y su propia instrucción, examinará esas afirmaciones con una perspectiva nueva y evaluará el trabajo de manera diferente. Dos agentes de programación —uno con la tarea principal de programar y otro con la tarea secundaria de auditar— superarán el rendimiento de un único agente, tanto en velocidad y fiabilidad, como en habilidades individuales y capacidades del arnés."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Invertir la jerarquía"
+    },
+    {
+      "type": "paragraph",
+      "text": "En una jerarquía humana, se busca maximizar el número de colaboradores individuales y minimizar la carga de gestión. En el sector público hay una proporción aproximada de uno a ocho: un directivo por cada ocho personas en plantilla. En una jerarquía agéntica podría ser beneficioso invertir esa proporción. Por cada agente de IA que trabaja, se podría razonablemente esperar ocho supervisores auditando y validando que el trabajo sea exacto y completo."
+    },
+    {
+      "type": "keystat",
+      "label": "Invertir la proporción",
+      "value": "1 : 8",
+      "body": "En una jerarquía humana, hay aproximadamente un directivo por cada ocho empleados. En una jerarquía de agentes de IA, la proporción puede invertirse: ocho agentes supervisores auditan y validan el trabajo de cada empleado."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si un único agente de programación estuviera desarrollando una aplicación empresarial, podría rodearse de un agente de ciberseguridad, un agente de control de calidad, un agente de gestión del cambio, un agente de revisión de código, un agente de infraestructura, un agente de comunicaciones, un agente jurídico y un agente de privacidad, cada uno supervisando el trabajo y abriendo incidencias cuando detecta deficiencias. Este es probablemente el modelo de implementación futuro, en el que se segmentan las distintas competencias. Solo puede haber un chef en la cocina, pero se puede rodear a ese chef de subagentes, cada uno con su propia competencia, ejecutando auditorías y evaluaciones continuas. Se puede utilizar el modelo principal con la mayor ventana de contexto como agente ejecutor, mientras los agentes secundarios realizan comprobaciones deterministas de alta velocidad y más sencillas, y señalan cuándo los sistemas se desincronizan, tal como se describe en el [documento Rojos, Azules, Amarillos y Verdes](/paper/l199t) y en el [documento sobre el Arnés Anti-Deriva](/paper/of1cj)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 14.2",
+      "title": "Un ejecutor, ocho supervisores",
+      "caption": "Un único agente de programación en el centro, rodeado por agentes especializados, cada uno con una competencia propia que abre una incidencia cuando detecta una deficiencia. La proporción humana se invierte: la mayoría de los agentes auditan, no producen.",
+      "image": {
+        "src": "public/images/eujjc/es/fig-14-2.jpg",
+        "alt": "Un diagrama en anillo dibujado a mano. Un único token de robot en el centro, etiquetado como «ejecutor», rodeado por ocho tokens de robot más pequeños dispuestos en círculo, cada uno etiquetado con una competencia: ciberseguridad, control de calidad, gestión del cambio, revisión de código, infraestructura, comunicaciones, jurídico, privacidad. Pequeñas flechas apuntan hacia el centro desde cada supervisor; algunas llevan una pequeña etiqueta con la palabra «incidencia».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A single simple robot token at the centre inside a box labelled EJECUTOR. Around it, eight smaller robot tokens arranged evenly in a ring, each labelled with one concern: CIBERSEGURIDAD, CONTROL DE CALIDAD, GESTIÓN DEL CAMBIO, REVISIÓN DE CÓDIGO, INFRAESTRUCTURA, COMUNICACIONES, JURÍDICO, PRIVACIDAD. Thin arrows point inward from each ring token toward the centre, two of them carrying a small rust tag reading INCIDENCIA. A small caption below reads UN CHEF, OCHO AUDITORES. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto invierte la jerarquía en el espacio agéntico, porque por cada agente ejecutor puede haber ocho supervisores. También puede requerirse una jerarquía con una forma completamente diferente, en la que los asuntos que no puedan resolverse en el nivel agéntico individual se escalen —con la información de base adjunta— para ser resueltos en tiempo real por un consejo o un agente único que mantenga la implementación y la visión alineadas con la estrategia general. La jerarquía y la diferenciación de tareas siguen siendo necesarias, pero muchos rasgos de la jerarquía humana desaparecen. Lo que queda es un modelo operativo fundamentalmente diferente que conserva cierta distinción individual, pero que se apoya en un sistema de memoria común, y donde muchos de los elementos propios de una jerarquía humana tradicional desaparecen."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Los límites que aún enfrentan los agentes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los sistemas agénticos siguen adoleciendo de una limitación significativa. Aunque un agente puede procesar miles de veces más información en una sola instrucción que una persona, a la mayor escala esto desplaza el problema uno o dos órdenes de magnitud más arriba en lugar de eliminarlo. Este documento parte de «[El barco de Teseo de dos mil millones de dólares](/paper/cux4h)» y de un sistema de 466 millones de líneas de código. Se trata de un volumen de código muy superior al que un solo agente puede procesar. Los agentes individuales son eficaces con, quizás, entre cuarenta y cuatrocientas mil caracteres, lo que significa que un agente individual solo puede mantener una comprensión efectiva de una cantidad limitada de información en su nivel más básico."
+    },
+    {
+      "type": "keystat",
+      "label": "El alcance efectivo de un único agente",
+      "value": "40 000–400 000",
+      "body": "Los agentes individuales son eficaces con quizás cuarenta a cuatrocientos mil caracteres, una fracción de los 466 millones de líneas de código del parque tecnológico. Por eso persisten los niveles jerárquicos, aunque situados a una escala diferente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para orientar la implementación, necesitamos leer cada línea de ese código para determinar las reglas de negocio y las funciones que describe. ¿Qué intentaba hacer el código? ¿Era una interfaz de usuario, un flujo de trabajo, protección de datos, un formulario de inicio de sesión o cualquiera de las miles de funciones que sirve una aplicación moderna? Para analizarlo, necesitamos miles de agentes que lean el código, contextualicen la función de cada parte y la abstraigan en temas comunes. Un formulario de inicio de sesión con nombre de usuario, contraseña e inicio de sesión único puede categorizarse como autorización. Cada una de las miles de funciones principales integradas en el código se convierte en una abstracción dentro de la arquitectura general. Podríamos acordar que una aplicación tiene autorización, pero la implementación variará en cada aplicación según la naturaleza y la sensibilidad de los datos que gestiona. Existen temas y arquitecturas comunes, y llegar a ellos es en sí mismo una forma de compresión."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este proceso de compresión y abstracción es necesario para que el plan general no sean 466 millones de líneas de código, ni siquiera miles de módulos, sino un mapa de capacidades de negocio —exhaustivo pero altamente condensado— que un agente estratégico pueda comprender, validar y gobernar. Los niveles de jerarquía persistirán debido a los límites de la ventana de contexto del modelo. Simplemente estarán fijados en una escala diferente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hace uno o dos años, nos satisfacía que un modelo pudiera generar de forma confiable un fragmento de código funcional que compilara. Hoy es poco habitual que una página, o incluso una aplicación completa, no compile, porque los agentes de codificación han avanzado enormemente. Eso nos impulsa a niveles más altos de la jerarquía. En lugar de una página, queremos la aplicación completa; en lugar de una aplicación, un ministerio; y en lugar de un ministerio, un gobierno. Las ventanas de contexto han crecido, pero no tanto. Si se intentara que un solo agente analizara y rediseñara todo el sistema de gobierno, el proceso sería demasiado lento y toparía con los mismos límites que encuentra una persona, donde la complejidad acaba superando al agente. A diferencia de las personas, la IA tiene ventanas de contexto con un límite fijo. Tras un millón de tokens, incluso los mejores modelos se reinician, pasan por una forma de compresión y resumen lo que están trabajando. Eso es una forma de amnesia programada. Al desarrollar incluso una sola aplicación, un agente puede atravesar decenas o centenares de ciclos de compresión y perder el hilo conductor del trabajo."
+    },
+    {
+      "type": "paragraph",
+      "text": "La analogía humana es el sueño. Si uno interrumpe una tarea y duerme, se despierta recordando la naturaleza general del trabajo, pero cierta fidelidad se pierde al retomarlo. Puede que no ocurra en una sola noche, pero tras dos semanas de vacaciones, o un año de licencia, la nitidez de la tarea en curso se desvanece. Esto es similar a la compresión que atraviesa un modelo. Cada transferencia de un agente al siguiente equivale, en esencia, a que un nuevo agente asuma la tarea. Podemos mantener un relato comprimido y de alta fidelidad de los pasos dados para que el siguiente agente los retome, del mismo modo que un funcionario documenta el expediente antes de salir para que un colega pueda continuar la gestión al día siguiente. La compresión de la información también debe ocurrir en la era de los agentes de IA, tan solo ocurre a una magnitud diferente y con un grado distinto de fidelidad en la memoria y la comunicación. Si vamos a transformar 466 millones de líneas de código en varios miles de funciones de negocio y varios centenares de módulos, esta compresión debe producirse, tanto para beneficio del agente como para el nuestro. Si queremos mantener a una persona en el circuito —y prescindir de ello parece inviable por ahora—, necesitaremos comprimir la información hasta niveles comprensibles para las personas."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Transformar el documento de información"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando una persona y un agente de IA colaboran en la transformación de doscientas aplicaciones, la información presentada requiere una compresión radical para quien toma las decisiones. La justificación y la metodología que sustentan esa compresión pueden recogerse en miles de páginas de proceso, pero eso supera la capacidad humana de lectura y excede la capacidad de supervisión y verificación de quien decide, que con frecuencia no tiene formación técnica. Entonces, ¿cómo se comprime una propuesta como la contenida en los libros blancos Velocity —que de por sí requieren horas de lectura— en un único documento de información que la persona que toma las decisiones pueda comprender?"
+    },
+    {
+      "type": "paragraph",
+      "text": "El método habitual es una nota informativa que ofrece a quien decide lo suficiente para entender los conceptos generales, las medidas de mitigación de riesgos y la intención general, junto con evidencia de que la implementación es confiable. Hay investigación, hay evidencia y hay riesgos identificados con estrategias de mitigación. Todo ello permite que la alta dirección se sienta segura al dar su aprobación y pueda justificarla si se cuestiona o si las cosas no salen según lo previsto. Esa compresión importa, porque si se hace mal —si la nota informativa no satisface la necesidad de información de las personas, aunque esté bien fundamentada en sus miles de páginas de respaldo—, el proyecto no recibirá aprobación."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estamos comprimiendo en exceso nuestros documentos de información, porque la capacidad humana y la capacidad de la IA están ahora desalineadas. Un supervisor de IA leería sin dificultad las mil páginas y emitiría una conclusión. El supervisor humano puede leer solo una o dos. Entonces, ¿cómo evitamos que los límites de la capacidad humana bloqueen una buena idea simplemente porque las personas no pueden procesar la información necesaria para comprenderla en toda su profundidad?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Existe una oportunidad de cambiar la modalidad hacia una forma de comunicación menos comprimida. Los documentos de información escritos y orales presentan un problema de comprensión y compresión, mientras que nuestra capacidad visual y espacial es mucho más potente. En lugar de preparar una nota escrita, una IA podría generar una simulación, una visualización, una interacción espacial o una experiencia interactiva que permita a quien decide relacionarse con el material de una forma diferente. Si se simulara y animara a velocidad acelerada una recuperación a cinco años —mostrando el tipo de procesos que se ejecutarían—, el razonamiento espacial y visual de quien decide podría llenar los vacíos que una nota escrita no puede representar. Al desplazar la modalidad de la escritura hacia el análisis visual, espacial y auditivo, presentamos la información de una manera diferente."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 14.3",
+      "title": "La nota informativa frente a la simulación",
+      "caption": "A la izquierda, quien decide lee una nota informativa: densa, lineal, a unos cuarenta bits por segundo. A la derecha, la misma persona se adentra en una simulación tridimensional interactiva de la transformación, observando cómo numerosos agentes reconstruyen el parque tecnológico hacia un estado final clarificado. El razonamiento espacial y visual transmite una fidelidad que el canal escrito no puede ofrecer.",
+      "image": {
+        "src": "public/images/eujjc/es/fig-14-3.jpg",
+        "alt": "Diagrama dibujado a mano en dos mitades contrastantes. A la izquierda, una figura sentada lee una página densa con la etiqueta «nota informativa», marcada con «unos cuarenta bits por segundo». A la derecha, la misma figura está de pie dentro de una gran simulación tridimensional envolvente: bloques isométricos flotantes y líneas de conexión en movimiento, con numerosas pequeñas figuras de agentes transformando un sistema enredado en una cuadrícula ordenada de módulos con la etiqueta «estado final clarificado».",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, divided into two contrasting halves by a thin vertical rule. On the LEFT half, a simple seated person token reads a single dense page labelled NOTA INFORMATIVA, its cramped horizontal text-lines suggesting a narrow channel, with a small rust tag UNOS 40 BITS/S and a small caption LINEAL. ESTÁTICA. CONDENSADA. CANAL ESTRECHO. On the RIGHT half, the same simple person token stands inside a large, immersive three-dimensional simulation rendered in light isometric line work: floating volumetric blocks labelled REALIDAD COMPLEJA and flowing connection lines, with many tiny agent tokens at work transforming a tangled system into an orderly grid of modules at the far side labelled ESTADO FINAL CLARIFICADO; label the scene SIMULACIÓN 3D INTERACTIVA. A small caption below reads AMPLIAR EL CANAL, NO SIMPLIFICAR LA VERDAD. Calm, architectural, legible labels. No logos, no people beyond simple tokens. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "El costo de un error también puede reducirse significativamente. Para implementar un sistema de cien millones de dólares, necesito una alta confianza en que se cumplen los controles y las salvaguardias, porque es una oportunidad única. La economía de la IA reduce parte de ese riesgo. Si la consecuencia negativa de una decisión es unos pocos miles de dólares y un fin de semana de trabajo perdido, el riesgo de la decisión es trivial, y puedo ejecutar la ideación y el desarrollo como una hipótesis, como un experimento de laboratorio. Vuelvo el lunes por la mañana, veo los resultados del esfuerzo de modernización, refino, reviso y pruebo, y tomo mi siguiente decisión con un bajo costo de error. Esa puede ser una forma razonable de ajustar nuestras expectativas cuando el único costo es una pequeña cantidad de cómputo. El riesgo disminuye porque el costo del error se reduce en varios órdenes de magnitud y los problemas pueden atenderse a medida que aparecen. Sin un giro hacia modalidades diferentes, las personas no podrán seguir el ritmo ni comprender la base técnica de lo que presenta la IA, sencillamente por la diferencia en las ventanas de contexto."
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "La organización del futuro y la persona en el circuito"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hablamos extensamente sobre la necesidad de una persona en el circuito de decisión, pero eso presupone que mantenemos nuestras jerarquías actuales y nuestros informes actuales centrados en lo humano, ninguno de los cuales sobrevive a la era de la IA. Organizaciones como Anthropic ya señalan que no deberíamos estar creando instrucciones directamente para los agentes, sino construyendo ciclos de procesos que les envíen instrucciones en nuestro nombre. Que un colaborador individual mantenga una conversación de uno a uno con un agente se convierte en un antipatrón a medida que los agentes aumentan su capacidad, porque la interacción queda limitada por el denominador común más bajo. Si usted se comunica a cuarenta bits por segundo pero la IA puede trabajar a cuatro millones de bits por segundo, inhibe su desarrollo y la restringe a lo que los seres humanos hacen más lentamente. Esto es dejar el Ferrari en el garaje e ignorar milenios de evolución en la comprensión visual, espacial y auditiva, que puede superar esas limitaciones impuestas. Si la modalidad de persona en el circuito va a sobrevivir a largo plazo, debe alejarse del texto y orientarse hacia la simulación, la participación activa y un medio plenamente espacial, visual y sensorial para recibir información como sustituto de la comprensión de las decisiones detalladas."
+    },
+    {
+      "type": "keystat",
+      "label": "Dos velocidades de comunicación",
+      "value": "40 vs 4M bits/s",
+      "body": "Las personas transmiten significado a aproximadamente cuarenta bits por segundo; una IA puede trabajar a aproximadamente cuatro millones. Mantener la interacción a la velocidad humana equivale a dejar el Ferrari en el garaje."
+    },
+    {
+      "type": "pullquote",
+      "text": "Dejas el Ferrari en el garaje, ignorando milenios de evolución en la comprensión visual, espacial y auditiva.",
+      "cite": "Janak Alford, viceministro, Ministerio de Tecnología e Innovación"
+    },
+    {
+      "type": "paragraph",
+      "text": "Considere la siguiente analogía: En un jardín, miles de millones o billones de organismos interactúan en el suelo, el aire y el agua. Están las plantas, las bacterias, los virus, los gusanos y los insectos. En el propio cuerpo humano, entre quince y treinta billones de organismos componen el microbioma. Usted se relaciona con todos ellos a través de una experiencia abstracta. Comprende en principio qué hacen y cómo intervenir cuando los signos en conjunto indican que las cosas no van bien, pero deja esos procesos de base sin una gestión diferenciada. No gestiona cada bacteria en el suelo ni cada planta de maíz en el campo. Gestiona el sistema en su conjunto para que prosperen. Atiende las necesidades esenciales de la vida y luego permite que cada organismo utilice su propia inteligencia, porque cada uno posee su propia inteligencia biológica no humana. Usted supervisa la ciencia, no las actividades individuales."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 14.4",
+      "title": "Gestione el sistema, no el organismo",
+      "caption": "Un jardinero no dirige cada bacteria en el suelo ni cada planta en el campo. Observa señales agregadas e interviene a nivel del sistema en su conjunto. La supervisión humana de los agentes debe evolucionar de la misma manera: del agente individual al nivel del sistema.",
+      "image": {
+        "src": "public/images/eujjc/es/fig-14-4.jpg",
+        "alt": "Un diagrama dibujado a mano en dos zonas. La zona inferior es un campo repleto de muchos elementos pequeños: plantas diminutas, hojas y puntos que sugieren microbios y vida en el suelo, ninguno etiquetado individualmente. Por encima flota un pequeño panel con indicadores agregados y un observador que lee el panel en lugar del campo. Una leyenda dice: gestione el sistema, no el organismo.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, arranged in two horizontal zones. The LOWER zone is a dense, teeming field of many tiny uniform tokens, small plants, leaves, worms, and scattered dots suggesting soil microbes, none individually labelled, captioned PROCESOS A NIVEL DEL SUELO. The UPPER zone shows a small panel of three simple aggregate gauges labelled SALUD DEL SISTEMA (gauges: DIVERSIDAD, RESILIENCIA, FUNCIONALIDAD), with a single simple observer token reading the panel, captioned NIVEL META. A thin dashed line separates the zones, with a few summary arrows rising from the field to the gauges. A small caption below reads GESTIONE EL SISTEMA, NO EL ORGANISMO. Calm, architectural, legible labels. No logos, no people beyond a simple token. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "El papel humano en el circuito debe evolucionar de la misma manera, dado el reto de compresión al que nos enfrentamos. No se trata de que cada acción de un agente sea supervisada individualmente por una persona, sino de que contemos con sistemas de compresión y abstracción que nos permitan comprender estas cosas a un nivel meta, a nivel de sistema, y tomar decisiones en consecuencia. El trabajo del colaborador individual hoy en día probablemente cambiará de manera significativa a medida que aumente la sofisticación de las tareas. Avanzamos junto a la IA a lo largo de esa línea de crecimiento y nos orientamos hacia una forma diferente de experiencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Entonces, ¿qué aspecto tiene una nota informativa en el futuro? No vamos a dejar la transformación del gobierno a una sola opinión —sea persona individual o modelo de lenguaje individual—, porque todos somos propensos a nuestras propias deficiencias específicas. Lo que haré será tomar como base la evidencia de un sistema presentado y simulado, donde pueda observar con confianza la transformación de un sistema de gobierno a través de una simulación acelerada y simplificada que se ajuste a mi propia capacidad de percibir y gestionar, que satisfaga mi curiosidad mediante la interacción y que me deje la certeza de que los resultados se encuentran dentro de los controles que busco. Entonces lo dejo avanzar, especialmente cuando los costos de inversión son tan reducidos. La única forma de llegar ahí es abordando el problema de la compresión: cambiando la naturaleza de la jerarquía en mi organización, la naturaleza de la comunicación y la forma en que la persona en el circuito interviene. Solo cuando alivio este problema podemos aprovechar al máximo los beneficios de la integración de la IA en la fuerza laboral."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si mantenemos los protocolos existentes —la jerarquía lenta que tarda un mes en hacer llegar un mensaje entre un colaborador individual y un alto directivo—, ninguna cantidad de IA producirá el retorno que estoy buscando, porque el tiempo que se pierde no es el tiempo que las personas dedican a trabajar. Es el tiempo entre trabajos. Recuerde, como vimos en <a href=\"/paper/k3tc3\">un libro blanco anterior</a>, que el sistema ahora registra el tiempo que una tarea pasa en la etapa o el nivel de paso dentro de un módulo y lo asigna al actor correspondiente. La IA puede completar su trabajo en una hora, pero la persona puede completar su revisión en una semana. Si no utilizamos formas diferentes de comunicación y tipos distintos de jerarquía para presentar la información, entonces incluso reducir el tiempo de ejecución del trabajo podría mover el informe solo de treinta días a veintinueve, porque las pérdidas intermedias ocurren a velocidad humana y por las deficiencias de la organización: el tiempo para leer un informe, el tiempo para redactarlo y revisarlo, el movimiento entre bandejas de entrada y la secuencia de reuniones."
+    },
+    {
+      "type": "keystat",
+      "label": "El logro posible y la condición necesaria",
+      "value": "20×",
+      "body": "Una mejora de veinte veces en la velocidad de entrega no es alcanzable mientras se mantiene exactamente la misma jerarquía que administramos hoy. La jerarquía debe reinventarse al mismo tiempo que exploramos la IA."
+    },
+    {
+      "type": "paragraph",
+      "text": "Una mejora de veinte veces en la velocidad no es alcanzable mientras se mantiene exactamente la misma jerarquía que administramos hoy. Las organizaciones exitosas serán las que estén dispuestas a reinventar la jerarquía al mismo tiempo que exploran la IA, produciendo un resultado que recoja lo mejor de ambos mundos: la toma de decisiones humanas a nivel del ecosistema en lugar de a nivel del agente individual, con la IA haciendo lo que hace bien y las personas haciendo lo que hacen bien, el razonamiento espacial y estratégico complementando el razonamiento táctico sobre el terreno. Hay más que decir sobre este tema. Es el desafío definitorio de la implementación de la IA y seguirá siendo una prioridad constante para este gobierno y este ministerio mientras trabajamos para encontrar los ahorros y los avances necesarios para alcanzar esa mejora de veinte veces."
+    },
+    {
+      "type": "figure",
+      "title": "Explore esto como un lienzo interactivo",
+      "caption": "En una jerarquía agéntica la proporción se invierte: por cada trabajador, muchos supervisores auditan el trabajo. Parte de El lienzo (libro 19); arrastre los nodos, amplíe la vista y pulse Escuchar para un recorrido narrado.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "hierarchy",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "compression",
+        "hierarchy",
+        "organizational-design",
+        "human-in-the-loop",
+        "change-management"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v3",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 19 campos actualizados."
+      }
+    ]
+  },
+  "related": [
+    "cux4h",
+    "uwpxr",
+    "k3tc3",
+    "dt725",
+    "p7p2k",
+    "xs7uh"
+  ],
+  "translation_status": "reviewed",
+  "source_signature": "3459252024"
+}

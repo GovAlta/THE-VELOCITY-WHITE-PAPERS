@@ -1,0 +1,17 @@
+{
+  "paper_id": null,
+  "locale": "fr",
+  "slot": "ad-hoc",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. Three broad stone steps rise from lower left to upper right, like a graduated ascent. On the first step rests a simple speech-bubble motif; on the second, a small gear with a tiny robot token; on the third, a clean application window outline. A wide calm sky behind them. Archival, calm, and confident. Wide cover aspect. No text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. Three broad stone steps rise from lower left to upper right, like a graduated ascent. On the first step rests a simple speech-bubble motif; on the second, a small gear with a tiny robot token; on the third, a clean application window outline. A wide calm sky behind them. Archival, calm, and confident. Wide cover aspect. No text, no logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\dt725\\en\\hero.source.png",
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-24T01:34:09.527Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 184513,
+  "bytes_png_source": 2911642,
+  "generated_by": "gen-image.mjs"
+}

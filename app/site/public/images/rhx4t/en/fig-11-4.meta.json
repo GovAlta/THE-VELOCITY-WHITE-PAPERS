@@ -1,0 +1,17 @@
+{
+  "paper_id": "rhx4t",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\rhx4t\\en\\fig-11-4.jpg",
+  "bytes_jpg": 257677,
+  "bytes_png_source": 2865637,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-18T19:01:38.862Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration of a towering, leaning stack of old legacy application crates and binders on the left, labelled only by their worn, dated look, feeding into a compact modern factory line in the centre, and emerging on the right as a small, orderly row of clean modern applications. A sense of an overwhelming backlog being steadily and rapidly cleared. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration of a towering, leaning stack of old legacy application crates and binders on the left, labelled only by their worn, dated look, feeding into a compact modern factory line in the centre, and emerging on the right as a small, orderly row of clean modern applications. A sense of an overwhelming backlog being steadily and rapidly cleared. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

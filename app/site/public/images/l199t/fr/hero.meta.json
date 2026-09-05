@@ -1,0 +1,17 @@
+{
+  "paper_id": null,
+  "locale": "fr",
+  "slot": "ad-hoc",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration of a single application or building at the centre, surrounded by four distinct review agents arranged in balance around it, one tinted green, one yellow, one red, one blue, together forming a protective seal or set of checks and balances. A sense of four disciplines guarding one piece of work in concert. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration of a single application or building at the centre, surrounded by four distinct review agents arranged in balance around it, one tinted green, one yellow, one red, one blue, together forming a protective seal or set of checks and balances. A sense of four disciplines guarding one piece of work in concert. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\l199t\\en\\hero.source.png",
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-24T01:26:31.346Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 270792,
+  "bytes_png_source": 2821390,
+  "generated_by": "gen-image.mjs"
+}

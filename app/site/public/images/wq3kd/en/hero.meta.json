@@ -1,0 +1,17 @@
+{
+  "paper_id": null,
+  "locale": "en",
+  "slot": "ad-hoc",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "A wide editorial illustration showing a loose stack of ordinary paper documents on the left that transforms, as the eye moves to the right, into an orderly glowing lattice of connected labelled cards and nodes. The left side is papery and disordered, the right side is crisp, structured, and luminous. Conveys raw information becoming machine-ready knowledge. Muted Alberta cream base with navy and rust accents. No text.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: A wide editorial illustration showing a loose stack of ordinary paper documents on the left that transforms, as the eye moves to the right, into an orderly glowing lattice of connected labelled cards and nodes. The left side is papery and disordered, the right side is crisp, structured, and luminous. Conveys raw information becoming machine-ready knowledge. Muted Alberta cream base with navy and rust accents. No text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-23T12:26:51.085Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 168693,
+  "bytes_png_source": 2518994,
+  "generated_by": "gen-image.mjs"
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-3.jpg",
+  "bytes_jpg": 146999,
+  "bytes_png_source": 2266843,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:40:42.298Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A flowchart: a master list box on the left, an arrow to a cloud labelled Official sources, an arrow down to a folder of PDF files, and each PDF paired with a small sidecar card showing four short lines: address, downloaded at, size, fingerprint.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A flowchart: a master list box on the left, an arrow to a cloud labelled Official sources, an arrow down to a folder of PDF files, and each PDF paired with a small sidecar card showing four short lines: address, downloaded at, size, fingerprint.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

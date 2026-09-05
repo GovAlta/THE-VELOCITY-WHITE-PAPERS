@@ -1,0 +1,504 @@
+{
+  "id": "p7p2k",
+  "num": "06",
+  "sequence": "6 de 22",
+  "tier": "Technical",
+  "title": "El arnés bien construido",
+  "subtitle": "Cómo el sector público puede desarrollar y entregar software de nivel empresarial con rapidez, sin reducir los estándares de calidad.",
+  "track": "Engineering the Solution",
+  "authors": [
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
+  ],
+  "published": "2026-06-16",
+  "reading_min": 16,
+  "status": "Published",
+  "tags": [
+    "velocity",
+    "harness",
+    "claude-code",
+    "agents",
+    "skills",
+    "hooks",
+    "cyber",
+    "open-source"
+  ],
+  "repo": "https://github.com/GovAlta/COMMON-HARNESS",
+  "abstract": "Las herramientas de programación como Cursor, Lovable y Claude Code producen aplicaciones que a menudo carecen de los controles que el sector público exige. Los agentes de IA suelen ser testigos poco fiables de su propio rendimiento. Las instrucciones claras, las pruebas y las plantillas ayudan a superar estos desafíos. Alberta ha desarrollado y publicado un conjunto de archivos denominado «arnés» que define con precisión las expectativas para la IA, lo que permite obtener resultados de calidad empresarial a la velocidad de una aplicación desarrollada por intuición.",
+  "hero_image": {
+    "src": "public/images/p7p2k/es/hero.jpg",
+    "alt": "Diagrama de portada editorial de El arnés bien construido: un arnés de trabajo de cuero fino dispuesto sobre papel crema cálido, dibujado con trazos en azul marino profundo de Alberta y pequeños detalles en óxido a lo largo de las riendas.",
+    "image_prompt": "An editorial cover illustration of a fine leather work harness laid out on warm cream paper, viewed from above. The straps and buckles are drawn in deep Alberta navy line work; small rust-coloured accents suggest gates and clasps along the leads. The harness is the only subject. Wide cover aspect, calm and archival, no text, no logos, no people, no horses. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/p7p2k.mp3",
+    "duration_sec": 1215,
+    "script": "transcripts/wp-08.md"
+  },
+  "tldr_presentation": {
+    "id": "p7p2k-tldr",
+    "title": "El arnés en seis minutos",
+    "locale": "es",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Rápido, pero aún no publicable",
+        "audio_file": "public/audio/es/p7p2k-tldr/01.mp3",
+        "visual": "image",
+        "caption": "Por qué construimos un arnés",
+        "image": {
+          "src": "public/images/p7p2k/es/slide-01.jpg",
+          "alt": "Diagrama editorial. La palabra VELOCITY representada como una línea de trayectoria curva que asciende de la esquina inferior izquierda a la superior derecha, con cinco pequeños iconos arquitectónicos situados como peldaños por debajo de ella.",
+          "image_prompt": "An editorial diagram. A long, curved trajectory line labelled with the single word VELOCITY rises from the lower left to the upper right of the canvas. Below the curve, five small architectural icons sit evenly spaced, like rungs that hold the curve in place: a small contract scroll, a stack of drawers, a closed gate, a shield, and a circular tuning dial. The icons are simple, drawn in the same hand-drawn line style as the curve. Two-tone navy and rust on warm cream paper. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Al inicio del programa de IA Maximalista de Alberta, el personal puso a trabajar las principales herramientas de codificación —Cursor, Lovable y Claude Code, entre otras—. El tiempo necesario para convertir una idea en un prototipo funcional pasó de aproximadamente seis semanas a tan solo treinta minutos. La velocidad era real, pero los prototipos no podían reproducirse dos veces, omitían los controles que exige un servicio público y los agentes se declaraban terminados cuando no lo estaban. Este libro blanco trata sobre el entorno de trabajo que construimos para cerrar esa brecha. Lo llamamos el arnés."
+      },
+      {
+        "id": "02",
+        "title": "Qué es un arnés",
+        "audio_file": "public/audio/es/p7p2k-tldr/02.mp3",
+        "visual": "image",
+        "caption": "El entorno alrededor del trabajo",
+        "image": {
+          "src": "public/images/p7p2k/es/slide-02.jpg",
+          "alt": "Diagrama editorial de un banco de trabajo visto desde arriba. Un sencillo marco de madera sostiene el diagrama de una aplicación en construcción. Alrededor del marco, cinco compartimentos etiquetados contienen las herramientas que utiliza el agente.",
+          "image_prompt": "An editorial diagram of a workbench seen from above. A simple wooden frame sits in the centre and holds a partially built application diagram, drawn as a few connected boxes labelled ENTRADA, PROCESO, SALIDA and ALMACENAMIENTO under the title DIAGRAMA DE APLICACIÓN. Around the frame, five labelled compartments hold props: a small contract scroll labelled CLAUDE.md, a stack of drawers labelled HABILIDADES, a small gate labelled HOOKS, a shield labelled CIBERSEGURIDAD, and a circular dial labelled EVALUACIONES. Hand-drawn lines, navy and rust on warm cream paper. No people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Un arnés es el entorno de trabajo que rodea al agente de codificación y a la persona que trabaja junto a él. Piense en el estudio de un arquitecto. El papel de calco, las herramientas de dibujo y las referencias ya están sobre la mesa antes de que el arquitecto se siente. La mente del arquitecto se dedica al diseño. El estudio se encarga de todo lo demás. Un arnés cumple la misma función en la construcción de software."
+      },
+      {
+        "id": "03",
+        "title": "Las reglas que el agente lee primero",
+        "audio_file": "public/audio/es/p7p2k-tldr/03.mp3",
+        "visual": "image",
+        "caption": "El archivo de reglas",
+        "image": {
+          "src": "public/images/p7p2k/es/slide-03.jpg",
+          "alt": "Diagrama editorial de una sola hoja de papel etiquetada como CLAUDE.md situada en la parte superior de un conjunto de herramientas, con una flecha delgada que desciende hacia el conjunto.",
+          "image_prompt": "An editorial diagram. A single sheet of paper sits at the top of the canvas, labelled exactly CLAUDE.md, with five short numbered lines sketched on it in Spanish (for example: 1. Sigue el plan; 2. Sé claro y conciso; 3. Respeta el contexto; 4. Verifica antes de actuar; 5. Entrega calidad). Below the paper, a thin arrow labelled DIRIGE Y CONFIGURA leads down into a stack of tools drawn as boxes titled HERRAMIENTAS DEL ARNÉS (PLANIFICAR, INVESTIGAR, CONSTRUIR, REVISAR, PUBLICAR). The paper is clearly the entry point, tagged PUNTO DE ENTRADA. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Todo arnés comienza con un archivo que el agente lee en primer lugar. Lo llamamos CLAUDE.md. Es un conjunto de reglas de una página que sigue la IA. En él se indica para qué sirve el proyecto, a quién está dirigido, qué puede modificar el agente y qué nunca debe tocar. El agente lo lee en cada sesión y lo trata como la referencia de autoridad del proyecto."
+      },
+      {
+        "id": "04",
+        "title": "Manuales de ejecución cargados según necesidad",
+        "audio_file": "public/audio/es/p7p2k-tldr/04.mp3",
+        "visual": "image",
+        "caption": "Los manuales de ejecución",
+        "image": {
+          "src": "public/images/p7p2k/es/slide-04.jpg",
+          "alt": "Diagrama editorial de una columna alta de cajones etiquetados. Uno de los cajones está entreabierto y de él emerge una pequeña pila de páginas.",
+          "image_prompt": "An editorial diagram of a tall column of labelled drawers, each drawer a thin rectangle stacked vertically. The drawers carry labels: CONSTRUIR, REVISAR, CIBERSEG, A11Y, PUBLICAR, TRADUCIR, DOCUMENTAR. One drawer in the middle is pulled half open and a small stack of pages rises out of it. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "En torno al archivo de reglas, el arnés apila manuales de ejecución. Cada manual es una pequeña carpeta para un tipo de trabajo: cómo escribir una migración de base de datos, cómo revisar un fragmento de texto, cómo realizar una auditoría de seguridad. El agente no los carga todos a la vez, sino que toma el manual que necesita en el momento en que lo necesita, del mismo modo en que un profesional de oficio busca en su estuche de herramientas la llave que corresponde al trabajo del día."
+      },
+      {
+        "id": "05",
+        "title": "Verificaciones que se ejecutan siempre",
+        "audio_file": "public/audio/es/p7p2k-tldr/05.mp3",
+        "visual": "image",
+        "caption": "Las verificaciones",
+        "image": {
+          "src": "public/images/p7p2k/es/slide-05.jpg",
+          "alt": "Diagrama editorial de una puerta cerrada en el límite de un taller. De la puerta cuelga una etiqueta que dice PUNTO DE CONTROL. El agente está en el interior; un documento de entrega espera en el exterior.",
+          "image_prompt": "An editorial diagram of a gate sitting at the boundary between a workshop area on the left and a delivery area on the right. The gate is closed; a small lock and a tag reading PUNTO DE CONTROL hang from it. On the workshop side, a labelled AGENTE box stands ready. On the delivery side, a clean document waits to be released. Hand-drawn lines, navy and rust on warm cream paper. No people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "La tercera práctica son las verificaciones. Una verificación es un pequeño programa que se ejecuta en un momento clave: antes de que el agente declare que el trabajo está terminado, antes de que comience la siguiente fase. La verificación lee el trabajo y responde una pregunta de sí o no. Si la respuesta es no, se le indica al agente qué falló y se le pide que lo corrija. Las verificaciones son deterministas: se ejecutan siempre y no se pueden rebatir sus resultados."
+      },
+      {
+        "id": "06",
+        "title": "La seguridad forma parte de la estructura",
+        "audio_file": "public/audio/es/p7p2k-tldr/06.mp3",
+        "visual": "image",
+        "caption": "La seguridad en la estructura",
+        "image": {
+          "src": "public/images/p7p2k/es/slide-06.jpg",
+          "alt": "Diagrama editorial de una aplicación representada como una pila vertical de capas. Una cinta delgada etiquetada CIBERSEG atraviesa todas las capas de la pila de arriba abajo.",
+          "image_prompt": "An editorial diagram of an application drawn as a vertical layered stack of boxes labelled UI, API, DATOS. A thin ribbon labelled CIBERSEG weaves through the stack from top to bottom, threading through each layer rather than sitting beside it. The ribbon is drawn in rust on the navy stack. Hand-drawn lines, calm and architectural, on warm cream paper. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "La seguridad en el arnés forma parte de la estructura, del mismo modo en que los muros de carga y las medidas de protección contra incendios de un edificio forman parte de los planos originales. El archivo de reglas establece los estándares. Los manuales de ejecución saben cómo aplicarlos. Las verificaciones comprueban que se hayan aplicado. Cuando el agente notifica que el trabajo está terminado, la labor de seguridad también lo está."
+      },
+      {
+        "id": "07",
+        "title": "Dos tipos de comprobaciones",
+        "audio_file": "public/audio/es/p7p2k-tldr/07.mp3",
+        "visual": "image",
+        "caption": "Dos tipos de comprobación",
+        "image": {
+          "src": "public/images/p7p2k/es/slide-07.jpg",
+          "alt": "Diagrama editorial con dos indicadores de aguja situados uno junto al otro. El indicador izquierdo, etiquetado DETERMINISTA, tiene la aguja fija en una sola marca. El indicador derecho, etiquetado PROBABILISTA, tiene la aguja oscilando entre dos valores.",
+          "image_prompt": "An editorial diagram with two analogue dials drawn side by side at the centre of the canvas. The left dial is labelled DETERMINISTA and its needle is locked exactly on a single tick mark. The right dial is labelled PROBABILISTA and its needle hovers between two values with a small motion arc drawn around it. Below the dials a short label reads: misma pregunta, dos formas de responder. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "El software siempre plantea dos tipos de pregunta. Algunas tienen una única respuesta correcta: ¿pasaron las pruebas? ¿Esta dependencia tiene una vulnerabilidad conocida? Un pequeño script puede responderlas. Estas son las comprobaciones deterministas. Otras requieren el juicio de quien las lee: ¿es completo este modelo de amenazas? ¿Podría un ciudadano encontrar lo que vino a buscar? Para esas se necesita una comprobación probabilista, realizada por un agente que lee el trabajo como lo haría una persona experta. El arnés ejecuta ambas en cada publicación."
+      },
+      {
+        "id": "08",
+        "title": "Qué produce y qué viene después",
+        "audio_file": "public/audio/es/p7p2k-tldr/08.mp3",
+        "visual": "image",
+        "caption": "El resultado y el horizonte",
+        "image": {
+          "src": "public/images/p7p2k/es/slide-08.jpg",
+          "alt": "Diagrama editorial de un paquete de aplicación terminado sobre una plataforma de entrega, con dos insignias adjuntas, SEGURA y RÁPIDA, y un arco de trayectoria que asciende desde el paquete y sale por el borde del lienzo.",
+          "image_prompt": "An editorial diagram of a finished application package sitting on a small delivery platform at the centre. Two small badges are attached to the package, one labelled SEGURA and one labelled RÁPIDA. A trajectory arc rises out of the package and continues off the right edge of the canvas, suggesting more to come. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Al unir todas las piezas, el método funciona. En una cohorte de seis días de la Academia de IA, cien personas —la mayoría de las cuales no se habrían descrito a sí mismas como ingenieras— construyeron más de quinientas sesenta aplicaciones en funcionamiento. Todas superaron los umbrales de ciberseguridad, accesibilidad y aspecto visual en la primera publicación. El punto de referencia antes del arnés era de aproximadamente cuatro de cada diez. El mismo enfoque se extiende ahora más allá del código, hacia la redacción, la formación y el análisis. Y el arnés se proyecta hacia el sistema en producción, donde el agente cuida de la aplicación mucho después de que esta se haya publicado."
+      }
+    ],
+    "owner_id": "p7p2k"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Trabajar en sintonía con los agentes de IA"
+    },
+    {
+      "n": "02",
+      "title": "Experimentación y juego"
+    },
+    {
+      "n": "03",
+      "title": "El «arnés» de IA: una presentación"
+    },
+    {
+      "n": "04",
+      "title": "Construcción de arneses"
+    },
+    {
+      "n": "05",
+      "title": "Aplicación del arnés a escala"
+    },
+    {
+      "n": "06",
+      "title": "Lecciones aprendidas"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "author_verbatim": true,
+      "text": "Los modelos de lenguaje de gran escala (LLM, por sus siglas en inglés) han alcanzado un alto nivel de competencia en el desarrollo de código de aplicaciones. A principios de 2025, en el marco de nuestro programa AI Maximalist, el personal de Tecnología e Innovación comenzó a evaluar estas herramientas para determinar cómo podrían utilizarse en el entorno gubernamental. Se exploraron diversas herramientas de programación agéntica, como Cursor, Lovable, Gemini CLI y Claude Code. Estas herramientas aceleraron el desarrollo de aplicaciones para los desarrolladores con experiencia y lo hicieron accesible incluso para el personal sin formación técnica. El tiempo necesario para transformar una idea en un prototipo funcional pasó de aproximadamente seis semanas (según la referencia establecida por la dirección de esa unidad) a tan solo treinta minutos. Este incremento en la velocidad ha transformado la forma de trabajar de los equipos. Ahora, los expertos en la materia pueden participar en el codiseño mientras se desarrollan las ideas, aportando retroalimentación y aprobación en tiempo real. Este factor por sí solo ha generado un aumento significativo en la velocidad de entrega, reduciendo o eliminando el intercambio de correos electrónicos, capturas de pantalla y diseños para revisión manual, que antes consumía mucho tiempo. Con frecuencia, este tipo de trabajo puede completarse ahora en una sola sesión.\n\nEsta experimentación también permitió identificar importantes carencias cuando se encargaba a estos agentes la producción de aplicaciones altamente seguras, reproducibles y conformes con la normativa. Fue necesario abordar varios desafíos antes de que estas herramientas pudieran utilizarse en la prestación cotidiana de servicios gubernamentales."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Trabajar en sintonía con los agentes de IA"
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "A pesar de las mejoras en el rendimiento, los AI Maximalists de Alberta identificaron varios desafíos significativos en las prácticas de programación con IA."
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "En primer lugar, resultaba difícil reproducir la misma aplicación en dos ocasiones. Debido a su naturaleza probabilística, cada interacción con la IA daba lugar a aplicaciones con una apariencia, una disposición y una funcionalidad diferentes. La imposibilidad de replicar la misma aplicación constituía un obstáculo importante para el uso de la IA en el entorno gubernamental. Además, erosionaba la confianza de los ministerios asociados y generaba trabajo adicional cuando no se alcanzaban los objetivos previstos. También dificultaba la colaboración entre personas y equipos cuyos sistemas de IA adoptaban decisiones de diseño o técnicas muy distintas."
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "En segundo lugar, estas herramientas parecen priorizar la experiencia del usuario, pero con frecuencia no implementan los protocolos de seguridad necesarios. Si bien los prototipos pueden desarrollarse con rapidez, corregir las deficiencias en el modelo de seguridad suele requerir un tiempo y un esfuerzo considerables, incluso con ayuda de la IA. Al igual que ocurre con las interfaces de usuario divergentes, las correcciones aplicadas al código de seguridad, accesibilidad y compatibilidad móvil son a menudo inconsistentes y difíciles de reproducir entre dos aplicaciones distintas. El tiempo ahorrado en el desarrollo de la interfaz puede perderse fácilmente en la implementación de los controles de seguridad necesarios para proteger la postura de ciberseguridad de estas aplicaciones. Cabe aclarar que estos no eran problemas con la tecnología de IA subyacente, sino con la manera en que se estaba utilizando."
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "El tercer desafío significativo fue la excesiva confianza del agente de programación. Los agentes de IA afirman de manera habitual que su código está completo, pero al ser examinados muestran carencias importantes. Los agentes de IA son testigos poco fiables del estado y el rendimiento de los programas que crean; en consecuencia, el personal sin formación técnica no podía evaluar con precisión si una aplicación estaba lista para su uso. Confiar en el resultado del agente sin una evaluación independiente produjo resultados erróneos que no superaron las auditorías de seguridad posteriores.\n\n\nAnalizando estas limitaciones, el equipo comenzó a abordar estos desafíos mediante ensayo y error, experimentación y un enfoque creativo."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Experimentación y juego"
+    },
+    {
+      "type": "paragraph",
+      "text": "Desde el inicio del programa AI Maximalist, en marzo de 2025, hasta la fecha, en mayo de 2026, el Departamento ha desarrollado más de 1 000 aplicaciones. La gran mayoría son prototipos, pero decenas han llegado a producción y generan valor real. Los prototipos siguen un patrón de exploración, experimentación e incluso exploración lúdica. Sin ese espíritu exploratorio, es imposible que el personal aprenda los límites de estos modelos y descubra cómo trabajar con ellos de manera eficaz. Puede resultar extraño hablar de «juego» en este contexto, especialmente en un entorno gubernamental, pero es así como los seres humanos aprendemos: aprendemos mejor cuando nos encontramos en un entorno psicológicamente seguro, cuando nos desafiamos a superar nuestros límites y cuando disfrutamos del proceso. En más de 1 000 aplicaciones que hemos desarrollado, hemos explorado los límites de la IA y encontrado sus verdaderas carencias. Cada hallazgo nos permitió capturar y perfeccionar nuestros propios procesos, cerrando y superando esas brechas con mejores instrucciones, mejores scripts y mejores pruebas. Identificamos donde falla la IA y encontramos formas innovadoras de aprovechar su enorme capacidad, reconociendo al mismo tiempo sus limitaciones reales, a veces evidentes. A lo largo de este período de exploración, hemos creado un recetario sobre cómo trabajar bien."
+    },
+    {
+      "type": "paragraph",
+      "text": "De manera significativa, la variabilidad entre personas también resultó ser un factor determinante. Dos personas pueden tener experiencias muy distintas con el mismo modelo en la misma tarea. La forma en que se introduce una idea, se explica el contexto y se establece la dirección puede generar resultados muy diferentes. Y en un entorno donde la reproducibilidad y la calidad son fundamentales, estas pequeñas diferencias pueden producir una divergencia inaceptable en el uso de la IA entre distintas personas.\n\n\nEl potencial de la IA necesitaba un conjunto de reglas dentro de las cuales funcionar con eficacia."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "El «arnés» de IA: una presentación"
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Para obtener resultados reproducibles, es necesario seguir un conjunto de patrones y estilos que aumenten la probabilidad de que el modelo ejecute la serie correcta de tareas. Para un modelo de lenguaje de gran escala, no es una sorpresa que estas reglas se codifiquen mediante palabras. Las instrucciones eficaces para la IA —denominadas prompts— expresan la intención con un alto grado de especificidad. Cuando queremos que la IA sea creativa, proporcionamos instrucciones orientadas a resultados y le dejamos explorar. Cuando queremos ser prescriptivos, proporcionamos instrucciones paso a paso basadas en reglas. A través de la iteración, Alberta ha reunido miles de estas instrucciones en un conjunto de las denominadas «habilidades» de IA: instrucciones que describen los métodos y los resultados que buscamos alcanzar. Estas habilidades son muy «opinadas», término técnico que significa que dejamos poco margen a la imaginación de nuestros programadores de IA. También procuran ser lo más minimalistas posible, evitando la prosa para preservar el espacio de atención de la ventana de contexto del agente de IA. Encontrar ese punto de equilibrio es verdaderamente un arte que se domina con la práctica."
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "A través de sucesivas rondas de ensayo y error, el personal de Alberta desarrolló pasos para mejorar la garantía de calidad y consistencia en los resultados del código. Partiendo de funcionalidades pequeñas de aplicaciones (como una página de inicio o una API), el equipo elaboró instrucciones para que el LLM las siguiera en sus prompts, lo que redujo la creatividad del modelo al limitar la incertidumbre. Estas normas, conocidas ahora como «archivos de habilidades», se proporcionan al agente de programación al inicio de cada tarea. Una especificación bien redactada redujo la incertidumbre y dio lugar a un resultado consistente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estas instrucciones se agrupan en un conjunto conocido como «arnés»."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Construcción de arneses"
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Construir arneses es difícil y requiere una diligencia extrema. Se trata de reunir las habilidades que una persona podría adquirir intuitivamente a lo largo de 10 a 20 años."
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Es fundamental no construir un arnés de manera improvisada. Usar la IA para crear arneses presenta el «problema de la fotocopiadora»: cada versión derivada degrada la calidad, lo que provoca fallos futuros e impredecibles. Es necesario tomarse el tiempo para reflexionar sobre cada funcionalidad y probar (y volver a probar) cada iteración para garantizar que el sistema produzca fielmente lo que se necesita. Debe evitarse a toda costa la generación de contenido de baja calidad."
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Hay que mostrarle a la IA cómo es un buen resultado. En el ámbito tecnológico, esto implica proporcionar una aplicación lo más cercana posible a la perfección como plantilla para que la emule. Esto es similar a cómo las academias de arte a lo largo de la historia han enseñado a pintar: estudiando a los grandes maestros de su cultura y época, y copiando y emulando fielmente sus procesos hasta alcanzar la mayor perfección posible. Estas plantillas «maestras» lo son todo para una IA."
+    },
+    {
+      "type": "pullquote",
+      "author_verbatim": true,
+      "text": "Parafraseando la Tercera Ley de Arthur C. Clarke, que establece que cualquier tecnología suficientemente avanzada es indistinguible de la magia, yo diría que cualquier plantilla suficientemente avanzada es indistinguible del código. El mejor arnés es código.",
+      "cite": "Janak Alford, viceministro, Ministerio de Tecnología e Innovación"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un arnés se compone de un pequeño número de partes que funcionan de manera conjunta. Al usar Claude Code, el punto de entrada para acceder a estas habilidades es un archivo denominado <code>CLAUDE.md</code>. Otros agentes de programación utilizan archivos equivalentes, que también suelen llamarse agent.md. El agente lee este archivo al inicio de cada sesión y sigue sus instrucciones como las reglas del proyecto. Es breve y claro: qué es el proyecto, a quién sirve, qué normas seguir, qué puede modificar el agente y qué nunca debe hacer. Es el único lugar donde quedan registradas las decisiones establecidas del proyecto, de modo que tanto el agente como cualquier persona que se incorpore parten de la misma base."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.1",
+      "title": "Las reglas que el agente lee primero",
+      "caption": "Cada sesión comienza con el CLAUDE.md: el breve conjunto de reglas que indica qué es el proyecto y qué puede o no puede hacer el agente. Se lee en primer lugar y es la referencia de autoridad sobre el proyecto.",
+      "image": {
+        "src": "public/images/p7p2k/es/fig-6-1.jpg",
+        "alt": "Diagrama de una tarjeta vertical etiquetada como CLAUDE.md colocada a la entrada de un pequeño taller, con el recorrido del agente comenzando en la tarjeta antes de continuar hacia el interior.",
+        "image_prompt": "An editorial diagram. A single upright card labelled CLAUDE.md stands at the entrance to a small workshop, like a charter posted beside a doorway, with a few short rule lines sketched on it. A thin arrow shows the path beginning at the card and only then continuing into the workshop beyond, so the card is clearly the first thing reached. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "En Claude Code, las habilidades se encuentran en una carpeta llamada <code>.claude/skills</code>. Cada habilidad es un pequeño manual para un tipo de trabajo específico: cómo estructurar los requisitos, cómo redactar una migración de base de datos, cómo ejecutar una auditoría de seguridad, cómo revisar un fragmento de texto. El agente no las carga todas a la vez. Al inicio, lee únicamente el nombre de cada habilidad y una descripción de una línea, suficiente para saber cuándo aplica cada una, y carga el manual completo solo cuando la tarea que tiene frente a sí lo requiere. Las habilidades se incorporan cuando son necesarias, del mismo modo que un artesano recurre a su caja de herramientas para sacar la única que el trabajo exige."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.2",
+      "title": "Habilidades que se incorporan solo cuando el trabajo las necesita",
+      "caption": "Las habilidades se encuentran en una carpeta, cerrada. El agente lee únicamente el nombre de cada una y luego abre el manual específico que la tarea en curso requiere.",
+      "image": {
+        "src": "public/images/p7p2k/es/fig-6-2.jpg",
+        "alt": "Diagrama de una cuadrícula de carpetas de habilidades etiquetadas y cerradas, con una carpeta abierta y en uso, y el resto cerradas.",
+        "image_prompt": "An editorial diagram of a grid of small labelled folders, each a closed skill, with short labels such as REQUISITOS, MIGRACIÓN, SEGURIDAD, REVISIÓN. One folder near the centre is pulled open and a single sheet rises from it, clearly the one in use; every other folder stays shut. A thin arrow from a small marked point selects the open folder. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "La plantilla es la obra maestra en torno a la cual se construye el arnés, y es deliberadamente prescriptiva en cuanto a la tecnología. La pila tecnológica es fija y de código abierto: Vue JS con Vite en el frontend, Node JS con Express en el backend, Postgres 18 para los datos e inicio de sesión único para la gestión de identidad. Se entrega como un par funcional —un cliente y un servidor— con los problemas técnicos más complejos ya resueltos y en funcionamiento desde el primer día. Más de cien decisiones que un sistema público debe tomar correctamente —cómo inicia sesión un usuario, cómo se valida la entrada de datos, cómo se gestionan los secretos, cómo la aplicación registra eventos, se defiende y cumple con el estándar de accesibilidad— se toman una sola vez, aquí, antes de que comience cualquier proyecto."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.3",
+      "title": "La plantilla: un cliente y un servidor funcionales, definidos de antemano",
+      "caption": "La plantilla se entrega como un par conectado —un cliente Vue y un servidor Express sobre una base de datos Postgres con inicio de sesión único— con las más de cien decisiones que un sistema público necesita ya tomadas y establecidas.",
+      "image": {
+        "src": "public/images/p7p2k/es/fig-6-3.jpg",
+        "alt": "Diagrama de una aplicación preconfigurada: un panel de cliente y un panel de servidor conectados a una base de datos y un candado, con una fila de interruptores ya configurados.",
+        "image_prompt": "An editorial diagram of a pre-assembled application shown as two connected panels, the left labelled CLIENTE and the right labelled SERVIDOR, joined by a clean line to a small database cylinder and a padlock for sign-on. Along the base, a neat row of small toggle switches are all already flipped to the same position, suggesting decisions settled in advance. The assembly looks finished and ready. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Las habilidades, los estándares, las plantillas y los requisitos expresados con total claridad son los factores que determinan el resultado. Los requisitos indican qué construir. Las habilidades indican cómo hacerlo, guiando el trabajo a través de cada etapa en orden: desde los requisitos hasta la planificación, la arquitectura, el desarrollo, las pruebas y el despliegue, donde cada etapa se niega a avanzar hasta que la anterior se haya completado correctamente. Los estándares indican como es un buen resultado. Y la plantilla lleva todo esto ya integrado, de modo que en cualquier parte que mire el agente, encontrará el mismo conjunto de preferencias. Esto es también lo que permite que una persona sin formación técnica tenga éxito: añade el contenido que su servicio necesita sobre una base que ya ha superado la revisión de un auditor, y lo único que cambia entre proyectos es aquello que genuinamente debe cambiar."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.4",
+      "title": "Cuatro insumos, un resultado confiable",
+      "caption": "Los requisitos, las habilidades, los estándares y la plantilla confluyen en la construcción. Cada uno aporta algo distinto: qué elaborar, cómo hacerlo, qué aspecto debe tener el resultado final y qué ya está definido. Juntos producen una aplicación terminada.",
+      "image": {
+        "src": "public/images/p7p2k/es/fig-6-4.jpg",
+        "alt": "Diagrama de cuatro flujos etiquetados —requisitos, habilidades, estándares y plantilla— que convergen en un nodo del que sale una aplicación terminada.",
+        "image_prompt": "An editorial diagram of four labelled streams, REQUISITOS, HABILIDADES, ESTÁNDARES, and PLANTILLA, drawn as four lines entering from the left and converging into a single node at the centre, from which one clean line exits to the right and ends in a small finished application icon. The convergence is orderly and balanced. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Junto a las habilidades de construcción actúan cuatro agentes de revisión, identificados por colores, que verifican cada aplicación en términos de calidad, coherencia y seguridad durante su desarrollo. El verde cubre la higiene del código y de la cadena de suministro; el amarillo, la redacción; el rojo, las pruebas adversariales desde el exterior; y el azul, la revisión defensiva. Están integrados en el arnés y son el tema del siguiente libro blanco, [Agentes rojos, azules, verdes y amarillos](/paper/l199t)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.5",
+      "title": "Cuatro revisores que acompañan la construcción",
+      "caption": "A medida que se construye la aplicación, cuatro agentes de revisión —en verde, amarillo, rojo y azul— verifican la calidad del código, la redacción, la resistencia a ataques y la solidez defensiva. Son el tema del siguiente libro blanco.",
+      "image": {
+        "src": "public/images/p7p2k/es/fig-6-5.jpg",
+        "alt": "Diagrama de una aplicación que avanza a lo largo de una línea y pasa junto a cuatro pequeños marcadores de revisión de colores —verde, amarillo, rojo y azul—, cada uno de los cuales la verifica a su paso.",
+        "image_prompt": "An editorial diagram of a small application moving left to right along a line, with four small round review markers spaced along the path, one tinted green, one amber-yellow, one rust-red, and one navy-blue, each inspecting the work as it passes and adding a small check mark. The four are evenly spaced and balanced. Warm cream paper with clear green, amber-yellow, rust-red, and navy-blue accents, hand-drawn and calm. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Muchos de nuestros agentes funcionan actualmente con Claude, utilizando su agente de codificación y su kit de desarrollo de software (SDK). Las tareas de mayor envergadura —como el razonamiento a largo plazo sobre un proyecto, la planificación, la arquitectura y el modelado de amenazas— emplean Claude Opus, que puede ejecutar un ciclo de entrega completo, en muchos casos dentro de la ventana de contexto de un millón de tokens de una sola sesión. Muchas tareas más pequeñas que se ejecutan en paralelo —los análisis exhaustivos, el análisis de datos y las revisiones— funcionan con Claude Sonnet, comparativamente más económico y rápido, a través del SDK de agentes. Estos agentes ligeros pueden coordinarse para completar numerosas tareas, con rapidez y en paralelo, con un conjunto compartido de herramientas y recursos.\n\nAunque este libro blanco se centra en Claude, las habilidades y los estándares que se desarrollan son independientes del modelo y pueden ejecutarse con cualquier modelo de IA líder de frontera o de código abierto. La propiedad intelectual del arnés es lo que diferencia el resultado más que el modelo específico. Cualquier persona, equipo u organización puede codificar y compartir estas habilidades, elevando la capacidad común de todos los integrantes del equipo. De repente, todos disponen de las mejores habilidades de codificación, de recopilación de requisitos, de planificación de proyectos y de seguridad. Son como herramientas en su cinturón de trabajo agéntico. Aun así, es necesario aprender a utilizarlas."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Aplicación del arnés a escala"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta cuenta con un programa de inversión en sus funcionarios públicos denominado la Academia de IA de Alberta. Este programa se aborda en profundidad en un libro blanco subsiguiente, pero basta con señalar que miles de funcionarios públicos y más de diez mil participantes del sector público han utilizado la plataforma AlbertaAIAcademy.com para aprender los fundamentos del uso eficaz de la IA, desde la creación de instrucciones (prompts) hasta la entrega de productos. El personal participa en «cohortes»: grupos de entre sesenta y seiscientas personas que avanzan a lo largo de tres niveles.\n\nLa cohorte más reciente de Nivel 3 se desarrolló durante seis días, en los que los participantes adoptaron un enfoque de entrega basado en el arnés. Los participantes procedían de distintos perfiles y niveles de jerarquía; tres de los cinco viceministros adjuntos del departamento estuvieron presentes como estudiantes, junto a directores ejecutivos, directores, gerentes, personal e internos. Al inicio de la semana, pocos se habrían considerado ingenieros de software. Sin embargo, todos estuvieron dispuestos a asumir el rol de constructores, trabajando junto a la IA con un enfoque basado en el arnés."
+    },
+    {
+      "type": "paragraph",
+      "text": "A lo largo de esos seis días, la cohorte produjo más de <strong>quinientas sesenta aplicaciones funcionales</strong>. Para graduarse en el Nivel 3, la aplicación de cada estudiante debía superar la revisión de ciberseguridad, la verificación de accesibilidad y el estándar de apariencia visual en su primera versión publicada."
+    },
+    {
+      "type": "keystat",
+      "label": "Resultado de la cohorte de Nivel 3",
+      "value": "560 / 100",
+      "body": "Más de quinientas sesenta aplicaciones producidas por cien estudiantes en seis días."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el último día del curso, los integrantes del equipo de ciberseguridad se conectaron con su propio conjunto de herramientas y analizaron cada entrega. Las mejores superaron el umbral con un dictamen favorable: cero vulnerabilidades de ciberseguridad conocidas, cero infracciones de accesibilidad y pleno cumplimiento del estándar gubernamental. Muchos de los mejores métodos desarrollados por el equipo de ciberseguridad quedaron integrados de forma nativa en los arneses de IA que utilizaban los estudiantes, de modo que la ciberseguridad era una prioridad de primer orden para el agente. En cada confirmación de cambios y en cada hito, es posible ejecutar estos agentes para realizar más de noventa y cinco verificaciones. Las aplicaciones se publican con su propio dictamen favorable y los registros que lo acreditan. Para cuando el equipo de ciberseguridad debía dar su aprobación final, todos los problemas de seguridad ya estaban mitigados, lo que resultó en aplicaciones altamente coherentes, fáciles de comprender y plenamente conformes con los requisitos de ciberseguridad desde el primer momento."
+    },
+    {
+      "type": "pullquote",
+      "text": "Integramos al equipo de ciberseguridad desde el principio. Les pedimos que construyeran el agente de revisión más exigente que pudieran imaginar. Luego lo incorporamos al arnés.",
+      "cite": "Janak Alford, viceministro, Ministerio de Tecnología e Innovación"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Lecciones aprendidas"
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Al reflexionar sobre los últimos 16 meses de aprendizaje en los programas de IA Maximalista, hay algunas conclusiones clave que vale la pena destacar:"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.6",
+      "title": "Lecciones de dieciséis meses construyendo con IA",
+      "caption": "Más de mil aplicaciones construidas por Alberta con IA en un año.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Empiece a desarrollar con el arnés",
+            "desc": "Hoy en día, no hay alternativa a comenzar con un arnés de IA bien construido. Si le importan la calidad, la coherencia y la ciberseguridad, un arnés sólido es imprescindible."
+          },
+          {
+            "title": "Asigne a las plantillas a sus mejores desarrolladores",
+            "desc": "La calidad final de los resultados de la IA depende tanto de las plantillas como de las competencias. Reúna a sus mejores desarrolladores y asígneles la creación de plantillas con dedicación absoluta. Diseñe estas plantillas junto con su equipo de ciberseguridad. El tiempo invertido en perfeccionar las plantillas, las competencias y los estándares para la IA nunca es demasiado."
+          },
+          {
+            "title": "Las competencias varían. El arnés democratiza el desarrollo",
+            "desc": "Algunos de sus mejores pensadores y creadores no son desarrolladores. Facilite el trabajo de esas personas creativas dándoles las herramientas necesarias para hacer bien su labor. Las competencias también varían considerablemente dentro de los equipos de desarrollo. Dotar a sus equipos diversos de competencias y plantillas comunes permite combinar la creatividad con la calidad."
+          },
+          {
+            "title": "Capacite a los desarrolladores no técnicos",
+            "desc": "Permita que los expertos en cada área usen la IA para crear aplicaciones que cumplan los mismos estándares que las desarrolladas por el personal técnico. El arnés permite que la persona no técnica con una solución de negocio innovadora participe en el proceso de ideación y solución desde el primer día sin sacrificar la calidad."
+          },
+          {
+            "title": "Establezca referencias y haga seguimiento",
+            "desc": "Alberta se tomó el tiempo de medir como referencia la calidad de los resultados humanos y de la IA antes de desarrollar el arnés. Ahora iteramos sobre el arnés con la certeza de que superamos nuestros estándares."
+          },
+          {
+            "title": "Forme y capacite a su personal",
+            "desc": "Forme a las personas para que usen bien estas herramientas y plantillas, de modo que todo el equipo trabaje con un estándar uniforme. Los estándares no limitan la creatividad: la fortalecen."
+          },
+          {
+            "title": "La prueba está en el producto. Entregue un buen producto.",
+            "desc": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Dese tiempo para experimentar. Estos métodos no son ni evidentes ni sencillos, y dedicar tiempo del personal al aprendizaje, la creación y el perfeccionamiento de estas metodologías es una inversión que vale la pena."
+    },
+    {
+      "type": "figure",
+      "title": "Explore esto en un lienzo interactivo",
+      "caption": "Un agente de trabajo rodeado por cuatro agentes de revisión que controlan el trabajo: verde, amarillo, rojo y azul. Forma parte de El lienzo (libro 19); arrastre los nodos, haga zoom y pulse Escuchar para obtener una explicación en audio.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "harness",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "harness",
+        "claude",
+        "templates",
+        "skills"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": [],
+    "draft": "v5",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 16 campos actualizados."
+      }
+    ]
+  },
+  "category": "paper",
+  "related": [
+    "l199t",
+    "qthji",
+    "qxlzo",
+    "xs7uh"
+  ],
+  "translation_status": "reviewed",
+  "source_signature": "324879696"
+}

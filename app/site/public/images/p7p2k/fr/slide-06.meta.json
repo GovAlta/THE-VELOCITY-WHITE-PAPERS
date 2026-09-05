@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "fr",
+  "slot": "slide-06",
+  "out_path": "public\\images\\wp-08\\fr\\slide-06.jpg",
+  "bytes_jpg": 121182,
+  "bytes_png_source": 2477122,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T11:18:18.057Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of an application drawn as a vertical layered stack of boxes labelled UI, API, DATA. A thin ribbon labelled CYBER weaves through the stack from top to bottom, threading through each layer rather than sitting beside it. The ribbon is drawn in rust on the navy stack. Hand-drawn lines, calm and architectural, on warm cream paper. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of an application drawn as a vertical layered stack of boxes labelled UI, API, DATA. A thin ribbon labelled CYBER weaves through the stack from top to bottom, threading through each layer rather than sitting beside it. The ribbon is drawn in rust on the navy stack. Hand-drawn lines, calm and architectural, on warm cream paper. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wp-08\\en\\slide-06.source.png"
+}

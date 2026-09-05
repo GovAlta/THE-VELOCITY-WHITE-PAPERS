@@ -1,0 +1,2453 @@
+{
+  "id": "l199t",
+  "num": "07",
+  "sequence": "7 de 22",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "Agentes rojos, azules, verdes y amarillos",
+  "subtitle": "Las habilidades y herramientas integradas permiten a los agentes de IA aplicar con éxito las normas y estándares del gobierno sin sacrificar la cadencia.",
+  "track": "Engineering the Solution",
+  "authors": [
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-06-16",
+  "reading_min": 17,
+  "status": "Published",
+  "tags": [
+    "security",
+    "agents",
+    "harness",
+    "red-team",
+    "quality"
+  ],
+  "repo": null,
+  "abstract": "Los agentes de IA necesitan herramientas y métodos claramente definidos para evaluar la calidad de su trabajo y del código existente. Dentro del arnés se han agrupado cuatro conjuntos de habilidades de aseguramiento de la calidad, cada uno identificado con un color. El verde verifica la calidad e higiene del código. El amarillo revisa el contenido escrito en busca de señales de texto generado por IA. El rojo analiza una aplicación activa como lo haría un actor malicioso. El azul evalúa el código frente a estándares internacionales de seguridad y elabora planes de ataque sofisticados —denominados cadenas de eliminación— como paso fundamental hacia la remediación. Estas habilidades funcionan como controles y contrapesos obligatorios dentro del arnés, garantizando coherencia, cumplimiento y seguridad sin interrumpir el flujo de desarrollo.",
+  "hero_image": {
+    "src": "public/images/l199t/es/hero.jpg",
+    "alt": "Una aplicación en el centro, rodeada por cuatro agentes de revisión de colores verde, amarillo, rojo y azul, que forman un sello protector equilibrado.",
+    "image_prompt": "An editorial cover illustration of a single application or building at the centre, surrounded by four distinct review agents arranged in balance around it, one tinted green, one yellow, one red, one blue, together forming a protective seal or set of checks and balances. A sense of four disciplines guarding one piece of work in concert. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/l199t.mp3",
+    "duration_sec": 1213
+  },
+  "tldr_presentation": {
+    "id": "l199t-tldr",
+    "title": "El documento, en síntesis",
+    "locale": "es",
+    "owner_id": "l199t",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Agentes Rojo, Azul, Verde y Amarillo",
+        "audio_file": "public/audio/es/l199t-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Documento 7 · Diseño de la solución",
+        "subcaption": "Cuatro agentes de revisión que mantienen la integridad de cada compilación.",
+        "text": "Agentes Rojo, Azul, Verde y Amarillo. Si la IA escribe y corrige el código, algo debe verificar a la IA. Ese algo es más IA, de un tipo particular, orientada hacia el propio trabajo. Cuatro agentes de revisión operan dentro del arnés, cada uno identificado por un color, e inspeccionan cada aplicación en materia de calidad, coherencia y seguridad antes de su despliegue."
+      },
+      {
+        "id": "02",
+        "title": "Verde: calidad e higiene del código",
+        "audio_file": "public/audio/es/l199t-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Verde · calidad e higiene del código",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Dependencias",
+              "desc": "Señala las bibliotecas con vulnerabilidades conocidas."
+            },
+            {
+              "label": "Secretos",
+              "desc": "Detecta cualquier contraseña o clave introducida en el código."
+            },
+            {
+              "label": "Cobertura",
+              "desc": "Identifica el código que las pruebas nunca llegan a ejercitar."
+            },
+            {
+              "label": "La canalización de compilación",
+              "desc": "Verifica que el proceso de compilación cuente con las validaciones necesarias."
+            }
+          ]
+        },
+        "text": "El agente Verde es la base y se ejecuta en primer lugar. Reporta los hechos objetivos sobre el estado del código: dependencias vulnerables, secretos que quedaron en el código fuente, cobertura de pruebas insuficiente y vacíos en la canalización de compilación. Es determinista, de modo que el mismo código siempre arroja los mismos hallazgos. No hace suposiciones; contabiliza. Eso es lo que lo convierte en la base de evidencia que leen todos los demás agentes."
+      },
+      {
+        "id": "03",
+        "title": "Amarillo: cómo se lee el texto",
+        "audio_file": "public/audio/es/l199t-tldr/03.mp3",
+        "visual": "stat",
+        "caption": "Amarillo · cómo se lee el texto",
+        "visual_config": {
+          "stat_value": "12 rules",
+          "stat_label": "Recorrió cada pieza de texto del proyecto"
+        },
+        "subcaption": "Si la ciudadanía va a leerlo, debería parecer escrito por una persona.",
+        "text": "El agente Amarillo lee el texto: documentación, contenido de la interfaz y los mensajes que ve la ciudadanía. Cuando la IA redacta en prosa deja señales características, y el agente Amarillo aplica doce reglas a todo ese contenido, marcando cada señal con una propuesta de reescritura en lenguaje llano. Son las mismas reglas que rigen los documentos que usted está leyendo. Se ejecuta en segundos y mantiene la coherencia de todo el parque tecnológico, como si una persona lo hubiera escrito."
+      },
+      {
+        "id": "04",
+        "title": "Rojo: el evaluador de intrusión",
+        "audio_file": "public/audio/es/l199t-tldr/04.mp3",
+        "visual": "list",
+        "caption": "Rojo · el evaluador de intrusión",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Reconocimiento",
+              "desc": "Mapea el dominio, los puertos, el cifrado y la superficie expuesta."
+            },
+            {
+              "label": "Planificación del ataque",
+              "desc": "Claude propone vías de acceso concretas a partir de la evidencia."
+            },
+            {
+              "label": "Solo con autorización",
+              "desc": "Se ejecuta sobre sistemas propios habilitados para pruebas."
+            }
+          ]
+        },
+        "text": "El agente Rojo actúa como evaluador de intrusión. Analiza una aplicación terminada desde el exterior, tal como lo haría un actor externo, y mapea su superficie expuesta. A continuación, Claude razona sobre los hallazgos y planifica cómo acceder al sistema, proponiendo rutas de ataque concretas. El reconocimiento se basa en herramientas repetibles; el plan de ataque implica criterio. El agente Rojo encuentra la vulnerabilidad antes de que lo haga otra persona."
+      },
+      {
+        "id": "05",
+        "title": "Azul: el defensor",
+        "audio_file": "public/audio/es/l199t-tldr/05.mp3",
+        "visual": "list",
+        "caption": "Azul · el defensor",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Modelo de amenazas",
+              "desc": "Mapea la aplicación y las amenazas asociadas a cada componente."
+            },
+            {
+              "label": "ASVS Nivel 2",
+              "desc": "Recorre cada requisito: cumplido, incumplido o no aplicable."
+            },
+            {
+              "label": "Cadenas de ataque",
+              "desc": "Integra el reconocimiento del agente Rojo para reconstruir cómo se desarrollaría un ataque."
+            },
+            {
+              "label": "El veredicto",
+              "desc": "Un informe priorizado y respaldado por evidencia sobre el que la dirección puede actuar."
+            }
+          ]
+        },
+        "text": "El agente Blue es el defensor y se ejecuta al final porque lee todo lo que encontraron los demás. Construye un modelo de amenazas, revisa cada requisito del estándar internacional de seguridad en el Nivel 2 con la evidencia que respalda cada decisión, incorpora el reconocimiento del agente Red y redacta el informe sobre el que puede actuar quien toma las decisiones. Donde Green cuantifica y Red sondea, Blue evalúa."
+      },
+      {
+        "id": "06",
+        "title": "Controles y contrapesos",
+        "audio_file": "public/audio/es/l199t-tldr/06.mp3",
+        "visual": "stat",
+        "caption": "Controles y contrapesos",
+        "visual_config": {
+          "stat_value": "~95",
+          "stat_label": "Controles de seguridad principales en la plantilla segura, verificados por más de 400 comprobaciones en cada pasada"
+        },
+        "subcaption": "Integrados en el arnés como compuertas. Un trabajo avanza solo cuando supera todas ellas.",
+        "text": "Por separado, cada agente es útil. Juntos constituyen un sistema de controles y contrapesos, integrados en el arnés como compuertas. El arnés no da por terminado un trabajo si el análisis de seguridad muestra un hallazgo crítico, si el análisis está desactualizado o si la revisión nunca se ejecutó. Las compuertas son mecánicas, no aspiracionales. Así se aborda el problema de la ciberseguridad sin parchear indefinidamente, y así los métodos de construcción se mantienen seguros sin sacrificar velocidad. La seguridad y la calidad se convierten en una propiedad inherente al modo en que se desarrolla el código."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Quién supervisa a la IA"
+    },
+    {
+      "n": "02",
+      "title": "Verde: calidad e higiene"
+    },
+    {
+      "n": "03",
+      "title": "Amarillo: cómo se lee el contenido"
+    },
+    {
+      "n": "04",
+      "title": "Rojo: el atacante"
+    },
+    {
+      "n": "05",
+      "title": "Azul: el defensor"
+    },
+    {
+      "n": "06",
+      "title": "Un ecosistema creciente de controles y contrapesos"
+    },
+    {
+      "n": "07",
+      "title": "Apéndice A: Claude, el SDK de agentes y Google Enterprise Agent Platform"
+    },
+    {
+      "n": "08",
+      "title": "Apéndice B: el inventario completo de verificaciones"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Los artículos anteriores de esta serie presentaron oportunidades para que la entrega de software asistida por la IA aborde [el envejecimiento del parque tecnológico](/paper/cux4h) y [las crecientes presiones en materia de ciberseguridad](/paper/mwo98). También introdujeron [varias estrategias para reconstruir](/paper/zgym1) nuestros sistemas de gobierno digital, los cuales dependerán en gran medida de la colaboración entre agentes de IA y trabajadores humanos para desarrollar soluciones conforme a un conjunto claro de especificaciones. Sin embargo, a medida que los agentes de IA asumen más trabajo técnico para acelerar la entrega, ¿cómo podemos verificar sus resultados de manera confiable? ¿Quién —o qué— puede verificar la calidad y la integridad de los productos? Cuatro habilidades de revisión están integradas en [el arnés bien construido](/paper/p7p2k), las cuales inspeccionan cada aplicación en cuanto a calidad, coherencia y seguridad."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Quién supervisa a la IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "Como se señaló anteriormente, los agentes de IA no son testigos confiables de sus propios resultados. Hablan con demasiada confianza sobre su trabajo reciente y con frecuencia declaran que han completado un objetivo, a menudo sin pruebas. Como cualquier trabajador, necesitan retroalimentación de alguien con una perspectiva externa y una mirada crítica que sondee, cuestione y evalúe. En pocas palabras, necesitan ser puestos a prueba.\n\nUn experto humano en la materia desempeña bien este papel y, juntos, esta dupla puede avanzar rápidamente en problemas complejos, cuestionando y probando las ideas del otro. Pero a veces, debido a factores como el volumen de tareas, la velocidad o la configuración del agente, eso no resulta práctico. Un escenario habitual es cuando una persona opera decenas o cientos de agentes simultáneamente y no puede «supervisarlos de cerca», por así decirlo. Generalmente, basta con que otro agente de IA desempeñe esta función. Aunque pueden compartir el mismo modelo fundacional de IA, varios agentes de IA pueden adoptar distintos roles, como programador, arquitecto de soluciones y especialista en ciberseguridad, dentro de [su propia jerarquía organizativa](/paper/eujjc). Las habilidades adecuadas indican al agente cómo ejecutar estas tareas con fidelidad y eficacia. Para obtener perspectivas genuinas, también necesitan herramientas capaces de identificar y presentar evidencia de posibles deficiencias —indicadores que llevan al agente a profundizar en el análisis.\n\nComo extensión del [arnés bien construido](/paper/p7p2k), existen cuatro habilidades clave que permiten al agente de IA adoptar el rol de un adversario o convertirse en crítico de su propio trabajo. Inspirándonos en ejercicios de seguridad y defensa, creamos estos agentes como equipos **rojo** y **azul**. En un entorno de confrontación, el equipo rojo actúa como atacante y antagonista: identifica brechas, cuestiona y presenta sus hallazgos. El equipo azul actúa como defensor. Bajo ambos agentes opera un pequeño conjunto de verificaciones programadas de tipo determinista (es decir, basadas en lógica), que detectan posibles problemas mediante comparación de patrones. Posteriormente ampliamos estas habilidades para incluir las habilidades de agente «verde» para el reconocimiento y «amarillo» para el aseguramiento de la calidad. Cada color representa un agente distinto que puede examinar el trabajo desde ángulos únicos. Un desarrollador o el mismo agente utiliza cada agente a lo largo del ciclo de desarrollo y en cada hito del proyecto. El agente además interioriza muchas de estas habilidades en su práctica activa, lo que significa que se aplican de manera continua durante el proceso generativo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos cuatro se dividen intencionalmente entre trabajo mecánico y trabajo de criterio. Los verdes y amarillos son completamente deterministas: si se les proporciona el mismo código, devuelven los mismos hallazgos en cada ocasión. El reconocimiento activo de los rojos también es determinista, pero incorpora un paso de análisis ejecutivo que utiliza Claude para planificar cómo se desarrollaría un ataque e interpretar los resultados de sus sondeos. Los azules operan principalmente con criterio, recogen las señales de las otras tres habilidades de agente y aportan la clase de experiencia y pensamiento creativo que podría ofrecer un desarrollador sénior o un profesional de la ciberseguridad.\n\nLa incorporación de estas habilidades produjo una mejora inmediata y notable en la calidad de las prácticas de codificación con IA, al detectar y corregir problemas de forma temprana y frecuente. Aplicadas en el contexto de una [plantilla segura](/paper/l5wsi), estas habilidades permiten al agente revisar automáticamente su trabajo, programar verificaciones periódicas y generar la evidencia necesaria para avanzar una aplicación hacia producción."
+    },
+    {
+      "type": "table",
+      "title": "Un vistazo a los cuatro agentes de revisión",
+      "columns": [
+        "Agente",
+        "Qué revisa",
+        "Cómo funciona",
+        "Cuándo se ejecuta"
+      ],
+      "rows": [
+        [
+          "Verde",
+          "Calidad del código, dependencias, secretos confirmados, cobertura de pruebas y la canalización de construcción.",
+          "Determinista. 30 analizadores en dos rondas.",
+          "Primero. Constituye la base de evidencia que leen los demás."
+        ],
+        [
+          "Amarillo",
+          "Todos los textos del proyecto, en busca de indicios de prosa generada por máquina.",
+          "Determinista, 12 reglas.",
+          "En paralelo, antes de publicar cualquier contenido."
+        ],
+        [
+          "Rojo",
+          "La aplicación terminada desde el punto de vista de un atacante externo.",
+          "Reconocimiento determinista y analizadores DAST; planificación de ataques mediante Claude.",
+          "Tras incorporar las funcionalidades principales, cuando una instancia alojada está activa de forma local o en línea."
+        ],
+        [
+          "Azul",
+          "La postura defensiva, frente a OWASP ASVS Nivel 2 (285 requisitos) y las 62 reglas de seguridad en la nube de Alberta.",
+          "Basado principalmente en criterio, a partir de la evidencia de los demás agentes.",
+          "Al final. Lee los resultados de Verde y Rojo, y redacta el veredicto."
+        ]
+      ],
+      "caption": "Cuatro disciplinas, cuatro agentes, un mismo trabajo. Tres son suficientemente deterministas para actuar como compuertas; Azul aporta la lectura experta.",
+      "source": "Marco de trabajo de revisión cuádruple, arnés común AIDE."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Verde: calidad e higiene"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un agente verde ejecuta un conjunto crítico de pruebas rápidas y transfiere sus resultados a los demás agentes. Es el primero en ejecutarse. Lee el código e informa con datos concretos sobre los aspectos más relevantes. Verifica las dependencias en fuentes en línea para identificar cuáles pueden presentar vulnerabilidades conocidas, si alguna contraseña o clave ha sido confirmada en el código fuente, si existen patrones peligrosos y qué proporción del código está efectivamente cubierta por las pruebas. Trabaja en dos rondas: la primera lee el código sin ejecutarlo; la segunda ejecuta las pruebas existentes y observa lo que ocurre, incluidas las partes del código que las pruebas nunca alcanzan."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dado que un verde es determinista, el mismo código siempre produce los mismos hallazgos. Eso es lo que lo convierte en la base de evidencia sobre la que construyen los demás agentes. No especula: verifica y contabiliza. Cuando señala un archivo con cobertura de pruebas casi nula, o una credencial expuesta en el código fuente, ese hallazgo es un hecho y no una opinión, y puede verificarse de la misma manera dos veces. En cuestión de segundos, detecta problemas que pueden abordarse de forma proactiva en cada etapa del proceso de desarrollo."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.1",
+      "title": "Verde: los datos concretos del estado del código",
+      "caption": "Un agente verde inspecciona el código en sí mismo: dependencias con vulnerabilidades, credenciales confirmadas en el código, patrones peligrosos, cobertura de pruebas insuficiente y brechas en la canalización de construcción. Determinista por diseño, de modo que el mismo código devuelve los mismos hallazgos en cada ocasión.",
+      "image": {
+        "src": "public/images/l199t/es/fig-7-1.jpg",
+        "alt": "Un inspector de tonalidad verde que revisa metódicamente las partes de una máquina con una lista de verificación, y encuentra un componente suelto.",
+        "image_prompt": "An editorial illustration, green-accented, of a meticulous inspector going part by part over the inner workings of a machine or engine, ticking items on a clipboard checklist and pulling out one faulty bolt and one exposed key. A sense of patient, exact, repeatable code hygiene. Muted Alberta cream base with a clear green accent, archival print quality, no text. This must be related to software development, the engine an analogy to the software. No legend. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Amarillo: cómo se lee el contenido"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un agente amarillo lee el contenido de la aplicación. El software gubernamental contiene mucho texto: documentación, el contenido de la interfaz de usuario, notas de versión, contenido informativo y los mensajes que los ciudadanos realmente ven. Cuando la IA redacta ese texto, deja «indicios» —giros y expresiones que identifican el texto como generado por una máquina y que erosionan silenciosamente la confianza. Estos indicios suelen denominarse «olor a IA». Un amarillo aplica doce reglas a cada texto del proyecto y señala cada indicio con la línea infractora, una reescritura sencilla y una breve nota sobre por qué parece escrito por una máquina."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estas son las mismas reglas que rigen los artículos que usted está leyendo ahora. Entre los ejemplos se encuentran la raya —em dash—, los clichés habituales, el abuso de la negación del tipo «no es A, sino B» y los adjetivos excesivamente grandilocuentes. Todos estos elementos socavan la confianza. Si el público va a leerlo, debería parecer escrito por una persona: claro, directo y accesible. Los seres humanos tampoco son inmunes a estos patrones de escritura, por lo que esta habilidad evita que ambas partes caigan en la trivialidad."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.2",
+      "title": "Amarillo: textos que parecen escritos por una persona",
+      "caption": "Un agente amarillo aplica doce reglas a toda la prosa de un proyecto, señala los indicios de texto generado por máquina y propone una reescritura sencilla para cada uno. Las mismas reglas que rigen estos artículos.",
+      "image": {
+        "src": "public/images/l199t/es/fig-7-2.jpg",
+        "alt": "Una revisión editorial de tonalidad amarilla sobre una página de texto, que encierra en un círculo frases reveladoras y escribe una línea más clara en el margen.",
+        "image_prompt": "An editorial illustration, amber-yellow accented, of a careful editor passing over a page of text, circling a few tell-tale phrases and writing a cleaner, plainer line in the margin. A sense of prose being made to sound human again. Muted Alberta cream base with a clear amber-yellow accent, archival print quality, no text. Write the most cliche em dash filled AI cliche and show someone crossing this stuff off with a red pen. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Rojo: el atacante"
+    },
+    {
+      "type": "paragraph",
+      "text": "El agente rojo es el atacante. Examina una aplicación terminada como lo haría alguien externo con malas intenciones, de afuera hacia adentro. Mapea el dominio y sus subdominios, analiza los puertos abiertos, verifica el cifrado y los encabezados de seguridad, e identifica las tecnologías en uso. Ese reconocimiento aplica métodos estándar del sector para detectar posibles problemas, y proporciona al agente las herramientas de higiene básica en ciberseguridad para que realice su propio análisis."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un rojo realiza la parte que antes requería un especialista. Analiza todo lo que encuentra y planifica cómo se produciría una intrusión, proponiendo vías de ataque concretas: eludir un inicio de sesión, encadenar un exploit remoto, extraer datos por una vía secundaria. En esa etapa de planificación, el agente revisa la evidencia y desarrolla el razonamiento. Un rojo únicamente actúa sobre los sistemas del propio gobierno que han sido autorizados para pruebas. Su función es encontrar la vulnerabilidad antes que cualquier otra persona, y entregar al siguiente agente un mapa de cómo se desarrollaría realmente un ataque."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.3",
+      "title": "Rojo: piensa como un adversario",
+      "caption": "Un agente rojo estudia una aplicación terminada desde el exterior, mapea su superficie expuesta y luego planifica vías de ataque concretas a partir de lo que encuentra. El reconocimiento es una herramientas repetible; el plan de ataque es donde Claude razona.",
+      "image": {
+        "src": "public/images/l199t/es/fig-7-3.jpg",
+        "alt": "Un analista de seguridad con tonalidad roja que estudia una aplicación estilizada representada como una fortaleza y un diagrama de red, trazando sondeos de prueba autorizados sobre su muro exterior y marcando los puntos de entrada expuestos.",
+        "image_prompt": "An editorial illustration, rust-red accented, of a security analyst at a desk in daylight studying a stylized application drawn as a small fortress and network diagram, tracing authorized test-probe lines against its outer wall and marking the exposed entry points on a chart. A professional scene conveying authorized offensive security testing, mapping where a system is weak so it can be strengthened. Muted Alberta cream base with a clear rust-red accent, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Azul: el defensor"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un agente azul es el defensor y se ejecuta al final porque lee todo lo que encontraron los demás. Construye un mapa de la aplicación, clasifica el nivel de sensibilidad de cada parte y elabora un modelo de amenazas. Luego recorre cada requisito del Estándar de Verificación de Seguridad de Aplicaciones OWASP Nivel 2 —la referencia internacional para una aplicación web de nivel exigente— y registra cada uno como aprobado, reprobado o no aplicable, con la evidencia que respalda la decisión. Verifica el mismo código frente al estándar de arquitectura de ciberseguridad de Alberta, integra el reconocimiento del agente rojo en una descripción paso a paso de cómo se desarrollaría un ataque y redacta pruebas de seguridad para validar que la superficie de ataque ha sido minimizada."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un azul concluye elaborando una página web de resumen ejecutivo integral con los hallazgos clasificados por nivel de gravedad. Señala los estándares cumplidos e incumplidos, junto con un plan de remediación que el agente puede ejecutar de forma directa."
+    },
+    {
+      "type": "keystat",
+      "label": "Controles de seguridad principales integrados en la plantilla segura",
+      "value": "~95",
+      "body": "Los cuatro agentes de revisión verifican estos aspectos y más. Una pasada completa ejecuta más de cuatrocientas comprobaciones individuales: 285 requisitos ASVS Nivel 2, 62 reglas de seguridad en la nube de Alberta, además de las comprobaciones de los agentes verde, amarillo y rojo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada uno de estos agentes es útil por sí solo y puede tardar desde unos pocos segundos hasta casi una hora en ejecutarse por completo. Juntos funcionan de manera cohesionada como un sistema de controles y contrapesos. El trabajo se distribuye entre varios subagentes y se reintegra al final en un análisis integral.\n\nAlgunas notas importantes. Estos agentes no sustituyen a los conjuntos de gestión de seguridad más completos, ni están concebidos para ello. En cambio, proporcionan perspectivas tempranas, frecuentes y significativas desde la etapa más inicial del ciclo de desarrollo, detectando cientos de los problemas y preocupaciones más comunes que pueden influir en las decisiones de diseño del sistema. Es fundamental que estos asuntos se aborden lo antes posible en el proceso para evitar retrabajos y retrasos más adelante. Sin duda, es posible construir o adquirir un conjunto de controles y contrapesos más completo. Sin embargo, aplicadas con frecuencia, estas habilidades agénticas logran lo que la mayoría de los equipos nunca podría alcanzar: situar la ciberseguridad en el centro de todas las decisiones de codificación y diseño, y poner perspectivas de seguridad significativas al alcance tanto de desarrolladores como de personas no especialistas. Puede que no haga que su código sea perfecto, pero utilizar la IA para operar estas verificaciones es una inversión trivial en términos de tiempo y costo (literalmente céntimos) para robustecer el código de su aplicación rápidamente. Para la primera reunión con su equipo de ciberseguridad, usted debería estar en plena conformidad con los requisitos de ciberseguridad, alineado con las mejores prácticas y con los comprobantes en la mano. El avance hacia producción debería ser un trámite formal, y con la automatización adecuada, este ocurre como parte del proceso de despliegue automatizado.\n\nEn ese escenario, el [Constructor no técnico](/paper/oxj36) que presentamos en un artículo posterior puede generar ideas de manera eficaz utilizando el arnés, equipado con las habilidades necesarias, y llevar una idea a la realidad cumpliendo plenamente con los requisitos más actuales de ciberseguridad y técnicos."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.4",
+      "title": "Azul: convierte la evidencia en un veredicto",
+      "caption": "Un agente azul lee la evidencia determinista y el mapa de ataque, verifica el código frente a un estándar internacional y al estándar de arquitectura de Alberta, y redacta el informe clasificado y respaldado por evidencia en el que confían la dirección y los auditores.",
+      "image": {
+        "src": "public/images/l199t/es/fig-7-4.jpg",
+        "alt": "Un arquitecto en tonos azules en el interior, ensamblando los hallazgos en un mapa defensivo y un informe claro, alzando un escudo sobre el edificio.",
+        "image_prompt": "A wise security mentor, consolidating the findings from the yellow, green, red agents, and the full blue agent analysis, assembling them into one clear defensive map. These reports tie together 95 different key insights which form the security analysis report, kill chain analysis, and remediation plan. A sense of evidence being turned into a calm, authoritative verdict. Muted Alberta cream base with a clear navy-blue accent, archival print quality. Every label in the picture is in Spanish: AGENTE AMARILLO, AGENTE VERDE, AGENTE ROJO, AGENTE AZUL COMPLETO, HALLAZGOS, 95 HALLAZGOS CLAVE, INFORME DE ANÁLISIS DE SEGURIDAD, ANÁLISIS DE LA CADENA DE ATAQUE, PLAN DE REMEDIACIÓN, UN MAPA DEFENSIVO UNIFICADO, RESULTADOS. No English words anywhere. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Un ecosistema creciente de controles y contrapesos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos agentes constituyen un plan director para usar de forma eficaz controles y contrapesos fiables que permitan al agente de IA y al revisor humano identificar errores críticos y potencialmente graves de manera temprana y frecuente. Aunque ofrecen un conjunto de herramientas capaz y significativo, deben considerarse únicamente como un punto de partida sobre el que seguir construyendo. Empleando los mismos métodos descritos anteriormente, conviene crear habilidades y herramientas adicionales para que el agente verifique la accesibilidad, compruebe la coherencia arquitectónica, genere materiales de capacitación y garantice la integridad de toda la aplicación por sí solo o dentro de un entorno más amplio. Cada uno de estos ámbitos tiene sus propios estándares y formas de trabajo que pueden codificarse en habilidades reutilizables, elevando la inteligencia del sistema en su conjunto.\n\nDesarrollar habilidades propias requiere investigación y mucho ensayo. Estándares del sector como [OWASP](https://owasp.org/), [NIST](https://www.nist.gov/) e [ITSG](https://www.cyber.gc.ca/en/guidance/it-security-risk-management-lifecycle-approach-itsg-33) son excelentes puntos de partida para obtener conocimientos sólidos que pueden transformarse en habilidades agénticas. De hecho, si trabaja en cualquier ámbito donde despliega agentes en el que los requisitos legales, normativos y de cumplimiento son relevantes, puede usar habilidades personalizadas para identificar y subsanar de inmediato las deficiencias en su enfoque. Comience por identificar los materiales de referencia que le resulten más relevantes y, a continuación, codifíquelos en archivos en formato markdown. Pida al agente que aplique estas habilidades y observe en qué medida los resultados cumplen sus expectativas y en qué aspectos se queda corto. Luego perfeccione las instrucciones y las aplicaciones de estos estándares hasta estar satisfecho de que el agente funciona al nivel necesario para resolver sus propios problemas de forma fiable o para señalarlos proactivamente a la revisión humana. Se trata de un proceso recursivo que conocemos bien. Todo nuestro sistema educativo se fundamenta en métodos similares: identificar la verdad, enseñar, evaluar, proporcionar retroalimentación y orientar hacia la excelencia.\n\nSin estas habilidades, deja las decisiones de la IA libradas al azar, confiando en sus funciones internas indefinidas y probabilísticas para realizar su trabajo. Aunque se gana velocidad, se pierde fidelidad y una comprensión clara de cómo se está ejecutando el trabajo. No es posible ser responsable de procesos que no están definidos. Las habilidades integradas se convierten en los procedimientos operativos estándar —el manual de instrucciones— que definen cómo se ve un trabajo bien hecho. Al trabajar con IA, es importante codificar sus propios procesos como habilidades adicionales, lo que le ahorrará tiempo considerable y mejorará la calidad de sus resultados. A mayor escala, su creciente plantilla de agentes de IA puede seguir sus pasos, lo que le permite ejercer su función esencial como supervisor y coordinador humano. Escalado horizontalmente sobre un equipo, sus aprendizajes elevan el nivel de toda la organización.\n\n\nCon el arnés y sus agentes de revisión en funcionamiento, podemos empezar a construir el entorno que los pone a trabajar en cada proceso de construcción. Los próximos libros blancos presentan esta fábrica de IA, donde las aplicaciones se [diseñan y especifican](/paper/qthji), donde los agentes las construyen y prueban bajo estos mismos controles, y donde el trabajo se registra y mide."
+    },
+    {
+      "type": "table",
+      "title": "Lo que las compuertas realmente aseguran",
+      "columns": [
+        "El arnés bloquea el trabajo cuando…",
+        "Detectado por"
+      ],
+      "rows": [
+        [
+          "Un hallazgo de seguridad crítico sigue abierto.",
+          "la compuerta de seguridad, verificada antes de que pueda cerrarse una sesión"
+        ],
+        [
+          "El análisis de seguridad está ausente o tiene más de un día de antigüedad.",
+          "la compuerta de seguridad"
+        ],
+        [
+          "Un requisito obligatorio no tiene código real detrás.",
+          "la barrera de desarrollo"
+        ],
+        [
+          "Un cambio en la base de datos no puede ejecutarse de nuevo de forma segura.",
+          "la barrera de migración"
+        ],
+        [
+          "Un problema corregido no tiene una nueva regla que impida que vuelva a ocurrir.",
+          "la barrera de hallazgo codificado"
+        ]
+      ],
+      "caption": "Cada barrera es una verificación que falla de forma visible cuando no se cumple su condición, de modo que no es posible omitir una revisión con argumentos vagos. Una barrera bloqueada se corrige o se replantea formalmente; nunca se elude.",
+      "source": "Scripts de compuerta mecánica, arnés común AIDE."
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Apéndice A: Claude, el SDK de agentes y Google Enterprise Agent Platform"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los scripts y las habilidades presentados en este documento se ejecutan como software de código abierto en el equipo del desarrollador. Los agentes deterministas —verdes, amarillos y el reconocimiento de los rojos— utilizan scripts de Node JS y Python con sus propias dependencias, pero no requieren agentes de IA para funcionar. Las partes del proceso que requieren inferencia y juicio de la IA, como el planificador de ataques del agente rojo y la evaluación completa del azul, están desarrolladas con el SDK de agentes de Claude, que permite que una sesión de Claude Code coordine una serie de subagentes para realizar el trabajo repetitivo de análisis de código en una o más aplicaciones. Mediante una clave de API en Google Enterprise Agent Platform, AWS Bedrock o Azure AI Foundry, es posible monitorizar el costo y el rendimiento de tokens de cada subagente.\n\nEstos métodos no están limitados a un único modelo de IA, y puede resultar ventajoso desplegar diferentes versiones de este proceso frente a varios modelos para obtener el conjunto más amplio posible de respuestas. Distintos modelos identificarán perspectivas diferentes que, en conjunto, pueden abordar un mayor número de vulnerabilidades de seguridad.\n\nLos propios archivos de habilidades pueden convertirse en vectores de ataque. Utilizados de forma descuidada y sin una auditoría o revisión adecuadas, dichos agentes pueden omitir pasos o incluso filtrar información. Es importante tratar estos agentes como propiedad intelectual de la organización y mantenerlos y mejorarlos continuamente a medida que los estándares evolucionan. Las habilidades de terceros no verificadas también pueden introducir código malicioso que una IA podría ejecutar. Trate la cadena de suministro de sus agentes y habilidades con el mismo cuidado que cualquier otro producto de ciberseguridad o digital."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.5",
+      "title": "Los cuatro trabajando en conjunto",
+      "caption": "Verde y amarillo verifican el trabajo, rojo lo somete a prueba, azul defiende y evalúa. Integrados en el arnés como compuertas, los cuatro emiten un único veredicto, y la aplicación avanza solo cuando supera todas ellas.",
+      "image": {
+        "src": "public/images/l199t/es/fig-7-5.jpg",
+        "alt": "Cuatro agentes de revisión de colores verde, amarillo, rojo y azul trabajando en conjunto sobre una aplicación mientras pasa por una barrera de control.",
+        "image_prompt": "An editorial illustration of four review agents, one green, one amber-yellow, one rust-red, one navy-blue, working in concert and in balance around a single application as it passes through a checkpoint or gate. Each agent contributes its own check and the four combine into one verdict. A sense of harmonious checks and balances guarding one piece of work. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Apéndice B: el inventario completo de verificaciones"
+    },
+    {
+      "type": "paragraph",
+      "text": "A continuación, se presenta el inventario completo de verificaciones y controles. Cada aplicación parte de una plantilla segura que incorpora aproximadamente noventa y cinco controles de seguridad principales (véase [Anatomía de una plantilla](/paper/l5wsi)). Los cuatro agentes de revisión verifican esa plantilla y mucho más. La ejecución completa abarca más de cuatrocientas verificaciones individuales. La mayor parte corresponde a las dos revisiones de estándares: 285 requisitos del Nivel 2 de OWASP ASVS y 62 reglas de seguridad en la nube de Alberta. Consulte las tablas a continuación para ver el inventario completo."
+    },
+    {
+      "type": "table",
+      "title": "Verde — calidad del código e higiene de la cadena de suministro (30 verificaciones, todas deterministas)",
+      "columns": [
+        "Verificación",
+        "Qué comprueba"
+      ],
+      "rows": [
+        [
+          "api_base_url_audit",
+          "Desviación de la URL base de la API entre el frontend, las pruebas, la integración continua, las plantillas de entorno y los valores predeterminados de Go."
+        ],
+        [
+          "broken_file_deps_scan",
+          "Dependencias de ruta a archivos locales que fallan fuera del monorepo."
+        ],
+        [
+          "ci_pipeline_audit",
+          "Barreras de seguridad ausentes (SAST, auditoría de dependencias, escaneo de secretos, compilación, pruebas) en los flujos de trabajo de integración continua."
+        ],
+        [
+          "console_log_scan",
+          "Llamadas de depuración de console.* que permanecen en el código fuente de producción."
+        ],
+        [
+          "dangerous_patterns_scan",
+          "SAST para innerHTML/eval/document.write/dangerouslySetInnerHTML y construcción de cadenas SQL en Go."
+        ],
+        [
+          "depcheck_scan",
+          "Dependencias npm no utilizadas o ausentes."
+        ],
+        [
+          "env_default_audit",
+          "Valores predeterminados de riesgo en archivos .env confirmados en el repositorio (herramientas de desarrollo activas, modo depuración, marcadores de posición)."
+        ],
+        [
+          "eslint_config_audit",
+          "Antipatrones en la configuración de ESLint (desactivación masiva de reglas, reglas ausentes)."
+        ],
+        [
+          "eslint_scan",
+          "Hallazgos de ESLint, uno por archivo, regla y nivel de gravedad."
+        ],
+        [
+          "gitignore_audit",
+          ".gitignore cubre entornos, artefactos de compilación, node_modules y cobertura de pruebas."
+        ],
+        [
+          "go_test_bypass_audit",
+          "Archivos de prueba con etiquetas de compilación que deshabilitan la autenticación; verifica que el entorno de producción no pueda incluir la omisión."
+        ],
+        [
+          "go_test_coverage_scan",
+          "Cobertura de pruebas Go insuficiente; criterio más estricto para los paquetes de autenticación y seguridad."
+        ],
+        [
+          "go_toolchain_audit",
+          "Directivas go.mod go/toolchain; cadenas de error con mayúscula inicial."
+        ],
+        [
+          "golangci_audit",
+          "Presencia de .golangci.yml y activación de los linters esperados."
+        ],
+        [
+          "govulncheck_scan",
+          "Vulnerabilidades Go alcanzables con la traza de importación."
+        ],
+        [
+          "integration_test_enum",
+          "Contabiliza las suites //go:build integration para que las pruebas huérfanas sean visibles."
+        ],
+        [
+          "java_patterns_scan",
+          "SAST para Java/JSP: inyección SQL, XXE, criptografía débil, omisión de TLS/verificador de host, XSS."
+        ],
+        [
+          "license_scan",
+          "Paquetes con licencias copyleft GPL/AGPL/LGPL en árboles npm."
+        ],
+        [
+          "madge_scan",
+          "Importaciones de módulos circulares en JS/TS."
+        ],
+        [
+          "migration_sequence_scan",
+          "Brechas en secuencias numeradas de migraciones SQL."
+        ],
+        [
+          "npm_audit_scan",
+          "Avisos de npm audit por árbol de paquetes."
+        ],
+        [
+          "osv_scan",
+          "Vulnerabilidades de dependencias de OSV.dev en 11 ecosistemas."
+        ],
+        [
+          "prettier_check",
+          "Paquetes sin estándar de formato aplicado."
+        ],
+        [
+          "python_patterns_scan",
+          "SAST para Python: eval/exec, pickle, shell=True, inyección SQL, hash débil, modos de depuración."
+        ],
+        [
+          "redocly_scan",
+          "Análisis de calidad de documentos OpenAPI."
+        ],
+        [
+          "secret_scan",
+          "Credenciales y claves de API en todo el árbol (~10 patrones de proveedores)."
+        ],
+        [
+          "semgrep_scan",
+          "SAST con Semgrep y conjuntos de reglas de seguridad/JS/TS/Go."
+        ],
+        [
+          "vitest_coverage_scan",
+          "Archivos fuente de más de 100 líneas con menos del 20 % de cobertura."
+        ],
+        [
+          "vue_tsc_scan",
+          "Errores de tipo en Vue/TS que la compilación no detectaría."
+        ],
+        [
+          "websocket_audit",
+          "Manejadores WebSocket: limitación de tasa, filtración de errores, mensajes sin autenticación."
+        ]
+      ],
+      "caption": "Cada analizador se ejecuta en su propio subproceso y permanece silencioso en las pilas a las que no aplica. El área verde es la base de evidencia determinista que leen todos los demás agentes. Varias comprobaciones agrupan subelementos; solo secret_scan cubre alrededor de diez tipos de credenciales.",
+      "source": "Control de inventario, revisado desde la fuente — arnés común AIDE."
+    },
+    {
+      "type": "table",
+      "title": "Amarillo — redacción e indicios de IA (12 reglas, todas deterministas)",
+      "columns": [
+        "Regla",
+        "Qué detecta"
+      ],
+      "rows": [
+        [
+          "rule01_not_x_but_y",
+          "Construcciones «no X, Y» — el indicador más claro de prosa generada por IA (6 patrones)."
+        ],
+        [
+          "rule02_em_dash",
+          "Rayas y guiones largos en prosa."
+        ],
+        [
+          "rule03_tetracolon",
+          "Estructuras paralelas de cuatro elementos usadas como recurso estilístico."
+        ],
+        [
+          "rule04_cinematic_sentences",
+          "Series de oraciones declarativas cortas con efecto dramático."
+        ],
+        [
+          "rule05_rhetorical_anchor",
+          "Anclajes del tipo «este es el momento / aquí es cuando / así es como » (3 patrones)."
+        ],
+        [
+          "rule06_banned_vocabulary",
+          "Palabras prohibidas, aperturas, lugares comunes y términos metafóricos (~45 patrones)."
+        ],
+        [
+          "rule07_rule_of_three",
+          "Listas del tipo «X, Y y Z» usadas como recurso estilístico."
+        ],
+        [
+          "rule08_participial_tail",
+          "Oraciones que cierran con una coma seguida de una frase de participio activo que repite lo ya dicho."
+        ],
+        [
+          "rule09_ensure_hedge",
+          "«asegurar» empleado como verbo de cobertura."
+        ],
+        [
+          "rule10_intensifier",
+          "Intensificadores vagos (muy, realmente, verdadetemente, extremadamente, …) — 10 palabras."
+        ],
+        [
+          "rule11_decorations_emoji",
+          "Emojis y ruido de caracteres de arte ASCII o de dibujo de cajas."
+        ],
+        [
+          "rule12_ai_smell",
+          "Cinco tics compuestos: servilismo, recapitulación, sobreexplicación, acumulación de coberturas y «como una IA»."
+        ]
+      ],
+      "caption": "Doce reglas de expresiones regulares y heurísticas aplicadas a toda la prosa del proyecto, que se expanden en más de sesenta subpatrones distintos. Estas mismas reglas rigen los presentes documentos.",
+      "source": "Control de inventario, revisado desde la fuente — arnés común AIDE."
+    },
+    {
+      "type": "table",
+      "title": "Rojo — reconocimiento, análisis y explotación adversariales (23 herramientas y etapas)",
+      "columns": [
+        "Capa",
+        "Herramienta / etapa",
+        "Qué hace",
+        "Modo"
+      ],
+      "rows": [
+        [
+          "Reconocimiento",
+          "ct_search",
+          "Búsqueda de transparencia de certificados (crt.sh) para subdominios.",
+          "Determinista"
+        ],
+        [
+          "Reconocimiento",
+          "dns_enum",
+          "Enumeración de registros DNS, con AXFR / DNSSEC opcional.",
+          "Determinista"
+        ],
+        [
+          "Reconocimiento",
+          "endpoint_discovery",
+          "Descubrimiento de endpoints/directorios: lista de 80 rutas, robots.txt, sitemap.",
+          "Determinista"
+        ],
+        [
+          "Reconocimiento",
+          "http_headers",
+          "Audita 6 cabeceras de respuesta (HSTS, CSP, X-CTO, X-Frame, Referrer-Policy…).",
+          "Determinista"
+        ],
+        [
+          "Reconocimiento",
+          "port_scan",
+          "Escaneo de puertos TCP (nmap o alternativa en Node).",
+          "Determinista"
+        ],
+        [
+          "Reconocimiento",
+          "subdomain_discovery",
+          "Subdominios mediante subfinder, crt.sh y una lista de fuerza bruta.",
+          "Determinista"
+        ],
+        [
+          "Reconocimiento",
+          "tech_fingerprint",
+          "Identificación de tecnologías (httpx/whatweb o análisis de cabeceras/cuerpo).",
+          "Determinista"
+        ],
+        [
+          "Reconocimiento",
+          "tls_scan",
+          "Análisis TLS/SSL: protocolos, cifrados, certificado.",
+          "Determinista"
+        ],
+        [
+          "Reconocimiento",
+          "waf_detect",
+          "Detección de WAF/CDN (wafw00f o sondeo heurístico).",
+          "Determinista"
+        ],
+        [
+          "Reconocimiento",
+          "whois_lookup",
+          "Registrador, titular y fechas WHOIS, normalizados.",
+          "Determinista"
+        ],
+        [
+          "Escáner",
+          "nmap_scan",
+          "Escaneo de puertos con identificación de servicio/versión y captura de banner.",
+          "Determinista"
+        ],
+        [
+          "Escáner",
+          "osv_scan",
+          "Vulnerabilidades en dependencias mediante osv-scanner / OSV.dev.",
+          "Determinista"
+        ],
+        [
+          "Escáner",
+          "semgrep_scan",
+          "SAST de Semgrep con conjuntos de reglas de seguridad.",
+          "Determinista"
+        ],
+        [
+          "Escáner",
+          "trufflehog_scan",
+          "Análisis de secretos (trufflehog o más de 20 patrones de expresiones regulares).",
+          "Determinista"
+        ],
+        [
+          "Escáner",
+          "whatweb_scan",
+          "Identificación de tecnologías web.",
+          "Determinista"
+        ],
+        [
+          "Escáner",
+          "zap_scan",
+          "Análisis dinámico (DAST) de referencia con OWASP ZAP.",
+          "Determinista"
+        ],
+        [
+          "Escáner",
+          "zap_parse",
+          "Convierte el informe de ZAP a JSON (alertas, niveles de gravedad, CWEs).",
+          "Determinista"
+        ],
+        [
+          "Explotación",
+          "claude_sdk planner",
+          "Planificador de LLM; cuatro etapas (síntesis de reconocimiento → análisis de código → prueba de concepto → recomendación); planifica rutas de omisión de autenticación, ejecución remota de código y extracción de datos.",
+          "Probabilista"
+        ],
+        [
+          "Evaluación de resultados",
+          "code_analysis check",
+          "Valida el producto del análisis de código (esquema, cobertura de la superficie de ataque).",
+          "Determinista"
+        ],
+        [
+          "Evaluación de resultados",
+          "poc_execution check",
+          "Valida el producto de la prueba de concepto (estructura, taxonomía de gravedad, cadenas).",
+          "Determinista"
+        ],
+        [
+          "Evaluación de resultados",
+          "recommendation check",
+          "Valida el producto de remediación (clasificación, archivos afectados, cobertura).",
+          "Determinista"
+        ],
+        [
+          "Evaluación de resultados",
+          "subjective judge",
+          "Puntuación de la calidad del producto mediante un LLM como juez, aplicando criterios establecidos.",
+          "Probabilista"
+        ],
+        [
+          "Evaluación de resultados",
+          "puntuación",
+          "Puntuación objetiva/subjetiva ponderada → calificación.",
+          "Determinista"
+        ]
+      ],
+      "caption": "El módulo de reconocimiento y los escáneres activos son herramientas deterministas; el planificador de explotación razona con Claude en cuatro etapas internas; las etapas de evaluación de resultados califican los propios productos del equipo Rojo. El equipo Rojo opera únicamente sobre sistemas de titularidad gubernamental que han sido autorizados para pruebas.",
+      "source": "Control de inventario, revisado desde la fuente — arnés común AIDE."
+    },
+    {
+      "type": "table",
+      "title": "Azul — revisión defensiva y cumplimiento normativo (15 fases)",
+      "columns": [
+        "Fase",
+        "Función",
+        "Modo"
+      ],
+      "rows": [
+        [
+          "01 mapeo-de-aplicación",
+          "Mapea la pila tecnológica, los puntos de acceso, la autenticación, los secretos y los límites de confianza.",
+          "Probabilista"
+        ],
+        [
+          "02 clasificación-de-seguridad",
+          "Clasifica cada componente según la sensibilidad de los datos y asigna los controles correspondientes.",
+          "Probabilista"
+        ],
+        [
+          "03 arquitectura-de-seguridad",
+          "Revisión de arquitectura: modelo de autenticación, sesiones, secretos y límites.",
+          "Probabilista"
+        ],
+        [
+          "04 modelo-de-amenazas",
+          "Modelo de amenazas STRIDE por activo, con medidas de mitigación.",
+          "Probabilista"
+        ],
+        [
+          "05 evaluación-asvs-nivel2",
+          "Recorre 285 verificaciones de requisitos ASVS L2; resultado de aprobado/reprobado/no aplicable con evidencia.",
+          "Juicio + evidencia determinista"
+        ],
+        [
+          "06 cumplimiento-cas",
+          "Recorre 62 reglas de seguridad en la nube de Alberta (CAS); misma estructura que ASVS.",
+          "Juicio + evidencia determinista"
+        ],
+        [
+          "07 agregador-de-cadena-de-ataque",
+          "Integra los hallazgos del equipo Azul y del equipo Rojo en una cadena de ataque Lockheed.",
+          "Probabilista"
+        ],
+        [
+          "08 análisis-con-herramientas",
+          "Orquesta los escáneres deterministas (npm audit, secretlint, ESLint-security, OSV).",
+          "Orquestación determinista"
+        ],
+        [
+          "09 pruebas-unitarias-de-seguridad",
+          "Genera pruebas unitarias de seguridad por requisito ASVS.",
+          "Probabilista"
+        ],
+        [
+          "10 recuperación-y-resiliencia",
+          "Recuperación ante desastres y resiliencia: modos de fallo, objetivos de recuperación y copias de seguridad.",
+          "Probabilista"
+        ],
+        [
+          "11 generación-de-correcciones-de-código",
+          "Propone un parche en formato diff unificado por cada hallazgo.",
+          "Probabilístico"
+        ],
+        [
+          "12 security-overview-report",
+          "Elabora el informe clasificado: resumen, cadena de ataque, ASVS/CAS, hoja de ruta.",
+          "Probabilístico"
+        ],
+        [
+          "13 requirements-map",
+          "Asigna los requisitos de negocio, funcionales y no funcionales al mapa de la aplicación.",
+          "Probabilístico"
+        ],
+        [
+          "14 asvs-compliant-builder",
+          "Genera código conforme a ASVS-L2 con referencias a los requisitos insertadas en el propio código.",
+          "Generación de código determinista"
+        ],
+        [
+          "15 cas-compliant-builder",
+          "Genera código conforme a CAS con referencias a las reglas insertadas en el propio código.",
+          "Generación de código determinista"
+        ]
+      ],
+      "caption": "La fase azul se ejecuta en último lugar y lee todo lo que las demás fases han producido. La mayoría de las fases consisten en una valoración del modelo de lenguaje sobre evidencias deterministas; las fases 05 y 06 son los dos recorridos de estándares enumerados a continuación.",
+      "source": "Control de inventario, revisado desde la fuente — arnés común AIDE."
+    },
+    {
+      "type": "table",
+      "title": "Fase azul 05 — OWASP ASVS Nivel 2, por capítulo (285 verificaciones de requisitos)",
+      "columns": [
+        "Capítulo ASVS",
+        "Verificaciones"
+      ],
+      "rows": [
+        [
+          "V1 Arquitectura, Diseño y Modelado de Amenazas",
+          "44"
+        ],
+        [
+          "V2 Autenticación",
+          "45"
+        ],
+        [
+          "V3 Gestión de Sesiones",
+          "19"
+        ],
+        [
+          "V4 Control de Acceso",
+          "12"
+        ],
+        [
+          "V5 Validación, Saneamiento y Codificación de Entradas",
+          "30"
+        ],
+        [
+          "V6 Criptografía en Almacenamiento",
+          "16"
+        ],
+        [
+          "V7 Manejo de Errores y Registro de Eventos",
+          "14"
+        ],
+        [
+          "V8 Protección de Datos",
+          "19"
+        ],
+        [
+          "V9 Seguridad en las Comunicaciones",
+          "8"
+        ],
+        [
+          "V10 Código Malicioso",
+          "10"
+        ],
+        [
+          "V11 Lógica de Negocio",
+          "8"
+        ],
+        [
+          "V12 Archivos y Recursos",
+          "17"
+        ],
+        [
+          "V13 Seguridad de API y Servicios Web",
+          "22"
+        ],
+        [
+          "V14 Configuración e Implementación",
+          "21"
+        ],
+        [
+          "Total",
+          "285"
+        ]
+      ],
+      "caption": "La fase 05 recorre todos los requisitos del Estándar de Verificación de Seguridad de Aplicaciones (ASVS) de OWASP en el Nivel 2. La aplicabilidad varía según la aplicación; los requisitos relativos a carga de archivos, GraphQL, SOAP e idiomas no administrados se registran como no aplicables cuando la funcionalidad correspondiente está ausente. La tabla siguiente enumera todos los requisitos de forma completa.",
+      "source": "Control de inventario, revisado desde la fuente — arnés común AIDE."
+    },
+    {
+      "type": "table",
+      "title": "Fase azul 06 — Reglas de seguridad en la nube de Alberta (CAS) (62, por dominio)",
+      "columns": [
+        "Dominio",
+        "Regla",
+        "Qué exige"
+      ],
+      "rows": [
+        [
+          "Autenticación",
+          "AUTH-001",
+          "Autenticación de usuarios externos"
+        ],
+        [
+          "Autenticación",
+          "AUTH-002",
+          "Autenticación del personal de la organización"
+        ],
+        [
+          "Autenticación",
+          "AUTH-003",
+          "Autenticación de socios"
+        ],
+        [
+          "Autenticación",
+          "AUTH-004",
+          "Autenticación de API"
+        ],
+        [
+          "Autenticación",
+          "MFA-001",
+          "Autenticación multifactor para el personal de la organización"
+        ],
+        [
+          "Autenticación",
+          "MFA-002",
+          "Autenticación multifactor para usuarios públicos/externos"
+        ],
+        [
+          "Gestión de protocolos y proveedores de identidad",
+          "IDPR-001",
+          "Estándar de protocolo de identidad"
+        ],
+        [
+          "Gestión de protocolos y proveedores de identidad",
+          "IDPR-002",
+          "Endpoint de descubrimiento OIDC"
+        ],
+        [
+          "Gestión de protocolos y proveedores de identidad",
+          "IDPV-001",
+          "Validación del proveedor de identidad"
+        ],
+        [
+          "Gestión de protocolos y proveedores de identidad",
+          "IDBR-001",
+          "Intermediario / federador de identidad"
+        ],
+        [
+          "Autorización",
+          "AUTHZ-001",
+          "Backend de autorización"
+        ],
+        [
+          "Autorización",
+          "AUTHZ-002",
+          "RBAC/ABAC + ordenamiento de middleware"
+        ],
+        [
+          "Autorización",
+          "AUTHZ-003",
+          "Separación de funciones"
+        ],
+        [
+          "Autorización",
+          "AUTHZ-004",
+          "Acceso sin privilegios para funciones no relacionadas con la seguridad"
+        ],
+        [
+          "Autorización",
+          "AUTHZ-005",
+          "Integridad de la fuente de roles"
+        ],
+        [
+          "Autorización",
+          "AUTHZ-006",
+          "Reclamaciones sensibles en el lado del cliente"
+        ],
+        [
+          "Seguridad de red y perímetro",
+          "BOT-001",
+          "Protección contra bots y fraude"
+        ],
+        [
+          "Seguridad de red y perímetro",
+          "FW-001",
+          "Cortafuegos (zona de aterrizaje en la nube)"
+        ],
+        [
+          "Seguridad de red y perímetro",
+          "FW-002",
+          "Cortafuegos (centro de datos)"
+        ],
+        [
+          "Seguridad de red y perímetro",
+          "CDN-001",
+          "Red de distribución de contenidos"
+        ],
+        [
+          "Seguridad de red y perímetro",
+          "WAF-001",
+          "Cortafuegos de aplicaciones web"
+        ],
+        [
+          "Seguridad de red y perímetro",
+          "CORS-001",
+          "Uso compartido de recursos entre orígenes"
+        ],
+        [
+          "Seguridad de red y perímetro",
+          "RATE-001",
+          "Limitación de tasa"
+        ],
+        [
+          "Secretos y cifrado",
+          "SEC-001",
+          "Secretos en el código fuente"
+        ],
+        [
+          "Secretos y cifrado",
+          "SEC-002",
+          "Gestión de secretos"
+        ],
+        [
+          "Secretos y cifrado",
+          "SEC-003",
+          "Seguridad de JWT"
+        ],
+        [
+          "Secretos y cifrado",
+          "SEC-004",
+          "Secretos en archivos .env / de configuración"
+        ],
+        [
+          "Secretos y cifrado",
+          "SEC-005",
+          "Ciclo de Vida de Credenciales del Sistema"
+        ],
+        [
+          "Secretos y Cifrado",
+          "ENC-001",
+          "Cifrado (Protegido A y Superior)"
+        ],
+        [
+          "Secretos y Cifrado",
+          "ENC-002",
+          "Cifrado para Datos de Salud (Protegido B)"
+        ],
+        [
+          "Secretos y Cifrado",
+          "ENC-003",
+          "Cifrado para Datos Sensibles (Protegido B)"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "LOG-001",
+          "Registro de Eventos de Seguridad"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "LOG-002",
+          "Registros Inmutables"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "LOG-003",
+          "Sin Secretos ni Información Personal en los Registros"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "LOG-004",
+          "Sincronización de Hora"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "LOG-005",
+          "Registros Estructurados (JSON)"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "LOG-006",
+          "Envío de Registros"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "LOG-007",
+          "Registros de Telemetría"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "LOG-008",
+          "Gestión de Fallos de Auditoría"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "LOG-010",
+          "Control de Acceso a la Auditoría"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "MAL-001",
+          "Protección contra Software Malicioso"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "PAT-001",
+          "Parcheo"
+        ],
+        [
+          "Registro, Monitoreo y Gestión de Vulnerabilidades",
+          "VUL-001",
+          "Gestión de Vulnerabilidades"
+        ],
+        [
+          "Seguridad en la Nube y de Datos",
+          "RES-001",
+          "Residencia de Datos"
+        ],
+        [
+          "Seguridad en la Nube y de Datos",
+          "CDS-001",
+          "Seguridad de Datos en la Nube"
+        ],
+        [
+          "Seguridad en la Nube y de Datos",
+          "STORE-001",
+          "Seguridad de Depósitos de Almacenamiento"
+        ],
+        [
+          "Seguridad en la Nube y de Datos",
+          "STORE-002",
+          "Seguridad del Almacén de Datos"
+        ],
+        [
+          "Seguridad de Aplicaciones Web",
+          "WEB-001",
+          "Cumplimiento OWASP ASVS Nivel 2"
+        ],
+        [
+          "Seguridad de Aplicaciones Web",
+          "CSP-001",
+          "Política de Seguridad de Contenido"
+        ],
+        [
+          "Seguridad de Aplicaciones Web",
+          "HDR-001",
+          "Encabezados de Seguridad"
+        ],
+        [
+          "Seguridad de Aplicaciones Web",
+          "PWD-001",
+          "Política de Contraseñas"
+        ],
+        [
+          "Seguridad de Aplicaciones Web",
+          "SESSION-001",
+          "Gestión de Sesiones"
+        ],
+        [
+          "Seguridad de Aplicaciones Web",
+          "SESSION-002",
+          "Cierre de Sesión Federado"
+        ],
+        [
+          "Seguridad de Aplicaciones Web",
+          "UPLOAD-001",
+          "Seguridad en la Carga de Archivos"
+        ],
+        [
+          "Seguridad de Aplicaciones Web",
+          "UPLOAD-002",
+          "Almacenamiento de archivos cargados"
+        ],
+        [
+          "Ciclo de vida de la cuenta",
+          "ACCT-001",
+          "Ciclo de vida de cuentas inactivas"
+        ],
+        [
+          "Seguridad de agentes de IA",
+          "AI-001",
+          "Saneamiento de entradas de IA"
+        ],
+        [
+          "Seguridad de agentes de IA",
+          "AI-002",
+          "Saneamiento de salidas de IA"
+        ],
+        [
+          "Seguridad de agentes de IA",
+          "AI-003",
+          "Controles de costos de IA"
+        ],
+        [
+          "Seguridad de agentes de IA",
+          "AI-004",
+          "Límite de datos de IA"
+        ],
+        [
+          "Seguridad de agentes de IA",
+          "AI-005",
+          "Ejecución de herramientas de IA"
+        ],
+        [
+          "Seguridad de agentes de IA",
+          "AI-006",
+          "Generación de código por IA"
+        ]
+      ],
+      "caption": "La fase 06 recorre la línea base de seguridad para aplicaciones en la nube de Alberta: 62 reglas distribuidas en 10 dominios, varias de las cuales corresponden a familias de controles del ITSG-33. La regla LOG-001 por sí sola incluye once subrequisitos (de la a hasta la k).",
+      "source": "Control de inventario, revisado desde la fuente — arnés común AIDE."
+    },
+    {
+      "type": "table",
+      "title": "Fase azul 05 — la lista de verificación completa del nivel 2 de OWASP ASVS (285 requisitos)",
+      "columns": [
+        "ID de requisito",
+        "Requisito (ASVS Nivel 2)"
+      ],
+      "rows": [
+        [
+          "V1.1.1",
+          "El uso de un ciclo de vida de desarrollo de software seguro que aborde la seguridad en todas las etapas"
+        ],
+        [
+          "V1.1.2",
+          "El uso del modelado de amenazas en cada cambio de diseño o planificación de sprint para identificar amenazas, planificar contramedidas, facilitar las respuestas adecuadas al riesgo y orientar las pruebas de seguridad"
+        ],
+        [
+          "V1.1.3",
+          "Todas las historias de usuario y funcionalidades contienen restricciones de seguridad funcionales"
+        ],
+        [
+          "V1.1.4",
+          "Documentación y justificación de todos los límites de confianza, componentes y flujos de datos significativos de la aplicación"
+        ],
+        [
+          "V1.1.5",
+          "Definición y análisis de seguridad de la arquitectura de alto nivel de la aplicación y de todos los servicios remotos"
+        ],
+        [
+          "V1.1.6",
+          "Implementación de controles de seguridad centralizados, simples (economía de diseño), verificados, seguros y reutilizables, para evitar controles duplicados, ausentes, inconsistentes o frágiles"
+        ],
+        [
+          "V1.1.7",
+          "Disponibilidad de una lista de verificación de codificación segura, requisitos de seguridad, directrices o políticas para todos los desarrolladores"
+        ],
+        [
+          "V1.2.1",
+          "El uso de cuentas de sistema operativo únicas o especiales con privilegios reducidos para todos los componentes de la aplicación, servicios y servidores"
+        ],
+        [
+          "V1.2.2",
+          "Las comunicaciones entre los componentes de la aplicación, incluidas las API, el middleware y las capas de datos, están autenticadas"
+        ],
+        [
+          "V1.2.3",
+          "Se utiliza un único mecanismo de autenticación validado que se sabe que es robusto, puede ampliarse para incluir autenticación reforzada y cuenta con registros y monitoreo suficientes para detectar el uso indebido de cuentas o…"
+        ],
+        [
+          "V1.2.4",
+          "Todas las rutas de autenticación y las API de gestión de identidades implementan una solidez de control de seguridad de autenticación uniforme, de modo que no existan alternativas más débiles que puedan utilizarse para vulnerar la…"
+        ],
+        [
+          "V1.3.1",
+          "Se utiliza un único mecanismo de gestión de sesiones validado que se sabe que es robusto y puede ampliarse para incluir autenticación reforzada"
+        ],
+        [
+          "V1.4.1",
+          "Los puntos de aplicación de confianza, como las pasarelas de control de acceso, los servidores y las funciones sin servidor, aplican los controles de acceso"
+        ],
+        [
+          "V1.4.2",
+          "[Eliminado en ASVS 4.0.3 — omitir]"
+        ],
+        [
+          "V1.4.3",
+          "La aplicación utiliza un único mecanismo de control de acceso auditable"
+        ],
+        [
+          "V1.4.4",
+          "Los datos y la funcionalidad están protegidos en función de la clasificación de seguridad de los datos que se manejan"
+        ],
+        [
+          "V1.4.5",
+          "Particionamiento de aplicaciones (SC-2)"
+        ],
+        [
+          "V1.5.1",
+          "Los requisitos de entrada y salida definen claramente cómo manejar y procesar los datos según su tipo, contenido y el cumplimiento de las leyes, reglamentos y demás políticas aplicables"
+        ],
+        [
+          "V1.5.2",
+          "No se utiliza la serialización en las comunicaciones con clientes no confiables"
+        ],
+        [
+          "V1.5.3",
+          "La validación de entradas se aplica en una capa de servicio de confianza, no únicamente en el cliente"
+        ],
+        [
+          "V1.5.4",
+          "La codificación de salida se produce cerca del intérprete al que está destinada, o directamente en él"
+        ],
+        [
+          "V1.6.1",
+          "Existe una política explícita para la gestión de claves criptográficas y el ciclo de vida de dichas claves sigue un estándar de gestión de claves como el NIST SP 800-57"
+        ],
+        [
+          "V1.6.2",
+          "Los consumidores de servicios criptográficos protegen el material de claves y otros secretos mediante el uso de almacenes de claves o alternativas basadas en API"
+        ],
+        [
+          "V1.6.3",
+          "Todas las claves y contraseñas son reemplazables y forman parte de un proceso bien definido para volver a cifrar los datos sensibles"
+        ],
+        [
+          "V1.6.4",
+          "La arquitectura trata los secretos del lado del cliente como visibles para los atacantes"
+        ],
+        [
+          "V1.7.1",
+          "Se utiliza un formato y un enfoque de registro comunes en todo el sistema"
+        ],
+        [
+          "V1.7.2",
+          "Los registros se transmiten de forma segura a un sistema preferiblemente remoto para su análisis, detección, generación de alertas y escalada"
+        ],
+        [
+          "V1.8.1",
+          "Todos los datos sensibles están identificados y clasificados en niveles de protección"
+        ],
+        [
+          "V1.8.2",
+          "Todos los niveles de protección tienen asociado un conjunto de requisitos de protección"
+        ],
+        [
+          "V1.9.1",
+          "La aplicación cifra las comunicaciones entre componentes, en particular cuando estos componentes se encuentran en distintos contenedores, sistemas, sitios o proveedores de la nube"
+        ],
+        [
+          "V1.9.2",
+          "Los componentes de la aplicación verifican la autenticidad de cada extremo en un enlace de comunicación para prevenir ataques de intermediario (person-in-the-middle)"
+        ],
+        [
+          "V1.10.1",
+          "Se utiliza un sistema de control de código fuente, con procedimientos que garantizan que las confirmaciones de cambios (check-ins) vayan acompañadas de incidencias o tickets de cambio"
+        ],
+        [
+          "V1.11.1",
+          "La definición y documentación de todos los componentes de la aplicación en cuanto a las funciones de negocio o de seguridad que proporcionan"
+        ],
+        [
+          "V1.11.2",
+          "Todos los flujos de lógica de negocio de alto valor, incluidos la autenticación, la gestión de sesiones y el control de acceso, no comparten estado no sincronizado"
+        ],
+        [
+          "V1.11.3",
+          "Todos los flujos de lógica de negocio de alto valor, incluidos la autenticación, la gestión de sesiones y el control de acceso, son seguros ante la concurrencia (thread-safe) y resistentes a condiciones de carrera entre el momento de verificación y el momento de uso (time-of-check/time-of-use)"
+        ],
+        [
+          "V1.12.1",
+          "Los archivos cargados por los usuarios se almacenan fuera de la raíz web o en un depósito de almacenamiento en la nube con políticas de acceso independientes"
+        ],
+        [
+          "V1.12.2",
+          "Los archivos cargados por los usuarios — cuando la aplicación requiera mostrarlos o descargarlos — se sirven mediante descargas de flujo de octetos (octet stream) o desde un dominio sin relación, como un depósito de almacenamiento de archivos en la nube"
+        ],
+        [
+          "V1.13.1",
+          "Todos los componentes de la aplicación utilizan las mismas estrategias de codificación y escape para evitar ataques"
+        ],
+        [
+          "V1.14.1",
+          "La segregación de componentes con distintos niveles de confianza mediante controles de seguridad bien definidos, reglas de cortafuegos, pasarelas de API, proxies inversos, grupos de seguridad en la nube u otros mecanismos similares"
+        ],
+        [
+          "V1.14.2",
+          "Se utilizan firmas binarias, conexiones de confianza y puntos finales verificados para desplegar binarios en dispositivos remotos"
+        ],
+        [
+          "V1.14.3",
+          "La cadena de construcción (build pipeline) advierte sobre componentes desactualizados o no seguros y adopta las medidas adecuadas"
+        ],
+        [
+          "V1.14.4",
+          "La cadena de construcción incluye un paso para construir y verificar automáticamente el despliegue seguro de la aplicación, en particular si la infraestructura de la aplicación está definida por software, como ocurre en la nube…"
+        ],
+        [
+          "V1.14.5",
+          "Los despliegues de la aplicación aplican aislamiento mediante sandbox, contenedores y/o segmentación a nivel de red de forma adecuada para dificultar y retrasar posibles ataques a otras aplicaciones"
+        ],
+        [
+          "V1.14.6",
+          "No se utilizan tecnologías de cliente obsoletas, no seguras o sin soporte, como complementos NSAPI, Flash, Shockwave, ActiveX, Silverlight, NACL ni applets Java del lado del cliente"
+        ],
+        [
+          "V2.1.1",
+          "Las contraseñas establecidas por los usuarios tienen al menos 12 caracteres (o 15 para cuentas con privilegios, según DUC v4.3)"
+        ],
+        [
+          "V2.1.2",
+          "Se permiten contraseñas de al menos 64 caracteres y se rechazan las que superen los 128 caracteres"
+        ],
+        [
+          "V2.1.3",
+          "No se realiza el truncamiento de contraseñas"
+        ],
+        [
+          "V2.1.6",
+          "Se incluye una función de «cambio de contraseña» que requiere la contraseña actual y la nueva"
+        ],
+        [
+          "V2.1.9",
+          "No existen reglas de composición de contraseñas que restrinjan el tipo de caracteres permitidos"
+        ],
+        [
+          "V2.1.12",
+          "El usuario puede optar por ver temporalmente la contraseña enmascarada en su totalidad, o ver temporalmente el último carácter escrito"
+        ],
+        [
+          "V2.2.1",
+          "Los controles anti-automatización son eficaces para mitigar los ataques de prueba de credenciales comprometidas, fuerza bruta y bloqueo de cuenta"
+        ],
+        [
+          "V2.2.2",
+          "El uso de autenticadores débiles (como SMS y correo electrónico) se limita a la verificación secundaria y la aprobación de transacciones"
+        ],
+        [
+          "V2.2.3",
+          "Se envían notificaciones seguras a los usuarios tras la actualización de los datos de autenticación"
+        ],
+        [
+          "V2.2.4",
+          "[ENV-VAR BYPASS RULE — NEVER WAIVED] Verificar que los controles anti-automatización, bloqueo, limitación de velocidad y fuerza bruta no sean eludibles mediante variables de entorno, indicadores de configuración o funciones…"
+        ],
+        [
+          "V2.2.5",
+          "Los proveedores de credenciales y los socios externos de credenciales son de confianza y se mantienen actualizados"
+        ],
+        [
+          "V2.3.1",
+          "Las contraseñas iniciales o los códigos de activación generados por el sistema tienen al menos 6 caracteres, contienen letras y números, y caducan tras un breve período de tiempo"
+        ],
+        [
+          "V2.3.2",
+          "El registro y otras acciones de alto valor se completan dentro de un período de tiempo con una caducidad adecuada"
+        ],
+        [
+          "V2.3.3",
+          "No se presentan pistas de contraseña ni autenticación basada en conocimiento (las denominadas «preguntas secretas»)"
+        ],
+        [
+          "V2.4.1",
+          "Las contraseñas se almacenan de forma resistente a los ataques sin conexión, mediante un algoritmo de hash adaptativo aprobado o hash con sal (bcrypt, scrypt, argon2, PBKDF2)"
+        ],
+        [
+          "V2.4.2",
+          "El valor de sal tiene al menos 32 bits de longitud y se elige de forma arbitraria para minimizar las colisiones de valores de sal entre los hashes almacenados"
+        ],
+        [
+          "V2.4.3",
+          "Si se utiliza PBKDF2, el número de iteraciones es tan alto como lo permita el rendimiento del servidor de verificación, normalmente al menos 100 000 iteraciones"
+        ],
+        [
+          "V2.4.4",
+          "Si se utiliza bcrypt, el factor de trabajo es tan alto como lo permita el rendimiento del servidor de verificación, con un mínimo de 10"
+        ],
+        [
+          "V2.4.5",
+          "Se realiza una iteración adicional de una función de derivación de clave, utilizando un valor de sal secreto conocido únicamente por el verificador"
+        ],
+        [
+          "V2.5.1",
+          "El secreto de activación inicial o el secreto de recuperación generado por el sistema no se envía en texto claro al usuario"
+        ],
+        [
+          "V2.5.2",
+          "No se presentan pistas de contraseña ni recuperación basada en conocimiento (preguntas secretas)"
+        ],
+        [
+          "V2.5.3",
+          "Los códigos OTP o de recuperación, actualización u omisión multifactor se intercambian a través de un canal seguro"
+        ],
+        [
+          "V2.5.4",
+          "Las rutas de recuperación de contraseña olvidada y otras rutas de recuperación utilizan un TOTP u otro token virtual, una notificación push u otro mecanismo de recuperación sin conexión"
+        ],
+        [
+          "V2.5.5",
+          "Cuando se cambia o sustituye un factor de autenticación, se notifica al usuario este evento"
+        ],
+        [
+          "V2.5.6",
+          "Las rutas de recuperación de contraseña olvidada y otras rutas de recuperación utilizan un enlace de restablecimiento de un solo uso con límite de tiempo, un OTP u otro secreto"
+        ],
+        [
+          "V2.5.7",
+          "Los factores OTP, cuando se utilizan, se invalidan tras su uso"
+        ],
+        [
+          "V2.6.1",
+          "Los secretos de consulta tienen suficiente aleatoriedad, con al menos 112 bits de entropía"
+        ],
+        [
+          "V2.6.2",
+          "Los secretos de consulta son resistentes a ataques sin conexión, como los basados en valores predecibles"
+        ],
+        [
+          "V2.6.3",
+          "Los secretos de consulta se procesan con sal y se procesan mediante una función hash unidireccional aprobada"
+        ],
+        [
+          "V2.7.1",
+          "Los autenticadores fuera de banda en texto claro (clasificados como «restringidos» por NIST), como SMS o PSTN, no se ofrecen de forma predeterminada, y las alternativas más sólidas, como las notificaciones push, se ofrecen en primer lugar"
+        ],
+        [
+          "V2.7.2",
+          "El verificador fuera de banda hace expirar las solicitudes de autenticación fuera de banda transcurridos 10 minutos"
+        ],
+        [
+          "V2.7.3",
+          "El autenticador fuera de banda se utiliza como máximo una vez"
+        ],
+        [
+          "V2.8.1",
+          "Los OTP basados en tiempo tienen un período de vida definido antes de expirar"
+        ],
+        [
+          "V2.8.2",
+          "Las claves utilizadas para los OTP basados en tiempo se almacenan de forma segura mediante el almacén de secretos de la plataforma"
+        ],
+        [
+          "V2.8.3",
+          "Se utilizan algoritmos criptográficos aprobados en la generación, inicialización y verificación de OTP"
+        ],
+        [
+          "V2.8.4",
+          "Un OTP basado en tiempo solo puede utilizarse una vez dentro del período de validez"
+        ],
+        [
+          "V2.8.5",
+          "Si un token OTP multifactor basado en tiempo se reutiliza durante el período de validez, el evento se registra y se alerta al usuario"
+        ],
+        [
+          "V2.8.6",
+          "Los generadores físicos de OTP de un solo factor pueden revocarse en caso de robo o pérdida"
+        ],
+        [
+          "V2.9.1",
+          "Las claves criptográficas utilizadas en la verificación se almacenan de forma segura y se protegen contra su divulgación, por ejemplo, mediante un TPM, un HSM o el almacén de claves del sistema operativo"
+        ],
+        [
+          "V2.9.2",
+          "El nonce de desafío tiene al menos 64 bits de longitud y es estadísticamente único o único durante la vida útil del dispositivo criptográfico"
+        ],
+        [
+          "V2.9.3",
+          "Se utilizan algoritmos criptográficos aprobados en la generación, inicialización y verificación"
+        ],
+        [
+          "V2.10.1",
+          "Los secretos de integración no dependen de contraseñas inmutables, como claves de API o secretos compartidos, salvo en el caso de sistemas heredados"
+        ],
+        [
+          "V2.10.2",
+          "Si se requieren contraseñas para la autenticación de servicios, las credenciales utilizadas no son una contraseña predeterminada"
+        ],
+        [
+          "V2.10.3",
+          "Las contraseñas se almacenan con protección suficiente para prevenir ataques de recuperación sin conexión, incluido el acceso al sistema local"
+        ],
+        [
+          "V2.10.4",
+          "Las contraseñas, las integraciones con bases de datos y sistemas de terceros, las semillas y los secretos internos, y las claves de API se gestionan de forma segura y no se incluyen en el código fuente ni se almacenan en repositorios de código fuente"
+        ],
+        [
+          "V3.1.1",
+          "La aplicación nunca revela tokens de sesión en parámetros de URL ni en mensajes de error"
+        ],
+        [
+          "V3.1.2",
+          "La aplicación genera un nuevo token de sesión al autenticar al usuario, puede revocarse, y las sesiones existentes quedan invalidadas tras la autenticación"
+        ],
+        [
+          "V3.2.1",
+          "La aplicación genera un nuevo token de sesión al autenticar al usuario"
+        ],
+        [
+          "V3.2.2",
+          "Los tokens de sesión poseen al menos 64 bits de entropía"
+        ],
+        [
+          "V3.2.3",
+          "La aplicación almacena los tokens de sesión en el navegador únicamente mediante métodos seguros"
+        ],
+        [
+          "V3.2.4",
+          "Los tokens de sesión se generan mediante algoritmos criptográficos aprobados"
+        ],
+        [
+          "V3.3.1",
+          "El cierre de sesión y la expiración invalidan el token de sesión, de modo que el botón de retroceso o una parte dependiente no reanuden una sesión autenticada, incluida entre partes dependientes"
+        ],
+        [
+          "V3.3.2",
+          "Se proporciona un mecanismo que permite a los usuarios cerrar sesión en alguna o en todas las sesiones activas en ese momento"
+        ],
+        [
+          "V3.3.3",
+          "Se ofrece la opción de cerrar todas las demás sesiones activas tras un cambio de contraseña exitoso"
+        ],
+        [
+          "V3.3.4",
+          "Los usuarios pueden ver y (opcionalmente) cerrar sesión en alguna o en todas las sesiones y dispositivos activos en ese momento"
+        ],
+        [
+          "V3.4.1",
+          "Los tokens de sesión basados en cookies tienen establecido el atributo Secure"
+        ],
+        [
+          "V3.4.2",
+          "Los tokens de sesión basados en cookies tienen establecido el atributo HttpOnly para impedir el acceso mediante JavaScript"
+        ],
+        [
+          "V3.4.3",
+          "Los tokens de sesión basados en cookies utilizan el atributo SameSite para limitar la exposición a ataques de falsificación de solicitudes entre sitios"
+        ],
+        [
+          "V3.4.4",
+          "Los tokens de sesión basados en cookies usan el prefijo __Host- para proporcionar aislamiento de cookies"
+        ],
+        [
+          "V3.4.5",
+          "Si la aplicación se publica bajo un nombre de dominio con otras aplicaciones que establecen o utilizan cookies de sesión que podrían revelar las cookies de sesión, se establece el atributo de ruta de la forma más precisa posible"
+        ],
+        [
+          "V3.5.1",
+          "La aplicación permite a los usuarios revocar los tokens OAuth que establecen relaciones de confianza con aplicaciones vinculadas"
+        ],
+        [
+          "V3.5.2",
+          "La aplicación utiliza tokens de sesión en lugar de secretos y claves de API estáticos, excepto en integraciones con sistemas heredados"
+        ],
+        [
+          "V3.5.3",
+          "Los tokens de sesión sin estado utilizan firmas digitales, cifrado y otras contramedidas para protegerse contra ataques de manipulación, envolvimiento, repetición, cifrado nulo y sustitución de claves"
+        ],
+        [
+          "V3.7.1",
+          "La aplicación garantiza una sesión de inicio de sesión completa y válida, o requiere reautenticación o verificación secundaria antes de permitir transacciones sensibles o cambios en la cuenta"
+        ],
+        [
+          "V4.1.1",
+          "Aplica reglas de control de acceso en una capa de servicio de confianza, especialmente si existe control de acceso en el lado del cliente y este pudiera eludirse"
+        ],
+        [
+          "V4.1.2",
+          "Todos los atributos de usuario y datos, así como la información de política utilizada por los controles de acceso, no pueden ser manipulados por los usuarios finales salvo que estén específicamente autorizados"
+        ],
+        [
+          "V4.1.3",
+          "Existe el principio de mínimo privilegio — los usuarios solo deben poder acceder a las funciones, archivos de datos, URL, controladores, servicios y demás recursos para los que posean autorización específica"
+        ],
+        [
+          "V4.1.4",
+          "Existe el principio de denegación por defecto, por el cual los nuevos usuarios y roles comienzan con permisos mínimos o sin permisos, y no reciben acceso a nuevas funciones hasta que dicho acceso se asigne de manera explícita"
+        ],
+        [
+          "V4.1.5",
+          "Los controles de acceso fallan de forma segura, incluso cuando se produce una excepción"
+        ],
+        [
+          "V4.1.6",
+          "El orden del middleware garantiza la autenticación antes de cualquier otro procesamiento relevante para la seguridad en las rutas protegidas"
+        ],
+        [
+          "V4.2.1",
+          "Los datos sensibles y las API están protegidos contra ataques de Referencia Directa a Objetos Insegura (IDOR) / Autorización Rota a Nivel de Objeto (BOLA) que apuntan a la creación, lectura, actualización y eliminación de registros"
+        ],
+        [
+          "V4.2.2",
+          "El framework aplica un mecanismo anti-CSRF sólido para proteger las funcionalidades autenticadas, y protecciones anti-automatización o anti-CSRF eficaces protegen las funcionalidades no autenticadas"
+        ],
+        [
+          "V4.3.1",
+          "Las interfaces administrativas utilizan autenticación multifactor apropiada para prevenir el uso no autorizado"
+        ],
+        [
+          "V4.3.2",
+          "La navegación por directorios está deshabilitada salvo que se desee deliberadamente"
+        ],
+        [
+          "V4.3.3",
+          "La aplicación no permite el descubrimiento ni la divulgación de metadatos de archivos o directorios, como Thumbs.db, .DS_Store, carpetas .git o .svn"
+        ],
+        [
+          "V4.4.1",
+          "Acceso sin privilegios para funciones no relacionadas con la seguridad (AC-6(2))"
+        ],
+        [
+          "V5.1.1",
+          "Cuenta con defensas contra ataques de contaminación de parámetros HTTP, en particular si el framework de la aplicación no distingue el origen de los parámetros de solicitud"
+        ],
+        [
+          "V5.1.2",
+          "Los frameworks protegen contra ataques de asignación masiva de parámetros, o la aplicación dispone de contramedidas para protegerse contra la asignación insegura de parámetros"
+        ],
+        [
+          "V5.1.3",
+          "Toda entrada (campos de formularios HTML, solicitudes REST, parámetros de URL, cabeceras HTTP, cookies, archivos por lotes, fuentes RSS, etc.) se valida mediante validación positiva (listas de permitidos)"
+        ],
+        [
+          "V5.1.4",
+          "Los datos estructurados tienen un tipo estricto y se validan contra un esquema definido que incluye caracteres permitidos, longitud y patrón"
+        ],
+        [
+          "V5.1.5",
+          "Las redirecciones y reenvíos de URL solo permiten destinos que figuren en una lista de permitidos, o muestran una advertencia al redirigir hacia contenido potencialmente no confiable"
+        ],
+        [
+          "V5.2.1",
+          "Toda entrada HTML no confiable proveniente de editores WYSIWYG o similares se sanea correctamente mediante una biblioteca de saneamiento HTML o una funcionalidad del framework"
+        ],
+        [
+          "V5.2.2",
+          "Los datos no estructurados se sanean para aplicar medidas de seguridad como los caracteres permitidos y la longitud máxima"
+        ],
+        [
+          "V5.2.3",
+          "Sanea la entrada del usuario antes de enviarla a los sistemas de correo, para proteger contra inyecciones SMTP o IMAP"
+        ],
+        [
+          "V5.2.4",
+          "Evita el uso de eval() u otras funciones de ejecución dinámica de código"
+        ],
+        [
+          "V5.2.5",
+          "Protege contra ataques de inyección de plantillas asegurando que cualquier entrada del usuario incluida sea saneada o ejecutada en un entorno aislado (sandbox)"
+        ],
+        [
+          "V5.2.6",
+          "Protege contra ataques SSRF mediante la validación o el saneamiento de datos no confiables o metadatos de archivos HTTP"
+        ],
+        [
+          "V5.2.7",
+          "Sanea, deshabilita o aísla en un entorno seguro (sandbox) el contenido SVG con scripts proporcionado por el usuario"
+        ],
+        [
+          "V5.2.8",
+          "Sanea, deshabilita o aísla en un entorno seguro (sandbox) el contenido con scripts o lenguaje de plantillas de expresiones proporcionado por el usuario"
+        ],
+        [
+          "V5.3.1",
+          "La codificación de salida es pertinente para el intérprete y el contexto requeridos; por ejemplo, codificación de entidades HTML para contenido HTML, codificación de URL para parámetros de URL, codificación de atributos para CSS o URL, etc."
+        ],
+        [
+          "V5.3.2",
+          "La codificación de salida preserva el juego de caracteres y la configuración regional elegidos por el usuario, de modo que cualquier punto de carácter Unicode sea válido y se gestione de forma segura"
+        ],
+        [
+          "V5.3.3",
+          "El escape de salida sensible al contexto, preferiblemente automatizado, protege contra XSS reflejado, almacenado y de DOM"
+        ],
+        [
+          "V5.3.4",
+          "La selección de datos o las consultas a bases de datos (p. ej., SQL, HQL, ORM, NoSQL) utilizan consultas parametrizadas, ORM, marcos de entidades o cuentan con otra protección contra ataques de inyección en bases de datos"
+        ],
+        [
+          "V5.3.5",
+          "Cuando no se dispone de consultas parametrizadas u otros mecanismos más seguros, se utiliza la codificación de salida específica del contexto para proteger contra ataques de inyección; por ejemplo, el escape de SQL para proteger contra inyección SQL"
+        ],
+        [
+          "V5.3.6",
+          "Protege contra ataques de inyección de JavaScript o JSON, incluidos los ataques mediante eval y la inclusión de JavaScript remoto"
+        ],
+        [
+          "V5.3.7",
+          "Protege contra vulnerabilidades de inyección LDAP, o bien se han implementado controles de seguridad específicos para prevenirlas"
+        ],
+        [
+          "V5.3.8",
+          "Protege contra la inyección de comandos del sistema operativo y garantiza que las llamadas al sistema operativo utilicen consultas parametrizadas o codificación de salida de línea de comandos adecuada al contexto"
+        ],
+        [
+          "V5.3.9",
+          "Protege contra ataques de inclusión de archivos locales (LFI) o inclusión de archivos remotos (RFI)"
+        ],
+        [
+          "V5.3.10",
+          "Protege contra ataques de inyección XPath o inyección XML"
+        ],
+        [
+          "V5.4.1",
+          "Utiliza operaciones de cadenas, búferes y enteros con gestión segura de memoria para código administrado y no administrado"
+        ],
+        [
+          "V5.4.2",
+          "Las cadenas de formato no aceptan entradas potencialmente maliciosas"
+        ],
+        [
+          "V5.4.3",
+          "Se utilizan técnicas de validación de signo, rango y entrada para prevenir desbordamientos de enteros"
+        ],
+        [
+          "V5.5.1",
+          "Los objetos serializados utilizan comprobaciones de integridad o están cifrados para evitar la creación hostil de objetos o la manipulación de datos"
+        ],
+        [
+          "V5.5.2",
+          "Restringe correctamente los analizadores XML para que utilicen únicamente la configuración más restrictiva posible y garantiza que las funciones no seguras, como la resolución de entidades externas, estén deshabilitadas para prevenir XML External"
+        ],
+        [
+          "V5.5.3",
+          "Se evita la deserialización de datos no confiables o se protege tanto en el código personalizado como en las bibliotecas de terceros"
+        ],
+        [
+          "V5.5.4",
+          "Al analizar JSON en navegadores o backends basados en JavaScript, se utiliza JSON.parse para procesar el documento JSON"
+        ],
+        [
+          "V6.1.1",
+          "Los datos privados regulados se almacenan cifrados en reposo, como la Información de Identificación Personal (PII), la información personal sensible o los datos que se consideren probablemente sujetos a la normativa aplicable"
+        ],
+        [
+          "V6.1.2",
+          "Los datos sanitarios regulados se almacenan cifrados en reposo, como los historiales médicos, los datos de dispositivos médicos o los registros de investigación desanonimizados"
+        ],
+        [
+          "V6.1.3",
+          "Los datos financieros regulados se almacenan cifrados en reposo, como cuentas financieras, incumplimientos o historial crediticio, registros fiscales, historial salarial, beneficiarios o registros de mercado o de investigación desanonimizados"
+        ],
+        [
+          "V6.2.1",
+          "Todos los módulos criptográficos fallan de forma segura y los errores se gestionan de manera que no permitan ataques de tipo Padding Oracle"
+        ],
+        [
+          "V6.2.2",
+          "Se utilizan algoritmos, modos y bibliotecas criptográficos probados por la industria o aprobados por los gobiernos, en lugar de criptografía desarrollada a medida"
+        ],
+        [
+          "V6.2.3",
+          "El vector de inicialización del cifrado, la configuración del cifrador y los modos de bloque se configuran de forma segura siguiendo las recomendaciones más recientes"
+        ],
+        [
+          "V6.2.4",
+          "Los algoritmos de números aleatorios, cifrado o hash, las longitudes de clave, las rondas, los cifradores o los modos pueden reconfigurarse, actualizarse o sustituirse en cualquier momento para protegerse frente a vulnerabilidades criptográficas"
+        ],
+        [
+          "V6.2.5",
+          "No se utilizan modos de bloque conocidos como no seguros (es decir, ECB)"
+        ],
+        [
+          "V6.2.6",
+          "Los nonces, los vectores de inicialización y otros números de uso único no deben emplearse más de una vez con una clave de cifrado determinada"
+        ],
+        [
+          "V6.2.7",
+          "Los datos cifrados se autentican mediante firmas, modos de cifrado autenticados o HMAC para garantizar que el texto cifrado no sea alterado por una parte no autorizada"
+        ],
+        [
+          "V6.2.8",
+          "Todas las operaciones criptográficas tienen un tiempo constante y no existen operaciones de «cortocircuito» en comparaciones, derivaciones de claves o cifrados, a fin de evitar la fuga de información"
+        ],
+        [
+          "V6.3.1",
+          "Todos los números aleatorios, nombres de archivo aleatorios, GUIDs aleatorios y cadenas aleatorias se generan utilizando el generador de números aleatorios criptográficamente seguro aprobado por el módulo criptográfico cuando estos valores aleatorios…"
+        ],
+        [
+          "V6.3.2",
+          "Los GUIDs aleatorios se crean utilizando el algoritmo GUID v4 y un Generador de Números Pseudoaleatorios Criptográficamente Seguro (CSPRNG)"
+        ],
+        [
+          "V6.3.3",
+          "Los números aleatorios se generan con la entropía adecuada incluso cuando la aplicación está bajo una carga elevada, o bien la aplicación se degrada de forma controlada en tales circunstancias"
+        ],
+        [
+          "V6.4.1",
+          "Se utiliza una solución de gestión de secretos, como un almacén de claves (key vault), para crear, almacenar, controlar el acceso y destruir secretos de forma segura"
+        ],
+        [
+          "V6.4.2",
+          "El material de claves no queda expuesto a la aplicación; en su lugar, se utiliza un módulo de seguridad aislado, como un almacén (vault), para las operaciones criptográficas"
+        ],
+        [
+          "V7.1.1",
+          "No registra credenciales ni datos de pago"
+        ],
+        [
+          "V7.1.2",
+          "No registra otros datos personales sensibles que puedan acarrear implicaciones en la legislación de privacidad aplicable"
+        ],
+        [
+          "V7.1.3",
+          "Registra los eventos relevantes para la seguridad, incluidos los eventos de autenticación exitosos y fallidos, los fallos de control de acceso, los fallos de deserialización y los fallos de validación de entrada"
+        ],
+        [
+          "V7.1.4",
+          "Cada evento de registro incluye la información necesaria para realizar una investigación detallada cuando se produce un incidente"
+        ],
+        [
+          "V7.2.1",
+          "Todas las decisiones de autenticación quedan registradas, sin almacenar tokens de sesión ni contraseñas sensibles"
+        ],
+        [
+          "V7.2.2",
+          "Todas las decisiones de control de acceso pueden registrarse y todas las decisiones fallidas quedan registradas"
+        ],
+        [
+          "V7.3.1",
+          "Todos los componentes de registro codifican los datos de manera adecuada para prevenir la inyección en registros"
+        ],
+        [
+          "V7.3.2",
+          "Todos los eventos están protegidos contra inyecciones cuando se visualizan en el software de consulta de registros"
+        ],
+        [
+          "V7.3.3",
+          "Los registros de seguridad están protegidos contra el acceso no autorizado y la modificación"
+        ],
+        [
+          "V7.3.4",
+          "Las fuentes de tiempo están sincronizadas con la hora y la zona horaria correctas"
+        ],
+        [
+          "V7.4.1",
+          "Se muestra un mensaje genérico cuando se produce un error inesperado o sensible para la seguridad, que puede incluir un identificador único que el personal de soporte puede usar para investigar"
+        ],
+        [
+          "V7.4.2",
+          "Se utiliza el manejo de excepciones en toda la base de código para contemplar condiciones de error esperadas e inesperadas"
+        ],
+        [
+          "V7.4.3",
+          "Se define un manejador de errores de «último recurso» que capturará todas las excepciones no controladas"
+        ],
+        [
+          "V7.4.4",
+          "Regla de normalización de respuestas de error"
+        ],
+        [
+          "V8.1.1",
+          "La aplicación protege los datos sensibles para que no queden almacenados en caché en componentes del servidor, como balanceadores de carga y cachés de aplicación"
+        ],
+        [
+          "V8.1.2",
+          "Todas las copias en caché o temporales de datos sensibles almacenadas en el servidor están protegidas contra el acceso no autorizado, o bien se eliminan/invalidan una vez que el usuario autorizado accede a los datos sensibles"
+        ],
+        [
+          "V8.1.3",
+          "La aplicación minimiza el número de parámetros en una solicitud, tales como campos ocultos, variables Ajax, cookies y valores de encabezado"
+        ],
+        [
+          "V8.1.4",
+          "La aplicación puede detectar y alertar sobre números anómalos de solicitudes, por ejemplo, por dirección IP, usuario, total por hora o por día, o cualquier criterio que resulte adecuado para la aplicación"
+        ],
+        [
+          "V8.1.5",
+          "Se realizan copias de seguridad periódicas de los datos importantes y se efectúan pruebas de restauración de dichos datos"
+        ],
+        [
+          "V8.1.6",
+          "La información sensible almacenada en memoria se sobreescribe en cuanto deja de ser necesaria, a fin de mitigar los ataques de volcado de memoria"
+        ],
+        [
+          "V8.1.7",
+          "La información sensible o privada que debe cifrarse se cifra mediante algoritmos criptográficos aprobados que garantizan tanto la confidencialidad como la integridad"
+        ],
+        [
+          "V8.1.8",
+          "Las políticas de acceso al almacenamiento en la nube y al almacenamiento de objetos protegen los datos sensibles frente a accesos no autorizados"
+        ],
+        [
+          "V8.2.1",
+          "La aplicación establece cabeceras anti-caché suficientes para que los datos sensibles no queden almacenados en caché en los navegadores modernos"
+        ],
+        [
+          "V8.2.2",
+          "Los datos almacenados en el almacenamiento del navegador (localStorage, sessionStorage, IndexedDB o cookies) no contienen datos sensibles ni información de identificación personal (PII)"
+        ],
+        [
+          "V8.2.3",
+          "Los datos autenticados se eliminan del almacenamiento del cliente, como el DOM del navegador, una vez que la sesión o el cliente se cierra"
+        ],
+        [
+          "V8.3.1",
+          "Los datos sensibles se envían al servidor en el cuerpo o las cabeceras del mensaje HTTP, y los parámetros de cadena de consulta de cualquier verbo HTTP no contienen datos sensibles"
+        ],
+        [
+          "V8.3.2",
+          "Los usuarios disponen de un método para eliminar o exportar sus datos a petición"
+        ],
+        [
+          "V8.3.3",
+          "Se proporciona a los usuarios un texto claro sobre la recopilación y el uso de la información personal facilitada, y los usuarios han otorgado su consentimiento explícito para el uso de dichos datos antes de que estos se utilicen de cualquier forma"
+        ],
+        [
+          "V8.3.4",
+          "Se han identificado todos los datos sensibles creados y procesados por la aplicación, y se garantiza la existencia de una política sobre cómo gestionar dichos datos sensibles"
+        ],
+        [
+          "V8.3.5",
+          "El acceso a datos sensibles se audita (sin registrar los propios datos sensibles), cuando los datos se recopilan en virtud de directivas de protección de datos pertinentes o cuando el registro del acceso es obligatorio"
+        ],
+        [
+          "V8.3.6",
+          "La información sensible almacenada en memoria se sobrescribe en cuanto deja de ser necesaria"
+        ],
+        [
+          "V8.3.7",
+          "La información sensible o privada que debe cifrarse se cifra mediante algoritmos criptográficos aprobados que garantizan tanto la confidencialidad como la integridad"
+        ],
+        [
+          "V8.3.8",
+          "La información personal sensible está sujeta a una clasificación de retención de datos, de modo que los datos obsoletos o desactualizados se eliminan de forma automática, según un calendario establecido o según lo requiera la situación"
+        ],
+        [
+          "V9.1.1",
+          "TLS se utiliza para toda la conectividad de los clientes y no admite retroceso a protocolos inseguros o no cifrados"
+        ],
+        [
+          "V9.1.2",
+          "Solo están habilitadas las versiones más recientes y recomendadas del protocolo TLS, como TLS 1.2 y TLS 1.3"
+        ],
+        [
+          "V9.1.3",
+          "Solo están habilitados los conjuntos de cifrado más recientes y recomendados, con los conjuntos de cifrado más débiles eliminados"
+        ],
+        [
+          "V9.2.1",
+          "Las conexiones hacia y desde el servidor utilizan certificados TLS de confianza"
+        ],
+        [
+          "V9.2.2",
+          "Las comunicaciones cifradas, como TLS, se utilizan para todas las conexiones entrantes y salientes, incluidas las de puertos de gestión, monitorización, autenticación, API o llamadas a servicios web"
+        ],
+        [
+          "V9.2.3",
+          "Todas las conexiones cifradas a sistemas externos que involucran información o funciones sensibles están autenticadas"
+        ],
+        [
+          "V9.2.4",
+          "La revocación adecuada de certificados, como el protocolo de estado de certificado en línea (OCSP) con Stapling, está habilitada y configurada"
+        ],
+        [
+          "V9.2.5",
+          "Los fallos de conexión TLS en el backend quedan registrados"
+        ],
+        [
+          "V10.1.1",
+          "Se utiliza una herramienta de análisis de malware durante la compilación o el proceso CI/CD para detectar código potencialmente malicioso en el código fuente o desarrollado, en bibliotecas de terceros o en contenido externo"
+        ],
+        [
+          "V10.2.1",
+          "El código fuente y las bibliotecas de terceros no contienen capacidades no autorizadas de comunicación con servidores externos ni de recopilación de datos"
+        ],
+        [
+          "V10.2.2",
+          "No solicita permisos innecesarios o excesivos"
+        ],
+        [
+          "V10.2.3",
+          "El código fuente y las bibliotecas de terceros no contienen puertas traseras, tales como cuentas o claves codificadas de forma fija o no documentadas, ofuscación de código, blobs binarios no documentados, rootkits, ni técnicas anti-depuración o inseguras…"
+        ],
+        [
+          "V10.2.4",
+          "El código fuente y las bibliotecas de terceros no contienen Easter eggs ni ninguna otra funcionalidad potencialmente no deseada"
+        ],
+        [
+          "V10.2.5",
+          "El código fuente y las bibliotecas de terceros no contienen bombas de tiempo, verificando las funciones relacionadas con fechas y horas"
+        ],
+        [
+          "V10.2.6",
+          "El código fuente y las bibliotecas de terceros no contienen código malicioso que busque específicamente o intente sustraer contraseñas, tokens de acceso, datos personales o credenciales de autenticación"
+        ],
+        [
+          "V10.3.1",
+          "Si la aplicación cuenta con una función de actualización automática en el cliente o en el servidor, las actualizaciones deben obtenerse a través de canales seguros y estar firmadas digitalmente"
+        ],
+        [
+          "V10.3.2",
+          "Aplica mecanismos de protección de la integridad, como la firma de código o la integridad de subrecursos"
+        ],
+        [
+          "V10.3.3",
+          "[Procedencia del código generado por IA/bots — VERIFICAR SIEMPRE] Verificar que el código generado por herramientas de programación asistidas por IA o por la automatización CI/CD (p. ej., GitHub Copilot, GPT Engineer, Cursor, bots de generación de código, Dependabot) fue…"
+        ],
+        [
+          "V11.1.1",
+          "La aplicación procesará los flujos de lógica de negocio del mismo usuario únicamente en el orden de pasos secuencial establecido y sin omitir ningún paso"
+        ],
+        [
+          "V11.1.2",
+          "La aplicación procesará los flujos de lógica de negocio únicamente cuando todos los pasos se ejecuten en tiempos acordes con la interacción humana, es decir, sin que las transacciones se envíen con excesiva rapidez"
+        ],
+        [
+          "V11.1.3",
+          "La aplicación establece límites adecuados para acciones o transacciones de negocio específicas, y dichos límites se aplican correctamente por usuario"
+        ],
+        [
+          "V11.1.4",
+          "La aplicación cuenta con controles contra la automatización para protegerse frente a llamadas excesivas, como la extracción masiva de datos, solicitudes de lógica de negocio, cargas de archivos o ataques de denegación de servicio"
+        ],
+        [
+          "V11.1.5",
+          "La aplicación dispone de límites o validaciones de lógica de negocio para protegerse frente a riesgos o amenazas probables, identificados mediante modelado de amenazas o metodologías similares"
+        ],
+        [
+          "V11.1.6",
+          "La aplicación no presenta problemas de «tiempo de verificación frente a tiempo de uso» (TOCTOU) ni otras condiciones de carrera en operaciones sensibles"
+        ],
+        [
+          "V11.1.7",
+          "La aplicación supervisa eventos o actividades inusuales desde la perspectiva de la lógica de negocio"
+        ],
+        [
+          "V11.1.8",
+          "La aplicación cuenta con alertas configurables que se activan cuando se detectan ataques automatizados o actividad inusual"
+        ],
+        [
+          "V12.1.1",
+          "No aceptará archivos de gran tamaño que puedan agotar el almacenamiento o provocar una denegación de servicio"
+        ],
+        [
+          "V12.1.2",
+          "Los archivos comprimidos se verifican para detectar «bombas zip» — archivos pequeños que, al descomprimirse, generan grandes volúmenes de datos y agotan el almacenamiento disponible"
+        ],
+        [
+          "V12.1.3",
+          "Se aplica una cuota de tamaño de archivo y un número máximo de archivos por usuario para garantizar que un solo usuario no pueda saturar el almacenamiento con demasiados archivos"
+        ],
+        [
+          "V12.2.1",
+          "Los archivos obtenidos de fuentes no confiables se validan para confirmar que corresponden al tipo esperado según el contenido del propio archivo"
+        ],
+        [
+          "V12.3.1",
+          "Los nombres de archivo proporcionados por el usuario no se utilizan directamente en operaciones del sistema de archivos ni del marco de trabajo, y se emplea un analizador de URL para prevenir ataques de salto de directorio (path traversal attacks)"
+        ],
+        [
+          "V12.3.2",
+          "Los nombres de archivo proporcionados por el usuario se validan o se ignoran para evitar la divulgación, creación, actualización o eliminación de archivos locales (LFI)"
+        ],
+        [
+          "V12.3.3",
+          "Los nombres de archivo proporcionados por el usuario se validan o se ignoran para evitar la divulgación, creación, actualización o eliminación de archivos remotos (RFI)"
+        ],
+        [
+          "V12.3.4",
+          "Se protege contra la descarga de archivos reflejada (RFD) validando o ignorando los nombres de archivo proporcionados por el usuario en un parámetro JSON, JSONP o URL; el encabezado Content-Type de la respuesta debe establecerse como text/plain,…"
+        ],
+        [
+          "V12.3.5",
+          "Los metadatos de archivos de fuentes no confiables no se utilizan directamente con APIs o bibliotecas del sistema, a fin de proteger contra la inyección de comandos del sistema operativo"
+        ],
+        [
+          "V12.3.6",
+          "No se incluye ni ejecuta funcionalidad proveniente de fuentes no confiables"
+        ],
+        [
+          "V12.4.1",
+          "Los archivos obtenidos de fuentes no confiables se almacenan fuera de la raíz web, con permisos restringidos"
+        ],
+        [
+          "V12.4.2",
+          "Los archivos obtenidos de fuentes no confiables se analizan con programas antivirus para evitar la carga y distribución de contenido malicioso conocido"
+        ],
+        [
+          "V12.4.3",
+          "Las rutas de carga de archivos no se sirven desde el mismo nombre de host y puerto que la aplicación principal"
+        ],
+        [
+          "V12.4.4",
+          "Las políticas de los depósitos de almacenamiento en la nube restringen el acceso a usuarios autorizados y evitan el acceso público no autenticado, el listado público o las operaciones de escritura pública"
+        ],
+        [
+          "V12.5.1",
+          "El nivel web está configurado para servir únicamente archivos con extensiones específicas, a fin de evitar la filtración involuntaria de información y código fuente"
+        ],
+        [
+          "V12.5.2",
+          "Las solicitudes directas a archivos cargados nunca se ejecutarán como contenido HTML o JavaScript"
+        ],
+        [
+          "V12.6.1",
+          "El servidor web o de aplicaciones está configurado con una lista de recursos o sistemas permitidos desde los cuales el servidor puede enviar solicitudes o cargar datos/archivos"
+        ],
+        [
+          "V13.1.1",
+          "Todos los componentes de la aplicación utilizan las mismas codificaciones y analizadores para evitar ataques de análisis que aprovechen diferencias en el comportamiento de análisis de URI o archivos, los cuales podrían emplearse en ataques SSRF y RFI"
+        ],
+        [
+          "V13.1.2",
+          "El acceso a las funciones de administración y gestión se limita a los administradores autorizados"
+        ],
+        [
+          "V13.1.3",
+          "Las URL de la API no exponen información sensible, como la clave de API, los tokens de sesión, etc."
+        ],
+        [
+          "V13.1.4",
+          "Las decisiones de autorización se toman tanto a nivel de URI, aplicadas mediante seguridad programática o declarativa en el nivel del controlador, como a nivel de recurso u objeto, aplicadas mediante permisos basados en el modelo"
+        ],
+        [
+          "V13.1.5",
+          "Las solicitudes que contienen tipos de contenido inesperados o ausentes son rechazadas con los encabezados apropiados (estado de respuesta HTTP 406 No aceptable o 415 Tipo de medio no compatible)"
+        ],
+        [
+          "V13.2.1",
+          "Los métodos HTTP RESTful habilitados son una opción válida para el usuario o la acción, de modo que los usuarios ordinarios no puedan usar DELETE ni PUT en recursos o API protegidos, como DELETE /users/{id} o PUT…"
+        ],
+        [
+          "V13.2.2",
+          "La validación de esquema JSON está implementada y se verifica antes de aceptar la entrada"
+        ],
+        [
+          "V13.2.3",
+          "Los servicios web RESTful que utilizan cookies están protegidos contra la falsificación de solicitudes entre sitios (Cross-Site Request Forgery) mediante el uso de al menos uno de los siguientes mecanismos"
+        ],
+        [
+          "V13.2.6",
+          "Los servicios REST están protegidos contra ataques de denegación de servicio (DoS) mediante limitación de tasa u otras medidas de mitigación anti-DoS"
+        ],
+        [
+          "V13.3.1",
+          "La validación del esquema XSD se realiza para garantizar que el documento XML esté correctamente formado, seguida de la validación de cada campo de entrada antes de que se procesen los datos"
+        ],
+        [
+          "V13.3.2",
+          "La carga útil del mensaje está firmada mediante WS-Security para garantizar un transporte fiable entre el cliente y el servicio"
+        ],
+        [
+          "V13.4.1",
+          "Se utiliza una lista de consultas permitidas o una combinación de limitación de profundidad y limitación de cantidad para prevenir ataques de denegación de servicio (DoS) mediante expresiones en GraphQL o en la capa de datos"
+        ],
+        [
+          "V13.4.2",
+          "La lógica de autorización de GraphQL u otra capa de datos se implementa en la capa de lógica de negocio en lugar de en la capa de GraphQL"
+        ],
+        [
+          "V13.5.1",
+          "Todos los puntos de conexión de la API están protegidos mediante autenticación, autorización o limitación de tasa"
+        ],
+        [
+          "V13.5.2",
+          "Los tokens JWT se validan conforme a los requisitos de V3.5.3"
+        ],
+        [
+          "V13.5.3",
+          "Las claves de API no proporcionan acceso irrestricto de larga duración"
+        ],
+        [
+          "V13.6.1",
+          "La API tiene habilitada la limitación de tasa, y dicha limitación se aplica tanto a usuarios autenticados como no autenticados"
+        ],
+        [
+          "V13.6.2",
+          "Las operaciones que consumen muchos recursos están protegidas por límites de tasa para prevenir el uso indebido de recursos o el abuso económico"
+        ],
+        [
+          "V13.7.1",
+          "La documentación de OpenAPI o de la API no se expone en producción o, si es necesario hacerlo, el acceso está restringido a usuarios autorizados"
+        ],
+        [
+          "V13.7.2",
+          "Existe un inventario de API que se mantiene actualizado para todas las APIs"
+        ],
+        [
+          "V13.8.1",
+          "Las llamadas entre servicios utilizan la autenticación y autorización mínimas necesarias"
+        ],
+        [
+          "V13.8.2",
+          "Las llamadas entre servicios utilizan autenticación mutua"
+        ],
+        [
+          "V14.1.1",
+          "La canalización de compilación no contiene credenciales, tokens ni claves de API codificados de forma fija"
+        ],
+        [
+          "V14.1.2",
+          "Las configuraciones de compilación e implementación no contienen parámetros de desarrollo, prueba o depuración habilitados en las compilaciones de producción"
+        ],
+        [
+          "V14.1.3",
+          "Las funciones de depuración están desactivadas en producción, incluidas las herramientas para desarrolladores, las consolas de depuración o los seguimientos de pila expuestos a los usuarios finales"
+        ],
+        [
+          "V14.2.1",
+          "Todos los componentes y bibliotecas de terceros provienen de fuentes predefinidas y de confianza, y se mantienen actualizados"
+        ],
+        [
+          "V14.2.2",
+          "Se mantiene un inventario de todas las bibliotecas de terceros y está disponible para su consulta"
+        ],
+        [
+          "V14.2.3",
+          "Se eliminan las dependencias no utilizadas, así como las funcionalidades, componentes, archivos y documentación innecesarios"
+        ],
+        [
+          "V14.3.1",
+          "Los mensajes de error del servidor web o de aplicaciones y del marco de trabajo no exponen información no prevista (p. ej., seguimientos de pila, tecnología del lado del servidor o nombres de componentes internos)"
+        ],
+        [
+          "V14.3.2",
+          "Las versiones del servidor web o de aplicaciones y del marco de trabajo no se revelan en las cabeceras HTTP ni en las páginas"
+        ],
+        [
+          "V14.3.3",
+          "Los puntos de verificación del estado del sistema devuelven únicamente la información mínima requerida por el balanceador de carga o el orquestador"
+        ],
+        [
+          "V14.3.4",
+          "Los puntos de verificación del estado de autenticación no exponen detalles internos de implementación (p. ej., nombres del controlador de autenticación, tipos de almacén de sesión o configuración del proveedor)"
+        ],
+        [
+          "V14.4.1",
+          "Cada respuesta HTTP contiene una cabecera Content-Type con un conjunto de caracteres seguro (p. ej., UTF-8, ISO 8859-1)"
+        ],
+        [
+          "V14.4.2",
+          "Todas las respuestas de la API contienen una cabecera Content-Disposition…"
+        ],
+        [
+          "V14.4.3",
+          "Se incluye una cabecera de respuesta Content Security Policy (CSP) con una política que contribuye a mitigar ataques comunes de tipo DOM, XSS e inyección de JavaScript"
+        ],
+        [
+          "V14.4.4",
+          "Todas las respuestas contienen una cabecera X-Content-Type-Options con el valor nosniff"
+        ],
+        [
+          "V14.4.5",
+          "Las cabeceras HTTP Strict Transport Security se incluyen en todas las respuestas y para todos los subdominios"
+        ],
+        [
+          "V14.4.6",
+          "Se incluye una cabecera Referrer-Policy adecuada"
+        ],
+        [
+          "V14.4.7",
+          "El contenido de una aplicación web no puede incrustarse en un sitio de terceros de forma predeterminada, y la incrustación de recursos específicos solo se permite cuando es necesario mediante los mecanismos apropiados…"
+        ],
+        [
+          "V14.5.1",
+          "El servidor solo acepta los métodos HTTP utilizados por la aplicación y rechaza los métodos no esperados (405 Method Not Allowed)"
+        ],
+        [
+          "V14.5.2",
+          "La cabecera Origin recibida no se utiliza para decisiones de autenticación ni de control de acceso, ya que un atacante puede modificarla fácilmente"
+        ],
+        [
+          "V14.5.3",
+          "La cabecera Allow-Origin del intercambio de recursos entre orígenes (CORS) utiliza una lista de dominios de confianza estrictamente definida y no admite el origen «null»"
+        ],
+        [
+          "V14.5.4",
+          "Las cabeceras HTTP añadidas por un proxy de confianza o por dispositivos SSO, como un token de portador, son autenticadas por la aplicación"
+        ]
+      ],
+      "caption": "Lista de verificación completa, requisito por requisito, que un azul evalúa en cada aplicación. Los identificadores de requisito se agrupan por capítulo (V2 = autenticación, V5 = validación de entradas, etc.).",
+      "source": "Control de inventario, revisado desde la fuente — arnés común AIDE."
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "security",
+        "agents",
+        "harness",
+        "red-team"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "related": [
+    "mwo98",
+    "zgym1",
+    "p7p2k",
+    "qthji"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 64 campos actualizados."
+      }
+    ]
+  },
+  "translation_status": "reviewed",
+  "source_signature": "1675958574"
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "en",
+  "slot": "slide-01",
+  "out_path": "public\\images\\wp-08\\en\\slide-01.jpg",
+  "bytes_jpg": 129670,
+  "bytes_png_source": 2750246,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T10:52:54.440Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram. A long, curved trajectory line labelled with the single word VELOCITY rises from the lower left to the upper right of the canvas. Below the curve, five small architectural icons sit evenly spaced, like rungs that hold the curve in place: a small contract scroll, a stack of drawers, a closed gate, a shield, and a circular tuning dial. The icons are simple, drawn in the same hand-drawn line style as the curve. Two-tone navy and rust on warm cream paper. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram. A long, curved trajectory line labelled with the single word VELOCITY rises from the lower left to the upper right of the canvas. Below the curve, five small architectural icons sit evenly spaced, like rungs that hold the curve in place: a small contract scroll, a stack of drawers, a closed gate, a shield, and a circular tuning dial. The icons are simple, drawn in the same hand-drawn line style as the curve. Two-tone navy and rust on warm cream paper. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

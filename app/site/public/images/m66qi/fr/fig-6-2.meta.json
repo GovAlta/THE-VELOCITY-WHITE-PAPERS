@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\m66qi\\fr\\fig-6-2.jpg",
+  "bytes_jpg": 275891,
+  "bytes_png_source": 3026683,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-19T03:04:37.777Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "Une illustration éditoriale d'une grande carte divisée en nombreux territoires distincts de tailles variées, chaque territoire densément peuplé de petits nœuds regroupés représentant des capacités, le plus grand territoire portant clairement le plus grand regroupement. De fins traits relient les nœuds apparentés entre les territoires. Impression d'une cartographie complète de tout ce qu'une institution accomplit, tirée de son code jusqu'à ses fonctions. Palette crème de l'Alberta, tons atténués, accents marine et rouille, qualité d'impression archivistique, aucun texte. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: Une illustration éditoriale d'une grande carte divisée en nombreux territoires distincts de tailles variées, chaque territoire densément peuplé de petits nœuds regroupés représentant des capacités, le plus grand territoire portant clairement le plus grand regroupement. De fins traits relient les nœuds apparentés entre les territoires. Impression d'une cartographie complète de tout ce qu'une institution accomplit, tirée de son code jusqu'à ses fonctions. Palette crème de l'Alberta, tons atténués, accents marine et rouille, qualité d'impression archivistique, aucun texte. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\m66qi\\en\\fig-6-2.source.png"
+}

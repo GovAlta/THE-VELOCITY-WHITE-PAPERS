@@ -1,0 +1,17 @@
+{
+  "paper_id": "eujjc",
+  "locale": "fr",
+  "slot": "fig-01",
+  "out_path": "public\\images\\eujjc\\fr\\fig-14-1.jpg",
+  "bytes_jpg": 162719,
+  "bytes_png_source": 2362696,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:58:46.296Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. A pyramid divided into horizontal layers labelled, bottom to top, CONTRIBUTEURS, GESTIONNAIRE, DIRECTEUR, DIRECTION. On the LEFT half, broad bands of fine detail at the base narrow as upward arrows pass through each layer, captioned COMPRESSION, with a small note near the apex reading RÉALITÉ DU TERRAIN, COMPRESSÉE. On the RIGHT half, a single arrow leaves the apex and fans out, widening downward into a row of labelled unit boxes FINANCE, OPÉRATIONS, SERVICE at the base, captioned CONTEXTUALISATION, with a small note reading QUE FAISONS-NOUS LUNDI. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. A pyramid divided into horizontal layers labelled, bottom to top, CONTRIBUTEURS, GESTIONNAIRE, DIRECTEUR, DIRECTION. On the LEFT half, broad bands of fine detail at the base narrow as upward arrows pass through each layer, captioned COMPRESSION, with a small note near the apex reading RÉALITÉ DU TERRAIN, COMPRESSÉE. On the RIGHT half, a single arrow leaves the apex and fans out, widening downward into a row of labelled unit boxes FINANCE, OPÉRATIONS, SERVICE at the base, captioned CONTEXTUALISATION, with a small note reading QUE FAISONS-NOUS LUNDI. Calm, architectural, legible labels. No logos, no people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\eujjc\\en\\fig-14-1.source.png"
+}

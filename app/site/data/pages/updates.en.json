@@ -1,0 +1,35 @@
+{
+  "_note": "Living updates feed for one locale, newest first. The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Living updates",
+    "title_lead": "What has",
+    "title_em": "changed.",
+    "lede": "New findings, new code releases, new evidence. A four-year cycle. Newest first.",
+    "empty": "No updates published yet.",
+    "kinds": {
+      "release": "Release",
+      "finding": "Finding",
+      "paper": "Paper",
+      "note": "Note"
+    }
+  },
+  "entries": [
+    {
+      "id": "2026-07-06-launch",
+      "date": "2026-07-06",
+      "kind": "release",
+      "title": "The Velocity White Papers Launch",
+      "body": "The Velocity White Papers launched publicly on July 6th, following a soft launch with industry partners on June 16th. The collection opens with 21 papers and 7 public repositories, fully bilingual in English and French. Every paper is interactive, with narrated simulations, original images, video, and audio, and the whole compendium, the writing and the code behind it, is fully open source.",
+      "links": [
+        {
+          "label": "Browse the collection",
+          "href": "/"
+        },
+        {
+          "label": "Explore the repositories",
+          "href": "/repos"
+        }
+      ]
+    }
+  ]
+}

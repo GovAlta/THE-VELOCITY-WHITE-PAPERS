@@ -1,0 +1,17 @@
+{
+  "paper_id": "offjm",
+  "locale": "en",
+  "slot": "fig-4-3",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a few shared service modules grouped at the centre, each connected by clean lines outward to several different government ministry functions (firefighting, social services, grants management, registry offices, infrastructure planning), all drawing on the same central modules. A sense of build once, used by many. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a few shared service modules grouped at the centre, each connected by clean lines outward to several different government ministry functions (firefighting, social services, grants management, registry offices, infrastructure planning), all drawing on the same central modules. A sense of build once, used by many. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-01T03:09:53.383Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 186499,
+  "bytes_png_source": 2946719,
+  "generated_by": "edit-server.mjs"
+}

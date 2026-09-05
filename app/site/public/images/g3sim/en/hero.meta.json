@@ -1,0 +1,17 @@
+{
+  "paper_id": null,
+  "locale": "en",
+  "slot": "ad-hoc",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration of a minimal geometric stage seen slightly from above: small orange circular agents moving along curved paths between simple navy rectangles and human figures, one ephemeral interface card materializing mid-air, a subtle camera frame around the scene suggesting a simulation in progress. Muted Alberta cream palette, navy and rust accents, archival print quality, no text, no logos.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration of a minimal geometric stage seen slightly from above: small orange circular agents moving along curved paths between simple navy rectangles and human figures, one ephemeral interface card materializing mid-air, a subtle camera frame around the scene suggesting a simulation in progress. Muted Alberta cream palette, navy and rust accents, archival print quality, no text, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-23T12:31:43.205Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 116183,
+  "bytes_png_source": 2508596,
+  "generated_by": "gen-image.mjs"
+}

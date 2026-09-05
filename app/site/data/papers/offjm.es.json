@@ -1,0 +1,557 @@
+{
+  "id": "offjm",
+  "num": "04",
+  "sequence": "4 de 22",
+  "tier": "Technical",
+  "title": "Git Insights Ministry",
+  "subtitle": "Del conocimiento del parque tecnológico a su reconstrucción: síntesis de miles de hallazgos en una arquitectura modular de propiedad gubernamental.",
+  "track": "Defining the Problem",
+  "authors": [
+    "Janak Alford",
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-06-16",
+  "reading_min": 7,
+  "status": "Published",
+  "tags": [
+    "git-insights",
+    "modernization",
+    "architecture",
+    "shared-services",
+    "agents"
+  ],
+  "repo": "https://github.com/GovAlta/GIT-INSIGHTS-MINISTRY",
+  "abstract": "Git Insights nos reveló la verdad sobre cada repositorio, uno a uno. Pero conocer lo que está mal no es lo mismo que saber cómo reconstruirlo. Git Insights Ministry es la segunda perspectiva. Lee todo el código de un ministerio a la vez —alrededor de 200 repositorios— y determina todo lo que esos sistemas realmente hacen. Luego, la IA propone una forma de reconstruir estas capacidades como módulos modernos de propiedad gubernamental, cada uno desarrollado una sola vez, sin duplicados. En un ministerio de Alberta, 185 aplicaciones pueden consolidarse en dieciséis módulos reutilizables. Este documento explica cómo funciona la herramienta, qué aporta a quienes toman decisiones y cómo se reconstruye la arquitectura compartida del Gobierno.",
+  "hero_image": {
+    "src": "public/images/offjm/es/hero.jpg",
+    "alt": "Una maraña caótica de edificios antiguos dispares que se reorganiza en un pequeño conjunto de módulos modernos, limpios e idénticos, sobre una base común.",
+    "image_prompt": "An editorial illustration of a chaotic sprawl of mismatched old buildings on one side being reorganized into a small set of clean, identical modern modular buildings on the other, all resting on one shared foundation. A sense of hundreds of redundant structures becoming a few reusable ones. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/offjm.mp3",
+    "duration_sec": 488
+  },
+  "tldr_presentation": {
+    "id": "offjm-tldr",
+    "title": "El documento, en síntesis",
+    "locale": "es",
+    "owner_id": "offjm",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Git Insights Ministry",
+        "audio_file": "public/audio/es/offjm-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Documento 4 · Git Insights Ministry",
+        "subcaption": "De conocer el parque tecnológico a reconstruirlo.",
+        "text": "Git Insights Ministry. Git Insights nos reveló la realidad de cada repositorio, uno a uno. Pero saber qué está mal no es lo mismo que saber cómo reconstruir. Esta es la segunda perspectiva. Lee todo el código de un ministerio a la vez y determina la forma de reconstruirlo como módulos modernos de propiedad pública, cada uno construido una sola vez, sin duplicidades."
+      },
+      {
+        "id": "02",
+        "title": "Un ministerio completo, leído de una sola vez",
+        "audio_file": "public/audio/es/offjm-tldr/02.mp3",
+        "visual": "stat",
+        "caption": "La lectura en profundidad",
+        "visual_config": {
+          "stat_value": "~200",
+          "stat_label": "Repositorios de un ministerio, analizados en conjunto"
+        },
+        "subcaption": "Algunos ministerios operan con cientos de aplicaciones. La herramienta las lee como un único conjunto de trabajo.",
+        "text": "La lectura en profundidad. Algunos ministerios operan con cientos de aplicaciones. Git Insights Ministry las descarga todas —alrededor de doscientos repositorios— y las lee como un único conjunto de trabajo. Eso es lo que hace visibles los patrones, como el mismo inicio de sesión construido cuarenta veces o el mismo informe redactado de una docena de maneras distintas."
+      },
+      {
+        "id": "03",
+        "title": "Un registro reconstruible de cada sistema",
+        "audio_file": "public/audio/es/offjm-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Lo que reconstruye",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Pantallas y flujos de trabajo",
+              "desc": "Cada página y los recorridos que sigue el usuario entre ellas."
+            },
+            {
+              "label": "APIs y datos",
+              "desc": "Cada punto de acceso y cada tabla y campo de la base de datos."
+            },
+            {
+              "label": "Reglas de negocio",
+              "desc": "Cada política, validación y cálculo, expresados en lenguaje sencillo."
+            },
+            {
+              "label": "Integraciones",
+              "desc": "Cada sistema con el que interactúa y el nivel de criticidad de cada uno."
+            }
+          ]
+        },
+        "text": "Para cada sistema, la herramienta reconstruye por ingeniería inversa lo que hace: cada pantalla y flujo de trabajo, cada API, cada tabla de la base de datos, cada regla de negocio y cada conexión con otro sistema. Todo esto queda registrado en un expediente con el suficiente detalle para reconstruir el sistema desde cero, y cada hallazgo apunta al archivo exacto de donde proviene."
+      },
+      {
+        "id": "04",
+        "title": "Contado por el código, evaluado por la IA",
+        "audio_file": "public/audio/es/offjm-tldr/04.mp3",
+        "visual": "compare",
+        "caption": "Cómo funciona y por qué puede confiar en ello",
+        "visual_config": {
+          "left": {
+            "label": "Código determinista",
+            "body": "Clona los repositorios y contabiliza su contenido. Es exacto y no puede inventar un resultado."
+          },
+          "right": {
+            "label": "Criterio de la IA",
+            "body": "Agrupa los hallazgos en capacidades y diseña los módulos, vinculando siempre cada elemento a un archivo fuente."
+          }
+        },
+        "text": "Cómo funciona y por qué puede confiar en ello. El trabajo exacto y cuantificable —clonar el código y contabilizar lo que contiene— lo realiza código convencional que no puede inventar un resultado. A la IA solo se le pide criterio: agrupar los hallazgos en capacidades y diseñar los módulos que las implementen. Cada conclusión a la que llega puede rastrearse hasta el código real."
+      },
+      {
+        "id": "05",
+        "title": "185 aplicaciones en 16 módulos",
+        "audio_file": "public/audio/es/offjm-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "La síntesis",
+        "visual_config": {
+          "stat_value": "185 → 16",
+          "stat_label": "Aplicaciones consolidadas en módulos reutilizables"
+        },
+        "subcaption": "La redundancia que la herramienta midió es la redundancia que elimina del diseño de la reconstrucción.",
+        "text": "La síntesis. La herramienta agrupa todo lo que hace el ministerio en un conjunto reducido de capacidades reales y diseña módulos modernos para implementarlas, cada uno construido una sola vez. En un ministerio de Alberta, ciento ochenta y cinco aplicaciones se consolidaron en dieciséis módulos reutilizables. La redundancia que la herramienta midió en el conjunto del portafolio es la redundancia que elimina del diseño de la reconstrucción."
+      },
+      {
+        "id": "06",
+        "title": "Construir una vez, usar en todo el gobierno",
+        "audio_file": "public/audio/es/offjm-tldr/06.mp3",
+        "visual": "list",
+        "caption": "Patrones de reutilización",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Pagos",
+              "desc": "Casi todos los ministerios procesan pagos. Desarróllelo una sola vez, de forma segura."
+            },
+            {
+              "label": "Cartografía geoespacial",
+              "desc": "Aparece de forma recurrente en transporte, medio ambiente y ordenación del territorio."
+            },
+            {
+              "label": "Gestión de contratos",
+              "desc": "Una necesidad administrativa que hoy cada ministerio resuelve por su cuenta."
+            },
+            {
+              "label": "Identidad y acceso",
+              "desc": "Un inicio de sesión único, en lugar de uno integrado de forma independiente en cada aplicación."
+            }
+          ]
+        },
+        "text": "Los patrones más valiosos son los que se repiten: pagos, mapas, gestión de contratos, una pantalla de acceso único. Casi todos los ministerios los necesitan y, hoy, casi todos los construyen por su cuenta. Si los construimos una sola vez como servicios compartidos que cualquier ministerio pueda usar, la complejidad y la superficie de ataque de nuestra infraestructura se reducen en más del noventa por ciento. El próximo documento presenta las estrategias para llevar a cabo la reconstrucción."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Del conocimiento a la reconstrucción"
+    },
+    {
+      "n": "02",
+      "title": "Un análisis más profundo"
+    },
+    {
+      "n": "03",
+      "title": "Cómo funciona Git Insights Ministry"
+    },
+    {
+      "n": "04",
+      "title": "La visión de síntesis: un Gobierno reconstruido"
+    },
+    {
+      "n": "05",
+      "title": "Patrones de reutilización en todo el Gobierno"
+    },
+    {
+      "n": "06",
+      "title": "Lo que ve el ejecutivo"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Git Insights ofreció el primer paso al analizar cada repositorio y cada aplicación para proporcionarnos información accionable. No todos los hallazgos fueron bienvenidos ni fáciles de revisar. El parque tecnológico requería correcciones y, con esos resultados en mano, hemos abordado y seguimos abordando los problemas más críticos. Pero conocer la situación es solo el comienzo. No siempre es posible corregir el rumbo del Gobierno pieza por pieza. A veces se necesita una embarcación completamente nueva."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Del conocimiento a la reconstrucción"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mientras que [Git Insights](/paper/bbkac) lee de a un repositorio a la vez e informa sobre su estado, su proceso complementario, Git Insights Ministry (G.I.M.), lee el código de aplicaciones de todo un ministerio a la vez y sintetiza los hallazgos en un plan. Identifica los patrones que solo se hacen visibles al analizar un portafolio completo, como el mismo componente de inicio de sesión desarrollado cuarenta veces o el mismo informe escrito de una docena de formas distintas. A partir de esos patrones, propone una arquitectura de cómputo modular, reutilizable y de propiedad gubernamental para reemplazar la dispersión existente."
+    },
+    {
+      "type": "keystat",
+      "label": "Repositorios leídos conjuntamente, por ministerio",
+      "value": "~200",
+      "body": "Algunos ministerios operan con cientos de aplicaciones y repositorios. Git Insights Ministry los descarga todos y los analiza como un único conjunto de trabajo, lo que permite identificar los patrones comunes."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Un análisis más profundo"
+    },
+    {
+      "type": "paragraph",
+      "text": "El análisis va mucho más allá de una puntuación de estado. G.I.M. clona cada repositorio y reconstruye cada capacidad mediante ingeniería inversa. Cada pantalla, flujo de trabajo, integración de API y punto de acceso, esquema y tabla de base de datos, regla de negocio y dependencia se lee y se registra. A partir de ese material en bruto, la herramienta elabora un dossier de cada sistema, con el detalle suficiente para reconstruir esas funciones desde cero."
+    },
+    {
+      "type": "table",
+      "title": "Lo que Git Insights Ministry reconstruye de cada repositorio en el nivel organizacional.",
+      "columns": [
+        "Capa",
+        "Qué reconstruye"
+      ],
+      "rows": [
+        [
+          "Arquitectura",
+          "Una descripción en lenguaje sencillo de qué es el sistema, quién lo utiliza y cómo está construido."
+        ],
+        [
+          "Pantallas y flujos",
+          "Cada pantalla y página, y los flujos de trabajo que desplazan al usuario entre ellas."
+        ],
+        [
+          "APIs y servicios",
+          "Cada punto de acceso, servicio y proceso por lotes, con sus entradas y salidas."
+        ],
+        [
+          "Modelo de datos",
+          "Cada entidad, tabla, vista y procedimiento almacenado, con sus campos y relaciones."
+        ],
+        [
+          "Reglas de negocio",
+          "Cada política, validación y cálculo, expresados en lenguaje sencillo, con el archivo y la línea exactos como referencia."
+        ],
+        [
+          "Integraciones",
+          "Cada sistema externo con el que interactúa, la dirección del intercambio, el mecanismo empleado y su nivel de criticidad."
+        ],
+        [
+          "Eventos",
+          "Lo que el sistema publica y lo que escucha."
+        ],
+        [
+          "Preguntas abiertas y preparación para la entrega",
+          "Lo que la IA no pudo resolver a partir del código, y una valoración del grado de preparación para la entrega."
+        ]
+      ],
+      "caption": "Un registro compilable para cada repositorio, fundamentado en evidencia. Cada hallazgo cita el archivo exacto del que proviene, de modo que cualquier afirmación puede verificarse contra el código.",
+      "source": "\n"
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Cómo funciona Git Insights Ministry"
+    },
+    {
+      "type": "paragraph",
+      "text": "G.I.M. opera por etapas. Algunas son determinísticas: pasos de análisis realizados por código ordinario que cuenta, clona, calcula y no puede inventar un resultado. Estos scripts son rápidos y potentes, pero propensos a falsos positivos. Las etapas siguientes son agénticas: en ellas se solicita a la IA que aplique criterio. Los formatos de sus respuestas están estrictamente controlados y siempre vinculados a evidencia en el código. Cada conclusión puede rastrearse hasta el archivo del que proviene."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 4.1",
+      "title": "Cómo G.I.M. construye la nueva arquitectura",
+      "caption": "La síntesis se ejecuta por etapas: lee cada repositorio, agrupa los hallazgos en las funciones que el ministerio realmente desempeña, diseña los módulos que las ejecutan una sola vez y, a continuación, especifica y estima el costo de la reconstrucción.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Reconstruye cada función mediante ingeniería inversa",
+            "desc": "La IA reconstruye cada pantalla, flujo de trabajo, API, modelo de datos, regla e integración en un dosier de calidad lista para entrega; cada hallazgo queda vinculado a su archivo fuente."
+          },
+          {
+            "title": "Agrupa en capacidades de negocio",
+            "desc": "La IA agrupa los hallazgos de todos los repositorios en las distintas funciones que el ministerio realiza efectivamente para la ciudadanía. Este mapa de capacidades de negocio se convierte en la base para la mejora."
+          },
+          {
+            "title": "Diseña los módulos objetivo",
+            "desc": "La IA propone un conjunto reducido de módulos modernos que ofrecen esas capacidades una sola vez, sin vacíos ni superposiciones. Se elabora una especificación clara que puede ser revisada por expertos en la materia."
+          },
+          {
+            "title": "Redacta una especificación ejecutable por módulo",
+            "desc": "La IA produce una especificación de reconstrucción para cada módulo —sus pantallas, API, datos, reglas e integraciones— junto con una auditoría que garantiza que no se pierde ninguna capacidad."
+          },
+          {
+            "title": "Consolida en un plan ministerial con costes",
+            "desc": "El código calcula el esfuerzo y una hoja de ruta por fases; la IA redacta el informe ejecutivo. El plan está listo para su aprobación y la arquitectura, preparada para la orquestación y una primera construcción."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "El plan de consolidación se elabora en dos pasos. Primero, la herramienta agrupa los hallazgos de cada repositorio en las funciones reales que el ministerio presta a las personas. Luego, diseña los módulos que las ejecutan, manteniendo el trabajo diferenciado en módulos separados y centralizando todo lo común en la plataforma compartida, de modo que se desarrolle una sola vez en lugar de cuarenta."
+    },
+    {
+      "type": "paragraph",
+      "text": "No le pedimos a nadie que acepte esto solo por buena fe. Cada capacidad que nombra la herramienta remite a los sistemas y flujos de trabajo de los que proviene, por lo que siempre es posible rastrear una conclusión hasta el código real. El cálculo de costos de los sistemas de reemplazo se basa en parámetros reales: número de pantallas, puntos de acceso, tablas de base de datos y flujos de trabajo. El código ordinario lo calcula a partir de un conjunto fijo de tarifas, de modo que puede defenderse línea por línea. Los modelos en sí se ejecutan sobre Claude a través de Google Enterprise Agent Platform, trabajando en paralelo, un repositorio o un módulo a la vez."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "La visión de síntesis: un Gobierno reconstruido"
+    },
+    {
+      "type": "paragraph",
+      "text": "A partir de la reconstrucción en bruto de cada sistema, agrupa cada pieza funcional en el conjunto de capacidades de negocio que el ministerio efectivamente desempeña y diseña una arquitectura objetivo que ofrece esas capacidades como módulos limpios, sin redundancia ni superposición. Cientos de aplicaciones, cada una con su propio inicio de sesión, su propia carga de archivos y su propia generación de informes, se consolidan en un puñado de módulos donde cada capacidad se desarrolla una sola vez."
+    },
+    {
+      "type": "keystat",
+      "label": "Un ministerio, tras la síntesis",
+      "value": "185 → 16",
+      "body": "En un caso concreto, 185 aplicaciones se consolidaron en 16 módulos diferenciados. La redundancia que la herramienta identificó en el portfolio es la misma que elimina en la reconstrucción."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 4.2",
+      "title": "Muchas aplicaciones entrelazadas, unos pocos módulos limpios",
+      "caption": "La consolidación en una sola imagen: un campo denso de aplicaciones heredadas superpuestas se convierte en un pequeño conjunto de módulos diferenciados, donde cada capacidad se desarrolla una vez y se comparte, en lugar de reconstruirse en cada sistema.",
+      "image": {
+        "src": "public/images/offjm/es/fig-4-2.jpg",
+        "alt": "Una densa maraña de pequeños bloques de aplicaciones superpuestos que converge hacia un pequeño conjunto de módulos limpios y diferenciados.",
+        "image_prompt": "An editorial illustration of a dense tangle of nearly two hundred small overlapping application boxes on one side funneling down into about sixteen clean, distinct, evenly-spaced modules on the other. A sense of redundancy collapsing into order. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada nuevo módulo se desarrolla sobre una misma pila tecnológica moderna. Esto es importante: significa que ya no dependemos de un proveedor del que no podemos desvincularnos. Nuestra superficie de exposición a ataques se minimiza. Cada módulo se basa en tecnologías de código abierto y se amplía para cumplir con nuestras políticas específicas. El personal y los agentes (de IA) que desarrollan estos sistemas conservan el conocimiento necesario para mantenerlos."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Patrones de reutilización en todo el Gobierno"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los patrones más valiosos son los que se repiten. En todos los ministerios, las mismas capacidades aparecen una y otra vez. Varios de los módulos de un solo ministerio —en este caso, pagos, cartografía geoespacial y gestión de contratos— no son en absoluto únicos. En lugar de reconstruirlos dentro de cada ministerio, los estamos desarrollando una sola vez como servicios compartidos que cualquier ministerio puede utilizar."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 4.3",
+      "title": "Desarrollar una vez, usar en todo el Gobierno",
+      "caption": "Un puñado de servicios compartidos en el centro, cada uno utilizado por múltiples ministerios. Los pagos, la cartografía y la gestión de contratos se desarrollan y aseguran una sola vez, sin reinventarlos en cada ministerio que los necesita.",
+      "image": {
+        "src": "public/images/offjm/es/fig-4-3.jpg",
+        "alt": "Unos pocos módulos de servicios compartidos en el centro, cada uno conectado hacia afuera con varios edificios ministeriales distintos que se nutren del mismo módulo.",
+        "image_prompt": "An editorial illustration of a few shared service modules grouped at the centre, each connected by clean lines outward to several different government ministry functions (firefighting, social services, grants management, registry offices, infrastructure planning), all drawing on the same central modules. A sense of build once, used by many. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Al mapear completamente las funciones del Gobierno, podemos desarrollar módulos reutilizables en todos los ministerios. Alberta es propietaria de cada módulo y reducimos la complejidad y la superficie de exposición de nuestra infraestructura en más de un noventa por ciento. Creados por la IA y siguiendo un estándar claro, estos módulos son fáciles de mantener."
+    },
+    {
+      "type": "table",
+      "title": "Desarrollado una vez, usado en todo el Gobierno",
+      "columns": [
+        "Servicio compartido",
+        "Por qué se comparte"
+      ],
+      "rows": [
+        [
+          "Pagos",
+          "Casi todos los ministerios procesan pagos. Un único módulo revisado y seguro reemplaza a decenas de soluciones a medida."
+        ],
+        [
+          "Cartografía geoespacial",
+          "La cartografía aparece en transporte, medio ambiente, territorio y otras áreas. Construye el mapa una sola vez."
+        ],
+        [
+          "Gestión de contratos",
+          "Una necesidad administrativa común que cada ministerio resuelve actualmente por su cuenta."
+        ],
+        [
+          "Identidad y acceso",
+          "Un modelo único de inicio de sesión y permisos, en lugar de una pantalla de acceso reconstruida en cada aplicación."
+        ],
+        [
+          "Construcción, despliegue y observabilidad",
+          "Las canalizaciones y la supervisión que necesita cada módulo, ofrecidas una sola vez como plataforma."
+        ],
+        [
+          "Capa de integración",
+          "Una única vía regulada para conectarse a los sistemas que permanecen, en lugar de redes de conexiones punto a punto."
+        ]
+      ],
+      "caption": "El cambio va de un Gobierno con cientos de sistemas a medida a un Gobierno de módulos compartidos y reutilizables sobre infraestructura de cómputo común. Cada servicio compartido se desarrolla y asegura una sola vez y queda disponible para cualquier ministerio.",
+      "source": "Diseño de plataformas compartidas y arquitectura objetivo de Git Insights Ministry."
+    },
+    {
+      "type": "paragraph",
+      "text": "Aquí radica también el potencial de ahorro económico. Dado que los módulos son diseñados y desarrollados por la IA bajo dirección humana, el tiempo desde la concepción hasta la ejecución se comprime de forma deliberada. Todo el proceso de desarrollo de software se rediseña. La construcción y las pruebas se automatizan en gran medida, mientras que las decisiones sobre seguridad, privacidad y lo que la ciudadanía realmente necesita permanecen en manos de las personas."
+    },
+    {
+      "type": "table",
+      "title": "Dónde se concentra el trabajo",
+      "columns": [
+        "Dónde se realiza el trabajo",
+        "En qué medida lo reduce la IA"
+      ],
+      "rows": [
+        [
+          "Arquitectura y diseño",
+          "Alrededor del 80 %. La IA elabora los borradores; las personas los ratifican."
+        ],
+        [
+          "Ingeniería y codificación",
+          "Alrededor del 95 %. La mayor parte de la construcción."
+        ],
+        [
+          "Garantía de calidad",
+          "Alrededor del 85 %. Pruebas sintetizadas a partir del código."
+        ],
+        [
+          "Operaciones e infraestructura",
+          "Alrededor del 85 %. Infraestructura escrita como código."
+        ],
+        [
+          "Revisión de seguridad y privacidad",
+          "Alrededor del 40 %. Permanece bajo liderazgo humano."
+        ],
+        [
+          "Producto y validación",
+          "Alrededor del 30 %. Participación humana intensa con las partes interesadas."
+        ]
+      ],
+      "caption": "Se añaden una contingencia y una carga de gastos generales del programa, y la cifra se recalcula línea por línea a partir de este esquema, en lugar de tomarse como un único número producido por la IA. Un «arnés de IA» sólido hace que el proceso de desarrollo sea confiable en sí mismo.",
+      "source": "\n"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Lo que ve el ejecutivo"
+    },
+    {
+      "type": "paragraph",
+      "text": "G.I.M. produce resultados sobre los que quien toma decisiones puede actuar de inmediato, no un conjunto de análisis en bruto. El panel presenta todo el ministerio como una imagen única respaldada por evidencia, y la misma fuente genera un informe ejecutivo en lenguaje claro."
+    },
+    {
+      "type": "table",
+      "title": "La vista ejecutiva de G.I.M.",
+      "columns": [
+        "El panel muestra",
+        "Lo que responde"
+      ],
+      "rows": [
+        [
+          "Índice de consolidación",
+          "Cuántas aplicaciones heredadas se integran en cuántos módulos modernos."
+        ],
+        [
+          "Inventario de capacidades",
+          "Lo que el ministerio hace realmente por la ciudadanía, en lenguaje sencillo y fundamentado en el código."
+        ],
+        [
+          "Garantía de preservación",
+          "Qué capacidades se incorporan al nuevo diseño y cuáles se señalan como en riesgo."
+        ],
+        [
+          "Economía de la compresión",
+          "El esfuerzo de reconstruir de forma tradicional frente a con apoyo de la IA, desglosado por tipo de trabajo."
+        ],
+        [
+          "Riesgo en el estado actual",
+          "Las vulnerabilidades actuales, la exposición de datos sensibles y el estado de salud, por sistema."
+        ],
+        [
+          "Topología de integración",
+          "La maraña actual de conexiones punto a punto frente al entramado compartido del futuro."
+        ],
+        [
+          "Confiabilidad",
+          "Dónde el análisis es sólido y dónde señala abiertamente las brechas que una persona debe cerrar."
+        ]
+      ],
+      "caption": "Cada cifra se puede rastrear hasta la evidencia en el código. La vista de confiabilidad es intencional: la herramienta indica dónde tiene dudas en lugar de presentar una confianza uniforme que no posee.",
+      "source": "Panel e informe de Git Insights Ministry."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 4.4",
+      "title": "De una maraña a una capa compartida",
+      "caption": "La vista de integración, antes y después. Los sistemas actuales se conectan entre sí punto a punto, un nudo que nadie tiene plenamente en la cabeza. El objetivo es conectarlos a través de una capa gobernada y compartida, con servicios comunes en la base.",
+      "image": {
+        "src": "public/images/offjm/es/fig-4-4.jpg",
+        "alt": "A la izquierda: un nudo caótico de conexiones punto a punto entre múltiples sistemas. A la derecha: los mismos sistemas conectados de forma ordenada a través de un único nodo central.",
+        "image_prompt": "An editorial diptych. On the left, a chaotic tangle of point-to-point connecting lines between many scattered systems, a knot of wires. On the right, the same systems connected cleanly through a single central hub or fabric, orderly spokes radiating out. A sense of a knot resolved into a hub. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "G.I.M. es el puente entre conocer el parque tecnológico y reconstruirlo. Transforma la información objetiva de [Git Insights](/paper/bbkac) en un plan sólido y justificable: una arquitectura más reducida, modular y de propiedad pública, con las partes comunes construidas una sola vez para todos. Las estrategias para llevar a cabo esa reconstrucción —desde la actualización parcial hasta la reconstrucción completa— son el tema del próximo documento: **[Los cuatro enfoques para la modernización con IA](/paper/zgym1)**."
+    },
+    {
+      "type": "figure",
+      "title": "Explorar como lienzo interactivo",
+      "caption": "Los sistemas superpuestos de un ministerio se consolidan en unos pocos módulos compartidos, construidos una sola vez, sin redundancias. Parte de El lienzo (libro 19); arrastre los nodos, amplíe la vista y pulse Escuchar para obtener una guía en audio.",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "future",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "git-insights",
+        "modernization",
+        "architecture",
+        "shared-services"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "bbkac",
+    "zgym1",
+    "p7p2k",
+    "xs7uh"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 20 campos actualizados."
+      }
+    ]
+  },
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "translation_status": "reviewed",
+  "source_signature": "478717957"
+}

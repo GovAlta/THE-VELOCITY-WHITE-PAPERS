@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Technique : anatomie d’un gabarit · Les livres blancs Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Le harnais bien construit inclut un gabarit d’application complet en code source ouvert, basé sur un seul dépôt. Il comprend une interface en Vue 3 et un serveur Node.js / Express avec une base de données PostgreSQL. Ce gabarit permet à un agent d’IA de créer rapidement des solutions fiables de niveau entreprise. Il inclut déjà les éléments essentiels comme la sécurité, la journalisation et des contrôles de base." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/fr/paper/l5wsi/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/l5wsi/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/l5wsi/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/l5wsi/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/l5wsi/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Technique : anatomie d’un gabarit" />
+  <meta property="og:description" content="Le harnais bien construit inclut un gabarit d’application complet en code source ouvert, basé sur un seul dépôt. Il comprend une interface en Vue 3 et un serveur Node.js / Express avec une base de données PostgreSQL. Ce gabarit permet à un agent d’IA de créer rapidement des solutions fiables de niveau entreprise. Il inclut déjà les éléments essentiels comme la sécurité, la journalisation et des contrôles de base." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/fr/paper/l5wsi/" />
+  <meta property="og:site_name" content="Les livres blancs Velocity" />
+  <meta property="og:locale" content="fr_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/l5wsi.fr.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/l5wsi.fr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Technique : anatomie d’un gabarit" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/l5wsi.fr.jpg" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Technique : anatomie d’un gabarit" />
+  <meta name="twitter:description" content="Le harnais bien construit inclut un gabarit d’application complet en code source ouvert, basé sur un seul dépôt. Il comprend une interface en Vue 3 et un serveur Node.js / Express avec une base de données PostgreSQL. Ce gabarit permet à un agent d’IA de créer rapidement des solutions fiables de niveau entreprise. Il inclut déjà les éléments essentiels comme la sécurité, la journalisation et des contrôles de base." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Technique : anatomie d’un gabarit","description":"Le harnais bien construit inclut un gabarit d’application complet en code source ouvert, basé sur un seul dépôt. Il comprend une interface en Vue 3 et un serveur Node.js / Express avec une base de données PostgreSQL. Ce gabarit permet à un agent d’IA de créer rapidement des solutions fiables de niveau entreprise. Il inclut déjà les éléments essentiels comme la sécurité, la journalisation et des contrôles de base.","url":"https://thevelocitywhitepapers.com/fr/paper/l5wsi/","inLanguage":"fr-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Sous-ministre"},{"@type":"Person","name":"Technologie et Innovation"}],"publisher":{"@type":"Organization","name":"Gouvernement de l’Alberta · Ministère de la Technologie et de l’Innovation"},"isPartOf":{"@type":"PublicationVolume","name":"Les livres blancs Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"template, harness, security, owasp, open-source, authentication, specification-driven","image":"https://thevelocitywhitepapers.com/public/og/l5wsi.fr.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 17 · Technical</p>
+      <h1>Technique : anatomie d’un gabarit</h1>
+      <p class="sub">Une visite complète du modèle d’application open source fourni avec le système de contrôle, qui montre en pratique pourquoi la meilleure façon de définir une solution est encore d’avoir un code qui fonctionne.</p>
+      <div class="abstract"><strong>Abstract.</strong> Le harnais bien construit inclut un gabarit d’application complet en code source ouvert, basé sur un seul dépôt. Il comprend une interface en Vue 3 et un serveur Node.js / Express avec une base de données PostgreSQL. Ce gabarit permet à un agent d’IA de créer rapidement des solutions fiables de niveau entreprise. Il inclut déjà les éléments essentiels comme la sécurité, la journalisation et des contrôles de base.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Fournir un bon gabarit à un agent d’IA est la façon la plus fiable d’échafauder une application de calibre entreprise. Un gabarit bien construit règle des centaines de décisions clés d’avance, de la sécurité à l’expérience utilisateur. Combiné à un harnais bien construit, il donne à l’agent les moyens de transformer ce gabarit en application, rapidement et en toute sécurité.
+
+Le gabarit règle les principaux défis techniques dès le départ. Il définit tout, des choix de base comme le langage de programmation jusqu’aux éléments précis comme les protocoles de sécurité, la gestion des données et l’interface utilisateur. Cela représente des centaines de décisions déjà prises et adaptées à l’environnement cible. En fermant dès le début les failles de sécurité et les erreurs les plus courantes, le gabarit fournit aussi de bons modèles que l’agent peut suivre. En ce sens, un gabarit devient la meilleure forme de spécification : il guide le développement tout en maintenant la cohérence des choix de conception.
+
+Démarre au vert, pas à zéro 773 / 0. Le gabarit comprend 773 tests réussis, sans aucun échec, ainsi que six outils automatisés d’analyse de sécurité. Une application construite à partir de ce gabarit bénéficie dès le départ d’une base fiable, testée et conforme aux standards.
+
+&quot;La meilleure spécification est du code. Donnez à l’IA une plateforme sécurisée, fondée sur des normes et accessible dès le départ, et elle est beaucoup moins susceptible de commettre une erreur. La solution est conforme avant même que l’IA commence à construire.&quot;
+
+Il n’existe pas une seule bonne façon de créer un gabarit, mais il existe beaucoup de mauvaises façons de le faire. Les choix de conception dépendent de chaque organisation et de ses décisions globales. Le gabarit présenté ici est très précis et détaillé. Il est conçu pour éviter toute ambiguïté ou mauvaise interprétation. Cela dit, les mêmes principes et contrôles peuvent être appliqués à d’autres technologies.
+
+
+## §01 Le serveur : le cycle de vie d’une requête
+
+Le serveur est une application Express unique, développée en TypeScript. Chaque requête est traitée de façon cohérente, en passant par des couches de traitement dans un ordre logique et réfléchi : d’abord les protections simples et générales, puis, en dernier, la gestion de l’identité et des intentions.
+
+
+## §02 Identité : connexion, jetons et témoins
+
+La connexion est gérée par Google et Microsoft grâce à Passport et OpenID Connect. Le gabarit ne stocke aucun mot de passe. Une fois la connexion réussie, le serveur génère deux jetons JSON sécurisés, signés avec des clés asymétriques (RS256). Cela permet de vérifier les jetons sans garder d’information sensible qui pourrait servir à en créer de faux. Ces jetons sont stockés dans des témoins sécurisés (httpOnly), ce qui empêche les scripts du navigateur d’y accéder. Le système vérifie les requêtes grâce à un intergiciel d’authentification. Si le jeton d’accès est expiré, le serveur retourne une erreur 401 avec un code spécifique (TOKEN_EXPIRED), ce qui indique au client qu’il doit le renouveler.
+Les jetons de renouvellement sont stockés de façon sécurisée sous forme d’empreintes (SHA-256). Chaque utilisation génère un nouveau jeton, et chaque jeton peut être révoqué. Ainsi, même si un jeton est volé, sa durée de vie reste courte et il peut être désactivé rapidement.
+
+
+## §03 CSRF et sûreté entre sites
+
+Les requêtes qui modifient des données, comme créer, mettre à jour ou supprimer, sont protégées par une vérification de sécurité en deux étapes. Le serveur crée d’abord un témoin sécurisé csrf_token, puis envoie aussi la valeur de ce jeton une seule fois dans la réponse de GET /auth/csrf-token. Le client garde ces informations seulement en mémoire, jamais dans le stockage du navigateur, puis renvoie la valeur du jeton dans l’en-tête X-CSRF-Token. L’intergiciel compare ensuite la valeur de l’en-tête avec celle du témoin à l’aide d’une méthode sécurisée, conçue pour éviter certaines fuites d’information.
+Cette protection est activée globalement. Ainsi, toute nouvelle route est protégée par défaut, sans dépendre d’une action manuelle du développeur. Seules trois exceptions sont prévues : le démarrage OAuth, le rappel OAuth et le renouvellement de jeton. Chacune est exemptée pour une raison claire et documentée : le rappel est déjà protégé par les mécanismes state et nonce d’OAuth, tandis que le renouvellement de jeton est protégé par le témoin sameSite et par la rotation des jetons.
+
+
+## §04 De la route à la base de données
+
+L’application est organisée en couches : route, puis contrôleur, puis service, puis modèle. Le contrôleur reçoit la requête et prépare la réponse, le service applique les règles d’affaires, et le modèle gère les requêtes SQL.
+Les requêtes SQL utilisent toujours des paramètres comme $1, $2, etc. Les valeurs ne sont jamais ajoutées directement dans la requête, ce qui évite les injections SQL dès le départ. Le modèle est aussi la seule couche qui fait le lien entre les champs de l’API et les colonnes de la base de données. Cela permet de faire évoluer l’API et la base de données indépendamment. PostgreSQL est utilisé avec un simple pool de connexions, sans couche supplémentaire qui cacherait ce qui est réellement exécuté.
+Toutes les réponses suivent le même format : soit un succès avec des données, soit une erreur avec un code et un message. Un seul gestionnaire d’erreurs traite toutes les situations. Il transforme les erreurs connues de PostgreSQL en codes HTTP appropriés, par exemple une violation de clé unique devient 409, et une violation de clé étrangère devient 400. En production, il retire aussi les détails techniques pour éviter de divulguer de l’information sensible.
+
+Les opérations asynchrones sont encadrées pour que toutes les erreurs soient capturées et envoyées au gestionnaire d’erreurs, plutôt que de faire planter l’application. Cela garantit une gestion uniforme des erreurs, des réponses cohérentes et une meilleure sécurité sur tous les points d’accès.
+### Le parcours d’une requête
+
+
+## §05 Mises à jour en temps réel par SSE
+
+Les mises à jour en temps réel, comme les annonces de l’administrateur ou les nouvelles notifications, utilisent les événements envoyés par le serveur (SSE). C’est un flux HTTP simple, à sens unique, plus léger qu’un WebSocket et capable de se reconnecter automatiquement. Côté serveur, un gestionnaire maintient une liste des connexions ouvertes pour chaque utilisateur, avec un maximum de dix (une par onglet). Il envoie ensuite des événements de notification identifiés à chacun. Côté client, une fonction ouvre une connexion sécurisée (EventSource) qui inclut les informations d’authentification. Elle écoute des événements précis. Il est important de noter que les événements nommés ne déclenchent pas le gestionnaire par défaut, ce qui est une erreur fréquente.
+Le système fonctionne en mode tolérant : la source principale reste le service qui fournit la liste des notifications. Ainsi, même si un événement est manqué, aucune donnée n’est perdue. Enfin, la connexion est fermée lorsque la page est quittée et rouverte lorsqu’elle est affichée à nouveau. Cela permet de préserver les performances du navigateur, notamment avec le cache de navigation.
+
+
+## §06 Le client d’API unique
+
+Chaque appel du navigateur passe par une seule instance Axios déjà configurée. Elle envoie automatiquement les informations d’authentification pour que les témoins soient inclus, ajoute un identifiant de requête et, pour les actions d’écriture, le jeton CSRF. Elle gère aussi de façon centralisée les trois types d’erreurs que chaque écran devrait sinon traiter séparément. Comme toute cette logique est regroupée dans un seul fichier, aucune interface n’a à la recréer, ce qui évite les erreurs et assure un comportement uniforme. C’est un bon exemple de ce que le gabarit prend en charge pour simplifier le travail de l’IA.
+
+
+## §07 Routage et gardes de navigation
+
+Le routeur du client utilise le mode historique et charge chaque page seulement lorsqu’elle est visitée, ce qui évite de télécharger tout le code à l’avance. Chaque route contient des informations comme le besoin d’être connecté, le rôle d’administrateur, l’accès invité, le type d’interface à utiliser et le titre de la page. Une seule fonction de contrôle gère la navigation. Elle charge l’utilisateur au besoin, redirige les personnes non connectées vers la page de connexion en gardant leur destination, empêche les non‑administrateurs d’accéder aux pages d’administration et empêche les utilisateurs déjà connectés de revenir à la page de connexion. Pour la sécurité, une fonction vérifie que les redirections ne pointent que vers des chemins internes, ce qui bloque les attaques de redirection. Enfin, le titre de la page est mis à jour automatiquement après chaque navigation.
+
+
+## §08 État, composables et formulaires
+
+Il y a un seul magasin Pinia, dédié à l’authentification. Il gère l’utilisateur, les rôles associés et déconnecte automatiquement après 30 minutes d’inactivité. Il écoute aussi un événement qui signale l’expiration de l’authentification. Tout le reste passe par des composables, qui servent de modèle pour accéder aux données. Une fonction de base permet de faire des requêtes GET et de retourner les données, l’état de chargement, les erreurs et une fonction pour rafraîchir. Les autres composables suivent le même principe pour accéder à leurs services respectifs. Ainsi, les vues utilisent une structure uniforme au lieu d’appeler directement l’API. D’autres fonctions gèrent des besoins communs : le thème (clair ou sombre), l’installation et les mises à jour de l’application, les notifications et les mises à jour en temps réel. Le contenu HTML fourni par les utilisateurs est nettoyé avant affichage pour éviter les risques de sécurité. Les formulaires sont construits avec un outil commun et une configuration partagée, ce qui assure une validation et une apparence cohérentes dans toute l’application, sans devoir les recréer pour chaque écran.
+
+
+## §09 Interface, accessibilité et compilation
+
+L’interface utilise PrimeVue 4 avec le thème Aura, combiné à Tailwind 4 pour le style. Les composants sont importés automatiquement, ce qui permet de n’inclure que ceux qui sont utilisés. Au démarrage, l’application configure Pinia, PrimeVue, FormKit et le routeur. Elle enregistre un gestionnaire d’erreurs global qui affiche des notifications, charge à l’avance les icônes pour accélérer l’affichage et ne démarre qu’après avoir récupéré la session utilisateur et le jeton CSRF. Le mode sombre est géré par une simple classe sur l’élément principal. L’accessibilité est intégrée dès le départ : un lien permet d’accéder directement au contenu, et les changements de page sont annoncés aux lecteurs d’écran. L’ensemble respecte les normes WCAG 2.1 AA. Pour la performance, le code est séparé en plusieurs parties (comme Vue, PrimeVue ou les graphiques) afin d’être mis en cache plus efficacement. En production, le code est optimisé et nettoyé des éléments de débogage. Les ressources sont servies avec une mise en cache longue durée. L’application est aussi une application web progressive (PWA) installable. Un service worker met en cache les éléments principaux, gère les routes du client et propose les mises à jour lorsqu’une nouvelle version est disponible. L’interface est conçue pour être responsive sur mobile, et le manifeste inclut une icône adaptée pour une installation propre sur l’écran d’accueil.
+
+
+## §10 Les dix principaux risques de l’OWASP, traités d’entrée de jeu
+
+L’OWASP identifie les dix principaux risques en sécurité web, considérés comme les vulnérabilités les plus importantes. Le gabarit prend en charge chacun de ces risques directement dans son code. Il est conçu selon le niveau 2 de la norme de vérification de la sécurité des applications de l’OWASP, qui est aussi le niveau exigé par le système de contrôle.
+
+
+## §11 Ce que le gabarit règle pour l’agent
+
+Pris dans son ensemble, le modèle est cohérent. Les décisions importantes et sensibles sont prises une seule fois dans le code et centralisées, pour éviter qu’elles soient mal réutilisées. Par exemple : l’authentification, la protection CSRF, les requêtes SQL sécurisées, le format des réponses, la gestion des erreurs, les mises à jour en temps réel et la logique de réessai sont chacun définis une seule fois, testés et réutilisés. On remet à l’IA un système conforme et on lui demande de l’étendre, et le harnais vérifie de façon mécanique qu’il tient toujours à chaque changement, la même discipline que le harnais anti-dérive applique à mesure que la base de code grandit.
+
+Le gabarit ne couvre toutefois pas tout. Certaines fonctions, comme l’analyse antivirus des fichiers, la répartition de la charge ou la limitation du trafic, restent à compléter lorsqu’une infrastructure partagée est en place. Les limites connues ou les décisions reportées sont clairement documentées, et non cachées.
+
+La solution repose entièrement sur des technologies open source, comme Vue, Express et PostgreSQL, avec des bibliothèques largement utilisées. Cela évite toute dépendance à un fournisseur unique et permet de bénéficier d’une communauté active pour les correctifs. C’est le niveau de base attendu pour une application gouvernementale accessible au public.
+Que vous utilisiez ce gabarit ou que vous en créiez un autre, ces principes peuvent vous aider, ainsi que votre agent d’IA, à rester sur la bonne voie.
+
+
+## §12 Tout le gabarit, sur une seule page
+
+Chaque élément présenté fait partie d’un système cohérent. Le schéma ci‑dessous les regroupe : le client Vue à gauche, le serveur Express au centre, et à droite la base de données Postgres ainsi que les fournisseurs d’identité. Autour, on retrouve les règles de sécurité et les normes qui s’appliquent à l’ensemble. Cette vue d’ensemble sert de repère pour les ingénieurs pendant le développement. C’est aussi la base que l’agent d’IA utilise et fait évoluer.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: template, harness, security, owasp, open-source, authentication, specification-driven</p>
+      <p><a href="/fr/paper/l5wsi">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "fr"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/fr/paper/l5wsi"));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "fr",
+  "slot": "slide-03",
+  "out_path": "public\\images\\wp-08\\fr\\slide-03.jpg",
+  "bytes_jpg": 116203,
+  "bytes_png_source": 2291176,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T11:10:12.478Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram. A single sheet of paper sits at the top of the canvas, labelled CLAUDE.md, with five short numbered lines sketched on it. Below the paper, a thin arrow leads down into a stack of tools drawn as boxes. The paper is clearly the entry point. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram. A single sheet of paper sits at the top of the canvas, labelled CLAUDE.md, with five short numbered lines sketched on it. Below the paper, a thin arrow leads down into a stack of tools drawn as boxes. The paper is clearly the entry point. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wp-08\\en\\slide-03.source.png"
+}

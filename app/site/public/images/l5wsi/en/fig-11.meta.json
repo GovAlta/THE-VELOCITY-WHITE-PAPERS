@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-11",
+  "out_path": "public\\images\\l5wsi\\en\\fig-11.jpg",
+  "bytes_jpg": 144350,
+  "bytes_png_source": 2358483,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:40:05.634Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a vertical stack of small tiles each drawn with a tiny padlock, labelled IDENTITY, CSRF, PARAMETERIZED SQL, RESPONSE ENVELOPE, ERROR HANDLING, API CLIENT, grouped under a heading DECIDED IN CODE. A wide arrow carries them to a simple robot token labelled AI AGENT in the centre. From the agent, arrows add three boxes on the right labelled NEW FEATURE. Between the agent and the new features sits a gate labelled HARNESS CHECK. A rust caption reads INHERIT, DON'T REINVENT. No logos, no people beyond a simple token.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a vertical stack of small tiles each drawn with a tiny padlock, labelled IDENTITY, CSRF, PARAMETERIZED SQL, RESPONSE ENVELOPE, ERROR HANDLING, API CLIENT, grouped under a heading DECIDED IN CODE. A wide arrow carries them to a simple robot token labelled AI AGENT in the centre. From the agent, arrows add three boxes on the right labelled NEW FEATURE. Between the agent and the new features sits a gate labelled HARNESS CHECK. A rust caption reads INHERIT, DON'T REINVENT. No logos, no people beyond a simple token.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

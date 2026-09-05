@@ -1,0 +1,17 @@
+{
+  "paper_id": "offjm",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\offjm\\en\\fig-4-2.jpg",
+  "bytes_jpg": 250476,
+  "bytes_png_source": 2889389,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-01T02:29:11.686Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a dense tangle of nearly two hundred small overlapping application boxes on one side funneling down into about sixteen clean, distinct, evenly-spaced modules on the other. A sense of redundancy collapsing into order. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a dense tangle of nearly two hundred small overlapping application boxes on one side funneling down into about sixteen clean, distinct, evenly-spaced modules on the other. A sense of redundancy collapsing into order. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

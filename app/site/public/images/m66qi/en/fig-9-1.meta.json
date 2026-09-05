@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "en",
+  "slot": "fig-9-1",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a high pass filter for bids, where AI evaluates bid quality and maps it into a 3 dimensional business capability map structure for government. A sense of a high-pass filter that favours proof over polish. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a high pass filter for bids, where AI evaluates bid quality and maps it into a 3 dimensional business capability map structure for government. A sense of a high-pass filter that favours proof over polish. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-07-19T03:58:48.988Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 170546,
+  "bytes_png_source": 2216692,
+  "generated_by": "edit-server.mjs"
+}

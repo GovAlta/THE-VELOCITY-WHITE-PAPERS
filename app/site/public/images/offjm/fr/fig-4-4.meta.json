@@ -1,0 +1,17 @@
+{
+  "paper_id": "offjm",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\offjm\\fr\\fig-4-4.jpg",
+  "bytes_jpg": 181329,
+  "bytes_png_source": 2501429,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T06:33:10.863Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial diptych. On the left, a chaotic tangle of point-to-point connecting lines between many scattered systems, a knot of wires. On the right, the same systems connected cleanly through a single central hub or fabric, orderly spokes radiating out. A sense of a knot resolved into a hub. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial diptych. On the left, a chaotic tangle of point-to-point connecting lines between many scattered systems, a knot of wires. On the right, the same systems connected cleanly through a single central hub or fabric, orderly spokes radiating out. A sense of a knot resolved into a hub. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\offjm\\en\\fig-4-4.source.png"
+}

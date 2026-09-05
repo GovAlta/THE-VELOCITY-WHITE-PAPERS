@@ -1,0 +1,17 @@
+{
+  "paper_id": "eujjc",
+  "locale": "fr",
+  "slot": "fig-04",
+  "out_path": "public\\images\\eujjc\\fr\\fig-14-4.jpg",
+  "bytes_jpg": 204696,
+  "bytes_png_source": 2205142,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T08:04:38.419Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, arranged in two horizontal zones. The LOWER zone is a dense, teeming field of many tiny uniform tokens, small plants, leaves, worms, and scattered dots suggesting soil microbes, none individually labelled, captioned PROCESSUS DE BAS NIVEAU. The UPPER zone shows a small panel of three simple aggregate gauges labelled SANTÉ DU SYSTÈME, with a single simple observer token reading the panel, captioned NIVEAU MÉTA. A thin dashed line separates the zones, with a few summary arrows rising from the field to the gauges. A small caption below reads GÉRER LE SYSTÈME, PAS L'ORGANISME. Calm, architectural, legible labels. No logos, no people beyond a simple token. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents, arranged in two horizontal zones. The LOWER zone is a dense, teeming field of many tiny uniform tokens, small plants, leaves, worms, and scattered dots suggesting soil microbes, none individually labelled, captioned PROCESSUS DE BAS NIVEAU. The UPPER zone shows a small panel of three simple aggregate gauges labelled SANTÉ DU SYSTÈME, with a single simple observer token reading the panel, captioned NIVEAU MÉTA. A thin dashed line separates the zones, with a few summary arrows rising from the field to the gauges. A small caption below reads GÉRER LE SYSTÈME, PAS L'ORGANISME. Calm, architectural, legible labels. No logos, no people beyond a simple token. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\eujjc\\en\\fig-14-4.source.png"
+}

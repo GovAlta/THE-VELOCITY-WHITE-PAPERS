@@ -1,0 +1,17 @@
+{
+  "paper_id": "p7p2k",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\p7p2k\\en\\fig-6-4.jpg",
+  "bytes_jpg": 102518,
+  "bytes_png_source": 2509859,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-02T05:38:38.222Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of four labelled streams, REQUIREMENTS, SKILLS, STANDARDS, and TEMPLATE, drawn as four lines entering from the left and converging into a single node at the centre, from which one clean line exits to the right and ends in a small finished application icon. The convergence is orderly and balanced. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of four labelled streams, REQUIREMENTS, SKILLS, STANDARDS, and TEMPLATE, drawn as four lines entering from the left and converging into a single node at the centre, from which one clean line exits to the right and ends in a small finished application icon. The convergence is orderly and balanced. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

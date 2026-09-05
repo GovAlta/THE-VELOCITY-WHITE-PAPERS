@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Le navire de Thésée à deux milliards de dollars · Les livres blancs Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Le parc technologique du gouvernement de l’Alberta a dépassé le point où les efforts humains seuls suffisent pour le maintenir à jour. Quarante ans de code, d’infrastructure, de règles d’affaires et de dépendances aux fournisseurs coûtent de plus en plus cher à entretenir, tandis que le nombre de vulnérabilités connues augmente plus rapidement qu’il ne peut être traité. Moderniser ce parc avec des approches traditionnelles prendrait des générations. Ce document explique pourquoi ce modèle ne fonctionne plus, pourquoi une approche combinant humains et IA est nécessaire, et ce que le reste de la collection vient démontrer." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/fr/paper/cux4h/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/cux4h/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/cux4h/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/cux4h/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/cux4h/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Le navire de Thésée à deux milliards de dollars" />
+  <meta property="og:description" content="Le parc technologique du gouvernement de l’Alberta a dépassé le point où les efforts humains seuls suffisent pour le maintenir à jour. Quarante ans de code, d’infrastructure, de règles d’affaires et de dépendances aux fournisseurs coûtent de plus en plus cher à entretenir, tandis que le nombre de vulnérabilités connues augmente plus rapidement qu’il ne peut être traité. Moderniser ce parc avec des approches traditionnelles prendrait des générations. Ce document explique pourquoi ce modèle ne fonctionne plus, pourquoi une approche combinant humains et IA est nécessaire, et ce que le reste de la collection vient démontrer." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/fr/paper/cux4h/" />
+  <meta property="og:site_name" content="Les livres blancs Velocity" />
+  <meta property="og:locale" content="fr_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/cux4h.fr.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/cux4h.fr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Le navire de Thésée à deux milliards de dollars" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/cux4h.fr.jpg" />
+  <meta property="article:published_time" content="2026-04-08" />
+  <meta property="article:section" content="Conceptual" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Le navire de Thésée à deux milliards de dollars" />
+  <meta name="twitter:description" content="Le parc technologique du gouvernement de l’Alberta a dépassé le point où les efforts humains seuls suffisent pour le maintenir à jour. Quarante ans de code, d’infrastructure, de règles d’affaires et de dépendances aux fournisseurs coûtent de plus en plus cher à entretenir, tandis que le nombre de vulnérabilités connues augmente plus rapidement qu’il ne peut être traité. Moderniser ce parc avec des approches traditionnelles prendrait des générations. Ce document explique pourquoi ce modèle ne fonctionne plus, pourquoi une approche combinant humains et IA est nécessaire, et ce que le reste de la collection vient démontrer." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Le navire de Thésée à deux milliards de dollars","description":"Le parc technologique du gouvernement de l’Alberta a dépassé le point où les efforts humains seuls suffisent pour le maintenir à jour. Quarante ans de code, d’infrastructure, de règles d’affaires et de dépendances aux fournisseurs coûtent de plus en plus cher à entretenir, tandis que le nombre de vulnérabilités connues augmente plus rapidement qu’il ne peut être traité. Moderniser ce parc avec des approches traditionnelles prendrait des générations. Ce document explique pourquoi ce modèle ne fonctionne plus, pourquoi une approche combinant humains et IA est nécessaire, et ce que le reste de la collection vient démontrer.","url":"https://thevelocitywhitepapers.com/fr/paper/cux4h/","inLanguage":"fr-CA","author":[{"@type":"Person","name":"Ministry of Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Gouvernement de l’Alberta · Ministère de la Technologie et de l’Innovation"},"datePublished":"2026-04-08","isPartOf":{"@type":"PublicationVolume","name":"Les livres blancs Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"thesis, technical-debt, cybersecurity, ai-agents, modernization","image":"https://thevelocitywhitepapers.com/public/og/cux4h.fr.jpg","about":"Conceptual"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 01 · Conceptual</p>
+      <h1>Le navire de Thésée à deux milliards de dollars</h1>
+      <p class="sub">Le parc technologique a dépassé la capacité humaine de le gérer, et il faut le reconstruire pendant qu’il reste en mer.</p>
+      <div class="abstract"><strong>Abstract.</strong> Le parc technologique du gouvernement de l’Alberta a dépassé le point où les efforts humains seuls suffisent pour le maintenir à jour. Quarante ans de code, d’infrastructure, de règles d’affaires et de dépendances aux fournisseurs coûtent de plus en plus cher à entretenir, tandis que le nombre de vulnérabilités connues augmente plus rapidement qu’il ne peut être traité. Moderniser ce parc avec des approches traditionnelles prendrait des générations. Ce document explique pourquoi ce modèle ne fonctionne plus, pourquoi une approche combinant humains et IA est nécessaire, et ce que le reste de la collection vient démontrer.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Aujourd’hui, le parc technologique dépasse la capacité des équipes humaines à le gérer efficacement. Cette situation est observée en Alberta, et elle est aussi mentionnée dans d’autres administrations au Canada. Cette « dette technique » accumulée sur plus de 40 ans, incluant le code, l’infrastructure, les données, les règles d’affaires, les dépendances, les contrats et la documentation ralentit les initiatives et complique toute transformation. Malgré les efforts, les systèmes évoluent moins vite que les technologies, tandis que les coûts augmentent et que les compétences liées aux systèmes plus anciens diminuent.
+
+L’Alberta consacre déjà plusieurs centaines de millions de dollars à des contrats de maintenance applicative pour maintenir ces systèmes. Pourtant, ces investissements ne produisent pas les résultats attendus. L’état des applications se détériore plus rapidement qu’il ne peut être amélioré, et les nouveaux outils d’IA découvrent des vulnérabilités à un rythme sans précédent. Au cours des 12 derniers mois, le nombre de vulnérabilités connues dans les technologies utilisées a augmenté de 78,2 %. Une analyse interne plus approfondie a révélé une hausse supplémentaire d’environ 33 %, ce qui signifie que les préoccupations en matière de cybersécurité ont plus que doublé. Pendant ce temps, la capacité à corriger ces vulnérabilités n’a pas suivi.
+
+
+## §01 Un problème générationnel
+
+À l’automne 2024, l’équipe de direction du ministère de la Technologie et de l’Innovation (TI) a estimé que la modernisation de ces systèmes coûterait environ 2 milliards de dollars. Cette estimation reposait sur des règles simples; le coût réel est probablement plus élevé. Malgré cela, ce chiffre donne un point de départ raisonnable pour réfléchir à l’ampleur du défi. Au sein de TI, le budget annuel consacré à la modernisation de ces systèmes varie entre 80 et 120 millions de dollars. Autrement dit, si nous ne faisions rien d’autre, si les coûts n’augmentaient pas, si les technologies restaient stables et si tout notre temps était consacré à ce seul problème, il nous faudrait environ 20 ans pour moderniser l’ensemble. Et cela repose sur beaucoup d’hypothèses.
+
+En réalité, la demande en services technologiques n’a jamais été aussi forte. La population veut des services publics modernes, sécuritaires et utiles. Les ministères veulent améliorer leurs services, réduire les démarches administratives et offrir les programmes dont les Albertains ont besoin. En même temps, le soutien de plusieurs systèmes critiques prendra fin dans les 12 à 48 prochains mois, et d’importants investissements sont nécessaires pour répondre aux changements législatifs et réglementaires. Cette année seulement, deux grandes transformations — le lancement du Programme d’aide aux personnes handicapées de l’Alberta et de Care First — mettent en place des changements majeurs qui toucheront des centaines de milliers de personnes. Et ce ne sont pas des cas isolés : plus de quarante initiatives législatives ou réglementaires de cette ampleur sont actuellement en cours.
+
+Avant l’arrivée de l’IA, nous ne livrions pas de nouvelles plateformes et solutions au rythme de 70 par année, soit environ une tous les 3 ou 4 jours. Lorsque nous avons mesuré notre capacité réelle en 2024, nous avons estimé qu’il faudrait environ 130 ans pour renouveler le cycle de vie de ces systèmes. Aucun gouvernement, aucune population et aucun fournisseur ne peut soutenir un rythme aussi lent. Les besoins de la population évoluent sans cesse, tout comme les programmes, les politiques, les règlements et les lois. Il fallait donc changer de façon de travailler.
+
+Pour moderniser au rythme actuel 130 ans. Au rythme actuel, il faudrait environ 130 ans pour éliminer la dette technique existante. Aucun gouvernement, aucune population ni aucune industrie ne peut soutenir des projets qui s’étendent sur des générations.
+
+
+## §02 Le navire du gouvernement
+
+L’Alberta poursuivait, sans vraiment le nommer, une approche du « navire de Thésée ». Dans cette expérience de pensée du philosophe Plutarque, chaque pièce du navire est remplacée une à une, planches, voiles et mâts, jusqu’à ce que la question se pose : est‑ce encore le même navire ?
+De la même façon, l’Alberta tentait de moderniser ses systèmes progressivement : de petits correctifs ici et là, des remplacements ponctuels, en espérant qu’avec le temps, l’ensemble resterait fonctionnel et solide.
+
+Mais cette approche a ses limites. Le gouvernement ne peut pas s’arrêter, et les services ne peuvent pas être suspendus pendant que les systèmes sont reconstruits. Et surtout, il n’est pas réaliste de rafistoler ce « navire » sur plusieurs générations. Il faut donc adopter de nouvelles méthodes pour construire un nouveau système, plus rapidement et de manière durable.
+
+&quot;Nous devons reconstruire ce navire pendant qu’il navigue, et cela signifie parfois beaucoup d’écopage pendant que l’on colmate une brèche dans la coque.&quot; · Livre blanc 1 · Le navire de Thésée à deux milliards de dollars
+
+Souvent, le principal frein à la transformation est la dette technique accumulée dans les systèmes existants. Les ministères veulent avancer rapidement, mais les systèmes en place les ralentissent, car ils sont rigides, complexes et difficiles à comprendre. Malgré ces obstacles, le ministère de la Technologie et de l’Innovation a élaboré une stratégie pour moderniser le gouvernement non pas sur des décennies, mais en quelques années.
+
+Les documents de cette collection présentent différentes approches, technologies et méthodes. Certains portent sur des façons de travailler et de penser pour les équipes humaines, tandis que d’autres sont plus techniques et décrivent en détail les outils et les processus utilisés. Dans la majorité des cas, ces approches reposent sur l’intelligence artificielle, qui représente aujourd’hui la seule façon réaliste de relever ce défi à grande échelle.
+
+
+## §03 Pourquoi l’IA
+
+Pour une personne non spécialiste, l’ère actuelle de l’intelligence artificielle générative apporte quelque chose de nouveau : une intelligence comparable à celle des humains, mais beaucoup plus rapide et capable de travailler à grande échelle. Dans le domaine technologique, l’IA peut déjà comprendre, analyser et produire du code avec un niveau proche de celui d’un humain, mais en quelques secondes plutôt qu’en heures ou en mois. Elle est aussi hautement évolutive : on peut déployer plusieurs agents en parallèle, chacun travaillant sur une partie d’un problème complexe. Ensemble, ils décomposent, analysent et résolvent ces problèmes en s’appuyant sur leur capacité à reconnaître des motifs. Ces agents sont également très persistants : leur capacité d’attention, ce qu’on appelle en IA la « fenêtre de contexte », leur permet de traiter des milliers de pages de code ou de texte en quelques instants. Ils comprennent une grande variété de langages, qu’ils soient humains ou informatiques. Lorsqu’une information leur manque, ils sont capables de la déduire à partir de modèles et de relations qu’ils ont appris. Une autre différence importante est leur profondeur d’analyse. Là où un humain peut identifier quelques dizaines de caractéristiques d’un problème, un système d’IA peut en analyser des milliers. Cela lui permet de repérer rapidement des structures, des tendances ou des anomalies qui seraient difficiles à voir autrement. En pratique, cela signifie qu’elle peut comprendre en quelques instants ce qui demanderait des mois de travail à une personne. Enfin, la vitesse de traitement fait une grande différence. Un humain lit quelques centaines de mots par minute. L’IA peut en traiter des millions dans le même temps. Cela lui permet de trouver des problèmes précis ou de repérer des motifs dans de grandes quantités de code ou de données, beaucoup plus rapidement que les approches traditionnelles.
+
+Nulle part ces capacités ne sont peut-être aussi utiles que pour comprendre des systèmes informatiques gouvernementaux complexes. Grâce à elles, l’IA peut analyser l’ensemble du parc technologique, aujourd’hui plus de 466 millions de lignes de code, et examiner chaque modèle, dépendance, relation et fonction à travers des milliers d’applications en moins d’une journée. À court terme, ce travail pourrait être réalisé en moins d’une heure. Les documents suivants expliquent en détail comment ce processus fonctionne. Mais l’IA ne se limite pas à analyser le problème. Elle peut aussi corriger les failles qu’elle identifie.
+
+
+## §04 Les défis et la solution
+
+Bien conçus, les agents d’IA offrent la possibilité de comprendre et de reconstruire rapidement les systèmes gouvernementaux. Grâce à leur capacité à générer du contenu et à leur compréhension approfondie de la technologie, du vocabulaire et de l’environnement technique, ils sont particulièrement bien placés pour analyser puis corriger les logiciels et l’infrastructure. Alors que le nombre d’employés humains est limité, le ministère de la Technologie et de l’Innovation peut maintenant compter sur un effectif parallèle de dizaines de milliers d’agents d’IA. Plutôt que d’attendre qu’une application tombe en panne pour intervenir, il devient possible d’affecter des agents à la surveillance continue de chaque système : ils peuvent en vérifier l’état, tester les bogues observés, suivre les vulnérabilités connues et aider à les corriger. Il devient donc réaliste d’avoir entre un et dix agents qui se consacrent uniquement à l’évaluation, à la surveillance et, au besoin, à la réparation continue de chaque application.
+
+Cela dit, malgré leur apparence d’intelligence, ces agents ont aussi des limites importantes. Ils peuvent se tromper, mal comprendre une situation, partir dans la mauvaise direction et n’ont pas de véritable mémoire à long terme. On peut les voir comme des experts très capables, mais amnésiques : ils résolvent un problème complexe, puis oublient aussitôt le contexte, les échanges précédents et parfois même l’objectif général. Aujourd’hui, cette absence de mémoire reste un enjeu majeur. Sans structure pour conserver le fil, la réflexion, la planification et l’évaluation peuvent facilement se perdre, ce qui ralentit les progrès. Dans le meilleur des cas, ces outils dépassent les humains sur certaines tâches techniques. Dans le pire, ils peuvent être peu fiables et commettre des erreurs importantes lorsqu’ils manquent d’information. De plus, les modèles actuels ont souvent tendance à vouloir trop plaire, même lorsqu’une idée est mauvaise, ce qui peut nuire à la qualité du jugement.
+
+Pris seuls, les agents d’IA ont aussi une autre limite : ils n’agissent pas par eux-mêmes dans le monde réel. Ils produisent des mots, du code ou d’autres contenus, mais ce sont les humains qui doivent leur fournir les outils, les règles et les processus qui permettent de transformer ces résultats en actions concrètes. Et même s’ils ont une vaste connaissance générale, ils ne connaissent pas naturellement les façons de faire internes d’un gouvernement. Comme toute nouvelle personne qui arrive dans une organisation, ils ont besoin d’instructions claires, de processus définis et d’un bon encadrement pour être efficaces.
+
+Malgré ces limites, un humain et un agent d’IA bien jumelés peuvent accomplir le travail de très nombreuses personnes, souvent en beaucoup moins de temps. C’est une affirmation forte, mais que l’Alberta dit avoir démontrée à plusieurs reprises au cours des 18 derniers mois. Malgré toutes leurs imperfections, ces outils représentent aujourd’hui l’une des seules avenues réalistes pour transformer quarante ans de code et des milliards de dollars d’investissements accumulés en un gouvernement numérique, moderne et sécurisé.
+
+Pour y arriver, notre personnel en Alberta doit d’abord apprendre à diriger ces agents d’IA. Travailler efficacement avec l’IA n’est ni simple ni intuitif.
+
+
+## §05 Ce qui s’en vient
+
+Au fil de cette série de livres blancs, l’Alberta explique comment elle a développé des solutions d’IA agentique pour relever quatre grands défis : la **dette technique**, la **cybersécurité**, la **demande croissante** et le **budget déficitaire**. Ces documents présentent en détail notre Académie d’IA, nos méthodes d’encadrement des agents, nos nouveaux outils et constats, ainsi que l’évolution de nos pratiques de gestion pour résoudre ces problèmes plus rapidement. Ils décrivent aussi les quatre approches que nous utilisons pour traiter la dette technique, chacune plus ambitieuse et transformatrice que la précédente, ainsi que les enseignements tirés de nos initiatives basées sur l’IA.
+
+Les livres blancs Vélocité sont conçus comme un guide pour les autres gouvernements qui souhaitent reproduire l’approche de l’Alberta. La province poursuit activement ce travail, mais n’a pas le luxe d’attendre. Si elle n’est pas contrôlée, la dette technique risque de mener à un « hiver cybernétique », où des acteurs malveillants pourront exploiter des failles pour presque rien, alors que leur correction coûtera très cher. Les enjeux de cybersécurité sont bien réels, et tous les gouvernements devront tôt ou tard y faire face. Combinés à une demande croissante de services, à des budgets limités et à un environnement technologique en constante évolution, ils rendent la modernisation incontournable. Dans ce contexte, l’Alberta estime que cette transformation doit se faire rapidement, et que l’intelligence artificielle est la seule façon d’y parvenir à grande échelle. En appliquant les méthodes décrites dans cette collection, il devient possible de réduire à la fois le temps et les coûts de la transformation numérique.
+
+Le chiffre que vise l’Alberta 95 %. Avec la bonne ingénierie, la bonne formation et les bonnes stratégies, l’Alberta estime pouvoir réduire d’environ 95 % le coût et le temps nécessaires pour mettre en œuvre ces correctifs.
+
+Ces livres blancs expliquent concrètement comment nous procédons et comment nous mesurons nos résultats. Nous nous engageons à partager nos progrès en toute transparence et à publier ces documents de manière ouverte. En parallèle, nous investissons fortement dans notre personnel afin que personne ne soit laissé pour compte dans l’adoption de l’IA, tout en redéfinissant les rôles de demain. Nous sommes aussi à la recherche de collaborateurs et de penseurs qui souhaitent partager leurs réflexions sur cette plateforme.
+
+Nous vous invitons à vous joindre à nous dans cette démarche.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: thesis, technical-debt, cybersecurity, ai-agents, modernization</p>
+      <p><a href="/fr/paper/cux4h">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "fr"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/fr/paper/cux4h"));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "paper_id": "offjm",
+  "locale": "es",
+  "slot": "fig-01",
+  "out_path": "public\\images\\offjm\\es\\fig-4-2.jpg",
+  "bytes_jpg": 241205,
+  "bytes_png_source": 2675575,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-07T19:41:48.357Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial-quality flowchart diagram, hand-drawn line work on warm off-white paper background (#F7F4ED). Two-tone palette of deep Alberta navy (#1A3A6E) for primary nodes and rust orange (#C2491A) for accents and arrows. Boxes have subtle shadows; labels in clean sans-serif; arrows are slightly curved with arrowheads. Architectural, calm, technical but human. Wide editorial aspect. No photo realism, no people, no logos, no watermarks. All text labels in English.",
+  "image_prompt": "An editorial illustration of a dense tangle of nearly two hundred small overlapping application boxes on one side funneling down into about sixteen clean, distinct, evenly-spaced modules on the other. A sense of redundancy collapsing into order. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in es. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a dense tangle of nearly two hundred small overlapping application boxes on one side funneling down into about sixteen clean, distinct, evenly-spaced modules on the other. A sense of redundancy collapsing into order. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in es. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\offjm\\en\\fig-4-2.source.png"
+}

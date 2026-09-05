@@ -1,0 +1,17 @@
+{
+  "paper_id": "wp-08",
+  "locale": "en",
+  "slot": "hero",
+  "out_path": "public\\images\\wp-08\\en\\hero.jpg",
+  "bytes_jpg": 133171,
+  "bytes_png_source": 2196697,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-29T10:47:24.181Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration of a fine leather work harness laid out on warm cream paper, viewed from above. The straps and buckles are drawn in deep Alberta navy line work; small rust-coloured accents suggest gates and clasps along the leads. The harness is the only subject. Wide cover aspect, calm and archival, no text, no logos, no people, no horses.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration of a fine leather work harness laid out on warm cream paper, viewed from above. The straps and buckles are drawn in deep Alberta navy line work; small rust-coloured accents suggest gates and clasps along the leads. The harness is the only subject. Wide cover aspect, calm and archival, no text, no logos, no people, no horses.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

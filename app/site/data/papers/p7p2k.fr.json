@@ -1,0 +1,548 @@
+{
+  "id": "p7p2k",
+  "num": "06",
+  "sequence": "6 sur 22",
+  "tier": "Technical",
+  "title": "Le harnais bien conçu",
+  "subtitle": "Comment la fonction publique peut‑elle concevoir et livrer rapidement des applications logicielles de qualité entreprise, sans diminuer ses exigences.",
+  "track": "Engineering the Solution",
+  "authors": [
+    "Janak Alford",
+    "Sous-ministre",
+    "Technologie et Innovation"
+  ],
+  "published": "2026-06-16",
+  "reading_min": 16,
+  "status": "Published",
+  "tags": [
+    "velocity",
+    "harness",
+    "claude-code",
+    "agents",
+    "skills",
+    "hooks",
+    "cyber",
+    "open-source"
+  ],
+  "repo": "https://github.com/GovAlta/COMMON-HARNESS",
+  "abstract": "Les outils de codage comme Cursor, Lovable et Claude Code génèrent des applications qui ne respectent pas toujours les contrôles requis dans la fonction publique. De plus, les agents d’IA ne sont pas toujours fiables pour évaluer leur propre performance. Pour pallier ces difficultés, il faut des consignes claires, des tests et des modèles. L’Alberta a mis au point et publié une série de fichiers appelée « harnais ». Cet ensemble précise les attentes envers l’IA et permet d’obtenir des résultats de qualité entreprise, à une vitesse comparable au « codage à l’instinct ».",
+  "hero_image": {
+    "src": "public/images/p7p2k/fr/hero.jpg",
+    "alt": "Diagramme de couverture éditorial pour Le harnais bien conçu : un harnais de travail en cuir fin disposé sur un papier crème chaud, dessiné en traits bleu marine profond de l’Alberta avec de petits accents rouille le long des longes.",
+    "image_prompt": "An editorial cover illustration of a fine leather work harness laid out on warm cream paper, viewed from above. The straps and buckles are drawn in deep Alberta navy line work; small rust-coloured accents suggest gates and clasps along the leads. The harness is the only subject. Wide cover aspect, calm and archival, no text, no logos, no people, no horses. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/p7p2k.mp3",
+    "duration_sec": 928,
+    "script": "transcripts/wp-08.md"
+  },
+  "tldr_presentation": {
+    "id": "p7p2k-tldr",
+    "title": "Le harnais en six minutes",
+    "locale": "fr",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Rapide, mais pas encore livrable",
+        "audio_file": "public/audio/fr/p7p2k-tldr/01.mp3",
+        "visual": "image",
+        "caption": "Pourquoi nous avons conçu un harnais",
+        "image": {
+          "src": "public/images/p7p2k/fr/slide-01.jpg",
+          "alt": "Diagramme éditorial. Le mot VÉLOCITÉ rendu comme une trajectoire courbe montant du bas à gauche vers le haut à droite, avec cinq petites icônes architecturales placées comme des barreaux sous la courbe.",
+          "image_prompt": "An editorial diagram. A long, curved trajectory line labelled with the single word VÉLOCITÉ rises from the lower left to the upper right of the canvas. Below the curve, five small architectural icons sit evenly spaced, like rungs that hold the curve in place: a small contract scroll, a stack of drawers, a closed gate, a shield, and a circular tuning dial. The icons are simple, drawn in the same hand-drawn line style as the curve. Two-tone navy and rust on warm cream paper. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Tôt dans le programme Maximaliste en IA de l’Alberta, le personnel a mis à l'œuvre les principaux outils de codage, dont Cursor, Lovable et Claude Code. Le temps pour transformer une idée en prototype fonctionnel est passé d’environ six semaines à aussi peu que trente minutes. La vitesse était bien réelle, mais les prototypes ne pouvaient pas être reproduits deux fois, ils omettaient des contrôles qu’exige une fonction publique, et les agents se déclaraient terminés alors qu’ils ne l’étaient pas. Ce document porte sur l’environnement de travail que nous avons bâti pour combler cet écart. Nous l’appelons le harnais."
+      },
+      {
+        "id": "02",
+        "title": "Ce qu’est un harnais",
+        "audio_file": "public/audio/fr/p7p2k-tldr/02.mp3",
+        "visual": "image",
+        "caption": "L’environnement autour du travail",
+        "image": {
+          "src": "public/images/p7p2k/fr/slide-02.jpg",
+          "alt": "Diagramme éditorial d’un établi vu d’en haut. Un cadre de bois simple soutient le diagramme d’une application partiellement construite. Autour du cadre, cinq compartiments étiquetés contiennent les outils que l’agent y puise.",
+          "image_prompt": "An editorial diagram of a workbench seen from above. A simple wooden frame sits in the centre and holds a partially built application diagram, drawn as a few connected boxes. Around the frame, five labelled compartments hold props: a small contract scroll labelled CLAUDE.md, a stack of drawers labelled SKILLS, a small gate labelled HOOKS, a shield labelled CYBER, and a circular dial labelled EVALS. Hand-drawn lines, navy and rust on warm cream paper. No people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Un harnais est l’environnement de travail qui entoure l’agent de codage et la personne jumelée avec lui. Pensez au studio d’un architecte. Le papier-calque, les instruments de dessin et les références sont déjà sur la table avant que l’architecte ne s’assoie. L’esprit de l’architecte est consacré au dessin. Le studio s’occupe de tout le reste. Un harnais fait le même travail pour la construction de logiciels."
+      },
+      {
+        "id": "03",
+        "title": "Les règles que l’agent lit en premier",
+        "audio_file": "public/audio/fr/p7p2k-tldr/03.mp3",
+        "visual": "image",
+        "caption": "Le fichier de règles",
+        "image": {
+          "src": "public/images/p7p2k/fr/slide-03.jpg",
+          "alt": "Diagramme éditorial d’une seule feuille de papier étiquetée CLAUDE.md placée au sommet d’une pile d’outils, avec une fine flèche descendant dans la pile.",
+          "image_prompt": "An editorial diagram. A single sheet of paper sits at the top of the canvas, labelled CLAUDE.md, with five short numbered lines sketched on it. Below the paper, a thin arrow leads down into a stack of tools drawn as boxes. The paper is clearly the entry point. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Chaque harnais s’ouvre sur un fichier que l’agent lit en premier. Nous l’appelons le CLAUDE.md. C’est un ensemble de règles d’une page que l’IA suit. Il nomme la raison d’être du projet, qui il sert, ce que l’agent est autorisé à modifier et ce qu’il ne doit jamais toucher. L’agent le lit à chaque session et le traite comme l’autorité sur le projet."
+      },
+      {
+        "id": "04",
+        "title": "Des manuels chargés sur demande",
+        "audio_file": "public/audio/fr/p7p2k-tldr/04.mp3",
+        "visual": "image",
+        "caption": "Les manuels",
+        "image": {
+          "src": "public/images/p7p2k/fr/slide-04.jpg",
+          "alt": "Diagramme éditorial d’une haute colonne de tiroirs étiquetés. Un tiroir est entrouvert et une petite pile de pages en sort.",
+          "image_prompt": "An editorial diagram of a tall column of labelled drawers, each drawer a thin rectangle stacked vertically. The drawers carry labels: BUILD, REVIEW, CYBER, A11Y, RELEASE, TRANSLATE, DOCUMENT. One drawer in the middle is pulled half open and a small stack of pages rises out of it. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Autour du fichier de règles, le harnais empile des manuels. Chaque manuel est un petit dossier pour un type de travail. Comment écrire une migration de base de données. Comment réviser un passage de prose. Comment réaliser un audit de sécurité. L’agent ne les charge pas tous d’un coup. Il tire le manuel dont il a besoin au moment où il en a besoin, comme une personne de métier plonge la main dans son rouleau à outils pour y prendre la clé adaptée à la tâche du jour."
+      },
+      {
+        "id": "05",
+        "title": "Des inspections qui s’exécutent chaque fois",
+        "audio_file": "public/audio/fr/p7p2k-tldr/05.mp3",
+        "visual": "image",
+        "caption": "Les inspections",
+        "image": {
+          "src": "public/images/p7p2k/fr/slide-05.jpg",
+          "alt": "Diagramme éditorial d’une barrière fermée à la limite d’un atelier. Une étiquette indiquant STOP HOOK pend de la barrière. L’agent se tient à l’intérieur; un document de livraison attend à l’extérieur.",
+          "image_prompt": "An editorial diagram of a gate sitting at the boundary between a workshop area on the left and a delivery area on the right. The gate is closed; a small lock and a tag reading STOP HOOK hang from it. On the workshop side, a labelled agent box stands ready. On the delivery side, a clean document waits to be released. Hand-drawn lines, navy and rust on warm cream paper. No people. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "La troisième pratique, ce sont les inspections. Une inspection est un petit programme qui s’exécute à un moment qui compte. Avant que l’agent ne déclare le travail terminé. Avant que la phase suivante ne commence. L’inspection lit le travail et répond à une question par oui ou par non. Si la réponse est non, on indique à l’agent ce qui a échoué et on lui demande de le corriger. Les inspections sont déterministes. Elles s’exécutent chaque fois. On ne peut pas les faire revenir sur un constat par la discussion."
+      },
+      {
+        "id": "06",
+        "title": "La sécurité fait partie de la structure",
+        "audio_file": "public/audio/fr/p7p2k-tldr/06.mp3",
+        "visual": "image",
+        "caption": "La sécurité dans la structure",
+        "image": {
+          "src": "public/images/p7p2k/fr/slide-06.jpg",
+          "alt": "Diagramme éditorial d’une application dessinée comme une pile verticale en couches. Un mince ruban étiqueté CYBER s’entrelace à travers chaque couche de la pile, du haut vers le bas.",
+          "image_prompt": "An editorial diagram of an application drawn as a vertical layered stack of boxes labelled UI, API, DATA. A thin ribbon labelled CYBER weaves through the stack from top to bottom, threading through each layer rather than sitting beside it. The ribbon is drawn in rust on the navy stack. Hand-drawn lines, calm and architectural, on warm cream paper. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Dans le harnais, la sécurité fait partie de la structure, à la manière dont les murs porteurs d’un bâtiment et ses détails de sécurité incendie font partie des plans originaux. Le fichier de règles nomme les normes. Les manuels savent comment les appliquer. Les inspections vérifient que l’application a bien eu lieu. Au moment où l’agent se déclare terminé, le travail de sécurité l’est aussi."
+      },
+      {
+        "id": "07",
+        "title": "Deux types de vérifications",
+        "audio_file": "public/audio/fr/p7p2k-tldr/07.mp3",
+        "visual": "image",
+        "caption": "Deux types de vérification",
+        "image": {
+          "src": "public/images/p7p2k/fr/slide-07.jpg",
+          "alt": "Diagramme éditorial avec deux cadrans côte à côte. Le cadran de gauche, étiqueté DÉTERMINISTE, a son aiguille bloquée sur une seule marque. Le cadran de droite, étiqueté PROBABILISTE, a une aiguille qui oscille entre deux valeurs.",
+          "image_prompt": "An editorial diagram with two analogue dials drawn side by side at the centre of the canvas. The left dial is labelled DÉTERMINISTE and its needle is locked exactly on a single tick mark. The right dial is labelled PROBABILISTE and its needle hovers between two values with a small motion arc drawn around it. Below the dials a short label reads: même question, deux façons de répondre. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Le logiciel porte toujours deux types de questions. Certaines ont une seule bonne réponse. Les tests ont-ils réussi? Cette dépendance comporte-t-elle une vulnérabilité connue? Un petit script peut poser chacune d’elles. Ce sont les vérifications déterministes. D’autres exigent le jugement d’un lecteur. Ce modèle de menace est-il complet? Une citoyenne pourrait-elle trouver ce qu’elle est venue chercher? Celles-là exigent une vérification probabiliste, faite par un agent qui lit le travail comme le ferait un expert. Le harnais exécute les deux, à chaque livraison."
+      },
+      {
+        "id": "08",
+        "title": "Ce qu’il produit, et ce qui s’en vient",
+        "audio_file": "public/audio/fr/p7p2k-tldr/08.mp3",
+        "visual": "image",
+        "caption": "Le résultat et l’horizon",
+        "image": {
+          "src": "public/images/p7p2k/fr/slide-08.jpg",
+          "alt": "Diagramme éditorial d’un progiciel d’application terminé sur une plateforme de livraison avec deux insignes attachés, SAFE et FAST, et un arc de trajectoire s’élevant hors du progiciel au-delà du bord de la toile.",
+          "image_prompt": "An editorial diagram of a finished application package sitting on a small delivery platform at the centre. Two small badges are attached to the package, one labelled SAFE and one labelled FAST. A trajectory arc rises out of the package and continues off the right edge of the canvas, suggesting more to come. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+          "style_kind": "diagram"
+        },
+        "text": "Réunissez les pièces et la recette tient. Au cours d’une seule cohorte de l’Académie de six jours, une centaine de personnes, dont la plupart ne se seraient pas qualifiées d’ingénieurs, ont bâti plus de cinq cent soixante applications fonctionnelles. Chacune d’elles a franchi les seuils de cybersécurité, d’accessibilité et d’apparence dès la première livraison. Avant le harnais, le point de référence se situait à environ quatre sur dix. La même approche s’étend désormais au-delà du code, vers la rédaction, la formation et l’analyse. Et le harnais se prolonge jusque dans le système en exploitation, où l’agent veille sur l’application longtemps après sa mise en service."
+      }
+    ],
+    "owner_id": "p7p2k"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "S’aligner avec les agents d’IA"
+    },
+    {
+      "n": "02",
+      "title": "Expérimentation et jeu"
+    },
+    {
+      "n": "03",
+      "title": "Présentation du « harnais » d’IA"
+    },
+    {
+      "n": "04",
+      "title": "Concevoir des harnais"
+    },
+    {
+      "n": "05",
+      "title": "Appliquer le harnais à grande échelle"
+    },
+    {
+      "n": "06",
+      "title": "Leçons apprises"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Les grands modèles de langage (GML) sont désormais très performants pour développer du code. Dès le début du programme Maximaliste en IA en 2025, le personnel de Technologie et Innovation a testé ces outils pour voir comment les utiliser dans un contexte gouvernemental. Plusieurs outils de codage agentique ont été évalués, dont Cursor, Lovable, Gemini CLI et Claude Code."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces outils ont accéléré le développement pour les experts et rendu la création d’applications accessible même aux non‑spécialistes. Le temps nécessaire pour passer d’une idée à un prototype fonctionnel est passé d’environ 6 semaines à parfois seulement 30 minutes. Ces gains ont transformé le travail des équipes.\nLes experts métier peuvent maintenant participer directement à la conception, donner leur avis et valider en temps réel. Cela réduit fortement les échanges longs et complexes (courriels, captures d’écran, maquettes) et permet souvent de tout faire en une seule séance. Cependant, ces essais ont aussi montré des limites importantes lorsqu’on demande à ces agents de créer des applications sécurisées, reproductibles et conformes. Plusieurs enjeux devaient être réglés avant une utilisation courante dans les services gouvernementaux."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "S’aligner avec les agents d’IA"
+    },
+    {
+      "type": "paragraph",
+      "text": "Malgré les gains de vitesse, les Maximalistes en IA de l’Alberta ont relevé plusieurs défis importants."
+    },
+    {
+      "type": "paragraph",
+      "text": "D’abord, il était difficile de reproduire exactement la même application. Comme l’IA est probabiliste, chaque interaction produisait un résultat différent (apparence, mise en page, fonctionnalités). Cette variabilité complique son utilisation en contexte gouvernemental. Elle réduit aussi la confiance des partenaires et ralentit le travail, car les équipes ne peuvent pas facilement reprendre ou partager du travail quand les solutions générées diffèrent."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ensuite, ces outils privilégient souvent l’expérience utilisateur, mais négligent les exigences de sécurité. Même si les prototypes sont créés rapidement, il faut souvent beaucoup d’efforts pour corriger les failles de sécurité, d’accessibilité ou de mobilité. Comme pour l’interface, ces corrections sont souvent incohérentes et difficiles à reproduire. Ainsi, le temps gagné à l’avant peut être perdu à l’arrière pour ajouter les contrôles nécessaires à la sécurité. Pour être clair, ces problèmes ne venaient pas de la technologie d’IA elle-même, mais de la façon dont elle était utilisée."
+    },
+    {
+      "type": "paragraph",
+      "text": "Enfin, un autre problème majeur est l’excès de confiance des agents d’IA. Ils affirment souvent que leur code est complet, alors qu’il contient encore des lacunes importantes. Ils ne sont donc pas fiables pour évaluer la qualité de leurs propres résultats. Cela rend difficile, surtout pour le personnel non technique, d’évaluer le niveau réel de maturité d’une application. Faire confiance à ces résultats sans vérification indépendante peut entraîner des erreurs, notamment lors des audits de sécurité."
+    },
+    {
+      "type": "paragraph",
+      "text": "Face à ces limites, l’équipe a progressivement cherché des solutions par essais, expérimentation et approche ludique."
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Expérimentation et jeu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Depuis le lancement du programme Maximaliste en IA en mars 2025 jusqu’en mai 2026, le Ministère a créé plus de 1 000 applications. La plupart sont des prototypes, mais plusieurs dizaines sont passées en production et apportent une valeur concrète."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces prototypes reposent sur une approche d’exploration, d’expérimentation et même de jeu. Cette dimension de jeu est essentielle pour apprendre à comprendre les limites des modèles et à bien les utiliser. Même si cela peut sembler étonnant en contexte gouvernemental, c’est ainsi que les humains apprennent le mieux : dans un environnement sécuritaire, stimulant et motivant."
+    },
+    {
+      "type": "paragraph",
+      "text": "En développant ces nombreuses applications, l’équipe a pu identifier les limites réelles de l’IA. Chaque constat a permis d’améliorer les méthodes de travail, en corrigeant ces lacunes avec de meilleures consignes, de meilleurs scripts et de meilleurs tests. L’objectif est d’exploiter pleinement le potentiel de l’IA tout en tenant compte de ses faiblesses."
+    },
+    {
+      "type": "paragraph",
+      "text": "Au fil du temps, cette phase d’expérimentation a permis de créer une sorte de guide pratique sur les bonnes façons de travailler avec l’IA."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un autre point important est la variabilité entre les utilisateurs. Deux personnes peuvent obtenir des résultats très différents avec le même outil pour une même tâche. La manière de formuler une demande, de donner du contexte ou des instructions influence beaucoup le résultat. Dans un environnement où la qualité et la reproductibilité sont essentielles, ces différences peuvent poser problème."
+    },
+    {
+      "type": "paragraph",
+      "text": "L’utilisation efficace de l’IA nécessite donc un cadre clair et des règles précises."
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Présentation du « harnais » d’IA"
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Pour obtenir des résultats reproductibles, il faut utiliser des modèles et des styles qui augmentent les chances que l’IA exécute correctement les tâches. Comme les grands modèles de langage fonctionnent avec du texte, ces règles sont définies sous forme d’instructions. Ces instructions, appelées « invites », décrivent clairement ce qu’on attend de l’IA. Si on veut encourager la créativité, on donne des consignes générales axées sur le résultat. Si on veut être plus précis, on fournit des étapes détaillées et des règles à suivre."
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Avec le temps, l’Alberta a regroupé des milliers de ces invites en « compétences » d’IA : des instructions qui expliquent les méthodes à utiliser et les résultats attendus. Ces compétences sont très directives, ce qui laisse peu de place à l’interprétation. Elles sont aussi rédigées de façon concise pour ne pas surcharger la capacité d’attention de l’IA. Trouver cet équilibre demande de la pratique. Par essais et erreurs, les équipes ont aussi défini des étapes pour améliorer la qualité et la cohérence du code généré. Elles ont commencé par de petites parties d’application (comme une page d’accueil ou une API), puis ont créé des instructions précises que l’IA devait suivre. Ces règles limitent l’incertitude et rendent les résultats plus cohérents. Ces normes, appelées « fichiers de compétences », sont fournies à l’agent dès le début d’une tâche. Une bonne \nspécification réduit l’ambiguïté et améliore la qualité du résultat."
+    },
+    {
+      "type": "paragraph",
+      "text": "L’ensemble de ces instructions est regroupé dans une collection appelée « harnais »."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Concevoir des harnais"
+    },
+    {
+      "type": "paragraph",
+      "text": "Concevoir des harnais est complexe et demande beaucoup de rigueur. Il s’agit de structurer des compétences qu’un humain développe normalement sur 10 à 20 ans."
+    },
+    {
+      "type": "paragraph",
+      "text": "On ne peut pas créer un harnais à l’instinct. Utiliser l’IA pour le faire peut entraîner un effet de « photocopie », où chaque version dérivée perd en qualité, ce qui peut causer des erreurs imprévisibles. Il faut donc prendre le temps de réfléchir à chaque fonctionnalité et tester chaque version à répétition pour s’assurer que le résultat correspond réellement au besoin. Il est essentiel d’éviter toute production de mauvaise qualité."
+    },
+    {
+      "type": "paragraph",
+      "text": "Il faut aussi montrer clairement à l’IA ce qu’est un travail de qualité. En technologie, cela signifie fournir un exemple d’application aussi parfait que possible, qui servira de modèle. C’est comparable à l’apprentissage des arts : les élèves étudient et reproduisent les œuvres des grands maîtres pour s’en approcher le plus possible."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces modèles de haute qualité sont essentiels pour guider efficacement l’IA."
+    },
+    {
+      "type": "pullquote",
+      "author_verbatim": true,
+      "text": "En m’inspirant de la troisième loi d’Arthur C. Clarke, selon laquelle toute technologie suffisamment avancée est indiscernable de la magie, je dirais que tout modèle suffisamment avancé est indiscernable du code. Le meilleur harnais, c’est du code.",
+      "cite": "Janak Alford, Sous-ministre, Ministère de la Technologie et de l’Innovation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un harnais est formé de quelques éléments qui travaillent ensemble. Avec Claude Code, le point d’entrée vers ces compétences est un fichier appelé CLAUDE.md. D’autres agents de codage utilisent des fichiers équivalents, souvent appelés agent.md. L’agent lit ce fichier au début de chaque session et s’en sert comme règles du projet. Ce fichier est court et clair : il décrit le projet, ses utilisateurs, les normes à respecter, ce que l’agent peut modifier et ce qu’il ne doit jamais changer."
+    },
+    {
+      "type": "paragraph",
+      "text": "C’est aussi l’endroit où sont définies les décisions importantes du projet, afin que l’agent, ainsi que toute nouvelle personne, commencent avec la même compréhension de base."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.1",
+      "title": "Les règles que l’agent lit en premier",
+      "caption": "Chaque session commence par le fichier CLAUDE.md, un ensemble court de règles qui définit le projet et précise ce que l’agent peut ou ne peut pas faire. Il est toujours lu en premier et sert de référence principale pour le projet.",
+      "image": {
+        "src": "public/images/p7p2k/fr/fig-6-1.jpg",
+        "alt": "Un diagramme d’une seule carte dressée étiquetée CLAUDE.md affichée à l’entrée d’un petit atelier, avec le parcours de l’agent qui débute à la carte avant de se poursuivre à l’intérieur.",
+        "image_prompt": "An editorial diagram. A single upright card labelled CLAUDE.md stands at the entrance to a small workshop, like a charter posted beside a doorway, with a few short rule lines sketched on it. A thin arrow shows the path beginning at the card and only then continuing into the workshop beyond, so the card is clearly the first thing reached. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour Claude Code, les compétences sont stockées dans un dossier nommé .claude/skills. Chaque compétence agit comme un petit guide pour un type de tâche : structurer des exigences, écrire une migration de base de données, faire un audit de sécurité ou encore réviser un texte.\nL’agent ne charge pas toutes les compétences en même temps. Au départ, il ne lit que leur nom et une courte description, juste assez pour savoir quand les utiliser. Il ne consulte le contenu complet d’une compétence que lorsqu’elle est pertinente pour la tâche en cours.\nLes compétences sont donc utilisées au besoin, comme un professionnel qui choisit l’outil précis dont il a besoin pour accomplir son travail."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.2",
+      "title": "Des compétences, tirées seulement lorsque le travail l’exige",
+      "caption": "Les compétences se trouvent dans un dossier, fermé par défaut. L’agent en lit seulement le nom, puis ouvre uniquement le manuel dont il a besoin pour la tâche en cours.",
+      "image": {
+        "src": "public/images/p7p2k/fr/fig-6-2.jpg",
+        "alt": "Un diagramme d’une grille de dossiers de compétences étiquetés et fermés, avec un dossier ouvert et en usage, les autres restant fermés.",
+        "image_prompt": "An editorial diagram of a grid of small labelled folders, each a closed skill, with short labels such as REQUIREMENTS, MIGRATION, SECURITY, REVIEW. One folder near the centre is pulled open and a single sheet rises from it, clearly the one in use; every other folder stays shut. A thin arrow from a small marked point selects the open folder. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Le modèle est le « chef‑d’œuvre » sur lequel repose le harnais. Il impose des choix technologiques clairs et assumés. La pile est fixe et open source : Vue JS avec Vite pour le frontal, Node JS avec Express pour le dorsal, Postgres 18 pour les données, et l’authentification unique pour gérer les identités.\nIl est fourni sous forme d’un ensemble complet et fonctionnel, comprenant un client et un serveur, avec les problèmes techniques complexes déjà réglés dès le départ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ainsi, plus d’une centaine de décisions essentielles pour un système public, comme l’authentification des utilisateurs, la validation des données, la gestion des secrets, la journalisation, la sécurité, ou encore l’accessibilité sont prises une seule fois, avant même le début des projets."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.3",
+      "title": "Le modèle : un client et un serveur fonctionnels, décidés d’avance",
+      "caption": "Le modèle est fourni sous forme d’un ensemble connecté : un client Vue et un serveur Express, appuyés sur une base de données Postgres avec authentification unique. Les nombreuses décisions essentielles qu’un système public doit prendre sont déjà définies et figées dès le départ.",
+      "image": {
+        "src": "public/images/p7p2k/fr/fig-6-3.jpg",
+        "alt": "Un diagramme d’une application préassemblée : un panneau client et un panneau serveur reliés à une base de données et à un cadenas, avec une rangée d’interrupteurs déjà réglés.",
+        "image_prompt": "An editorial diagram of a pre-assembled application shown as two connected panels, the left labelled CLIENT and the right labelled SERVER, joined by a clean line to a small database cylinder and a padlock for sign-on. Along the base, a neat row of small toggle switches are all already flipped to the same position, suggesting decisions settled in advance. The assembly looks finished and ready. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Les compétences, les normes, le modèle et des exigences claires déterminent le résultat.\nLes exigences définissent ce qu’il faut construire. Les compétences expliquent comment le faire, en guidant chaque étape : des exigences à la planification, puis à l’architecture, au développement, aux tests et au déploiement. Chaque étape doit être complétée avant de passer à la suivante.\nLes normes décrivent ce qu’est un travail de qualité. Le modèle, lui, intègre déjà tous ces éléments ensemble, de sorte que l’agent retrouve les mêmes règles et préférences partout.\nC’est aussi ce qui permet à une personne non technique de réussir : elle ajoute simplement le contenu dont son service a besoin sur une base déjà approuvée. Ainsi, seule la partie qui doit réellement changer varie d’un projet à l’autre."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.4",
+      "title": "Quatre intrants, un résultat fiable",
+      "caption": "Les exigences, les compétences, les normes et le modèle travaillent ensemble pour construire l’application.\nChacun joue un rôle : les exigences définissent quoi faire, les compétences expliquent comment, les normes décrivent la qualité attendue et le modèle fixe ce qui est déjà décidé. Ensemble, ils permettent de produire une application complète.",
+      "image": {
+        "src": "public/images/p7p2k/fr/fig-6-4.jpg",
+        "alt": "Un diagramme de quatre flux étiquetés, exigences, compétences, normes et modèle, convergeant en un seul nœud qui produit une application terminée.",
+        "image_prompt": "An editorial diagram of four labelled streams, REQUIREMENTS, SKILLS, STANDARDS, and TEMPLATE, drawn as four lines entering from the left and converging into a single node at the centre, from which one clean line exits to the right and ends in a small finished application icon. The convergence is orderly and balanced. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "En parallèle des compétences de construction, quatre agents de révision, identifiés par des couleurs, interviennent pendant la création des applications pour en vérifier la qualité, la cohérence et la sécurité. L’agent Vert s’assure de la qualité du code et de la chaîne d’approvisionnement, l’agent Jaune se concentre sur la rédaction, l’agent Rouge effectue des tests d’attaque depuis l’extérieur, tandis que l’agent Bleu réalise une révision défensive. Ces agents sont intégrés au harnais et feront l’objet d’une description plus détaillée dans le prochain document, [Les agents rouge, bleu, vert et jaune](/paper/l199t)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.5",
+      "title": "Quatre réviseurs qui chevauchent aux côtés de la construction",
+      "caption": "À mesure que l’application est développée, quatre agents de révision — identifiés en vert, jaune, rouge et bleu — la vérifient pour assurer la qualité du code, la clarté rédactionnelle, la résistance aux attaques et la solidité défensive. Ils feront l’objet du prochain document.",
+      "image": {
+        "src": "public/images/p7p2k/fr/fig-6-5.jpg",
+        "alt": "Un diagramme d’une application se déplaçant le long d’une ligne devant quatre petits marqueurs de révision colorés, vert, jaune, rouge et bleu, chacun la vérifiant à son passage.",
+        "image_prompt": "An editorial diagram of a small application moving left to right along a line, with four small round review markers spaced along the path, one tinted green, one amber-yellow, one rust-red, and one navy-blue, each inspecting the work as it passes and adding a small check mark. The four are evenly spaced and balanced. Warm cream paper with clear green, amber-yellow, rust-red, and navy-blue accents, hand-drawn and calm. No people, no logos. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Une grande partie de nos agents reposent actuellement sur Claude, au moyen de leur agent de codage et de leur trousse de développement logiciel (SDK). Les tâches d’envergure, comme la planification, l’architecture ou la modélisation des menaces, sont réalisées avec Claude Opus, capable d’exécuter l’ensemble d’un cycle de livraison, souvent dans la fenêtre de contexte d’un million de jetons d’une seule session. Les nombreuses tâches plus petites, exécutées en parallèle, comme les analyses approfondies et les révisions, sont prises en charge par Claude Sonnet, comparativement plus économique et plus rapide, par l’intermédiaire de l’Agent SDK. Ces agents légers peuvent être orchestrés pour accomplir rapidement de nombreuses tâches en parallèle, à partir d’un ensemble partagé d’outils et de ressources."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cependant, les compétences et les normes ne dépendent pas d’un modèle précis et peuvent être utilisées avec n’importe quelle IA moderne, qu’elle soit avancée ou open source. Ce qui fait vraiment la différence, ce n’est pas le modèle lui‑même, mais la propriété intellectuelle du harnais.\nToute personne, équipe ou organisation peut créer et partager ces compétences, ce qui améliore les capacités de tous. Ainsi, chacun peut accéder aux meilleures pratiques en codage, en définition des exigences, en planification de projets et en sécurité. Ces compétences fonctionnent comme des outils dans une boîte à outils agentique. Il reste cependant nécessaire d’apprendre à bien les utiliser."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Appliquer le harnais à grande échelle"
+    },
+    {
+      "type": "paragraph",
+      "text": "L’Alberta a mis en place un programme pour former ses fonctionnaires, appelé l’Académie d’IA de l’Alberta. Ce programme sera présenté plus en détail dans un autre document, mais on peut déjà dire que des milliers d’employés et plus de dix mille personnes du public ont utilisé la plateforme AlbertaAIAcademy.com pour apprendre à utiliser efficacement l’IA, de la création d’invites jusqu’à la livraison de produits.\nLe personnel apprend en « cohortes », des groupes de 60 à 600 personnes, répartis sur trois niveaux de formation."
+    },
+    {
+      "type": "paragraph",
+      "text": "La cohorte la plus récente de niveau 3 s’est déroulée sur six jours. Les participants y ont adopté une approche de développement basée sur le harnais. Ils venaient d’horizons et de niveaux variés : parmi eux, trois des cinq sous-ministres adjoints du ministère, ainsi que des directeurs exécutifs, des gestionnaires, des employés et des stagiaires. Peu se considéraient comme des ingénieurs logiciels au départ.\nCependant, tous étaient prêts à devenir des bâtisseurs, en travaillant avec l’IA selon une approche guidée par le harnais."
+    },
+    {
+      "type": "paragraph",
+      "text": "Au cours de ces six jours, la cohorte a produit plus de **cinq cent soixante applications fonctionnelles**. Pour obtenir le diplôme de niveau 3, l’application de chaque étudiant a franchi la révision de cybersécurité, la vérification d’accessibilité et la norme d’apparence dès la première livraison."
+    },
+    {
+      "type": "keystat",
+      "label": "Résultat de la cohorte de niveau 3",
+      "value": "560 / 100",
+      "body": "Plus de 560 applications ont été créées par une centaine d’étudiants en seulement six jours.\nLe dernier jour, l’équipe de cybersécurité a analysé toutes les réalisations avec ses propres outils. Les meilleures applications ont obtenu des résultats parfaits : aucune vulnérabilité connue, aucune erreur d’accessibilité et une conformité complète aux normes gouvernementales."
+    },
+    {
+      "type": "paragraph",
+      "text": "Une grande partie des bonnes pratiques en cybersécurité était déjà intégrée dans les harnais utilisés par les étudiants. Ainsi, la sécurité était prise en compte dès le départ. À chaque étape du projet, il est possible d’exécuter ces agents pour réaliser plus de 95 vérifications."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les applications sont donc livrées avec un état de santé clair et des preuves à l’appui. Au moment de l’approbation, les enjeux de sécurité sont déjà réglés, ce qui permet d’obtenir des applications cohérentes, faciles à comprendre et conformes aux exigences dès le début."
+    },
+    {
+      "type": "pullquote",
+      "text": "Nous avons fait entrer l’équipe de cybersécurité dans la tente. Nous leur avons demandé de bâtir l’agent de révision le plus rigoureux qu’ils pouvaient imaginer. \nPuis nous l’avons intégré au harnais.",
+      "cite": "Janak Alford, Sous-ministre, Ministère de la Technologie et de l’Innovation"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "Leçons apprises"
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Après 16 mois d’apprentissage dans le cadre des programmes Maximalistes en IA, plusieurs constats importants se dégagent :"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.6",
+      "title": "Leçons tirées de seize mois de construction avec l’IA",
+      "caption": "Tirés des plus de mille applications que nous avons créées avec l’IA en Alberta en une année.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Commencez à construire avec le harnais",
+            "desc": "Aujourd’hui, rien ne remplace le fait de commencer avec un harnais d’IA solidement conçu. Si la qualité, la cohérence et la cybersécurité vous tiennent à cœur, un harnais bien conçu est incontournable. "
+          },
+          {
+            "title": "Affectez vos meilleurs développeurs aux modèles",
+            "desc": "La qualité nette de votre production d’IA dépend autant des modèles que des compétences. Réunissez vos meilleurs développeurs et affectez-les à la création de modèles avec un dévouement monacal. Coconcevez ces modèles avec votre équipe de cybersécurité. On ne saurait surévaluer le temps consacré à perfectionner les modèles, les compétences et les normes pour l’IA. "
+          },
+          {
+            "title": "Les compétences peuvent varier. Le harnais démocratise le développement.",
+            "desc": "Certains de vos meilleurs penseurs et bâtisseurs ne seront pas des développeurs. Habilitez ces personnes créatives en leur donnant les outils pour bien faire le travail. Les compétences varient aussi énormément au sein des équipes de développement. Doter vos équipes diversifiées de compétences et de modèles communs vous permet d’allier la créativité et la qualité."
+          },
+          {
+            "title": "Habilitez les Bâtisseurs non techniques",
+            "desc": "Laissez les experts du domaine utiliser l’IA pour bâtir des applications qui respectent les mêmes normes que celles bâties par le personnel technique. Le harnais permet au penseur non technique, porteur de la solution d’affaires créative, de participer au processus d’idéation et de solution dès le premier jour, sans sacrifier la qualité. "
+          },
+          {
+            "title": "Établissez des points de référence et faites un suivi",
+            "desc": "L’Alberta a pris le temps d’établir des points de référence sur la qualité des résultats humains et de l’IA avant de concevoir le harnais. Nous itérons maintenant sur le harnais, confiants de dépasser nos normes."
+          },
+          {
+            "title": "Habilitez et outillez votre personnel",
+            "desc": "Formez les gens à bien utiliser ces outils et modèles, afin que toute l’équipe travaille selon une norme cohérente. Les normes n’entravent pas la créativité, elles la renforcent."
+          },
+          {
+            "title": "La preuve est dans le produit. Livrez de bons produits.",
+            "desc": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "author_verbatim": true,
+      "text": "Il est important de se donner du temps pour expérimenter. Ces méthodes ne sont pas simples ni immédiates à maîtriser. Offrir au personnel le temps nécessaire pour apprendre, créer et améliorer ces pratiques est donc un investissement qui en vaut la peine."
+    },
+    {
+      "type": "figure",
+      "title": "Explorez ceci sous forme de canevas interactif",
+      "caption": "Un agent principal, chargé de produire le travail, est entouré de quatre agents de révision — vert, jaune, rouge et bleu — qui vérifient en continu la qualité du travail.\nCe concept fait partie du Canevas (document 18) : il est possible d’y déplacer les éléments, de zoomer et d’écouter une présentation guidée en appuyant sur « Écouter ».",
+      "chart": {
+        "kind": "canvas:scene",
+        "scene": "harness",
+        "audio": true
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "harness",
+        "claude",
+        "templates",
+        "skills"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "bespoke_scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+    "components/visuals/bespoke/canvas/_common.js",
+    "components/visuals/bespoke/canvas/Scene.js"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "model": "claude-opus-4-8",
+      "translated_at": "2026-06-09T00:00:00.000Z"
+    },
+    "fr_review": {
+      "by": "Government of Alberta francophone reviewers",
+      "received": "2026-06-12",
+      "applied": "2026-06-15",
+      "method": "transpose .fr.md → JSON (scripts/fr-review/transpose.mjs), round-trip verified (verify.mjs), lexicon sweep (sweep.mjs)",
+      "standard": "docs/fr-style-guide.md + data/fr-lexicon.json"
+    },
+    "section_sigs": {
+      "00": "2412395041",
+      "01": "2184346120",
+      "02": "576171842",
+      "03": "13427087",
+      "04": "1923560283",
+      "05": "879277771",
+      "06": "2378679256"
+    },
+    "fr_resync": {
+      "date": "2026-06-20",
+      "reason": "Harmonized FR with author EN edits; signatures re-baselined."
+    }
+  },
+  "category": "paper",
+  "related": [
+    "l199t",
+    "qthji",
+    "qxlzo",
+    "xs7uh"
+  ],
+  "translation_status": "final",
+  "source_signature": "324879696"
+}

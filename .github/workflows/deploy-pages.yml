@@ -1,0 +1,95 @@
+name: Deploy site to GitHub Pages
+
+# Builds and deploys the static site in app/site to GitHub Pages.
+#
+# The repo is pushed to two remotes: the private GovAlta-EMU mirror and the
+# public GovAlta Pages repo. Both receive this workflow file, but the build
+# only runs in the public repo (see the `if:` guard below). The private
+# mirror skips it cleanly and never publishes.
+#
+# Everything is built in the ephemeral runner, never in your local working
+# tree, so your local index.html is never swapped or rewritten.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+# Permissions required by the GitHub Pages deploy actions.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent Pages deployment, and let in-progress deploys
+# finish. Cancelling a Pages deploy mid-publish can leave the site with no
+# active deployment (a 404), so we queue instead of cancel.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    # Only the public Pages repo builds and deploys. Update this string if the
+    # public repo is ever renamed.
+    if: github.repository == 'GovAlta/THE-VELOCITY-WHITE-PAPERS'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # The build scripts use only Node built-ins, so there is no npm install
+      # and no node_modules in the published artifact.
+      - name: Build optimized site (bundle, sitemap, prerender)
+        working-directory: app/site
+        env:
+          # Served from the custom domain (apex), set via the CNAME file in
+          # app/site so the GitHub Actions deploy preserves it on every run.
+          BASE_URL: https://thevelocitywhitepapers.com
+          # Google Analytics measurement id, kept OUT of the source. Set it as a
+          # repo variable (Settings > Secrets and variables > Actions > Variables,
+          # name GA_MEASUREMENT_ID, value G-XXXXXXXXXX). Empty -> analytics off.
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
+        run: |
+          # Regenerate the derived data artifacts from the source papers so the
+          # deploy always reflects current content: the inventory/numbering
+          # (papers.json) and the media gallery (gallery.json, which pulls every
+          # paper's youtube + figure blocks). Adding a video or figure to a paper
+          # therefore surfaces in Media on the next deploy with no manual step.
+          node scripts/build-index.mjs
+          node scripts/build-gallery.mjs
+          node scripts/build-bundle.mjs --replace
+          # Inject the analytics id into the built shell after bundling, so the
+          # deployed index.html carries it. The placeholder stays inert otherwise.
+          if [ -n "$GA_MEASUREMENT_ID" ]; then
+            sed -i "s/__GA_MEASUREMENT_ID__/$GA_MEASUREMENT_ID/g" index.html
+            [ -f index.dist.html ] && sed -i "s/__GA_MEASUREMENT_ID__/$GA_MEASUREMENT_ID/g" index.dist.html
+            echo "Injected GA measurement id into the built site."
+          else
+            echo "GA_MEASUREMENT_ID not set; analytics stays off."
+          fi
+          node scripts/build-sitemap.mjs --base "$BASE_URL"
+          node scripts/prerender.mjs --base "$BASE_URL"
+          # Disable Jekyll so files and folders beginning with "_"
+          # (components/_lib, components/visuals/_lib) are served.
+          touch .nojekyll
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the site as a Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/site
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "es",
+  "slot": "fig-09",
+  "out_path": "public\\images\\wq3kd\\es\\fig-21-9.jpg",
+  "bytes_jpg": 134355,
+  "bytes_png_source": 1956370,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:12:24.661Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.",
+  "image_prompt": "A flowchart: three input boxes on the left labelled Cláusula fuente, Mejores coincidencias entre pares, Qué buscar, with arrows merging into a box labelled La IA rellena una plantilla fija, producing a structured card on the right headed FICHA ESTRUCTURADA with clearly labelled fields: VEREDICTO, GRAVEDAD, PALABRAS CLAVE, MEJOR EJEMPLO, COMPARACIÓN, SUGERENCIA, CONFIANZA. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.\n\nSubject: A flowchart: three input boxes on the left labelled Cláusula fuente, Mejores coincidencias entre pares, Qué buscar, with arrows merging into a box labelled La IA rellena una plantilla fija, producing a structured card on the right headed FICHA ESTRUCTURADA with clearly labelled fields: VEREDICTO, GRAVEDAD, PALABRAS CLAVE, MEJOR EJEMPLO, COMPARACIÓN, SUGERENCIA, CONFIANZA. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-9.source.png"
+}

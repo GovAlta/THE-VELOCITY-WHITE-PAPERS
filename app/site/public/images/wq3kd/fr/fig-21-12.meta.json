@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-12",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-12.jpg",
+  "bytes_jpg": 168387,
+  "bytes_png_source": 2293009,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T04:07:37.170Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un diagramme en trois étapes de gauche à droite. Étape un : une grappe d’icônes éparpillées de pages Web et de PDF sous l’étiquette Programme d’études public, conçu pour les gens. Étape deux : une flèche étiquetée le pipeline menant à un graphe soigné de nœuds connectés sous l’étiquette Substrat prêt pour l’IA, plus de 50 000 résultats. Étape trois : une flèche vers une petite icône d’écran de jeu sous l’étiquette Age of Alberta, construit en une heure.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un diagramme en trois étapes de gauche à droite. Étape un : une grappe d’icônes éparpillées de pages Web et de PDF sous l’étiquette Programme d’études public, conçu pour les gens. Étape deux : une flèche étiquetée le pipeline menant à un graphe soigné de nœuds connectés sous l’étiquette Substrat prêt pour l’IA, plus de 50 000 résultats. Étape trois : une flèche vers une petite icône d’écran de jeu sous l’étiquette Age of Alberta, construit en une heure.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-12.source.png"
+}

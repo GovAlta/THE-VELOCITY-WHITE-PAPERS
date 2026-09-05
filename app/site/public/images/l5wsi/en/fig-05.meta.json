@@ -1,0 +1,17 @@
+{
+  "paper_id": "l5wsi",
+  "locale": "en",
+  "slot": "fig-05",
+  "out_path": "public\\images\\l5wsi\\en\\fig-05.jpg",
+  "bytes_jpg": 124235,
+  "bytes_png_source": 2011696,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T04:31:50.869Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Centre-left: a SERVER box containing a smaller box STREAM MANAGER showing userId then an arrow to a set of two connections TAB 1 and TAB 2. An arrow labelled event: notification pushes right to two BROWSER TAB boxes. Below, a separate box GET /notifications LIST marked with a rust tag SOURCE OF TRUTH connects to the tabs. Small captions ONE-WAY STREAM, AUTO-RECONNECT, BEST-EFFORT. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Centre-left: a SERVER box containing a smaller box STREAM MANAGER showing userId then an arrow to a set of two connections TAB 1 and TAB 2. An arrow labelled event: notification pushes right to two BROWSER TAB boxes. Below, a separate box GET /notifications LIST marked with a rust tag SOURCE OF TRUTH connects to the tabs. Small captions ONE-WAY STREAM, AUTO-RECONNECT, BEST-EFFORT. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

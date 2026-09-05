@@ -1,0 +1,1170 @@
+{
+  "id": "m66qi",
+  "num": "22",
+  "sequence": "22 sur 22",
+  "tier": "Policy & People",
+  "title": "Prendre la colline : innover en approvisionnement grâce aux données de l’IA",
+  "subtitle": "L’Alberta sera le premier gouvernement à publier la carte complète des capacités numériques de l’État, construite à partir du code, afin que l’industrie puisse enfin voir la véritable forme de notre parc et soumissionner sur les occasions avec fidélité.",
+  "track": "Working with Industry",
+  "authors": [
+    "Janak Alford",
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-07-18",
+  "reading_min": 29,
+  "status": "Published",
+  "tags": [
+    "procurement",
+    "open-data",
+    "git-insights",
+    "industry-partnership",
+    "modernization"
+  ],
+  "repo": "https://github.com/GovAlta/GIT-INSIGHTS-HUB",
+  "abstract": "Ce document s’appuie sur les données de Git Insights et présente, pour la première fois dans une publication gouvernementale, des métadonnées qui associent chaque dépôt du parc de code de l’Alberta à sa capacité d’affaires, à sa cote de santé, à sa pile technologique, à ses écrans, à ses processus et à ses dépendances. L’ensemble de données offrira à l’industrie une vue complète et tridimensionnelle des activités numériques du gouvernement. Au Symposium Vélocité du 28 juillet 2026, le ministère de la Technologie et de l’Innovation présentera le processus d’extraction et le plus récent balayage Git Insights, puis publiera en open source ce premier instantané. L’industrie disposera de deux mois pour préparer des réponses sérieuses avant de les présenter à « Agency », notre événement d’innovation en IA gouvernementale prévu en octobre 2026. Le document explique pourquoi cette publication est nécessaire, comment elle répond à plusieurs difficultés du processus d’approvisionnement, et comment elle concrétise l’engagement du ministère de rendre l’approvisionnement plus simple, plus rapide et plus transparent, tout en invitant l’industrie à un véritable partenariat pour livrer des capacités appartenant au gouvernement.",
+  "hero_image": {
+    "src": "public/images/m66qi/fr/hero.jpg",
+    "alt": "Une grande porte percée dans un long mur s’ouvre sur un vaste parc de systèmes cartographié avec ordre, où des partenaires de l’industrie sont invités à franchir le seuil.",
+    "image_prompt": "An editorial illustration of a massive stone gate set in a long wall, swinging open for the first time. Beyond it lies a vast, orderly territory of thousands of small building-like repositories laid out on a clear grid stretching to the horizon. A group of figures representing industry partners is invited to step across the threshold into the light. A sense of an estate long kept closed now deliberately opened. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/fr/m66qi.mp3",
+    "duration_sec": 1911,
+    "segments": [
+      {
+        "seg": "title",
+        "src": "public/audio/fr/m66qi-seg/title.mp3",
+        "dur": 6,
+        "hash": "786d7c927f71",
+        "chars": 84
+      },
+      {
+        "seg": "subtitle",
+        "src": "public/audio/fr/m66qi-seg/subtitle.mp3",
+        "dur": 15,
+        "hash": "5c09355713e0",
+        "chars": 253
+      },
+      {
+        "seg": "abstract",
+        "src": "public/audio/fr/m66qi-seg/abstract.mp3",
+        "dur": 74,
+        "hash": "884a11807432",
+        "chars": 1239
+      },
+      {
+        "seg": "b1",
+        "src": "public/audio/fr/m66qi-seg/b1.mp3",
+        "dur": 71,
+        "hash": "6a4e49305ea2",
+        "chars": 1256
+      },
+      {
+        "seg": "b65",
+        "src": "public/audio/fr/m66qi-seg/b65.mp3",
+        "dur": 70,
+        "hash": "9aae1817fed4",
+        "chars": 1290
+      },
+      {
+        "seg": "b2",
+        "src": "public/audio/fr/m66qi-seg/b2.mp3",
+        "dur": 2,
+        "hash": "6575864a9747",
+        "chars": 40
+      },
+      {
+        "seg": "b3",
+        "src": "public/audio/fr/m66qi-seg/b3.mp3",
+        "dur": 144,
+        "hash": "7acd6f5b7e05",
+        "chars": 2578
+      },
+      {
+        "seg": "b4",
+        "src": "public/audio/fr/m66qi-seg/b4.mp3",
+        "dur": 8,
+        "hash": "30d2b8b622f3",
+        "chars": 131
+      },
+      {
+        "seg": "b5",
+        "src": "public/audio/fr/m66qi-seg/b5.mp3",
+        "dur": 32,
+        "hash": "66186d7d03f9",
+        "chars": 527
+      },
+      {
+        "seg": "b7",
+        "src": "public/audio/fr/m66qi-seg/b7.mp3",
+        "dur": 3,
+        "hash": "dccea13ea5b8",
+        "chars": 44
+      },
+      {
+        "seg": "b8",
+        "src": "public/audio/fr/m66qi-seg/b8.mp3",
+        "dur": 73,
+        "hash": "fbaee4086b12",
+        "chars": 1319
+      },
+      {
+        "seg": "b9",
+        "src": "public/audio/fr/m66qi-seg/b9.mp3",
+        "dur": 103,
+        "hash": "389020b11303",
+        "chars": 1820
+      },
+      {
+        "seg": "b10",
+        "src": "public/audio/fr/m66qi-seg/b10.mp3",
+        "dur": 3,
+        "hash": "15a15f210bd0",
+        "chars": 45
+      },
+      {
+        "seg": "b13",
+        "src": "public/audio/fr/m66qi-seg/b13.mp3",
+        "dur": 61,
+        "hash": "5202ef44c330",
+        "chars": 1078
+      },
+      {
+        "seg": "b14",
+        "src": "public/audio/fr/m66qi-seg/b14.mp3",
+        "dur": 87,
+        "hash": "39322fcd5170",
+        "chars": 1584
+      },
+      {
+        "seg": "b15",
+        "src": "public/audio/fr/m66qi-seg/b15.mp3",
+        "dur": 3,
+        "hash": "b00c506ee4a9",
+        "chars": 47
+      },
+      {
+        "seg": "b16",
+        "src": "public/audio/fr/m66qi-seg/b16.mp3",
+        "dur": 26,
+        "hash": "1623f6b68763",
+        "chars": 436
+      },
+      {
+        "seg": "b17",
+        "src": "public/audio/fr/m66qi-seg/b17.mp3",
+        "dur": 85,
+        "hash": "13469b25906e",
+        "chars": 1510
+      },
+      {
+        "seg": "b19",
+        "src": "public/audio/fr/m66qi-seg/b19.mp3",
+        "dur": 66,
+        "hash": "86f7fa76a002",
+        "chars": 1269
+      },
+      {
+        "seg": "b20",
+        "src": "public/audio/fr/m66qi-seg/b20.mp3",
+        "dur": 3,
+        "hash": "15e1f5d0907f",
+        "chars": 62
+      },
+      {
+        "seg": "b21",
+        "src": "public/audio/fr/m66qi-seg/b21.mp3",
+        "dur": 59,
+        "hash": "7562b48fbb4e",
+        "chars": 1114
+      },
+      {
+        "seg": "b22",
+        "src": "public/audio/fr/m66qi-seg/b22.mp3",
+        "dur": 64,
+        "hash": "77818db5bc77",
+        "chars": 1029
+      },
+      {
+        "seg": "b23",
+        "src": "public/audio/fr/m66qi-seg/b23.mp3",
+        "dur": 46,
+        "hash": "26e8e7b258f2",
+        "chars": 821
+      },
+      {
+        "seg": "b26",
+        "src": "public/audio/fr/m66qi-seg/b26.mp3",
+        "dur": 2,
+        "hash": "ac725d5a01e0",
+        "chars": 37
+      },
+      {
+        "seg": "b27",
+        "src": "public/audio/fr/m66qi-seg/b27.mp3",
+        "dur": 62,
+        "hash": "163eae250bc4",
+        "chars": 1124
+      },
+      {
+        "seg": "b28",
+        "src": "public/audio/fr/m66qi-seg/b28.mp3",
+        "dur": 51,
+        "hash": "908573bf3ee6",
+        "chars": 910
+      },
+      {
+        "seg": "b31",
+        "src": "public/audio/fr/m66qi-seg/b31.mp3",
+        "dur": 53,
+        "hash": "227bb4a72a06",
+        "chars": 867
+      },
+      {
+        "seg": "b37",
+        "src": "public/audio/fr/m66qi-seg/b37.mp3",
+        "dur": 38,
+        "hash": "623515143457",
+        "chars": 698
+      },
+      {
+        "seg": "b40",
+        "src": "public/audio/fr/m66qi-seg/b40.mp3",
+        "dur": 48,
+        "hash": "ee00148e6da1",
+        "chars": 862
+      },
+      {
+        "seg": "b42",
+        "src": "public/audio/fr/m66qi-seg/b42.mp3",
+        "dur": 4,
+        "hash": "5aa8b0706dc9",
+        "chars": 72
+      },
+      {
+        "seg": "b43",
+        "src": "public/audio/fr/m66qi-seg/b43.mp3",
+        "dur": 43,
+        "hash": "d8ea98f28581",
+        "chars": 789
+      },
+      {
+        "seg": "b45",
+        "src": "public/audio/fr/m66qi-seg/b45.mp3",
+        "dur": 56,
+        "hash": "e0533aa6e1be",
+        "chars": 964
+      },
+      {
+        "seg": "b47",
+        "src": "public/audio/fr/m66qi-seg/b47.mp3",
+        "dur": 4,
+        "hash": "781f05bc7037",
+        "chars": 70
+      },
+      {
+        "seg": "b48",
+        "src": "public/audio/fr/m66qi-seg/b48.mp3",
+        "dur": 43,
+        "hash": "ad7c558dcbd1",
+        "chars": 749
+      },
+      {
+        "seg": "b49",
+        "src": "public/audio/fr/m66qi-seg/b49.mp3",
+        "dur": 64,
+        "hash": "fa8939365968",
+        "chars": 1107
+      },
+      {
+        "seg": "b51",
+        "src": "public/audio/fr/m66qi-seg/b51.mp3",
+        "dur": 11,
+        "hash": "c342008a83bb",
+        "chars": 190
+      },
+      {
+        "seg": "b52",
+        "src": "public/audio/fr/m66qi-seg/b52.mp3",
+        "dur": 2,
+        "hash": "b1e7ddc2cd3a",
+        "chars": 28
+      },
+      {
+        "seg": "b53",
+        "src": "public/audio/fr/m66qi-seg/b53.mp3",
+        "dur": 60,
+        "hash": "48daa7088a97",
+        "chars": 1027
+      },
+      {
+        "seg": "b54",
+        "src": "public/audio/fr/m66qi-seg/b54.mp3",
+        "dur": 27,
+        "hash": "fb42f49bfaca",
+        "chars": 491
+      },
+      {
+        "seg": "b55",
+        "src": "public/audio/fr/m66qi-seg/b55.mp3",
+        "dur": 59,
+        "hash": "f77c74fb63f5",
+        "chars": 1060
+      },
+      {
+        "seg": "b57",
+        "src": "public/audio/fr/m66qi-seg/b57.mp3",
+        "dur": 47,
+        "hash": "85f3436d947e",
+        "chars": 846
+      },
+      {
+        "seg": "b59",
+        "src": "public/audio/fr/m66qi-seg/b59.mp3",
+        "dur": 3,
+        "hash": "5e180cbf8ebd",
+        "chars": 56
+      },
+      {
+        "seg": "b60",
+        "src": "public/audio/fr/m66qi-seg/b60.mp3",
+        "dur": 78,
+        "hash": "92b725413253",
+        "chars": 1354
+      },
+      {
+        "seg": "b61",
+        "src": "public/audio/fr/m66qi-seg/b61.mp3",
+        "dur": 8,
+        "hash": "c80071494750",
+        "chars": 127
+      },
+      {
+        "seg": "b62",
+        "src": "public/audio/fr/m66qi-seg/b62.mp3",
+        "dur": 44,
+        "hash": "6459199b69d4",
+        "chars": 770
+      }
+    ]
+  },
+  "tldr_presentation": {
+    "id": "m66qi-tldr",
+    "title": "Le document, en bref",
+    "locale": "fr",
+    "owner_id": "m66qi",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Prendre la colline",
+        "audio_file": "public/audio/fr/m66qi-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Document 22 · Prendre la colline",
+        "subcaption": "Les métadonnées derrière chaque système, remises à l’industrie.",
+        "text": "Prendre la colline. L’approvisionnement est la colline que nous devons prendre pour moderniser le gouvernement. Depuis des années, il favorise le fournisseur en place, celui qui connaît déjà la forme non documentée de notre code. Nous publions donc, pour la première fois, les métadonnées derrière chaque système que nous exploitons, afin que l’industrie puisse enfin voir la véritable forme du travail et soumissionner avec fidélité."
+      },
+      {
+        "id": "02",
+        "title": "Pourquoi la soumission ne fonctionnait plus",
+        "audio_file": "public/audio/fr/m66qi-tldr/02.mp3",
+        "visual": "list",
+        "caption": "Quatre défaillances que nous avons documentées",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Des devis trop étroits qui écartent les innovateurs",
+              "desc": "Des exigences rédigées assez serrées pour que l’on attende moins de dix soumissionnaires, dont les noms sont souvent connus à l’avance."
+            },
+            {
+              "label": "Des documents d’appel d’offres à l’aveugle",
+              "desc": "Les véritables règles vivent dans des millions de lignes de code non documenté, alors les fournisseurs attestent plutôt que de prouver."
+            },
+            {
+              "label": "Des conseils TI sans ancrage",
+              "desc": "Le savoir tribal et les notes condensées remontent comme un téléphone arabe, sans aucun fait vérifiable."
+            },
+            {
+              "label": "Chaque dossier devient une fouille dans les systèmes hérités",
+              "desc": "Le livre de règles du gouvernement vit dans le code, et sa lecture prenait autrefois des mois, voire des années, aux consultants."
+            }
+          ]
+        },
+        "text": "Pourquoi la soumission ne fonctionnait plus. Les devis sont rédigés si étroitement que seule une poignée de soumissionnaires connus peut l’emporter. Les documents sont aveugles à l’état réel de nos systèmes, alors les fournisseurs attestent plutôt que de prouver. Nos propres conseils remontent comme un téléphone arabe, sans fait vérifiable. Et le livre de règles du gouvernement vit dans des millions de lignes de code non documenté, qu’il fallait autrefois des mois ou des années à lire pour les consultants."
+      },
+      {
+        "id": "03",
+        "title": "Git Insights, publié sous forme de métadonnées",
+        "audio_file": "public/audio/fr/m66qi-tldr/03.mp3",
+        "visual": "stat",
+        "caption": "Le parc, cartographié et dépersonnalisé",
+        "visual_config": {
+          "stat_value": "4,041 applications",
+          "stat_label": "Associé à 2 182 capacités réparties dans 40 domaines, sans aucun nom rattaché"
+        },
+        "subcaption": "Santé, pile technologique, écrans, processus et dépendances, publiés sans nommer le ministère ni l’application.",
+        "text": "Git Insights, publié sous forme de métadonnées. L’outil qui a lu l’ensemble du parc en extrait maintenant un riche jeu de métadonnées pour chaque dépôt : sa capacité d’affaires, sa santé, sa pile technologique, ses écrans, ses processus et ses dépendances. Nous publions 4 041 applications, associées à plus de 2 100 capacités réparties dans 40 domaines, avec tous les noms retirés."
+      },
+      {
+        "id": "04",
+        "title": "Une vue tridimensionnelle",
+        "audio_file": "public/audio/fr/m66qi-tldr/04.mp3",
+        "visual": "compare",
+        "caption": "Un seul jeu de données, lu sous trois angles",
+        "visual_config": {
+          "left": {
+            "label": "Ce que l’industrie peut voir",
+            "body": "De la capacité au code, du code à la capacité, ou par pile technologique. 75 582 écrans et 73 516 processus, enfin dénombrés."
+          },
+          "right": {
+            "label": "Comment l’industrie peut soumissionner",
+            "body": "Répondre à des capacités entières d’un seul coup, avec un coût réaliste, et se raccorder directement à la même matrice partagée."
+          }
+        },
+        "text": "Une vue tridimensionnelle. Les fournisseurs peuvent lire le jeu de données de la capacité vers le code, du code vers la capacité, ou par pile technologique. Pour la première fois, ils peuvent voir les 75 000 écrans et les 73 000 processus derrière nos systèmes, et soumissionner sur des capacités entières d’un coup, avec un coût réaliste, en raccordant leur solution directement à la même matrice que nous utilisons pour l’évaluer."
+      },
+      {
+        "id": "05",
+        "title": "Pas de contenu bâclé, s’il vous plaît",
+        "audio_file": "public/audio/fr/m66qi-tldr/05.mp3",
+        "visual": "list",
+        "caption": "Une barre haute : la preuve avant le vernis",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Un tableau de correspondance structuré",
+              "desc": "Chaque page d’une soumission renvoie aux nœuds de capacité, aux cotes de santé et aux métadonnées qu’elle prétend adresser."
+            },
+            {
+              "label": "Un artefact vérifiable",
+              "desc": "Une tranche de prototype fonctionnelle, un processus d’agent placé dans un harnais, ou une construction reproductible qui prouve une exécution réelle."
+            },
+            {
+              "label": "Transfert complet",
+              "desc": "Le code, la documentation, les compétences des agents et l’architecture, afin que l’Alberta soit propriétaire de la capacité et en assure le maintien."
+            }
+          ]
+        },
+        "text": "Pas de contenu bâclé, s’il vous plaît. Comme l’IA rend facile la production d’une proposition d’apparence soignée, nous rehaussons les exigences de preuve. Chaque soumission doit correspondre, page par page, à la matrice au moyen d’une table de correspondance lisible par machine, et être accompagnée d’un artefact vérifiable qui démontre une exécution réelle à partir des données. Nous cherchons des partenaires qui remettent le code, la documentation, les compétences des agents et l’architecture, afin que l’Alberta soit propriétaire de la capacité elle-même."
+      },
+      {
+        "id": "06",
+        "title": "Du Symposium à Agency 2026",
+        "audio_file": "public/audio/fr/m66qi-tldr/06.mp3",
+        "visual": "title",
+        "caption": "L’invitation",
+        "subcaption": "Deux mois pour bâtir. Des capacités appartenant au gouvernement, développées en partenariat.",
+        "text": "L’invitation. Nous rendons publique en open source cette première photographie lors du Symposium Vélocité et donnons à l’industrie deux mois pour bâtir de vraies réponses, avant de les démontrer à Agency 2026. Nous nous attendons à ce que les 100 à 200 millions de dollars suivants en approvisionnement suivent ce modèle. Moderniser l’approvisionnement est le fondement nécessaire à la modernisation du gouvernement lui-même."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Principaux défis de l’approvisionnement"
+    },
+    {
+      "n": "02",
+      "title": "Le déficit de preuves et la dette technique"
+    },
+    {
+      "n": "03",
+      "title": "Le problème de compression et le rôle des TI"
+    },
+    {
+      "n": "04",
+      "title": "Le piège de la complexité des systèmes hérités"
+    },
+    {
+      "n": "05",
+      "title": "Git Insights comme vérité de terrain pour l’approvisionnement"
+    },
+    {
+      "n": "06",
+      "title": "La diffusion ouverte des métadonnées"
+    },
+    {
+      "n": "07",
+      "title": "Comment l’industrie peut soumissionner avec une fidélité sans précédent"
+    },
+    {
+      "n": "08",
+      "title": "Soumissions structurées, tables de correspondance et matrice partagée"
+    },
+    {
+      "n": "09",
+      "title": "Pas de contenu bâclé, merci"
+    },
+    {
+      "n": "10",
+      "title": "L’approvisionnement comme fondement de la modernisation"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Une étape essentielle pour remettre en état le parc technologique du gouvernement consiste d’abord à corriger les processus d’approvisionnement défaillants qui nous empêchent de nous procurer les technologies et de trouver les partenaires dont nous avons besoin pour réussir. Les meilleurs outils d’IA ne nous serviront à rien si nous ne pouvons pas les acheter. Le personnel et la direction du ministère de la Technologie et de l’Innovation entendent souvent de nombreux fournisseurs potentiels que le parcours pour vendre au gouvernement est tellement difficile, tellement lent et tellement déroutant qu’il n’est souvent tout simplement pas rentable d’investir même le temps de déposer une soumission. Les petits et moyens fournisseurs canadiens indiquent en particulier qu’ils peinent à se qualifier face à des exigences trop élevées, surtout pour des produits nouveaux et innovants, et qu’ils doivent porter leurs produits vers les marchés étrangers pour décrocher leur premier, voire leur dixième client. Certaines des entreprises les plus prospères du Canada ne prennent même pas la peine de soumissionner aux approvisionnements du gouvernement canadien. Vu de l’extérieur, il semble que le gouvernement se procure toujours la même gamme de produits.",
+      "bid": "b1",
+      "edit_count": 2,
+      "last_edited": "2026-07-20T00:32:26.658Z"
+    },
+    {
+      "type": "paragraph",
+      "bid": "b65",
+      "text": "Au moment d’entrer dans le vif de ce livre blanc, je souhaite commencer par une note introductive. Dans tout examen d’un processus actuel, une part raisonnable de réflexion critique sur soi est utile et précieuse. Toutefois, une telle analyse comporte le risque inhérent de sonner comme une critique des personnes qui travaillent dans ce système depuis des années, voire des décennies. Je le dis clairement d’emblée : je suis profondément impressionné par le professionnalisme et le savoir-faire de notre équipe d’approvisionnement, de nos partenaires d’affaires et de l’ensemble du gouvernement qui soutient nos processus d’approvisionnement. Tout manquement du système m’est imputable. À titre de sous-ministre, je suis pleinement responsable de toute lacune dans l’organisation, et je travaille sans relâche à soutenir nos équipes, à investir dans notre personnel et à bâtir des processus plus solides. La croissance exige une réflexion sur soi, la volonté de reconnaître les nouvelles occasions qui se présentent et le courage d’explorer et d’essayer de nouvelles voies. J’espère que les propositions qui suivent seront reçues telles qu’elles sont conçues : comme de nouvelles occasions stimulantes qui s’appuient sur toutes les décennies de travail acharné de notre équipe. Commençons.",
+      "edit_count": 6,
+      "last_edited": "2026-07-24T02:50:52.277Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Principaux défis de l’approvisionnement",
+      "bid": "b2",
+      "edit_count": 2,
+      "last_edited": "2026-07-24T02:56:12.103Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "Plusieurs critiques reviennent souvent au sujet de l’approvisionnement gouvernemental. La première porte sur la manière dont les demandes de propositions et les énoncés de travaux sont cadrés, souvent perçus comme étroits, restrictifs ou sélectifs, ce qui peut faire en sorte que le titulaire remporte les renouvellements. Concrètement, il y a beaucoup de produits médiocres sur le marché. De nombreuses entreprises vendent des produits qui semblent intéressants sur papier, mais qui ne pourront pas être mis à l’échelle des exigences et de la complexité du gouvernement. Il est donc raisonnable et légitime de fixer un seuil élevé pour protéger l’argent des contribuables. Des exigences claires et bien ciblées offrent en principe un filtre de haut niveau, afin que l’acheteur ne soit pas submergé par du contenu de moindre qualité.\n\nDe piètres produits vont souvent de pair avec des dossiers de soumission de faible qualité. Il est facile pour un fournisseur de rassembler tous les documents, livres blancs et brochures qu’il a produits et de soumettre ce corpus comme preuve du respect des besoins d’approvisionnement. Cela impose un fardeau important au personnel, qui travaille très fort pour assurer l’équité. Lorsque nous recevons une soumission, nous avons l’obligation légale d’examiner chaque page du dossier. Souvent, les soumissions reçues comptent des centaines, voire des milliers de pages, ont peu à voir avec l’exigence réelle, mais doivent tout de même faire l’objet d’un examen complet et détaillé. De volumineux dossiers de soumission peuvent prolonger les délais d’un approvisionnement de plusieurs mois. Comme mécanisme de défense, les approvisionnements sont rédigés de façon étroite afin de limiter généralement le champ à moins de dix soumissionnaires prévus. Un approvisionnement avec des centaines de répondants est souvent perçu comme trop général, alors qu’un avec un ou deux est perçu comme trop restrictif. Le format de la soumission ne devrait jamais orienter le résultat, mais pour des raisons pratiques, il peut le faire.\n\n\nEn outre, des fournisseurs sont fréquemment disqualifiés parce qu’ils ne satisfont pas à l’un des critères obligatoires. Pour les soumissionnaires, il peut être difficile de déterminer à l’avance si leur soumission est pleinement conforme. Une pièce justificative manquante, ou même une seule page ou un seul paragraphe omis, peut faire perdre des mois d’efforts, les soumissionnaires étant disqualifiés sur une technicalité et souvent laissés dans l’ignorance des raisons pour lesquelles ils n’obtiennent pas le contrat.",
+      "bid": "b3",
+      "edit_count": 4,
+      "last_edited": "2026-07-24T02:55:32.141Z"
+    },
+    {
+      "type": "pullquote",
+      "text": "L’approvisionnement est la colline décisive dans l’effort pour réussir la modernisation du gouvernement.",
+      "cite": "Livre blanc 22 · Prendre la colline",
+      "bid": "b4"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bien que chaque approvisionnement doive comporter des exigences justes et transparentes, la réalité est qu’une spécification étroite fonctionne comme un mécanisme de défense. Il en résulte un système qui, en raison de sa complexité, avantage un petit nombre d’entreprises très habiles à rédiger la réponse exactement comme le document veut être lu. Cette habileté vient de l’expérience, et le processus complexe peut écarter jusqu’à 99 % de toutes les autres entreprises de la possibilité de faire affaire avec le gouvernement.",
+      "bid": "b5",
+      "edit_count": 2,
+      "last_edited": "2026-07-24T01:44:57.341Z"
+    },
+    {
+      "type": "keystat",
+      "label": "D’ENTREPRISES ÉCARTÉES AVANT MÊME QU’UN CONCOURS ÉQUITABLE COMMENCE",
+      "value": "jusqu’à 99 %",
+      "body": "Des spécifications étroites et des exigences élevées agissent comme un filtre défensif contre les soumissions de faible qualité et, ce faisant, excluent silencieusement la grande majorité des entreprises, y compris les innovateurs que nous souhaitons le plus rejoindre.",
+      "bid": "b6",
+      "edit_count": 1,
+      "last_edited": "2026-07-24T01:45:06.696Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Le déficit de preuves et la dette technique",
+      "bid": "b7"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les documents d’approvisionnement eux-mêmes compriment de façon importante la réalité du défi pour la faire tenir dans le format imposé.\n\nLes gouvernements peinent souvent à exprimer clairement la complexité de leurs environnements opérationnels. Ce qui demeure caché pour la plupart des fournisseurs, c’est l’ampleur de l’incidence de la dette technique et du code hérité sur nos décisions.\n\n\nLa façon dont les responsables d’affaires décrivent leurs objectifs, et la manière dont ces descriptions se traduisent dans le « langage » de l’approvisionnement, renvoie au [livre blanc sur le problème de compression](/paper/eujjc) documenté antérieurement. L’état technique ou les exigences d’une application sont souvent si complexes qu’ils empêchent les responsables, à tout niveau, de décrire leurs objectifs de façon suffisante. Bon nombre de nos systèmes disposent de peu de documentation à l’interne, et de presque aucune à l’externe. Le fournisseur en place bénéficie d’un avantage démesuré, car il peut soumissionner avec de faibles marges de contingence : il connaît déjà la forme et l’allure du code, même si cette forme n’est consignée nulle part. Bon nombre des innovations que nous souhaitons dépendent de deux à cinq systèmes hérités qui doivent être intégrés, et ces systèmes ne sont pas documentés non plus.",
+      "bid": "b8",
+      "edit_count": 3,
+      "last_edited": "2026-07-24T03:01:24.279Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le document type d’une soumission gouvernementale ne parvient pas à partager suffisamment de profondeur et de perspective sur la dette technique et les exigences d’intégration, ce qui empêche les fournisseurs de soumissionner efficacement. Il n’existe aucun mécanisme permettant aux fournisseurs de tester leur soumission à l’avance pour s’assurer qu’elle est conforme. Et les exigences d’approvisionnement manquent de profondeur pour permettre une soumission fondée sur des preuves. C’est une lacune des documents de soumission eux-mêmes, tant des exigences émises que des propositions reçues en retour. Une grande partie du contenu qui arrive dans la proposition est une attestation des fournisseurs plutôt qu’une preuve. Le gouvernement fournit un matériel source insuffisant, comme le code, pour qu’un fournisseur puisse réellement démontrer un produit solide et intégré. Les gouvernements diffusent des exigences abstraites, les fournisseurs répondent par des propositions abstraites. La vérité de terrain est très fortement compactée.\n\n\nTous les approvisionnements ne décrivent pas des produits réels qui fonctionneront dans l’environnement. Il arrive que des approvisionnements soient publiés en décrivant des choses qui ne peuvent être réalisées, rédigés du point de vue d’une liste de souhaits optimiste et exhaustive, ou d’un propriétaire d’affaires qui a déjà en tête une image fixe et détaillée de ce qu’il veut. Il décrit un produit qu’il sait déjà exister. La préférence de l’acheteur est légitime, mais ce qui est décrit est souvent une solution et non un résultat. Fréquemment, cela exclut la possibilité pour le fournisseur d’introduire des façons nouvelles de résoudre le problème. Le gagnant est le produit que l’acheteur voulait déjà, mais cela peut faire passer à côté du meilleur résultat possible.",
+      "bid": "b9",
+      "edit_count": 2,
+      "last_edited": "2026-07-24T03:02:16.369Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Le problème de compression et le rôle des TI",
+      "bid": "b10"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dans nos efforts pour soutenir nos partenaires d’affaires, les TI se débattent aussi avec cette compression. Au sein du ministère de la Technologie et de l’Innovation, nous ne fournissons pas non plus à nos ministères assez de preuves pour appuyer nos conseils, parce que nous partageons souvent des connaissances tacites qui n’ont pas été validées. Dans toute grande organisation, il circule beaucoup de « savoir tribal », de nombreuses opinions sur l’état et la santé des systèmes, et de nombreuses recommandations qui ne sont pas ancrées dans la réalité. Un jeu de « téléphone brisé » s’installe entre la première ligne technique, la gestion des TI et les propriétaires d’affaires. La direction croit souvent donner de bons conseils, mais elle a également souffert du problème de compression, si bien que les recommandations qui parviennent au secteur d’affaires sont fréquemment impossibles à retracer jusqu’à un fait vérifiable. Bon nombre de décisions gouvernementales reposent sur les grandes lignes plutôt que sur la vérité de terrain, plus désordonnée et plus complexe.",
+      "bid": "b13"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cela inclut les conseils que nous donnons en matière de coûts et d’estimation. Si nous ne pouvons pas voir la vérité de terrain de notre domaine technique, nous peinons nécessairement à estimer le temps, le coût et le risque, et nous nous appuyons sur des heuristiques imprécises, inexactes ou incomplètes. Cela oriente le secteur d’affaires vers un produit d’un fournisseur, ou l’en éloigne pour se tourner vers un développement interne, alors que l’une ou l’autre option pouvait être inappropriée. Le secteur d’affaires se tourne alors directement vers le secteur privé, qui est souvent en mesure de vendre une meilleure vision que la fonction publique, parce que celle-ci manque du savoir-faire en génie, ou du moins de l’équipe marketing, pour la présenter de façon attrayante, et des preuves pour démontrer pourquoi une méthode est meilleure qu’une autre. Souvent, l’argumentaire fait abstraction des réalités désordonnées du gouvernement et présente une vision très comprimée et soignée. Nous devons faire davantage pour présenter à toutes les parties, à notre partenaire d’affaires comme à nos fournisseurs, le portrait le plus complet et le plus fondé sur des preuves possible dès la première rencontre, et pour orienter vers une décision d’achat, de développement ou de véritable solution de rechange ancrée dans la réalité.\n\n\nLe matériel décisionnel est fréquemment comprimé en une note de quatre pages ou une présentation de dix diapositives. Une application comptant des milliers d’écrans et de flux de travail ne peut jamais être représentée fidèlement de cette façon.\n\n\n",
+      "bid": "b14",
+      "edit_count": 1,
+      "last_edited": "2026-07-24T03:02:57.703Z"
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Le piège de la complexité des systèmes hérités",
+      "bid": "b15"
+    },
+    {
+      "type": "paragraph",
+      "text": "Il est presque toujours vrai que nous n’achetons ni ne construisons dans un terrain vierge. Le gouvernement existe depuis plus d’un siècle partout au Canada, et l’Alberta a 121 ans cette année. Nous avons superposé des systèmes et des processus qui remontent avant la Confédération. Les formulaires de cette époque ont disparu, mais les processus demeurent. Cela engendre une énorme complexité, invisible de l’extérieur du gouvernement.",
+      "bid": "b16"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un gouvernement fonctionne sur la base des lois, des règlements et des politiques établis par les élus. Cela est connu et vérifiable, bien que dynamique et exprimé en langage humain. Toutefois, une complexité invisible plus grande émerge dans la mise en œuvre. La fonction publique introduit de nombreuses couches de complexité additionnelle qui cartographient les processus d’affaires, et ces processus sont codifiés dans le code logiciel interne et la documentation de processus. Une fois une application écrite, souvent le seul endroit où ces règles sont maintenues est le code lui-même. Si vous vouliez comprendre un système central responsable d’un programme de prestations sociales, il faudrait extraire un grand nombre des règles réelles codifiées à l’intérieur de l’application, accumulées une version à la fois sur 40 ans ou plus. De l’information de processus supplémentaire se trouve dans des chiffriers, du matériel de formation et des formulaires. Aucun artefact ne contient à lui seul l’ensemble des règles d’affaires.\n\n\nLes connaissances humaines propres au gouvernement accusent souvent un retard par rapport aux innovations en cours dans le secteur privé. Lorsque nous définissons un approvisionnement, nous avons tendance à définir le produit de façon rétrospective, en décrivant ce que nous connaissons déjà, et non l’orientation vers laquelle se dirigent la technologie ou l’innovation. Arrimer la complexité du gouvernement au dynamisme du secteur privé peut être en soi un défi de taille.",
+      "bid": "b17",
+      "edit_count": 1,
+      "last_edited": "2026-07-24T03:04:33.995Z"
+    },
+    {
+      "type": "keystat",
+      "label": "LA COMPLEXITÉ EST CACHÉE",
+      "value": "10×",
+      "body": "Les règlements totalisent des dizaines de pages. Le code totalise des millions de lignes, parce que des couches de décisions de bas niveau prises par le personnel de première ligne, les propriétaires d’affaires et les gens des TI deviennent la politique fantôme de ce qui se passe réellement. Les fournisseurs découvrent régulièrement environ 10 fois plus de précision enfouie dans le code que ce que décrivait le document d’approvisionnement, ce qui entraîne des dépassements de coûts et de délais.",
+      "bid": "b18",
+      "edit_count": 1,
+      "last_edited": "2026-07-23T02:26:50.905Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lorsqu’on publie une demande de propositions, ce qu’on décrit est une approximation du produit final plutôt que le produit lui-même. Dans à peu près aucun scénario ne partageons-nous le code, ou une description suffisamment claire, du produit dans son état actuel pour informer correctement le soumissionnaire. Les exigences d’approvisionnement sont vagues et trop comprimées, et les fournisseurs doivent deviner pour remporter le contrat, puis mettre en place des clauses d’avenants qui jouent à leur avantage. Lorsque le fournisseur retenu franchit la porte, il peut trouver quelque chose comme 10 fois plus de précision enfouie dans le code. À l’ère pré-IA, la récupération de ces détails s’apparentait à une extraction archéologique. Il fallait généralement aux consultants des mois, voire des années, pour démêler et valider ces règles avec des propriétaires d’affaires bien au fait. La politique explique pourquoi nous faisons les choses, mais la manière de les faire doit être exhumée des millions de lignes de code elles-mêmes.\n\nMais et si nous donnions aux fournisseurs une perspective sur notre parc technologique? Et si nous pouvions leur montrer dès le départ ce niveau de granularité et vraiment expliquer ce que fait le gouvernement sur le plan technique?",
+      "bid": "b19"
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Git Insights comme vérité de terrain pour l’approvisionnement",
+      "bid": "b20"
+    },
+    {
+      "type": "paragraph",
+      "text": "La solution que nous proposons pour résoudre plusieurs de ces problèmes s’appuie directement sur les processus présentés dans le livre blanc sur [Git Insights](/paper/bbkac), l’outil agentique qui a lu l’ensemble du parc de code de l’Alberta et rendu compte de la réalité de chaque dépôt. Depuis sa création, nous travaillons constamment à faire évoluer cet outil pour en tirer des constats toujours plus riches et pour appuyer le type de planification nécessaire à la correction de ces problèmes d’approvisionnement. La version la plus récente extrait désormais un vaste ensemble de métadonnées de chaque dépôt du parc, et ces métadonnées deviennent l’ossature de la solution d’approvisionnement proposée dans le présent livre blanc. Nous passons de la compréhension de la forme de notre code à l’utilisation de cette compréhension pour transformer notre façon de dialoguer avec l’industrie. Des instantanés détaillés peuvent être partagés, de même que l’ensemble du canevas des capacités d’affaires représentant des centaines de systèmes qui se chevauchent, comme l’expose [Git Insights Ministère](/paper/offjm).",
+      "bid": "b21"
+    },
+    {
+      "type": "paragraph",
+      "text": "L’extraction issue de Git Insights saisit un instantané fidèle de la véritable complexité des systèmes gouvernementaux. Elle cartographie le code en un ensemble solide de capacités d’affaires distinctes et en extrait l’information technique dans un catalogue robuste. Le code est examiné par des agents d’IA qui repèrent les écrans, les processus et la logique clé susceptibles d’orienter la reconstruction ou le remplacement de chaque système ou capacité. Chaque observation est réconciliée dans une carte canonique unique, à l’échelle de l’ensemble du gouvernement, dédoublonnée par nom et par fonction. Les capacités sont enrichies de cotes d’état et de risque, de pourcentages de couverture de tests et d’estimations de reconstruction pouvant être actualisés fréquemment. À travers des milliers de dépôts et des centaines de millions de lignes de code, nous produisons ces constats à l’aide de scripts et de modèles d’IA, de sorte que des intrants identiques donnent un résultat reproductible et vérifiable jusqu’à la source.",
+      "bid": "b22"
+    },
+    {
+      "type": "paragraph",
+      "text": "En extrayant ces métadonnées détaillées dans une matrice multidimensionnelle de constats, nous faisons quelque chose qui, à notre connaissance, n’a jamais été fait auparavant. Nous offrons à l’industrie et aux fournisseurs potentiels une vue instantanée de haute fidélité sur la forme des systèmes gouvernementaux et les défis auxquels nous faisons face. Cette vue permet aux fournisseurs de soumissionner avec un degré de connaissance et de confiance sans précédent, et elle ouvre la voie à la modernisation de l’ensemble du processus d’approvisionnement par une évaluation équitable, transparente et appuyée par l’IA. Le code demeure la source de vérité. Les métadonnées en sont la projection fidèle : elles montrent comment le gouvernement fonctionne réellement et où se trouvent les meilleures occasions d’innovation.",
+      "bid": "b23"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.1",
+      "title": "Un même jeu de données, lu selon trois axes",
+      "caption": "Les métadonnées forment une matrice multidimensionnelle. Les mêmes nœuds peuvent être abordés des capacités jusqu’au code, du code vers les capacités, ou par couche technologique. Un fournisseur consulte la face qui correspond à sa manière de soumissionner, et chaque face renvoie à la même application sous-jacente.",
+      "image": {
+        "src": "public/images/m66qi/fr/fig-5-1.jpg",
+        "alt": "Un vaste treillis tridimensionnel transparent composé de nœuds lumineux, dont chacune des trois faces visibles ordonne les mêmes nœuds différemment : capacités, dépôts de code et couches technologiques.",
+        "image_prompt": "An editorial illustration of a large, transparent three-dimensional lattice or cube floating in space, built from thousands of small glowing nodes. Three visible faces each read as a different ordering of the same nodes: one face grouped as business capabilities, one as code repositories, one as technology layers. Fine connecting threads show that any node can be reached from any face. A single dataset seen from three directions at once. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b24"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 5.2",
+      "title": "Du code à la soumission, de bout en bout",
+      "caption": "La diffusion transforme le parc en un jeu de données sur lequel l’industrie peut agir, et transforme chaque réponse en un élément que l’approvisionnement peut évaluer dans le même cadre.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Extraire les métadonnées",
+            "desc": "Git Insights lit chaque dépôt et consigne sa capacité, son état de santé, sa pile technologique, ses écrans, ses processus, ses dépendances et ses fourchettes de coûts."
+          },
+          {
+            "title": "Dépersonnaliser et certifier",
+            "desc": "Les noms, les constats et les détails de vulnérabilités sont retirés; les profils sont soumis à la k‑anonymisation; le jeu de données est certifié partageable avant sa diffusion."
+          },
+          {
+            "title": "Publier la matrice",
+            "desc": "La matrice multidimensionnelle est publiée en open source sous forme d’instantané à un moment donné. La première version sera diffusée lors du Symposium Vélocité."
+          },
+          {
+            "title": "L’industrie l’intègre à l’aide de l’IA",
+            "desc": "Les fournisseurs lisent la matrice à partir des capacités, du code ou de la pile technologique, et cadrent des réponses réalistes visant des capacités complètes."
+          },
+          {
+            "title": "Les soumissions se relient à la matrice",
+            "desc": "Chaque réponse renvoie une table de correspondance lisible par machine qui relie chaque affirmation aux nœuds précis qu’elle vise."
+          },
+          {
+            "title": "Évaluation appuyée par l’IA",
+            "desc": "L’approvisionnement visualise la couverture, les coûts et les écarts de toutes les soumissions dans un cadre partagé unique."
+          }
+        ]
+      },
+      "bid": "b25"
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "La diffusion ouverte des métadonnées",
+      "bid": "b26"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce jeu de données décrira, avec une grande fidélité, le travail que fait le gouvernement, sans toutefois aller jusqu’à publier l’intégralité du code lui-même. Notre code, comme tout code, comporte des vulnérabilités documentées, comme le souligne [le livre blanc sur la cybersécurité](/paper/mwo98). Nous ne pouvons donc pas simplement publier le code et le soumettre à un appel d’offres ouvert, car cela donnerait aux attaquants les renseignements dont ils ont besoin pour perturber nos systèmes et nos activités. En revanche, nous pouvons offrir à l’industrie quelque chose de bien plus granulaire, et sans doute bien plus utile, que ce que nous avons partagé par le passé, tout en préservant la confidentialité et la sécurité. Le présent livre blanc présente la première diffusion gouvernementale d’un vaste ensemble de métadonnées qui cartographie chaque dépôt — ils sont désormais plus de quatre mille — dans une carte exhaustive des capacités d’affaires. Il décrit la fonction de chaque dépôt, son état de santé, sa pile technologique et un grand nombre de métadonnées additionnelles, sans jamais nommer l’application.",
+      "bid": "b27"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le résultat est une vue complète qui synthétise des centaines de gigaoctets de dépôts et des centaines de millions de lignes de code en un jeu de données clair et autonome. Ce jeu de données permet d’explorer les capacités d’affaires, les dépôts et les piles technologiques, soit les technologies de base qui font tourner ces applications. Imaginez une vue tridimensionnelle, diffusée en tant que jeu de données ouvert, qui permet à l’industrie de saisir la pleine forme des systèmes gouvernementaux ainsi que les dizaines de milliers d’écrans et de processus qu’ils portent. Cette diffusion élimine l’asymétrie d’information qui a longtemps favorisé les fournisseurs en place et, du même coup, protège le code sensible et les vulnérabilités. Chaque diffusion de ces données constitue un instantané à un moment donné, d’autres diffusions étant prévues au fur et à mesure que nos méthodes gagneront en maturité.",
+      "bid": "b28"
+    },
+    {
+      "type": "keystat",
+      "label": "Le parc, cartographié et diffusé",
+      "value": "Plus de 4 000 applications",
+      "body": "Chaque application est associée à ses capacités d’affaires, à son état de santé et à sa technologie, puis dépersonnalisée et certifiée partageable. À l’échelle du parc, cela correspond à 2 182 capacités organisées en 40 grappes de domaines.",
+      "bid": "b29"
+    },
+    {
+      "type": "table",
+      "title": "Le parc en un coup d’œil",
+      "columns": [
+        "Dimension",
+        "Nombre"
+      ],
+      "rows": [
+        [
+          "Applications cartographiées",
+          "4,041"
+        ],
+        [
+          "Capacités d’affaires",
+          "2,182"
+        ],
+        [
+          "Grappes de domaines",
+          "40"
+        ],
+        [
+          "Écrans",
+          "75,582"
+        ],
+        [
+          "Processus",
+          "73,516"
+        ],
+        [
+          "Règles d’affaires",
+          "206,224"
+        ],
+        [
+          "Points d’accès d’API",
+          "112,088"
+        ],
+        [
+          "Dépendances d’intégration",
+          "23,966"
+        ]
+      ],
+      "caption": "L’ampleur de l’instantané diffusé. Voici les écrans, les processus et les règles qu’une note de quatre pages ne pourrait jamais porter, désormais dénombrés et ouverts à la lecture de l’industrie.",
+      "source": "Git Insights metadata release, schema gov-metadata/1.0, fleet run 3.",
+      "bid": "b30"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ensemble, ces chiffres brossent un tableau plus complet de ce que le balayage a révélé. Les 4 041 applications se résolvent en 2 182 capacités d’affaires réparties dans 40 domaines de produits. Derrière elles se trouvent plus de soixante-dix mille écrans et un nombre semblable de processus, des centaines de milliers de règles d’affaires et de points d’accès d’API, ainsi que près de vingt-quatre mille dépendances logicielles. Ce premier instantané ne couvre pas encore l’ensemble du gouvernement. Plusieurs grandes plateformes commerciales, comme notre système 1GX fondé sur SAP, sont absentes de cette diffusion, et des travaux sont en cours pour intégrer à la carte l’ensemble des capacités que nous comptons moderniser. Les prochaines diffusions continueront d’élargir ce paysage jusqu’à ce qu’il englobe toute l’activité numérique du gouvernement de l’Alberta.",
+      "bid": "b31"
+    },
+    {
+      "type": "table",
+      "title": "Ce que les métadonnées diffusées consignent pour chaque application",
+      "columns": [
+        "Catégorie",
+        "Ce qui est saisi"
+      ],
+      "rows": [
+        [
+          "Capacité d’affaires",
+          "Les fonctions génériques, sans noms propres, que l’application assure, ainsi que les regroupements de domaines auxquels elle appartient."
+        ],
+        [
+          "Santé et risque",
+          "Posture de sécurité déclarée par tranches, santé des dépendances, tranche de couverture des tests et tranche de risque globale. Aucun détail sur les vulnérabilités n’est inclus. Les fournisseurs retenus obtiennent l’accès au code au lancement du projet."
+        ],
+        [
+          "Technologie",
+          "Langage principal, répartition complète des langages, cadriciels, style d’architecture et modèle de déploiement."
+        ],
+        [
+          "Échelle et complexité",
+          "Tranches de lignes de code et de fichiers, et dénombrement des écrans, flux de travail, entités de données, règles d’affaires et points de terminaison d’API."
+        ],
+        [
+          "Intégration",
+          "Le nombre de dépendances d’intégration : bases de données, API externes, infonuagique, files d’attente et autres."
+        ],
+        [
+          "Disposition et coût",
+          "Maintenir, corriger, retirer et consolider, ou reconstruire, avec des tranches de coût pour la reconstruction, la correction et l’effort."
+        ]
+      ],
+      "caption": "Un enregistrement par application, identifié par un UUID opaque. Une proposition peut citer un UUID, et le gouvernement émetteur peut le rattacher à l’interne.",
+      "source": "gov-metadata/1.0 repos.json.",
+      "bid": "b33"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.1",
+      "title": "Comment le parc est rendu sécuritaire à partager",
+      "caption": "La diffusion est dépersonnalisée par une défense en profondeur. Chaque étape retire une catégorie de renseignements identifiants tout en préservant la forme structurelle dont l’industrie a besoin, et le balayage déterministe doit être vierge avant que le jeu de données soit certifié.",
+      "chart": {
+        "kind": "step-flow",
+        "steps": [
+          {
+            "title": "Liste d’autorisation uniquement",
+            "desc": "Seuls les champs énumérés sont émis. Les noms, le texte des constats, les identifiants de vulnérabilités, les paquets, les chemins d’attaque, les hôtes et les chemins de fichiers ne sont jamais sélectionnés."
+          },
+          {
+            "title": "Balayage déterministe",
+            "desc": "Chaque chaîne émise est examinée pour repérer jetons, clés, courriels, adresses, noms d’hôtes, chaînes de connexion et noms distinctifs. Cette barrière stricte doit afficher zéro pour la certification."
+          },
+          {
+            "title": "k‑anonymat",
+            "desc": "Les profils structurels plus rares que le seuil (k = 5) sont généralisés, de sorte qu’aucune application ne peut être ré‑identifiée à partir de sa forme."
+          },
+          {
+            "title": "Filtrage par modèle de pointe",
+            "desc": "Les descriptions des capacités sont examinées en contexte et caviardées partout où elles révèlent encore une identité."
+          },
+          {
+            "title": "Certifier comme partageable",
+            "desc": "Une fois la barrière stricte vierge et le filtrage terminé, l’instantané ponctuel est certifié et diffusé."
+          }
+        ]
+      },
+      "bid": "b35"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.2",
+      "title": "Les détails sensibles retenus, la forme utile diffusée",
+      "caption": "Le code brut renferme des noms, des secrets et les failles précises que convoiterait une personne malveillante. La diffusion écarte tout cela et conserve la forme structurelle : l’industrie reçoit ainsi une carte fidèle du travail, sans aucune exposition.",
+      "image": {
+        "src": "public/images/m66qi/fr/fig-6-1.jpg",
+        "alt": "Des documents de code brut circulent à travers une série de tamis et de barrières; les marques identifiantes sont retirées et remplacées par des jetons opaques vierges, avant de ressortir sous forme de fiches anonymes propres qui portent la forme, mais aucune identité.",
+        "image_prompt": "An editorial illustration of raw code documents travelling along a line through a sequence of fine sieves and gates. At each gate, identifying marks such as names and labels are lifted away and stamped over with blank opaque tokens. What emerges at the end is a clean set of anonymous cards that carry structure and shape but no identity. A sense of sensitive detail held back while the useful shape is released. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b36"
+    },
+    {
+      "type": "paragraph",
+      "text": "La carte des capacités est la porte d’entrée pour les fournisseurs qui souhaitent soumissionner sur la modernisation de segments entiers de l’administration publique. Le jeu de données organise ce que fait le gouvernement en quarante regroupements de domaines, du Transport et des routes à la Justice et aux tribunaux en passant par la Gestion financière, et, à l’intérieur de chaque regroupement, il énumère les capacités et les applications qui les assurent. Les dépôts sont mis en correspondance avec les capacités, et, grâce à ce jeu de données, c’est la première fois que les fonctions du gouvernement sont tracées à partir du code jusqu’à la fonction, à cette profondeur, et rendues ouvertes.",
+      "bid": "b37"
+    },
+    {
+      "type": "table",
+      "title": "Les plus grands domaines, selon le nombre de capacités",
+      "columns": [
+        "Regroupement de domaines",
+        "Capacités"
+      ],
+      "rows": [
+        [
+          "Transport et routes",
+          "129"
+        ],
+        [
+          "Livraison logicielle et ingénierie",
+          "119"
+        ],
+        [
+          "Apprentissage et administration de l’éducation",
+          "112"
+        ],
+        [
+          "Intégration des données et interopérabilité",
+          "93"
+        ],
+        [
+          "Contenu et publication Web",
+          "92"
+        ],
+        [
+          "Justice et tribunaux",
+          "86"
+        ],
+        [
+          "Gestion et gouvernance des données",
+          "85"
+        ],
+        [
+          "Services géospatiaux et cartographiques",
+          "82"
+        ],
+        [
+          "Gestion financière",
+          "80"
+        ],
+        [
+          "Gestion des dossiers et des flux de travail",
+          "75"
+        ],
+        [
+          "Environnement et ressources naturelles",
+          "73"
+        ],
+        [
+          "Analytique, production de rapports et intelligence d’affaires",
+          "70"
+        ],
+        [
+          "Gestion des documents et des archives",
+          "70"
+        ],
+        [
+          "Licences, permis et enregistrement",
+          "67"
+        ],
+        [
+          "Correspondance et notifications",
+          "65"
+        ]
+      ],
+      "caption": "Les quinze plus grands des quarante domaines dérivés automatiquement; la carte complète contient 2 182 capacités. Chaque nom de capacité est une abstraction générique, sans nom propre, de ce que fait le logiciel.",
+      "source": "gov-metadata/1.0 capabilities.json.",
+      "bid": "b38"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 6.3",
+      "title": "Une carte de ce que fait le gouvernement, tirée de son code",
+      "caption": "Une vue représentative de la carte : des domaines de tailles variées, chacun densément rempli des capacités que livrent ses applications, avec de fins fils reliant les capacités qui reviennent d’un domaine à l’autre. La carte complète couvre 2 182 capacités réparties dans 40 domaines. Il s’agit de la première carte ouverte, ancrée dans le code, des fonctions du gouvernement.",
+      "image": {
+        "src": "public/images/m66qi/fr/fig-6-2.jpg",
+        "alt": "Une vaste carte divisée en territoires distincts de tailles variées, chacun rempli de petits nœuds regroupés représentant des capacités, avec de fines lignes reliant des nœuds à travers les territoires.",
+        "image_prompt": "An editorial illustration of a large map divided into many distinct territories of differing sizes, each territory densely filled with small clustered nodes representing capabilities, with the largest territory clearly holding the biggest cluster. Faint lines link related nodes across territories. A sense of a complete map of everything an institution does, drawn from its code up to its functions. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b39"
+    },
+    {
+      "type": "paragraph",
+      "text": "La publication comporte également une orientation recommandée pour chaque application, tirée de son état de santé, de son activité et de sa complexité. Les quatre orientations correspondent aux quatre approches de modernisation présentées dans [un livre blanc précédent](/paper/zgym1) : maintenir et surveiller ce qui est en bonne santé, corriger dans le Garage d’IA ce qui vaut la peine d’être conservé et amélioré, retirer et consolider ce qui est redondant, et reconstruire dans l’Usine d’IA ce qui doit être remplacé. En lisant ces orientations à l’échelle du parc, l’approvisionnement peut prioriser les domaines où l’état de santé est faible ou où une pile technologique héritée exige une rationalisation, et l’industrie peut voir, dès le départ, quelles capacités se prêtent à une consolidation et lesquelles sont candidates à une reconstruction complète.",
+      "bid": "b40"
+    },
+    {
+      "type": "table",
+      "title": "Le parc selon l’orientation recommandée",
+      "columns": [
+        "Orientation",
+        "Applications",
+        "% du parc"
+      ],
+      "rows": [
+        [
+          "Maintenir / surveiller",
+          "1,527",
+          "37.8%"
+        ],
+        [
+          "Corriger (Garage d’IA)",
+          "1,375",
+          "34.0%"
+        ],
+        [
+          "Retirer / consolider",
+          "739",
+          "18.3%"
+        ],
+        [
+          "Reconstruire (Usine d’IA)",
+          "400",
+          "9.9%"
+        ]
+      ],
+      "caption": "Une orientation recommandée pour chaque application, calculée à partir de l’état de santé, de l’activité et de la complexité. Ensemble, le retrait‑consolidation et la reconstruction représentent plus du quart du parc et marquent l’endroit où se trouve la plus grande occasion de partenariat avec l’industrie.",
+      "source": "gov-metadata/1.0 repos.json.",
+      "bid": "b41"
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Comment l’industrie peut soumissionner avec une fidélité sans précédent",
+      "bid": "b42"
+    },
+    {
+      "type": "paragraph",
+      "text": "Avec ce jeu de données en main, l’industrie peut enfin voir la forme réelle des systèmes gouvernementaux et les dizaines de milliers d’écrans et de flux de travail qui les sous-tendent. Les fournisseurs peuvent répondre en appuyant la modernisation d’une capacité d’affaires complète, ou de plusieurs capacités à la fois. Ils peuvent calculer des coûts réalistes en comprenant exactement combien d’intégrations seront nécessaires, quelles piles technologiques doivent être migrées, et combien d’écrans et de flux de travail doivent être portés. Un soumissionnaire sérieux peut utiliser l’IA pour analyser les données et produire une proposition ancrée dans les faits, plutôt que de deviner à propos de systèmes hérités non documentés et de gonfler le prix par des provisions pour imprévus.",
+      "bid": "b43"
+    },
+    {
+      "type": "keystat",
+      "label": "Écrans et flux de travail désormais visibles pour les soumissionnaires",
+      "value": "75 582 / 73 516",
+      "body": "Le décompte des écrans et des flux de travail à l’échelle du parc, dénombrés pour la première fois. Un fournisseur qui propose de remplacer une capacité peut maintenant voir la quantité réelle de travail qui la sous-tend, plutôt que d’estimer à l’aveugle.",
+      "bid": "b44"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cela invite l’ensemble de la communauté des fournisseurs à réinitialiser la relation d’approvisionnement avec nous. Les fournisseurs de logiciels commerciaux et de SaaS peuvent aligner leurs produits directement sur la matrice des capacités. Les prestataires de services et les entreprises natives de l’IA peuvent proposer une orchestration d’agents qui livre des capacités entièrement détenues par le gouvernement. Un fournisseur pourrait consulter la carte, comprendre l’espace de domaines de ce que le gouvernement fait avec son code, et proposer de remplacer des dizaines, voire des centaines de dépôts par une plateforme d’entreprise, avec le nombre d’intégrations, la trajectoire de migration ainsi que les décomptes d’écrans et de flux de travail, tous ancrés dans les données. La barrière à l’entrée s’effondre, parce que l’avantage informationnel qui appartenait autrefois au fournisseur en place appartient désormais à quiconque est prêt à lire la carte.",
+      "bid": "b45"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 7.1",
+      "title": "D’une planche à la fois à tout le parc d’un seul coup",
+      "caption": "L’ancien modèle remplaçait un système une planche à la fois, un bateau de Thésée long de plusieurs siècles, où seul le fournisseur en place voyait la coque. La matrice ouverte permet à de nombreuses équipes d’examiner et de soumissionner sur des capacités entières à la fois, à partir de la même carte partagée.",
+      "image": {
+        "src": "public/images/m66qi/fr/fig-7-1.jpg",
+        "alt": "Une illustration divisée : à gauche, un ouvrier remplace une seule planche sur un énorme vieux navire vu à travers un trou de serrure étroit; à droite, de nombreuses équipes examinent et soumissionnent sur des sections entières d’un port éclairé et ouvert à partir d’une carte partagée.",
+        "image_prompt": "An editorial illustration split into two halves. On the left, the old way: a single narrow keyhole of light and one lone worker replacing a single plank on an enormous old ship, one plank at a time, the rest of the vessel dark and untouched. On the right, the new way: the whole ship and harbour lit and open, with many teams of builders surveying and bidding on entire sections at once from a large shared map. A sense of moving from one plank at a time to the whole estate at once. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b46"
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Soumissions structurées, tables de correspondance et matrice partagée",
+      "bid": "b47"
+    },
+    {
+      "type": "paragraph",
+      "text": "En complément du jeu de données, nous publions un fichier CLAUDE.md qui donne à chaque soumissionnaire la recette exacte d’une réponse conforme. Il leur indique comment lire le JSON, comment arrimer leur solution à la matrice des capacités et quels artefacts structurés ils doivent retourner. Chaque soumission doit inclure un fichier de correspondance lisible par machine qui relie chaque page ou section du texte aux nœuds de capacité précis, aux scores de santé ou aux métadonnées de dépôt qu’elle prétend traiter. Un évaluateur appuyé par l’IA peut alors décortiquer l’ensemble du dossier et en extraire les champs structurés relatifs au coût, à la couverture des capacités, aux citations de preuves, à la capacité de soutien local et au risque.",
+      "bid": "b48",
+      "edit_count": 2,
+      "last_edited": "2026-07-23T02:41:59.914Z"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette matrice multidimensionnelle partagée permet à l’équipe d’approvisionnement du gouvernement de visualiser instantanément qui a soumissionné et où, où les coûts se concentrent et quels types de soumissions sont offerts, qu’il s’agisse de logiciels commerciaux, de SaaS, d’open source, de développement sur mesure ou d’approches agentiques. L’Alberta est entièrement transparente quant à ce qu’elle demande, et l’industrie peut être entièrement transparente quant à ce qu’elle offre. Si un fournisseur propose une solution comportant dix écrans pour en remplacer une qui en compte mille, cet écart devient immédiatement visible, plutôt que d’être caché dans des brochures léchées ou des résumés condensés. Le nombre de soumissions ne nous décourage plus, parce que chaque proposition arrive structurée, vérifiable et comparable dans le même cadre. L’approvisionnement peut voir la couverture à l’échelle de tout le parc, repérer les lacunes et prioriser les domaines où l’état de santé des applications est faible ou où une pile technologique comme COBOL ou du Java non soutenu exige une rationalisation.",
+      "bid": "b49"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 8.1",
+      "title": "Chaque affirmation ramenée à la preuve",
+      "caption": "Une soumission narrative arrive accompagnée d’une table de correspondance qui rattache chaque page à la même grille partagée de nœuds de capacités. L’évaluateur appuyé par l’IA fait passer le dossier, et la grille s’illumine pour montrer précisément où chaque soumissionnaire prétend couvrir les besoins et où les lacunes subsistent.",
+      "image": {
+        "src": "public/images/m66qi/fr/fig-8-1.jpg",
+        "alt": "Des propositions de fournisseurs reliées par de fines lignes à une grille partagée de nœuds de capacités, avec un évaluateur appuyé par l’IA à une console sobre et la grille qui s’illumine pour montrer la couverture et les lacunes.",
+        "image_prompt": "An editorial illustration of vendor proposals arriving as neat narrative documents, each threaded by fine lines that map every page onto the same shared grid of capability nodes. At a calm console, a single reviewer figure runs each package through, and the grid lights up to show exactly where each bidder has claimed coverage and where gaps remain. A sense of every claim being traced back to the evidence. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b50"
+    },
+    {
+      "type": "pullquote",
+      "text": "Si un fournisseur propose une solution de dix écrans pour en remplacer une qui en compte un millier, le décalage devient immédiatement visible et mérite un examen.",
+      "cite": "Livre 22 · Prendre la colline",
+      "bid": "b51"
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Pas de contenu bâclé, merci",
+      "bid": "b52"
+    },
+    {
+      "type": "paragraph",
+      "text": "En rendant ce processus aussi transparent et aussi facile à comprendre, nous ouvrons aussi de nouveaux défis. À notre époque, n’importe qui peut orienter une IA vers le vidage de données JSON et générer une proposition léchée, d’apparence raisonnable, mais qui apporte peu ou pas de valeur face à la complexité réelle du travail à accomplir. Nous utilisons nous‑mêmes l’IA et nous en apprécions la puissance. Nous voulons que les innovateurs et les acteurs de rupture soumissionnent, et nous nous attendons à ce que chaque soumission et chaque produit intègrent de l’IA. Ce que nous voulons éviter, c’est un déferlement d’interfaces codées à l’instinct et d’affirmations sans appui, qui sonnent simplement bien sur papier, parce que ce déferlement nous ramènerait tout droit au problème d’origine : trop de soumissions et une obligation légale de lire chaque page de chacune. Puisque l’IA facilite la soumission, nous relevons notre exigence quant aux preuves démontrant que vous possédez la capacité de répondre à nos besoins.",
+      "bid": "b53"
+    },
+    {
+      "type": "paragraph",
+      "text": "Il incombera aux fournisseurs de prouver qu’ils ont la capacité de répondre à chacune des capacités d’affaires qu’ils visent. Cela peut prendre la forme d’une tranche de prototype fonctionnel, d’un flux d’agents encadré par un harnais ou d’un script de construction reproductible qui démontre une exécution réelle sur les données. L’industrie doit prouver qu’elle a la capacité, et rattacher chaque élément de preuve à la matrice des capacités d’affaires, à la pile technologique et aux API.",
+      "bid": "b54"
+    },
+    {
+      "type": "paragraph",
+      "text": "La nature de ce que nous achetons évolue également, et nous ouvrons la porte aux bâtisseurs pour qu’ils se joignent à nous afin de mettre au point la Fabrique d’IA et la prochaine génération de produits et de solutions livrés par IA. À l’ère de l’IA, nous sommes moins intéressés par un autre produit COTS ou SaaS de type boîte noire, car si un fournisseur peut le construire avec des agents, nous le pouvons aussi. Ce que nous cherchons, ce sont des partenaires qui offrent une feuille de route pour moderniser l’ensemble de notre parc technologique. Et nous sommes ouverts à des façons novatrices d’y parvenir. Les soumissionnaires peuvent repérer et proposer des produits de code open source, apporter du code propriétaire inédit lorsqu’un composant est véritablement unique en son genre, et démontrer comment ils utiliseront l’orchestration d’agents, des harnais, des compétences et des normes pour bâtir selon un standard du gouvernement de l’Alberta, décrit dans [le livre sur le harnais](/paper/p7p2k) et [les livres sur la Fabrique d’IA](/paper/qthji).",
+      "bid": "b55"
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 9.1",
+      "title": "Un filtre passe‑haut qui privilégie la preuve sur le vernis",
+      "caption": "Chaque soumission suit le même parcours. Les propositions arrivent dans de nombreux formats; un filtre passe‑haut écarte le bruit de faible qualité; une évaluation appuyée par l’IA note ce qui reste selon la vérifiabilité, la pertinence et la faisabilité; et chaque soumission qui subsiste prend sa place dans la carte tridimensionnelle des capacités, où les propositions de meilleure qualité et de plus grande capacité s’élèvent au‑dessus des autres.",
+      "image": {
+        "src": "public/images/m66qi/fr/fig-9-1.jpg",
+        "alt": "Un diagramme en quatre étapes : les documents de soumission entrent à gauche, traversent un filtre passe‑haut, sont notés par une évaluation appuyée par l’IA selon la vérifiabilité, la pertinence et la faisabilité, puis sont positionnés dans une carte tridimensionnelle des capacités selon la qualité, le domaine de capacité et la maturité, les soumissions de meilleure qualité s’élevant au‑dessus des autres.",
+        "image_prompt": "An editorial illustration of a high pass filter for bids, where AI evaluates bid quality and maps it into a 3 dimensional business capability map structure for government. A sense of a high-pass filter that favours proof over polish. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "cover"
+      },
+      "bid": "b56"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nous publierons ce premier jeu de données en open source, ainsi que le format structuré des soumissions, lors du [Symposium Vélocité](https://luma.com/yzd00tir) le 28 juillet 2026, notre première journée de l’industrie depuis le lancement des livres blancs Vélocité le 6 juillet. L’industrie disposera de deux mois pour digérer l’information, poser des questions et bâtir des réponses substantielles avant de les présenter dans notre série d’innovation Agency AI en octobre. Ces démonstrations sont l’occasion d’un « montre et raconte » : une chance pour l’industrie d’apporter ce qu’elle a construit et de montrer comment elle a abordé les problèmes que révèle le jeu de données. Peu après, le gouvernement ouvrira les prochaines tranches d’approvisionnement pour ce type de solutions, priorisées en fonction de ce que l’industrie aura présenté.",
+      "bid": "b57"
+    },
+    {
+      "type": "keystat",
+      "label": "Approvisionnement que ce modèle devrait rendre possible",
+      "value": "100 à 200 millions de dollars",
+      "body": "Les cent à deux cents prochains millions de dollars d’approvisionnement dans ce domaine devraient suivre ce modèle fondé sur la preuve et axé sur les données, avec la publication d’un jeu de données affiné avant l’ouverture de cette tranche. L’industrie disposera de deux mois entre le Symposium et Agency 2026 pour bâtir.",
+      "bid": "b58"
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "L’approvisionnement comme fondement de la modernisation",
+      "bid": "b59"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette approche constitue une étape importante dans la mission du ministère qui vise à rendre l’approvisionnement plus facile, plus rapide et plus transparent. Publier les métadonnées et exiger des soumissions structurées et appuyées par des preuves abaisse le seuil d’entrée tout en maintenant une exigence élevée en matière de preuve. L’industrie obtient une vision claire des défis réels et peut proposer des solutions novatrices adaptées à notre modèle d’exploitation, plutôt que de nous pousser à accepter un produit préemballé. Les soumissions et les évaluations appuyées par l’IA permettront aux proposants d’utiliser plus facilement l’IA pour démontrer comment ils répondent aux exigences gouvernementales et pour réduire le risque de leurs candidatures. L’IA soutient également l’évaluateur, de sorte que le personnel d’approvisionnement peut analyser et comparer facilement et rapidement des centaines de propositions qui abordent une variété de défis. Soumettre une proposition retenue devrait prendre quelques heures plutôt que des semaines, avec des outils d’IA pour soutenir la conformité et la validation. Grâce à ce processus concurrentiel et ouvert, l’Alberta gagne de nouveaux fournisseurs, renouvelle ses objectifs avec ses partenaires existants et se dote de capacités appartenant au gouvernement, bâties dans un véritable partenariat.",
+      "bid": "b60"
+    },
+    {
+      "type": "pullquote",
+      "text": "Moderniser l’approvisionnement est le fondement nécessaire pour moderniser le gouvernement lui‑même.",
+      "cite": "Livre 22 · Prendre la colline",
+      "bid": "b61"
+    },
+    {
+      "type": "paragraph",
+      "text": "Il s’agit d’une nouvelle façon de faire l’approvisionnement, une façon équitable, rapide et suffisamment riche en information pour permettre à l’industrie de proposer des solutions novatrices et au gouvernement d’avancer plus vite. En publiant ce tout premier jeu de données en open source, nous invitons l’industrie à cheminer sur la voie tracée dans ces livres blancs Vélocité, et nous offrons une avenue vers un partenariat à long terme. Nous délaissons le modèle de remplacement soumission par soumission, une planche à la fois, pour relever les défis du gouvernement à grande échelle et avec rapidité. Grâce au Symposium Vélocité et à Agency 2026, nous espérons que l’industrie se joindra à nous pour relever les défis les plus critiques auxquels nous faisons face.",
+      "bid": "b62"
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "procurement",
+        "open-data",
+        "git-insights",
+        "industry-partnership"
+      ],
+      "bid": "b63"
+    },
+    {
+      "type": "related",
+      "bid": "b64"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "bbkac",
+    "offjm",
+    "eujjc",
+    "cux4h",
+    "mwo98"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "opus",
+      "translated_at": "2026-07-07"
+    }
+  },
+  "field_edits": {
+    "subtitle": {
+      "edit_count": 4,
+      "last_edited": "2026-07-24T01:54:19.653Z"
+    },
+    "title": {
+      "edit_count": 2,
+      "last_edited": "2026-07-23T03:44:18.064Z"
+    },
+    "abstract": {
+      "edit_count": 4,
+      "last_edited": "2026-07-24T02:47:53.876Z"
+    }
+  },
+  "translation_status": "draft",
+  "source_signature": "1770272174"
+}

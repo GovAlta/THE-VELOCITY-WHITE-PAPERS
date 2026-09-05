@@ -1,0 +1,17 @@
+{
+  "paper_id": "l199t",
+  "locale": "en",
+  "slot": "hero",
+  "out_path": "public\\images\\l199t\\en\\hero.jpg",
+  "bytes_jpg": 259166,
+  "bytes_png_source": 2861337,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-02T03:02:12.883Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration of a single application or building at the centre, surrounded by four distinct review agents arranged in balance around it, one tinted green, one yellow, one red, one blue, together forming a protective seal or set of checks and balances. A sense of four disciplines guarding one piece of work in concert. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration of a single application or building at the centre, surrounded by four distinct review agents arranged in balance around it, one tinted green, one yellow, one red, one blue, together forming a protective seal or set of checks and balances. A sense of four disciplines guarding one piece of work in concert. Muted Alberta cream base with clear green, amber-yellow, rust-red, and navy-blue accents, archival print quality, no text, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

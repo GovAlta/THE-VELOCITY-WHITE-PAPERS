@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "en",
+  "slot": "hero",
+  "out_path": "public\\images\\k3tc3\\en\\hero.jpg",
+  "bytes_jpg": 182125,
+  "bytes_png_source": 2950969,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T19:22:56.167Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A snakes-and-ladders style board redrawn as a project pipeline: a winding path of numbered squares climbing from lower left to upper right, with a couple of ladders rising between squares and one snake sliding back down. A single small game token rests on the path. Calm, archival, and confident. Wide cover aspect. No text, no logos, no people.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial cover illustration on warm cream paper, deep Alberta navy line work with small rust-coloured accents. A snakes-and-ladders style board redrawn as a project pipeline: a winding path of numbered squares climbing from lower left to upper right, with a couple of ladders rising between squares and one snake sliding back down. A single small game token rests on the path. Calm, archival, and confident. Wide cover aspect. No text, no logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

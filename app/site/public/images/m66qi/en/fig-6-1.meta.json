@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "en",
+  "slot": "fig-02",
+  "out_path": "public\\images\\m66qi\\en\\fig-6-1.jpg",
+  "bytes_jpg": 177179,
+  "bytes_png_source": 2553175,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-18T21:02:29.189Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of raw code documents travelling along a line through a sequence of fine sieves and gates. At each gate, identifying marks such as names and labels are lifted away and stamped over with blank opaque tokens. What emerges at the end is a clean set of anonymous cards that carry structure and shape but no identity. A sense of sensitive detail held back while the useful shape is released. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of raw code documents travelling along a line through a sequence of fine sieves and gates. At each gate, identifying marks such as names and labels are lifted away and stamped over with blank opaque tokens. What emerges at the end is a clean set of anonymous cards that carry structure and shape but no identity. A sense of sensitive detail held back while the useful shape is released. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

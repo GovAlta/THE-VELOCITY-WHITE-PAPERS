@@ -1,0 +1,80 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: 'cv11','ss01','ss03';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+*::selection { background: var(--accent); color: var(--paper); }
+
+button { font-family: inherit; cursor: pointer; }
+
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 0; }
+::-webkit-scrollbar-track { background: var(--paper); }
+
+[v-cloak] { display: none; }
+
+/* ============================================================
+   Accessibility foundation
+   ============================================================ */
+
+/* Visually-hidden — content invisible to sighted users but read by
+   screen readers. Standard "sr-only" pattern. */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap;
+  border: 0;
+}
+
+/* Skip-to-content link — hidden until focused. */
+.skip-link {
+  position: absolute;
+  top: -100px; left: 16px;
+  z-index: 200;
+  background: var(--accent); color: var(--paper);
+  padding: 12px 18px;
+  font-family: var(--font-mono); font-size: 12px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none;
+  transition: top .15s ease;
+}
+.skip-link:focus {
+  top: 12px;
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Programmatic focus on <main> shouldn't show a ring; only :focus-visible does */
+main:focus { outline: none; }
+
+/* Global focus indicator — keyboard users only (:focus-visible).
+   Visible against both light and dark backgrounds. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Buttons that sit on dark backgrounds need a brighter ring */
+.vp-stage-wrap:focus-visible,
+.vp-stage :focus-visible {
+  outline: 2px solid #ffc350;
+  outline-offset: 2px;
+}
+/* Don't paint the default ring on top of a card that already has a custom hover */
+.civic-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}

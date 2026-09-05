@@ -1,0 +1,1195 @@
+{
+  "default_locale": "en",
+  "locales": [
+    {
+      "code": "en",
+      "label": "EN",
+      "name_en": "English",
+      "name_fr": "Anglais",
+      "name": "English",
+      "dir": "ltr",
+      "lang_code": "en-CA",
+      "og_locale": "en_CA"
+    },
+    {
+      "code": "fr",
+      "label": "FR",
+      "name_en": "French",
+      "name_fr": "Français",
+      "name": "Français",
+      "dir": "ltr",
+      "lang_code": "fr-CA",
+      "og_locale": "fr_CA"
+    },
+    {
+      "code": "es",
+      "label": "ES",
+      "name": "Español",
+      "name_en": "Spanish",
+      "name_fr": "Espagnol",
+      "dir": "ltr",
+      "lang_code": "es",
+      "og_locale": "es_ES"
+    }
+  ],
+  "i18n": {
+    "en": {
+      "title": "The Velocity White Papers",
+      "tagline": "How the Government of Alberta is leveraging artificial intelligence to rapidly and securely transform its technical estate.",
+      "publisher": "Government of Alberta · Ministry of Technology and Innovation",
+      "publisher_short": "Alberta · TI",
+      "nav": [
+        {
+          "id": "library",
+          "label": "Home"
+        },
+        {
+          "id": "index",
+          "label": "Index"
+        },
+        {
+          "id": "about",
+          "label": "About"
+        }
+      ],
+      "ui": {
+        "loading_library": "Loading the library…",
+        "loading_index": "Loading the index…",
+        "loading_paper": "Loading",
+        "back_to_library": "Home",
+        "abstract": "Abstract",
+        "contents": "Contents",
+        "read_next": "Read next",
+        "tags": "Tags",
+        "authors": "Authors",
+        "published": "Published",
+        "reading": "Reading",
+        "status": "Status",
+        "repository": "Repository",
+        "min": "min",
+        "narration": "Narration",
+        "tldr": "TL;DR",
+        "play": "Play",
+        "pause": "Pause",
+        "prev": "Prev",
+        "next": "Next",
+        "restart": "Restart",
+        "auto_advance": "auto-advance",
+        "search_placeholder": "Search papers by title, subtitle, tag…",
+        "all": "All",
+        "no_content": "No content yet",
+        "no_content_body": "This paper has not been written yet. The structure is in place; the body is forthcoming.",
+        "slide": "Slide",
+        "all_slides": "All slides",
+        "close": "Close",
+        "kbd_hint": "Space = play/pause · ← / → = prev / next · click the slide to toggle",
+        "audio_missing": "Audio not generated yet.",
+        "audio_missing_label": "Audio not generated",
+        "audio_missing_body": "Run the generator on this paper to produce the narration MP3.",
+        "translation_labels": {
+          "untranslated": "Untranslated",
+          "draft": "Draft translation",
+          "reviewed": "Reviewed translation"
+        },
+        "translation_bodies": {
+          "untranslated": "The English version is the canonical text. This French page is structural only.",
+          "draft": "A first French pass has been written. It has not yet been reviewed by a human.",
+          "reviewed": "Reviewed by a human; not yet final."
+        },
+        "audio_ready_aria": "audio ready",
+        "aria_role_player": "presentation player",
+        "aria_overall": "Overall progress through this presentation",
+        "aria_controls": "Playback controls",
+        "aria_prev": "Previous slide",
+        "aria_next": "Next slide",
+        "aria_play": "Play narration",
+        "aria_pause": "Pause narration",
+        "aria_play_stage": "Play narration",
+        "aria_pause_stage": "Pause narration",
+        "aria_restart": "Restart from the first slide",
+        "aria_scrubber": "Seek within current slide",
+        "aria_text_panel": "Slide text and narration",
+        "aria_slide_announcement": "Slide {n} of {total}, {title}",
+        "aria_playing_announcement": "Playing",
+        "aria_paused_announcement": "Paused",
+        "index_title": "The Index",
+        "papers_word": "papers",
+        "col_no": "No.",
+        "col_title": "Title",
+        "col_tier": "Tier",
+        "col_read": "Read",
+        "tier_labels": {
+          "Conceptual": "Conceptual",
+          "Technical": "Technical",
+          "Policy & People": "Policy & People"
+        },
+        "status_labels": {
+          "Published": "Published",
+          "Forthcoming": "Forthcoming",
+          "Draft": "Draft",
+          "Placeholder": "Placeholder"
+        },
+        "language_changed": "Language changed to {name}",
+        "listening_time": "Listening time",
+        "of_narration": "of narration",
+        "per_paper": "Per paper",
+        "on_average": "on average",
+        "repos_split": "{open} open · {onreq} on request",
+        "article_nav": "Article navigation",
+        "prev_dir": "← Previous",
+        "next_dir": "Next →",
+        "home_prev_dir": "← Home",
+        "home_next_dir": "Home →",
+        "the_library": "The library",
+        "prev_aria": "Previous: ",
+        "next_aria": "Next: ",
+        "back_to_library_full": "Back to the library",
+        "updated": "Updated",
+        "what_changed": "What changed",
+        "repositories": "Repositories",
+        "close_contents": "Close contents",
+        "download": "Download",
+        "get": "Get",
+        "download_all": "Download all (.zip)",
+        "preparing": "Preparing…",
+        "download_all_tooltip": "Download every paper as JSON + Markdown (no media)",
+        "download_markdown": "Download Markdown",
+        "download_failed": "Download failed.",
+        "paper_loaded": "Paper loaded: ",
+        "language_selection": "Language selection",
+        "switch_to": "Switch to {name}",
+        "home_prefix": "Home, ",
+        "open_menu": "Open menu",
+        "close_menu": "Close menu",
+        "primary_menu": "Primary menu",
+        "keyboard_shortcuts_title": "Keyboard shortcuts",
+        "esc_to_close": "Press Esc to close.",
+        "shortcuts": [
+          {
+            "keys": [
+              "?"
+            ],
+            "label": "Show keyboard shortcuts"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "label": "Close any open dialog"
+          },
+          {
+            "keys": [
+              "Tab"
+            ],
+            "label": "Move to next interactive element"
+          },
+          {
+            "keys": [
+              "Shift",
+              "Tab"
+            ],
+            "label": "Move to previous interactive element"
+          },
+          {
+            "divider": true,
+            "label": "Presentation player"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "label": "Play / pause narration"
+          },
+          {
+            "keys": [
+              "←"
+            ],
+            "label": "Previous slide"
+          },
+          {
+            "keys": [
+              "→"
+            ],
+            "label": "Next slide"
+          },
+          {
+            "keys": [
+              "Click"
+            ],
+            "label": "Click the slide to toggle play"
+          },
+          {
+            "divider": true,
+            "label": "Scrubber (when focused)"
+          },
+          {
+            "keys": [
+              "←"
+            ],
+            "label": "Seek back 5 seconds"
+          },
+          {
+            "keys": [
+              "→"
+            ],
+            "label": "Seek forward 5 seconds"
+          },
+          {
+            "keys": [
+              "Home"
+            ],
+            "label": "Jump to start of slide"
+          },
+          {
+            "keys": [
+              "End"
+            ],
+            "label": "Jump to end of slide"
+          }
+        ]
+      },
+      "hero": {
+        "title": "The <em>Velocity</em><br>White Papers",
+        "subtitle": "How the Government of Alberta is leveraging artificial intelligence to rapidly and securely transform its technical estate."
+      },
+      "footer": {
+        "primary": {
+          "heading": "The Velocity White Papers",
+          "body": "{n} papers across three tiers. Conceptual papers establish the why. Technical papers are the playbook. Policy & People papers make it real for government and for the workforce. The full site is published via GitHub Pages and is itself open source."
+        },
+        "columns": [
+          {
+            "heading": "Reference",
+            "items": [
+              {
+                "label": "Glossary",
+                "href": "/glossary"
+              },
+              {
+                "label": "Index",
+                "href": "/index"
+              },
+              {
+                "label": "Updates",
+                "href": "/updates"
+              }
+            ]
+          },
+          {
+            "heading": "Open source",
+            "items": [
+              {
+                "label": "Repositories",
+                "href": "/repos"
+              },
+              {
+                "label": "Community",
+                "href": "/community"
+              },
+              {
+                "label": "About",
+                "href": "/about"
+              },
+              {
+                "label": "Site repository",
+                "href": "https://github.com/GovAlta/the-velocity-white-papers"
+              }
+            ]
+          },
+          {
+            "heading": "More",
+            "items": [
+              {
+                "label": "Press",
+                "href": "/press"
+              },
+              {
+                "label": "Resources",
+                "href": "/resources"
+              },
+              {
+                "label": "Media",
+                "href": "/gallery"
+              },
+              {
+                "label": "Privacy",
+                "href": "/privacy"
+              }
+            ]
+          }
+        ],
+        "smallcaps": "Government of Alberta · Technology and Innovation"
+      },
+      "stats": [
+        {
+          "k": "Papers",
+          "v": "18",
+          "sub": "across three tiers"
+        },
+        {
+          "k": "Repositories released",
+          "v": "7",
+          "sub": "open source"
+        },
+        {
+          "k": "Tiers",
+          "v": "3",
+          "sub": "Conceptual · Technical · Policy"
+        }
+      ],
+      "section_titles": {
+        "about": "Mission Statement",
+        "featured": "Featured",
+        "complete_series": "The complete series",
+        "featured_meta": "Start here",
+        "series_meta_tpl": "{n} entries · {r} repositories"
+      },
+      "about_body": [
+        "The Government of Alberta is on a journey to become the most AI-enabled public service in North America.",
+        "A major driver behind this vision is to ensure we can maintain and modernize our digital systems to be cyber safe, modern, and secure. These white papers lay out a strategy on how Alberta is doing this at speed, addressing more than forty years of technical debt and pursuing as much as a ninety-five percent reduction in time and cost in application remediation and delivery.",
+        "In these white papers, Alberta walks you through our methodology: how we're using artificial intelligence to modernize our technology infrastructure, how we're enabling our workforce through the Alberta AI Academy, and delivering new business capabilities and insights.",
+        "We are sharing these papers so that other governments and organizations can follow in our steps. We, by no means, have this solved. These white papers are a living artifact, and we will continue to post our findings and progress, as well as our successes and setbacks, on this site moving forward. We encourage you to engage with us. Together, we can build a robust digital public service for the AI era."
+      ],
+      "print_edition": {
+        "title": "The print edition",
+        "volume": "Volume 1",
+        "image_alt": "Cover of the printed Velocity White Papers, Volume 1",
+        "body": "The complete first volume of the Velocity White Papers, collected as a downloadable booklet for reading offline or in print. Download the full set as PDFs in English and French.",
+        "print_note": "Anyone is welcome to print their own copies, in English and French.",
+        "download_cta": "Download the PDFs",
+        "forthcoming": "This is Volume 1. Future volumes are forthcoming."
+      }
+    },
+    "fr": {
+      "title": "Les livres blancs Velocity",
+      "tagline": "Comment le gouvernement de l’Alberta utilise l’intelligence artificielle pour transformer rapidement et en toute sécurité son parc technologique.",
+      "publisher": "Gouvernement de l’Alberta · Ministère de la Technologie et de l’Innovation",
+      "publisher_short": "Alberta · TI",
+      "nav": [
+        {
+          "id": "library",
+          "label": "Accueil"
+        },
+        {
+          "id": "index",
+          "label": "Index"
+        },
+        {
+          "id": "about",
+          "label": "À propos"
+        }
+      ],
+      "ui": {
+        "loading_library": "Chargement de la bibliothèque…",
+        "loading_index": "Chargement de l’index…",
+        "loading_paper": "Chargement",
+        "back_to_library": "Accueil",
+        "abstract": "Résumé",
+        "contents": "Sommaire",
+        "read_next": "À lire ensuite",
+        "tags": "Mots-clés",
+        "authors": "Auteurs",
+        "published": "Publié le",
+        "reading": "Temps de lecture",
+        "status": "Statut",
+        "repository": "Dépôt",
+        "min": "min",
+        "narration": "Narration",
+        "tldr": "Résumé express",
+        "play": "Lecture",
+        "pause": "Pause",
+        "prev": "Préc.",
+        "next": "Suiv.",
+        "restart": "Recommencer",
+        "auto_advance": "lecture automatique",
+        "search_placeholder": "Rechercher par titre, sous-titre, mot-clé…",
+        "all": "Tous",
+        "no_content": "Contenu à venir",
+        "no_content_body": "Ce livre blanc n’a pas encore été rédigé. La structure est en place ; le contenu suivra.",
+        "slide": "Diapo",
+        "all_slides": "Toutes les diapos",
+        "close": "Fermer",
+        "kbd_hint": "Espace = lecture/pause · ← / → = préc. / suiv. · cliquez la diapo pour basculer",
+        "audio_missing": "Audio non généré.",
+        "audio_missing_label": "Audio non généré",
+        "audio_missing_body": "Exécutez le générateur sur ce livre blanc pour produire le MP3 de narration.",
+        "translation_labels": {
+          "untranslated": "Non traduit",
+          "draft": "Traduction provisoire",
+          "reviewed": "Traduction revue"
+        },
+        "translation_bodies": {
+          "untranslated": "La version anglaise est le texte de référence. Cette page française n’est que structurelle.",
+          "draft": "Une première version française a été rédigée. Elle n’a pas encore été revue.",
+          "reviewed": "Revue par un humain ; pas encore finalisée."
+        },
+        "audio_ready_aria": "audio disponible",
+        "aria_role_player": "lecteur de présentation",
+        "aria_overall": "Progression globale de la présentation",
+        "aria_controls": "Commandes de lecture",
+        "aria_prev": "Diapositive précédente",
+        "aria_next": "Diapositive suivante",
+        "aria_play": "Lire la narration",
+        "aria_pause": "Mettre la narration en pause",
+        "aria_play_stage": "Lire la narration",
+        "aria_pause_stage": "Mettre la narration en pause",
+        "aria_restart": "Recommencer depuis la première diapositive",
+        "aria_scrubber": "Avancer dans la diapositive actuelle",
+        "aria_text_panel": "Texte et narration de la diapositive",
+        "aria_slide_announcement": "Diapositive {n} sur {total}, {title}",
+        "aria_playing_announcement": "Lecture en cours",
+        "aria_paused_announcement": "En pause",
+        "index_title": "L’index",
+        "papers_word": "livres",
+        "col_no": "Nº",
+        "col_title": "Titre",
+        "col_tier": "Niveau",
+        "col_read": "Lecture",
+        "tier_labels": {
+          "Conceptual": "Conceptuel",
+          "Technical": "Technique",
+          "Policy & People": "Politiques et personnes"
+        },
+        "status_labels": {
+          "Published": "Publié",
+          "Forthcoming": "À venir",
+          "Draft": "Ébauche",
+          "Placeholder": "Réservé"
+        },
+        "tag_labels": {
+          "agents": "agents",
+          "ai-academy": "Académie de l’IA",
+          "ai-agents": "agents d’IA",
+          "ai-factory": "fabrique d’IA",
+          "ai-systems": "systèmes d’IA",
+          "anti-drift": "anti-dérive",
+          "applications": "applications",
+          "architecture": "architecture",
+          "authentication": "authentification",
+          "benchmarking": "analyse comparative",
+          "bifrost": "Bifrost",
+          "briefing": "breffage",
+          "builder-culture": "culture du bâtisseur",
+          "canvas": "canevas",
+          "change-management": "gestion du changement",
+          "claude": "Claude",
+          "claude-code": "Claude Code",
+          "claw": "CLAW",
+          "cloud": "infonuagique",
+          "code-analysis": "analyse de code",
+          "compression": "compression",
+          "context-window": "fenêtre de contexte",
+          "cost": "coût",
+          "cyber": "cyber",
+          "cybersecurity": "cybersécurité",
+          "data-pipeline": "pipeline de données",
+          "delivery": "livraison",
+          "democratization": "démocratisation",
+          "design": "conception",
+          "drivers": "facteurs",
+          "embeddings": "plongements",
+          "factory": "fabrique",
+          "gcp": "GCP",
+          "git-insights": "constats Git",
+          "governance": "gouvernance",
+          "government-3-0": "Gouvernement 3.0",
+          "harness": "harnais",
+          "hierarchy": "hiérarchie",
+          "hooks": "crochets",
+          "human-in-the-loop": "humain dans la boucle",
+          "interactive": "interactif",
+          "measurement": "mesure",
+          "models": "modèles",
+          "modernization": "modernisation",
+          "nexus": "Nexus",
+          "observability": "observabilité",
+          "open-data": "données ouvertes",
+          "open-source": "open source",
+          "operating-model": "modèle opérationnel",
+          "orchestration": "orchestration",
+          "organizational-design": "conception organisationnelle",
+          "owasp": "OWASP",
+          "personas": "personas",
+          "project-management": "gestion de projet",
+          "prompting": "requêtes",
+          "pronghorn": "Pronghorn",
+          "quality": "qualité",
+          "rag": "RAG",
+          "readiness": "préparation",
+          "reaper": "Faucheur",
+          "red-team": "équipe rouge",
+          "requirements": "exigences",
+          "sandbox": "bac à sable",
+          "security": "sécurité",
+          "shadow-it": "informatique fantôme",
+          "shared-services": "services partagés",
+          "simulation": "simulation",
+          "skills": "compétences",
+          "sovereign-compute": "calcul souverain",
+          "specification-driven": "axé sur la spécification",
+          "sse": "SSE",
+          "strategy": "stratégie",
+          "success-criteria": "critères de réussite",
+          "supply-chain": "chaîne d’approvisionnement",
+          "system-health": "santé du système",
+          "tech-stack": "pile technologique",
+          "technical-debt": "dette technique",
+          "template": "gabarit",
+          "templates": "gabarits",
+          "thesis": "thèse",
+          "training": "formation",
+          "velocity": "Vélocité",
+          "visualization": "visualisation",
+          "workforce": "effectif"
+        },
+        "language_changed": "Langue changée pour {name}",
+        "listening_time": "Temps d'écoute",
+        "of_narration": "de narration",
+        "per_paper": "Par livre",
+        "on_average": "en moyenne",
+        "repos_split": "{open} ouverts · {onreq} sur demande",
+        "article_nav": "Navigation entre les articles",
+        "prev_dir": "← Précédent",
+        "next_dir": "Suivant →",
+        "home_prev_dir": "← Accueil",
+        "home_next_dir": "Accueil →",
+        "the_library": "La bibliothèque",
+        "prev_aria": "Précédent : ",
+        "next_aria": "Suivant : ",
+        "back_to_library_full": "Retour à la bibliothèque",
+        "updated": "Mis à jour",
+        "what_changed": "Quoi de neuf",
+        "repositories": "Dépôts",
+        "close_contents": "Fermer le sommaire",
+        "download": "Télécharger",
+        "get": "Obtenir",
+        "download_all": "Tout télécharger (.zip)",
+        "preparing": "Préparation…",
+        "download_all_tooltip": "Télécharger tous les livres en JSON + Markdown (sans média)",
+        "download_markdown": "Télécharger le Markdown",
+        "download_failed": "Échec du téléchargement.",
+        "paper_loaded": "Livre chargé : ",
+        "language_selection": "Choix de langue",
+        "switch_to": "Passer à {name}",
+        "home_prefix": "Accueil, ",
+        "open_menu": "Ouvrir le menu",
+        "close_menu": "Fermer le menu",
+        "primary_menu": "Menu principal",
+        "keyboard_shortcuts_title": "Raccourcis clavier",
+        "esc_to_close": "Appuyez sur Échap pour fermer.",
+        "shortcuts": [
+          {
+            "keys": [
+              "?"
+            ],
+            "label": "Afficher les raccourcis clavier"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "label": "Fermer une boîte de dialogue ouverte"
+          },
+          {
+            "keys": [
+              "Tab"
+            ],
+            "label": "Aller au champ interactif suivant"
+          },
+          {
+            "keys": [
+              "Shift",
+              "Tab"
+            ],
+            "label": "Aller au champ interactif précédent"
+          },
+          {
+            "divider": true,
+            "label": "Lecteur de présentation"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "label": "Lecture / pause"
+          },
+          {
+            "keys": [
+              "←"
+            ],
+            "label": "Diapositive précédente"
+          },
+          {
+            "keys": [
+              "→"
+            ],
+            "label": "Diapositive suivante"
+          },
+          {
+            "keys": [
+              "Click"
+            ],
+            "label": "Cliquer la diapositive pour basculer la lecture"
+          },
+          {
+            "divider": true,
+            "label": "Barre de lecture (lorsque focalisée)"
+          },
+          {
+            "keys": [
+              "←"
+            ],
+            "label": "Reculer de 5 secondes"
+          },
+          {
+            "keys": [
+              "→"
+            ],
+            "label": "Avancer de 5 secondes"
+          },
+          {
+            "keys": [
+              "Home"
+            ],
+            "label": "Aller au début de la diapositive"
+          },
+          {
+            "keys": [
+              "End"
+            ],
+            "label": "Aller à la fin de la diapositive"
+          }
+        ]
+      },
+      "hero": {
+        "title": "Les livres blancs <em>Velocity</em>",
+        "subtitle": "Comment le gouvernement de l’Alberta utilise l’intelligence artificielle pour transformer rapidement et en toute sécurité son parc technologique."
+      },
+      "footer": {
+        "primary": {
+          "heading": "Les livres blancs Velocity",
+          "body": "{n} livres blancs répartis sur trois niveaux. Les livres conceptuels expliquent le pourquoi. Les livres techniques décrivent la mise en œuvre. Les livres « Politiques et personnes » ancrent l’ensemble pour le gouvernement et son effectif. Le site est publié sur GitHub Pages et il est lui-même libre."
+        },
+        "columns": [
+          {
+            "heading": "Référence",
+            "items": [
+              {
+                "label": "Glossaire",
+                "href": "/glossary"
+              },
+              {
+                "label": "Index",
+                "href": "/index"
+              },
+              {
+                "label": "Mises à jour",
+                "href": "/updates"
+              }
+            ]
+          },
+          {
+            "heading": "Logiciel libre",
+            "items": [
+              {
+                "label": "Dépôts",
+                "href": "/repos"
+              },
+              {
+                "label": "Communauté",
+                "href": "/community"
+              },
+              {
+                "label": "À propos",
+                "href": "/about"
+              },
+              {
+                "label": "Dépôt du site",
+                "href": "https://github.com/GovAlta/the-velocity-white-papers"
+              }
+            ]
+          },
+          {
+            "heading": "Plus",
+            "items": [
+              {
+                "label": "Presse",
+                "href": "/press"
+              },
+              {
+                "label": "Ressources",
+                "href": "/resources"
+              },
+              {
+                "label": "Médias",
+                "href": "/gallery"
+              },
+              {
+                "label": "Confidentialité",
+                "href": "/privacy"
+              }
+            ]
+          }
+        ],
+        "smallcaps": "Gouvernement de l’Alberta · Technologie et innovation"
+      },
+      "stats": [
+        {
+          "k": "Livres blancs",
+          "v": "18",
+          "sub": "sur trois niveaux"
+        },
+        {
+          "k": "Dépôts publiés",
+          "v": "7",
+          "sub": "logiciel libre"
+        },
+        {
+          "k": "Niveaux",
+          "v": "3",
+          "sub": "Conceptuel · Technique · Politiques"
+        }
+      ],
+      "section_titles": {
+        "about": "Énoncé de mission",
+        "featured": "À la une",
+        "complete_series": "La collection complète",
+        "featured_meta": "Pour commencer",
+        "series_meta_tpl": "{n} entrées · {r} dépôts"
+      },
+      "about_body": [
+        "Le gouvernement de l’Alberta s’est engagé à devenir la fonction publique la plus outillée en intelligence artificielle en Amérique du Nord.",
+        "Un moteur majeur de cette vision est de veiller à pouvoir maintenir et moderniser nos systèmes numériques pour qu’ils soient cybersécuritaires, modernes et sûrs. Ces livres blancs exposent une stratégie sur la façon dont l’Alberta y parvient à grande vitesse, en s’attaquant à plus de quarante ans de dette technique et en visant jusqu’à quatre-vingt-quinze pour cent de réduction du temps et du coût de remédiation et de livraison des applications.",
+        "Dans ces livres blancs, l’Alberta vous présente sa méthodologie : comment nous utilisons l’intelligence artificielle pour moderniser notre infrastructure technologique, comment nous outillons notre effectif grâce à l’Alberta AI Academy, et comment nous offrons de nouvelles capacités et perspectives d’affaires.",
+        "Nous partageons ces documents afin que d’autres gouvernements et organisations puissent emboîter le pas. Nous sommes loin d’avoir tout résolu. Ces livres blancs sont un artefact vivant : nous continuerons d’y publier nos constats et nos progrès, ainsi que nos réussites et nos revers. Nous vous invitons à dialoguer avec nous. Ensemble, nous pouvons bâtir une fonction publique numérique solide pour l’ère de l’IA."
+      ],
+      "print_edition": {
+        "title": "L’édition imprimée",
+        "volume": "Volume 1",
+        "image_alt": "Couverture de l’édition imprimée des livres blancs Velocity, volume 1",
+        "body": "Le premier volume complet des livres blancs Velocity, réuni sous forme de livret téléchargeable pour la lecture hors ligne ou sur papier. Téléchargez la collection complète en format PDF, en français et en anglais.",
+        "print_note": "Chacun est libre d’imprimer ses propres exemplaires, en français et en anglais.",
+        "download_cta": "Télécharger les PDF",
+        "forthcoming": "D’autres volumes suivront."
+      }
+    },
+    "es": {
+      "title": "Los libros blancos Velocity",
+      "tagline": "Cómo el Gobierno de Alberta aprovecha la inteligencia artificial para transformar su patrimonio tecnológico de forma rápida y segura.",
+      "publisher": "Gobierno de Alberta · Ministerio de Tecnología e Innovación",
+      "publisher_short": "Alberta · TI",
+      "nav": [
+        {
+          "id": "library",
+          "label": "Inicio"
+        },
+        {
+          "id": "index",
+          "label": "Índice"
+        },
+        {
+          "id": "about",
+          "label": "Acerca de"
+        }
+      ],
+      "ui": {
+        "loading_library": "Cargando la biblioteca…",
+        "loading_index": "Cargando el índice…",
+        "loading_paper": "Cargando",
+        "back_to_library": "Inicio",
+        "abstract": "Resumen",
+        "contents": "Contenido",
+        "read_next": "Leer a continuación",
+        "tags": "Palabras clave",
+        "authors": "Autores",
+        "published": "Publicado",
+        "reading": "Lectura",
+        "status": "Estado",
+        "repository": "Repositorio",
+        "min": "min",
+        "narration": "Narración",
+        "tldr": "En breve",
+        "play": "Reproducir",
+        "pause": "Pausa",
+        "prev": "Ant.",
+        "next": "Sig.",
+        "restart": "Reiniciar",
+        "auto_advance": "avance automático",
+        "search_placeholder": "Buscar por título, subtítulo o palabra clave…",
+        "all": "Todos",
+        "no_content": "Contenido próximamente",
+        "no_content_body": "Este documento aún no se ha redactado. La estructura está lista; el contenido llegará pronto.",
+        "slide": "Diapositiva",
+        "all_slides": "Todas las diapositivas",
+        "close": "Cerrar",
+        "kbd_hint": "Espacio = reproducir/pausar · ← / → = ant. / sig. · haga clic en la diapositiva para alternar",
+        "audio_missing": "Audio aún no generado.",
+        "audio_missing_label": "Audio no generado",
+        "audio_missing_body": "Ejecute el generador en este documento para producir el MP3 de narración.",
+        "language_changed": "Idioma cambiado a {name}",
+        "translation_labels": {
+          "untranslated": "Sin traducir",
+          "draft": "Traducción preliminar",
+          "reviewed": "Traducción revisada"
+        },
+        "translation_bodies": {
+          "untranslated": "La versión en inglés es el texto de referencia. Esta página en español es solo estructural.",
+          "draft": "Se ha redactado una primera versión en español. Aún no ha sido revisada por una persona.",
+          "reviewed": "Revisada por una persona; aún no es la versión final."
+        },
+        "audio_ready_aria": "audio disponible",
+        "aria_role_player": "reproductor de presentación",
+        "aria_overall": "Progreso general de la presentación",
+        "aria_controls": "Controles de reproducción",
+        "aria_prev": "Diapositiva anterior",
+        "aria_next": "Diapositiva siguiente",
+        "aria_play": "Reproducir narración",
+        "aria_pause": "Pausar narración",
+        "aria_play_stage": "Reproducir narración",
+        "aria_pause_stage": "Pausar narración",
+        "aria_restart": "Reiniciar desde la primera diapositiva",
+        "aria_scrubber": "Desplazarse dentro de la diapositiva actual",
+        "aria_text_panel": "Texto y narración de la diapositiva",
+        "aria_slide_announcement": "Diapositiva {n} de {total}, {title}",
+        "aria_playing_announcement": "Reproduciendo",
+        "aria_paused_announcement": "En pausa",
+        "index_title": "El índice",
+        "papers_word": "libros",
+        "col_no": "N.º",
+        "col_title": "Título",
+        "col_tier": "Nivel",
+        "col_read": "Leer",
+        "tier_labels": {
+          "Conceptual": "Conceptual",
+          "Technical": "Técnico",
+          "Policy & People": "Políticas y personas"
+        },
+        "status_labels": {
+          "Published": "Publicado",
+          "Forthcoming": "Próximamente",
+          "Draft": "Borrador",
+          "Placeholder": "Reservado"
+        },
+        "tag_labels": {
+          "agents": "agentes",
+          "ai-academy": "Academia de IA",
+          "ai-agents": "agentes de IA",
+          "ai-factory": "fábrica de IA",
+          "ai-systems": "sistemas de IA",
+          "anti-drift": "anti-deriva",
+          "applications": "aplicaciones",
+          "architecture": "arquitectura",
+          "authentication": "autenticación",
+          "benchmarking": "evaluación comparativa",
+          "bifrost": "Bifrost",
+          "briefing": "informe",
+          "builder-culture": "cultura del constructor",
+          "canvas": "lienzo",
+          "change-management": "gestión del cambio",
+          "claude": "Claude",
+          "claude-code": "Claude Code",
+          "claw": "CLAW",
+          "cloud": "nube",
+          "code-analysis": "análisis de código",
+          "compression": "compresión",
+          "context-window": "ventana de contexto",
+          "cost": "costo",
+          "cyber": "ciber",
+          "cybersecurity": "ciberseguridad",
+          "data-pipeline": "canalización de datos",
+          "delivery": "entrega",
+          "democratization": "democratización",
+          "design": "diseño",
+          "drivers": "factores",
+          "embeddings": "incrustaciones",
+          "factory": "fábrica",
+          "gcp": "GCP",
+          "git-insights": "hallazgos de Git",
+          "governance": "gobernanza",
+          "government-3-0": "Gobierno 3.0",
+          "harness": "arnés",
+          "hierarchy": "jerarquía",
+          "hooks": "ganchos",
+          "human-in-the-loop": "humano en el ciclo",
+          "interactive": "interactivo",
+          "measurement": "medición",
+          "models": "modelos",
+          "modernization": "modernización",
+          "nexus": "Nexus",
+          "observability": "observabilidad",
+          "open-data": "datos abiertos",
+          "open-source": "código abierto",
+          "operating-model": "modelo operativo",
+          "orchestration": "orquestación",
+          "organizational-design": "diseño organizacional",
+          "owasp": "OWASP",
+          "personas": "perfiles",
+          "project-management": "gestión de proyectos",
+          "prompting": "instrucciones",
+          "pronghorn": "Pronghorn",
+          "quality": "calidad",
+          "rag": "RAG",
+          "readiness": "preparación",
+          "reaper": "Segador",
+          "red-team": "equipo rojo",
+          "requirements": "requisitos",
+          "sandbox": "entorno aislado",
+          "security": "seguridad",
+          "shadow-it": "TI en la sombra",
+          "shared-services": "servicios compartidos",
+          "simulation": "simulación",
+          "skills": "habilidades",
+          "sovereign-compute": "cómputo soberano",
+          "specification-driven": "basado en especificaciones",
+          "sse": "SSE",
+          "strategy": "estrategia",
+          "success-criteria": "criterios de éxito",
+          "supply-chain": "cadena de suministro",
+          "system-health": "estado del sistema",
+          "tech-stack": "pila tecnológica",
+          "technical-debt": "deuda técnica",
+          "template": "plantilla",
+          "templates": "plantillas",
+          "thesis": "tesis",
+          "training": "capacitación",
+          "velocity": "Velocity",
+          "visualization": "visualización",
+          "workforce": "personal"
+        },
+        "listening_time": "Tiempo de escucha",
+        "of_narration": "de narración",
+        "per_paper": "Por libro",
+        "on_average": "en promedio",
+        "repos_split": "{open} abiertos · {onreq} a pedido",
+        "article_nav": "Navegación entre artículos",
+        "prev_dir": "← Anterior",
+        "next_dir": "Siguiente →",
+        "home_prev_dir": "← Inicio",
+        "home_next_dir": "Inicio →",
+        "the_library": "La biblioteca",
+        "prev_aria": "Anterior: ",
+        "next_aria": "Siguiente: ",
+        "back_to_library_full": "Volver a la biblioteca",
+        "updated": "Actualizado",
+        "what_changed": "Novedades",
+        "repositories": "Repositorios",
+        "close_contents": "Cerrar el contenido",
+        "download": "Descargar",
+        "get": "Obtener",
+        "download_all": "Descargar todo (.zip)",
+        "preparing": "Preparando…",
+        "download_all_tooltip": "Descargar cada documento en JSON + Markdown (sin multimedia)",
+        "download_markdown": "Descargar Markdown",
+        "download_failed": "Error al descargar.",
+        "paper_loaded": "Documento cargado: ",
+        "language_selection": "Selección de idioma",
+        "switch_to": "Cambiar a {name}",
+        "home_prefix": "Inicio, ",
+        "open_menu": "Abrir el menú",
+        "close_menu": "Cerrar el menú",
+        "primary_menu": "Menú principal",
+        "keyboard_shortcuts_title": "Atajos de teclado",
+        "esc_to_close": "Presione Esc para cerrar.",
+        "shortcuts": [
+          {
+            "keys": [
+              "?"
+            ],
+            "label": "Mostrar los atajos de teclado"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "label": "Cerrar cualquier diálogo abierto"
+          },
+          {
+            "keys": [
+              "Tab"
+            ],
+            "label": "Ir al siguiente elemento interactivo"
+          },
+          {
+            "keys": [
+              "Shift",
+              "Tab"
+            ],
+            "label": "Ir al elemento interactivo anterior"
+          },
+          {
+            "divider": true,
+            "label": "Reproductor de presentación"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "label": "Reproducir / pausar la narración"
+          },
+          {
+            "keys": [
+              "←"
+            ],
+            "label": "Diapositiva anterior"
+          },
+          {
+            "keys": [
+              "→"
+            ],
+            "label": "Diapositiva siguiente"
+          },
+          {
+            "keys": [
+              "Click"
+            ],
+            "label": "Haga clic en la diapositiva para alternar la reproducción"
+          },
+          {
+            "divider": true,
+            "label": "Barra de reproducción (cuando está enfocada)"
+          },
+          {
+            "keys": [
+              "←"
+            ],
+            "label": "Retroceder 5 segundos"
+          },
+          {
+            "keys": [
+              "→"
+            ],
+            "label": "Avanzar 5 segundos"
+          },
+          {
+            "keys": [
+              "Home"
+            ],
+            "label": "Ir al inicio de la diapositiva"
+          },
+          {
+            "keys": [
+              "End"
+            ],
+            "label": "Ir al final de la diapositiva"
+          }
+        ]
+      },
+      "hero": {
+        "title": "Los libros blancos <em>Velocity</em>",
+        "subtitle": "Cómo el Gobierno de Alberta aprovecha la inteligencia artificial para transformar su patrimonio tecnológico de forma rápida y segura."
+      },
+      "footer": {
+        "primary": {
+          "heading": "Los libros blancos Velocity",
+          "body": "{n} libros en tres niveles. Los libros conceptuales establecen el porqué. Los libros técnicos son el manual de ejecución. Los libros de políticas y personas lo hacen realidad para el gobierno y el personal. Todo el sitio se publica mediante GitHub Pages y es en sí mismo de código abierto."
+        },
+        "columns": [
+          {
+            "heading": "Referencia",
+            "items": [
+              {
+                "label": "Glosario",
+                "href": "/glossary"
+              },
+              {
+                "label": "Índice",
+                "href": "/index"
+              },
+              {
+                "label": "Novedades",
+                "href": "/updates"
+              }
+            ]
+          },
+          {
+            "heading": "Código abierto",
+            "items": [
+              {
+                "label": "Repositorios",
+                "href": "/repos"
+              },
+              {
+                "label": "Comunidad",
+                "href": "/community"
+              },
+              {
+                "label": "Acerca de",
+                "href": "/about"
+              },
+              {
+                "label": "Repositorio del sitio",
+                "href": "https://github.com/GovAlta/the-velocity-white-papers"
+              }
+            ]
+          },
+          {
+            "heading": "Más",
+            "items": [
+              {
+                "label": "Prensa",
+                "href": "/press"
+              },
+              {
+                "label": "Recursos",
+                "href": "/resources"
+              },
+              {
+                "label": "Multimedia",
+                "href": "/gallery"
+              },
+              {
+                "label": "Privacidad",
+                "href": "/privacy"
+              }
+            ]
+          }
+        ],
+        "smallcaps": "Gobierno de Alberta · Tecnología e Innovación"
+      },
+      "stats": [
+        {
+          "k": "Libros",
+          "v": "18",
+          "sub": "en tres niveles"
+        },
+        {
+          "k": "Repositorios publicados",
+          "v": "7",
+          "sub": "código abierto"
+        },
+        {
+          "k": "Niveles",
+          "v": "3",
+          "sub": "Conceptual · Técnico · Políticas"
+        }
+      ],
+      "section_titles": {
+        "about": "Declaración de misión",
+        "featured": "Destacados",
+        "complete_series": "La colección completa",
+        "featured_meta": "Empiece aquí",
+        "series_meta_tpl": "{n} entradas · {r} repositorios"
+      },
+      "about_body": [
+        "El Gobierno de Alberta avanza para convertirse en la administración pública con mayor capacidad de IA de Norteamérica.",
+        "Un motor clave de esta visión es asegurar que podamos mantener y modernizar nuestros sistemas digitales para que sean ciberseguros, modernos y confiables. Estos libros blancos exponen una estrategia sobre cómo Alberta lo está logrando a gran velocidad, abordando más de cuarenta años de deuda técnica y buscando reducir hasta un 95 % el tiempo y el costo de remediación y entrega de aplicaciones.",
+        "En estos libros blancos, Alberta le presenta su metodología: cómo usamos la inteligencia artificial para modernizar nuestra infraestructura tecnológica, cómo capacitamos a nuestro personal mediante la Academia de IA de Alberta y cómo ofrecemos nuevas capacidades y conocimientos para la gestión pública.",
+        "Compartimos estos documentos para que otros gobiernos y organizaciones puedan seguir nuestros pasos. De ninguna manera damos esto por resuelto. Estos libros blancos son un artefacto vivo: seguiremos publicando aquí nuestros hallazgos y avances, así como nuestros éxitos y reveses. Le invitamos a dialogar con nosotros. Juntos podemos construir una administración pública digital sólida para la era de la IA."
+      ],
+      "print_edition": {
+        "title": "La edición impresa",
+        "volume": "Volumen 1",
+        "image_alt": "Portada de la edición impresa de los libros blancos Velocity, volumen 1",
+        "body": "El primer volumen completo de los libros blancos Velocity, reunido como un cuadernillo descargable para leer sin conexión o en papel. Descargue la colección completa en PDF, en inglés y en francés.",
+        "print_note": "Cualquier persona puede imprimir sus propias copias, en inglés y en francés.",
+        "download_cta": "Descargar los PDF",
+        "forthcoming": "Este es el volumen 1. Los próximos volúmenes están por venir."
+      }
+    }
+  },
+  "sequence_format": {
+    "en": "{i} of {N}",
+    "fr": "{i} sur {N}",
+    "es": "{i} de {N}"
+  }
+}

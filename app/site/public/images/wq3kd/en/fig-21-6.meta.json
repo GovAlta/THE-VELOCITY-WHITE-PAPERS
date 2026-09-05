@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-06",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-6.jpg",
+  "bytes_jpg": 129972,
+  "bytes_png_source": 2115141,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:43:04.872Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A diagram in two halves. Left half: a tree hierarchy labelled top to bottom Act, Part, Division, Section, Subsection, Paragraph, Sentence. Right half: a small loop showing a marked-up text block with tag markers, an arrow labelled strip the tags leading back to an original text block, and an equals sign with the note identical, byte for byte.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A diagram in two halves. Left half: a tree hierarchy labelled top to bottom Act, Part, Division, Section, Subsection, Paragraph, Sentence. Right half: a small loop showing a marked-up text block with tag markers, an arrow labelled strip the tags leading back to an original text block, and an equals sign with the note identical, byte for byte.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

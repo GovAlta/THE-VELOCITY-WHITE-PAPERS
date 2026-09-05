@@ -1,0 +1,17 @@
+{
+  "paper_id": "rhx4t",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\rhx4t\\en\\fig-11-3.jpg",
+  "bytes_jpg": 244426,
+  "bytes_png_source": 2576412,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-18T19:00:42.383Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration of a single, well-engineered production line shown as the centrepiece, built once and clearly solid. Several application products move along it on parallel tracks at the same time, each at a different stage of completion, tended by just one or two small figures. The emphasis is on the reusable line itself rather than any single product. A sense of front-loaded investment paying back across many outputs. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial illustration of a single, well-engineered production line shown as the centrepiece, built once and clearly solid. Several application products move along it on parallel tracks at the same time, each at a different stage of completion, tended by just one or two small figures. The emphasis is on the reusable line itself rather than any single product. A sense of front-loaded investment paying back across many outputs. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no text, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

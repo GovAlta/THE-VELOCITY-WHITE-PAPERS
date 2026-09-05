@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "en",
+  "slot": "fig-02",
+  "out_path": "public\\images\\k3tc3\\en\\fig-10-2.jpg",
+  "bytes_jpg": 162711,
+  "bytes_png_source": 2631480,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T19:25:00.559Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. In the centre, a two-faced chess clock; the left face labelled HUMAN, the right face labelled AI, with a small arrow showing the turn passing from one to the other. Above it, a single board step with two small tokens handing a baton back and forth, captioned HAND OFF WITHIN A STEP. To one side, a small raised-hand icon labelled RAISE A HAND, NO PENALTY, and below it a small stop icon labelled BLOCK, A SMALL PENALTY. A caption reads THE CLOCK SHOWS WHO HELD THE WORK. Calm, architectural, legible labels. No logos, no people beyond simple tokens.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. In the centre, a two-faced chess clock; the left face labelled HUMAN, the right face labelled AI, with a small arrow showing the turn passing from one to the other. Above it, a single board step with two small tokens handing a baton back and forth, captioned HAND OFF WITHIN A STEP. To one side, a small raised-hand icon labelled RAISE A HAND, NO PENALTY, and below it a small stop icon labelled BLOCK, A SMALL PENALTY. A caption reads THE CLOCK SHOWS WHO HELD THE WORK. Calm, architectural, legible labels. No logos, no people beyond simple tokens.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

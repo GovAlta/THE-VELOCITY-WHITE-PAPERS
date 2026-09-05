@@ -1,0 +1,541 @@
+{
+  "id": "wq3kd",
+  "num": "21",
+  "sequence": "21 of 22",
+  "tier": "Technical",
+  "title": "The Shape of Data",
+  "subtitle": "Making information into structured, searchable, auditable knowledge that an AI can reason over.",
+  "track": "Building the Systems",
+  "authors": [
+    "Janak Alford",
+    "Ministry of Technology and Innovation"
+  ],
+  "published": "2026-06-21",
+  "reading_min": 24,
+  "status": "Published",
+  "tags": [
+    "data-pipeline",
+    "rag",
+    "embeddings",
+    "benchmarking",
+    "open-data",
+    "ai-systems"
+  ],
+  "repo": null,
+  "abstract": "Moving from AI demo to AI deployment is a challenging transition for most organizations. The challenge to overcome is preparing organizational data to be AI-compatible. Effective, trustworthy, and auditable AI systems require a data transformation pipeline that turns ordinary documents into structured, searchable, auditable knowledge a model can reason over. This paper walks through the pipeline stage by stage and lays out how a government can make its vast public corpus AI-ready once, for a few thousand dollars, and let anyone build on it.",
+  "hero_image": {
+    "src": "public/images/wq3kd/en/hero.jpg",
+    "alt": "A loose stack of paper documents on the left transforming, as it moves right, into an orderly glowing lattice of connected, labelled nodes.",
+    "image_prompt": "A wide editorial illustration showing a loose stack of ordinary paper documents on the left that transforms, as the eye moves to the right, into an orderly glowing lattice of connected labelled cards and nodes. The left side is papery and disordered, the right side is crisp, structured, and luminous. Conveys raw information becoming machine-ready knowledge. Muted Alberta cream base with navy and rust accents. No text.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/en/wq3kd.mp3",
+    "duration_sec": 1459
+  },
+  "tldr_presentation": {
+    "id": "wq3kd-tldr",
+    "title": "The pipeline in six minutes",
+    "locale": "en",
+    "slides": [
+      {
+        "id": "01",
+        "title": "The Shape of Data",
+        "audio_file": "public/audio/en/wq3kd-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Paper 21 · Technical",
+        "subcaption": "The chatbot is the part everyone sees. The pipeline is the part that matters.",
+        "text": "A chat tool placed over your documents looks impressive for five minutes and then stalls on work that has to be correct, comparable, and defensible. Real systems run on a pipeline that turns ordinary documents into structured, searchable, auditable knowledge a model can reason over. This paper walks through that pipeline, in plain language, and shows what it costs."
+      },
+      {
+        "id": "02",
+        "title": "The demonstration and the system",
+        "audio_file": "public/audio/en/wq3kd-tldr/02.mp3",
+        "visual": "compare",
+        "caption": "Why the easy tools are not enough",
+        "visual_config": {
+          "left": {
+            "label": "An off-the-shelf chat tool",
+            "body": "Holds a few files for one session. Answers in prose you cannot count or compare. Will not say which clause, on which page. Leaves nothing behind."
+          },
+          "right": {
+            "label": "A real pipeline",
+            "body": "Holds an entire corpus. Answers in a fixed, comparable shape. Traces every finding to the page. Builds a durable asset others can stand on."
+          }
+        },
+        "text": "Tools like Copilot and NotebookLM are excellent, and Alberta uses them, for reading a report or drafting a memo. They were built for one person and a small, temporary set of files. They cannot hold a whole corpus, cannot reliably cite the clause and the page, and leave nothing structured behind. Government use of AI fails on exactly those points."
+      },
+      {
+        "id": "03",
+        "title": "The pipeline",
+        "audio_file": "public/audio/en/wq3kd-tldr/03.mp3",
+        "visual": "list",
+        "caption": "The same machinery, whatever the subject",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Read",
+              "desc": "Documents become page images, then clean structured text."
+            },
+            {
+              "label": "Structure",
+              "desc": "Text is broken into a labelled hierarchy, never rewritten."
+            },
+            {
+              "label": "Fingerprint",
+              "desc": "Each piece gets a numerical fingerprint of its meaning."
+            },
+            {
+              "label": "Search and retrieve",
+              "desc": "Find the right material by meaning, not just words."
+            },
+            {
+              "label": "Generate, structured",
+              "desc": "The model answers in a fixed, comparable shape."
+            },
+            {
+              "label": "Remember and audit",
+              "desc": "Every run is recorded and can be reproduced."
+            }
+          ]
+        },
+        "text": "You must move information through a reliable sequence of transformations to make it AI-ready. Documents become page images, then clean text, then a labelled structure. Each piece gets a numerical fingerprint of its meaning. Search and retrieval find the right material. The model answers in a fixed, structured shape. And every step is recorded, so the whole chain can be audited and reproduced."
+      },
+      {
+        "id": "04",
+        "title": "$2,500",
+        "audio_file": "public/audio/en/wq3kd-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "A public corpus, made AI-ready",
+        "visual_config": {
+          "stat_value": "$2,500",
+          "stat_label": "To make a province's K-12 curriculum AI-ready"
+        },
+        "subcaption": "Government does it once. Then a parent, teacher, or student can build on it in an afternoon.",
+        "text": "Alberta's K-12 curriculum is published openly and is good for people to read. In that form it is almost unusable to an AI. Carrying the whole of it through this pipeline cost about twenty-five hundred dollars. On top of the result, we built a grade-appropriate learning game, Age of Alberta, in about an hour, because the hard part was already done."
+      },
+      {
+        "id": "05",
+        "title": "1,059 findings",
+        "audio_file": "public/audio/en/wq3kd-tldr/05.mp3",
+        "visual": "stat",
+        "caption": "A regulator reducing red tape",
+        "visual_config": {
+          "stat_value": "1,059 findings",
+          "stat_label": "From 31 acts, each traceable to the page"
+        },
+        "subcaption": "Alberta law requires every ministry to find and remove red tape, without weakening protections.",
+        "text": "A provincial regulator must reduce red tape by law. We carried thirty-one acts from fourteen jurisdictions through the pipeline, compared the regulator's own act clause by clause against the rest of the country, and produced just over a thousand findings. Each one provides Alberta a benchmark against peers, provides recommendations, and traces these suggestions down to the sentence in other acts."
+      },
+      {
+        "id": "06",
+        "title": "Build the substrate once",
+        "audio_file": "public/audio/en/wq3kd-tldr/06.mp3",
+        "visual": "quote",
+        "visual_config": {
+          "text": "The metadata changes from one ministry to the next. The machinery stays the same.",
+          "cite": "Paper 21 · The Shape of Data"
+        },
+        "text": "We have built this same pipeline dozens of times in the past year, for legislation, curriculum, policy, and market research. The subject changes but the machinery stays intact. For a leader, the lesson is to stop relying on chat conversations and start building data pipelines, because the structure is what really answers this question and the next hundred."
+      }
+    ],
+    "owner_id": "wq3kd"
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "Why the easy tools are not enough"
+    },
+    {
+      "n": "02",
+      "title": "What AI-ready means"
+    },
+    {
+      "n": "03",
+      "title": "Getting the words out"
+    },
+    {
+      "n": "04",
+      "title": "Giving the words meaning"
+    },
+    {
+      "n": "05",
+      "title": "Memory and audit"
+    },
+    {
+      "n": "06",
+      "title": "A regulator reducing red tape"
+    },
+    {
+      "n": "07",
+      "title": "Good for people, not for AI"
+    },
+    {
+      "n": "08",
+      "title": "Building reusable data processing layers"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Most demonstrations of artificial intelligence tools look impressive for about five minutes. Someone uploads a folder of documents to a chat tool, asks a question in plain language, and a fluent answer comes back in seconds. The room is impressed, and it should be, because the tools and models that do this are genuinely powerful. The trouble starts the moment the work has to be repeatable, correct rather than merely fluent, comparable across thousands of items rather than answered one at a time, and defensible months later when someone asks how the system reached its conclusion. That is the work most of government actually needs, and it is not what a chatbot with a pile of files can do."
+    },
+    {
+      "type": "paragraph",
+      "text": "Over the past year, Technology and Innovation has built systems that do this harder kind of work for ministries across Alberta. They read entire libraries of legislation, the full provincial curriculum, and large bodies of policy and technical documentation, and they turn that raw material into knowledge an AI can reason over reliably, cite precisely, and be held to account for. Behind every one of these systems is the same machinery: a pipeline that takes ordinary documents and makes them, in a word, AI-ready. This paper explains that pipeline in plain language, so that a leader who will never write a line of code can understand what it actually takes to build an AI system worth trusting, and can tell the difference between a demonstration and a reliable system."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "Why the easy tools are not enough"
+    },
+    {
+      "type": "paragraph",
+      "text": "The most commonly used AI tools today are conversational assistants. Microsoft Copilot sits inside the documents people already work in and drafts, summarizes, and answers questions about them. Google's NotebookLM takes a set of sources a person hands it and lets them interview that set, and it will even narrate a tidy audio overview. These tools are excellent, and Alberta uses them. For reading a long report, drafting a memo, or getting oriented in a handful of files, they save real time, and we recommend them for exactly that."
+    },
+    {
+      "type": "paragraph",
+      "text": "They were built for an individual working with a small, temporary set of documents, and that is the limit of their design. They hold your files only for the length of a session, with a limited amount of text in view at once, so they cannot keep an entire ministry's corpus in mind. They answer in free-flowing prose, which reads well and cannot be sorted, counted, or compared across ten thousand items. They will summarize a clause, but they will not reliably tell you which clause, on which page, of which document an answer came from, and they keep no durable record you could audit later. When the session ends the answer evaporates and nothing is built, and no shared, structured body of knowledge is left behind for the next person, or the next tool, to stand on. Recreating an exact answer, or saving the thinking which went into the answer, is often impossible."
+    },
+    {
+      "type": "paragraph",
+      "text": "The use of AI for complex government tasks fails when we cannot audit the work. A cabinet decision has to trace to its evidence. A benchmark across fourteen jurisdictions has to be defendable and rooted in rational and measurable principles, or the comparison means nothing. And the value has to outlast just one question or interaction, because the next program, and the one after it, will need the same body of knowledge. For that, the documents themselves have to be rebuilt into something an AI can work with at scale. This rebuilding requires a systematic approach for transforming information from incompatible formats to AI-readable insights and is a critical step in building any intelligence-driven product."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.1",
+      "title": "The demonstration and the system",
+      "caption": "A chat tool answers one question over a closed pile of files and forgets it. A pipeline turns the files into structured, searchable, auditable knowledge that other tools can be built on.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-1.jpg",
+        "alt": "Left: a small chat bubble over a closed black box of documents with a fading dotted line. Right: a clear left-to-right pipeline feeding a structured grid of cards.",
+        "image_prompt": "A side-by-side comparison diagram. On the left, a single small chat bubble floating over a closed dark box labelled Documents, with a question mark and a fading dotted line, under the heading The demonstration. On the right, a clear left-to-right pipeline of connected labelled boxes feeding a tidy structured grid of cards, under the heading The system. Labels: The demonstration, The system.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "What AI-ready means"
+    },
+    {
+      "type": "paragraph",
+      "text": "To make information AI-ready is to carry it through a fixed sequence of steps, each of which transforms or adds properties or structures the raw document did not have. Luckily, we can use a common series of sequences for nearly every serious system we build regardless of the subject. A document, like a PDF, a Word file, or a web page, is first transformed into static images of its pages, converted into clean structured text, and broken into a labelled hierarchy that mirrors how the document is actually organized. Each piece of that hierarchy is given a numerical fingerprint that captures its meaning. The fingerprints make the whole corpus searchable by meaning rather than by keyword. Across collections of documents, sections, or even sentences, a search retrieves the most relevant pieces. Those structured answers become the inputs to agentic systems which can interpret this data to build dashboards, custom tools, and the explanatory text, images, and audio for the human audience. And every step in this transformation is recorded, so the whole chain can be audited and reproduced."
+    },
+    {
+      "type": "paragraph",
+      "text": "Said more plainly, a real AI system needs seven things that a chatbot does not provide on its own: a durable **memory** of what it has seen, a way to **extract** clean structure from messy sources, a way to **retrieve** the right material on demand, the numerical fingerprints, called **embeddings**, that make retrieval work by meaning, a **search** built on them, a disciplined way to **generate** structured output, and an **audit** trail for all of it. The system works with structured data, not loose text, which helps make each answer comparable, countable, and traceable."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.2",
+      "title": "The pipeline, end to end",
+      "caption": "The same machinery for legislation, curriculum, policy, or research. Only the documents and the definitions of what matters change.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-2.jpg",
+        "alt": "A wide left-to-right flowchart with stages: documents, page images, clean text, labelled structure, numerical fingerprints, search, retrieve, structured answer, tools and dashboards, text and images and audio, over a band reading recorded and auditable.",
+        "image_prompt": "A wide left-to-right flowchart of an end-to-end data pipeline, each stage a labelled box connected by gently curved arrows: Documents (PDF, Word, Web), Page images, Clean text, Labelled structure, Numerical fingerprints, Search, Retrieve, Structured answer, Tools and dashboards, Text, images, audio. A thin horizontal band runs beneath all the stages labelled Recorded and auditable.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "Getting the words out"
+    },
+    {
+      "type": "paragraph",
+      "text": "The pipeline begins by gathering the source documents and tracking where each one came from. Every document captures its provenance, the exact address it was downloaded from, the moment it was downloaded, its size, and a unique fingerprint (the MD5 hash) of its contents that proves the file was not altered in transit. Anyone can rebuild the whole library from that record alone and arrive at the identical set of files. This step requires significant human judgement in setting the criteria for selection and validating that the dataset is complete. This is what people mean when they say \"You need to get the data right\" to effectively use AI. There are no real shortcuts here because human experts must curate this content, and it forms the foundation of everything that follows."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.3",
+      "title": "Every file, with proof of where it came from",
+      "caption": "A master list drives the download. Each file is saved with a small record of its address, the time it was fetched, its size, and a fingerprint that proves it was not changed.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-3.jpg",
+        "alt": "A flowchart from a master list to official sources to a folder of PDFs, each PDF paired with a small sidecar card listing address, downloaded at, size, and fingerprint.",
+        "image_prompt": "A flowchart: a master list box on the left, an arrow to a cloud labelled Official sources, an arrow down to a folder of PDF files, and each PDF paired with a small sidecar card showing four short lines: address, downloaded at, size, fingerprint.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Part of this process is converting the hundreds of different file formats we use into a reliable structure. PowerPoint presentations, Word documents, and PDFs are difficult for machines to read reliably. The text inside a PDF is often locked in a layout that is lost or scrambled when ordinary tools try to pull it out, and multi-column pages, tables, footnotes, and stamped amendments come apart. Graphs and charts are also frequently lost when extracting out the content for the AI, losing the context and the intent of the source knowledge. So we treat the data the same way a human would, by viewing and interpreting the literal, hierarchical, and symbolic content as visual images. Each page of the source material is broken apart into separate bite-sized pieces (known as chunks), ready for AI analysis. The source documents, and their derived images, remain available as the ground truth for future reference or challenge."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.4",
+      "title": "Pages become images",
+      "caption": "Each page is rendered as a high-resolution image, one per page, so the next step reads a faithful picture of the page rather than a scrambled text layer.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-4.jpg",
+        "alt": "A simple flowchart: a single PDF icon, an arrow labelled render every page, and a neat stack of numbered page images with a note reading one image per page.",
+        "image_prompt": "A simple flowchart: a single PDF icon on the left, an arrow labelled render every page leading to a neat stack of page images numbered 1, 2, 3, and a small note reading 200 DPI, one image per page.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Each page image is then handed to an advanced AI model, in our case Claude running inside Google's Enterprise Agent Platform, which is asked to read the page and return back clean structured text that preserves the structure a reviewer cares about: the headings, the section numbers, the footnotes, the page markers, and any emphasis. This format is called \"markdown\" and is one of two important document formats we will introduce. Documents carry meaning in their structures and relationships which go beyond the words on the page. This careful reading and conversion to markdown costs more per page than simpler and cheaper automatic text extraction (known as OCR), but for dense legal or curricular text the accuracy is worth it, because every error introduced here becomes costly rework downstream. Quality here needs to be audited, and the pipeline evaluated closely for quality."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.5",
+      "title": "An AI reads each page like a person would",
+      "caption": "The page image goes to the model, which types it back out as clean text with headings, section numbers, and footnotes preserved. The image is the authority; the automatic extractions are only a check.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-5.jpg",
+        "alt": "A flowchart: a page image, an arrow into a box reading AI reads the page, an arrow to a clean text document showing a heading, a section number, and a footnote mark, with a side note about the image being the authority.",
+        "image_prompt": "A flowchart: a page image on the left, an arrow into a box labelled AI reads the page (Claude on Vertex), an arrow to a clean text document on the right that shows a heading, a section number, and a footnote mark preserved. A small side note reads: the image is the authority, the rough extractions are a check.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Markdown format preserves the page formatting, but the next step interprets the shape of the document itself. Legislation, curricula, and policies all have their own hierarchies. An act divides into parts, parts into divisions, divisions into sections, sections into subsections and paragraphs and finally single sentences. To compare a piece of Alberta legislation against another province's equivalent, the system has to know which part of the document to compare. And because each document is different, and each government uses different formats and standards, it is impossible to define a rigid template. We ask AI to understand and define a structure for each document dynamically. The model reads the whole document and describes the logical drafting conventions it sees, then marks up the document level by level adding tags which define each part. Documents are scoped from high to low, and each section is further reviewed and analyzed deeper until even every sentence is extracted individually and tagged within this hierarchy. Comparison is possible across documents, their sections, divisions, and clauses, even when they look nothing alike."
+    },
+    {
+      "type": "paragraph",
+      "text": "At each juncture we add audits, reassembling the broken up document back to its whole, ensuring that not a single character is out of place from its original format. Strip every label back out, and the result has to be identical to the original text. It is a small but important test with a large consequence, because it means the structure the AI imposed never silently changed a word of the document."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.6",
+      "title": "Structure added, never a word changed",
+      "caption": "The text is broken into a labelled hierarchy from act down to sentence. Strip the labels back out and the result is identical, character for character, to the source.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-6.jpg",
+        "alt": "Left: a tree from Act to Part to Division to Section to Subsection to Paragraph to Sentence. Right: a small loop showing marked text, an arrow strip the tags, back to original text, with an equals sign noting identical byte for byte.",
+        "image_prompt": "A diagram in two halves. Left half: a tree hierarchy labelled top to bottom Act, Part, Division, Section, Subsection, Paragraph, Sentence. Right half: a small loop showing a marked-up text block with tag markers, an arrow labelled strip the tags leading back to an original text block, and an equals sign with the note identical, byte for byte.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "Structure added, never a word changed",
+      "value": "100% aligned",
+      "body": "Every document in the corpus passes a mechanical check: strip the AI's structural labels back out, and the text is identical, character for character, to the source the page reader produced. The structure is merely annotation which gives meaning in the future steps."
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "Giving the words meaning"
+    },
+    {
+      "type": "paragraph",
+      "text": "Clean, structured text is readable in its whole or in part. Words are ready to be converted into meanings. The next step makes it possible to search and compare documents and their chunks based on their meaning and the relationship between their concepts. Pieces that discuss similar things end up with similar lists, even when they share no vocabulary, so a clause about \"protecting aquatic habitat\" and a clause about \"fish-bearing waters\" land near each other although the words differ. We use a special kind of AI model called an 'embedding model' to convert meaning to numeric values which are stored in a database. The system is configured to search and find the nearest matches across millions of items almost instantly. Think of each number as a fingerprint of meaning for that document or part thereof. Once computed, these values are static unless the text itself changes, making retrieval and analysis fast."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.7",
+      "title": "Every piece gets a numerical fingerprint",
+      "caption": "Each piece of text becomes a long list of numbers that captures its meaning. Similar meaning produces a similar fingerprint, stored in a database built to find nearest matches fast.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-7.jpg",
+        "alt": "A flowchart: three short text snippets, each with an arrow into a box that builds a numerical fingerprint, producing rows of dots that flow into a database cylinder labelled similarity index.",
+        "image_prompt": "A flowchart: three short text snippets on the left, each with an arrow into a box labelled AI builds a numerical fingerprint, producing rows of small dots arranged as vectors, flowing into a database cylinder labelled similarity index. A small note reads: similar meaning, similar fingerprint.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "These so-called \"vector embeddings\", numeric and searchable relationships between concepts, enable us to move past keyword search into semantic search. A person can type a phrase like \"discretionary approval timelines\", and the system returns the pieces from across the entire library whose fingerprints sit closest to it, regardless of the exact words they use. This makes recall of information much more human, since our own semantic memory systems work similarly. This retrieval step is the heart of what the industry calls retrieval-augmented generation. Instead of asking a model to answer from its general memory, which typically may produce confident errors, we first retrieve the specific, real passages that relate to a subject and then hand them to the model as the starting point to work from. AI models are highly capable when the ground truth information is provided, and hallucination and guesswork largely disappear."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.8",
+      "title": "Search by meaning, not just words",
+      "caption": "A search phrase becomes a fingerprint, the system finds the closest pieces across the whole library, and those real passages, not the model's memory, become the evidence it must work from.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-8.jpg",
+        "alt": "A flowchart: a search box reading discretionary approval timelines, an arrow turn into a fingerprint, an arrow into the similarity index cylinder, then a short ranked list of result cards with closeness scores.",
+        "image_prompt": "A flowchart: a search box containing the phrase discretionary approval timelines on the left, an arrow labelled turn into a fingerprint, an arrow into a database cylinder labelled similarity index, then an arrow out to a short ranked list of result cards from different sources, each with a closeness score such as 0.74, 0.71, 0.68.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "With the correct data being added to the prompt as context, an AI agent can be asked to undertake a complex, structured task, and to convert that raw material into a highly standardized form. The system is forced to respond using a structured data format called JavaScript Object Notation, or JSON, an industry standard for managing hierarchical and reliable data structures. A layperson might think of it as a form, where different fields, known as keys or attributes, can only be filled in with specific values. Every AI-generated answer comes back with the same fields. Large quantities of tasks can be given to the AI, and the format of the answer is always enforced. Because the shape is fixed, ten thousand answers can be sorted, counted, filtered, and compared. This drives real insight from the analysis because answers to questions can be compared and deep analysis performed against a large corpus of knowledge."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.9",
+      "title": "A fixed shape, every time",
+      "caption": "Three inputs go in, the source clause, the best peer matches, and the definition of what to look for. A fixed template comes out, so every answer has the same comparable shape.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-9.jpg",
+        "alt": "A flowchart: three input boxes, source clause, best peer matches, what to look for, merging into a box that fills a fixed template, producing a structured card with labelled fields verdict, severity, key words, best example, comparison, suggestion, confidence.",
+        "image_prompt": "A flowchart: three input boxes on the left labelled Source clause, Best peer matches, What to look for, with arrows merging into a box labelled AI fills a fixed template, producing a structured card on the right with clearly labelled fields: verdict, severity, key words, best example, comparison, suggestion, confidence.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Structured answers are the raw material for everything a human finally reviews. These structured AI outputs can flow to dashboards and heat maps, and can rank information in a way which enables visualization and review. They also provide predictable formats to generate other sorts of media, such as explanatory text, generated images, and narrated audio, a compressed analysis a busy executive can absorb. The machine assembles the information into a clear structure and makes recommendations. People still decide what it means."
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Memory and audit"
+    },
+    {
+      "type": "paragraph",
+      "text": "Once our knowledge is made searchable and retrievable, every request we send to a model can record an auditable set of inputs. Repeated questions return highly similar outputs because the inputs are defined by the embeddings and the outputs are defined by the JSON schemas. The deterministic inputs into the AI are stored, so we understand what we asked the system and we know how it started its task. And its outputs are stored in a structured format, meaning that these can be tracked and evaluated over time to monitor the performance of the system. Instead of creative, open text outputs, the AI is filling out a structured report, and providing the evidence of why it made a decision, recommendation, or analysis."
+    },
+    {
+      "type": "paragraph",
+      "text": "This structure enables a deep audit of the AI's performance. Every analysis run records the AI's reasoning: the documents it saw, the model it used, the version of the instruction it followed, and the date it ran. Analysis can be re-run numerous times against the same subject and audited for drift or difference. And it enables comparison between documents and the AI's output as the corpus itself changes. A reviewer can compare two versions of an act and observe how the AI's answers change. If someone asks, six months later, why the system recommended a particular action, we can show the precise clauses the AI considered, how they were compared, the wording that drove the conclusion, and the broader body of knowledge any answer was drawn from. That is what makes an AI analysis defensible enough to put in front of a decision-maker."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.10",
+      "title": "Working memory and an audit trail",
+      "caption": "Identical requests are answered for free from a cache. Every run is kept whole and never overwritten, and every finding traces to the document, section, and page behind it.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-10.jpg",
+        "alt": "Two panels. Left, working memory: a request, a fingerprint, a note that asking again is answered for free. Right, audit trail: a stack of immutable run cards v1, v2, v3 each with a chain icon, and an arrow from a finding down to source, section, page.",
+        "image_prompt": "A diagram in two panels. Left panel headed Working memory: a request box, a fingerprint icon, and a note reading asked again, answered for free. Right panel headed Audit trail: a stack of immutable run cards labelled v1, v2, v3, each with a small chain icon and a note reading documents, model, instruction, time, and an arrow from a single finding card down to a label reading source, section, page.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "A regulator reducing red tape"
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider a provincial regulator with a legal duty to reduce red tape while preserving the intent and integrity of its acts and regulations. In Alberta, every ministry carries the obligation to find and remove unnecessary processes, delays, and duplication without weakening the protections the rules exist to provide. For a regulator that approves projects under a large environmental statute, the practical question is sharp: where does our own legislation make an applicant do more, or wait longer, than the equivalent rules in other parts of the country require, for no environmental benefit? Answering that by hand would mean reading an entire act against the acts of a dozen other jurisdictions, clause by clause, a process which could take a team months or years to complete manually."
+    },
+    {
+      "type": "paragraph",
+      "text": "This challenge was an excellent opportunity for such a data transformation pipeline. The regulator's own act and its regulations became the baseline, and the equivalent statutes from every other province, the territories, and the federal Crown were carried through the same steps described above, with dozens of acts from fourteen jurisdictions structured, fingerprinted, and searchable side by side. For each of the two hundred sixty-five sections of the baseline act, the system found the closest matching section in each of the other jurisdictions, which produced just under eight thousand precomputed comparisons. It then read each Alberta section against its peers through four defined lenses of administrative burden: whether the rule dictates how to do something rather than the result to achieve, whether an approval rests on open-ended discretion with no published criteria or deadline, whether a decision has any time limit at all, and whether Alberta requires its own permit for something already authorized elsewhere."
+    },
+    {
+      "type": "paragraph",
+      "text": "The result was a little over one thousand structured observations, findings, and recommendations, each marking where Alberta is more demanding than a peer and, where it is, naming the jurisdiction whose lighter-touch wording is the best model, with a concrete suggestion for how Alberta could achieve the same protection with less friction. Because the AI produces structured outputs, the findings roll up into a heat map a reviewer can read at a glance, by subject area, by lens, and by which peer jurisdiction keeps appearing as the cleaner example. Every finding traces back to the page of the source it came from, so a recommendation can be evaluated and defended down to the clause. The lenses look only for burden without benefit, and the analysis is told explicitly to set aside any case where Alberta is simply more protective."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.11",
+      "title": "One clause, measured against the country",
+      "caption": "Each Alberta section is compared to its closest match in every other jurisdiction, read through four red-tape lenses, and turned into a finding. The findings roll up into a heat map by subject and by peer.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-11.jpg",
+        "alt": "Left: one card reading one Alberta section with a fan of arrows to ten small peer-jurisdiction cards with scores, passing through a four-stripe funnel labelled four red-tape lenses to produce a finding card. Right: a heat-map grid of act parts by jurisdiction.",
+        "image_prompt": "A diagram in two parts. On the left, a single card labelled One Alberta section with a fan of arrows reaching ten small cards labelled peer jurisdictions, each with a score, and the arrows pass through a four-stripe funnel labelled four red-tape lenses, producing a card labelled finding. On the right, a heat-map grid with rows labelled as parts of an act and columns labelled as jurisdictions, the cells shaded from light to dark.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "To benchmark an act against the country",
+      "value": "about $200",
+      "body": "Carrying thirty-one acts from fourteen jurisdictions through the full pipeline cost around two hundred dollars in model usage. The same pipeline works for other topics, like interprovincial regulation, occupational health, privacy, or tax law. Only the documents and the considerations change."
+    },
+    {
+      "type": "paragraph",
+      "text": "Following this analysis, the regulator now has an evidence base, built in hours, that turns a political question into benchmarked insights. The outputs of the agents present specific clauses where Alberta may ask more from regulated industries than our peers and presents a range of options in language and process for the regulator to consider. The tool is not specific to the environment. Swap the corpus and the objectives for a different ministry's documents and definitions of success, and the identical pipeline benchmarks any body of law. We have run this pattern of deep analysis and benchmarking dozens of times over the past year, across widely different subjects, to inform strategy and to give leaders a defensible basis for a decision."
+    },
+    {
+      "type": "pullquote",
+      "text": "The metadata changes from one ministry to the next. The pipeline stays the same.",
+      "cite": "Paper 21 · The Shape of Data"
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Good for people, not for AI"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alberta's K-12 curriculum is published, openly and well, at LearnAlberta.ca. For a parent reading on a Tuesday night, a teacher planning a unit, or a student looking something up, it is a genuinely good resource, organized into clear pages a person can browse. It is exactly the kind of open public information a government should provide. But in its published form, it is almost unusable to an AI. The content is spread across thousands of separate web pages and hundreds of PDFs, it is carried in two different curriculum frameworks that organize the same subjects in different ways, much of it is locked inside documents, and none of it carries the structure or the fingerprints a machine needs to reason over it. It was built for a person to read, and an AI agent cannot work with it until it is rebuilt."
+    },
+    {
+      "type": "paragraph",
+      "text": "We developed an agent to browse this curriculum and pass it through this data processing pipeline. A crawler agent systematically gathered every curriculum page and every linked document, more than two thousand four hundred files in all, the page reader turned forty-two thousand pages of PDF into clean text. The material was tagged with more than fifty thousand curriculum 'tags', each one a learning outcome or a piece of one, a set of subjects, and a grade. The public learning management system became an AI-readable database of learning materials, objectives, and outcomes, with structured, indexed knowledge sets an AI tool can query by subject, by grade, and across its full text."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.12",
+      "title": "From a public resource to a substrate, to an app",
+      "caption": "Scattered pages and PDFs, built for people, become one connected substrate of more than fifty thousand outcomes. On top of it, a grade-appropriate game was built in about an hour.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-12.jpg",
+        "alt": "A three-step left-to-right diagram: scattered web pages and PDFs labelled public curriculum built for people, an arrow labelled the pipeline into a tidy connected graph labelled AI-ready substrate fifty thousand outcomes, an arrow to a small game screen labelled Age of Alberta built in an hour.",
+        "image_prompt": "A three-step left-to-right diagram. Step one: a cluster of scattered web page and PDF icons under the label Public curriculum, built for people. Step two: an arrow labelled the pipeline leading into a tidy connected graph of nodes under the label AI-ready substrate, 50,000+ outcomes. Step three: an arrow to a small game-screen icon under the label Age of Alberta, built in an hour.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "keystat",
+      "label": "To make a province's curriculum AI-ready",
+      "value": "about $2,500",
+      "body": "Turning the entire published K-12 curriculum into an AI-ready substrate cost roughly twenty-five hundred dollars in model usage. A government can do this once, and then any Albertan, a parent, a teacher, a student, can build on it."
+    },
+    {
+      "type": "paragraph",
+      "text": "With the curriculum already extracted, structured, and tagged to grade and subject, it becomes possible to build new tools, resources, lesson plans, and even new applications which are completely curriculum aligned in a matter of minutes. Once the data was processed, it took less than an hour to begin to build new learning solutions on top of this machine-readable curriculum. Technology and Innovation created a small grade-appropriate learning game, called [Age of Alberta](https://ageofalberta.fun), which provided an interactive gamified experience in the style of Microsoft's Age of Empires, where the gameplay was curriculum-aligned math, reading, and homework exercises. The game took only an hour to build as a prototype because the data was ready for AI interpretation. A government can make a vast public corpus AI-ready one time, for the price of a modest laptop, and in doing so hand every parent, teacher, and student in the province the raw material to build their own tools on top, in an afternoon. Learning is grounded in fact, outcome driven in the curriculum, and ready for the AI tools parents, teachers, and students are already using."
+    },
+    {
+      "type": "pullquote",
+      "text": "Because the data was ready for AI, building a curriculum-aligned, age-appropriate, custom learning experience only took an hour and was completed for less than $4.",
+      "cite": "Paper 21 · The Shape of Data"
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Building reusable data processing layers"
+    },
+    {
+      "type": "paragraph",
+      "text": "These two systems look unrelated, one a legal benchmark for a regulator and one a curriculum for a classroom, but underneath they are the same machine. Documents in, structure and fingerprints in the middle, structured and audited answers out, and a durable body of knowledge left behind. We have built this same pipeline for legislation, for curriculum, for policy, for large bodies of technical documentation, and for market and competitive research across a range of sectors, dozens of times in the past year. Each time the subject changes, and the definitions of what matters change, and the pipeline does not."
+    },
+    {
+      "type": "paragraph",
+      "text": "Once the data is curated, and for little cost, it becomes fast to build meaningful tools and insights rapidly. Best of all, they are built for almost no cost and grounded in real, reliable data. The solutions carry the evidence needed to be challenged, audited, and to start serious conversations about how to introduce AI into a particular ministry or profession. A regulatory analysis prototype can be completed in hours for work which would be procured and completed manually over a year. And the work is auditable, because the data processing pipeline shows exactly what the AI worked with, and can be recreated and benchmarked. Rigorous data management practices are needed, but the payoff is profound."
+    },
+    {
+      "type": "paragraph",
+      "text": "For a leader deciding how to spend on AI, the lesson is to stop buying chat conversations and start building data pipelines and memory systems. A chat tool answers today's question quickly, but forgets just as fast. A pipeline turns a body of information into a durable, structured, auditable asset that answers this question and the next hundred, that other tools can be built on, and that, when the information is public, becomes a public good. The chatbot is the part everyone can see. The pipeline is the part that matters, and it costs far less to build than most expect. That is what it takes to make information AI-ready, and it is within reach of any government, and any Albertan, willing to build it."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 21.13",
+      "title": "Build the substrate once, build many tools on it",
+      "caption": "The expensive, durable work is the AI-ready substrate. Applications on top, a benchmark, a search, a learning game, a research brief, are comparatively cheap and quick.",
+      "image": {
+        "src": "public/images/wq3kd/en/fig-21-13.jpg",
+        "alt": "A central solid block labelled AI-ready substrate built once, with several small application icons radiating outward labelled red-tape benchmark, learning game, policy search, market research, compliance check.",
+        "image_prompt": "A radial diagram: at the centre a solid block labelled AI-ready substrate, built once; radiating outward, several small application icons each labelled with a different use such as red-tape benchmark, learning game, policy search, market research, compliance check. A caption reads Build the substrate once, build many tools on it.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "data-pipeline",
+        "rag",
+        "embeddings",
+        "benchmarking",
+        "open-data"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "category": "paper",
+  "related": [
+    "cux4h",
+    "uwpxr",
+    "eujjc"
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "Ministry of Technology and Innovation",
+    "author_verbatim": false
+  }
+}

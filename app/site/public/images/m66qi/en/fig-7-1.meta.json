@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\m66qi\\en\\fig-7-1.jpg",
+  "bytes_jpg": 323687,
+  "bytes_png_source": 3483197,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-18T21:04:08.589Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration split into two halves. On the left, the old way: a single narrow keyhole of light and one lone worker replacing a single plank on an enormous old ship, one plank at a time, the rest of the vessel dark and untouched. On the right, the new way: the whole ship and harbour lit and open, with many teams of builders surveying and bidding on entire sections at once from a large shared map. A sense of moving from one plank at a time to the whole estate at once. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration split into two halves. On the left, the old way: a single narrow keyhole of light and one lone worker replacing a single plank on an enormous old ship, one plank at a time, the rest of the vessel dark and untouched. On the right, the new way: the whole ship and harbour lit and open, with many teams of builders surveying and bidding on entire sections at once from a large shared map. A sense of moving from one plank at a time to the whole estate at once. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

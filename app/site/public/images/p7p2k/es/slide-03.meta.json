@@ -1,0 +1,17 @@
+{
+  "paper_id": "p7p2k",
+  "locale": "es",
+  "slot": "slide-03",
+  "out_path": "public\\images\\p7p2k\\es\\slide-03.jpg",
+  "bytes_jpg": 111613,
+  "bytes_png_source": 2103477,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:09:44.122Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram. A single sheet of paper sits at the top of the canvas, labelled exactly CLAUDE.md, with five short numbered lines sketched on it in Spanish (for example: 1. Sigue el plan; 2. Sé claro y conciso; 3. Respeta el contexto; 4. Verifica antes de actuar; 5. Entrega calidad). Below the paper, a thin arrow labelled DIRIGE Y CONFIGURA leads down into a stack of tools drawn as boxes titled HERRAMIENTAS DEL ARNÉS (PLANIFICAR, INVESTIGAR, CONSTRUIR, REVISAR, PUBLICAR). The paper is clearly the entry point, tagged PUNTO DE ENTRADA. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in Spanish (español). No photo realism, no people, no logos.\n\nSubject: An editorial diagram. A single sheet of paper sits at the top of the canvas, labelled exactly CLAUDE.md, with five short numbered lines sketched on it in Spanish (for example: 1. Sigue el plan; 2. Sé claro y conciso; 3. Respeta el contexto; 4. Verifica antes de actuar; 5. Entrega calidad). Below the paper, a thin arrow labelled DIRIGE Y CONFIGURA leads down into a stack of tools drawn as boxes titled HERRAMIENTAS DEL ARNÉS (PLANIFICAR, INVESTIGAR, CONSTRUIR, REVISAR, PUBLICAR). The paper is clearly the entry point, tagged PUNTO DE ENTRADA. Hand-drawn lines, navy and rust on warm cream paper. No people, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\p7p2k\\en\\slide-03.source.png"
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "zgym1",
+  "locale": "en",
+  "slot": "fig-04",
+  "out_path": "public\\images\\zgym1\\en\\fig-5-4.jpg",
+  "bytes_jpg": 187244,
+  "bytes_png_source": 2646893,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-01T03:52:51.195Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a single clean, well-organized data core glowing at the centre, surrounded by small AI agents working around it, with a lightweight interface assembling itself on demand in front of a single person and partly dissolving back into light. A sense of software giving way to agents working against governed data. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a single clean, well-organized data core glowing at the centre, surrounded by small AI agents working around it, with a lightweight interface assembling itself on demand in front of a single person and partly dissolving back into light. A sense of software giving way to agents working against governed data. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

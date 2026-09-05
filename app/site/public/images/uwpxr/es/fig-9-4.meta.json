@@ -1,0 +1,17 @@
+{
+  "paper_id": "uwpxr",
+  "locale": "es",
+  "slot": "fig-04",
+  "out_path": "public\\images\\uwpxr\\es\\fig-9-4.jpg",
+  "bytes_jpg": 187802,
+  "bytes_png_source": 2495267,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-07T20:33:04.738Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial-quality flowchart diagram, hand-drawn line work on warm off-white paper background (#F7F4ED). Two-tone palette of deep Alberta navy (#1A3A6E) for primary nodes and rust orange (#C2491A) for accents and arrows. Boxes have subtle shadows; labels in clean sans-serif; arrows are slightly curved with arrowheads. Architectural, calm, technical but human. Wide editorial aspect. No photo realism, no people, no logos, no watermarks. All text labels in English.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a short stacked column of small icons labelled DESARROLLADORES Y AGENTES. Arrows lead rightward through a tall central gate labelled BIFROST AI GATEWAY, drawn with three horizontal filter bands stacked inside it labelled DETECCIÓN Y ELIMINACIÓN DE IIP, PRESUPUESTOS DIARIOS, and AUDITORÍA Y REVISIÓN. One arrow passing through carries a small rust flag labelled IIP DETECTADA and bends back. On the right, cleared arrows reach a row of small boxes labelled MODELOS and HERRAMIENTAS. Calm, architectural, legible labels. No logos, no people. All text labels in es. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a short stacked column of small icons labelled DESARROLLADORES Y AGENTES. Arrows lead rightward through a tall central gate labelled BIFROST AI GATEWAY, drawn with three horizontal filter bands stacked inside it labelled DETECCIÓN Y ELIMINACIÓN DE IIP, PRESUPUESTOS DIARIOS, and AUDITORÍA Y REVISIÓN. One arrow passing through carries a small rust flag labelled IIP DETECTADA and bends back. On the right, cleared arrows reach a row of small boxes labelled MODELOS and HERRAMIENTAS. Calm, architectural, legible labels. No logos, no people. All text labels in es. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\uwpxr\\en\\fig-9-4.source.png"
+}

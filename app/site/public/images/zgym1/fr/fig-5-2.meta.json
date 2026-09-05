@@ -1,0 +1,17 @@
+{
+  "paper_id": "zgym1",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\zgym1\\fr\\fig-5-2.jpg",
+  "bytes_jpg": 213585,
+  "bytes_png_source": 2306147,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T06:39:12.036Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration of a software factory shown as a coordinated team of distinct specialist figures working around one large shared board or screen on which a clean modern application is taking shape. The specialists read as an architect with a blueprint, a builder, a tester, a security reviewer, and a data specialist, drawn as stylized agents rather than literal people, with lines of collaboration linking them to the shared board. A sense of an entire delivery team working in concert, made of software rather than a physical assembly line. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial illustration of a software factory shown as a coordinated team of distinct specialist figures working around one large shared board or screen on which a clean modern application is taking shape. The specialists read as an architect with a blueprint, a builder, a tester, a security reviewer, and a data specialist, drawn as stylized agents rather than literal people, with lines of collaboration linking them to the shared board. A sense of an entire delivery team working in concert, made of software rather than a physical assembly line. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\zgym1\\en\\fig-5-2.source.png"
+}

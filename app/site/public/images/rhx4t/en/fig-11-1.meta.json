@@ -1,0 +1,18 @@
+{
+  "paper_id": "rhx4t",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\rhx4t\\en\\fig-11-1.jpg",
+  "bytes_jpg": 260822,
+  "bytes_png_source": 2964289,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-18T00:00:00.000Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. No photo realism, no people, no logos.",
+  "image_prompt": "A clean editorial before-and-after diagram of one government application, split left to right with a large rust arrow across the middle. LEFT HALF, labelled \"LEGACY SYSTEM\": a boxy 1990s beige desktop computer showing a plain text terminal screen, with a paper form and a sealed mailing envelope beside it. RIGHT HALF, labelled \"MODERN SYSTEM\": the same application reborn as a clean modern web portal on a slim laptop, with a small PDF document and an upward upload arrow beside it for direct document submission. Background across the top: a quiet rural scene with a small farmhouse and a propane tank, set far from a thin natural gas pipeline running along the horizon. Include ONLY these exact text labels, each spelled exactly and large enough to be perfectly legible: \"LEGACY SYSTEM\", \"MODERN SYSTEM\", and the application title \"Remote Area Heating Allowance Application\" shown once on each side. Do NOT add any other words, field labels, menu items, or body text anywhere; leave all form fields and screen lines as blank ruled lines or empty boxes so there is no risk of misspelled or garbled text. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. No photo realism, no people, no logos.\n\nSubject: A clean editorial before-and-after diagram of one government application, split left to right with a large rust arrow across the middle. LEFT HALF, labelled \"LEGACY SYSTEM\": a boxy 1990s beige desktop computer showing a plain text terminal screen, with a paper form and a sealed mailing envelope beside it. RIGHT HALF, labelled \"MODERN SYSTEM\": the same application reborn as a clean modern web portal on a slim laptop, with a small PDF document and an upward upload arrow beside it for direct document submission. Background across the top: a quiet rural scene with a small farmhouse and a propane tank, set far from a thin natural gas pipeline running along the horizon. Include ONLY these exact text labels, each spelled exactly and large enough to be perfectly legible: \"LEGACY SYSTEM\", \"MODERN SYSTEM\", and the application title \"Remote Area Heating Allowance Application\" shown once on each side. Do NOT add any other words, field labels, menu items, or body text anywhere; leave all form fields and screen lines as blank ruled lines or empty boxes so there is no risk of misspelled or garbled text. Muted Alberta cream base with deep navy line work and small rust accents, archival print quality, no logos.",
+  "conditioned_on": null,
+  "regen_note": "Regenerated fresh with gpt-image-2 and a reduced, explicitly-spelled label set to eliminate garbled text."
+}

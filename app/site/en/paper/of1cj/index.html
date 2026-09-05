@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Technical: The Anti-Drift Harness · The Velocity White Papers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="As applications grow in complexity, changes to one part of the code can result in breakages elsewhere. Changes to a frontend feature may fall out of sync with the API, the controllers, the database, the security model, and the technical documentation. AI agents are not diligent enough on their own to understand or prevent these breakages. When these artifacts fall out of sync, we can say that &#39;drift&#39; occurs. This concept paper explains the &#39;Anti-Drift Harness&#39;, a set of automated helpers that watch for drift and flag issues for the builder agent in real-time." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/en/paper/of1cj/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/of1cj/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/of1cj/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/of1cj/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/of1cj/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Technical: The Anti-Drift Harness" />
+  <meta property="og:description" content="As applications grow in complexity, changes to one part of the code can result in breakages elsewhere. Changes to a frontend feature may fall out of sync with the API, the controllers, the database, the security model, and the technical documentation. AI agents are not diligent enough on their own to understand or prevent these breakages. When these artifacts fall out of sync, we can say that &#39;drift&#39; occurs. This concept paper explains the &#39;Anti-Drift Harness&#39;, a set of automated helpers that watch for drift and flag issues for the builder agent in real-time." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/en/paper/of1cj/" />
+  <meta property="og:site_name" content="The Velocity White Papers" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/of1cj.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/of1cj.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Technical: The Anti-Drift Harness" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/of1cj.jpg" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Technical: The Anti-Drift Harness" />
+  <meta name="twitter:description" content="As applications grow in complexity, changes to one part of the code can result in breakages elsewhere. Changes to a frontend feature may fall out of sync with the API, the controllers, the database, the security model, and the technical documentation. AI agents are not diligent enough on their own to understand or prevent these breakages. When these artifacts fall out of sync, we can say that &#39;drift&#39; occurs. This concept paper explains the &#39;Anti-Drift Harness&#39;, a set of automated helpers that watch for drift and flag issues for the builder agent in real-time." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Technical: The Anti-Drift Harness","description":"As applications grow in complexity, changes to one part of the code can result in breakages elsewhere. Changes to a frontend feature may fall out of sync with the API, the controllers, the database, the security model, and the technical documentation. AI agents are not diligent enough on their own to understand or prevent these breakages. When these artifacts fall out of sync, we can say that 'drift' occurs. This concept paper explains the 'Anti-Drift Harness', a set of automated helpers that watch for drift and flag issues for the builder agent in real-time.","url":"https://thevelocitywhitepapers.com/en/paper/of1cj/","inLanguage":"en-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Deputy Minister"},{"@type":"Person","name":"Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Government of Alberta · Ministry of Technology and Innovation"},"isPartOf":{"@type":"PublicationVolume","name":"The Velocity White Papers","url":"https://thevelocitywhitepapers.com/"},"keywords":"anti-drift, harness, agents, quality, observability, change-management","image":"https://thevelocitywhitepapers.com/public/og/of1cj.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 18 · Technical</p>
+      <h1>Technical: The Anti-Drift Harness</h1>
+      <p class="sub">How a set of automated helpers keeps every part of a growing codebase in agreement as an AI builds it, explained piece by piece.</p>
+      <div class="abstract"><strong>Abstract.</strong> As applications grow in complexity, changes to one part of the code can result in breakages elsewhere. Changes to a frontend feature may fall out of sync with the API, the controllers, the database, the security model, and the technical documentation. AI agents are not diligent enough on their own to understand or prevent these breakages. When these artifacts fall out of sync, we can say that &#39;drift&#39; occurs. This concept paper explains the &#39;Anti-Drift Harness&#39;, a set of automated helpers that watch for drift and flag issues for the builder agent in real-time.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Modern modular software applications consist of features which are often composed of dozens of files. These components often work as &#39;chains&#39; of connected pieces, spanning the written requirement, database design, program logic, user interfaces, documentation, and training resources. When an AI changes one piece, that component may easily fall out of sync with the rest of the codebase. Even though individual changes may be correct, the integrity of the application begins to erode with each subsequent change. To solve this problem, we build a harness which contains several different automated helpers to ensure that applications stay intact across a range of edits.
+
+
+## §01 The drift problem
+
+When asking AI to implement a change in one area, such as the addition of a new field on a form, the agent will complete this work rapidly. However, it might not check the rest of the code to see what else this change has impacted. For example, if you&#39;re adding a &#39;Middle Name&#39; field to a form, that information needs to be reflected in the database, the business logic, form validation, documentation, and even in the screenshots used for training. Because it is laser-focused on the task you give it, the AI agent often fails to perform the necessary checks to ensure the code in its entirety is intact.
+
+An experienced AI user will pause every few steps and prompt the agent to check everything, which the agent will do and often find that inconsistencies have been introduced. These inconsistencies are known as &#39;regressions&#39; or &#39;drift&#39; in the AI domain. Although the agent may catch this drift when prompted, it requires diligence on the user&#39;s part to remember to ask. But relying on the user to remember, or the AI to do the checks the same way each time, is risky. This is why we introduce a common set of procedures to detect drift and flag it for the agent proactively, whether or not anyone remembers.
+
+The drift is easy to miss. Often, the modified code may still work. But what is invisible is the breakage in the application&#39;s consistency and fidelity. And further, this drift opens up inconsistency which gets worse over time. If that same user interface has a &#39;Middle Name&#39; field, but the database lacks this, this bug may not be detected immediately. Worse, the AI agent will review this code later and may find the inconsistency, but there is no authoritative answer as to which file is correct. Issues begin to compound, and the AI may even revert one change because it finds the bug and makes the wrong attribution. Code is its own type of documentation, and when there are disagreements, the drift invisibly worsens. 
+
+&quot;An AI&#39;s code output is typically 98 to 100 percent functionally correct in that it compiles and runs. But its practices result in drift growing invisibly over time and the codebase fragmenting with each revision.&quot;
+
+
+## §02 A feature is a chain
+
+Modern application code attempts to be &#39;modular&#39;, meaning components are built once and reused several times as needed, and &#39;DRY&#39;, which is an acronym for &#39;Don&#39;t Repeat Yourself&#39;. These practices ensure that you create code once and that your applications are easy to maintain. But it also means that features are often broken up into small, interconnected pieces. When one file requires another file, we call it a dependency. Features then may be made up of &#39;chains&#39; of dependencies. When the AI changes one link in that chain, it often reliably updates the link or two right next to it, because the dependencies are clear, and then it stops. Later, when work resumes somewhere else, the AI may read a different part in the chain, now outdated, and build upon it. The chain breaks a little more each time. Remove a field from the database, for example, and that change has to ripple out to the screen, the documentation, and the training notes. Most of the time, it does not.
+
+Application drift frequently travels in two ways. It travels along one feature&#39;s chain, link by link. And it travels across features, when something shared, a renamed component or an outdated library, changes in one place and quietly breaks another. A good harness catches both, and it catches them while the work is happening, not in a cleanup months later. The following seven anti-drift controls provide strategies for identifying and maintaining integrity. Each one is built from small, reusable parts: short instruction files the AI follows (called skills), automatic triggers that fire at set moments (called hooks), and quick automated checks (called evals). These methods sit alongside the builder agent and support the audit of the development process.
+
+
+## §03 Control 1: Follow the change (Chain Walker)
+
+This first feature follows change outward along the chain of feature dependencies. The moment the AI edits a file, the walker starts at that file and steps to its neighbours in both directions: the pieces that feed into it and the pieces that depend on it. At each step it compares the two ends. Do the names, the fields, the promises still match? Where they do not, it records exactly what fell out of line. It keeps walking to a set distance and produces one tidy report of what drifted. Its advantage is reach: it checks the whole chain rather than the one or two links beside the change, and its findings are specific enough that a reviewer can see precisely what no longer agrees.
+
+
+## §04 Control 2: Map the activity (Fingerprint Heatmap)
+
+This method keeps a record of where the work is happening. Every time the AI touches a file, it adds a tally. A simple heat-map then shows the project as a grid of tiles, with the busiest files glowing brightest and the most recent change marked. On its own it finds no drift. What it gives you is a fingerprint of where the action has been, so the other, smarter checks know where to look first. It is cheap, needs no setup, and is useful on day one.
+
+
+## §05 Control 3: Small automatic tests (Chain Evals)
+
+This control performs a small, automatic test for one specific kind of mismatch. Does the database design match the script that builds it? Does the published interface match its documentation? Each test reads both ends and reports any difference. The tests live right next to the code and grow with the project: when a new kind of link appears, you add a test for it. Whenever the AI changes a file, only the tests that touch that file run. They are fast, they give the same answer every time, and because the team writes them, they catch exactly the mistakes this project tends to make.
+
+&quot;The anti-drift watcher never writes the application itself. It observes the actions of the builder, reads the evidence the automatic checks produce, confirms it against the code, and decides whether something is worth flagging. It is air traffic control, not the pilot.&quot; · The Anti-Drift Harness, design note
+
+
+## §06 Control 4: Make the save note count (Commit Spine)
+
+Developers already save their work in batches, each with a short note describing it (a commit). This approach makes that note do double duty. The note follows a set template that lists which pieces the change touched and which related pieces were checked. When the developer files the batch, an automatic check makes sure the note is complete before letting it through, and the AI drafts the note from what it actually changed. Because it happens at the moment work is filed away, the record is trustworthy, and over time the project&#39;s history becomes a searchable account of what changed and what was kept in step.
+
+
+## §07 Control 5: An index card per file (Dependency Manifest)
+
+This method assigns every important file a little index card listing what feeds into it and what depends on it. The card is rebuilt each time the file changes, and a quick check compares the card against the file&#39;s actual contents to spot anything inconsistent. A small diagram then shows the file in the middle, with what flows in stacked above and what flows out below, each marked healthy, stale, or broken. Because every relationship is written down plainly, the other checks can read the cards instead of re-reading all the code.
+
+
+## §08 Control 6: An end-of-step checklist (Drift Sweep)
+
+This runs the person&#39;s end-of-step checklist automatically, at the end of every step. It checks the obvious things: does the documentation match the live interface, do the database fields show up where they should, do the training notes describe the current screens? It produces one short report per step. If too much has drifted, it can stop the AI and require the drift be fixed before work continues. It runs once per step rather than on every edit, so its cost is predictable, and it can hold the line by refusing to move on until things are back in agreement.
+
+
+## §09 Control 7: The shared dashboard (Tile Board)
+
+This is the dashboard for the human and the AI. It draws the project as a grid, features down one side and the fourteen links across the top, and colours each square using whatever the other checks have found. It is a single page the team can open to see, at a glance, where everything stands, and it can show the results of any of the other approaches without changing them. Figure 17.7 shows it running live: the builder works, the anti-drift watcher sweeps across, and flagged notes pile up.
+
+
+## §10 Watchers on the side
+
+These controls bolt on to the builder agent. A single AI agent, overburdened with every concern at once, drift, security, testing, documentation, writing style, becomes overwhelmed, and its instructions balloon until they stop helping. The Anti-Drift Harness applies a watcher or supervisor approach. The builder keeps its attention on building. The watchers run separately, beside the project, as their own parallel agents. Each one observes the project&#39;s files, runs its own checks when something changes, and leaves a note, a ticket, in a shared folder for the builder. The builder agent reads those tickets at the start of its next step and handles them like any other task.
+
+Each watcher can run on its own schedule, and even on a cheaper AI for routine checks, saving the strongest model for the hard calls. Adding a new concern means adding a new watcher, not piling more onto the builder. Figure 17.7 is this idea in miniature: the anti-drift watcher observing, sweeping, and leaving notes while the builder works.
+
+
+## §11 How to combine them, and what is still open
+
+These methods are additive, and you might not need all seven. The simplest useful pairing is the heat-map plus the end-of-step sweep: one shows where work is happening, the other runs the checklist every step. Add stronger evals to support your development, and experiment with expanding coverage with a range of different watcher controls.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: anti-drift, harness, agents, quality, observability, change-management</p>
+      <p><a href="/en/paper/of1cj">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "en"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/en/paper/of1cj"));
+    })();
+  </script>
+</body>
+</html>

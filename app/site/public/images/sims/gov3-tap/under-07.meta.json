@@ -1,0 +1,12 @@
+{
+  "paper_id": "gov3-tap",
+  "locale": "shared",
+  "slot": "under-07",
+  "style_prompt": "Redraw this exact composition as the engineer's underdrawing hidden beneath an embroidered tapestry: precise ink construction lines on aged drafting vellum, ruled guides, measurement ticks, schematic symbols, circuit-like connection traces, faint grid, sepia and indigo ink. Keep every figure and object in exactly the same position and silhouette as the source image; replace the woven texture with technical line work. No letters, no words.",
+  "image_prompt": "Conditioned on panel-07 (composition-locked underdrawing). Panel scene: At the centre, a great domed legislature radiates woven golden rays like a romanesque sun; beneath it, eight horizontal foundation strata in different coloured threads form its bedrock; around it, people and orange automata stand together in calm pairs; the old towers appear only as faint pale outlines fading at the panel edges.",
+  "composed_prompt": "Redraw this exact composition as the engineer's underdrawing hidden beneath an embroidered tapestry: precise ink construction lines on aged drafting vellum, ruled guides, measurement ticks, schematic symbols, circuit-like connection traces, faint grid, sepia and indigo ink. Keep every figure and object in exactly the same position and silhouette as the source image; replace the woven texture with technical line work. No letters, no words.",
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-12T18:26:54.653449Z",
+  "jpg_quality": 82,
+  "reference": "panel-07.src.png"
+}

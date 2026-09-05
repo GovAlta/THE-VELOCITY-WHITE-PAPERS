@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-07",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-7.jpg",
+  "bytes_jpg": 103506,
+  "bytes_png_source": 2083142,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:43:54.444Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A flowchart: three short text snippets on the left, each with an arrow into a box labelled AI builds a numerical fingerprint, producing rows of small dots arranged as vectors, flowing into a database cylinder labelled similarity index. A small note reads: similar meaning, similar fingerprint.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A flowchart: three short text snippets on the left, each with an arrow into a box labelled AI builds a numerical fingerprint, producing rows of small dots arranged as vectors, flowing into a database cylinder labelled similarity index. A small note reads: similar meaning, similar fingerprint.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

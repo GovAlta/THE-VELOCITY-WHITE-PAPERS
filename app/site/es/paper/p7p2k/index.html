@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>El arnés bien construido · Los libros blancos Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Las herramientas de programación como Cursor, Lovable y Claude Code producen aplicaciones que a menudo carecen de los controles que el sector público exige. Los agentes de IA suelen ser testigos poco fiables de su propio rendimiento. Las instrucciones claras, las pruebas y las plantillas ayudan a superar estos desafíos. Alberta ha desarrollado y publicado un conjunto de archivos denominado «arnés» que define con precisión las expectativas para la IA, lo que permite obtener resultados de calidad empresarial a la velocidad de una aplicación desarrollada por intuición." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/es/paper/p7p2k/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/p7p2k/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/p7p2k/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/p7p2k/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/p7p2k/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="El arnés bien construido" />
+  <meta property="og:description" content="Las herramientas de programación como Cursor, Lovable y Claude Code producen aplicaciones que a menudo carecen de los controles que el sector público exige. Los agentes de IA suelen ser testigos poco fiables de su propio rendimiento. Las instrucciones claras, las pruebas y las plantillas ayudan a superar estos desafíos. Alberta ha desarrollado y publicado un conjunto de archivos denominado «arnés» que define con precisión las expectativas para la IA, lo que permite obtener resultados de calidad empresarial a la velocidad de una aplicación desarrollada por intuición." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/es/paper/p7p2k/" />
+  <meta property="og:site_name" content="Los libros blancos Velocity" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/p7p2k.es.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/p7p2k.es.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="El arnés bien construido" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/p7p2k.es.jpg" />
+  <meta property="article:published_time" content="2026-06-16" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="El arnés bien construido" />
+  <meta name="twitter:description" content="Las herramientas de programación como Cursor, Lovable y Claude Code producen aplicaciones que a menudo carecen de los controles que el sector público exige. Los agentes de IA suelen ser testigos poco fiables de su propio rendimiento. Las instrucciones claras, las pruebas y las plantillas ayudan a superar estos desafíos. Alberta ha desarrollado y publicado un conjunto de archivos denominado «arnés» que define con precisión las expectativas para la IA, lo que permite obtener resultados de calidad empresarial a la velocidad de una aplicación desarrollada por intuición." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"El arnés bien construido","description":"Las herramientas de programación como Cursor, Lovable y Claude Code producen aplicaciones que a menudo carecen de los controles que el sector público exige. Los agentes de IA suelen ser testigos poco fiables de su propio rendimiento. Las instrucciones claras, las pruebas y las plantillas ayudan a superar estos desafíos. Alberta ha desarrollado y publicado un conjunto de archivos denominado «arnés» que define con precisión las expectativas para la IA, lo que permite obtener resultados de calidad empresarial a la velocidad de una aplicación desarrollada por intuición.","url":"https://thevelocitywhitepapers.com/es/paper/p7p2k/","inLanguage":"es","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Deputy Minister"},{"@type":"Person","name":"Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Gobierno de Alberta · Ministerio de Tecnología e Innovación"},"datePublished":"2026-06-16","isPartOf":{"@type":"PublicationVolume","name":"Los libros blancos Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"velocity, harness, claude-code, agents, skills, hooks, cyber, open-source","image":"https://thevelocitywhitepapers.com/public/og/p7p2k.es.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 06 · Technical</p>
+      <h1>El arnés bien construido</h1>
+      <p class="sub">Cómo el sector público puede desarrollar y entregar software de nivel empresarial con rapidez, sin reducir los estándares de calidad.</p>
+      <div class="abstract"><strong>Abstract.</strong> Las herramientas de programación como Cursor, Lovable y Claude Code producen aplicaciones que a menudo carecen de los controles que el sector público exige. Los agentes de IA suelen ser testigos poco fiables de su propio rendimiento. Las instrucciones claras, las pruebas y las plantillas ayudan a superar estos desafíos. Alberta ha desarrollado y publicado un conjunto de archivos denominado «arnés» que define con precisión las expectativas para la IA, lo que permite obtener resultados de calidad empresarial a la velocidad de una aplicación desarrollada por intuición.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Los modelos de lenguaje de gran escala (LLM, por sus siglas en inglés) han alcanzado un alto nivel de competencia en el desarrollo de código de aplicaciones. A principios de 2025, en el marco de nuestro programa AI Maximalist, el personal de Tecnología e Innovación comenzó a evaluar estas herramientas para determinar cómo podrían utilizarse en el entorno gubernamental. Se exploraron diversas herramientas de programación agéntica, como Cursor, Lovable, Gemini CLI y Claude Code. Estas herramientas aceleraron el desarrollo de aplicaciones para los desarrolladores con experiencia y lo hicieron accesible incluso para el personal sin formación técnica. El tiempo necesario para transformar una idea en un prototipo funcional pasó de aproximadamente seis semanas (según la referencia establecida por la dirección de esa unidad) a tan solo treinta minutos. Este incremento en la velocidad ha transformado la forma de trabajar de los equipos. Ahora, los expertos en la materia pueden participar en el codiseño mientras se desarrollan las ideas, aportando retroalimentación y aprobación en tiempo real. Este factor por sí solo ha generado un aumento significativo en la velocidad de entrega, reduciendo o eliminando el intercambio de correos electrónicos, capturas de pantalla y diseños para revisión manual, que antes consumía mucho tiempo. Con frecuencia, este tipo de trabajo puede completarse ahora en una sola sesión.
+
+Esta experimentación también permitió identificar importantes carencias cuando se encargaba a estos agentes la producción de aplicaciones altamente seguras, reproducibles y conformes con la normativa. Fue necesario abordar varios desafíos antes de que estas herramientas pudieran utilizarse en la prestación cotidiana de servicios gubernamentales.
+
+
+## §01 Trabajar en sintonía con los agentes de IA
+
+A pesar de las mejoras en el rendimiento, los AI Maximalists de Alberta identificaron varios desafíos significativos en las prácticas de programación con IA.
+
+En primer lugar, resultaba difícil reproducir la misma aplicación en dos ocasiones. Debido a su naturaleza probabilística, cada interacción con la IA daba lugar a aplicaciones con una apariencia, una disposición y una funcionalidad diferentes. La imposibilidad de replicar la misma aplicación constituía un obstáculo importante para el uso de la IA en el entorno gubernamental. Además, erosionaba la confianza de los ministerios asociados y generaba trabajo adicional cuando no se alcanzaban los objetivos previstos. También dificultaba la colaboración entre personas y equipos cuyos sistemas de IA adoptaban decisiones de diseño o técnicas muy distintas.
+
+En segundo lugar, estas herramientas parecen priorizar la experiencia del usuario, pero con frecuencia no implementan los protocolos de seguridad necesarios. Si bien los prototipos pueden desarrollarse con rapidez, corregir las deficiencias en el modelo de seguridad suele requerir un tiempo y un esfuerzo considerables, incluso con ayuda de la IA. Al igual que ocurre con las interfaces de usuario divergentes, las correcciones aplicadas al código de seguridad, accesibilidad y compatibilidad móvil son a menudo inconsistentes y difíciles de reproducir entre dos aplicaciones distintas. El tiempo ahorrado en el desarrollo de la interfaz puede perderse fácilmente en la implementación de los controles de seguridad necesarios para proteger la postura de ciberseguridad de estas aplicaciones. Cabe aclarar que estos no eran problemas con la tecnología de IA subyacente, sino con la manera en que se estaba utilizando.
+
+El tercer desafío significativo fue la excesiva confianza del agente de programación. Los agentes de IA afirman de manera habitual que su código está completo, pero al ser examinados muestran carencias importantes. Los agentes de IA son testigos poco fiables del estado y el rendimiento de los programas que crean; en consecuencia, el personal sin formación técnica no podía evaluar con precisión si una aplicación estaba lista para su uso. Confiar en el resultado del agente sin una evaluación independiente produjo resultados erróneos que no superaron las auditorías de seguridad posteriores.
+
+
+Analizando estas limitaciones, el equipo comenzó a abordar estos desafíos mediante ensayo y error, experimentación y un enfoque creativo.
+
+
+## §02 Experimentación y juego
+
+Desde el inicio del programa AI Maximalist, en marzo de 2025, hasta la fecha, en mayo de 2026, el Departamento ha desarrollado más de 1 000 aplicaciones. La gran mayoría son prototipos, pero decenas han llegado a producción y generan valor real. Los prototipos siguen un patrón de exploración, experimentación e incluso exploración lúdica. Sin ese espíritu exploratorio, es imposible que el personal aprenda los límites de estos modelos y descubra cómo trabajar con ellos de manera eficaz. Puede resultar extraño hablar de «juego» en este contexto, especialmente en un entorno gubernamental, pero es así como los seres humanos aprendemos: aprendemos mejor cuando nos encontramos en un entorno psicológicamente seguro, cuando nos desafiamos a superar nuestros límites y cuando disfrutamos del proceso. En más de 1 000 aplicaciones que hemos desarrollado, hemos explorado los límites de la IA y encontrado sus verdaderas carencias. Cada hallazgo nos permitió capturar y perfeccionar nuestros propios procesos, cerrando y superando esas brechas con mejores instrucciones, mejores scripts y mejores pruebas. Identificamos donde falla la IA y encontramos formas innovadoras de aprovechar su enorme capacidad, reconociendo al mismo tiempo sus limitaciones reales, a veces evidentes. A lo largo de este período de exploración, hemos creado un recetario sobre cómo trabajar bien.
+
+De manera significativa, la variabilidad entre personas también resultó ser un factor determinante. Dos personas pueden tener experiencias muy distintas con el mismo modelo en la misma tarea. La forma en que se introduce una idea, se explica el contexto y se establece la dirección puede generar resultados muy diferentes. Y en un entorno donde la reproducibilidad y la calidad son fundamentales, estas pequeñas diferencias pueden producir una divergencia inaceptable en el uso de la IA entre distintas personas.
+
+
+El potencial de la IA necesitaba un conjunto de reglas dentro de las cuales funcionar con eficacia.
+
+
+## §03 El «arnés» de IA: una presentación
+
+Para obtener resultados reproducibles, es necesario seguir un conjunto de patrones y estilos que aumenten la probabilidad de que el modelo ejecute la serie correcta de tareas. Para un modelo de lenguaje de gran escala, no es una sorpresa que estas reglas se codifiquen mediante palabras. Las instrucciones eficaces para la IA —denominadas prompts— expresan la intención con un alto grado de especificidad. Cuando queremos que la IA sea creativa, proporcionamos instrucciones orientadas a resultados y le dejamos explorar. Cuando queremos ser prescriptivos, proporcionamos instrucciones paso a paso basadas en reglas. A través de la iteración, Alberta ha reunido miles de estas instrucciones en un conjunto de las denominadas «habilidades» de IA: instrucciones que describen los métodos y los resultados que buscamos alcanzar. Estas habilidades son muy «opinadas», término técnico que significa que dejamos poco margen a la imaginación de nuestros programadores de IA. También procuran ser lo más minimalistas posible, evitando la prosa para preservar el espacio de atención de la ventana de contexto del agente de IA. Encontrar ese punto de equilibrio es verdaderamente un arte que se domina con la práctica.
+
+A través de sucesivas rondas de ensayo y error, el personal de Alberta desarrolló pasos para mejorar la garantía de calidad y consistencia en los resultados del código. Partiendo de funcionalidades pequeñas de aplicaciones (como una página de inicio o una API), el equipo elaboró instrucciones para que el LLM las siguiera en sus prompts, lo que redujo la creatividad del modelo al limitar la incertidumbre. Estas normas, conocidas ahora como «archivos de habilidades», se proporcionan al agente de programación al inicio de cada tarea. Una especificación bien redactada redujo la incertidumbre y dio lugar a un resultado consistente.
+
+Estas instrucciones se agrupan en un conjunto conocido como «arnés».
+
+
+## §04 Construcción de arneses
+
+Construir arneses es difícil y requiere una diligencia extrema. Se trata de reunir las habilidades que una persona podría adquirir intuitivamente a lo largo de 10 a 20 años.
+
+Es fundamental no construir un arnés de manera improvisada. Usar la IA para crear arneses presenta el «problema de la fotocopiadora»: cada versión derivada degrada la calidad, lo que provoca fallos futuros e impredecibles. Es necesario tomarse el tiempo para reflexionar sobre cada funcionalidad y probar (y volver a probar) cada iteración para garantizar que el sistema produzca fielmente lo que se necesita. Debe evitarse a toda costa la generación de contenido de baja calidad.
+
+Hay que mostrarle a la IA cómo es un buen resultado. En el ámbito tecnológico, esto implica proporcionar una aplicación lo más cercana posible a la perfección como plantilla para que la emule. Esto es similar a cómo las academias de arte a lo largo de la historia han enseñado a pintar: estudiando a los grandes maestros de su cultura y época, y copiando y emulando fielmente sus procesos hasta alcanzar la mayor perfección posible. Estas plantillas «maestras» lo son todo para una IA.
+
+&quot;Parafraseando la Tercera Ley de Arthur C. Clarke, que establece que cualquier tecnología suficientemente avanzada es indistinguible de la magia, yo diría que cualquier plantilla suficientemente avanzada es indistinguible del código. El mejor arnés es código.&quot; · Janak Alford, viceministro, Ministerio de Tecnología e Innovación
+
+Un arnés se compone de un pequeño número de partes que funcionan de manera conjunta. Al usar Claude Code, el punto de entrada para acceder a estas habilidades es un archivo denominado CLAUDE.md. Otros agentes de programación utilizan archivos equivalentes, que también suelen llamarse agent.md. El agente lee este archivo al inicio de cada sesión y sigue sus instrucciones como las reglas del proyecto. Es breve y claro: qué es el proyecto, a quién sirve, qué normas seguir, qué puede modificar el agente y qué nunca debe hacer. Es el único lugar donde quedan registradas las decisiones establecidas del proyecto, de modo que tanto el agente como cualquier persona que se incorpore parten de la misma base.
+
+En Claude Code, las habilidades se encuentran en una carpeta llamada .claude/skills. Cada habilidad es un pequeño manual para un tipo de trabajo específico: cómo estructurar los requisitos, cómo redactar una migración de base de datos, cómo ejecutar una auditoría de seguridad, cómo revisar un fragmento de texto. El agente no las carga todas a la vez. Al inicio, lee únicamente el nombre de cada habilidad y una descripción de una línea, suficiente para saber cuándo aplica cada una, y carga el manual completo solo cuando la tarea que tiene frente a sí lo requiere. Las habilidades se incorporan cuando son necesarias, del mismo modo que un artesano recurre a su caja de herramientas para sacar la única que el trabajo exige.
+
+La plantilla es la obra maestra en torno a la cual se construye el arnés, y es deliberadamente prescriptiva en cuanto a la tecnología. La pila tecnológica es fija y de código abierto: Vue JS con Vite en el frontend, Node JS con Express en el backend, Postgres 18 para los datos e inicio de sesión único para la gestión de identidad. Se entrega como un par funcional —un cliente y un servidor— con los problemas técnicos más complejos ya resueltos y en funcionamiento desde el primer día. Más de cien decisiones que un sistema público debe tomar correctamente —cómo inicia sesión un usuario, cómo se valida la entrada de datos, cómo se gestionan los secretos, cómo la aplicación registra eventos, se defiende y cumple con el estándar de accesibilidad— se toman una sola vez, aquí, antes de que comience cualquier proyecto.
+
+Las habilidades, los estándares, las plantillas y los requisitos expresados con total claridad son los factores que determinan el resultado. Los requisitos indican qué construir. Las habilidades indican cómo hacerlo, guiando el trabajo a través de cada etapa en orden: desde los requisitos hasta la planificación, la arquitectura, el desarrollo, las pruebas y el despliegue, donde cada etapa se niega a avanzar hasta que la anterior se haya completado correctamente. Los estándares indican como es un buen resultado. Y la plantilla lleva todo esto ya integrado, de modo que en cualquier parte que mire el agente, encontrará el mismo conjunto de preferencias. Esto es también lo que permite que una persona sin formación técnica tenga éxito: añade el contenido que su servicio necesita sobre una base que ya ha superado la revisión de un auditor, y lo único que cambia entre proyectos es aquello que genuinamente debe cambiar.
+
+Junto a las habilidades de construcción actúan cuatro agentes de revisión, identificados por colores, que verifican cada aplicación en términos de calidad, coherencia y seguridad durante su desarrollo. El verde cubre la higiene del código y de la cadena de suministro; el amarillo, la redacción; el rojo, las pruebas adversariales desde el exterior; y el azul, la revisión defensiva. Están integrados en el arnés y son el tema del siguiente libro blanco, Agentes rojos, azules, verdes y amarillos.
+
+Muchos de nuestros agentes funcionan actualmente con Claude, utilizando su agente de codificación y su kit de desarrollo de software (SDK). Las tareas de mayor envergadura —como el razonamiento a largo plazo sobre un proyecto, la planificación, la arquitectura y el modelado de amenazas— emplean Claude Opus, que puede ejecutar un ciclo de entrega completo, en muchos casos dentro de la ventana de contexto de un millón de tokens de una sola sesión. Muchas tareas más pequeñas que se ejecutan en paralelo —los análisis exhaustivos, el análisis de datos y las revisiones— funcionan con Claude Sonnet, comparativamente más económico y rápido, a través del SDK de agentes. Estos agentes ligeros pueden coordinarse para completar numerosas tareas, con rapidez y en paralelo, con un conjunto compartido de herramientas y recursos.
+
+Aunque este libro blanco se centra en Claude, las habilidades y los estándares que se desarrollan son independientes del modelo y pueden ejecutarse con cualquier modelo de IA líder de frontera o de código abierto. La propiedad intelectual del arnés es lo que diferencia el resultado más que el modelo específico. Cualquier persona, equipo u organización puede codificar y compartir estas habilidades, elevando la capacidad común de todos los integrantes del equipo. De repente, todos disponen de las mejores habilidades de codificación, de recopilación de requisitos, de planificación de proyectos y de seguridad. Son como herramientas en su cinturón de trabajo agéntico. Aun así, es necesario aprender a utilizarlas.
+
+
+## §05 Aplicación del arnés a escala
+
+Alberta cuenta con un programa de inversión en sus funcionarios públicos denominado la Academia de IA de Alberta. Este programa se aborda en profundidad en un libro blanco subsiguiente, pero basta con señalar que miles de funcionarios públicos y más de diez mil participantes del sector público han utilizado la plataforma AlbertaAIAcademy.com para aprender los fundamentos del uso eficaz de la IA, desde la creación de instrucciones (prompts) hasta la entrega de productos. El personal participa en «cohortes»: grupos de entre sesenta y seiscientas personas que avanzan a lo largo de tres niveles.
+
+La cohorte más reciente de Nivel 3 se desarrolló durante seis días, en los que los participantes adoptaron un enfoque de entrega basado en el arnés. Los participantes procedían de distintos perfiles y niveles de jerarquía; tres de los cinco viceministros adjuntos del departamento estuvieron presentes como estudiantes, junto a directores ejecutivos, directores, gerentes, personal e internos. Al inicio de la semana, pocos se habrían considerado ingenieros de software. Sin embargo, todos estuvieron dispuestos a asumir el rol de constructores, trabajando junto a la IA con un enfoque basado en el arnés.
+
+A lo largo de esos seis días, la cohorte produjo más de quinientas sesenta aplicaciones funcionales. Para graduarse en el Nivel 3, la aplicación de cada estudiante debía superar la revisión de ciberseguridad, la verificación de accesibilidad y el estándar de apariencia visual en su primera versión publicada.
+
+Resultado de la cohorte de Nivel 3 560 / 100. Más de quinientas sesenta aplicaciones producidas por cien estudiantes en seis días.
+
+En el último día del curso, los integrantes del equipo de ciberseguridad se conectaron con su propio conjunto de herramientas y analizaron cada entrega. Las mejores superaron el umbral con un dictamen favorable: cero vulnerabilidades de ciberseguridad conocidas, cero infracciones de accesibilidad y pleno cumplimiento del estándar gubernamental. Muchos de los mejores métodos desarrollados por el equipo de ciberseguridad quedaron integrados de forma nativa en los arneses de IA que utilizaban los estudiantes, de modo que la ciberseguridad era una prioridad de primer orden para el agente. En cada confirmación de cambios y en cada hito, es posible ejecutar estos agentes para realizar más de noventa y cinco verificaciones. Las aplicaciones se publican con su propio dictamen favorable y los registros que lo acreditan. Para cuando el equipo de ciberseguridad debía dar su aprobación final, todos los problemas de seguridad ya estaban mitigados, lo que resultó en aplicaciones altamente coherentes, fáciles de comprender y plenamente conformes con los requisitos de ciberseguridad desde el primer momento.
+
+&quot;Integramos al equipo de ciberseguridad desde el principio. Les pedimos que construyeran el agente de revisión más exigente que pudieran imaginar. Luego lo incorporamos al arnés.&quot; · Janak Alford, viceministro, Ministerio de Tecnología e Innovación
+
+
+## §06 Lecciones aprendidas
+
+Al reflexionar sobre los últimos 16 meses de aprendizaje en los programas de IA Maximalista, hay algunas conclusiones clave que vale la pena destacar:
+
+Dese tiempo para experimentar. Estos métodos no son ni evidentes ni sencillos, y dedicar tiempo del personal al aprendizaje, la creación y el perfeccionamiento de estas metodologías es una inversión que vale la pena.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: velocity, harness, claude-code, agents, skills, hooks, cyber, open-source</p>
+      <p><a href="/es/paper/p7p2k">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "es"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/es/paper/p7p2k"));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "paper_id": "cux4h",
+  "locale": "en",
+  "slot": "fig-02",
+  "out_path": "public\\images\\cux4h\\en\\fig-1-2.jpg",
+  "bytes_jpg": 351538,
+  "bytes_png_source": 3422002,
+  "model": "gpt-image-1",
+  "generated_at": "2026-05-31T16:10:38.525Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "A lone figure standing before a vast wall of dense overlapping code and symbols, with faint geometric constellations and connecting lines emerging from the noise to reveal a hidden underlying structure. A sense of pattern surfacing from chaos.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: A lone figure standing before a vast wall of dense overlapping code and symbols, with faint geometric constellations and connecting lines emerging from the noise to reveal a hidden underlying structure. A sense of pattern surfacing from chaos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

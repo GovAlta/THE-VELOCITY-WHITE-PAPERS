@@ -1,0 +1,72 @@
+{
+  "_note": "Privacy page for one locale. A faithful port of the Government of Alberta privacy statement (alberta.ca/privacystatement) with two changes: the Personal information section is reduced to one line because this site collects none, and the third-party cookie list is reduced to Google Analytics (the only third-party product used). The sibling .<other>.json holds the translation.",
+  "page": {
+    "eyebrow": "Privacidad",
+    "title_lead": "Declaración de",
+    "title_em": "privacidad.",
+    "lede": "El Gobierno de Alberta se compromete a proteger su privacidad mientras visita este sitio."
+  },
+  "sections": [
+    {
+      "heading": "Recopilación de información",
+      "paras": [
+        "Toda la información se recopila de conformidad con la Parte 1, División 1, Sección 4(c) de la [Ley de Protección de la Privacidad](https://open.alberta.ca/publications/p28p5) (POPA, por sus siglas en inglés).",
+        "Cuando usted visita este sitio, nuestro servidor web recopila automáticamente una cantidad limitada de información estándar necesaria para el funcionamiento y la evaluación del sitio. Esta información no se utiliza para identificar a las personas que visitan el sitio, ni se divulga a otros organismos públicos o particulares.",
+        "La información recopilada identifica lo siguiente:"
+      ],
+      "bullets": [
+        "the page from which you arrived",
+        "the date and time of your page request",
+        "the IP address your computer is using to receive information",
+        "the type and version of your browser",
+        "the name and size of the file you request"
+      ]
+    },
+    {
+      "heading": "Acceso a la información",
+      "paras": [
+        "La [Ley de Acceso a la Información](https://open.alberta.ca/publications/a01p4) (ATIA, por sus siglas en inglés) permite acceder a la información en poder de organismos públicos que no está disponible por otros medios, y faculta a las personas para solicitar la corrección de su propia información personal que un organismo público conserve; esto se denomina una solicitud de Acceso a la Información (ATI). El formulario de solicitud ATI está disponible en la [página de eServicios](https://eservices.alberta.ca/ati-request.html). Para obtener más información, consulte el [directorio de coordinadores de ATI](https://www.alberta.ca/lookup/find-an-ati-coordinator.aspx) para localizar una oficina de ATI y determinar si el ministerio de su interés dispone de registros públicos accesibles."
+      ]
+    },
+    {
+      "heading": "Información personal",
+      "paras": [
+        "No se recopila ningún dato personal mediante el uso de este sistema.",
+        "Para obtener más información sobre las políticas descritas aquí, comuníquese con el Ministerio de Tecnología e Innovación en [ti.minister@gov.ab.ca](mailto:ti.minister@gov.ab.ca)."
+      ]
+    },
+    {
+      "heading": "Cookies",
+      "paras": [
+        "Cuando usted visita un sitio web, este puede depositar un fragmento de datos, denominado cookie web, en los archivos temporales de su navegador.",
+        "Si lo desea, puede modificar la configuración de su navegador para rechazar las cookies o para que le avise cuando un sitio esté a punto de depositar cookies en su disco duro.",
+        "Los sitios web del Gobierno de Alberta utilizan cookies para recopilar información estadística anónima, como el tipo de navegador, el tamaño de pantalla, los patrones de tráfico y las páginas visitadas. Esta información nos ayuda a ofrecerle un mejor servicio. No almacenamos información personal en las cookies, ni recopilamos información personal sin su conocimiento mientras navega por el sitio."
+      ]
+    },
+    {
+      "heading": "Cookies de aplicaciones de terceros",
+      "paras": [
+        "Este sitio utiliza un producto de terceros, Google Analytics. Consulte la [declaración de privacidad de Google Analytics](https://policies.google.com/privacy) para conocer cómo rastrea y utiliza la información.",
+        "Los videos incrustados utilizan el modo de privacidad mejorada de YouTube, servido desde el dominio sin cookies, de modo que un video no establece cookies a menos que usted decida reproducirlo. El sitio también conserva una pequeña cantidad de información en el almacenamiento local de su navegador para recordar qué documentos ha visitado y su preferencia de idioma; esta información nunca abandona su dispositivo."
+      ]
+    },
+    {
+      "heading": "Seguridad",
+      "paras": [
+        "El sistema informático del Gobierno de Alberta utiliza software para supervisar intentos no autorizados de cargar o modificar información, o de afectar el servicio que prestamos. No se realizan intentos de identificar a los usuarios ni sus patrones de uso, salvo en el marco de investigaciones realizadas por las autoridades competentes."
+      ]
+    }
+  ],
+  "lead_ministry": "Technology and Innovation",
+  "governing": {
+    "label": "Declaración de privacidad del Gobierno de Alberta",
+    "href": "https://www.alberta.ca/privacystatement"
+  },
+  "_meta": {
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    }
+  }
+}

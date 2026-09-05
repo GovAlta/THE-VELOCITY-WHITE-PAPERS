@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>Git Insights · The Velocity White Papers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. Fifty agents read 466 million lines of code in roughly 20 hours, mapping the digital landscape and capabilities of government. This paper explains the problem, shows in detail how the tool works, and reveals what the scans found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/en/paper/bbkac/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/bbkac/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/bbkac/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/bbkac/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/bbkac/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Git Insights" />
+  <meta property="og:description" content="Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. Fifty agents read 466 million lines of code in roughly 20 hours, mapping the digital landscape and capabilities of government. This paper explains the problem, shows in detail how the tool works, and reveals what the scans found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/en/paper/bbkac/" />
+  <meta property="og:site_name" content="The Velocity White Papers" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/bbkac.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/bbkac.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Git Insights" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/bbkac.jpg" />
+  <meta property="article:published_time" content="2026-06-16" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Git Insights" />
+  <meta name="twitter:description" content="Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. Fifty agents read 466 million lines of code in roughly 20 hours, mapping the digital landscape and capabilities of government. This paper explains the problem, shows in detail how the tool works, and reveals what the scans found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Git Insights","description":"Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. Fifty agents read 466 million lines of code in roughly 20 hours, mapping the digital landscape and capabilities of government. This paper explains the problem, shows in detail how the tool works, and reveals what the scans found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code.","url":"https://thevelocitywhitepapers.com/en/paper/bbkac/","inLanguage":"en-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Ministry of Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Government of Alberta · Ministry of Technology and Innovation"},"datePublished":"2026-06-16","isPartOf":{"@type":"PublicationVolume","name":"The Velocity White Papers","url":"https://thevelocitywhitepapers.com/"},"keywords":"git-insights, code-analysis, agents, technical-debt, cybersecurity","image":"https://thevelocitywhitepapers.com/public/og/bbkac.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 03 · Technical</p>
+      <h1>Git Insights</h1>
+      <p class="sub">We pointed AI at the whole of Alberta&#39;s code estate to get the ground truth. Here is how it works and what it found.</p>
+      <div class="abstract"><strong>Abstract.</strong> Alberta holds its code assets in GitHub Enterprise, but the estate had grown into a mire where prototypes mixed with production and no dataset linked to the next. Leadership could not get a definitive answer about what we run or how healthy it is. So, we built Git Insights, an agentic tool that recursively scans the entire estate and reports the ground truth of every repository. Fifty agents read 466 million lines of code in roughly 20 hours, mapping the digital landscape and capabilities of government. This paper explains the problem, shows in detail how the tool works, and reveals what the scans found. The analysis returned the languages and frameworks we had never counted, the repositories with no tests or documentation, the contributor patterns that quietly degrade security, and the first real benchmark of how AI compares to humans on our own code.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Like many large organizations, Alberta uses GitHub Enterprise as its primary code repository. GitHub provides powerful analysis tools for code scanning through features like CodeQL, and integrations with NPM and Maven for dependency vulnerability scanning. Secrets are automatically flagged and blocked so they can be removed, and our cyber team has well-integrated evaluations. The trouble is that these checks are mostly deterministic, logic-based rules, so they carry a high rate of false positives, and they say nothing at all about the things that matter just as much: the absence of documentation, automated build and deployment pipelines, and automated unit tests. Further, it was impossible to get an overall health check on our government systems. To properly assess the current state of our technology, we needed to look deeper.
+
+
+## §01 The data we could not see
+
+Putting the whole picture together for a large organization can be challenging. In their default state, our primary systems of record could not be linked together. Dependency information from GitHub did not flow into our Configuration Management Database. That database lived in ServiceNow and was maintained by hand, with more than 100,000 entries covering these applications. The records for our applications were scattered across GitHub, Jira and Confluence tickets, incident trackers, SharePoint documentation, and a scatter of spreadsheet inventories. Integrating this unstructured data was historically impossible, because there was no linking key to tie one dataset to the next.
+
+CMDB entries maintained by hand 100,000+. Kept in ServiceNow, with no automated flow from GitHub. The logical structure runs Ministry to Project or Program to Application to repository, and fans out from there into sprints, the CMDB, tickets, and documentation, none of it linked.
+
+As a result, management at the Deputy Minister and Assistant Deputy Minister levels could not get meaningful answers from standard tools, and staff were struggling to provide insights. GitHub itself was also at risk of turning into a mire where quick prototypes sat beside production systems with nothing to tell them apart. We could not say with confidence what we ran, how healthy it was, or where the real exposure sat. So, we did something about it.
+
+
+## §02 Building a scout
+
+Using Claude Code as the coding agent, the Opus and Sonnet models for the analysis, and Google Enterprise Agent Platform as the agentic layer, Alberta built a tool called **Git Insights**. It is an agentic-first tool that recursively scans the entire GitHub estate. It functions as a reconnaissance scout, investigating every repository to report back what is actually there. Code forms the ground truth.
+
+Agents read in about 20 hours 466 million lines. A scan of the whole estate that no consultant engagement could match in time or cost. A third of the repositories had no documentation at all, so the agents wrote it, and every dependency was itemized.
+
+Timing was important for this scan. Alberta has seen significant increases in the number of known vulnerabilities across the estate. On our bug trackers, vulnerabilities increased with a significant inflection point which aligns with the release of Anthropic&#39;s Mythos, the latest Opus models, and OpenAI&#39;s GPT 5.4 and 5.5. The same capability that lets a tool like Git Insights read the estate at depth is what lets attackers find the flaws in it, a point taken up in detail in the cybersecurity paper. Within 4 weeks of the Mythos release, Alberta engineered our own powerful tools and methods to perform this analysis.
+
+
+## §03 How Git Insights works
+
+Here is what Git Insights actually does, in plain terms. It works in two layers. At the top, a fleet of agents works through the whole estate at once. Inside each code repository, every agent runs the same fixed routine. A rules engine conducts a review of the code base and flags known patterns for deeper investigation, while the AI agent steps in to review and provide judgment. All insights are tracked and human auditable down to the line of code.
+
+The agents run on Google Enterprise Agent Platform. Google worked closely with Alberta to ensure we had adequate throughput, increasing our capacity to 25 million tokens per minute so we could maximize analysis speed. We also built it to be resilient. If one scan fails or hits a rate limit, that single job waits and retries while the rest carry on, and if the whole scan is stopped it resumes exactly where it left off. That resilience is what lets it read 466 million lines across thousands of repositories in about 20 hours, pushing the limits of our processing capacity.
+
+A fair question is how far a government can trust what an AI reports. Three things keep it honest. First, the boring, countable work, listing files and finding the known-bad patterns, is done by ordinary code, which cannot invent a result. Second, the AI is never taken at its word: when it reports a problem it must name the exact file and line, say how serious it is and why, and say how to fix it, so a developer can open the file and confirm the claim. Third, it grades every repository against the same fixed checklist, covering security, code quality, architecture, documentation, tests, maintainability, and the health of the libraries it depends on, so a score means the same thing on the thousandth repository as it did on the first. Every finding the AI reports can be opened and checked against the real code. Insights are stored in a database, allowing meta-analysis by yet more agents run by the cyber and delivery teams to detect trends and horizontal insights.
+
+Each scan detects the old technologies hiding inside, such as COBOL, classic ASP, and long-unsupported versions of Dot NET and Java, and infers which ministry owns it. It itemizes every dependency a system relies on, which is the exact inventory our Configuration Management Database never had and can now be fed from. It flags the repositories that hold sensitive personal information, so a privacy risk becomes visible rather than buried. And for the 1,280 repositories that had no documentation at all, the agent wrote it from what it had just read, while validating or improving the README on every other repository. That closed the gap to zero: for the first time, every single code base in the estate was documented.
+
+The scans do double duty, revealing how each system works and what it does for citizens. The business function of each application was mapped into a business capability hierarchy, allowing us to categorize each application by function. The combined record of each repository goes far deeper than any inventory we had before. This also took stock of redundancies in function which we can target for rationalization. As noted in the next paper, we believe we can achieve in some areas a 10 to 1 reduction of our redundant code through AI-driven standardization of common functions.
+
+The results of this Git Insights analysis land in one database and are exposed through an executive dashboard. There is an executive view of health and risk, a nine-box grid that plots each system by how active it is against how healthy it is, code-health cards per repository, contributor profiles, and the disposition breakdown, all exportable to a document, a spreadsheet, or raw data. The deep cross-repository rollup, where hundreds of overlapping systems in a single ministry are collapsed into a smaller set of rebuilt capabilities, is its own engine and its own paper; see Git Insights Ministry.
+
+&quot;For the first time, a Deputy Minister could ask a question about the estate and get an answer grounded in the code itself.&quot; · Paper 3 · Git Insights
+
+
+## §04 What the estate actually looked like
+
+With the scan complete, we could finally measure what we had only ever estimated. The domain Git Insights mapped was wider than anyone had counted.
+
+The structural gaps were more revealing. Across roughly 3,400 repositories, the practices that make code safe to change were missing far more often than they were present.
+
+Every repository was scored out of ten on its overall health across code quality, security, tests, and documentation. Across the whole estate the average came out low, held down by the missing tests, pipelines, and documentation noted above.
+
+
+## §05 Benchmarking ourselves
+
+We also measured the code contributions of our staff and contractors. We measured it to find where ordinary human variance erodes our security controls and our standards, so we know where training and better tooling will help most. A retrospective analysis with a tool like Git Insights cannot know the context behind any single decision a developer made on any given day. What it does is surface the patterns, aggregated at a large and anonymized scale. Across more than eight thousand one hundred contributors and eight years of history, those patterns were clear.
+
+The largest gaps which emerged were in consistency and the adherence to standards. To note, this is not a criticism of any worker or group, nor a sign of bad intent. The contributing developers are as a group skilled and hard-working, and most of the individual application code they produced was sound at the time. The issues the data exposed were systemic. Over eight years, more than eight thousand people, many of whom were recruited as individual contractors across separate ministries, built to standards that were often undocumented, inconsistently communicated, and silent in the contracts themselves. Many of the standards are aspirational and principled instead of prescriptive and opinionated, leaving a gap between the writer&#39;s intent and the reader&#39;s interpretation and application. Where the rules are undefined, it is reasonable, and close to inevitable, that capable people make their own choices and take the path of least resistance. This leads to the kind of drift observed in the Git analysis. Standards also shift over time. Newer practices such as containerization and automated build pipelines never reached the older code, and across so large an estate there was no practical way to audit adherence at all. That last gap, the inability to see the patterns of the whole, is the one agentic AI has now closed.
+
+Seen this way, the estate had grown like a medieval city. Each structure was raised to meet the need of its moment, sound on its own terms, yet the whole became dense and hard to cross after the fact. A rules-based scan like Git Insights draws straight lines across that organic growth. The closest precedent is Baron Haussmann&#39;s plan for Paris, whose broad boulevards were cut through the medieval fabric to impose order and connection after centuries of unplanned building. The result is the two-layered city we know today: organic growth married to a rational plan laid over it. It would be unfair to fault what eight thousand developers built over eight years as deficient. But it would be just as wrong to assume it should simply be repeated. We are left with a hard problem, and resolving it quickly will take deliberate, structural moves on that scale. To undertake such a significant challenge, we need to develop new ways of working.
+
+
+## §06 Human + AI partnership
+
+There is a great deal of criticism aimed at AI for the mistakes it makes. A lot of ink is spilled describing its potential for hallucination and bias. However, these stories reveal a strong recency bias in how we humans report on those failures. One wrong answer by AI is remembered, the ten thousand right ones are not. Such critiques of AI often make the more grievous mistake of failing to also consider human performance in an equivalent domain.
+
+Our findings were clear: with the proper controls described in the harness paper, the latest AI coding tools can help drive greater consistency on coding and analysis tasks within a single application and across the entire estate.
+
+Git Insights gave us the benchmark to make this statement with evidence. The metadata harvested out of GitHub produced the first-ever large scale and longitudinal study in Alberta on human technical performance. We measured the real work of more than eight thousand people over eight years: every commit, every pull request, and the state of the code they produced, across the entire estate. This process gave us a benchmark to measure our future investments in AI speed, quality, security, and process.
+
+Before the application of AI-based tools, Technology and Innovation benchmarked how consistently development teams met 100% of standards on the first release of the application. Complete adherence to the standards was only met forty percent of the time on the first release of the application, requiring rework and subsequent releases to finalize due to tight deadlines and a lack of a standards-based approach.
+
+Products meeting every standard on first release 40%. Many new applications require moderate to significant rework to align with all standards, an unacceptably low number.
+
+Compare this figure to an automobile factory. We would not accept a world where only forty percent of vehicles left the factory passing their safety standards. What makes a modern automobile plant an engineering achievement is the effort taken to remove ambiguity and to drive every unit toward the same high, safe, repeatable result. An IT system should not be held to any lower standard. In a digital world, preserving the privacy of the people we serve is paramount, and the integrity of our institutions and our economy now depends on the integrity of our technology. The impacts of an IT failure can be as damaging as a mechanical failure.
+
+This factory analogy gives us a reasonable blueprint for how to increase quality and consistency. Human creativity and judgment are applied at the start, in design and ideation, and at the finish, in service, support, and in the human relationships. In the middle sit the tooling, the process, and the controls that turn good ideas and designs into consistently safe products. Built in partnership with AI, that middle becomes a &#39;production line&#39; for software: standards applied the same way every time, cyber safe, accessible, and auditable by default. This concept gives us a template for what we call the &#39;AI Factory&#39;, and the later papers build it out stage by stage, beginning with design and ideation.
+
+Humans and AI both make mistakes, and both are creative problem solvers. The lesson of this analysis is that the tools are changing. People working creatively with AI produce better outcomes as they apply new strategies and methods which solve these problems. As AI takes on more of the routine coding, human effort moves to architecture, strategy, creativity, design, and the work of supporting one another through change. Human creativity remains unmatched and central to the process. No AI dreamed up Git Insights; that was entirely human. What AI made possible was the analysis of a vast digital estate for almost no cost, under two thousand dollars, in a matter of hours. In a well-formed partnership between a person and an AI agent, mistakes are caught at once, resolved quickly, and forward velocity rises.
+
+That reframes the question this paper set out to ask. It was never reasonable to expect more than eight thousand individuals to hold a single standard of quality by will alone, least of all one that was undefined and shifting beneath them. The question now is what we do with the knowledge. With its wide context and its speed, AI can read the whole estate and help leadership see both sides of the ledger at once: where our people excel, in creativity, human connection, ideation, insight, experience, and judgment, and where the system drifts. AI can step in to assist in the steady application of standards, the following of process, and the audit of where they were missed. Feedback can be gathered, at scale, and actioned to enhance outcomes. Put to that use, the tools let us protect the quality and safety of the systems Albertans depend on without asking anyone to be less human.
+
+What scales here is possibility. The next paper takes Git Insights up a level, to the ministry scale, where hundreds of overlapping systems are read together and collapsed into a smaller set of modern, rebuilt capabilities with a costed plan attached. See Git Insights Ministry.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: git-insights, code-analysis, agents, technical-debt, cybersecurity</p>
+      <p><a href="/en/paper/bbkac">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "en"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/en/paper/bbkac"));
+    })();
+  </script>
+</body>
+</html>

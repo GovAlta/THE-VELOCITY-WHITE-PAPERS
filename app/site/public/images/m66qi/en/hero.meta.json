@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "en",
+  "slot": "hero",
+  "style_kind": "cover",
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a massive stone gate set in a long wall, swinging open for the first time. Beyond it lies a vast, orderly territory of thousands of small building-like repositories laid out on a clear grid stretching to the horizon. A group of figures representing industry partners is invited to step across the threshold into the light. A sense of an estate long kept closed now deliberately opened. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a massive stone gate set in a long wall, swinging open for the first time. Beyond it lies a vast, orderly territory of thousands of small building-like repositories laid out on a clear grid stretching to the horizon. A group of figures representing industry partners is invited to step across the threshold into the light. A sense of an estate long kept closed now deliberately opened. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-07-19T01:48:49.378Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 371391,
+  "bytes_png_source": 3645422,
+  "generated_by": "gen-image.mjs"
+}

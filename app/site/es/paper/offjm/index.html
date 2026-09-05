@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Git Insights Ministry · Los libros blancos Velocity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Git Insights nos reveló la verdad sobre cada repositorio, uno a uno. Pero conocer lo que está mal no es lo mismo que saber cómo reconstruirlo. Git Insights Ministry es la segunda perspectiva. Lee todo el código de un ministerio a la vez —alrededor de 200 repositorios— y determina todo lo que esos sistemas realmente hacen. Luego, la IA propone una forma de reconstruir estas capacidades como módulos modernos de propiedad gubernamental, cada uno desarrollado una sola vez, sin duplicados. En un ministerio de Alberta, 185 aplicaciones pueden consolidarse en dieciséis módulos reutilizables. Este documento explica cómo funciona la herramienta, qué aporta a quienes toman decisiones y cómo se reconstruye la arquitectura compartida del Gobierno." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/es/paper/offjm/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/offjm/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/offjm/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/offjm/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/offjm/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Git Insights Ministry" />
+  <meta property="og:description" content="Git Insights nos reveló la verdad sobre cada repositorio, uno a uno. Pero conocer lo que está mal no es lo mismo que saber cómo reconstruirlo. Git Insights Ministry es la segunda perspectiva. Lee todo el código de un ministerio a la vez —alrededor de 200 repositorios— y determina todo lo que esos sistemas realmente hacen. Luego, la IA propone una forma de reconstruir estas capacidades como módulos modernos de propiedad gubernamental, cada uno desarrollado una sola vez, sin duplicados. En un ministerio de Alberta, 185 aplicaciones pueden consolidarse en dieciséis módulos reutilizables. Este documento explica cómo funciona la herramienta, qué aporta a quienes toman decisiones y cómo se reconstruye la arquitectura compartida del Gobierno." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/es/paper/offjm/" />
+  <meta property="og:site_name" content="Los libros blancos Velocity" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/offjm.es.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/offjm.es.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Git Insights Ministry" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/offjm.es.jpg" />
+  <meta property="article:published_time" content="2026-06-16" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Git Insights Ministry" />
+  <meta name="twitter:description" content="Git Insights nos reveló la verdad sobre cada repositorio, uno a uno. Pero conocer lo que está mal no es lo mismo que saber cómo reconstruirlo. Git Insights Ministry es la segunda perspectiva. Lee todo el código de un ministerio a la vez —alrededor de 200 repositorios— y determina todo lo que esos sistemas realmente hacen. Luego, la IA propone una forma de reconstruir estas capacidades como módulos modernos de propiedad gubernamental, cada uno desarrollado una sola vez, sin duplicados. En un ministerio de Alberta, 185 aplicaciones pueden consolidarse en dieciséis módulos reutilizables. Este documento explica cómo funciona la herramienta, qué aporta a quienes toman decisiones y cómo se reconstruye la arquitectura compartida del Gobierno." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Git Insights Ministry","description":"Git Insights nos reveló la verdad sobre cada repositorio, uno a uno. Pero conocer lo que está mal no es lo mismo que saber cómo reconstruirlo. Git Insights Ministry es la segunda perspectiva. Lee todo el código de un ministerio a la vez —alrededor de 200 repositorios— y determina todo lo que esos sistemas realmente hacen. Luego, la IA propone una forma de reconstruir estas capacidades como módulos modernos de propiedad gubernamental, cada uno desarrollado una sola vez, sin duplicados. En un ministerio de Alberta, 185 aplicaciones pueden consolidarse en dieciséis módulos reutilizables. Este documento explica cómo funciona la herramienta, qué aporta a quienes toman decisiones y cómo se reconstruye la arquitectura compartida del Gobierno.","url":"https://thevelocitywhitepapers.com/es/paper/offjm/","inLanguage":"es","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Ministry of Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Gobierno de Alberta · Ministerio de Tecnología e Innovación"},"datePublished":"2026-06-16","isPartOf":{"@type":"PublicationVolume","name":"Los libros blancos Velocity","url":"https://thevelocitywhitepapers.com/"},"keywords":"git-insights, modernization, architecture, shared-services, agents","image":"https://thevelocitywhitepapers.com/public/og/offjm.es.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 04 · Technical</p>
+      <h1>Git Insights Ministry</h1>
+      <p class="sub">Del conocimiento del parque tecnológico a su reconstrucción: síntesis de miles de hallazgos en una arquitectura modular de propiedad gubernamental.</p>
+      <div class="abstract"><strong>Abstract.</strong> Git Insights nos reveló la verdad sobre cada repositorio, uno a uno. Pero conocer lo que está mal no es lo mismo que saber cómo reconstruirlo. Git Insights Ministry es la segunda perspectiva. Lee todo el código de un ministerio a la vez —alrededor de 200 repositorios— y determina todo lo que esos sistemas realmente hacen. Luego, la IA propone una forma de reconstruir estas capacidades como módulos modernos de propiedad gubernamental, cada uno desarrollado una sola vez, sin duplicados. En un ministerio de Alberta, 185 aplicaciones pueden consolidarse en dieciséis módulos reutilizables. Este documento explica cómo funciona la herramienta, qué aporta a quienes toman decisiones y cómo se reconstruye la arquitectura compartida del Gobierno.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Git Insights ofreció el primer paso al analizar cada repositorio y cada aplicación para proporcionarnos información accionable. No todos los hallazgos fueron bienvenidos ni fáciles de revisar. El parque tecnológico requería correcciones y, con esos resultados en mano, hemos abordado y seguimos abordando los problemas más críticos. Pero conocer la situación es solo el comienzo. No siempre es posible corregir el rumbo del Gobierno pieza por pieza. A veces se necesita una embarcación completamente nueva.
+
+
+## §01 Del conocimiento a la reconstrucción
+
+Mientras que Git Insights lee de a un repositorio a la vez e informa sobre su estado, su proceso complementario, Git Insights Ministry (G.I.M.), lee el código de aplicaciones de todo un ministerio a la vez y sintetiza los hallazgos en un plan. Identifica los patrones que solo se hacen visibles al analizar un portafolio completo, como el mismo componente de inicio de sesión desarrollado cuarenta veces o el mismo informe escrito de una docena de formas distintas. A partir de esos patrones, propone una arquitectura de cómputo modular, reutilizable y de propiedad gubernamental para reemplazar la dispersión existente.
+
+Repositorios leídos conjuntamente, por ministerio ~200. Algunos ministerios operan con cientos de aplicaciones y repositorios. Git Insights Ministry los descarga todos y los analiza como un único conjunto de trabajo, lo que permite identificar los patrones comunes.
+
+
+## §02 Un análisis más profundo
+
+El análisis va mucho más allá de una puntuación de estado. G.I.M. clona cada repositorio y reconstruye cada capacidad mediante ingeniería inversa. Cada pantalla, flujo de trabajo, integración de API y punto de acceso, esquema y tabla de base de datos, regla de negocio y dependencia se lee y se registra. A partir de ese material en bruto, la herramienta elabora un dossier de cada sistema, con el detalle suficiente para reconstruir esas funciones desde cero.
+
+
+## §03 Cómo funciona Git Insights Ministry
+
+G.I.M. opera por etapas. Algunas son determinísticas: pasos de análisis realizados por código ordinario que cuenta, clona, calcula y no puede inventar un resultado. Estos scripts son rápidos y potentes, pero propensos a falsos positivos. Las etapas siguientes son agénticas: en ellas se solicita a la IA que aplique criterio. Los formatos de sus respuestas están estrictamente controlados y siempre vinculados a evidencia en el código. Cada conclusión puede rastrearse hasta el archivo del que proviene.
+
+El plan de consolidación se elabora en dos pasos. Primero, la herramienta agrupa los hallazgos de cada repositorio en las funciones reales que el ministerio presta a las personas. Luego, diseña los módulos que las ejecutan, manteniendo el trabajo diferenciado en módulos separados y centralizando todo lo común en la plataforma compartida, de modo que se desarrolle una sola vez en lugar de cuarenta.
+
+No le pedimos a nadie que acepte esto solo por buena fe. Cada capacidad que nombra la herramienta remite a los sistemas y flujos de trabajo de los que proviene, por lo que siempre es posible rastrear una conclusión hasta el código real. El cálculo de costos de los sistemas de reemplazo se basa en parámetros reales: número de pantallas, puntos de acceso, tablas de base de datos y flujos de trabajo. El código ordinario lo calcula a partir de un conjunto fijo de tarifas, de modo que puede defenderse línea por línea. Los modelos en sí se ejecutan sobre Claude a través de Google Enterprise Agent Platform, trabajando en paralelo, un repositorio o un módulo a la vez.
+
+
+## §04 La visión de síntesis: un Gobierno reconstruido
+
+A partir de la reconstrucción en bruto de cada sistema, agrupa cada pieza funcional en el conjunto de capacidades de negocio que el ministerio efectivamente desempeña y diseña una arquitectura objetivo que ofrece esas capacidades como módulos limpios, sin redundancia ni superposición. Cientos de aplicaciones, cada una con su propio inicio de sesión, su propia carga de archivos y su propia generación de informes, se consolidan en un puñado de módulos donde cada capacidad se desarrolla una sola vez.
+
+Un ministerio, tras la síntesis 185 → 16. En un caso concreto, 185 aplicaciones se consolidaron en 16 módulos diferenciados. La redundancia que la herramienta identificó en el portfolio es la misma que elimina en la reconstrucción.
+
+Cada nuevo módulo se desarrolla sobre una misma pila tecnológica moderna. Esto es importante: significa que ya no dependemos de un proveedor del que no podemos desvincularnos. Nuestra superficie de exposición a ataques se minimiza. Cada módulo se basa en tecnologías de código abierto y se amplía para cumplir con nuestras políticas específicas. El personal y los agentes (de IA) que desarrollan estos sistemas conservan el conocimiento necesario para mantenerlos.
+
+
+## §05 Patrones de reutilización en todo el Gobierno
+
+Los patrones más valiosos son los que se repiten. En todos los ministerios, las mismas capacidades aparecen una y otra vez. Varios de los módulos de un solo ministerio —en este caso, pagos, cartografía geoespacial y gestión de contratos— no son en absoluto únicos. En lugar de reconstruirlos dentro de cada ministerio, los estamos desarrollando una sola vez como servicios compartidos que cualquier ministerio puede utilizar.
+
+Al mapear completamente las funciones del Gobierno, podemos desarrollar módulos reutilizables en todos los ministerios. Alberta es propietaria de cada módulo y reducimos la complejidad y la superficie de exposición de nuestra infraestructura en más de un noventa por ciento. Creados por la IA y siguiendo un estándar claro, estos módulos son fáciles de mantener.
+
+Aquí radica también el potencial de ahorro económico. Dado que los módulos son diseñados y desarrollados por la IA bajo dirección humana, el tiempo desde la concepción hasta la ejecución se comprime de forma deliberada. Todo el proceso de desarrollo de software se rediseña. La construcción y las pruebas se automatizan en gran medida, mientras que las decisiones sobre seguridad, privacidad y lo que la ciudadanía realmente necesita permanecen en manos de las personas.
+
+
+## §06 Lo que ve el ejecutivo
+
+G.I.M. produce resultados sobre los que quien toma decisiones puede actuar de inmediato, no un conjunto de análisis en bruto. El panel presenta todo el ministerio como una imagen única respaldada por evidencia, y la misma fuente genera un informe ejecutivo en lenguaje claro.
+
+G.I.M. es el puente entre conocer el parque tecnológico y reconstruirlo. Transforma la información objetiva de Git Insights en un plan sólido y justificable: una arquitectura más reducida, modular y de propiedad pública, con las partes comunes construidas una sola vez para todos. Las estrategias para llevar a cabo esa reconstrucción —desde la actualización parcial hasta la reconstrucción completa— son el tema del próximo documento: **Los cuatro enfoques para la modernización con IA**.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: git-insights, modernization, architecture, shared-services, agents</p>
+      <p><a href="/es/paper/offjm">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "es"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/es/paper/offjm"));
+    })();
+  </script>
+</body>
+</html>

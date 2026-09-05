@@ -1,0 +1,17 @@
+{
+  "paper_id": "p7p2k",
+  "locale": "en",
+  "slot": "fig-03",
+  "out_path": "public\\images\\p7p2k\\en\\fig-6-3.jpg",
+  "bytes_jpg": 168297,
+  "bytes_png_source": 2177804,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-02T05:37:48.683Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram of a pre-assembled application shown as two connected panels, the left labelled CLIENT and the right labelled SERVER, joined by a clean line to a small database cylinder and a padlock for sign-on. Along the base, a neat row of small toggle switches are all already flipped to the same position, suggesting decisions settled in advance. The assembly looks finished and ready. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram of a pre-assembled application shown as two connected panels, the left labelled CLIENT and the right labelled SERVER, joined by a clean line to a small database cylinder and a padlock for sign-on. Along the base, a neat row of small toggle switches are all already flipped to the same position, suggesting decisions settled in advance. The assembly looks finished and ready. Hand-drawn lines, deep navy with small rust accents on warm cream paper, calm and architectural. No people, no logos.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

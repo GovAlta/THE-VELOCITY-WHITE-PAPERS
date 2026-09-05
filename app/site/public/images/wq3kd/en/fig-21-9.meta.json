@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-09",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-9.jpg",
+  "bytes_jpg": 134517,
+  "bytes_png_source": 2230686,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:45:23.506Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A flowchart: three input boxes on the left labelled Source clause, Best peer matches, What to look for, with arrows merging into a box labelled AI fills a fixed template, producing a structured card on the right with clearly labelled fields: verdict, severity, key words, best example, comparison, suggestion, confidence.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A flowchart: three input boxes on the left labelled Source clause, Best peer matches, What to look for, with arrows merging into a box labelled AI fills a fixed template, producing a structured card on the right with clearly labelled fields: verdict, severity, key words, best example, comparison, suggestion, confidence.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

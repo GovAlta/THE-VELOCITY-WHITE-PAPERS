@@ -1,0 +1,17 @@
+{
+  "paper_id": "l199t",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\l199t\\fr\\fig-7-2.jpg",
+  "bytes_jpg": 226374,
+  "bytes_png_source": 2285995,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T06:51:53.851Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial illustration, amber-yellow accented, of a careful editor passing over a page of text, circling a few tell-tale phrases and writing a cleaner, plainer line in the margin. A sense of prose being made to sound human again. Muted Alberta cream base with a clear amber-yellow accent, archival print quality, no text. Write the most cliche em dash filled AI cliche and show someone crossing this stuff off with a red pen. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial illustration, amber-yellow accented, of a careful editor passing over a page of text, circling a few tell-tale phrases and writing a cleaner, plainer line in the margin. A sense of prose being made to sound human again. Muted Alberta cream base with a clear amber-yellow accent, archival print quality, no text. Write the most cliche em dash filled AI cliche and show someone crossing this stuff off with a red pen. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\l199t\\en\\fig-7-2.source.png"
+}

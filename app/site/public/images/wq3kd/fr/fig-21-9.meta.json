@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-09",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-9.jpg",
+  "bytes_jpg": 138994,
+  "bytes_png_source": 2064601,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T04:03:14.276Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un organigramme : trois boîtes d’entrée à gauche étiquetées Article source, Meilleures correspondances entre pairs, Ce qu’il faut chercher, avec des flèches fusionnant dans une boîte étiquetée L’IA remplit un gabarit fixe, produisant une carte structurée à droite avec des champs clairement étiquetés : verdict, gravité, mots-clés, meilleur exemple, comparaison, suggestion, niveau de confiance.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un organigramme : trois boîtes d’entrée à gauche étiquetées Article source, Meilleures correspondances entre pairs, Ce qu’il faut chercher, avec des flèches fusionnant dans une boîte étiquetée L’IA remplit un gabarit fixe, produisant une carte structurée à droite avec des champs clairement étiquetés : verdict, gravité, mots-clés, meilleur exemple, comparaison, suggestion, niveau de confiance.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-9.source.png"
+}

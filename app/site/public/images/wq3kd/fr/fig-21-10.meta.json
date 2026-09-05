@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-10",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-10.jpg",
+  "bytes_jpg": 156004,
+  "bytes_png_source": 1957953,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T04:04:03.657Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un diagramme en deux panneaux. Panneau de gauche intitulé Mémoire de travail : une boîte de requête, une icône d’empreinte numérique, et une note indiquant question posée de nouveau, réponse gratuite. Panneau de droite intitulé Piste d’audit : une pile de cartes d’exécution immuables étiquetées v1, v2, v3, chacune avec une petite icône de chaîne et une note indiquant documents, modèle, instruction, heure, et une flèche allant d’une seule carte de conclusion vers une étiquette indiquant source, section, page.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un diagramme en deux panneaux. Panneau de gauche intitulé Mémoire de travail : une boîte de requête, une icône d’empreinte numérique, et une note indiquant question posée de nouveau, réponse gratuite. Panneau de droite intitulé Piste d’audit : une pile de cartes d’exécution immuables étiquetées v1, v2, v3, chacune avec une petite icône de chaîne et une note indiquant documents, modèle, instruction, heure, et une flèche allant d’une seule carte de conclusion vers une étiquette indiquant source, section, page.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-10.source.png"
+}

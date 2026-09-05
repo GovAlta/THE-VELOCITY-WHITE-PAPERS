@@ -1,0 +1,17 @@
+{
+  "paper_id": "k3tc3",
+  "locale": "en",
+  "slot": "fig-05",
+  "out_path": "public\\images\\k3tc3\\en\\fig-10-5.jpg",
+  "bytes_jpg": 175667,
+  "bytes_png_source": 2489228,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-06T19:28:10.624Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board with a few small moves marked by rust warning marks labelled SPEED RUN, SELF-APPROVAL, BURST TURNS. An arrow leads to a single enforcement token labelled THE REAPER, drawn as a simple iconographic hooded scythe motif in navy line work, not a realistic person. From it, a heavy rust arrow points to a small score bar dropping sharply, labelled POINTS REMOVED, THEN REMOVED AGAIN. A caption reads CHEATING COSTS MORE THAN IT PAYS. Calm, architectural, legible labels. No logos, no realistic people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a board with a few small moves marked by rust warning marks labelled SPEED RUN, SELF-APPROVAL, BURST TURNS. An arrow leads to a single enforcement token labelled THE REAPER, drawn as a simple iconographic hooded scythe motif in navy line work, not a realistic person. From it, a heavy rust arrow points to a small score bar dropping sharply, labelled POINTS REMOVED, THEN REMOVED AGAIN. A caption reads CHEATING COSTS MORE THAN IT PAYS. Calm, architectural, legible labels. No logos, no realistic people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

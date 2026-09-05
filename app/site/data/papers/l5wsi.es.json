@@ -1,0 +1,898 @@
+{
+  "id": "l5wsi",
+  "num": "17",
+  "sequence": "17 de 22",
+  "tier": "Technical",
+  "category": "paper",
+  "title": "Técnico: anatomía de una plantilla",
+  "subtitle": "Un recorrido de extremo a extremo por la plantilla de aplicación de código abierto que se incluye con el arnés construido, y por qué la mejor especificación es el código funcional.",
+  "track": "Technical Appendix",
+  "authors": [
+    "Janak Alford",
+    "Deputy Minister",
+    "Technology and Innovation"
+  ],
+  "published": null,
+  "reading_min": 13,
+  "status": "Published",
+  "tags": [
+    "template",
+    "harness",
+    "security",
+    "owasp",
+    "open-source",
+    "authentication",
+    "specification-driven"
+  ],
+  "repo": null,
+  "abstract": "El arnés bien construido incluye una plantilla de aplicación monorepo de full-stack compuesta por un cliente frontend en Vue 3 y un servidor Node.js / Express respaldado por una base de datos PostgreSQL. Proporcionarle a un agente de IA una plantilla permite que este constrya con rapidez soluciones significativas de nivel empresarial. Esta plantilla básica contiene todo lo necesario para comenzar, incluidos seguridad, registro de actividad y controles básicos.",
+  "hero_image": {
+    "src": "public/images/l5wsi/es/hero.jpg",
+    "alt": "Imagen editorial para: Anatomía de una plantilla",
+    "image_prompt": "An editorial cover image for the technical appendix titled \"Anatomía de una plantilla\". Muted Alberta cream palette with navy and rust accents. Archival print quality, no text, no logos. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+    "style_kind": "cover"
+  },
+  "audio": {
+    "src": "public/audio/es/l5wsi.mp3",
+    "duration_sec": 958
+  },
+  "tldr_presentation": {
+    "id": "l5wsi-tldr",
+    "title": "El artículo, en resumen",
+    "locale": "es",
+    "owner_id": "l5wsi",
+    "slides": [
+      {
+        "id": "01",
+        "title": "Anatomía de una plantilla",
+        "audio_file": "public/audio/es/l5wsi-tldr/01.mp3",
+        "visual": "title",
+        "caption": "Apéndice técnico · artículo 16",
+        "subcaption": "La aplicación que se incluye con el arnés bien construido.",
+        "text": "El arnés bien construido incluye una aplicación funcional, no una carpeta vacía. La plantilla es un proyecto completo de Vue 3, Express y Postgres que compila, autentica a los usuarios, se comunica con una base de datos, transmite actualizaciones en tiempo real y supera sus pruebas y analizadores de seguridad desde el primer día en que se copia. Este apéndice explica su funcionamiento, de atrás hacia adelante."
+      },
+      {
+        "id": "02",
+        "title": "La mejor especificación es el código",
+        "audio_file": "public/audio/es/l5wsi-tldr/02.mp3",
+        "visual": "title",
+        "caption": "El argumento",
+        "subcaption": "El código funcional demuestra lo que hace un sistema; un documento solo lo describe.",
+        "text": "Si se le pide a una IA que añada autenticación, esta debe inventar un formato de token, un tiempo de vida, una opción de almacenamiento, una estrategia de actualización y un modelo de roles. Cada elección es una oportunidad de equivocarse. La plantilla ya ha tomado esas decisiones, en código, con un estándar conocido, de modo que la IA trabaja dentro de un sistema definido en lugar de inventar uno, y la aplicación cumple con los requisitos antes de que la IA escriba una sola línea."
+      },
+      {
+        "id": "03",
+        "title": "Decidido una sola vez, centralizado",
+        "audio_file": "public/audio/es/l5wsi-tldr/03.mp3",
+        "visual": "list",
+        "caption": "Lo que hereda la IA",
+        "visual_config": {
+          "items": [
+            {
+              "label": "Identidad",
+              "desc": "Inicio de sesión con SSO, tokens RS256 en cookies httpOnly, rotación de actualización, acceso basado en roles."
+            },
+            {
+              "label": "Seguridad",
+              "desc": "SQL parametrizado, CSRF de doble envío, cabeceras de seguridad, una única ruta de error segura."
+            },
+            {
+              "label": "Un solo cliente de API",
+              "desc": "Cada solicitud gestiona la actualización, el CSRF y los límites de velocidad en un único punto, de modo que ninguna pantalla puede gestionarlos de forma incorrecta."
+            },
+            {
+              "label": "Tiempo real",
+              "desc": "Eventos enviados por el servidor para actualizaciones en tiempo real, con el punto de acceso de lista como fuente de verdad."
+            }
+          ]
+        },
+        "text": "Las decisiones críticas se toman una sola vez, en código, y se centralizan para que no puedan tomarse de forma incorrecta. La identidad, el CSRF, el SQL parametrizado, la estructura de respuesta, el manejo de errores y la lógica de reintento del cliente de API son implementaciones únicas y probadas que la IA hereda en lugar de crear."
+      },
+      {
+        "id": "04",
+        "title": "Construido según los estándares, desde el principio",
+        "audio_file": "public/audio/es/l5wsi-tldr/04.mp3",
+        "visual": "stat",
+        "caption": "Conforme antes de la compilación",
+        "visual_config": {
+          "stat_value": "773 / 0",
+          "stat_label": "pruebas aprobadas y fallidas el día en que se copia la plantilla, más seis analizadores de seguridad automatizados"
+        },
+        "subcaption": "Construido conforme a los estándares OWASP ASVS Nivel 2 y WCAG 2.1 AA que el arnés aplica.",
+        "text": "Cada uno de los riesgos del Top 10 de OWASP se aborda en el código de la plantilla, de modo que una nueva aplicación hereda las medidas de protección. El arnés verifica de forma automatizada que el trabajo sigue cumpliendo el estándar en cada cambio."
+      }
+    ]
+  },
+  "embedded_presentations": [],
+  "sections": [
+    {
+      "n": "01",
+      "title": "El servidor: el ciclo de vida de una solicitud"
+    },
+    {
+      "n": "02",
+      "title": "Identidad: inicio de sesión, tokens y cookies"
+    },
+    {
+      "n": "03",
+      "title": "CSRF y seguridad entre sitios"
+    },
+    {
+      "n": "04",
+      "title": "De la ruta a la base de datos"
+    },
+    {
+      "n": "05",
+      "title": "Actualizaciones en tiempo real mediante SSE"
+    },
+    {
+      "n": "06",
+      "title": "El cliente de API único"
+    },
+    {
+      "n": "07",
+      "title": "Enrutamiento y guardias de navegación"
+    },
+    {
+      "n": "08",
+      "title": "Estado, componibles y formularios"
+    },
+    {
+      "n": "09",
+      "title": "Interfaz, accesibilidad y compilación"
+    },
+    {
+      "n": "10",
+      "title": "El OWASP Top 10, abordado desde el principio"
+    },
+    {
+      "n": "11",
+      "title": "Lo que la plantilla resuelve para el agente"
+    },
+    {
+      "n": "12",
+      "title": "La plantilla completa, en una sola página"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropcap_paragraph",
+      "text": "Proporcionarle a un agente de IA una plantilla sólida es la forma más fiable de estructurar una aplicación de nivel empresarial. Una plantilla bien construida resuelve desde el principio cientos de decisiones clave, desde la seguridad hasta la experiencia de usuario. Combinada con un [arnés bien construido](/paper/p7p2k), que aporta las competencias necesarias para transformar la plantilla en una aplicación, el agente de IA puede avanzar con rapidez y de manera segura.\n\nUna plantilla resuelve desde el inicio los desafíos técnicos más críticos: desde los más básicos, como el lenguaje de programación, hasta los más específicos, como los protocolos de seguridad, el modelo de almacenamiento de datos, y la interfaz y experiencia de usuario. En su conjunto, representan cientos de decisiones y controles previos que deben ser técnicamente sólidos y compatibles con el entorno operativo de destino. La plantilla cierra desde el primer paso las vulnerabilidades y los errores potenciales más comunes y críticos, y ofrece al agente de IA patrones significativos que emular y adoptar. La plantilla constituye la mejor especificación, ya que el agente mantiene las decisiones de diseño mientras desarrolla la funcionalidad."
+    },
+    {
+      "type": "keystat",
+      "label": "Comienza en verde, no desde cero",
+      "value": "773 / 0",
+      "body": "La plantilla incluye 773 pruebas aprobadas y cero fallos, más seis analizadores de seguridad automatizados. Una aplicación construida a partir de ella hereda desde el primer día una base funcional, probada y conforme a los estándares."
+    },
+    {
+      "type": "pullquote",
+      "text": "La mejor especificación es el código. Si se le proporciona a la IA una plataforma segura, basada en estándares y accesible desde el principio, es mucho menos probable que cometa errores. La solución cumple con los requisitos antes de que la IA comience a construir.",
+      "cite": ""
+    },
+    {
+      "type": "paragraph",
+      "text": "No existe una única forma correcta de construir una plantilla. Sí existen muchas formas incorrectas. El diseño depende de la organización y de las decisiones empresariales más amplias que sean adecuadas para ella. La siguiente plantilla es muy definida, es decir, está altamente especificada y deja poco margen para interpretaciones erróneas o malentendidos. Sin embargo, los mismos controles pueden aplicarse a cualquier otro conjunto de tecnologías."
+    },
+    {
+      "type": "section_heading",
+      "n": "01",
+      "title": "El servidor: el ciclo de vida de una solicitud"
+    },
+    {
+      "type": "paragraph",
+      "text": "El servidor es una única aplicación Express en TypeScript. Cada solicitud se gestiona de manera muy uniforme, pasando por capas de middleware en un orden racional y deliberado: primero las protecciones amplias y de bajo costo, y al final la identidad y la intención."
+    },
+    {
+      "type": "table",
+      "title": "La cadena de middleware, en orden",
+      "columns": [
+        "Paso",
+        "Qué hace"
+      ],
+      "rows": [
+        [
+          "trust proxy",
+          "Reconoce la IP del cliente y el protocolo del balanceador de carga, de modo que los límites de velocidad y las cookies seguras funcionan correctamente detrás de un proxy."
+        ],
+        [
+          "Cabeceras de seguridad (helmet)",
+          "Content-Security-Policy sin unsafe-eval, HSTS durante un año y aislamiento entre orígenes."
+        ],
+        [
+          "Permissions-Policy",
+          "Desactiva la cámara, el micrófono, la geolocalización, los pagos, el USB y los sensores de movimiento."
+        ],
+        [
+          "Compresión",
+          "gzip o brotli en las respuestas; se omite para los flujos de eventos de modo que las actualizaciones en tiempo real no queden almacenadas en búfer."
+        ],
+        [
+          "Archivos estáticos",
+          "En producción, sirve el cliente compilado con una caché inmutable de un año, antes de CORS."
+        ],
+        [
+          "Lista de orígenes permitidos (CORS)",
+          "Permite únicamente los orígenes configurados, con credenciales, y un conjunto fijo de métodos y encabezados."
+        ],
+        [
+          "Limitación de solicitudes",
+          "Limita la API a 200 solicitudes por cada 15 minutos, con restricciones más estrictas en las rutas de inicio de sesión e IA."
+        ],
+        [
+          "Verificación de Content-Type",
+          "Rechaza los tipos de medios no esperados en POST, PUT y PATCH con un código 415."
+        ],
+        [
+          "Análisis del cuerpo de la solicitud",
+          "Acepta cuerpos JSON y de formulario, con un límite de un megabyte."
+        ],
+        [
+          "Cookies, identificador de correlación y registro",
+          "Analiza las cookies, asigna un identificador de correlación, registra cada solicitud y emite una advertencia cuando una tarda más de un segundo."
+        ],
+        [
+          "Passport",
+          "Inicializado exclusivamente para el inicio de sesión mediante OAuth; no se utilizan sesiones en el servidor."
+        ],
+        [
+          "CSRF (global)",
+          "Valida por defecto las solicitudes que modifican el estado, con una lista de exenciones breve y documentada."
+        ],
+        [
+          "Enrutadores y, a continuación, el manejador de errores",
+          "Rutas con versión bajo /api/v1 (con un alias /api); un manejador final convierte cualquier error en una respuesta segura."
+        ]
+      ],
+      "source": "Plantilla de arnés común AIDE, server/src/app.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.1",
+      "title": "Una solicitud pasa por la cadena de middleware",
+      "caption": "Una solicitud entra por la izquierda y atraviesa cada punto de control en secuencia —primero las protecciones amplias de bajo costo, y al final la identidad y la intención— antes de llegar al manejador de rutas. La respuesta regresa a través de un único manejador de errores que hace que cada fallo sea seguro.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-01.jpg",
+        "alt": "Una canalización horizontal: un token de solicitud entra y pasa por puntos de control etiquetados para proxy de confianza, encabezados de seguridad, política de permisos, compresión, CORS, límite de velocidad, tipo de contenido, análisis del cuerpo, cookies y registro, y CSRF; luego llega a un bloque de manejador, con una flecha de respuesta que regresa a través de un manejador de errores.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep Alberta navy line work with small rust accents, legible labels. A horizontal pipeline: a token labelled SOLICITUD on the far left flows right through a row of labelled gate boxes in order: PROXY DE CONFIANZA, ENCABEZADOS HELMET, POLÍTICA DE PERMISOS, COMPRESIÓN, LISTA CORS, LÍMITE DE TASA, TIPO DE CONTENIDO, ANÁLISIS DEL CUERPO, COOKIES + REGISTRO, CSRF, then into a larger box MANEJADOR DE RUTAS. A return arrow labelled RESPUESTA loops back along the bottom through a box MANEJADOR DE ERRORES. A small rust caption reads VERIFICACIONES BARATAS PRIMERO, IDENTIDAD AL FINAL. Calm, architectural, no logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "02",
+      "title": "Identidad: inicio de sesión, tokens y cookies"
+    },
+    {
+      "type": "paragraph",
+      "text": "El inicio de sesión se delega a Google y Microsoft mediante Passport y OpenID Connect. La plantilla no almacena contraseñas. Tras un inicio de sesión exitoso, el servidor emite dos JSON Web Tokens firmados con RS256, un par de claves asimétricas, de modo que el servidor puede verificar un token sin conservar nada que pudiera falsificarlo, y los establece como cookies httpOnly que los scripts del navegador no pueden leer. El middleware de autenticación lee el token de acceso desde la cookie y, cuando ha expirado, devuelve 401 con el código TOKEN_EXPIRED, que es la señal para que el cliente solicite la renovación. Los tokens de renovación se almacenan únicamente como hashes SHA-256 en una tabla refresh_token; cada uso rota el token y cualquier token puede revocarse, de modo que un token de renovación robado tiene una vida útil breve y puede clausurarse."
+    },
+    {
+      "type": "table",
+      "title": "Tokens y cookies",
+      "columns": [
+        "Elemento",
+        "Modo de configuración"
+      ],
+      "rows": [
+        [
+          "Token de acceso",
+          "JWT RS256, vigencia de 15 minutos, cookie httpOnly con sameSite=lax. Contiene el identificador de usuario, el correo electrónico y el rol."
+        ],
+        [
+          "Token de actualización",
+          "JWT RS256, vigencia de 7 días, cookie httpOnly. Se almacena en el servidor únicamente como un hash, se rota en cada uso y puede revocarse."
+        ],
+        [
+          "Roles",
+          "viewer, submitter, editor, manager, admin, super_admin. La función authorize() compara la posición en ese orden; una restricción CHECK de la base de datos refleja la misma lista."
+        ],
+        [
+          "sameSite=lax",
+          "Se utiliza lax en lugar de strict para que la redirección OAuth entre sitios siga enviando la cookie en la respuesta, mientras que los POST entre sitios no la incluyen."
+        ]
+      ],
+      "source": "Plantilla de arnés común AIDE, utils/token.ts and utils/cookie-config.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.2",
+      "title": "Inicio de sesión, tokens y el ciclo de renovación",
+      "caption": "El navegador inicia sesión a través de Google o Microsoft. El servidor establece un token de acceso de corta duración y un token de renovación de mayor duración como cookies httpOnly, y conserva únicamente un hash del token de renovación. Cuando el token de acceso expira, el cliente lo renueva y el token de renovación rota.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-02.jpg",
+        "alt": "Un diagrama con cuatro bloques: navegador, proveedor de identidad (Google y Microsoft), servidor y base de datos. Las flechas muestran la redirección de inicio de sesión, el servidor emitiendo tokens de acceso y de renovación como cookies httpOnly al navegador, un token de renovación con hash almacenado en la base de datos, y una flecha de renovación que rota el token cuando el token de acceso expira.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Four labelled boxes: NAVEGADOR (top left), PROVEEDOR DE IDENTIDAD · GOOGLE / MICROSOFT (top right), SERVIDOR (centre), and BASE DE DATOS · refresh_token (bottom right). Arrows: NAVEGADOR to PROVEEDOR DE IDENTIDAD labelled INICIO SSO and back; SERVIDOR to NAVEGADOR labelled ESTABLECE COOKIES httpOnly: ACCESO 15 min, RENOVACIÓN 7 días; SERVIDOR to BASE DE DATOS labelled ALMACENA HASH SHA-256; a dashed return arrow labelled 401 TOKEN_EXPIRED then a curved arrow POST /auth/refresh — ROTAR. Small caption SIN CONTRASEÑAS ALMACENADAS. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "03",
+      "title": "CSRF y seguridad entre sitios"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las solicitudes que modifican el estado (como escritura, actualización y eliminación) están protegidas por una verificación de doble envío. El servidor establece una cookie httpOnly csrf_token y también devuelve el valor del token una sola vez, en el cuerpo de GET /auth/csrf-token. El cliente conserva estos valores únicamente en memoria, nunca en almacenamiento, y los incluye en un encabezado X-CSRF-Token. El middleware compara el encabezado con la cookie mediante una comparación en tiempo constante para evitar fugas por temporización. Está montado de forma global, de modo que una ruta recién añadida queda protegida por defecto, en lugar de depender de que el desarrollador recuerde habilitarlo. Las únicas excepciones son el inicio de OAuth, la devolución de llamada de OAuth y la renovación del token, cada una con una justificación explícita de por qué es segura: la devolución de llamada está protegida por el estado y el nonce de OAuth, y la renovación por la cookie sameSite junto con la rotación."
+    },
+    {
+      "type": "table",
+      "title": "La verificación de doble envío",
+      "columns": [
+        "Elemento",
+        "Detalle"
+      ],
+      "rows": [
+        [
+          "Cookie csrf_token",
+          "httpOnly; el navegador la conserva, pero los scripts no pueden leerla."
+        ],
+        [
+          "Token en el cuerpo",
+          "Devuelto una sola vez por GET /auth/csrf-token; el cliente lo conserva únicamente en memoria."
+        ],
+        [
+          "Encabezado X-CSRF-Token",
+          "Se envía en cada operación de escritura; el servidor lo compara con la cookie mediante una verificación en tiempo constante."
+        ],
+        [
+          "Montaje global",
+          "Activo por defecto en todas las rutas que modifican el estado; una ruta nueva queda protegida sin necesidad de habilitarlo explícitamente."
+        ],
+        [
+          "Exenciones",
+          "Inicio de OAuth, retorno de OAuth (state + nonce) y actualización de token (sameSite + rotación), cada una documentada con su justificación."
+        ]
+      ],
+      "source": "Plantilla de arnés común AIDE, middleware/csrf.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.3",
+      "title": "CSRF de doble envío",
+      "caption": "El servidor entrega el mismo token de dos formas: como una cookie httpOnly que el navegador no puede leer, y como un valor que el cliente conserva en memoria. Al realizar una escritura, el cliente envía el valor en memoria mediante un encabezado, y el servidor verifica que coincida con la cookie.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-03.jpg",
+        "alt": "Un diagrama que muestra al servidor emitiendo un token CSRF de dos formas: una cookie httpOnly al navegador, y un valor de token en una respuesta JSON que el cliente conserva en memoria. En una solicitud de escritura, el cliente envía el valor en un encabezado X-CSRF-Token junto con la cookie, y un bloque de comparación verifica que el encabezado coincida con la cookie antes de permitir la solicitud.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Top: SERVIDOR box issues a CSRF token along two arrows: one labelled COOKIE httpOnly csrf_token going to a NAVEGADOR box, one labelled TOKEN EN CUERPO JSON going to a CLIENTE (EN MEMORIA) box. Bottom: on a SOLICITUD DE ESCRITURA the client sends ENCABEZADO X-CSRF-TOKEN plus the COOKIE into a diamond labelled COMPARACIÓN EN TIEMPO CONSTANTE, with two outputs COINCIDE then PERMITIR, and NO COINCIDE then 403. A small caption reads DOBLE ENVÍO, SEGURO POR DEFECTO. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "04",
+      "title": "De la ruta a la base de datos"
+    },
+    {
+      "type": "paragraph",
+      "text": "La lógica de la aplicación está organizada en capas: ruta, controlador, servicio y modelo. El controlador gestiona la solicitud y estructura la respuesta; el servicio contiene las reglas de negocio, y el modelo es propietario del SQL. Cada consulta está parametrizada con $1, $2, y así sucesivamente; los valores nunca se concatenan en la sentencia, lo que cierra la inyección SQL en el origen. El modelo es también la única capa que mapea los nombres de campo de la API a los nombres de columna de la base de datos, de modo que el formato de transmisión y el esquema pueden cambiar de forma independiente. Se accede a Postgres a través de un grupo de conexiones simple, sin ninguna capa objeto-relacional que oculte lo que realmente se ejecuta."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada respuesta utiliza un único sobre: éxito con una carga de datos, o fallo con un objeto de error que incluye un código y un mensaje. Un único manejador de errores captura todo lo que se lanza, mapea los errores conocidos de Postgres a códigos HTTP seguros (una violación de clave única se convierte en 409, una violación de clave foránea en 400), y en producción elimina las trazas de pila y el SQL de la respuesta. Los manejadores asíncronos están envueltos para que una promesa rechazada llegue a ese manejador de errores en lugar de interrumpir el proceso. El resultado es que la estructura del error, los códigos de estado y el ocultamiento de información son uniformes en todos los puntos de acceso."
+    },
+    {
+      "type": "table",
+      "title": "El recorrido de una solicitud",
+      "columns": [
+        "Capa",
+        "Responsabilidad"
+      ],
+      "rows": [
+        [
+          "Ruta",
+          "Declara la URL y sus controles de acceso: validación contra un esquema, luego autenticación, luego autorización por rol."
+        ],
+        [
+          "Controlador",
+          "Gestiona la solicitud y da forma a la respuesta. No contiene SQL."
+        ],
+        [
+          "Servicio",
+          "Reglas de negocio y orquestación entre modelos."
+        ],
+        [
+          "Modelo",
+          "Gestiona el SQL. Consultas parametrizadas; es el único lugar donde los nombres de la API se asignan a las columnas de la base de datos."
+        ],
+        [
+          "Postgres (pool)",
+          "Se accede mediante un pool de conexiones simple. Sin capa de mapeo objeto-relacional."
+        ],
+        [
+          "Manejador de errores",
+          "Captura todas las excepciones, asigna los errores de la base de datos a códigos HTTP seguros y oculta los detalles internos en producción."
+        ]
+      ],
+      "source": "Plantilla de arnés común AIDE Common Harness, rutas, controladores, servicios, modelos."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.4",
+      "title": "De la ruta al controlador, al servicio y al modelo",
+      "caption": "Una solicitud desciende por cuatro capas hasta Postgres y regresa como un sobre uniforme. La validación protege la cima; el SQL parametrizado protege la base; un único manejador de errores captura todo lo que se lanza y devuelve una respuesta segura.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-04.jpg",
+        "alt": "Un diagrama vertical por capas: una solicitud entra a través de un punto de validación, luego desciende por los bloques de ruta, controlador, servicio y modelo hasta un cilindro Postgres, con el modelo emitiendo una consulta parametrizada. Un sobre de respuesta regresa por el lateral, y un bloque de manejador de errores mapea los errores de base de datos a códigos HTTP.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A vertical stack of boxes top to bottom: VALIDAR (ESQUEMA) gate, then RUTA, CONTROLADOR, SERVICIO, MODELO, then a database cylinder POSTGRES. From MODELO a small callout shows a query SELECT ... WHERE id = $1 labelled PARAMETRIZADA. On the right, an upward arrow labelled RESPUESTA { success, data } returns to the top, and a box MANEJADOR DE ERRORES maps 23505 to 409 and 23503 to 400, labelled ERRORES SEGUROS. Small caption UN SOBRE, UNA RUTA DE ERROR. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "05",
+      "title": "Actualizaciones en tiempo real mediante SSE"
+    },
+    {
+      "type": "paragraph",
+      "text": "Para actualizaciones en tiempo real, mensajes de administrador o nuevas notificaciones, el sistema utiliza Server-Sent Events: un flujo HTTP unidireccional más ligero que un WebSocket y que se reconecta de forma automática. En el servidor, un pequeño gestor mantiene un mapa del identificador de usuario al conjunto de flujos abiertos de ese usuario —uno por pestaña del navegador, con un límite de diez— y les escribe eventos de notificación con nombre. En el cliente, useNotificationStream abre un EventSource con credenciales para que la cookie de autenticación viaje junto con él, y escucha el evento con nombre; el manejador de mensajes predeterminado no se activa para eventos con nombre, lo cual es un error frecuente. El flujo se trata como servicio de mejor esfuerzo: la fuente de verdad sigue siendo el endpoint de la lista de notificaciones, por lo que un evento perdido nunca supone un registro perdido. El flujo se cierra en pagehide y se vuelve a abrir en pageshow, de modo que una conexión abierta no impide que la página quede en la caché de avance y retroceso del navegador."
+    },
+    {
+      "type": "table",
+      "title": "Cómo viaja una actualización en tiempo real",
+      "columns": [
+        "Etapa",
+        "Qué ocurre"
+      ],
+      "rows": [
+        [
+          "Se produce el evento",
+          "Un administrador emite una difusión o se crea una nueva notificación."
+        ],
+        [
+          "Gestor de flujos",
+          "Consulta los flujos abiertos del usuario (uno por pestaña, con un máximo de diez)."
+        ],
+        [
+          "Envío",
+          "Escribe un evento de notificación con nombre en cada conexión EventSource abierta."
+        ],
+        [
+          "Cliente",
+          "useNotificationStream escucha el evento con nombre y actualiza el recuento y la lista."
+        ],
+        [
+          "Reconexión",
+          "EventSource se reconecta de forma autónoma; tras un cierre forzado se aplica una breve espera."
+        ],
+        [
+          "Fuente de verdad",
+          "El endpoint de lista /notifications. Un evento perdido nunca implica un registro perdido."
+        ]
+      ],
+      "source": "Plantilla de arnés común AIDE, sse/notification-stream.ts y useNotificationStream.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.5",
+      "title": "Server-Sent Events a cada pestaña abierta",
+      "caption": "El servidor conserva los flujos abiertos de cada usuario y envía un evento con nombre a todos ellos. El cliente escucha el evento con nombre y actualiza la vista en su lugar. El endpoint de la lista de notificaciones sigue siendo la fuente de verdad, por lo que un evento perdido nunca supone un registro perdido.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-05.jpg",
+        "alt": "Un diagrama con un recuadro de servidor que contiene un gestor de flujos que asigna un identificador de usuario a dos conexiones de pestañas abiertas del navegador. Una flecha de evento etiquetada como «evento de notificación con nombre» se envía a ambas pestañas. Un endpoint separado de lista de notificaciones está marcado como la fuente de verdad, con una nota que indica que el flujo se reconecta y opera con mejor esfuerzo.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Centre-left: a SERVIDOR box containing a smaller box GESTOR DE FLUJOS showing userId then an arrow to a set of two connections PESTAÑA 1 and PESTAÑA 2. An arrow labelled evento: notificación pushes right to two boxes labelled PESTAÑA DEL NAVEGADOR. Below, a separate box GET /notificaciones LISTA marked with a rust tag FUENTE DE VERDAD connects to the tabs. Small captions FLUJO UNIDIRECCIONAL, RECONEXIÓN AUTOMÁTICA, MEJOR ESFUERZO. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "06",
+      "title": "El cliente de API único"
+    },
+    {
+      "type": "paragraph",
+      "text": "Toda llamada desde el navegador pasa por una única instancia de axios configurada. Esta instancia envía credenciales para que las cookies viajen, adjunta un identificador de solicitud y, en las operaciones de escritura, el token CSRF, y centraliza los tres tipos de error que de otro modo cada pantalla tendría que gestionar por separado. Como la lógica reside en un único archivo, ninguna vista la reimplementa ni puede hacerlo de forma incorrecta. Este es el ejemplo más claro de lo que la plantilla resuelve en nombre de la IA."
+    },
+    {
+      "type": "table",
+      "title": "Lo que el cliente de API único gestiona en cada solicitud",
+      "columns": [
+        "Cuando el servidor devuelve",
+        "Qué hace el cliente"
+      ],
+      "rows": [
+        [
+          "401, sesión expirada",
+          "Llama a /auth/refresh una vez, pone en cola las solicitudes concurrentes pendientes y luego las reprocesa. Si la renovación falla, emite un evento auth:expired y lo registra para auditoría."
+        ],
+        [
+          "403, token CSRF ausente o no coincidente",
+          "Vuelve a obtener el token CSRF y reintenta la solicitud una vez, poniendo en cola las escrituras concurrentes durante la renovación."
+        ],
+        [
+          "429, límite de solicitudes alcanzado",
+          "Espera el intervalo indicado en el encabezado Retry-After, con un máximo de diez segundos, y reintenta una vez."
+        ],
+        [
+          "Cualquier error, en producción",
+          "Devuelve un mensaje genérico según el código de estado, de modo que los detalles internos del servidor nunca lleguen al navegador."
+        ]
+      ],
+      "source": "AIDE Common Harness template, client/src/lib/api.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.6",
+      "title": "Un cliente para cada llamada",
+      "caption": "Cada pantalla realiza sus llamadas a través de una única instancia de axios. Adjunta credenciales, un identificador de solicitud y el token CSRF, y gestiona en un solo lugar la renovación del token, el reintento por error CSRF y los límites de velocidad, de modo que ninguna pantalla los reimplementa ni puede hacerlo de forma incorrecta.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-06.jpg",
+        "alt": "Un diagrama en forma de embudo: varios recuadros de pantalla a la izquierda confluyen en un recuadro central del cliente axios, que enumera lo que adjunta y cómo gestiona los errores 401, 403 CSRF y 429, y luego envía una única flecha a la API.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. On the left, four small boxes labelled PANTALLA converge with arrows into one large central box labelled CLIENTE AXIOS. Inside that box, a short list: ADJUNTAR CREDENCIALES, ID DE SOLICITUD, X-CSRF-TOKEN; 401 then RENOVAR Y REINTENTAR; 403 CSRF then VOLVER A OBTENER Y REINTENTAR; 429 then ESPERAR Y REINTENTAR. One arrow leaves the box to a box labelled API. A rust caption reads UN SOLO LUGAR, CADA SOLICITUD. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "07",
+      "title": "Enrutamiento y guardias de navegación"
+    },
+    {
+      "type": "paragraph",
+      "text": "El enrutador del cliente utiliza el modo historial y carga de forma diferida cada vista como su propio paquete, de modo que el código de una página se descarga únicamente cuando se visita. Cada ruta lleva metadatos: si requiere un usuario autenticado, si requiere un administrador, si es solo para invitados, qué diseño usar (predeterminado, administrador o en blanco) y un título. Un único guardia beforeEach carga el usuario actual una sola vez si es necesario, redirige a los usuarios no autenticados a la página de inicio de sesión conservando el destino al que se dirigían, impide el acceso de usuarios no administradores a las rutas de administración y redirige a los usuarios ya autenticados fuera de la página de inicio de sesión. Una función auxiliar sanitizeRedirect rechaza cualquier destino de redirección que no sea una ruta relativa simple, lo que cierra los ataques de redirección abierta; afterEach establece el título del documento."
+    },
+    {
+      "type": "table",
+      "title": "Metadatos de ruta y el guardia",
+      "columns": [
+        "Indicador de metadatos",
+        "Efecto en la navegación"
+      ],
+      "rows": [
+        [
+          "requiresAuth",
+          "Los usuarios no autenticados son redirigidos al inicio de sesión, conservando el destino original."
+        ],
+        [
+          "requiresAdmin",
+          "Los usuarios sin perfil de administrador son redirigidos a la página de inicio."
+        ],
+        [
+          "guestOnly",
+          "Los usuarios con sesión iniciada no pueden acceder a la página de inicio de sesión."
+        ],
+        [
+          "layout",
+          "Selecciona el encabezado predeterminado, el de administrador o el en blanco."
+        ],
+        [
+          "carga diferida",
+          "Cada vista tiene su propio paquete, que se descarga únicamente la primera vez que se visita."
+        ],
+        [
+          "sanitizeRedirect",
+          "Rechaza cualquier destino de redirección que no sea una ruta relativa simple."
+        ]
+      ],
+      "source": "Plantilla de arnés común AIDE, client/src/router/index.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.7",
+      "title": "El guardia de navegación",
+      "caption": "Antes de que se muestre una ruta, un guardia lee sus metadatos y decide: mostrar la vista cargada de forma diferida, redirigir a un usuario no autenticado al inicio de sesión (guardando el destino) o impedir el acceso a un usuario sin permisos de administrador. Los destinos de redirección se validan durante el proceso.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-07.jpg",
+        "alt": "Un diagrama de flujo: una flecha de navegación llega a un rombo de decisión del guardia que comprueba requiresAuth y requiresAdmin. Los resultados se ramifican en: mostrar un fragmento de vista cargado de forma diferida; redirigir al inicio de sesión conservando el destino; o redirigir al inicio. Un pequeño filtro sobre el parámetro de redirección está etiquetado como «sanitizar».",
+        "image_prompt": "An editorial flow diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a box NAVEGAR A RUTA with a tag META: requiresAuth / requiresAdmin / guestOnly / diseño. It flows into a diamond labelled GUARDIA beforeEach. Three branches: PERMITIR then MOSTRAR VISTA CARGADA DIFERIDA (drawn as a small separate chunk box); NO AUTENTICADO then REDIRIGIR A INICIO DE SESIÓN (CONSERVAR DESTINO); NO ES ADMIN then REDIRIGIR AL INICIO. A small inline filter on the redirect arrow is labelled sanitizeRedirect — SOLO RUTAS RELATIVAS. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "08",
+      "title": "Estado, componibles y formularios"
+    },
+    {
+      "type": "paragraph",
+      "text": "Existe un único almacén Pinia, dedicado a la autenticación. Guarda el usuario y los auxiliares de rol, cierra la sesión tras treinta minutos de inactividad y escucha el evento auth:expired que emite el cliente de API. Todo lo demás es un componible, que es el patrón de acceso a datos de la plantilla. useFetch(url) envuelve una petición GET y devuelve data, loading, error y una función refresh; los componibles de funcionalidad —useServices, useResources, useForms, useFiles y el resto— envuelven sus endpoints de la misma manera, de modo que una vista se enlaza a una forma uniforme en lugar de llamar a la API directamente. useTheme persiste el modo claro u oscuro en el almacenamiento local; usePwa gestiona los mensajes de instalación y actualización; useToast envuelve las notificaciones; y useNotificationStream alimenta el contador en tiempo real. El HTML proporcionado por el usuario pasa por DOMPurify antes de que se muestre en pantalla. Los formularios se construyen con FormKit mediante una única configuración compartida y con estilos uniformes, de modo que la validación y el aspecto visual son coherentes en lugar de implementarse manualmente en cada pantalla."
+    },
+    {
+      "type": "table",
+      "title": "Componentes básicos del cliente",
+      "columns": [
+        "Componente",
+        "Función"
+      ],
+      "rows": [
+        [
+          "Pinia auth store",
+          "El almacén único: el usuario, los auxiliares de roles, un cierre de sesión por inactividad de 30 minutos y un receptor para auth:expired."
+        ],
+        [
+          "useFetch(url)",
+          "Envuelve una solicitud GET y devuelve los datos, el estado de carga, el error y una función de actualización."
+        ],
+        [
+          "Componible de funcionalidad",
+          "useServices, useResources, useForms, useFiles y los demás envuelven sus endpoints de la misma forma, de modo que las vistas se vinculan a una estructura uniforme."
+        ],
+        [
+          "FormKit",
+          "Todos los formularios comparten una configuración temática única, con validación y estilos coherentes."
+        ],
+        [
+          "DOMPurify",
+          "Limpia todo el HTML proporcionado por el usuario antes de renderizarlo."
+        ]
+      ],
+      "source": "Plantilla de arnés común AIDE, client/src/stores y componibles."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.8",
+      "title": "Vistas, componibles y el almacén único",
+      "caption": "Las vistas nunca llaman a la API directamente. Se enlazan a componibles que envuelven cada endpoint y devuelven la misma estructura: data, loading, error, refresh. Un auth store Pinia gestiona la sesión; FormKit estandariza los formularios; DOMPurify limpia cualquier HTML del usuario.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-08.jpg",
+        "alt": "Un diagrama: recuadros de vistas a la izquierda se enlazan a una columna de componibles (useFetch, useServices, useForms, useNotificationStream), que llaman al cliente axios único. Un auth store Pinia aparece junto a ellos; una puerta DOMPurify limpia el HTML del usuario; FormKit gestiona los formularios. Cada componible está etiquetado con data, loading, error, refresh.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left column: three boxes labelled VISTA. They bind with arrows to a middle column of COMPOSABLE boxes: useFetch, useServices, useForms, useNotificationStream, each tagged { data, loading, error, refresh }. The composables point to a single box CLIENTE AXIOS on the right. Above, a separate box ALMACÉN PINIA AUTH (usuario, roles, cierre por inactividad) connects to the views. A small gate labelled DOMPURIFY sits on a user-HTML arrow into a view, and a box FORMKIT feeds a form view. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "09",
+      "title": "Interfaz, accesibilidad y compilación"
+    },
+    {
+      "type": "paragraph",
+      "text": "La interfaz usa PrimeVue 4 con el tema Aura, con componentes importados automáticamente mediante un resolver para que solo se incluyan en el paquete los que se usan, sobre la capa de estilos de utilidades de Tailwind 4. El arranque de la aplicación configura Pinia, PrimeVue, FormKit y el enrutador, registra un manejador global de errores que muestra una notificación emergente, precarga la fuente de iconos para acortar el primer renderizado y monta la aplicación únicamente después de que se hayan obtenido la sesión del usuario y el token CSRF. El modo oscuro se activa mediante una clase en el elemento raíz."
+    },
+    {
+      "type": "paragraph",
+      "text": "La accesibilidad está integrada: un enlace «saltar al contenido», una región activa que anuncia cada cambio de ruta a los lectores de pantalla y conformidad con el estándar WCAG 2.1 AA que el entorno exige. La compilación divide el código de proveedores externos en fragmentos separados —Vue, PrimeVue, gráficas y mapas— para que cada uno se almacene en caché de forma independiente; minifica y elimina las instrucciones console y debugger en producción; y sirve los recursos compilados con una caché inmutable de un año. La aplicación es una aplicación web progresiva instalable: un service worker precarga la estructura de la aplicación, redirige al cliente las rutas del cliente, pero nunca las de la API, y solicita al usuario que actualice cuando se publica una nueva compilación. El diseño es adaptable para dispositivos móviles de forma predeterminada, y el manifiesto incluye un icono enmascarable para una instalación limpia en la pantalla de inicio."
+    },
+    {
+      "type": "table",
+      "title": "De los componentes a la entrega",
+      "columns": [
+        "Aspecto",
+        "Cómo se gestiona"
+      ],
+      "rows": [
+        [
+          "Biblioteca de interfaz",
+          "PrimeVue 4 con el tema Aura, con importación automática para incluir solo los componentes utilizados, sobre utilidades de Tailwind 4."
+        ],
+        [
+          "Accesibilidad",
+          "Enlace de salto al contenido, un anunciador de ruta aria-live y conformidad con WCAG 2.1 AA."
+        ],
+        [
+          "Empaquetado",
+          "Vite divide los fragmentos de dependencias externas (Vue, PrimeVue, gráficos, mapas); Terser minimiza el código y elimina las instrucciones de consola en producción."
+        ],
+        [
+          "Caché",
+          "Los recursos compilados se sirven con una caché inmutable de un año."
+        ],
+        [
+          "PWA",
+          "Un service worker almacena en caché previa el armazón de la aplicación, recurre a esta en caso de fallo —pero nunca a la API— y solicita al usuario que actualice."
+        ],
+        [
+          "Móvil",
+          "Diseño adaptable por defecto, instalable en la pantalla de inicio con un icono enmascarable."
+        ]
+      ],
+      "source": "Plantilla de arnés común AIDE, main.ts y vite.config.ts."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.9",
+      "title": "De los componentes a una aplicación entregada",
+      "caption": "PrimeVue y Tailwind componen la interfaz, con accesibilidad integrada. Vite empaqueta la aplicación en fragmentos de proveedores con caché independiente, y un service worker la convierte en una aplicación web progresiva instalable que se actualiza a petición del usuario.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-09.jpg",
+        "alt": "Un diagrama en dos partes. A la izquierda, la interfaz: los componentes PrimeVue Aura y las utilidades de Tailwind componen una pantalla, con etiquetas de accesibilidad para un enlace de salto, aria-live y WCAG 2.1 AA. A la derecha, compilación y entrega: Vite empaqueta en fragmentos de proveedores para Vue, PrimeVue, gráficas y mapas, y un service worker precarga la estructura de la aplicación para una aplicación web progresiva instalable.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels, split into two halves by a thin vertical rule. LEFT half titled INTERFAZ: boxes PRIMEVUE (AURA) and TAILWIND combine into a box PANTALLA, with small badges ENLACE DE SALTO, ARIA-LIVE, WCAG 2.1 AA. RIGHT half titled COMPILACIÓN Y ENTREGA: a box VITE splits into four stacked chunk boxes VUE, PRIMEVUE, GRÁFICAS, MAPAS, then a box SERVICE WORKER precaches a ESTRUCTURA, leading to a box PWA INSTALABLE with a small maskable icon and a tag ACTUALIZAR A PETICIÓN. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "10",
+      "title": "El OWASP Top 10, abordado desde el principio"
+    },
+    {
+      "type": "paragraph",
+      "text": "El OWASP Top 10 es la lista del sector de la seguridad informática con las diez clases de vulnerabilidades web más graves. La plantilla aborda cada una de ellas en el código, construido según el Estándar de Verificación de Seguridad de Aplicaciones (ASVS) de OWASP en el Nivel 2, el estándar que el entorno exige al trabajo."
+    },
+    {
+      "type": "table",
+      "title": "Cómo aborda la plantilla el OWASP Top 10 (2021)",
+      "columns": [
+        "Riesgo",
+        "Cómo lo aborda la plantilla"
+      ],
+      "rows": [
+        [
+          "A01 Control de acceso deficiente",
+          "Cada ruta protegida ejecuta authenticate y luego authorize según la jerarquía de roles; las cuentas inactivas son rechazadas en el momento de la actualización de sesión."
+        ],
+        [
+          "A02 Fallos criptográficos",
+          "Tokens firmados con RS256, tokens de actualización con hash SHA-256, cookies httpOnly y seguras, HTTPS forzado y cifrado de columnas opcional."
+        ],
+        [
+          "A03 Inyección",
+          "Todo el acceso a la base de datos está parametrizado y cada solicitud se valida contra un esquema antes de su uso."
+        ],
+        [
+          "A04 Diseño inseguro",
+          "CSRF activado por defecto, rotación de tokens de actualización, límites de frecuencia escalonados y un servidor que se niega a iniciarse con configuraciones inseguras."
+        ],
+        [
+          "A05 Configuración de seguridad incorrecta",
+          "Encabezados de seguridad estrictos, configuración validada al inicio y errores sin detalles internos en producción."
+        ],
+        [
+          "A06 Componentes vulnerables",
+          "Dependencias fijadas, con versiones transitivas problemáticas conocidas reemplazadas."
+        ],
+        [
+          "A07 Fallos de autenticación",
+          "Tokens de acceso de corta duración, tokens de actualización rotativos, inicio de sesión con límite de frecuencia y aplicación de un único inquilino."
+        ],
+        [
+          "A08 Fallos de integridad de datos",
+          "Las firmas de tokens y el estado OAuth se verifican, y las cargas se comprueban por tipo declarado y contenido real."
+        ],
+        [
+          "A09 Fallos de registro y monitoreo",
+          "Registros estructurados con identificadores de correlación y una pista de auditoría de las acciones sensibles."
+        ],
+        [
+          "A10 Falsificación de solicitudes del lado del servidor",
+          "No aplica para esta plantilla."
+        ]
+      ],
+      "source": "Plantilla de arnés común AIDE, mapeada al OWASP Top 10 (2021)."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.10",
+      "title": "El OWASP Top 10, cada riesgo cubierto por un control",
+      "caption": "Cada una de las diez clases de riesgo corresponde a un control concreto ya implementado en el código de la plantilla, construido según el estándar OWASP ASVS Nivel 2. El riesgo A10, falsificación de solicitudes del lado del servidor, se señala en lugar de declararse resuelto, para que la aplicación lo cierre.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-10.jpg",
+        "alt": "Un escudo que contiene una lista de verificación de diez filas etiquetadas de A01 a A10, cada una acompañada de una etiqueta de control breve como RBAC, RS256 más hash, SQL parametrizado, CSRF por defecto, encabezados estrictos, dependencias fijadas, tokens de corta duración, firmas verificadas, registro de auditoría y SSRF marcado. Las primeras nueve están marcadas con una palomilla; la décima aparece señalada como pendiente.",
+        "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents, legible labels. A large shield outline containing a neat checklist of ten rows: A01 CONTROL DE ACCESO — RBAC; A02 CRIPTOGRAFÍA — RS256 + HASH; A03 INYECCIÓN — SQL PARAMETRIZADO; A04 DISEÑO INSEGURO — CSRF POR DEFECTO; A05 CONFIGURACIÓN — ENCABEZADOS ESTRICTOS; A06 COMPONENTES — DEPENDENCIAS FIJADAS; A07 AUTENTICACIÓN — TOKENS CORTOS; A08 INTEGRIDAD — FIRMAS VERIFICADAS; A09 REGISTRO — TRAZA DE AUDITORÍA; A10 SSRF — SEÑALADO. Rows A01 through A09 each have a small navy check mark; A10 has a small rust tag reading N/A. Title above the shield reads OWASP TOP 10 · ASVS NIVEL 2. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "11",
+      "title": "Lo que la plantilla resuelve para el agente"
+    },
+    {
+      "type": "paragraph",
+      "text": "Leído de atrás hacia adelante, el patrón es coherente. Las decisiones críticas se toman una sola vez, en el código, y se centralizan para que no puedan tomarse de forma incorrecta: la identidad, el CSRF, el SQL parametrizado, el envoltorio de respuesta, el saneamiento de errores, el mecanismo alternativo de actualización en tiempo real y la lógica de reintento del cliente de API son, cada uno, una implementación única y probada que la IA hereda en lugar de escribir. A la IA se le entrega un sistema conforme y se le pide que lo amplíe, y el arnés verifica mecánicamente que sigue siendo válido en cada cambio. La misma disciplina que aplica el [Arnés Anti-Deriva](/paper/of1cj) a medida que crece la base de código."
+    },
+    {
+      "type": "paragraph",
+      "text": "La plantilla no lo resuelve todo. El análisis de archivos cargados en busca de malware y el balanceo de carga aún no están integrados; el estado de limitación de frecuencia se mantiene en memoria hasta que se configure un almacén compartido. Las brechas conocidas o las decisiones diferidas están documentadas, no ocultas. El conjunto de herramientas es de código abierto en su totalidad —Vue, Express, Postgres y sus bibliotecas con buen soporte—, por lo que no hay dependencia cerrada en un proveedor y una gran comunidad lo mantiene actualizado, que es el nivel mínimo que debe cumplir una aplicación gubernamental de cara al público antes de desplegarse.\n\nYa sea que utilice esta plantilla o construya la suya propia, estos principios deberían ayudarle a usted —y a su agente— a mantenerse en el camino correcto."
+    },
+    {
+      "type": "table",
+      "title": "Decidido una vez, heredado en todas partes",
+      "columns": [
+        "Área",
+        "La implementación única que hereda el agente"
+      ],
+      "rows": [
+        [
+          "Identidad",
+          "Inicio de sesión SSO, tokens RS256 en cookies httpOnly, rotación de actualización y acceso basado en roles."
+        ],
+        [
+          "Seguridad entre sitios",
+          "CSRF de doble envío global, activado por defecto para cada escritura."
+        ],
+        [
+          "Acceso a la base de datos",
+          "Consultas parametrizadas, gestionadas por la capa del modelo."
+        ],
+        [
+          "Respuestas",
+          "Un único envoltorio de éxito o error, con mapeo seguro de errores."
+        ],
+        [
+          "Tiempo real",
+          "Server-Sent Events, con el endpoint de lista como fuente de verdad."
+        ],
+        [
+          "Llamadas del cliente",
+          "Un único cliente axios que gestiona la actualización, el CSRF y los límites de frecuencia."
+        ],
+        [
+          "Aún pendiente",
+          "Análisis de malware en archivos, un almacén compartido de límites de frecuencia y A10 SSRF: documentados, no ocultos."
+        ]
+      ],
+      "source": "Plantilla Común de Arnés AIDE."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.11",
+      "title": "Hereda, no reinventes",
+      "caption": "Las decisiones difíciles llegan ya tomadas y validadas. El agente extiende un sistema conforme con nuevas funcionalidades en lugar de tener que decidir de nuevo sobre identidad, seguridad y acceso a datos; y el arnés verifica que la línea de base se mantiene en cada cambio.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-11.jpg",
+        "alt": "Un diagrama: a la izquierda, una pila de bloques bloqueados etiquetados como identity, CSRF, parameterized SQL, response envelope, error handling y API client; en el centro, se entrega a un token de agente de IA que añade nuevos bloques de funcionalidades a la derecha. Una compuerta etiquetada harness check valida cada nuevo cambio.",
+        "image_prompt": "An editorial systems diagram on warm cream paper, deep navy line work with small rust accents, legible labels. Left: a vertical stack of small tiles each drawn with a tiny padlock, labelled IDENTIDAD, CSRF, SQL PARAMETRIZADO, SOBRE DE RESPUESTA, MANEJO DE ERRORES, CLIENTE DE API, grouped under a heading DECIDIDO EN EL CÓDIGO. A wide arrow carries them to a simple robot token labelled AGENTE DE IA in the centre. From the agent, arrows add three boxes on the right labelled NUEVA FUNCIONALIDAD. Between the agent and the new features sits a gate labelled VERIFICACIÓN DEL ARNÉS. A rust caption reads HEREDA, NO REINVENTES. No logos, no people beyond a simple token. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "section_heading",
+      "n": "12",
+      "title": "La plantilla completa, en una sola página"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada parte descrita anteriormente es una decisión dentro de un sistema único y coherente. El esquema que aparece a continuación las reúne todas: el cliente Vue a la izquierda, el servidor Express en el centro, Postgres y los proveedores de identidad a la derecha, y las decisiones de seguridad y estándares que aplican a todos ellos en el borde. Es el mapa que un ingeniero puede tener a su lado mientras construye, y la estructura que el agente extiende."
+    },
+    {
+      "type": "figure",
+      "fno": "FIG. 16.12",
+      "title": "La plantilla completa, de principio a fin",
+      "caption": "Un mapa único de toda la plantilla: el cliente Vue (enrutador y guardas, vistas, componibles, el auth store, el único cliente de API, PrimeVue y Tailwind, la PWA), el servidor Express (la cadena de middleware, la ruta hacia el controlador, el servicio y el modelo, la autenticación y el gestor de SSE), Postgres con sus tablas, y los proveedores de identidad; con las decisiones transversales claves indicadas en el borde.",
+      "image": {
+        "src": "public/images/l5wsi/es/fig-12.jpg",
+        "alt": "Un esquema de arquitectura grande y detallado en tres columnas. A la izquierda, el cliente Vue en el navegador: enrutador y guardas, vistas, componibles, auth store Pinia, un único cliente axios, PrimeVue y Tailwind, y un service worker de PWA. En el centro, el servidor Express: la cadena de middleware ordenada, luego la ruta hacia el controlador, el servicio y el modelo, más autenticación por cookie RS256 y el gestor de flujo SSE. A la derecha, una base de datos Postgres con tablas y los proveedores de identidad de Google y Microsoft. Una franja en el borde indica las decisiones clave: cookies httpOnly, SQL parametrizado, CSRF de doble envío, OWASP ASVS Nivel 2, WCAG 2.1 AA, 773 pruebas, seis analizadores, código abierto.",
+        "image_prompt": "A large, highly detailed editorial architecture placemat on warm cream paper, deep Alberta navy line work with small rust accents, many small legible labels, orderly and dense, wide aspect. THREE COLUMNS joined by arrows. LEFT column titled NAVEGADOR · CLIENTE VUE 3 with stacked boxes: ENRUTADOR + GUARDIAS, VISTAS, COMPONIBLES, ALMACÉN DE AUTENTICACIÓN PINIA, UN SOLO CLIENTE AXIOS, INTERFAZ PRIMEVUE + TAILWIND, SERVICE WORKER DE PWA, plus small accessibility tags ENLACE DE SALTO / ARIA-LIVE / WCAG 2.1 AA. MIDDLE column titled SERVIDOR · EXPRESS + TYPESCRIPT: a vertical CADENA DE MIDDLEWARE box (helmet, CORS, límite de tasa, cuerpo, CSRF), then a flow RUTA then CONTROLADOR then SERVICIO then MODELO, and to the side AUTENTICACIÓN · RS256, COOKIES httpOnly and GESTOR DE FLUJOS SSE. RIGHT column titled DATOS E IDENTIDAD: a database cylinder POSTGRES listing tables user_account, refresh_token, audit_log, and a box PROVEEDORES DE IDENTIDAD · GOOGLE / MICROSOFT. Arrows: client CLIENTE AXIOS to server over HTTPS con cookies; server MODELO to POSTGRES with CONSULTAS PARAMETRIZADAS; server AUTENTICACIÓN to PROVEEDORES DE IDENTIDAD. A BORDER STRIP around the whole diagram lists DECISIONES CLAVE: COOKIES httpOnly, SQL PARAMETRIZADO, CSRF DE DOBLE ENVÍO, OWASP ASVS L2, WCAG 2.1 AA, 773 PRUEBAS, SEIS ESCÁNERES, CÓDIGO ABIERTO. No logos, no people. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+        "style_kind": "diagram"
+      }
+    },
+    {
+      "type": "tag_row",
+      "tags": [
+        "template",
+        "harness",
+        "security",
+        "owasp",
+        "open-source"
+      ]
+    },
+    {
+      "type": "related"
+    }
+  ],
+  "_meta": {
+    "placeholder": false,
+    "written_by": "human-authored",
+    "author_verbatim": false,
+    "draft": "v3",
+    "translated_from": {
+      "source_locale": "en",
+      "tier": "sonnet",
+      "translated_at": "2026-07-07"
+    },
+    "es_review": {
+      "reviewer": "Leonardo Villarroel",
+      "reviewed_at": "2026-08-06",
+      "source": "spanish/Velocity-White-Papers-Spanish-22.docx (tracked changes accepted)",
+      "applied_at": "2026-09-04",
+      "scope": "title, subtitle, abstract, body blocks, figure titles/alt/captions, tables, keystats, pullquotes. TL;DR slide narration was not part of the review."
+    },
+    "updated": "2026-09-04",
+    "changelog": [
+      {
+        "date": "2026-09-04",
+        "note": "Traducción al español revisada por un traductor profesional (Leonardo Villarroel); 31 campos actualizados."
+      }
+    ]
+  },
+  "related": [
+    "p7p2k",
+    "l199t",
+    "of1cj",
+    "qxlzo",
+    "eujjc"
+  ],
+  "translation_status": "reviewed",
+  "source_signature": "3244226999"
+}

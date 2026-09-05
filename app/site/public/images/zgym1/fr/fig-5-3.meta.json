@@ -1,0 +1,17 @@
+{
+  "paper_id": "zgym1",
+  "locale": "fr",
+  "slot": "fig-03",
+  "out_path": "public\\images\\zgym1\\fr\\fig-5-3.jpg",
+  "bytes_jpg": 275901,
+  "bytes_png_source": 2990452,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T06:42:32.696Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial isometric illustration of a small town, split into a before and after. On the left, scattered buildings each with its own small redundant well, its own generator, and its own dirt path, a picture of duplicated private infrastructure. On the right, the same buildings connected to a single shared water tower, one shared power station, and a clean shared network of roads. A sense of redundant per-building infrastructure replaced by shared infrastructure built once and used by all. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial isometric illustration of a small town, split into a before and after. On the left, scattered buildings each with its own small redundant well, its own generator, and its own dirt path, a picture of duplicated private infrastructure. On the right, the same buildings connected to a single shared water tower, one shared power station, and a clean shared network of roads. A sense of redundant per-building infrastructure replaced by shared infrastructure built once and used by all. Muted Alberta cream palette, navy and rust accents, archival print quality, no text. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\zgym1\\en\\fig-5-3.source.png"
+}

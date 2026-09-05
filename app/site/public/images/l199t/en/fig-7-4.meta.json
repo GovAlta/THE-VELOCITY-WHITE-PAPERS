@@ -1,0 +1,17 @@
+{
+  "paper_id": "l199t",
+  "locale": "en",
+  "slot": "fig-7-4",
+  "style_kind": "diagram",
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A wise security mentor, consolidating the findings from the yellow, green, red agents, and the full blue agent analysis, assembling them into one clear defensive map. These reports tie together 95 different key insights which form the security analysis report, kill chain analysis, and remediation plan. A sense of evidence being turned into a calm, authoritative verdict. Muted Alberta cream base with a clear navy-blue accent, archival print quality, no text.",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A wise security mentor, consolidating the findings from the yellow, green, red agents, and the full blue agent analysis, assembling them into one clear defensive map. These reports tie together 95 different key insights which form the security analysis report, kill chain analysis, and remediation plan. A sense of evidence being turned into a calm, authoritative verdict. Muted Alberta cream base with a clear navy-blue accent, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null,
+  "model": "gpt-image-2",
+  "generated_at": "2026-06-02T03:30:48.496Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "bytes_jpg": 279961,
+  "bytes_png_source": 2523134,
+  "generated_by": "edit-server.mjs"
+}

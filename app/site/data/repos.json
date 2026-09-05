@@ -1,0 +1,191 @@
+{
+  "_note": "Canonical, bilingual list of public repositories. Single source of truth: drives the /repos page, the home-page repo count, and each paper's repo link(s). Quantity and names are not hardcoded anywhere else. A repo MAY link to a paper via `paper` (a paper id); a paper may have more than one repo (e.g. Pronghorn → PRONGHORN-RED + PRONGHORN-BLUE). Set `available: false` until the repo is published; the count still includes it.",
+  "page": {
+    "eyebrow": {
+      "en": "Public repositories",
+      "fr": "Dépôts publics",
+      "es": "Repositorios públicos"
+    },
+    "title_lead": {
+      "en": "Open by",
+      "fr": "Ouvert par",
+      "es": "Abiertos por"
+    },
+    "title_em": {
+      "en": "default.",
+      "fr": "défaut.",
+      "es": "defecto."
+    },
+    "lede": {
+      "en": "Every system behind these papers is published here. Most are open under the MIT license; a few are available to other Canadian governments on request. No proprietary lock-in, and no blind trust required.",
+      "fr": "Chaque système derrière ces livres blancs est publié ici. La plupart sont ouverts sous licence MIT; quelques-uns sont offerts aux autres gouvernements canadiens sur demande. Aucun verrouillage propriétaire, et aucune confiance aveugle requise.",
+      "es": "Cada sistema que sustenta estos libros se publica aquí. La mayoría está disponible bajo la licencia MIT; algunos pueden solicitarse por otros gobiernos canadienses. Sin dependencia propietaria ni confianza ciega."
+    },
+    "repos_word": {
+      "en": "repositories",
+      "fr": "dépôts",
+      "es": "repositorios"
+    },
+    "read": {
+      "en": "Read the paper →",
+      "fr": "Lire le livre blanc →",
+      "es": "Leer el libro blanco →"
+    },
+    "live": {
+      "en": "Live",
+      "fr": "En ligne",
+      "es": "En línea"
+    },
+    "soon": {
+      "en": "Publishing soon",
+      "fr": "Publication à venir",
+      "es": "Publicación próxima"
+    },
+    "private": {
+      "en": "Private · access on request",
+      "fr": "Privé · accès sur demande",
+      "es": "Privado · acceso previa solicitud"
+    },
+    "request": {
+      "en": "Request access →",
+      "fr": "Demander l’accès →",
+      "es": "Solicitar acceso →"
+    },
+    "request_email": "TI.Velocity@gov.ab.ca",
+    "empty": {
+      "en": "No repositories published yet.",
+      "fr": "Aucun dépôt publié pour le moment.",
+      "es": "Todavía no se ha publicado ningún repositorio."
+    }
+  },
+  "categories": [
+    {
+      "id": "open",
+      "license": "MIT",
+      "label": {
+        "en": "Open source · MIT License",
+        "fr": "Logiciel libre · licence MIT",
+        "es": "Código abierto · Licencia MIT"
+      },
+      "note": {
+        "en": "Free to use, study, modify, and adapt.",
+        "fr": "Libre d’utilisation, d’étude, de modification et d’adaptation.",
+        "es": "Libre para usar, estudiar, modificar y adaptar."
+      }
+    },
+    {
+      "id": "on-request",
+      "label": {
+        "en": "Available to other Canadian governments upon request",
+        "fr": "Offert aux autres gouvernements canadiens sur demande",
+        "es": "Disponible para otros gobiernos canadienses previa solicitud"
+      },
+      "note": {
+        "en": "These repositories are private. Governments in Canada can request access by writing to TI.Velocity@gov.ab.ca.",
+        "fr": "Ces dépôts sont privés. Les gouvernements du Canada peuvent en demander l’accès en écrivant à TI.Velocity@gov.ab.ca.",
+        "es": "Estos repositorios son privados. Los gobiernos de Canadá pueden solicitar acceso escribiendo a TI.Velocity@gov.ab.ca."
+      }
+    }
+  ],
+  "repos": [
+    {
+      "id": "the-velocity-white-papers",
+      "name": "THE-VELOCITY-WHITE-PAPERS",
+      "url": "https://github.com/GovAlta/THE-VELOCITY-WHITE-PAPERS",
+      "category": "open",
+      "available": true,
+      "paper": null,
+      "description": {
+        "en": "The repository for this site. The open collection of white papers ships with a lightweight AI-driven content management system (CMS) which handles authoring, translation, image generation, editing, and style guides. Download the papers and reuse the CMS for your own purposes.",
+        "fr": "Le dépôt de ce site. La collection ouverte de livres blancs est accompagnée d’un système de gestion de contenu (CMS) léger, appuyé par l’IA, qui prend en charge la rédaction, la traduction, la génération d’images, l’édition et les guides de style. Téléchargez les livres blancs et réutilisez le CMS à vos propres fins.",
+        "es": "El repositorio de este sitio. La colección abierta de libros blancos incluye un sistema de gestión de contenidos ligero y asistido por IA que gestiona la redacción, la traducción, la generación de imágenes, la edición y las guías de estilo. Descargue los libros y reutilice el sistema para sus propios fines."
+      }
+    },
+    {
+      "id": "pronghorn-red",
+      "name": "PRONGHORN-RED",
+      "url": "https://github.com/GovAlta/PRONGHORN-RED",
+      "category": "open",
+      "available": true,
+      "paper": "qthji",
+      "description": {
+        "en": "The original open-source Pronghorn platform, built on React and Supabase. It provides chat, artifacts, built-in agents, and a robust architectural canvas to build the plan before the development process begins. This platform has been replaced with the Pronghorn Blue platform, co-developed with Microsoft.",
+        "fr": "La plateforme Pronghorn open source d’origine, bâtie sur React et Supabase. Elle offre le clavardage, des artéfacts, des agents intégrés et un canevas architectural robuste pour établir le plan avant le début du développement. Cette plateforme a été remplacée par la plateforme Pronghorn Blue, co-développée avec Microsoft.",
+        "es": "La plataforma Pronghorn original de código abierto, construida con React y Supabase. Incluye chat, artefactos, agentes integrados y un lienzo arquitectónico sólido para elaborar el plan antes de iniciar el desarrollo. Esta plataforma fue reemplazada por Pronghorn Blue, desarrollada conjuntamente con Microsoft."
+      }
+    },
+    {
+      "id": "pronghorn-blue",
+      "name": "PRONGHORN-BLUE",
+      "url": "https://github.com/GovAlta/PRONGHORN-BLUE",
+      "category": "open",
+      "available": true,
+      "paper": "qthji",
+      "description": {
+        "en": "The current Azure-aligned Pronghorn, with full integration to the Microsoft Agent Factory and Cloud environments. This platform is currently maintained and advanced in partnership between the Government of Alberta and Microsoft.",
+        "fr": "La version actuelle de Pronghorn, alignée sur Azure, avec une intégration complète à la Microsoft Agent Factory et aux environnements infonuagiques. Cette plateforme est actuellement maintenue et perfectionnée en partenariat entre le gouvernement de l’Alberta et Microsoft.",
+        "es": "La versión actual de Pronghorn alineada con Azure, con integración completa en Microsoft Agent Factory y los entornos de nube. El Gobierno de Alberta y Microsoft mantienen y desarrollan actualmente esta plataforma en colaboración."
+      }
+    },
+    {
+      "id": "velocity-game-engine",
+      "name": "VELOCITY-GAME-ENGINE",
+      "url": "https://github.com/GovAlta/VELOCITY-GAME-ENGINE",
+      "category": "open",
+      "available": true,
+      "paper": "k3tc3",
+      "description": {
+        "en": "A modern project-management tool for the AI era. Modelled on the game of snakes and ladders, this tool allows AI to be a first-class participant with dynamic AI teams.",
+        "fr": "Un outil moderne de gestion de projet pour l’ère de l’IA. Inspiré du jeu de serpents et échelles, cet outil permet à l’IA d’être un participant à part entière au sein d’équipes d’IA dynamiques.",
+        "es": "Una herramienta moderna de gestión de proyectos para la era de la IA. Inspirada en el juego de serpientes y escaleras, permite que la IA participe plenamente mediante equipos dinámicos de agentes."
+      }
+    },
+    {
+      "id": "common-harness",
+      "name": "COMMON-HARNESS",
+      "url": "https://github.com/GovAlta/COMMON-HARNESS",
+      "category": "open",
+      "available": true,
+      "paper": "p7p2k",
+      "description": {
+        "en": "The generic agentic harness, bundled with skill files, standards, Red, Blue, Green, and Yellow agents, and a pre-defined Vue.js Node.js Postgres template.",
+        "fr": "Le harnais agentique générique, accompagné de fichiers de compétences, de normes, d’agents rouge, bleu, vert et jaune, et d’un gabarit prédéfini Vue.js, Node.js et Postgres.",
+        "es": "El arnés agéntico genérico, acompañado de archivos de habilidades, normas, agentes rojos, azules, verdes y amarillos, y una plantilla predefinida de Vue.js, Node.js y Postgres."
+      }
+    },
+    {
+      "id": "git-insights",
+      "name": "GIT-INSIGHTS",
+      "url": "https://github.com/GovAlta/GIT-INSIGHTS",
+      "category": "on-request",
+      "available": true,
+      "private": true,
+      "paper": "bbkac",
+      "description": {
+        "en": "A recursive scanner for an enterprise GitHub estate. It maps the technical estate, the cybersecurity posture, and the human estate, top contributors by language and by ministry, into a single structured picture.",
+        "fr": "Un analyseur récursif pour un parc GitHub d’entreprise. Il cartographie le parc technique, la posture de cybersécurité et le parc humain, soit les principaux contributeurs par langage et par ministère, en un portrait structuré unique.",
+        "es": "Un escáner recursivo para un patrimonio empresarial de GitHub. Reúne en una sola imagen estructurada el patrimonio tecnológico, la postura de ciberseguridad y el panorama humano, incluidos los principales colaboradores por lenguaje y ministerio."
+      }
+    },
+    {
+      "id": "git-insights-ministry",
+      "name": "GIT-INSIGHTS-MINISTRY",
+      "url": "https://github.com/GovAlta/GIT-INSIGHTS-MINISTRY",
+      "category": "on-request",
+      "available": true,
+      "private": true,
+      "paper": "offjm",
+      "description": {
+        "en": "From analysis to synthesis. It operates at the scale of a whole ministry, across hundreds of systems, and proposes a modular, reusable, government-owned architecture for that ministry.",
+        "fr": "De l’analyse à la synthèse. Il fonctionne à l’échelle d’un ministère entier, à travers des centaines de systèmes, et propose une architecture modulaire, réutilisable et détenue par le gouvernement pour ce ministère.",
+        "es": "Del análisis a la síntesis. Opera a escala de un ministerio completo, a través de cientos de sistemas, y propone una arquitectura modular, reutilizable y propiedad del gobierno para ese ministerio."
+      }
+    }
+  ],
+  "_meta_es_review": {
+    "reviewer": "Leonardo Villarroel",
+    "reviewed_at": "2026-08-06",
+    "source": "spanish/Velocity-White-Papers-Spanish-22.docx",
+    "applied_at": "2026-09-04"
+  }
+}

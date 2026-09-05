@@ -1,0 +1,853 @@
+/* EditMode — a DEV-ONLY in-page editor for paper content.
+
+   This never operates on the published site. It is hard-gated to localhost /
+   127.0.0.1, so on GitHub Pages the toolbar does not render and nothing here
+   activates. The public site stays read-only static, per CLAUDE.md.
+
+   How it works:
+     - VWEdit is a small reactive controller (available / enabled / dirty / current).
+     - When enabled, <editable-text> regions become contenteditable (see
+       EditableText.js). Edits write straight to the in-memory paper object,
+       which is the same object the page renders, so the page updates live.
+     - Save serializes that object back to data/papers/<id>.<locale>.json via the
+       File System Access API. You grant access to the folder once per session.
+     - Browsers without the File System Access API fall back to a JSON download.
+
+   It edits the underlying JSON fields, not the rendered visuals. Charts and
+   bespoke visuals are not WYSIWYG here; edit their config in the JSON. */
+
+(function () {
+  const { reactive } = Vue;
+
+  const host = location.hostname;
+  const onLocalhost =
+    host === 'localhost' || host === '127.0.0.1' || host === '[::1]' || host === '';
+
+  const VWEdit = reactive({
+    available: false,   // set true only after the edit-server confirms editing is enabled
+    enabled: false,
+    dirty: false,          // unsaved changes for the CURRENTLY shown locale
+    dirtyMap: {},          // per-locale unsaved state, keyed "<locale>:<id>"
+    saving: false,
+    status: '',
+    current: null,         // the paper object for the active locale, on screen
+    guides: [],            // style guides loaded from the edit-server, editable
+    guidesOpen: false,     // style-guide library panel open
+    guidesLoading: false,
+    guidesError: '',
+    revise: { open: false, scope: '', blocks: [], guideIds: [], instructions: '', running: false, model: 'sonnet' },
+    translate: { open: false, target: 'fr', model: 'sonnet', regenImages: true, regenAudio: false, running: false },
+    drift: null,           // { primary, inSync, hasTranslation, translatedAt } for the current paper
+    draft: { open: false, mode: 'draft', markdown: '', model: 'sonnet', running: false, result: null, warnings: [] },
+
+    /* The JSON is bilingual: data/papers/<id>.en.json and <id>.fr.json are two
+       separate files. The page loads one locale at a time, so editing operates
+       on whichever locale is shown and Save writes that locale's file. Switch
+       locale (EN/FR in the toolbar, or the main nav) to edit the other. Unsaved
+       state is tracked per locale so switching never silently drops edits. */
+    _key(loc) {
+      const l = loc || (window.VWStore && window.VWStore.locale) || 'en';
+      return l + ':' + (this.current && this.current.id);
+    },
+
+    setCurrent(paper) {
+      this.current = paper;
+      this.dirty = !!this.dirtyMap[this._key()];   // restore this locale's unsaved state
+      if (!this.enabled) this.status = '';
+    },
+    toggle() {
+      if (!this.available) return;
+      this.enabled = !this.enabled;
+      this.status = this.enabled ? 'Editing. Click any paragraph, heading, title, or abstract.' : '';
+    },
+    markDirty() {
+      this.dirtyMap[this._key()] = true;
+      this.dirty = true;
+    },
+    /* Which locales for the current paper have unsaved edits (for the toolbar). */
+    dirtyLocales() {
+      const id = this.current && this.current.id;
+      if (!id) return [];
+      return Object.keys(this.dirtyMap)
+        .filter(k => this.dirtyMap[k] && k.endsWith(':' + id))
+        .map(k => k.split(':')[0]);
+    },
+
+    /* ---- Image generation (needs the dev edit-server) -------------------- */
+
+    /* Generate or regenerate the image at opts.src from opts.prompt by calling
+       the dev server's /api/generate-image. Returns { ok, src } or { ok:false,
+       error }. Only works under `npm run edit`; under plain `npm run dev` the
+       endpoint is absent and we report that. */
+    async generateImage(opts) {
+      this.status = (opts.regenerate ? 'Regenerating' : 'Generating') + ' image…';
+      try {
+        const res = await fetch('/api/generate-image', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            src: opts.src,
+            prompt: opts.prompt,
+            style_kind: opts.style_kind || 'diagram',
+            locale: (window.VWStore && window.VWStore.locale) || 'en',
+          }),
+        });
+        let data = {};
+        try { data = await res.json(); } catch (_) {}
+        if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
+        const finalSrc = data.src || opts.src;
+        /* The regenerated file overwrites the same path, so the browser keeps
+           serving the cached bytes. Bump a session cache-bust token for this
+           path; the renderer appends it as a ?v= query so the new image shows
+           immediately, and it survives the save (it lives in the store, not the
+           paper JSON). */
+        if (finalSrc && window.VWStore) window.VWStore.assetBust[finalSrc] = Date.now();
+        this.status = 'Image saved to ' + finalSrc;
+        return { ok: true, src: finalSrc };
+      } catch (e) {
+        const msg = (e && e.message) || String(e);
+        this.status = 'Image generation failed: ' + msg + '. Run "npm run edit" (not "npm run dev") to enable generation, and set OPENAI_API_KEY in .env.';
+        return { ok: false, error: msg };
+      }
+    },
+
+    /* Generate narration audio (ElevenLabs via the dev server) for a slide. */
+    async generateAudio(opts) {
+      this.status = 'Generating narration…';
+      try {
+        const res = await fetch('/api/generate-audio', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ text: opts.text, out: opts.out }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        this.status = 'Narration saved to ' + (d.out || opts.out);
+        return { ok: true };
+      } catch (e) {
+        const msg = (e && e.message) || String(e);
+        this.status = 'Narration failed: ' + msg + ' (needs ELEVENLABS_API_KEY in .env, via npm run edit)';
+        return { ok: false, error: msg };
+      }
+    },
+
+    /* Build the long-form narration text from the in-memory paper, the same way
+       scripts/generate-audio.mjs extractLongform does, and regenerate the
+       full-paper MP3. Reflects unsaved edits. Number normalization and sentence
+       pauses are applied server-side in tts.mjs. */
+    longformText(p) {
+      const loc = (window.VWStore && window.VWStore.locale) || 'en';
+      const L = loc === 'fr'
+        ? { title: 'Titre. ', abstract: 'Résumé. ', quote: 'Citation. ' }
+        : { title: 'Title. ', abstract: 'Abstract. ', quote: 'Quote. ' };
+      const out = [];
+      if (p.title)    out.push(L.title + p.title + '. ');
+      if (p.subtitle) out.push(p.subtitle);
+      if (p.abstract) out.push(L.abstract + p.abstract);
+      const strip = (s) => (s || '')
+        .replace(/<[^>]+>/g, '')
+        .replace(/\*\*|__|\*|`/g, '')
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+      for (const b of (p.blocks || [])) {
+        if (b.type === 'section_heading') out.push(strip(b.title) + '.');
+        else if (b.type === 'paragraph' || b.type === 'dropcap_paragraph') out.push(strip(b.text));
+        else if (b.type === 'pullquote') out.push(L.quote + strip(b.text));
+        else if (b.type === 'keystat') out.push(strip(b.label) + ' ' + strip(b.value) + '. ' + strip(b.body));
+      }
+      return out.join('\n\n');
+    },
+    async generateNarration(paper) {
+      const p = paper || this.current;
+      if (!p || !p.audio || !p.audio.src) return { ok: false, error: 'This paper has no audio.src to write to.' };
+      this.status = 'Regenerating narration…';
+      const r = await this.generateAudio({ text: this.longformText(p), out: p.audio.src });
+      if (r.ok && window.VWStore) window.VWStore.assetBust[p.audio.src] = Date.now();
+      return r;
+    },
+
+    /* ---- Per-block dirty tracking + incremental narration ----------------- */
+
+    /* Stamp an edited unit as dirty and bump its edit history. Called from
+       EditableText.commit on every content change. `obj` is a block (has a
+       `type`) or the paper root (title/subtitle/abstract, tracked under
+       paper.field_edits[field]). dirty drives which segments the incremental
+       narration regenerates; edit_count / last_edited help decide which blocks
+       the other-language translations still need to catch up on. */
+    touch(obj, field) {
+      if (!obj) return;
+      const iso = new Date().toISOString();
+      const isBlock = typeof obj === 'object' && 'type' in obj && !('blocks' in obj);
+      if (isBlock) {
+        obj.dirty = true;
+        obj.edit_count = (obj.edit_count || 0) + 1;
+        obj.last_edited = iso;
+      } else {
+        const p = this.current || obj;
+        if (!p.field_edits) p.field_edits = {};
+        const fe = p.field_edits[field] || (p.field_edits[field] = {});
+        fe.dirty = true;
+        fe.edit_count = (fe.edit_count || 0) + 1;
+        fe.last_edited = iso;
+      }
+    },
+
+    /* A fresh, collision-free block id for a newly inserted block. */
+    _freshBid() {
+      const p = this.current;
+      const used = new Set(((p && p.blocks) || []).map((b) => b.bid).filter(Boolean));
+      let n = ((p && p.blocks) ? p.blocks.length : 0) + 1;
+      while (used.has('b' + n)) n += 1;
+      return 'b' + n;
+    },
+
+    /* How many units are dirty (blocks + meta fields), for the regen button. */
+    dirtyCount() {
+      const p = this.current; if (!p) return 0;
+      let n = ((p.blocks) || []).filter((b) => b.dirty).length;
+      const fe = p.field_edits || {};
+      for (const k of Object.keys(fe)) if (fe[k] && fe[k].dirty) n += 1;
+      return n;
+    },
+
+    /* The segment manifest entry for a unit id (bid or title/subtitle/abstract). */
+    segFor(seg) {
+      const segs = (this.current && this.current.audio && this.current.audio.segments) || [];
+      return segs.find((s) => s.seg === seg) || null;
+    },
+
+    /* Play a single block's narration segment (authoring aid). */
+    playSegment(seg) {
+      const m = this.segFor(seg);
+      if (!m || !m.src) { this.status = 'No audio segment yet for this block — regenerate audio.'; return; }
+      if (!window.__vwSegAudio) window.__vwSegAudio = new Audio();
+      const a = window.__vwSegAudio;
+      a.pause();
+      const bust = (window.VWStore && this.current && this.current.audio) ? window.VWStore.assetBust[this.current.audio.src] : 0;
+      a.src = m.src + (bust ? ('?t=' + bust) : '');
+      a.play().catch(() => {});
+    },
+
+    /* Incremental regeneration: save (persists dirty flags + text), run the
+       segmented generator on the dev server (regenerates only changed segments
+       and re-stitches), then refresh the in-memory audio manifest so per-block
+       durations, play buttons, and cleared dirty flags reflect on screen. */
+    async regenerateChangedAudio(paper) {
+      const p = paper || this.current;
+      if (!p || !p.audio || !p.audio.src) return { ok: false, error: 'This paper has no audio.src to write to.' };
+      const locale = (window.VWStore && window.VWStore.locale) || 'en';
+      await this.save();
+      this.status = 'Regenerating changed audio…';
+      try {
+        const res = await fetch('/api/regenerate-audio', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id: p.id, locale }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        // Refresh audio manifest + clear dirty flags from the freshly written file.
+        try {
+          const fresh = await fetch('/data/papers/' + p.id + '.' + locale + '.json?t=' + Date.now()).then((r) => r.json());
+          if (fresh && fresh.audio) p.audio = fresh.audio;
+          (p.blocks || []).forEach((b) => { if ('dirty' in b) delete b.dirty; });
+          if (p.field_edits) for (const k of Object.keys(p.field_edits)) { if (p.field_edits[k]) delete p.field_edits[k].dirty; }
+        } catch (_) { /* manifest refresh is best-effort */ }
+        if (window.VWStore) window.VWStore.assetBust[p.audio.src] = Date.now();
+        await this.rebuildIndex();   // sync listening-time total to the new length
+        this.status = 'Audio updated: ' + (d.regenerated != null ? d.regenerated : '?') + ' regenerated, ' + (d.reused != null ? d.reused : '?') + ' reused.';
+        return { ok: true, ...d };
+      } catch (e) {
+        const msg = (e && e.message) || String(e);
+        this.status = 'Audio regen failed: ' + msg;
+        return { ok: false, error: msg };
+      }
+    },
+
+    /* Regenerate a single unit's narration segment (one block, or title /
+       subtitle / abstract) and re-stitch — the per-item ↻ button. Saves first so
+       the server reads the current text, then targets just this segment. */
+    async regenerateSegment(seg) {
+      const p = this.current;
+      if (!p || !p.audio || !p.audio.src || !seg) return { ok: false };
+      const locale = (window.VWStore && window.VWStore.locale) || 'en';
+      await this.save();
+      this.status = 'Regenerating "' + seg + '" audio…';
+      try {
+        const res = await fetch('/api/regenerate-audio', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id: p.id, locale, seg }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        try {
+          const fresh = await fetch('/data/papers/' + p.id + '.' + locale + '.json?t=' + Date.now()).then((r) => r.json());
+          if (fresh && fresh.audio) p.audio = fresh.audio;
+        } catch (_) { /* manifest refresh is best-effort */ }
+        // Clear the regenerated unit's in-memory dirty flag.
+        if (seg === 'title' || seg === 'subtitle' || seg === 'abstract') {
+          if (p.field_edits && p.field_edits[seg]) delete p.field_edits[seg].dirty;
+        } else {
+          const b = (p.blocks || []).find((x) => x.bid === seg);
+          if (b && 'dirty' in b) delete b.dirty;
+        }
+        if (window.VWStore) window.VWStore.assetBust[p.audio.src] = Date.now();
+        await this.rebuildIndex();   // sync listening-time total to the new length
+        this.status = 'Regenerated "' + seg + '".';
+        return { ok: true, ...d };
+      } catch (e) {
+        const msg = (e && e.message) || String(e);
+        this.status = 'Regen failed: ' + msg;
+        return { ok: false, error: msg };
+      }
+    },
+
+    /* Stitch-only: re-join the existing block segments in document order into the
+       full narration MP3 and update its length + segment manifest, with NO new
+       synthesis (zero ElevenLabs cost). The right tool after reordering blocks,
+       or to rebuild the master from the current segments on demand. */
+    async stitchAudio(paper) {
+      const p = paper || this.current;
+      if (!p || !p.audio || !p.audio.src) return { ok: false };
+      const locale = (window.VWStore && window.VWStore.locale) || 'en';
+      await this.save();   // so the stitch order matches the current document order
+      this.status = 'Stitching full narration…';
+      try {
+        const res = await fetch('/api/regenerate-audio', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id: p.id, locale, stitch: true }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        try {
+          const fresh = await fetch('/data/papers/' + p.id + '.' + locale + '.json?t=' + Date.now()).then((r) => r.json());
+          if (fresh && fresh.audio) p.audio = fresh.audio;
+        } catch (_) { /* manifest refresh is best-effort */ }
+        if (window.VWStore) window.VWStore.assetBust[p.audio.src] = Date.now();
+        await this.rebuildIndex();
+        const mins = Math.round((d.duration_sec || 0) / 60);
+        this.status = 'Stitched ' + (d.segments || 0) + ' segments → ' + mins + ' min narration.';
+        return { ok: true, ...d };
+      } catch (e) {
+        const msg = (e && e.message) || String(e);
+        this.status = 'Stitch failed: ' + msg;
+        return { ok: false, error: msg };
+      }
+    },
+
+    /* ---- Structural editing ---------------------------------------------- */
+
+    /* Rebuild paper.sections from the section_heading blocks and renumber them,
+       so the TOC, the anchors, and the numbering stay consistent after any
+       structural change. The heading blocks are the source of truth. */
+    rebuildSections() {
+      const p = this.current; if (!p || !Array.isArray(p.blocks)) return;
+      const secs = []; let n = 0;
+      for (const b of p.blocks) {
+        if (b.type === 'section_heading') {
+          n += 1;
+          b.n = String(n).padStart(2, '0');
+          secs.push({ n: b.n, title: b.title });
+        }
+      }
+      p.sections = secs;
+    },
+
+    _newBlock(type) {
+      if (type === 'image') {
+        return {
+          type: 'figure', fno: 'FIG.', title: '',
+          caption: 'New caption. Describe what the figure shows.',
+          image: { src: '', alt: '', image_prompt: 'Describe the image to generate, the way you would brief an illustrator. Name every object and its position.', style_kind: 'diagram' },
+        };
+      }
+      if (type === 'youtube') {
+        return {
+          type: 'youtube', fno: 'FIG.', title: '',
+          caption: 'New caption. Describe what the video shows.',
+          url: '', alt: '',
+        };
+      }
+      if (type === 'section_heading') return { type: 'section_heading', n: '00', title: 'New section' };
+      if (type === 'keystat') return { type: 'keystat', label: 'New label', value: '00', body: 'Explain the number in a sentence.' };
+      if (type === 'pullquote') return { type: 'pullquote', text: 'New pull quote.', cite: '' };
+      return { type: 'paragraph', text: 'New paragraph.' };
+    },
+
+    insertBlockAfter(i, type) {
+      const p = this.current; if (!p) return;
+      const blk = this._newBlock(type);
+      blk.bid = this._freshBid();
+      // A brand-new block has no segment yet — flag it so the next audio run
+      // narrates it (and bump its edit history like any other edit).
+      blk.dirty = true;
+      blk.edit_count = 1;
+      blk.last_edited = new Date().toISOString();
+      p.blocks.splice(i + 1, 0, blk);
+      if (type === 'section_heading') this.rebuildSections();
+      this.markDirty();
+    },
+    deleteBlock(i) {
+      const p = this.current; if (!p) return;
+      const wasHeading = p.blocks[i] && p.blocks[i].type === 'section_heading';
+      p.blocks.splice(i, 1);
+      if (wasHeading) this.rebuildSections();
+      this.markDirty();
+    },
+    moveBlock(i, dir) {
+      const p = this.current; if (!p) return;
+      const j = i + dir;
+      if (j < 0 || j >= p.blocks.length) return;
+      const a = p.blocks; const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+      if (a[i].type === 'section_heading' || a[j].type === 'section_heading') this.rebuildSections();
+      this.markDirty();
+    },
+
+    /* Group the flat block list into the intro (blocks before the first
+       heading) and one group per section (heading plus the blocks that follow
+       it until the next heading). Figures and images inside a section live in
+       its group, so they move with the section automatically. */
+    _sectionGroups() {
+      const p = this.current; const intro = []; const groups = []; let cur = null;
+      for (const b of p.blocks) {
+        if (b.type === 'section_heading') { cur = { heading: b, blocks: [] }; groups.push(cur); }
+        else if (cur) cur.blocks.push(b);
+        else intro.push(b);
+      }
+      return { intro, groups };
+    },
+    _rebuildFromGroups(intro, groups) {
+      const p = this.current;
+      const flat = intro.slice();
+      for (const g of groups) { flat.push(g.heading); for (const b of g.blocks) flat.push(b); }
+      p.blocks = flat;
+      this.rebuildSections();
+      this.markDirty();
+    },
+    reorderSection(from, to) {
+      const { intro, groups } = this._sectionGroups();
+      if (from < 0 || from >= groups.length || to < 0 || to >= groups.length || from === to) return;
+      const [g] = groups.splice(from, 1);
+      groups.splice(to, 0, g);
+      this._rebuildFromGroups(intro, groups);
+    },
+    addSection() {
+      const { intro, groups } = this._sectionGroups();
+      groups.push({ heading: { type: 'section_heading', n: '00', title: 'New section' }, blocks: [{ type: 'paragraph', text: 'New paragraph.' }] });
+      this._rebuildFromGroups(intro, groups);
+    },
+    deleteSection(index) {
+      const { intro, groups } = this._sectionGroups();
+      if (index < 0 || index >= groups.length) return;
+      groups.splice(index, 1);
+      this._rebuildFromGroups(intro, groups);
+    },
+
+    /* Save the active-locale paper back to its JSON through the edit-server.
+       Editing requires the edit-server, so this is always reachable. Transient
+       editor-only keys (anything starting with __, such as AI proposals) are
+       stripped before writing, so they never land in the file. */
+    _clean(o) {
+      if (Array.isArray(o)) return o.map((x) => this._clean(x));
+      if (o && typeof o === 'object') {
+        const out = {};
+        for (const k of Object.keys(o)) { if (k.indexOf('__') === 0) continue; out[k] = this._clean(o[k]); }
+        return out;
+      }
+      return o;
+    },
+    async save() {
+      if (!this.available || !this.current) return;
+      const locale = (window.VWStore && window.VWStore.locale) || 'en';
+      const path = 'data/papers/' + this.current.id + '.' + locale + '.json';
+      this.saving = true;
+      this.status = 'Saving ' + path + '…';
+      try {
+        // The section_heading blocks are the source of truth. Rebuild the
+        // sections array from them on every save so the saved file, the index,
+        // and the SEO prerender never drift from the headings the reader sees.
+        this.rebuildSections();
+        const res = await fetch('/api/save-json', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ path, content: this._clean(this.current) }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        delete this.dirtyMap[this._key(locale)];
+        this.dirty = !!this.dirtyMap[this._key()];
+        // papers.json is generated; rebuild so status/title/tier/read-time edits
+        // propagate to the index (and re-derive the Published-only sequences).
+        await this.rebuildIndex();
+        const inv = (window.VWStore.papers || []).find((p) => p.id === this.current.id);
+        if (inv) this.current.num = inv.num;   // keep the on-screen number fresh
+        this.status = 'Saved ' + path;
+      } catch (e) {
+        this.status = 'Save failed: ' + ((e && e.message) || e);
+      } finally { this.saving = false; }
+    },
+
+    /* ---- Style-guide library --------------------------------------------- */
+    async loadGuides() {
+      this.guidesLoading = true; this.guidesError = '';
+      try {
+        const r = await fetch('/api/style-guides');
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        this.guides = await r.json();
+        if (!this.guides.length) this.guidesError = 'No guides were returned.';
+      } catch (e) {
+        this.guidesError = 'Could not load style guides. Restart the editor server with "npm run edit". A server started before this feature will not have the guides endpoint.';
+      } finally { this.guidesLoading = false; }
+    },
+    openGuides() { this.guidesOpen = true; if (!this.guides.length) this.loadGuides(); },
+    async saveGuide(id, content) {
+      this.status = 'Saving guide…';
+      try {
+        const r = await fetch('/api/save-guide', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id, content }) });
+        const d = await r.json().catch(() => ({}));
+        if (!r.ok) throw new Error(d.error || ('HTTP ' + r.status));
+        const g = this.guides.find((x) => x.id === id); if (g) g.content = content;
+        this.status = 'Saved guide: ' + id;
+        return { ok: true };
+      } catch (e) { this.status = 'Guide save failed: ' + ((e && e.message) || e); return { ok: false }; }
+    },
+
+    /* ---- AI revise with accept / reject ---------------------------------- */
+    /* scope: 'paragraph' (one block), 'section' (a section's prose), 'paper'. */
+    openRevise(scope, blocks) {
+      this.revise.scope = scope;
+      this.revise.blocks = blocks || [];
+      this.revise.open = true;
+      this.revise.running = false;
+      if (!this.guides.length) this.loadGuides();
+    },
+    closeRevise() { this.revise.open = false; this.revise.blocks = []; },
+    _reviseTargets(blocks) {
+      return (blocks || []).filter((b) => b && (b.type === 'paragraph' || b.type === 'dropcap_paragraph'));
+    },
+    async runRevise() {
+      const targets = this._reviseTargets(this.revise.blocks);
+      if (!targets.length) { this.status = 'No prose paragraphs in this scope to revise.'; return; }
+      this.revise.running = true;
+      this.status = 'Revising ' + targets.length + ' paragraph(s) with AI…';
+      try {
+        const items = targets.map((b, i) => ({ key: i, text: b.text || '' }));
+        const res = await fetch('/api/revise', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ items, guideIds: this.revise.guideIds, instructions: this.revise.instructions, model: this.revise.model }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        const byKey = {};
+        for (const r of (d.items || [])) byKey[r.key] = r.revised;
+        let n = 0;
+        targets.forEach((b, i) => { if (byKey[i] != null && byKey[i] !== b.text) { b.__ai = byKey[i]; n += 1; } });
+        this.status = n + ' proposal(s) ready. Accept or reject each below.';
+        this.revise.open = false;
+      } catch (e) {
+        this.status = 'AI revise failed: ' + ((e && e.message) || e) + ' (needs ANTHROPIC_API_KEY in .env)';
+      } finally { this.revise.running = false; }
+    },
+    acceptProposal(b) { if (b && b.__ai != null) { b.text = b.__ai; delete b.__ai; this.markDirty(); } },
+    rejectProposal(b) { if (b && b.__ai != null) delete b.__ai; },
+    acceptAllProposals() { const p = this.current; if (!p) return; let n = 0; for (const b of p.blocks) if (b.__ai != null) { b.text = b.__ai; delete b.__ai; n++; } if (n) this.markDirty(); },
+    rejectAllProposals() { const p = this.current; if (!p) return; for (const b of p.blocks) if (b.__ai != null) delete b.__ai; },
+    hasProposals() { const p = this.current; return !!(p && p.blocks && p.blocks.some((b) => b.__ai != null)); },
+
+    /* ---- Hard translate + asset regeneration ----------------------------- */
+    /* The locale currently on screen is the canonical source; this builds the
+       target locale as a structural clone, translates every string, and
+       regenerates the target assets. It OVERWRITES the target. */
+    openTranslate() {
+      const cur = (window.VWStore && window.VWStore.locale) || 'en';
+      this.translate.target = cur === 'fr' ? 'en' : 'fr';
+      this.translate.open = true;
+      this.translate.running = false;
+    },
+    closeTranslate() { this.translate.open = false; },
+    async translatePaper() {
+      const id = this.current && this.current.id;
+      const src = (window.VWStore && window.VWStore.locale) || 'en';
+      const tgt = this.translate.target;
+      if (!id || src === tgt) { this.status = 'Pick a target locale different from the one you are viewing.'; return; }
+      this.translate.running = true;
+      this.status = 'Translating ' + id + ' ' + src.toUpperCase() + ' → ' + tgt.toUpperCase() + '…';
+      try {
+        const res = await fetch('/api/translate-paper', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id, sourceLocale: src, targetLocale: tgt, model: this.translate.model }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+
+        if (this.translate.regenImages) {
+          const imgs = d.images || [];
+          for (let i = 0; i < imgs.length; i++) {
+            this.status = 'Translated text. Regenerating image ' + (i + 1) + '/' + imgs.length + '…';
+            await fetch('/api/generate-image', {
+              method: 'POST', headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ src: imgs[i].src, prompt: imgs[i].image_prompt, style_kind: imgs[i].style_kind || 'diagram', locale: tgt, conditionFrom: src }),
+            }).catch(() => {});
+          }
+        }
+        if (this.translate.regenAudio) {
+          const au = d.audio || [];
+          for (let i = 0; i < au.length; i++) {
+            this.status = 'Regenerating narration ' + (i + 1) + '/' + au.length + '…';
+            await fetch('/api/generate-audio', {
+              method: 'POST', headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ text: au[i].text, out: au[i].out }),
+            }).catch(() => {});
+          }
+        }
+        this.translate.open = false;
+        this.status = 'Built ' + tgt.toUpperCase() + ' from ' + src.toUpperCase() + ': ' + d.translated + ' strings'
+          + (this.translate.regenImages ? ', images' : '') + (this.translate.regenAudio ? ', audio' : '')
+          + '. Switch to ' + tgt.toUpperCase() + ' to review.';
+        this.detectDrift();
+      } catch (e) {
+        this.status = 'Translate failed: ' + ((e && e.message) || e) + ' (needs npm run edit + Vertex/keys in .env)';
+      } finally { this.translate.running = false; }
+    },
+
+    /* ---- Draft a paper from Markdown (or scratch) ------------------------ */
+    openDraft() { this.draft.open = true; this.draft.result = null; this.draft.running = false; },
+    closeDraft() { this.draft.open = false; },
+    async generateDraft() {
+      const p = this.current;
+      if (!p) return;
+      this.draft.running = true;
+      this.status = 'Drafting from ' + (this.draft.mode === 'draft' ? 'your Markdown' : 'scratch') + '…';
+      try {
+        const res = await fetch('/api/generate-paper', {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id: p.id, title: p.title, tier: p.tier, mode: this.draft.mode, draft_markdown: this.draft.markdown, model: this.draft.model, guideIds: [] }),
+        });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        this.draft.result = d.paper;
+        this.draft.warnings = d.warnings || [];
+        this.status = 'Draft ready: ' + (d.paper.sections || []).length + ' sections, ' + (d.paper.blocks || []).length + ' blocks. Review, then apply.';
+      } catch (e) {
+        this.status = 'Draft failed: ' + ((e && e.message) || e) + ' (needs npm run edit + Vertex in .env)';
+      } finally { this.draft.running = false; }
+    },
+    applyDraft() {
+      const p = this.current; const r = this.draft.result;
+      if (!p || !r) return;
+      if (r.abstract != null) p.abstract = r.abstract;
+      if (r.subtitle != null) p.subtitle = r.subtitle;
+      if (Array.isArray(r.tags) && r.tags.length) p.tags = r.tags;
+      if (Array.isArray(r.sections)) p.sections = r.sections;
+      if (r.hero_image) { p.hero_image = p.hero_image || {}; ['image_prompt', 'alt', 'style_kind'].forEach((k) => { if (r.hero_image[k] != null) p.hero_image[k] = r.hero_image[k]; }); }
+      if (Array.isArray(r.blocks)) p.blocks = r.blocks;
+      if (r.tldr_presentation && Array.isArray(r.tldr_presentation.slides)) {
+        const loc = (window.VWStore && window.VWStore.locale) || 'en';
+        p.tldr_presentation = p.tldr_presentation || { id: p.id + '-tldr', locale: loc, owner_id: p.id, slides: [] };
+        p.tldr_presentation.slides = r.tldr_presentation.slides.map((s) => Object.assign({}, s, { audio_file: 'public/audio/' + loc + '/' + p.id + '-tldr/' + (s.id || '01') + '.mp3' }));
+      }
+      this.markDirty();
+      this.draft.open = false; this.draft.result = null;
+      this.status = 'Applied the draft. Review the body, refine, generate assets, then Save.';
+    },
+
+    /* primary_locale: which locale owns the structure. Written into both files. */
+    async setPrimaryLocale(loc) {
+      const id = this.current && this.current.id;
+      if (!id) return;
+      for (const l of ['en', 'fr']) {
+        try {
+          const r = await fetch('data/papers/' + id + '.' + l + '.json', { cache: 'no-cache' });
+          if (!r.ok) continue;
+          const pf = await r.json();
+          pf.primary_locale = loc;
+          await this._writeJson('data/papers/' + id + '.' + l + '.json', pf);
+        } catch (_) {}
+      }
+      if (this.current) this.current.primary_locale = loc;
+      this.status = 'Primary locale set to ' + loc.toUpperCase() + ' for ' + id + '.';
+      this.detectDrift();
+    },
+
+    /* Staleness: is the target locale in sync with the canonical it was built from? */
+    async detectDrift() {
+      const id = this.current && this.current.id;
+      if (!id) { this.drift = null; return; }
+      try {
+        const r = await fetch('/api/structure-drift?id=' + encodeURIComponent(id), { cache: 'no-cache' });
+        if (r.ok) this.drift = await r.json(); else this.drift = null;
+      } catch (_) { this.drift = null; }
+    },
+
+    /* ---- The index: add and reorder papers ------------------------------- */
+    async _writeJson(path, obj) {
+      const res = await fetch('/api/save-json', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ path, content: obj }),
+      });
+      const d = await res.json().catch(() => ({}));
+      if (!res.ok) { this.status = 'Save failed (' + path + '): ' + (d.error || res.status); return { ok: false }; }
+      return { ok: true };
+    },
+    /* papers.json is GENERATED. Rebuild it on the server from order.json + the
+       paper files, then refresh the in-memory inventory from the result. */
+    async rebuildIndex() {
+      try {
+        const res = await fetch('/api/build-index', { method: 'POST' });
+        const d = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(d.error || ('HTTP ' + res.status));
+        if (Array.isArray(d.papers) && window.VWStore) {
+          window.VWStore.papers.splice(0, window.VWStore.papers.length, ...d.papers);
+          window.VWStore.paperById = Object.fromEntries(d.papers.map((p) => [p.id, p]));
+        }
+        return { ok: true };
+      } catch (e) { this.status = 'Index rebuild failed: ' + ((e && e.message) || e) + ' (needs npm run edit)'; return { ok: false }; }
+    },
+    async _loadOrder() {
+      try { const r = await fetch('data/order.json', { cache: 'no-cache' }); if (r.ok) return await r.json(); } catch (_) {}
+      return { order: [], nonlinear: [] };
+    },
+    _saveOrder(order) { return this._writeJson('data/order.json', order); },
+    async movePaper(i, dir) {
+      const p = window.VWStore.papers[i]; if (!p) return;
+      const id = p.id;
+      const order = await this._loadOrder();
+      for (const list of [order.order, order.nonlinear]) {
+        const k = (list || []).indexOf(id);
+        if (k === -1) continue;
+        const j = k + dir;
+        if (j < 0 || j >= list.length) return;          // can't move past its own list's ends
+        const t = list[k]; list[k] = list[j]; list[j] = t;
+        if ((await this._saveOrder(order)).ok) await this.rebuildIndex();
+        return;
+      }
+    },
+    async deletePaper(i) {
+      const p = window.VWStore.papers[i]; if (!p) return;
+      const id = p.id;
+      const order = await this._loadOrder();
+      order.order = (order.order || []).filter((x) => x !== id);
+      order.nonlinear = (order.nonlinear || []).filter((x) => x !== id);
+      await this._saveOrder(order);
+      try { await fetch('/api/delete-paper', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id }) }); } catch (_) {}
+      await this.rebuildIndex();
+      this.status = 'Deleted paper "' + id + '". Its JSON files are removed; images/audio under public/ are left in place.';
+    },
+    _paperStub(id, num, title, tier, locale) {
+      const fr = locale === 'fr';
+      const stub = {
+        id, num, sequence: '', tier,
+        title: title || (fr ? 'Document sans titre' : 'Untitled paper'),
+        subtitle: '',
+        authors: [],
+        published: '',
+        reading_min: null,
+        status: 'Draft',
+        tags: [],
+        repo: null,
+        abstract: fr ? 'Résumé à venir.' : 'Abstract forthcoming.',
+        hero_image: { src: 'public/images/' + id + '/' + locale + '/hero.jpg', alt: '', image_prompt: '', style_kind: 'cover' },
+        audio: { src: 'public/audio/' + locale + '/' + id + '.mp3' },
+        tldr_presentation: {
+          id: id + '-tldr', title: title || '', locale, owner_id: id,
+          slides: [{ id: '01', title: title || '', audio_file: 'public/audio/' + locale + '/' + id + '-tldr/01.mp3', visual: 'title', caption: '', text: fr ? 'Narration à venir.' : 'Narration forthcoming.' }],
+        },
+        embedded_presentations: [],
+        sections: [{ n: '01', title: 'Introduction' }],
+        blocks: [
+          { type: 'section_heading', n: '01', title: 'Introduction' },
+          { type: 'paragraph', text: fr ? '<strong>Contenu à venir.</strong>' : '<strong>Content forthcoming.</strong>' },
+        ],
+        _meta: { placeholder: true, written_by: '', notes: 'Created in the editor.' },
+        category: 'paper',
+      };
+      if (fr) stub.translation_status = 'untranslated';
+      return stub;
+    },
+    /* Short, opaque, stable id (5 chars). Decoupled from the number, so reorder
+       never changes a paper's id or its asset folder. */
+    _shortId() {
+      const A = 'abcdefghijklmnopqrstuvwxyz', AN = A + '0123456789';
+      const taken = window.VWStore.paperById || {};
+      for (;;) {
+        let s = A[Math.floor(Math.random() * 26)];
+        for (let i = 0; i < 4; i++) s += AN[Math.floor(Math.random() * 36)];
+        if (!taken[s]) return s;
+      }
+    },
+    async createPaper(meta) {
+      const id = this._shortId();   // ids are auto-assigned short uuids, not chosen
+      const title = (meta.title || '').trim() || 'Untitled paper';
+      const tier = meta.tier || 'Technical';
+      this.status = 'Creating ' + id + '…';
+      // num/sequence are derived; the stub leaves them empty and buildIndex stamps them.
+      const r1 = await this._writeJson('data/papers/' + id + '.en.json', this._paperStub(id, '', title, tier, 'en'));
+      if (!r1.ok) return r1;
+      const r2 = await this._writeJson('data/papers/' + id + '.fr.json', this._paperStub(id, '', title, tier, 'fr'));
+      if (!r2.ok) return r2;
+      const order = await this._loadOrder();
+      order.order = order.order || [];
+      if (!order.order.includes(id)) order.order.push(id);   // new papers append to the linear order
+      await this._saveOrder(order);
+      const r3 = await this.rebuildIndex();
+      if (!r3.ok) return r3;
+      this.status = 'Created paper "' + id + '". Its number follows its order position. Open it to write it.';
+      return { ok: true, id };
+    },
+  });
+
+  window.VWEdit = VWEdit;
+
+  /* The editor turns on ONLY when (a) we are on localhost and (b) the dev
+     edit-server reports editing is enabled in this environment. On the published
+     static site there is no server, so the probe never succeeds and the toolbar
+     never appears: content cannot be edited or defaced by visitors. Under plain
+     `npm run dev` the endpoint is absent, so editing also stays off; use
+     `npm run edit` (which enables it) to edit. */
+  if (onLocalhost) {
+    fetch('/api/edit-status', { method: 'GET' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (d && d.enabled) VWEdit.available = true; })
+      .catch(() => { /* no edit-server: editing stays off */ });
+  }
+
+  window.VWComponents = window.VWComponents || {};
+  window.VWComponents['edit-toolbar'] = {
+    setup() { return { edit: VWEdit, store: window.VWStore }; },
+    computed: {
+      locale() { return (this.store && this.store.locale) || 'en'; },
+      locales() {
+        return (this.store && this.store.site && this.store.site.locales) ||
+               [{ code: 'en', label: 'EN' }, { code: 'fr', label: 'FR' }];
+      },
+      dirtyLocales() { return this.edit.dirtyLocales(); },
+    },
+    methods: {
+      setLoc(l) { if (l !== this.locale && window.VWSetLocale) window.VWSetLocale(l); },
+      locDirty(l) { return this.dirtyLocales.indexOf(l) !== -1; },
+    },
+    template: `
+      <div v-if="edit.available" class="vw-edit-toolbar" :class="{ on: edit.enabled }" role="region" aria-label="Editor (local only)">
+        <button type="button" class="vw-edit-btn" @click="edit.toggle()" :aria-pressed="edit.enabled ? 'true' : 'false'">
+          {{ edit.enabled ? 'Editing on' : 'Edit' }}
+        </button>
+        <template v-if="edit.enabled">
+          <span class="vw-edit-loc" role="group" aria-label="Locale being edited">
+            <button v-for="l in locales" :key="l.code" type="button"
+                    :class="{ on: locale === l.code }" @click="setLoc(l.code)"
+                    :aria-pressed="locale === l.code ? 'true' : 'false'">{{ l.label }}<i v-if="locDirty(l.code)" class="vw-edit-dot" aria-label="unsaved">●</i></button>
+          </span>
+          <button type="button" class="vw-edit-btn" @click="edit.openGuides()">Guides</button>
+          <button type="button" class="vw-edit-btn" @click="edit.openRevise('paper', edit.current ? edit.current.blocks : [])" :disabled="!edit.current">Revise paper</button>
+          <button type="button" class="vw-edit-btn" @click="edit.openTranslate()" :disabled="!edit.current">Translate</button>
+          <button type="button" class="vw-edit-btn" @click="edit.openDraft()" :disabled="!edit.current">Draft</button>
+          <template v-if="edit.hasProposals()">
+            <button type="button" class="vw-edit-btn vw-edit-accept" @click="edit.acceptAllProposals()">Accept all</button>
+            <button type="button" class="vw-edit-btn" @click="edit.rejectAllProposals()">Reject all</button>
+          </template>
+          <button type="button" class="vw-edit-btn vw-edit-save"
+                  @click="edit.save()" :disabled="!edit.dirty || edit.saving">
+            {{ edit.saving ? 'Saving…' : 'Save ' + locale.toUpperCase() }}
+          </button>
+        </template>
+        <span class="vw-edit-status" aria-live="polite">{{ edit.status }}</span>
+      </div>
+    `,
+  };
+})();

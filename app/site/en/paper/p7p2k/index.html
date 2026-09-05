@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <title>The Well-Built Harness · The Velocity White Papers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F4ED" />
+  <meta name="description" content="Coding tools like Cursor, Lovable, and Claude Code produce applications which often lack the controls a public service requires. AI agents are often unreliable witnesses of their own performance. Clear instructions, tests, and templates help to overcome these challenges. Alberta has developed and released a collection of files called a &#39;harness&#39; which clearly defines your expectations for the AI, driving enterprise quality outputs at the speed of the &#39;vibe coded&#39; application." />
+  <link rel="canonical" href="https://thevelocitywhitepapers.com/en/paper/p7p2k/" />
+  <link rel="alternate" hreflang="en" href="https://thevelocitywhitepapers.com/en/paper/p7p2k/" />
+  <link rel="alternate" hreflang="fr" href="https://thevelocitywhitepapers.com/fr/paper/p7p2k/" />
+  <link rel="alternate" hreflang="es" href="https://thevelocitywhitepapers.com/es/paper/p7p2k/" />
+  <link rel="alternate" hreflang="x-default" href="https://thevelocitywhitepapers.com/paper/p7p2k/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Well-Built Harness" />
+  <meta property="og:description" content="Coding tools like Cursor, Lovable, and Claude Code produce applications which often lack the controls a public service requires. AI agents are often unreliable witnesses of their own performance. Clear instructions, tests, and templates help to overcome these challenges. Alberta has developed and released a collection of files called a &#39;harness&#39; which clearly defines your expectations for the AI, driving enterprise quality outputs at the speed of the &#39;vibe coded&#39; application." />
+  <meta property="og:url" content="https://thevelocitywhitepapers.com/en/paper/p7p2k/" />
+  <meta property="og:site_name" content="The Velocity White Papers" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://thevelocitywhitepapers.com/public/og/p7p2k.jpg" />
+  <meta property="og:image:secure_url" content="https://thevelocitywhitepapers.com/public/og/p7p2k.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Well-Built Harness" />
+  <meta name="twitter:image" content="https://thevelocitywhitepapers.com/public/og/p7p2k.jpg" />
+  <meta property="article:published_time" content="2026-06-16" />
+  <meta property="article:section" content="Technical" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Well-Built Harness" />
+  <meta name="twitter:description" content="Coding tools like Cursor, Lovable, and Claude Code produce applications which often lack the controls a public service requires. AI agents are often unreliable witnesses of their own performance. Clear instructions, tests, and templates help to overcome these challenges. Alberta has developed and released a collection of files called a &#39;harness&#39; which clearly defines your expectations for the AI, driving enterprise quality outputs at the speed of the &#39;vibe coded&#39; application." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"The Well-Built Harness","description":"Coding tools like Cursor, Lovable, and Claude Code produce applications which often lack the controls a public service requires. AI agents are often unreliable witnesses of their own performance. Clear instructions, tests, and templates help to overcome these challenges. Alberta has developed and released a collection of files called a 'harness' which clearly defines your expectations for the AI, driving enterprise quality outputs at the speed of the 'vibe coded' application.","url":"https://thevelocitywhitepapers.com/en/paper/p7p2k/","inLanguage":"en-CA","author":[{"@type":"Person","name":"Janak Alford"},{"@type":"Person","name":"Deputy Minister"},{"@type":"Person","name":"Technology and Innovation"}],"publisher":{"@type":"Organization","name":"Government of Alberta · Ministry of Technology and Innovation"},"datePublished":"2026-06-16","isPartOf":{"@type":"PublicationVolume","name":"The Velocity White Papers","url":"https://thevelocitywhitepapers.com/"},"keywords":"velocity, harness, claude-code, agents, skills, hooks, cyber, open-source","image":"https://thevelocitywhitepapers.com/public/og/p7p2k.jpg","about":"Technical"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="../../../alberta-logo.webp" />
+  <link rel="stylesheet" href="../../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../../styles/base.css" />
+  <link rel="stylesheet" href="../../../styles/components.css" />
+  <style>.crawl-fallback { max-width: 760px; margin: 64px auto; padding: 0 24px; font-family: var(--font-sans, sans-serif); color: var(--ink-70, #333); line-height: 1.65; }
+  .crawl-fallback h1 { color: var(--ink, #111); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; margin: 0 0 16px; }
+  .crawl-fallback .sub { font-weight: 400; color: var(--accent, #C2491A); font-size: 18px; margin-bottom: 24px; }
+  .crawl-fallback .abstract { padding: 16px 20px; background: var(--paper-alt, #efe9dd); border-left: 3px solid var(--accent, #C2491A); margin: 24px 0; }
+  </style>
+</head>
+<body>
+    <article class="crawl-fallback">
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--ink-50);letter-spacing:0.12em;text-transform:uppercase;">No. 06 · Technical</p>
+      <h1>The Well-Built Harness</h1>
+      <p class="sub">How the public service can build and ship enterprise-grade software at speed, without lowering the bar.</p>
+      <div class="abstract"><strong>Abstract.</strong> Coding tools like Cursor, Lovable, and Claude Code produce applications which often lack the controls a public service requires. AI agents are often unreliable witnesses of their own performance. Clear instructions, tests, and templates help to overcome these challenges. Alberta has developed and released a collection of files called a &#39;harness&#39; which clearly defines your expectations for the AI, driving enterprise quality outputs at the speed of the &#39;vibe coded&#39; application.</div>
+      <pre style="white-space:pre-wrap;font-family:var(--font-sans);font-size:15px;color:var(--ink-70);">Large language models (LLM) have become highly proficient at developing application code. Early in our AI Maximalist program in 2025, Technology and Innovation staff began to evaluate these tools to see how they could be deployed within our government environment. A range of agentic coding tools were explored, such as Cursor, Lovable, Gemini CLI, and Claude Code. These tools made application development faster for skilled developers and easy for even non-technical staff. The time to transform an idea into a functional prototype dropped from roughly 6 weeks (as benchmarked by management in that unit) to as little as 30 minutes. The speed increases have changed how teams work. Now, subject matter experts can participate in co-design as these ideas are worked out, providing real-time feedback and sign-off. This factor alone has resulted in a significant increase in the speed of delivery, reducing or eliminating the time-consuming sharing of emails, screenshots, and designs for manual review. Often, such work can now be completed in as little as a single session.
+
+This experimentation also identified some large gaps when these agents were tasked to produce highly secure, repeatable, and compliant applications. Several challenges needed to be addressed before these tools were usable in day-to-day government delivery.
+
+
+## §01 Aligning with AI agents
+
+Despite the gains in performance, several significant challenges in AI coding practices were observed by Alberta&#39;s AI Maximalists.
+
+First, it was difficult to recreate the same application twice. Given its probabilistic nature, each interaction with AI resulted in it generating applications with a different look and feel, layout, and functionality. The inability to replicate the same application twice offered a significant barrier to deploying AI in a government environment. Further, it eroded trust from Ministry partners and caused rework when the targets were missed. It also made collaboration more difficult between individuals and teams whose AIs would make significantly different design or technical decisions.
+
+Second, these tools seem to prioritize user experience while frequently failing to implement the necessary security protocols. While prototypes can be achieved quickly, it can often take significant time and effort to fix the gaps in the security model (even with AI assistance). And like the divergent user interfaces, the fixes applied to the security, accessibility, and mobile code were often also inconsistent and difficult to replicate between any two applications. Months of time saved on the frontend can easily be lost on the backend implementing the necessary security controls to protect the cyber posture of these applications. To be clear, these were not problems with the underlying AI technology, but how it was being used. 
+
+The third significant challenge was the over-confidence of the coding agent. AI agents routinely claim completeness in their code, but when probed demonstrate significant gaps. AI agents are unreliable witnesses to the state and performance of their code creations, and as a result, non-technical staff were unable to accurately evaluate application readiness. Trusting the agent&#39;s output without independent evaluation resulted in erroneous outputs which failed downstream security audits.
+
+
+Understanding these limitations, the team began to address these challenges through trial and error, experimentation, and smart play.
+
+
+## §02 Experimentation and play
+
+Since starting the AI Maximalist program in March 2025 to today in May 2026, the Department has produced far more than 1,000 applications. The vast majority are prototypes, but dozens have made it into production, offering real value. The prototypes themselves follow a pattern of exploration, experimentation, and even play. Without a sense of play, it is impossible for staff to learn the boundaries of these models, and to learn how to work effectively. It may be odd to say &#39;play&#39; within this context, especially in a government environment, but that is how we humans learn. We learn best when we are in a psychologically safe environment, when we are challenged to push our boundaries, and when we are having fun. In those 1,000+ applications we&#39;ve built, we&#39;ve explored the limits of AI, and found its real gaps. Each insight allowed us to capture and refine our own processes, manually closing and overcoming those gaps with better instructions, better scripts, and better tests. We see where AI breaks down, and we find innovative ways to use its immense capability while also recognizing its real, and often glaring, shortcomings. Over this period of exploration and play, we&#39;ve created a recipe book on how to work well.
+
+Significantly, the variability between people was also revealed to be a major factor. Two people can have a very different experience with the same model on the same task. How you introduce an idea, explain context, and set direction can drive extremely different outcomes. And in an environment where repeatability and quality are paramount, these small differences can drive unacceptable divergence between individuals in their use of AI.
+
+
+The genius of the AI needed a set of rules within which to work effectively.
+
+
+## §03 Introducing the AI &#39;harness&#39;
+
+To drive repeatable outcomes, we need to follow a set of patterns and styles that increase the probability that the model will perform the correct series of tasks. For a large language model, it should be no surprise that we codify these rules through words. Effective AI instructions, which are called prompts, explain our intent with a high degree of specificity. When we want the AI to be creative, we provide outcomes-based prompts and let it explore. When we want to be prescriptive, we provide step-by-step rules-based prompts. Through iteration, Alberta has assembled thousands of these prompts into a collection of so-called AI &#39;skills&#39;, instructions which describe the methods and intended outcomes we are achieving. These skills are highly &#39;opinionated&#39;, a technical term meaning that we are leaving little room for imagination for our AI coders. They also try to be as minimalist as possible, avoiding prose to preserve the AI agent&#39;s &#39;context window&#39; attention space. Finding that middle ground is truly an art mastered through practice.
+
+Through rounds of trial and error, Alberta staff developed steps to increase the assurance in the quality and consistency of the code output. Starting with small application features (like a landing page or API), the team developed instructions for the LLM to follow in its prompt, which would narrow the creativity of the LLM by limiting uncertainty. These standards, now known as &#39;skill files&#39;, are provided to the coding agent at the beginning of a task. A well-written specification reduced uncertainty and resulted in a consistent output.
+
+These instructions are bundled together into a collection known as a &#39;harness&#39;.
+
+
+## §04 Building harnesses
+
+Building harnesses is difficult and takes extreme diligence. You&#39;re curating the skills that a human might gain intuitively over 10 to 20 years.
+
+Critically, you cannot vibe code a harness. Using AI to create harnesses has the &#39;photocopier&#39; problem, in that each derivative version degrades the quality, causing future and unpredictable breakdowns. You need to take the time and meditate on every feature, and test (and test again) each iteration to ensure that the system is faithfully building what you need. Slop must be avoided at all costs.
+
+You must show the AI what good looks like. In the technology space, this is by providing as near a perfect application as humanly possible as a template for it to emulate. This is similar to how arts academies throughout history learned to paint, by studying the great masters of their culture and era and copying and emulating their processes faithfully until they achieve as close to perfection as possible. These &#39;masterpiece&#39; templates mean everything to an AI.
+
+&quot;Riffing off Arthur C. Clarke&#39;s Third Law, which states any sufficiently advanced technology is indistinguishable from magic, I would say that any sufficiently advanced template is indistinguishable from code. The best harness is code.&quot; · Janak Alford, Deputy Minister, Ministry of Technology and Innovation
+
+A harness is a small number of parts that work together. When using Claude Code, the entry point to access these skills is a file named CLAUDE.md. Other coding agents use equivalent files, often called an agent.md file as well. The agent reads this file at the start of every session and follows its instructions as the project&#39;s rules. It is short and plain: what the project is, who it serves, the standards to follow, what the agent may change, and what it must never do. It is the one place the project&#39;s settled decisions are written down, so the agent, and any person who joins, starts from the same page.
+
+For Claude Code, the skills sit in a folder named .claude/skills. Each skill is a small playbook for one kind of work: how to structure requirements, how to write a database migration, how to run a security audit, how to review a stretch of prose. The agent does not load them all at once. At the start it reads only each skill&#39;s name and one-line description, enough to know when each one applies, and it pulls the full playbook only when the task in front of it matches. The skills come in when they are needed, the way a tradesperson reaches into a roll for the one tool the job calls for.
+
+The template is the masterpiece the harness is built around, and it is deliberately opinionated about the technology. The stack is fixed and open source: Vue JS with Vite on the front end, Node JS with Express on the back end, Postgres 18 for the data, and single sign-on for identity. It ships as a working pair, a client and a server, with the hard technical problems already solved and running from day one. More than a hundred decisions a public system has to get right, how a user signs in, how input is validated, how secrets are held, how the application logs and defends itself and meets the accessibility standard, are made once, here, before any project begins.
+
+Skills, standards, templates, and crystal-clear requirements are what drive the outcome. The requirements say what to build. The skills say how, leading the work through each stage in turn, from requirements to planning, architecture, development, testing, and deployment, with each stage refusing to proceed until the one before it is completed correctly. The standards say what good looks like. And the template carries all of it already wired together, so wherever the agent looks it reads the same set of preferences. This is also what lets a non-technical Builder succeed: they add the content their service needs on top of a foundation an auditor has already cleared, and the only thing that changes between projects is the part that genuinely should.
+
+Riding alongside the build skills are four review agents, named for colours, that check every application for quality, consistency, and security as it is built. Green covers code and supply-chain hygiene, Yellow the writing, Red adversarial testing from the outside, and Blue the defensive review. They are bundled into the harness, and they are the subject of the next paper, Red, Blue, Green, and Yellow Agents.
+
+Many of our agents currently run on Claude, using their coding agent and their software development kit (SDK). Big tasks, like the long-horizon reasoning on a project, the planning, the architecture, the threat modelling, use Claude Opus, which can execute a whole delivery cycle often within the 1 million token context window of a single session. Many smaller jobs that run in parallel, the deep scans, analysis, and reviews, run on the comparatively cheaper and faster Claude Sonnet through the Agent SDK. These lightweight agents can be orchestrated to complete many tasks rapidly and in parallel, with a shared set of tools and resources. 
+
+While this paper focuses on Claude, the skills and standards you develop are model agnostic and can be run with any leading frontier or open-source AI model. The intellectual property of the harness is what differentiates the outcome more than the specific model. Any individual, team, or organization can codify and share these skills, uplifting the common capacity of all team members. Suddenly everyone has the best coding skills, requirement gathering skills, project planning skills, and security skills. These are like tools in your agentic toolbelt. You still need to learn how to use them.
+
+
+## §05 Applying the harness at scale
+
+Alberta runs a program to invest in our public servants called the Alberta AI Academy. This program will be covered in depth in a future paper but suffice to say thousands of our public servants and more than ten thousand public participants have used the AlbertaAIAcademy.com platform to learn the essentials of effective AI use, from prompting through product delivery. Staff participate in &#39;cohorts&#39;, groups ranging from sixty to six hundred who are learning over three levels.
+
+
+The most recent Level 3 cohort ran over six days where students took a harness-based approach to delivery. Participants came from a range of backgrounds and levels of seniority; three of the department&#39;s five Assistant Deputy Ministers sat in the room as students, alongside executive directors, directors, managers, staff, and interns. Few would have called themselves software engineers when the week began. Yet all were willing to be builders, working alongside AI with a harness-driven approach.
+
+Over those six days the cohort produced more than **five hundred and sixty working applications**. To graduate Level 3, every student&#39;s application cleared the cyber review, the accessibility check, and the look-and-feel standard at first release.
+
+Level 3 cohort outcome 560 / 100. More than five hundred and sixty applications produced by one hundred students in six days.
+
+On the final day of the class, members of the Cyber team came online with their own toolkit and scanned every submission. The top submissions cleared the bar with a clean bill of health: zero known cyber vulnerabilities or accessibility violations and full compliance with the government standard. Many of the best methods the Cyber team developed now lived natively within the AI harnesses that the students were using, so cybersecurity was a first-class concern for the agent. At every commit and milestone, we can run these agents to perform more than ninety-five checks. The apps ship with their own clean bill of health and the receipts to prove it. By the time cybersecurity has to sign off on the app, all the security issues are mitigated, resulting in apps that are highly consistent, easy to understand, and fully cyber compliant out of the gate.
+
+&quot;We brought the cyber team into the tent. We asked them to build the toughest review agent they could imagine. Then we baked it into the harness.&quot; · Janak Alford, Deputy Minister, Ministry of Technology and Innovation
+
+
+## §06 Lessons learned
+
+Reflecting on the last 16 months of learning within the AI Maximalist programs, there are some key insights which are worth surfacing:
+
+Give yourself time to experiment. These methods are neither obvious nor easy, and providing staff time to learn, create, and refine these methods is a worthwhile investment.</pre>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-50);margin-top:24px;">Tags: velocity, harness, claude-code, agents, skills, hooks, cyber, open-source</p>
+      <p><a href="/en/paper/p7p2k">Open the interactive version</a></p>
+    </article>
+  <script>
+    (function () {
+      try { if (window.localStorage) localStorage.setItem("vw_locale", "en"); } catch (e) {}
+      window.location.replace("/?redirect=" + encodeURIComponent("/en/paper/p7p2k"));
+    })();
+  </script>
+</body>
+</html>

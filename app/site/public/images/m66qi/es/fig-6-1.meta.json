@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "es",
+  "slot": "fig-02",
+  "out_path": "public\\images\\m66qi\\es\\fig-6-1.jpg",
+  "bytes_jpg": 201693,
+  "bytes_png_source": 2486504,
+  "model": "gpt-image-1",
+  "generated_at": "2026-09-04T23:12:04.568Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of raw code documents travelling along a line through a sequence of fine sieves and gates. At each gate, identifying marks such as names and labels are lifted away and stamped over with blank opaque tokens. What emerges at the end is a clean set of anonymous cards that carry structure and shape but no identity. A sense of sensitive detail held back while the useful shape is released. Muted Alberta cream palette, navy and rust accents, archival print quality. Every label is in Spanish: DATOS EN BRUTO under the incoming document stack; above the three gates IDENTIFICADORES (nombres, correos, usuarios), DETALLES SENSIBLES (direcciones IP, ubicaciones, dispositivos), SEÑALES DE COMPORTAMIENTO (patrones de actividad, frecuencia de uso, historial); under the gates PRIMER TAMIZ, SEGUNDO TAMIZ, TERCER TAMIZ with ELIMINADO and SUSTITUIDO; and SALIDA ANÓNIMA ESTRUCTURADA under the clean cards. No English words anywhere. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of raw code documents travelling along a line through a sequence of fine sieves and gates. At each gate, identifying marks such as names and labels are lifted away and stamped over with blank opaque tokens. What emerges at the end is a clean set of anonymous cards that carry structure and shape but no identity. A sense of sensitive detail held back while the useful shape is released. Muted Alberta cream palette, navy and rust accents, archival print quality. Every label is in Spanish: DATOS EN BRUTO under the incoming document stack; above the three gates IDENTIFICADORES (nombres, correos, usuarios), DETALLES SENSIBLES (direcciones IP, ubicaciones, dispositivos), SEÑALES DE COMPORTAMIENTO (patrones de actividad, frecuencia de uso, historial); under the gates PRIMER TAMIZ, SEGUNDO TAMIZ, TERCER TAMIZ with ELIMINADO and SUSTITUIDO; and SALIDA ANÓNIMA ESTRUCTURADA under the clean cards. No English words anywhere. All text labels in Spanish (español). Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\m66qi\\en\\fig-6-1.source.png"
+}

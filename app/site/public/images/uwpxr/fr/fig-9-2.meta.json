@@ -1,0 +1,17 @@
+{
+  "paper_id": "uwpxr",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\uwpxr\\fr\\fig-9-2.jpg",
+  "bytes_jpg": 103780,
+  "bytes_png_source": 2144121,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-09T07:11:29.043Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a small robot icon labelled AGENT with a speech bubble reading PUBLISH THIS APP. An arrow leads rightward through a box labelled CONTAINERIZE to a rounded cloud box labelled GOOGLE CLOUD holding a small running box labelled APP. Above, a simple person token labelled USER hands a small key icon labelled DELEGATED ACCESS down to the AGENT, beside a small clock and a label reading EXPIRES EVERY FEW HOURS. A small caption tag near the agent reads ACTS ON THE USER'S BEHALF. Calm, architectural, legible labels. No logos, no people beyond a schematic token. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: An editorial diagram on warm cream paper, deep navy line work with small rust accents. On the left, a small robot icon labelled AGENT with a speech bubble reading PUBLISH THIS APP. An arrow leads rightward through a box labelled CONTAINERIZE to a rounded cloud box labelled GOOGLE CLOUD holding a small running box labelled APP. Above, a simple person token labelled USER hands a small key icon labelled DELEGATED ACCESS down to the AGENT, beside a small clock and a label reading EXPIRES EVERY FEW HOURS. A small caption tag near the agent reads ACTS ON THE USER'S BEHALF. Calm, architectural, legible labels. No logos, no people beyond a schematic token. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\uwpxr\\en\\fig-9-2.source.png"
+}

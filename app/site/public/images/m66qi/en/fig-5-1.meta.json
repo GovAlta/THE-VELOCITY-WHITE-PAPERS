@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "en",
+  "slot": "fig-01",
+  "out_path": "public\\images\\m66qi\\en\\fig-5-1.jpg",
+  "bytes_jpg": 254016,
+  "bytes_png_source": 3077560,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-18T21:01:43.992Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "An editorial illustration of a large, transparent three-dimensional lattice or cube floating in space, built from thousands of small glowing nodes. Three visible faces each read as a different ordering of the same nodes: one face grouped as business capabilities, one as code repositories, one as technology layers. Fine connecting threads show that any node can be reached from any face. A single dataset seen from three directions at once. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: An editorial illustration of a large, transparent three-dimensional lattice or cube floating in space, built from thousands of small glowing nodes. Three visible faces each read as a different ordering of the same nodes: one face grouped as business capabilities, one as code repositories, one as technology layers. Fine connecting threads show that any node can be reached from any face. A single dataset seen from three directions at once. Muted Alberta cream palette, navy and rust accents, archival print quality, no text.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

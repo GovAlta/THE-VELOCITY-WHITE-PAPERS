@@ -1,0 +1,17 @@
+{
+  "paper_id": "m66qi",
+  "locale": "fr",
+  "slot": "fig-01",
+  "out_path": "public\\images\\m66qi\\fr\\fig-5-1.jpg",
+  "bytes_jpg": 250602,
+  "bytes_png_source": 2963731,
+  "model": "gpt-image-1",
+  "generated_at": "2026-07-19T02:58:52.820Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.",
+  "image_prompt": "Une illustration éditoriale d'un grand treillis ou cube tridimensionnel transparent flottant dans l'espace, constitué de milliers de petits nœuds lumineux. Les trois faces visibles présentent chacune un ordonnancement différent des mêmes nœuds : une face regroupée par capacités opérationnelles, une par dépôts de code, une par couches technologiques. De fins fils de connexion montrent que tout nœud est accessible depuis n'importe quelle face. Un seul jeu de données vu sous trois angles à la fois. Palette crème Alberta atténuée, accents marine et rouille, qualité d'impression d'archives, aucun texte. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.",
+  "style_kind": "cover",
+  "composed_prompt": "Editorial cover illustration for a whitepaper. Muted Alberta cream (#F7F4ED) base, navy (#1A3A6E) and rust (#C2491A) accents. Print-quality archival feel. No text, no logos. Wide cover aspect.\n\nSubject: Une illustration éditoriale d'un grand treillis ou cube tridimensionnel transparent flottant dans l'espace, constitué de milliers de petits nœuds lumineux. Les trois faces visibles présentent chacune un ordonnancement différent des mêmes nœuds : une face regroupée par capacités opérationnelles, une par dépôts de code, une par couches technologiques. De fins fils de connexion montrent que tout nœud est accessible depuis n'importe quelle face. Un seul jeu de données vu sous trois angles à la fois. Palette crème Alberta atténuée, accents marine et rouille, qualité d'impression d'archives, aucun texte. All text labels in Canadian French. Match the composition of the source image exactly; only the text labels change.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\m66qi\\en\\fig-5-1.source.png"
+}

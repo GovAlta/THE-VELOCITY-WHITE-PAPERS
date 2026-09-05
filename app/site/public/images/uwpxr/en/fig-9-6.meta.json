@@ -1,0 +1,17 @@
+{
+  "paper_id": "uwpxr",
+  "locale": "en",
+  "slot": "fig-06",
+  "out_path": "public\\images\\uwpxr\\en\\fig-9-6.jpg",
+  "bytes_jpg": 191951,
+  "bytes_png_source": 2711591,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-04T14:10:32.577Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "An editorial layered diagram on warm cream paper, deep navy line work with small rust accents, drawn as a three-tier pyramid. Bottom tier: a long row of small boxes each labelled APP with a tiny robot icon, captioned ONE AGENT PER APP: HEALTH, PATCHING, SECURITY. Middle tier: a few boxes labelled OVERSIGHT AGENTS, captioned TELEMETRY, UPTIME, STATUS. Top tier: two boxes labelled ARCHITECT AGENTS, captioned INTEGRATE AND REBUILD. To the right, a separate slim panel labelled APPROACH 4: HEADLESS API LAYER shows several small API plug icons that a couple of small defined-agent tokens connect into. Calm, architectural, legible labels. No logos, no people.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: An editorial layered diagram on warm cream paper, deep navy line work with small rust accents, drawn as a three-tier pyramid. Bottom tier: a long row of small boxes each labelled APP with a tiny robot icon, captioned ONE AGENT PER APP: HEALTH, PATCHING, SECURITY. Middle tier: a few boxes labelled OVERSIGHT AGENTS, captioned TELEMETRY, UPTIME, STATUS. Top tier: two boxes labelled ARCHITECT AGENTS, captioned INTEGRATE AND REBUILD. To the right, a separate slim panel labelled APPROACH 4: HEADLESS API LAYER shows several small API plug icons that a couple of small defined-agent tokens connect into. Calm, architectural, legible labels. No logos, no people.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "en",
+  "slot": "fig-05",
+  "out_path": "public\\images\\wq3kd\\en\\fig-21-5.jpg",
+  "bytes_jpg": 130907,
+  "bytes_png_source": 1584090,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-21T22:42:14.311Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.",
+  "image_prompt": "A flowchart: a page image on the left, an arrow into a box labelled AI reads the page (Claude on Vertex), an arrow to a clean text document on the right that shows a heading, a section number, and a footnote mark preserved. A small side note reads: the image is the authority, the rough extractions are a check.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in English. No photo realism, no people, no logos.\n\nSubject: A flowchart: a page image on the left, an arrow into a box labelled AI reads the page (Claude on Vertex), an arrow to a clean text document on the right that shows a heading, a section number, and a footnote mark preserved. A small side note reads: the image is the authority, the rough extractions are a check.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": null
+}

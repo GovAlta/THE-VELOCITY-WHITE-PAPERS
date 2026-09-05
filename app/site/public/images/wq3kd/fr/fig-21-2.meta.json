@@ -1,0 +1,17 @@
+{
+  "paper_id": "wq3kd",
+  "locale": "fr",
+  "slot": "fig-02",
+  "out_path": "public\\images\\wq3kd\\fr\\fig-21-2.jpg",
+  "bytes_jpg": 152620,
+  "bytes_png_source": 1580295,
+  "model": "gpt-image-1",
+  "generated_at": "2026-06-22T03:56:45.182Z",
+  "jpg_quality": 80,
+  "jpg_max_width": 1600,
+  "style_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.",
+  "image_prompt": "Un large organigramme de gauche à droite d’un pipeline de données de bout en bout, chaque étape étant une boîte étiquetée reliée par des flèches légèrement courbées : Documents (PDF, Word, Web), Images de page, Texte propre, Structure étiquetée, Empreintes numériques, Recherche, Récupération, Réponse structurée, Outils et tableaux de bord, Texte, images, audio. Une mince bande horizontale court sous toutes les étapes, étiquetée Consigné et auditable.",
+  "style_kind": "diagram",
+  "composed_prompt": "Architectural diagram. Hand-drawn line work, two-tone navy and rust on warm cream paper. Crisp legible labels in French. No photo realism, no people, no logos.\n\nSubject: Un large organigramme de gauche à droite d’un pipeline de données de bout en bout, chaque étape étant une boîte étiquetée reliée par des flèches légèrement courbées : Documents (PDF, Word, Web), Images de page, Texte propre, Structure étiquetée, Empreintes numériques, Recherche, Récupération, Réponse structurée, Outils et tableaux de bord, Texte, images, audio. Une mince bande horizontale court sous toutes les étapes, étiquetée Consigné et auditable.\n\nThe diagram must clearly communicate the structure described. Use crisp legible labels. No watermarks. No photo realism. Architectural diagram aesthetic.",
+  "conditioned_on": "public\\images\\wq3kd\\en\\fig-21-2.source.png"
+}
